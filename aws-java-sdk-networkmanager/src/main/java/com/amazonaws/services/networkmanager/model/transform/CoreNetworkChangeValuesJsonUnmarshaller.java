@@ -52,6 +52,10 @@ public class CoreNetworkChangeValuesJsonUnmarshaller implements Unmarshaller<Cor
                     context.nextToken();
                     coreNetworkChangeValues.setSegmentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("NetworkFunctionGroupName", targetDepth)) {
+                    context.nextToken();
+                    coreNetworkChangeValues.setNetworkFunctionGroupName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("EdgeLocations", targetDepth)) {
                     context.nextToken();
                     coreNetworkChangeValues.setEdgeLocations(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
@@ -79,6 +83,13 @@ public class CoreNetworkChangeValuesJsonUnmarshaller implements Unmarshaller<Cor
                 if (context.testExpression("SharedSegments", targetDepth)) {
                     context.nextToken();
                     coreNetworkChangeValues.setSharedSegments(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("ServiceInsertionActions", targetDepth)) {
+                    context.nextToken();
+                    coreNetworkChangeValues.setServiceInsertionActions(new ListUnmarshaller<ServiceInsertionAction>(ServiceInsertionActionJsonUnmarshaller
+                            .getInstance())
 
                     .unmarshall(context));
                 }

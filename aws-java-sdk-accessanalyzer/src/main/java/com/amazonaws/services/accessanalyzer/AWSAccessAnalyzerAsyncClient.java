@@ -233,6 +233,39 @@ public class AWSAccessAnalyzerAsyncClient extends AWSAccessAnalyzerClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<CheckNoPublicAccessResult> checkNoPublicAccessAsync(CheckNoPublicAccessRequest request) {
+
+        return checkNoPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CheckNoPublicAccessResult> checkNoPublicAccessAsync(final CheckNoPublicAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CheckNoPublicAccessRequest, CheckNoPublicAccessResult> asyncHandler) {
+        final CheckNoPublicAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CheckNoPublicAccessResult>() {
+            @Override
+            public CheckNoPublicAccessResult call() throws Exception {
+                CheckNoPublicAccessResult result = null;
+
+                try {
+                    result = executeCheckNoPublicAccess(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAccessPreviewResult> createAccessPreviewAsync(CreateAccessPreviewRequest request) {
 
         return createAccessPreviewAsync(request, null);
@@ -398,6 +431,40 @@ public class AWSAccessAnalyzerAsyncClient extends AWSAccessAnalyzerClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<GenerateFindingRecommendationResult> generateFindingRecommendationAsync(GenerateFindingRecommendationRequest request) {
+
+        return generateFindingRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GenerateFindingRecommendationResult> generateFindingRecommendationAsync(
+            final GenerateFindingRecommendationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GenerateFindingRecommendationRequest, GenerateFindingRecommendationResult> asyncHandler) {
+        final GenerateFindingRecommendationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GenerateFindingRecommendationResult>() {
+            @Override
+            public GenerateFindingRecommendationResult call() throws Exception {
+                GenerateFindingRecommendationResult result = null;
+
+                try {
+                    result = executeGenerateFindingRecommendation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAccessPreviewResult> getAccessPreviewAsync(GetAccessPreviewRequest request) {
 
         return getAccessPreviewAsync(request, null);
@@ -547,6 +614,39 @@ public class AWSAccessAnalyzerAsyncClient extends AWSAccessAnalyzerClient implem
 
                 try {
                     result = executeGetFinding(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFindingRecommendationResult> getFindingRecommendationAsync(GetFindingRecommendationRequest request) {
+
+        return getFindingRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFindingRecommendationResult> getFindingRecommendationAsync(final GetFindingRecommendationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetFindingRecommendationRequest, GetFindingRecommendationResult> asyncHandler) {
+        final GetFindingRecommendationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetFindingRecommendationResult>() {
+            @Override
+            public GetFindingRecommendationResult call() throws Exception {
+                GetFindingRecommendationResult result = null;
+
+                try {
+                    result = executeGetFindingRecommendation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

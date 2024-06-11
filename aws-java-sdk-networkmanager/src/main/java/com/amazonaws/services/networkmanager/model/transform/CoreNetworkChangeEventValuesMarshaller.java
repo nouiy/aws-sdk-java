@@ -31,6 +31,8 @@ public class CoreNetworkChangeEventValuesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EdgeLocation").build();
     private static final MarshallingInfo<String> SEGMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SegmentName").build();
+    private static final MarshallingInfo<String> NETWORKFUNCTIONGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkFunctionGroupName").build();
     private static final MarshallingInfo<String> ATTACHMENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttachmentId").build();
     private static final MarshallingInfo<String> CIDR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -54,6 +56,7 @@ public class CoreNetworkChangeEventValuesMarshaller {
         try {
             protocolMarshaller.marshall(coreNetworkChangeEventValues.getEdgeLocation(), EDGELOCATION_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeEventValues.getSegmentName(), SEGMENTNAME_BINDING);
+            protocolMarshaller.marshall(coreNetworkChangeEventValues.getNetworkFunctionGroupName(), NETWORKFUNCTIONGROUPNAME_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeEventValues.getAttachmentId(), ATTACHMENTID_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeEventValues.getCidr(), CIDR_BINDING);
         } catch (Exception e) {

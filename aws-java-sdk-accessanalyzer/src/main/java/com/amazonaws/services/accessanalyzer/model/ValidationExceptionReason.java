@@ -23,7 +23,8 @@ public enum ValidationExceptionReason {
     UnknownOperation("unknownOperation"),
     CannotParse("cannotParse"),
     FieldValidationFailed("fieldValidationFailed"),
-    Other("other");
+    Other("other"),
+    NotSupported("notSupported");
 
     private String value;
 

@@ -42,6 +42,12 @@ public class CoreNetworkChangeEventValues implements Serializable, Cloneable, St
     private String segmentName;
     /**
      * <p>
+     * The changed network function group name.
+     * </p>
+     */
+    private String networkFunctionGroupName;
+    /**
+     * <p>
      * The ID of the attachment if the change event is associated with an attachment.
      * </p>
      */
@@ -130,6 +136,46 @@ public class CoreNetworkChangeEventValues implements Serializable, Cloneable, St
 
     public CoreNetworkChangeEventValues withSegmentName(String segmentName) {
         setSegmentName(segmentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The changed network function group name.
+     * </p>
+     * 
+     * @param networkFunctionGroupName
+     *        The changed network function group name.
+     */
+
+    public void setNetworkFunctionGroupName(String networkFunctionGroupName) {
+        this.networkFunctionGroupName = networkFunctionGroupName;
+    }
+
+    /**
+     * <p>
+     * The changed network function group name.
+     * </p>
+     * 
+     * @return The changed network function group name.
+     */
+
+    public String getNetworkFunctionGroupName() {
+        return this.networkFunctionGroupName;
+    }
+
+    /**
+     * <p>
+     * The changed network function group name.
+     * </p>
+     * 
+     * @param networkFunctionGroupName
+     *        The changed network function group name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoreNetworkChangeEventValues withNetworkFunctionGroupName(String networkFunctionGroupName) {
+        setNetworkFunctionGroupName(networkFunctionGroupName);
         return this;
     }
 
@@ -229,6 +275,8 @@ public class CoreNetworkChangeEventValues implements Serializable, Cloneable, St
             sb.append("EdgeLocation: ").append(getEdgeLocation()).append(",");
         if (getSegmentName() != null)
             sb.append("SegmentName: ").append(getSegmentName()).append(",");
+        if (getNetworkFunctionGroupName() != null)
+            sb.append("NetworkFunctionGroupName: ").append(getNetworkFunctionGroupName()).append(",");
         if (getAttachmentId() != null)
             sb.append("AttachmentId: ").append(getAttachmentId()).append(",");
         if (getCidr() != null)
@@ -255,6 +303,10 @@ public class CoreNetworkChangeEventValues implements Serializable, Cloneable, St
             return false;
         if (other.getSegmentName() != null && other.getSegmentName().equals(this.getSegmentName()) == false)
             return false;
+        if (other.getNetworkFunctionGroupName() == null ^ this.getNetworkFunctionGroupName() == null)
+            return false;
+        if (other.getNetworkFunctionGroupName() != null && other.getNetworkFunctionGroupName().equals(this.getNetworkFunctionGroupName()) == false)
+            return false;
         if (other.getAttachmentId() == null ^ this.getAttachmentId() == null)
             return false;
         if (other.getAttachmentId() != null && other.getAttachmentId().equals(this.getAttachmentId()) == false)
@@ -273,6 +325,7 @@ public class CoreNetworkChangeEventValues implements Serializable, Cloneable, St
 
         hashCode = prime * hashCode + ((getEdgeLocation() == null) ? 0 : getEdgeLocation().hashCode());
         hashCode = prime * hashCode + ((getSegmentName() == null) ? 0 : getSegmentName().hashCode());
+        hashCode = prime * hashCode + ((getNetworkFunctionGroupName() == null) ? 0 : getNetworkFunctionGroupName().hashCode());
         hashCode = prime * hashCode + ((getAttachmentId() == null) ? 0 : getAttachmentId().hashCode());
         hashCode = prime * hashCode + ((getCidr() == null) ? 0 : getCidr().hashCode());
         return hashCode;

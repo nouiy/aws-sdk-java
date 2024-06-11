@@ -42,6 +42,12 @@ public class RouteTableIdentifier implements Serializable, Cloneable, Structured
      * </p>
      */
     private CoreNetworkSegmentEdgeIdentifier coreNetworkSegmentEdge;
+    /**
+     * <p>
+     * The route table identifier associated with the network function group.
+     * </p>
+     */
+    private CoreNetworkNetworkFunctionGroupIdentifier coreNetworkNetworkFunctionGroup;
 
     /**
      * <p>
@@ -136,6 +142,46 @@ public class RouteTableIdentifier implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The route table identifier associated with the network function group.
+     * </p>
+     * 
+     * @param coreNetworkNetworkFunctionGroup
+     *        The route table identifier associated with the network function group.
+     */
+
+    public void setCoreNetworkNetworkFunctionGroup(CoreNetworkNetworkFunctionGroupIdentifier coreNetworkNetworkFunctionGroup) {
+        this.coreNetworkNetworkFunctionGroup = coreNetworkNetworkFunctionGroup;
+    }
+
+    /**
+     * <p>
+     * The route table identifier associated with the network function group.
+     * </p>
+     * 
+     * @return The route table identifier associated with the network function group.
+     */
+
+    public CoreNetworkNetworkFunctionGroupIdentifier getCoreNetworkNetworkFunctionGroup() {
+        return this.coreNetworkNetworkFunctionGroup;
+    }
+
+    /**
+     * <p>
+     * The route table identifier associated with the network function group.
+     * </p>
+     * 
+     * @param coreNetworkNetworkFunctionGroup
+     *        The route table identifier associated with the network function group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RouteTableIdentifier withCoreNetworkNetworkFunctionGroup(CoreNetworkNetworkFunctionGroupIdentifier coreNetworkNetworkFunctionGroup) {
+        setCoreNetworkNetworkFunctionGroup(coreNetworkNetworkFunctionGroup);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -150,7 +196,9 @@ public class RouteTableIdentifier implements Serializable, Cloneable, Structured
         if (getTransitGatewayRouteTableArn() != null)
             sb.append("TransitGatewayRouteTableArn: ").append(getTransitGatewayRouteTableArn()).append(",");
         if (getCoreNetworkSegmentEdge() != null)
-            sb.append("CoreNetworkSegmentEdge: ").append(getCoreNetworkSegmentEdge());
+            sb.append("CoreNetworkSegmentEdge: ").append(getCoreNetworkSegmentEdge()).append(",");
+        if (getCoreNetworkNetworkFunctionGroup() != null)
+            sb.append("CoreNetworkNetworkFunctionGroup: ").append(getCoreNetworkNetworkFunctionGroup());
         sb.append("}");
         return sb.toString();
     }
@@ -173,6 +221,11 @@ public class RouteTableIdentifier implements Serializable, Cloneable, Structured
             return false;
         if (other.getCoreNetworkSegmentEdge() != null && other.getCoreNetworkSegmentEdge().equals(this.getCoreNetworkSegmentEdge()) == false)
             return false;
+        if (other.getCoreNetworkNetworkFunctionGroup() == null ^ this.getCoreNetworkNetworkFunctionGroup() == null)
+            return false;
+        if (other.getCoreNetworkNetworkFunctionGroup() != null
+                && other.getCoreNetworkNetworkFunctionGroup().equals(this.getCoreNetworkNetworkFunctionGroup()) == false)
+            return false;
         return true;
     }
 
@@ -183,6 +236,7 @@ public class RouteTableIdentifier implements Serializable, Cloneable, Structured
 
         hashCode = prime * hashCode + ((getTransitGatewayRouteTableArn() == null) ? 0 : getTransitGatewayRouteTableArn().hashCode());
         hashCode = prime * hashCode + ((getCoreNetworkSegmentEdge() == null) ? 0 : getCoreNetworkSegmentEdge().hashCode());
+        hashCode = prime * hashCode + ((getCoreNetworkNetworkFunctionGroup() == null) ? 0 : getCoreNetworkNetworkFunctionGroup().hashCode());
         return hashCode;
     }
 

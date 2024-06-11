@@ -30,6 +30,8 @@ public class CoreNetworkChangeValuesMarshaller {
 
     private static final MarshallingInfo<String> SEGMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SegmentName").build();
+    private static final MarshallingInfo<String> NETWORKFUNCTIONGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkFunctionGroupName").build();
     private static final MarshallingInfo<List> EDGELOCATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("EdgeLocations").build();
     private static final MarshallingInfo<Long> ASN_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
@@ -42,6 +44,8 @@ public class CoreNetworkChangeValuesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InsideCidrBlocks").build();
     private static final MarshallingInfo<List> SHAREDSEGMENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SharedSegments").build();
+    private static final MarshallingInfo<List> SERVICEINSERTIONACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServiceInsertionActions").build();
 
     private static final CoreNetworkChangeValuesMarshaller instance = new CoreNetworkChangeValuesMarshaller();
 
@@ -60,12 +64,14 @@ public class CoreNetworkChangeValuesMarshaller {
 
         try {
             protocolMarshaller.marshall(coreNetworkChangeValues.getSegmentName(), SEGMENTNAME_BINDING);
+            protocolMarshaller.marshall(coreNetworkChangeValues.getNetworkFunctionGroupName(), NETWORKFUNCTIONGROUPNAME_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeValues.getEdgeLocations(), EDGELOCATIONS_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeValues.getAsn(), ASN_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeValues.getCidr(), CIDR_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeValues.getDestinationIdentifier(), DESTINATIONIDENTIFIER_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeValues.getInsideCidrBlocks(), INSIDECIDRBLOCKS_BINDING);
             protocolMarshaller.marshall(coreNetworkChangeValues.getSharedSegments(), SHAREDSEGMENTS_BINDING);
+            protocolMarshaller.marshall(coreNetworkChangeValues.getServiceInsertionActions(), SERVICEINSERTIONACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

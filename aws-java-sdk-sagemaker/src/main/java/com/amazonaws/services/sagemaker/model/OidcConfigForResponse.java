@@ -70,6 +70,19 @@ public class OidcConfigForResponse implements Serializable, Cloneable, Structure
      * </p>
      */
     private String jwksUri;
+    /**
+     * <p>
+     * An array of string identifiers used to refer to the specific pieces of user data or claims that the client
+     * application wants to access.
+     * </p>
+     */
+    private String scope;
+    /**
+     * <p>
+     * A string to string map of identifiers specific to the custom identity provider (IdP) being used.
+     * </p>
+     */
+    private java.util.Map<String, String> authenticationRequestExtraParams;
 
     /**
      * <p>
@@ -352,6 +365,120 @@ public class OidcConfigForResponse implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * An array of string identifiers used to refer to the specific pieces of user data or claims that the client
+     * application wants to access.
+     * </p>
+     * 
+     * @param scope
+     *        An array of string identifiers used to refer to the specific pieces of user data or claims that the client
+     *        application wants to access.
+     */
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
+    /**
+     * <p>
+     * An array of string identifiers used to refer to the specific pieces of user data or claims that the client
+     * application wants to access.
+     * </p>
+     * 
+     * @return An array of string identifiers used to refer to the specific pieces of user data or claims that the
+     *         client application wants to access.
+     */
+
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
+     * <p>
+     * An array of string identifiers used to refer to the specific pieces of user data or claims that the client
+     * application wants to access.
+     * </p>
+     * 
+     * @param scope
+     *        An array of string identifiers used to refer to the specific pieces of user data or claims that the client
+     *        application wants to access.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OidcConfigForResponse withScope(String scope) {
+        setScope(scope);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A string to string map of identifiers specific to the custom identity provider (IdP) being used.
+     * </p>
+     * 
+     * @return A string to string map of identifiers specific to the custom identity provider (IdP) being used.
+     */
+
+    public java.util.Map<String, String> getAuthenticationRequestExtraParams() {
+        return authenticationRequestExtraParams;
+    }
+
+    /**
+     * <p>
+     * A string to string map of identifiers specific to the custom identity provider (IdP) being used.
+     * </p>
+     * 
+     * @param authenticationRequestExtraParams
+     *        A string to string map of identifiers specific to the custom identity provider (IdP) being used.
+     */
+
+    public void setAuthenticationRequestExtraParams(java.util.Map<String, String> authenticationRequestExtraParams) {
+        this.authenticationRequestExtraParams = authenticationRequestExtraParams;
+    }
+
+    /**
+     * <p>
+     * A string to string map of identifiers specific to the custom identity provider (IdP) being used.
+     * </p>
+     * 
+     * @param authenticationRequestExtraParams
+     *        A string to string map of identifiers specific to the custom identity provider (IdP) being used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OidcConfigForResponse withAuthenticationRequestExtraParams(java.util.Map<String, String> authenticationRequestExtraParams) {
+        setAuthenticationRequestExtraParams(authenticationRequestExtraParams);
+        return this;
+    }
+
+    /**
+     * Add a single AuthenticationRequestExtraParams entry
+     *
+     * @see OidcConfigForResponse#withAuthenticationRequestExtraParams
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OidcConfigForResponse addAuthenticationRequestExtraParamsEntry(String key, String value) {
+        if (null == this.authenticationRequestExtraParams) {
+            this.authenticationRequestExtraParams = new java.util.HashMap<String, String>();
+        }
+        if (this.authenticationRequestExtraParams.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.authenticationRequestExtraParams.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into AuthenticationRequestExtraParams.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OidcConfigForResponse clearAuthenticationRequestExtraParamsEntries() {
+        this.authenticationRequestExtraParams = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -376,7 +503,11 @@ public class OidcConfigForResponse implements Serializable, Cloneable, Structure
         if (getLogoutEndpoint() != null)
             sb.append("LogoutEndpoint: ").append(getLogoutEndpoint()).append(",");
         if (getJwksUri() != null)
-            sb.append("JwksUri: ").append(getJwksUri());
+            sb.append("JwksUri: ").append(getJwksUri()).append(",");
+        if (getScope() != null)
+            sb.append("Scope: ").append(getScope()).append(",");
+        if (getAuthenticationRequestExtraParams() != null)
+            sb.append("AuthenticationRequestExtraParams: ").append(getAuthenticationRequestExtraParams());
         sb.append("}");
         return sb.toString();
     }
@@ -419,6 +550,15 @@ public class OidcConfigForResponse implements Serializable, Cloneable, Structure
             return false;
         if (other.getJwksUri() != null && other.getJwksUri().equals(this.getJwksUri()) == false)
             return false;
+        if (other.getScope() == null ^ this.getScope() == null)
+            return false;
+        if (other.getScope() != null && other.getScope().equals(this.getScope()) == false)
+            return false;
+        if (other.getAuthenticationRequestExtraParams() == null ^ this.getAuthenticationRequestExtraParams() == null)
+            return false;
+        if (other.getAuthenticationRequestExtraParams() != null
+                && other.getAuthenticationRequestExtraParams().equals(this.getAuthenticationRequestExtraParams()) == false)
+            return false;
         return true;
     }
 
@@ -434,6 +574,8 @@ public class OidcConfigForResponse implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getUserInfoEndpoint() == null) ? 0 : getUserInfoEndpoint().hashCode());
         hashCode = prime * hashCode + ((getLogoutEndpoint() == null) ? 0 : getLogoutEndpoint().hashCode());
         hashCode = prime * hashCode + ((getJwksUri() == null) ? 0 : getJwksUri().hashCode());
+        hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
+        hashCode = prime * hashCode + ((getAuthenticationRequestExtraParams() == null) ? 0 : getAuthenticationRequestExtraParams().hashCode());
         return hashCode;
     }
 

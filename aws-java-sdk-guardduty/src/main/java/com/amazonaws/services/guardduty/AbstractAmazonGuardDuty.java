@@ -59,6 +59,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
     }
 
     @Override
+    public CreateMalwareProtectionPlanResult createMalwareProtectionPlan(CreateMalwareProtectionPlanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateMembersResult createMembers(CreateMembersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -100,6 +105,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
 
     @Override
     public DeleteInvitationsResult deleteInvitations(DeleteInvitationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteMalwareProtectionPlanResult deleteMalwareProtectionPlan(DeleteMalwareProtectionPlanRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -200,6 +210,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
     }
 
     @Override
+    public GetMalwareProtectionPlanResult getMalwareProtectionPlan(GetMalwareProtectionPlanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMalwareScanSettingsResult getMalwareScanSettings(GetMalwareScanSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -276,6 +291,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
     }
 
     @Override
+    public ListMalwareProtectionPlansResult listMalwareProtectionPlans(ListMalwareProtectionPlansRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListMembersResult listMembers(ListMembersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -347,6 +367,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
 
     @Override
     public UpdateIPSetResult updateIPSet(UpdateIPSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMalwareProtectionPlanResult updateMalwareProtectionPlan(UpdateMalwareProtectionPlanRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

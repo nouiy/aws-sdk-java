@@ -31,6 +31,8 @@ public class RouteTableIdentifierMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransitGatewayRouteTableArn").build();
     private static final MarshallingInfo<StructuredPojo> CORENETWORKSEGMENTEDGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CoreNetworkSegmentEdge").build();
+    private static final MarshallingInfo<StructuredPojo> CORENETWORKNETWORKFUNCTIONGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CoreNetworkNetworkFunctionGroup").build();
 
     private static final RouteTableIdentifierMarshaller instance = new RouteTableIdentifierMarshaller();
 
@@ -50,6 +52,7 @@ public class RouteTableIdentifierMarshaller {
         try {
             protocolMarshaller.marshall(routeTableIdentifier.getTransitGatewayRouteTableArn(), TRANSITGATEWAYROUTETABLEARN_BINDING);
             protocolMarshaller.marshall(routeTableIdentifier.getCoreNetworkSegmentEdge(), CORENETWORKSEGMENTEDGE_BINDING);
+            protocolMarshaller.marshall(routeTableIdentifier.getCoreNetworkNetworkFunctionGroup(), CORENETWORKNETWORKFUNCTIONGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

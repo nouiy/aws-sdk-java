@@ -97,14 +97,17 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.guardduty.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.guardduty.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("BadRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.guardduty.model.transform.BadRequestExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.guardduty.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.guardduty.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerErrorException").withExceptionUnmarshaller(
                                     com.amazonaws.services.guardduty.model.transform.InternalServerErrorExceptionUnmarshaller.getInstance()))
@@ -542,6 +545,76 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateIPSetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateIPSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new Malware Protection plan for the protected resource.
+     * </p>
+     * <p>
+     * When you create a Malware Protection plan, the Amazon Web Services service terms for GuardDuty Malware Protection
+     * apply. For more information, see <a href="http://aws.amazon.com/service-terms/#87._Amazon_GuardDuty">Amazon Web
+     * Services service terms for GuardDuty Malware Protection</a>.
+     * </p>
+     * 
+     * @param createMalwareProtectionPlanRequest
+     * @return Result of the CreateMalwareProtectionPlan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws ConflictException
+     *         A request conflict exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.CreateMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateMalwareProtectionPlanResult createMalwareProtectionPlan(CreateMalwareProtectionPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateMalwareProtectionPlan(request);
+    }
+
+    @SdkInternalApi
+    final CreateMalwareProtectionPlanResult executeCreateMalwareProtectionPlan(CreateMalwareProtectionPlanRequest createMalwareProtectionPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createMalwareProtectionPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateMalwareProtectionPlanRequest> request = null;
+        Response<CreateMalwareProtectionPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateMalwareProtectionPlanRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createMalwareProtectionPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GuardDuty");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateMalwareProtectionPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateMalwareProtectionPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateMalwareProtectionPlanResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1109,6 +1182,72 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteInvitationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteInvitationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the Malware Protection plan ID associated with the Malware Protection plan resource. Use this API only
+     * when you no longer want to protect the resource associated with this Malware Protection plan ID.
+     * </p>
+     * 
+     * @param deleteMalwareProtectionPlanRequest
+     * @return Result of the DeleteMalwareProtectionPlan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @sample AmazonGuardDuty.DeleteMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteMalwareProtectionPlanResult deleteMalwareProtectionPlan(DeleteMalwareProtectionPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteMalwareProtectionPlan(request);
+    }
+
+    @SdkInternalApi
+    final DeleteMalwareProtectionPlanResult executeDeleteMalwareProtectionPlan(DeleteMalwareProtectionPlanRequest deleteMalwareProtectionPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteMalwareProtectionPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteMalwareProtectionPlanRequest> request = null;
+        Response<DeleteMalwareProtectionPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteMalwareProtectionPlanRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteMalwareProtectionPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GuardDuty");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteMalwareProtectionPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteMalwareProtectionPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteMalwareProtectionPlanResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2356,6 +2495,71 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Retrieves the Malware Protection plan details associated with a Malware Protection plan ID.
+     * </p>
+     * 
+     * @param getMalwareProtectionPlanRequest
+     * @return Result of the GetMalwareProtectionPlan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @sample AmazonGuardDuty.GetMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetMalwareProtectionPlanResult getMalwareProtectionPlan(GetMalwareProtectionPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMalwareProtectionPlan(request);
+    }
+
+    @SdkInternalApi
+    final GetMalwareProtectionPlanResult executeGetMalwareProtectionPlan(GetMalwareProtectionPlanRequest getMalwareProtectionPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMalwareProtectionPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMalwareProtectionPlanRequest> request = null;
+        Response<GetMalwareProtectionPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMalwareProtectionPlanRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getMalwareProtectionPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GuardDuty");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMalwareProtectionPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetMalwareProtectionPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetMalwareProtectionPlanResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the details of the malware scan settings.
      * </p>
      * <p>
@@ -3316,6 +3520,70 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Lists the Malware Protection plan IDs associated with the protected resources in your Amazon Web Services
+     * account.
+     * </p>
+     * 
+     * @param listMalwareProtectionPlansRequest
+     * @return Result of the ListMalwareProtectionPlans operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.ListMalwareProtectionPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListMalwareProtectionPlans"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListMalwareProtectionPlansResult listMalwareProtectionPlans(ListMalwareProtectionPlansRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMalwareProtectionPlans(request);
+    }
+
+    @SdkInternalApi
+    final ListMalwareProtectionPlansResult executeListMalwareProtectionPlans(ListMalwareProtectionPlansRequest listMalwareProtectionPlansRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMalwareProtectionPlansRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMalwareProtectionPlansRequest> request = null;
+        Response<ListMalwareProtectionPlansResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMalwareProtectionPlansRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listMalwareProtectionPlansRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GuardDuty");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMalwareProtectionPlans");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMalwareProtectionPlansResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListMalwareProtectionPlansResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists details about all member accounts for the current GuardDuty administrator account.
      * </p>
      * 
@@ -4235,6 +4503,71 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateIPSetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateIPSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an existing Malware Protection plan resource.
+     * </p>
+     * 
+     * @param updateMalwareProtectionPlanRequest
+     * @return Result of the UpdateMalwareProtectionPlan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.UpdateMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateMalwareProtectionPlanResult updateMalwareProtectionPlan(UpdateMalwareProtectionPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateMalwareProtectionPlan(request);
+    }
+
+    @SdkInternalApi
+    final UpdateMalwareProtectionPlanResult executeUpdateMalwareProtectionPlan(UpdateMalwareProtectionPlanRequest updateMalwareProtectionPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateMalwareProtectionPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateMalwareProtectionPlanRequest> request = null;
+        Response<UpdateMalwareProtectionPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateMalwareProtectionPlanRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateMalwareProtectionPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GuardDuty");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateMalwareProtectionPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateMalwareProtectionPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateMalwareProtectionPlanResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

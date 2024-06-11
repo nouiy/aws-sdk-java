@@ -118,6 +118,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Detection detection;
+    /**
+     * <p>
+     * Returns details from the malware scan that generated a GuardDuty finding.
+     * </p>
+     */
+    private MalwareScanDetails malwareScanDetails;
 
     /**
      * <p>
@@ -732,6 +738,46 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Returns details from the malware scan that generated a GuardDuty finding.
+     * </p>
+     * 
+     * @param malwareScanDetails
+     *        Returns details from the malware scan that generated a GuardDuty finding.
+     */
+
+    public void setMalwareScanDetails(MalwareScanDetails malwareScanDetails) {
+        this.malwareScanDetails = malwareScanDetails;
+    }
+
+    /**
+     * <p>
+     * Returns details from the malware scan that generated a GuardDuty finding.
+     * </p>
+     * 
+     * @return Returns details from the malware scan that generated a GuardDuty finding.
+     */
+
+    public MalwareScanDetails getMalwareScanDetails() {
+        return this.malwareScanDetails;
+    }
+
+    /**
+     * <p>
+     * Returns details from the malware scan that generated a GuardDuty finding.
+     * </p>
+     * 
+     * @param malwareScanDetails
+     *        Returns details from the malware scan that generated a GuardDuty finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withMalwareScanDetails(MalwareScanDetails malwareScanDetails) {
+        setMalwareScanDetails(malwareScanDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -772,7 +818,9 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         if (getRuntimeDetails() != null)
             sb.append("RuntimeDetails: ").append(getRuntimeDetails()).append(",");
         if (getDetection() != null)
-            sb.append("Detection: ").append(getDetection());
+            sb.append("Detection: ").append(getDetection()).append(",");
+        if (getMalwareScanDetails() != null)
+            sb.append("MalwareScanDetails: ").append(getMalwareScanDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -847,6 +895,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDetection() != null && other.getDetection().equals(this.getDetection()) == false)
             return false;
+        if (other.getMalwareScanDetails() == null ^ this.getMalwareScanDetails() == null)
+            return false;
+        if (other.getMalwareScanDetails() != null && other.getMalwareScanDetails().equals(this.getMalwareScanDetails()) == false)
+            return false;
         return true;
     }
 
@@ -870,6 +922,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEbsVolumeScanDetails() == null) ? 0 : getEbsVolumeScanDetails().hashCode());
         hashCode = prime * hashCode + ((getRuntimeDetails() == null) ? 0 : getRuntimeDetails().hashCode());
         hashCode = prime * hashCode + ((getDetection() == null) ? 0 : getDetection().hashCode());
+        hashCode = prime * hashCode + ((getMalwareScanDetails() == null) ? 0 : getMalwareScanDetails().hashCode());
         return hashCode;
     }
 

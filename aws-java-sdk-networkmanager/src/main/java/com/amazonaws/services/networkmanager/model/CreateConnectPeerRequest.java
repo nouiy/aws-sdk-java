@@ -33,7 +33,7 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
     private String connectAttachmentId;
     /**
      * <p>
-     * A Connect peer core network address.
+     * A Connect peer core network address. This only applies only when the protocol is <code>GRE</code>.
      * </p>
      */
     private String coreNetworkAddress;
@@ -45,7 +45,7 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
     private String peerAddress;
     /**
      * <p>
-     * The Connect peer BGP options.
+     * The Connect peer BGP options. This only applies only when the protocol is <code>GRE</code>.
      * </p>
      */
     private BgpOptions bgpOptions;
@@ -69,7 +69,7 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
     private String clientToken;
     /**
      * <p>
-     * The subnet ARN for the Connect peer.
+     * The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * </p>
      */
     private String subnetArn;
@@ -116,11 +116,11 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A Connect peer core network address.
+     * A Connect peer core network address. This only applies only when the protocol is <code>GRE</code>.
      * </p>
      * 
      * @param coreNetworkAddress
-     *        A Connect peer core network address.
+     *        A Connect peer core network address. This only applies only when the protocol is <code>GRE</code>.
      */
 
     public void setCoreNetworkAddress(String coreNetworkAddress) {
@@ -129,10 +129,10 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A Connect peer core network address.
+     * A Connect peer core network address. This only applies only when the protocol is <code>GRE</code>.
      * </p>
      * 
-     * @return A Connect peer core network address.
+     * @return A Connect peer core network address. This only applies only when the protocol is <code>GRE</code>.
      */
 
     public String getCoreNetworkAddress() {
@@ -141,11 +141,11 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A Connect peer core network address.
+     * A Connect peer core network address. This only applies only when the protocol is <code>GRE</code>.
      * </p>
      * 
      * @param coreNetworkAddress
-     *        A Connect peer core network address.
+     *        A Connect peer core network address. This only applies only when the protocol is <code>GRE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,11 +196,11 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Connect peer BGP options.
+     * The Connect peer BGP options. This only applies only when the protocol is <code>GRE</code>.
      * </p>
      * 
      * @param bgpOptions
-     *        The Connect peer BGP options.
+     *        The Connect peer BGP options. This only applies only when the protocol is <code>GRE</code>.
      */
 
     public void setBgpOptions(BgpOptions bgpOptions) {
@@ -209,10 +209,10 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Connect peer BGP options.
+     * The Connect peer BGP options. This only applies only when the protocol is <code>GRE</code>.
      * </p>
      * 
-     * @return The Connect peer BGP options.
+     * @return The Connect peer BGP options. This only applies only when the protocol is <code>GRE</code>.
      */
 
     public BgpOptions getBgpOptions() {
@@ -221,11 +221,11 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Connect peer BGP options.
+     * The Connect peer BGP options. This only applies only when the protocol is <code>GRE</code>.
      * </p>
      * 
      * @param bgpOptions
-     *        The Connect peer BGP options.
+     *        The Connect peer BGP options. This only applies only when the protocol is <code>GRE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -416,11 +416,11 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The subnet ARN for the Connect peer.
+     * The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * </p>
      * 
      * @param subnetArn
-     *        The subnet ARN for the Connect peer.
+     *        The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      */
 
     public void setSubnetArn(String subnetArn) {
@@ -429,10 +429,10 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The subnet ARN for the Connect peer.
+     * The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * </p>
      * 
-     * @return The subnet ARN for the Connect peer.
+     * @return The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      */
 
     public String getSubnetArn() {
@@ -441,11 +441,11 @@ public class CreateConnectPeerRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The subnet ARN for the Connect peer.
+     * The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * </p>
      * 
      * @param subnetArn
-     *        The subnet ARN for the Connect peer.
+     *        The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

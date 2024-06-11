@@ -82,6 +82,12 @@ public class S3BucketDetailJsonUnmarshaller implements Unmarshaller<S3BucketDeta
                     context.nextToken();
                     s3BucketDetail.setPublicAccess(PublicAccessJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("s3ObjectDetails", targetDepth)) {
+                    context.nextToken();
+                    s3BucketDetail.setS3ObjectDetails(new ListUnmarshaller<S3ObjectDetail>(S3ObjectDetailJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

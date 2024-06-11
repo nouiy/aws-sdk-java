@@ -203,6 +203,32 @@ public interface AmazonGuardDuty {
 
     /**
      * <p>
+     * Creates a new Malware Protection plan for the protected resource.
+     * </p>
+     * <p>
+     * When you create a Malware Protection plan, the Amazon Web Services service terms for GuardDuty Malware Protection
+     * apply. For more information, see <a href="http://aws.amazon.com/service-terms/#87._Amazon_GuardDuty">Amazon Web
+     * Services service terms for GuardDuty Malware Protection</a>.
+     * </p>
+     * 
+     * @param createMalwareProtectionPlanRequest
+     * @return Result of the CreateMalwareProtectionPlan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws ConflictException
+     *         A request conflict exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.CreateMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateMalwareProtectionPlanResult createMalwareProtectionPlan(CreateMalwareProtectionPlanRequest createMalwareProtectionPlanRequest);
+
+    /**
+     * <p>
      * Creates member accounts of the current Amazon Web Services account by specifying a list of Amazon Web Services
      * account IDs. This step is a prerequisite for managing the associated member accounts either by invitation or
      * through an organization.
@@ -387,6 +413,28 @@ public interface AmazonGuardDuty {
      *      API Documentation</a>
      */
     DeleteInvitationsResult deleteInvitations(DeleteInvitationsRequest deleteInvitationsRequest);
+
+    /**
+     * <p>
+     * Deletes the Malware Protection plan ID associated with the Malware Protection plan resource. Use this API only
+     * when you no longer want to protect the resource associated with this Malware Protection plan ID.
+     * </p>
+     * 
+     * @param deleteMalwareProtectionPlanRequest
+     * @return Result of the DeleteMalwareProtectionPlan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @sample AmazonGuardDuty.DeleteMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteMalwareProtectionPlanResult deleteMalwareProtectionPlan(DeleteMalwareProtectionPlanRequest deleteMalwareProtectionPlanRequest);
 
     /**
      * <p>
@@ -807,6 +855,27 @@ public interface AmazonGuardDuty {
 
     /**
      * <p>
+     * Retrieves the Malware Protection plan details associated with a Malware Protection plan ID.
+     * </p>
+     * 
+     * @param getMalwareProtectionPlanRequest
+     * @return Result of the GetMalwareProtectionPlan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @sample AmazonGuardDuty.GetMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetMalwareProtectionPlanResult getMalwareProtectionPlan(GetMalwareProtectionPlanRequest getMalwareProtectionPlanRequest);
+
+    /**
+     * <p>
      * Returns the details of the malware scan settings.
      * </p>
      * <p>
@@ -1132,6 +1201,26 @@ public interface AmazonGuardDuty {
 
     /**
      * <p>
+     * Lists the Malware Protection plan IDs associated with the protected resources in your Amazon Web Services
+     * account.
+     * </p>
+     * 
+     * @param listMalwareProtectionPlansRequest
+     * @return Result of the ListMalwareProtectionPlans operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.ListMalwareProtectionPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListMalwareProtectionPlans"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListMalwareProtectionPlansResult listMalwareProtectionPlans(ListMalwareProtectionPlansRequest listMalwareProtectionPlansRequest);
+
+    /**
+     * <p>
      * Lists details about all member accounts for the current GuardDuty administrator account.
      * </p>
      * 
@@ -1423,6 +1512,27 @@ public interface AmazonGuardDuty {
      *      Documentation</a>
      */
     UpdateIPSetResult updateIPSet(UpdateIPSetRequest updateIPSetRequest);
+
+    /**
+     * <p>
+     * Updates an existing Malware Protection plan resource.
+     * </p>
+     * 
+     * @param updateMalwareProtectionPlanRequest
+     * @return Result of the UpdateMalwareProtectionPlan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws AccessDeniedException
+     *         An access denied exception object.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.UpdateMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateMalwareProtectionPlanResult updateMalwareProtectionPlan(UpdateMalwareProtectionPlanRequest updateMalwareProtectionPlanRequest);
 
     /**
      * <p>

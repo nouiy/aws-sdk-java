@@ -33,7 +33,11 @@ public class CheckAccessNotGrantedRequest extends com.amazonaws.AmazonWebService
     private String policyDocument;
     /**
      * <p>
-     * An access object containing the permissions that shouldn't be granted by the specified policy.
+     * An access object containing the permissions that shouldn't be granted by the specified policy. If only actions
+     * are specified, IAM Access Analyzer checks for access of the actions on all resources in the policy. If only
+     * resources are specified, then IAM Access Analyzer checks which actions have access to the specified resources. If
+     * both actions and resources are specified, then IAM Access Analyzer checks which of the specified actions have
+     * access to the specified resources.
      * </p>
      */
     private java.util.List<Access> access;
@@ -92,10 +96,18 @@ public class CheckAccessNotGrantedRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An access object containing the permissions that shouldn't be granted by the specified policy.
+     * An access object containing the permissions that shouldn't be granted by the specified policy. If only actions
+     * are specified, IAM Access Analyzer checks for access of the actions on all resources in the policy. If only
+     * resources are specified, then IAM Access Analyzer checks which actions have access to the specified resources. If
+     * both actions and resources are specified, then IAM Access Analyzer checks which of the specified actions have
+     * access to the specified resources.
      * </p>
      * 
-     * @return An access object containing the permissions that shouldn't be granted by the specified policy.
+     * @return An access object containing the permissions that shouldn't be granted by the specified policy. If only
+     *         actions are specified, IAM Access Analyzer checks for access of the actions on all resources in the
+     *         policy. If only resources are specified, then IAM Access Analyzer checks which actions have access to the
+     *         specified resources. If both actions and resources are specified, then IAM Access Analyzer checks which
+     *         of the specified actions have access to the specified resources.
      */
 
     public java.util.List<Access> getAccess() {
@@ -104,11 +116,19 @@ public class CheckAccessNotGrantedRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An access object containing the permissions that shouldn't be granted by the specified policy.
+     * An access object containing the permissions that shouldn't be granted by the specified policy. If only actions
+     * are specified, IAM Access Analyzer checks for access of the actions on all resources in the policy. If only
+     * resources are specified, then IAM Access Analyzer checks which actions have access to the specified resources. If
+     * both actions and resources are specified, then IAM Access Analyzer checks which of the specified actions have
+     * access to the specified resources.
      * </p>
      * 
      * @param access
-     *        An access object containing the permissions that shouldn't be granted by the specified policy.
+     *        An access object containing the permissions that shouldn't be granted by the specified policy. If only
+     *        actions are specified, IAM Access Analyzer checks for access of the actions on all resources in the
+     *        policy. If only resources are specified, then IAM Access Analyzer checks which actions have access to the
+     *        specified resources. If both actions and resources are specified, then IAM Access Analyzer checks which of
+     *        the specified actions have access to the specified resources.
      */
 
     public void setAccess(java.util.Collection<Access> access) {
@@ -122,7 +142,11 @@ public class CheckAccessNotGrantedRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An access object containing the permissions that shouldn't be granted by the specified policy.
+     * An access object containing the permissions that shouldn't be granted by the specified policy. If only actions
+     * are specified, IAM Access Analyzer checks for access of the actions on all resources in the policy. If only
+     * resources are specified, then IAM Access Analyzer checks which actions have access to the specified resources. If
+     * both actions and resources are specified, then IAM Access Analyzer checks which of the specified actions have
+     * access to the specified resources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -131,7 +155,11 @@ public class CheckAccessNotGrantedRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param access
-     *        An access object containing the permissions that shouldn't be granted by the specified policy.
+     *        An access object containing the permissions that shouldn't be granted by the specified policy. If only
+     *        actions are specified, IAM Access Analyzer checks for access of the actions on all resources in the
+     *        policy. If only resources are specified, then IAM Access Analyzer checks which actions have access to the
+     *        specified resources. If both actions and resources are specified, then IAM Access Analyzer checks which of
+     *        the specified actions have access to the specified resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +175,19 @@ public class CheckAccessNotGrantedRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An access object containing the permissions that shouldn't be granted by the specified policy.
+     * An access object containing the permissions that shouldn't be granted by the specified policy. If only actions
+     * are specified, IAM Access Analyzer checks for access of the actions on all resources in the policy. If only
+     * resources are specified, then IAM Access Analyzer checks which actions have access to the specified resources. If
+     * both actions and resources are specified, then IAM Access Analyzer checks which of the specified actions have
+     * access to the specified resources.
      * </p>
      * 
      * @param access
-     *        An access object containing the permissions that shouldn't be granted by the specified policy.
+     *        An access object containing the permissions that shouldn't be granted by the specified policy. If only
+     *        actions are specified, IAM Access Analyzer checks for access of the actions on all resources in the
+     *        policy. If only resources are specified, then IAM Access Analyzer checks which actions have access to the
+     *        specified resources. If both actions and resources are specified, then IAM Access Analyzer checks which of
+     *        the specified actions have access to the specified resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

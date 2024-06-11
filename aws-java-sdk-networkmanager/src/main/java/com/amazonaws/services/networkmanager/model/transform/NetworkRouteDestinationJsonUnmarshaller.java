@@ -60,6 +60,10 @@ public class NetworkRouteDestinationJsonUnmarshaller implements Unmarshaller<Net
                     context.nextToken();
                     networkRouteDestination.setSegmentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("NetworkFunctionGroupName", targetDepth)) {
+                    context.nextToken();
+                    networkRouteDestination.setNetworkFunctionGroupName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("EdgeLocation", targetDepth)) {
                     context.nextToken();
                     networkRouteDestination.setEdgeLocation(context.getUnmarshaller(String.class).unmarshall(context));

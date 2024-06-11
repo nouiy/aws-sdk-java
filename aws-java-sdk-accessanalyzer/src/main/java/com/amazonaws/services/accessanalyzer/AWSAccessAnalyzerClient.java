@@ -453,6 +453,73 @@ public class AWSAccessAnalyzerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Checks whether a resource policy can grant public access to the specified resource type.
+     * </p>
+     * 
+     * @param checkNoPublicAccessRequest
+     * @return Result of the CheckNoPublicAccess operation returned by the service.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws InternalServerException
+     *         Internal server error.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid.
+     * @throws UnprocessableEntityException
+     *         The specified entity could not be processed.
+     * @throws ThrottlingException
+     *         Throttling limit exceeded error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSAccessAnalyzer.CheckNoPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/CheckNoPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CheckNoPublicAccessResult checkNoPublicAccess(CheckNoPublicAccessRequest request) {
+        request = beforeClientExecution(request);
+        return executeCheckNoPublicAccess(request);
+    }
+
+    @SdkInternalApi
+    final CheckNoPublicAccessResult executeCheckNoPublicAccess(CheckNoPublicAccessRequest checkNoPublicAccessRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(checkNoPublicAccessRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CheckNoPublicAccessRequest> request = null;
+        Response<CheckNoPublicAccessResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CheckNoPublicAccessRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(checkNoPublicAccessRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AccessAnalyzer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CheckNoPublicAccess");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CheckNoPublicAccessResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CheckNoPublicAccessResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an access preview that allows you to preview IAM Access Analyzer findings for your resource before
      * deploying resource permissions.
      * </p>
@@ -801,6 +868,71 @@ public class AWSAccessAnalyzerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Creates a recommendation for an unused permissions finding.
+     * </p>
+     * 
+     * @param generateFindingRecommendationRequest
+     * @return Result of the GenerateFindingRecommendation operation returned by the service.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws InternalServerException
+     *         Internal server error.
+     * @throws ThrottlingException
+     *         Throttling limit exceeded error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSAccessAnalyzer.GenerateFindingRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/GenerateFindingRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GenerateFindingRecommendationResult generateFindingRecommendation(GenerateFindingRecommendationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGenerateFindingRecommendation(request);
+    }
+
+    @SdkInternalApi
+    final GenerateFindingRecommendationResult executeGenerateFindingRecommendation(GenerateFindingRecommendationRequest generateFindingRecommendationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(generateFindingRecommendationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GenerateFindingRecommendationRequest> request = null;
+        Response<GenerateFindingRecommendationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GenerateFindingRecommendationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(generateFindingRecommendationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AccessAnalyzer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GenerateFindingRecommendation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GenerateFindingRecommendationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GenerateFindingRecommendationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves information about an access preview for the specified analyzer.
      * </p>
      * 
@@ -1125,6 +1257,73 @@ public class AWSAccessAnalyzerClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<GetFindingResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetFindingResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves information about a finding recommendation for the specified analyzer.
+     * </p>
+     * 
+     * @param getFindingRecommendationRequest
+     * @return Result of the GetFindingRecommendation operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws InternalServerException
+     *         Internal server error.
+     * @throws ThrottlingException
+     *         Throttling limit exceeded error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSAccessAnalyzer.GetFindingRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/GetFindingRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetFindingRecommendationResult getFindingRecommendation(GetFindingRecommendationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetFindingRecommendation(request);
+    }
+
+    @SdkInternalApi
+    final GetFindingRecommendationResult executeGetFindingRecommendation(GetFindingRecommendationRequest getFindingRecommendationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getFindingRecommendationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetFindingRecommendationRequest> request = null;
+        Response<GetFindingRecommendationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetFindingRecommendationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getFindingRecommendationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AccessAnalyzer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetFindingRecommendation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetFindingRecommendationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetFindingRecommendationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

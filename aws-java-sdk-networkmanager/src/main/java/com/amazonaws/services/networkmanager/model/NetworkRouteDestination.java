@@ -48,6 +48,12 @@ public class NetworkRouteDestination implements Serializable, Cloneable, Structu
     private String segmentName;
     /**
      * <p>
+     * The network function group name associated with the destination.
+     * </p>
+     */
+    private String networkFunctionGroupName;
+    /**
+     * <p>
      * The edge location for the network destination.
      * </p>
      */
@@ -182,6 +188,46 @@ public class NetworkRouteDestination implements Serializable, Cloneable, Structu
 
     public NetworkRouteDestination withSegmentName(String segmentName) {
         setSegmentName(segmentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The network function group name associated with the destination.
+     * </p>
+     * 
+     * @param networkFunctionGroupName
+     *        The network function group name associated with the destination.
+     */
+
+    public void setNetworkFunctionGroupName(String networkFunctionGroupName) {
+        this.networkFunctionGroupName = networkFunctionGroupName;
+    }
+
+    /**
+     * <p>
+     * The network function group name associated with the destination.
+     * </p>
+     * 
+     * @return The network function group name associated with the destination.
+     */
+
+    public String getNetworkFunctionGroupName() {
+        return this.networkFunctionGroupName;
+    }
+
+    /**
+     * <p>
+     * The network function group name associated with the destination.
+     * </p>
+     * 
+     * @param networkFunctionGroupName
+     *        The network function group name associated with the destination.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkRouteDestination withNetworkFunctionGroupName(String networkFunctionGroupName) {
+        setNetworkFunctionGroupName(networkFunctionGroupName);
         return this;
     }
 
@@ -323,6 +369,8 @@ public class NetworkRouteDestination implements Serializable, Cloneable, Structu
             sb.append("TransitGatewayAttachmentId: ").append(getTransitGatewayAttachmentId()).append(",");
         if (getSegmentName() != null)
             sb.append("SegmentName: ").append(getSegmentName()).append(",");
+        if (getNetworkFunctionGroupName() != null)
+            sb.append("NetworkFunctionGroupName: ").append(getNetworkFunctionGroupName()).append(",");
         if (getEdgeLocation() != null)
             sb.append("EdgeLocation: ").append(getEdgeLocation()).append(",");
         if (getResourceType() != null)
@@ -355,6 +403,10 @@ public class NetworkRouteDestination implements Serializable, Cloneable, Structu
             return false;
         if (other.getSegmentName() != null && other.getSegmentName().equals(this.getSegmentName()) == false)
             return false;
+        if (other.getNetworkFunctionGroupName() == null ^ this.getNetworkFunctionGroupName() == null)
+            return false;
+        if (other.getNetworkFunctionGroupName() != null && other.getNetworkFunctionGroupName().equals(this.getNetworkFunctionGroupName()) == false)
+            return false;
         if (other.getEdgeLocation() == null ^ this.getEdgeLocation() == null)
             return false;
         if (other.getEdgeLocation() != null && other.getEdgeLocation().equals(this.getEdgeLocation()) == false)
@@ -378,6 +430,7 @@ public class NetworkRouteDestination implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getCoreNetworkAttachmentId() == null) ? 0 : getCoreNetworkAttachmentId().hashCode());
         hashCode = prime * hashCode + ((getTransitGatewayAttachmentId() == null) ? 0 : getTransitGatewayAttachmentId().hashCode());
         hashCode = prime * hashCode + ((getSegmentName() == null) ? 0 : getSegmentName().hashCode());
+        hashCode = prime * hashCode + ((getNetworkFunctionGroupName() == null) ? 0 : getNetworkFunctionGroupName().hashCode());
         hashCode = prime * hashCode + ((getEdgeLocation() == null) ? 0 : getEdgeLocation().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getResourceId() == null) ? 0 : getResourceId().hashCode());

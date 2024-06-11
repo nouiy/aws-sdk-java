@@ -41,6 +41,8 @@ public class ListModelPackageGroupsRequestMarshaller {
             .marshallLocationName("SortBy").build();
     private static final MarshallingInfo<String> SORTORDER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SortOrder").build();
+    private static final MarshallingInfo<String> CROSSACCOUNTFILTEROPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrossAccountFilterOption").build();
 
     private static final ListModelPackageGroupsRequestMarshaller instance = new ListModelPackageGroupsRequestMarshaller();
 
@@ -65,6 +67,7 @@ public class ListModelPackageGroupsRequestMarshaller {
             protocolMarshaller.marshall(listModelPackageGroupsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listModelPackageGroupsRequest.getSortBy(), SORTBY_BINDING);
             protocolMarshaller.marshall(listModelPackageGroupsRequest.getSortOrder(), SORTORDER_BINDING);
+            protocolMarshaller.marshall(listModelPackageGroupsRequest.getCrossAccountFilterOption(), CROSSACCOUNTFILTEROPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

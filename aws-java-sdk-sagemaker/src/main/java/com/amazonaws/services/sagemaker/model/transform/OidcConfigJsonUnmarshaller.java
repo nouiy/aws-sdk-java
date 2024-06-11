@@ -80,6 +80,15 @@ public class OidcConfigJsonUnmarshaller implements Unmarshaller<OidcConfig, Json
                     context.nextToken();
                     oidcConfig.setJwksUri(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Scope", targetDepth)) {
+                    context.nextToken();
+                    oidcConfig.setScope(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AuthenticationRequestExtraParams", targetDepth)) {
+                    context.nextToken();
+                    oidcConfig.setAuthenticationRequestExtraParams(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

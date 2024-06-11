@@ -30,18 +30,18 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * InstanceArn that was scanned in the scan entry.
+     * Instance ARN that was scanned in the scan entry.
      * </p>
      */
     private String instanceArn;
 
     /**
      * <p>
-     * InstanceArn that was scanned in the scan entry.
+     * Instance ARN that was scanned in the scan entry.
      * </p>
      * 
      * @param instanceArn
-     *        InstanceArn that was scanned in the scan entry.
+     *        Instance ARN that was scanned in the scan entry.
      */
 
     public void setInstanceArn(String instanceArn) {
@@ -50,10 +50,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * InstanceArn that was scanned in the scan entry.
+     * Instance ARN that was scanned in the scan entry.
      * </p>
      * 
-     * @return InstanceArn that was scanned in the scan entry.
+     * @return Instance ARN that was scanned in the scan entry.
      */
 
     public String getInstanceArn() {
@@ -62,11 +62,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * InstanceArn that was scanned in the scan entry.
+     * Instance ARN that was scanned in the scan entry.
      * </p>
      * 
      * @param instanceArn
-     *        InstanceArn that was scanned in the scan entry.
+     *        Instance ARN that was scanned in the scan entry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

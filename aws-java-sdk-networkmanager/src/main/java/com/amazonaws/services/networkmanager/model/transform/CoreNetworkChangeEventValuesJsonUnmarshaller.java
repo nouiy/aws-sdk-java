@@ -56,6 +56,10 @@ public class CoreNetworkChangeEventValuesJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     coreNetworkChangeEventValues.setSegmentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("NetworkFunctionGroupName", targetDepth)) {
+                    context.nextToken();
+                    coreNetworkChangeEventValues.setNetworkFunctionGroupName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("AttachmentId", targetDepth)) {
                     context.nextToken();
                     coreNetworkChangeEventValues.setAttachmentId(context.getUnmarshaller(String.class).unmarshall(context));

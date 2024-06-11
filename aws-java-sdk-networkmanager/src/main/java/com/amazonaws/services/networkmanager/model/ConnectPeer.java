@@ -78,7 +78,7 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The subnet ARN for the Connect peer.
+     * The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * </p>
      */
     private String subnetArn;
@@ -454,11 +454,11 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subnet ARN for the Connect peer.
+     * The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * </p>
      * 
      * @param subnetArn
-     *        The subnet ARN for the Connect peer.
+     *        The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      */
 
     public void setSubnetArn(String subnetArn) {
@@ -467,10 +467,10 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subnet ARN for the Connect peer.
+     * The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * </p>
      * 
-     * @return The subnet ARN for the Connect peer.
+     * @return The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      */
 
     public String getSubnetArn() {
@@ -479,11 +479,11 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subnet ARN for the Connect peer.
+     * The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * </p>
      * 
      * @param subnetArn
-     *        The subnet ARN for the Connect peer.
+     *        The subnet ARN for the Connect peer. This only applies only when the protocol is NO_ENCAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

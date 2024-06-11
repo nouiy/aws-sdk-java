@@ -322,6 +322,49 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
+     * Creates a new Malware Protection plan for the protected resource.
+     * </p>
+     * <p>
+     * When you create a Malware Protection plan, the Amazon Web Services service terms for GuardDuty Malware Protection
+     * apply. For more information, see <a href="http://aws.amazon.com/service-terms/#87._Amazon_GuardDuty">Amazon Web
+     * Services service terms for GuardDuty Malware Protection</a>.
+     * </p>
+     * 
+     * @param createMalwareProtectionPlanRequest
+     * @return A Java Future containing the result of the CreateMalwareProtectionPlan operation returned by the service.
+     * @sample AmazonGuardDutyAsync.CreateMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMalwareProtectionPlanResult> createMalwareProtectionPlanAsync(
+            CreateMalwareProtectionPlanRequest createMalwareProtectionPlanRequest);
+
+    /**
+     * <p>
+     * Creates a new Malware Protection plan for the protected resource.
+     * </p>
+     * <p>
+     * When you create a Malware Protection plan, the Amazon Web Services service terms for GuardDuty Malware Protection
+     * apply. For more information, see <a href="http://aws.amazon.com/service-terms/#87._Amazon_GuardDuty">Amazon Web
+     * Services service terms for GuardDuty Malware Protection</a>.
+     * </p>
+     * 
+     * @param createMalwareProtectionPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateMalwareProtectionPlan operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.CreateMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMalwareProtectionPlanResult> createMalwareProtectionPlanAsync(
+            CreateMalwareProtectionPlanRequest createMalwareProtectionPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateMalwareProtectionPlanRequest, CreateMalwareProtectionPlanResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates member accounts of the current Amazon Web Services account by specifying a list of Amazon Web Services
      * account IDs. This step is a prerequisite for managing the associated member accounts either by invitation or
      * through an organization.
@@ -668,6 +711,41 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      */
     java.util.concurrent.Future<DeleteInvitationsResult> deleteInvitationsAsync(DeleteInvitationsRequest deleteInvitationsRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteInvitationsRequest, DeleteInvitationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the Malware Protection plan ID associated with the Malware Protection plan resource. Use this API only
+     * when you no longer want to protect the resource associated with this Malware Protection plan ID.
+     * </p>
+     * 
+     * @param deleteMalwareProtectionPlanRequest
+     * @return A Java Future containing the result of the DeleteMalwareProtectionPlan operation returned by the service.
+     * @sample AmazonGuardDutyAsync.DeleteMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMalwareProtectionPlanResult> deleteMalwareProtectionPlanAsync(
+            DeleteMalwareProtectionPlanRequest deleteMalwareProtectionPlanRequest);
+
+    /**
+     * <p>
+     * Deletes the Malware Protection plan ID associated with the Malware Protection plan resource. Use this API only
+     * when you no longer want to protect the resource associated with this Malware Protection plan ID.
+     * </p>
+     * 
+     * @param deleteMalwareProtectionPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteMalwareProtectionPlan operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.DeleteMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMalwareProtectionPlanResult> deleteMalwareProtectionPlanAsync(
+            DeleteMalwareProtectionPlanRequest deleteMalwareProtectionPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteMalwareProtectionPlanRequest, DeleteMalwareProtectionPlanResult> asyncHandler);
 
     /**
      * <p>
@@ -1472,6 +1550,37 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
+     * Retrieves the Malware Protection plan details associated with a Malware Protection plan ID.
+     * </p>
+     * 
+     * @param getMalwareProtectionPlanRequest
+     * @return A Java Future containing the result of the GetMalwareProtectionPlan operation returned by the service.
+     * @sample AmazonGuardDutyAsync.GetMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMalwareProtectionPlanResult> getMalwareProtectionPlanAsync(GetMalwareProtectionPlanRequest getMalwareProtectionPlanRequest);
+
+    /**
+     * <p>
+     * Retrieves the Malware Protection plan details associated with a Malware Protection plan ID.
+     * </p>
+     * 
+     * @param getMalwareProtectionPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMalwareProtectionPlan operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.GetMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMalwareProtectionPlanResult> getMalwareProtectionPlanAsync(GetMalwareProtectionPlanRequest getMalwareProtectionPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMalwareProtectionPlanRequest, GetMalwareProtectionPlanResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the details of the malware scan settings.
      * </p>
      * <p>
@@ -2081,6 +2190,41 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
+     * Lists the Malware Protection plan IDs associated with the protected resources in your Amazon Web Services
+     * account.
+     * </p>
+     * 
+     * @param listMalwareProtectionPlansRequest
+     * @return A Java Future containing the result of the ListMalwareProtectionPlans operation returned by the service.
+     * @sample AmazonGuardDutyAsync.ListMalwareProtectionPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListMalwareProtectionPlans"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMalwareProtectionPlansResult> listMalwareProtectionPlansAsync(
+            ListMalwareProtectionPlansRequest listMalwareProtectionPlansRequest);
+
+    /**
+     * <p>
+     * Lists the Malware Protection plan IDs associated with the protected resources in your Amazon Web Services
+     * account.
+     * </p>
+     * 
+     * @param listMalwareProtectionPlansRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMalwareProtectionPlans operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.ListMalwareProtectionPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListMalwareProtectionPlans"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMalwareProtectionPlansResult> listMalwareProtectionPlansAsync(
+            ListMalwareProtectionPlansRequest listMalwareProtectionPlansRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMalwareProtectionPlansRequest, ListMalwareProtectionPlansResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists details about all member accounts for the current GuardDuty administrator account.
      * </p>
      * 
@@ -2611,6 +2755,39 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      */
     java.util.concurrent.Future<UpdateIPSetResult> updateIPSetAsync(UpdateIPSetRequest updateIPSetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateIPSetRequest, UpdateIPSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an existing Malware Protection plan resource.
+     * </p>
+     * 
+     * @param updateMalwareProtectionPlanRequest
+     * @return A Java Future containing the result of the UpdateMalwareProtectionPlan operation returned by the service.
+     * @sample AmazonGuardDutyAsync.UpdateMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMalwareProtectionPlanResult> updateMalwareProtectionPlanAsync(
+            UpdateMalwareProtectionPlanRequest updateMalwareProtectionPlanRequest);
+
+    /**
+     * <p>
+     * Updates an existing Malware Protection plan resource.
+     * </p>
+     * 
+     * @param updateMalwareProtectionPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMalwareProtectionPlan operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.UpdateMalwareProtectionPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateMalwareProtectionPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMalwareProtectionPlanResult> updateMalwareProtectionPlanAsync(
+            UpdateMalwareProtectionPlanRequest updateMalwareProtectionPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMalwareProtectionPlanRequest, UpdateMalwareProtectionPlanResult> asyncHandler);
 
     /**
      * <p>

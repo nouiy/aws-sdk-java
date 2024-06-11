@@ -82,7 +82,22 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
+     * <code>attachment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>connect-peer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>connection</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>core-network</code>
      * </p>
      * </li>
      * <li>
@@ -93,6 +108,11 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>link</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peering</code>
      * </p>
      * </li>
      * <li>
@@ -366,7 +386,22 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
+     * <code>attachment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>connect-peer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>connection</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>core-network</code>
      * </p>
      * </li>
      * <li>
@@ -377,6 +412,11 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>link</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peering</code>
      * </p>
      * </li>
      * <li>
@@ -449,7 +489,22 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>attachment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>connect-peer</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>connection</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>core-network</code>
      *        </p>
      *        </li>
      *        <li>
@@ -460,6 +515,11 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        <code>link</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peering</code>
      *        </p>
      *        </li>
      *        <li>
@@ -538,7 +598,22 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
+     * <code>attachment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>connect-peer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>connection</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>core-network</code>
      * </p>
      * </li>
      * <li>
@@ -549,6 +624,11 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>link</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peering</code>
      * </p>
      * </li>
      * <li>
@@ -620,7 +700,22 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      *         <ul>
      *         <li>
      *         <p>
+     *         <code>attachment</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>connect-peer</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>connection</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>core-network</code>
      *         </p>
      *         </li>
      *         <li>
@@ -631,6 +726,11 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      *         <li>
      *         <p>
      *         <code>link</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>peering</code>
      *         </p>
      *         </li>
      *         <li>
@@ -709,7 +809,22 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
+     * <code>attachment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>connect-peer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>connection</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>core-network</code>
      * </p>
      * </li>
      * <li>
@@ -720,6 +835,11 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>link</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peering</code>
      * </p>
      * </li>
      * <li>
@@ -792,7 +912,22 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>attachment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>connect-peer</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>connection</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>core-network</code>
      *        </p>
      *        </li>
      *        <li>
@@ -803,6 +938,11 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        <code>link</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peering</code>
      *        </p>
      *        </li>
      *        <li>

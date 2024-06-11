@@ -57,80 +57,17 @@ public class GetNetworkTelemetryRequest extends com.amazonaws.AmazonWebServiceRe
     private String accountId;
     /**
      * <p>
-     * The resource type.
-     * </p>
-     * <p>
-     * The following are the supported resource types for Direct Connect:
+     * The resource type. The following are the supported resource types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>dxcon</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>dx-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>dx-vif</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The following are the supported resource types for Network Manager:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>connection</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>device</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>link</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>site</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The following are the supported resource types for Amazon VPC:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>customer-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway-attachment</code>
+     * <code>connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>transit-gateway-connect-peer</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway-route-table</code>
      * </p>
      * </li>
      * <li>
@@ -362,80 +299,17 @@ public class GetNetworkTelemetryRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The resource type.
-     * </p>
-     * <p>
-     * The following are the supported resource types for Direct Connect:
+     * The resource type. The following are the supported resource types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>dxcon</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>dx-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>dx-vif</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The following are the supported resource types for Network Manager:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>connection</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>device</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>link</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>site</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The following are the supported resource types for Amazon VPC:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>customer-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway-attachment</code>
+     * <code>connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>transit-gateway-connect-peer</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway-route-table</code>
      * </p>
      * </li>
      * <li>
@@ -446,79 +320,16 @@ public class GetNetworkTelemetryRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @param resourceType
-     *        The resource type.</p>
-     *        <p>
-     *        The following are the supported resource types for Direct Connect:
-     *        </p>
+     *        The resource type. The following are the supported resource types:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>dxcon</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>dx-gateway</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>dx-vif</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        The following are the supported resource types for Network Manager:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>connection</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>device</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>link</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>site</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        The following are the supported resource types for Amazon VPC:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>customer-gateway</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>transit-gateway</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>transit-gateway-attachment</code>
+     *        <code>connect-peer</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>transit-gateway-connect-peer</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>transit-gateway-route-table</code>
      *        </p>
      *        </li>
      *        <li>
@@ -534,70 +345,12 @@ public class GetNetworkTelemetryRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The resource type.
-     * </p>
-     * <p>
-     * The following are the supported resource types for Direct Connect:
+     * The resource type. The following are the supported resource types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>dxcon</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>dx-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>dx-vif</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The following are the supported resource types for Network Manager:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>connection</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>device</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>link</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>site</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The following are the supported resource types for Amazon VPC:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>customer-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway-attachment</code>
+     * <code>connect-peer</code>
      * </p>
      * </li>
      * <li>
@@ -607,89 +360,21 @@ public class GetNetworkTelemetryRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-route-table</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>vpn-connection</code>
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The resource type.</p>
-     *         <p>
-     *         The following are the supported resource types for Direct Connect:
-     *         </p>
+     * @return The resource type. The following are the supported resource types:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>dxcon</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>dx-gateway</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>dx-vif</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         The following are the supported resource types for Network Manager:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>connection</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>device</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>link</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>site</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         The following are the supported resource types for Amazon VPC:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>customer-gateway</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>transit-gateway</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>transit-gateway-attachment</code>
+     *         <code>connect-peer</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>transit-gateway-connect-peer</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>transit-gateway-route-table</code>
      *         </p>
      *         </li>
      *         <li>
@@ -705,80 +390,17 @@ public class GetNetworkTelemetryRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The resource type.
-     * </p>
-     * <p>
-     * The following are the supported resource types for Direct Connect:
+     * The resource type. The following are the supported resource types:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>dxcon</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>dx-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>dx-vif</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The following are the supported resource types for Network Manager:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>connection</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>device</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>link</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>site</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The following are the supported resource types for Amazon VPC:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>customer-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway-attachment</code>
+     * <code>connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>transit-gateway-connect-peer</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>transit-gateway-route-table</code>
      * </p>
      * </li>
      * <li>
@@ -789,79 +411,16 @@ public class GetNetworkTelemetryRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @param resourceType
-     *        The resource type.</p>
-     *        <p>
-     *        The following are the supported resource types for Direct Connect:
-     *        </p>
+     *        The resource type. The following are the supported resource types:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>dxcon</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>dx-gateway</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>dx-vif</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        The following are the supported resource types for Network Manager:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>connection</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>device</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>link</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>site</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        The following are the supported resource types for Amazon VPC:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>customer-gateway</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>transit-gateway</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>transit-gateway-attachment</code>
+     *        <code>connect-peer</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>transit-gateway-connect-peer</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>transit-gateway-route-table</code>
      *        </p>
      *        </li>
      *        <li>

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about actions that define permissions to check against a policy.
+ * Contains information about actions and resources that define permissions to check against a policy.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/Access" target="_top">AWS API
@@ -35,6 +35,13 @@ public class Access implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> actions;
+    /**
+     * <p>
+     * A list of resources for the access permissions. Any strings that can be used as a resource in an IAM policy can
+     * be used in the list of resources to check.
+     * </p>
+     */
+    private java.util.List<String> resources;
 
     /**
      * <p>
@@ -115,6 +122,84 @@ public class Access implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A list of resources for the access permissions. Any strings that can be used as a resource in an IAM policy can
+     * be used in the list of resources to check.
+     * </p>
+     * 
+     * @return A list of resources for the access permissions. Any strings that can be used as a resource in an IAM
+     *         policy can be used in the list of resources to check.
+     */
+
+    public java.util.List<String> getResources() {
+        return resources;
+    }
+
+    /**
+     * <p>
+     * A list of resources for the access permissions. Any strings that can be used as a resource in an IAM policy can
+     * be used in the list of resources to check.
+     * </p>
+     * 
+     * @param resources
+     *        A list of resources for the access permissions. Any strings that can be used as a resource in an IAM
+     *        policy can be used in the list of resources to check.
+     */
+
+    public void setResources(java.util.Collection<String> resources) {
+        if (resources == null) {
+            this.resources = null;
+            return;
+        }
+
+        this.resources = new java.util.ArrayList<String>(resources);
+    }
+
+    /**
+     * <p>
+     * A list of resources for the access permissions. Any strings that can be used as a resource in an IAM policy can
+     * be used in the list of resources to check.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResources(java.util.Collection)} or {@link #withResources(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param resources
+     *        A list of resources for the access permissions. Any strings that can be used as a resource in an IAM
+     *        policy can be used in the list of resources to check.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Access withResources(String... resources) {
+        if (this.resources == null) {
+            setResources(new java.util.ArrayList<String>(resources.length));
+        }
+        for (String ele : resources) {
+            this.resources.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of resources for the access permissions. Any strings that can be used as a resource in an IAM policy can
+     * be used in the list of resources to check.
+     * </p>
+     * 
+     * @param resources
+     *        A list of resources for the access permissions. Any strings that can be used as a resource in an IAM
+     *        policy can be used in the list of resources to check.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Access withResources(java.util.Collection<String> resources) {
+        setResources(resources);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -127,7 +212,9 @@ public class Access implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getActions() != null)
-            sb.append("Actions: ").append(getActions());
+            sb.append("Actions: ").append(getActions()).append(",");
+        if (getResources() != null)
+            sb.append("Resources: ").append(getResources());
         sb.append("}");
         return sb.toString();
     }
@@ -146,6 +233,10 @@ public class Access implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getActions() != null && other.getActions().equals(this.getActions()) == false)
             return false;
+        if (other.getResources() == null ^ this.getResources() == null)
+            return false;
+        if (other.getResources() != null && other.getResources().equals(this.getResources()) == false)
+            return false;
         return true;
     }
 
@@ -155,6 +246,7 @@ public class Access implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getActions() == null) ? 0 : getActions().hashCode());
+        hashCode = prime * hashCode + ((getResources() == null) ? 0 : getResources().hashCode());
         return hashCode;
     }
 

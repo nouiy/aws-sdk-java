@@ -48,10 +48,14 @@ public class AttachmentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttachmentPolicyRuleNumber").build();
     private static final MarshallingInfo<String> SEGMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SegmentName").build();
+    private static final MarshallingInfo<String> NETWORKFUNCTIONGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkFunctionGroupName").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<StructuredPojo> PROPOSEDSEGMENTCHANGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProposedSegmentChange").build();
+    private static final MarshallingInfo<StructuredPojo> PROPOSEDNETWORKFUNCTIONGROUPCHANGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProposedNetworkFunctionGroupChange").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -83,8 +87,10 @@ public class AttachmentMarshaller {
             protocolMarshaller.marshall(attachment.getResourceArn(), RESOURCEARN_BINDING);
             protocolMarshaller.marshall(attachment.getAttachmentPolicyRuleNumber(), ATTACHMENTPOLICYRULENUMBER_BINDING);
             protocolMarshaller.marshall(attachment.getSegmentName(), SEGMENTNAME_BINDING);
+            protocolMarshaller.marshall(attachment.getNetworkFunctionGroupName(), NETWORKFUNCTIONGROUPNAME_BINDING);
             protocolMarshaller.marshall(attachment.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(attachment.getProposedSegmentChange(), PROPOSEDSEGMENTCHANGE_BINDING);
+            protocolMarshaller.marshall(attachment.getProposedNetworkFunctionGroupChange(), PROPOSEDNETWORKFUNCTIONGROUPCHANGE_BINDING);
             protocolMarshaller.marshall(attachment.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(attachment.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {

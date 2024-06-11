@@ -56,6 +56,11 @@ public class RouteTableIdentifierJsonUnmarshaller implements Unmarshaller<RouteT
                     context.nextToken();
                     routeTableIdentifier.setCoreNetworkSegmentEdge(CoreNetworkSegmentEdgeIdentifierJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CoreNetworkNetworkFunctionGroup", targetDepth)) {
+                    context.nextToken();
+                    routeTableIdentifier.setCoreNetworkNetworkFunctionGroup(CoreNetworkNetworkFunctionGroupIdentifierJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

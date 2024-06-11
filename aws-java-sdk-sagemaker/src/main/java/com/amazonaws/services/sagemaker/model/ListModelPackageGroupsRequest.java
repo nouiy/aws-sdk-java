@@ -68,6 +68,15 @@ public class ListModelPackageGroupsRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String sortOrder;
+    /**
+     * <p>
+     * A filter that returns either model groups shared with you or model groups in your own account. When the value is
+     * <code>CrossAccount</code>, the results show the resources made discoverable to you from other accounts. When the
+     * value is <code>SameAccount</code> or <code>null</code>, the results show resources from your account. The default
+     * is <code>SameAccount</code>.
+     * </p>
+     */
+    private String crossAccountFilterOption;
 
     /**
      * <p>
@@ -400,6 +409,89 @@ public class ListModelPackageGroupsRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * A filter that returns either model groups shared with you or model groups in your own account. When the value is
+     * <code>CrossAccount</code>, the results show the resources made discoverable to you from other accounts. When the
+     * value is <code>SameAccount</code> or <code>null</code>, the results show resources from your account. The default
+     * is <code>SameAccount</code>.
+     * </p>
+     * 
+     * @param crossAccountFilterOption
+     *        A filter that returns either model groups shared with you or model groups in your own account. When the
+     *        value is <code>CrossAccount</code>, the results show the resources made discoverable to you from other
+     *        accounts. When the value is <code>SameAccount</code> or <code>null</code>, the results show resources from
+     *        your account. The default is <code>SameAccount</code>.
+     * @see CrossAccountFilterOption
+     */
+
+    public void setCrossAccountFilterOption(String crossAccountFilterOption) {
+        this.crossAccountFilterOption = crossAccountFilterOption;
+    }
+
+    /**
+     * <p>
+     * A filter that returns either model groups shared with you or model groups in your own account. When the value is
+     * <code>CrossAccount</code>, the results show the resources made discoverable to you from other accounts. When the
+     * value is <code>SameAccount</code> or <code>null</code>, the results show resources from your account. The default
+     * is <code>SameAccount</code>.
+     * </p>
+     * 
+     * @return A filter that returns either model groups shared with you or model groups in your own account. When the
+     *         value is <code>CrossAccount</code>, the results show the resources made discoverable to you from other
+     *         accounts. When the value is <code>SameAccount</code> or <code>null</code>, the results show resources
+     *         from your account. The default is <code>SameAccount</code>.
+     * @see CrossAccountFilterOption
+     */
+
+    public String getCrossAccountFilterOption() {
+        return this.crossAccountFilterOption;
+    }
+
+    /**
+     * <p>
+     * A filter that returns either model groups shared with you or model groups in your own account. When the value is
+     * <code>CrossAccount</code>, the results show the resources made discoverable to you from other accounts. When the
+     * value is <code>SameAccount</code> or <code>null</code>, the results show resources from your account. The default
+     * is <code>SameAccount</code>.
+     * </p>
+     * 
+     * @param crossAccountFilterOption
+     *        A filter that returns either model groups shared with you or model groups in your own account. When the
+     *        value is <code>CrossAccount</code>, the results show the resources made discoverable to you from other
+     *        accounts. When the value is <code>SameAccount</code> or <code>null</code>, the results show resources from
+     *        your account. The default is <code>SameAccount</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CrossAccountFilterOption
+     */
+
+    public ListModelPackageGroupsRequest withCrossAccountFilterOption(String crossAccountFilterOption) {
+        setCrossAccountFilterOption(crossAccountFilterOption);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A filter that returns either model groups shared with you or model groups in your own account. When the value is
+     * <code>CrossAccount</code>, the results show the resources made discoverable to you from other accounts. When the
+     * value is <code>SameAccount</code> or <code>null</code>, the results show resources from your account. The default
+     * is <code>SameAccount</code>.
+     * </p>
+     * 
+     * @param crossAccountFilterOption
+     *        A filter that returns either model groups shared with you or model groups in your own account. When the
+     *        value is <code>CrossAccount</code>, the results show the resources made discoverable to you from other
+     *        accounts. When the value is <code>SameAccount</code> or <code>null</code>, the results show resources from
+     *        your account. The default is <code>SameAccount</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CrossAccountFilterOption
+     */
+
+    public ListModelPackageGroupsRequest withCrossAccountFilterOption(CrossAccountFilterOption crossAccountFilterOption) {
+        this.crossAccountFilterOption = crossAccountFilterOption.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -424,7 +516,9 @@ public class ListModelPackageGroupsRequest extends com.amazonaws.AmazonWebServic
         if (getSortBy() != null)
             sb.append("SortBy: ").append(getSortBy()).append(",");
         if (getSortOrder() != null)
-            sb.append("SortOrder: ").append(getSortOrder());
+            sb.append("SortOrder: ").append(getSortOrder()).append(",");
+        if (getCrossAccountFilterOption() != null)
+            sb.append("CrossAccountFilterOption: ").append(getCrossAccountFilterOption());
         sb.append("}");
         return sb.toString();
     }
@@ -467,6 +561,10 @@ public class ListModelPackageGroupsRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getSortOrder() != null && other.getSortOrder().equals(this.getSortOrder()) == false)
             return false;
+        if (other.getCrossAccountFilterOption() == null ^ this.getCrossAccountFilterOption() == null)
+            return false;
+        if (other.getCrossAccountFilterOption() != null && other.getCrossAccountFilterOption().equals(this.getCrossAccountFilterOption()) == false)
+            return false;
         return true;
     }
 
@@ -482,6 +580,7 @@ public class ListModelPackageGroupsRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getSortBy() == null) ? 0 : getSortBy().hashCode());
         hashCode = prime * hashCode + ((getSortOrder() == null) ? 0 : getSortOrder().hashCode());
+        hashCode = prime * hashCode + ((getCrossAccountFilterOption() == null) ? 0 : getCrossAccountFilterOption().hashCode());
         return hashCode;
     }
 

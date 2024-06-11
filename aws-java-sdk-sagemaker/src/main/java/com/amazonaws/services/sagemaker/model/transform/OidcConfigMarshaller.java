@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -43,6 +45,10 @@ public class OidcConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogoutEndpoint").build();
     private static final MarshallingInfo<String> JWKSURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JwksUri").build();
+    private static final MarshallingInfo<String> SCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Scope").build();
+    private static final MarshallingInfo<Map> AUTHENTICATIONREQUESTEXTRAPARAMS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthenticationRequestExtraParams").build();
 
     private static final OidcConfigMarshaller instance = new OidcConfigMarshaller();
 
@@ -68,6 +74,8 @@ public class OidcConfigMarshaller {
             protocolMarshaller.marshall(oidcConfig.getUserInfoEndpoint(), USERINFOENDPOINT_BINDING);
             protocolMarshaller.marshall(oidcConfig.getLogoutEndpoint(), LOGOUTENDPOINT_BINDING);
             protocolMarshaller.marshall(oidcConfig.getJwksUri(), JWKSURI_BINDING);
+            protocolMarshaller.marshall(oidcConfig.getScope(), SCOPE_BINDING);
+            protocolMarshaller.marshall(oidcConfig.getAuthenticationRequestExtraParams(), AUTHENTICATIONREQUESTEXTRAPARAMS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

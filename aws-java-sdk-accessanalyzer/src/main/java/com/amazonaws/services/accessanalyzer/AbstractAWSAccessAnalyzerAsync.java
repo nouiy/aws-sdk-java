@@ -80,6 +80,19 @@ public class AbstractAWSAccessAnalyzerAsync extends AbstractAWSAccessAnalyzer im
     }
 
     @Override
+    public java.util.concurrent.Future<CheckNoPublicAccessResult> checkNoPublicAccessAsync(CheckNoPublicAccessRequest request) {
+
+        return checkNoPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CheckNoPublicAccessResult> checkNoPublicAccessAsync(CheckNoPublicAccessRequest request,
+            com.amazonaws.handlers.AsyncHandler<CheckNoPublicAccessRequest, CheckNoPublicAccessResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAccessPreviewResult> createAccessPreviewAsync(CreateAccessPreviewRequest request) {
 
         return createAccessPreviewAsync(request, null);
@@ -145,6 +158,19 @@ public class AbstractAWSAccessAnalyzerAsync extends AbstractAWSAccessAnalyzer im
     }
 
     @Override
+    public java.util.concurrent.Future<GenerateFindingRecommendationResult> generateFindingRecommendationAsync(GenerateFindingRecommendationRequest request) {
+
+        return generateFindingRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GenerateFindingRecommendationResult> generateFindingRecommendationAsync(GenerateFindingRecommendationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GenerateFindingRecommendationRequest, GenerateFindingRecommendationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAccessPreviewResult> getAccessPreviewAsync(GetAccessPreviewRequest request) {
 
         return getAccessPreviewAsync(request, null);
@@ -205,6 +231,19 @@ public class AbstractAWSAccessAnalyzerAsync extends AbstractAWSAccessAnalyzer im
     @Override
     public java.util.concurrent.Future<GetFindingResult> getFindingAsync(GetFindingRequest request,
             com.amazonaws.handlers.AsyncHandler<GetFindingRequest, GetFindingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFindingRecommendationResult> getFindingRecommendationAsync(GetFindingRecommendationRequest request) {
+
+        return getFindingRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFindingRecommendationResult> getFindingRecommendationAsync(GetFindingRecommendationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetFindingRecommendationRequest, GetFindingRecommendationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

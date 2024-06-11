@@ -88,6 +88,10 @@ public class AttachmentJsonUnmarshaller implements Unmarshaller<Attachment, Json
                     context.nextToken();
                     attachment.setSegmentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("NetworkFunctionGroupName", targetDepth)) {
+                    context.nextToken();
+                    attachment.setNetworkFunctionGroupName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     attachment.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())
@@ -97,6 +101,10 @@ public class AttachmentJsonUnmarshaller implements Unmarshaller<Attachment, Json
                 if (context.testExpression("ProposedSegmentChange", targetDepth)) {
                     context.nextToken();
                     attachment.setProposedSegmentChange(ProposedSegmentChangeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ProposedNetworkFunctionGroupChange", targetDepth)) {
+                    context.nextToken();
+                    attachment.setProposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("CreatedAt", targetDepth)) {
                     context.nextToken();

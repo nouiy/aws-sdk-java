@@ -108,6 +108,19 @@ public class AbstractAmazonGuardDutyAsync extends AbstractAmazonGuardDuty implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMalwareProtectionPlanResult> createMalwareProtectionPlanAsync(CreateMalwareProtectionPlanRequest request) {
+
+        return createMalwareProtectionPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMalwareProtectionPlanResult> createMalwareProtectionPlanAsync(CreateMalwareProtectionPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateMalwareProtectionPlanRequest, CreateMalwareProtectionPlanResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateMembersResult> createMembersAsync(CreateMembersRequest request) {
 
         return createMembersAsync(request, null);
@@ -220,6 +233,19 @@ public class AbstractAmazonGuardDutyAsync extends AbstractAmazonGuardDuty implem
     @Override
     public java.util.concurrent.Future<DeleteInvitationsResult> deleteInvitationsAsync(DeleteInvitationsRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteInvitationsRequest, DeleteInvitationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMalwareProtectionPlanResult> deleteMalwareProtectionPlanAsync(DeleteMalwareProtectionPlanRequest request) {
+
+        return deleteMalwareProtectionPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMalwareProtectionPlanResult> deleteMalwareProtectionPlanAsync(DeleteMalwareProtectionPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteMalwareProtectionPlanRequest, DeleteMalwareProtectionPlanResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -480,6 +506,19 @@ public class AbstractAmazonGuardDutyAsync extends AbstractAmazonGuardDuty implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetMalwareProtectionPlanResult> getMalwareProtectionPlanAsync(GetMalwareProtectionPlanRequest request) {
+
+        return getMalwareProtectionPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMalwareProtectionPlanResult> getMalwareProtectionPlanAsync(GetMalwareProtectionPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMalwareProtectionPlanRequest, GetMalwareProtectionPlanResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMalwareScanSettingsResult> getMalwareScanSettingsAsync(GetMalwareScanSettingsRequest request) {
 
         return getMalwareScanSettingsAsync(request, null);
@@ -677,6 +716,19 @@ public class AbstractAmazonGuardDutyAsync extends AbstractAmazonGuardDuty implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListMalwareProtectionPlansResult> listMalwareProtectionPlansAsync(ListMalwareProtectionPlansRequest request) {
+
+        return listMalwareProtectionPlansAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMalwareProtectionPlansResult> listMalwareProtectionPlansAsync(ListMalwareProtectionPlansRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMalwareProtectionPlansRequest, ListMalwareProtectionPlansResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListMembersResult> listMembersAsync(ListMembersRequest request) {
 
         return listMembersAsync(request, null);
@@ -867,6 +919,19 @@ public class AbstractAmazonGuardDutyAsync extends AbstractAmazonGuardDuty implem
     @Override
     public java.util.concurrent.Future<UpdateIPSetResult> updateIPSetAsync(UpdateIPSetRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateIPSetRequest, UpdateIPSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMalwareProtectionPlanResult> updateMalwareProtectionPlanAsync(UpdateMalwareProtectionPlanRequest request) {
+
+        return updateMalwareProtectionPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMalwareProtectionPlanResult> updateMalwareProtectionPlanAsync(UpdateMalwareProtectionPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateMalwareProtectionPlanRequest, UpdateMalwareProtectionPlanResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

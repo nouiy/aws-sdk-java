@@ -30,7 +30,7 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EBS volume Arn information.
+     * EBS volume ARN information.
      * </p>
      */
     private String volumeArn;
@@ -60,24 +60,24 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
     private String encryptionType;
     /**
      * <p>
-     * Snapshot Arn of the EBS volume.
+     * Snapshot ARN of the EBS volume.
      * </p>
      */
     private String snapshotArn;
     /**
      * <p>
-     * KMS key Arn used to encrypt the EBS volume.
+     * KMS key ARN used to encrypt the EBS volume.
      * </p>
      */
     private String kmsKeyArn;
 
     /**
      * <p>
-     * EBS volume Arn information.
+     * EBS volume ARN information.
      * </p>
      * 
      * @param volumeArn
-     *        EBS volume Arn information.
+     *        EBS volume ARN information.
      */
 
     public void setVolumeArn(String volumeArn) {
@@ -86,10 +86,10 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EBS volume Arn information.
+     * EBS volume ARN information.
      * </p>
      * 
-     * @return EBS volume Arn information.
+     * @return EBS volume ARN information.
      */
 
     public String getVolumeArn() {
@@ -98,11 +98,11 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EBS volume Arn information.
+     * EBS volume ARN information.
      * </p>
      * 
      * @param volumeArn
-     *        EBS volume Arn information.
+     *        EBS volume ARN information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,11 +273,11 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Snapshot Arn of the EBS volume.
+     * Snapshot ARN of the EBS volume.
      * </p>
      * 
      * @param snapshotArn
-     *        Snapshot Arn of the EBS volume.
+     *        Snapshot ARN of the EBS volume.
      */
 
     public void setSnapshotArn(String snapshotArn) {
@@ -286,10 +286,10 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Snapshot Arn of the EBS volume.
+     * Snapshot ARN of the EBS volume.
      * </p>
      * 
-     * @return Snapshot Arn of the EBS volume.
+     * @return Snapshot ARN of the EBS volume.
      */
 
     public String getSnapshotArn() {
@@ -298,11 +298,11 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Snapshot Arn of the EBS volume.
+     * Snapshot ARN of the EBS volume.
      * </p>
      * 
      * @param snapshotArn
-     *        Snapshot Arn of the EBS volume.
+     *        Snapshot ARN of the EBS volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -313,11 +313,11 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * KMS key Arn used to encrypt the EBS volume.
+     * KMS key ARN used to encrypt the EBS volume.
      * </p>
      * 
      * @param kmsKeyArn
-     *        KMS key Arn used to encrypt the EBS volume.
+     *        KMS key ARN used to encrypt the EBS volume.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -326,10 +326,10 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * KMS key Arn used to encrypt the EBS volume.
+     * KMS key ARN used to encrypt the EBS volume.
      * </p>
      * 
-     * @return KMS key Arn used to encrypt the EBS volume.
+     * @return KMS key ARN used to encrypt the EBS volume.
      */
 
     public String getKmsKeyArn() {
@@ -338,11 +338,11 @@ public class VolumeDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * KMS key Arn used to encrypt the EBS volume.
+     * KMS key ARN used to encrypt the EBS volume.
      * </p>
      * 
      * @param kmsKeyArn
-     *        KMS key Arn used to encrypt the EBS volume.
+     *        KMS key ARN used to encrypt the EBS volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

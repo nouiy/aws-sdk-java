@@ -1,3 +1,24 @@
+# __1.12.741__ __2024-06-11__
+## __AWS Network Manager__
+  - ### Features
+    - This is model changes & documentation update for Service Insertion feature for AWS Cloud WAN. This feature allows insertion of AWS/3rd party security services on Cloud WAN. This allows to steer inter/intra segment traffic via security appliances and provide visibility to the route updates.
+
+## __Access Analyzer__
+  - ### Features
+    - IAM Access Analyzer now provides policy recommendations to help resolve unused permissions for IAM roles and users. Additionally, IAM Access Analyzer now extends its custom policy checks to detect when IAM policies grant public access or access to critical resources ahead of deployments.
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Added API support for GuardDuty Malware Protection for S3.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Introduced Scope and AuthenticationRequestExtraParams to SageMaker Workforce OIDC configuration; this allows customers to modify these options for their private Workforce IdP integration. Model Registry Cross-account model package groups are discoverable.
+
+## __Private CA Connector for SCEP__
+  - ### Features
+    - Connector for SCEP allows you to use a managed, cloud CA to enroll mobile devices and networking gear. SCEP is a widely-adopted protocol used by mobile device management (MDM) solutions for enrolling mobile devices. With the connector, you can use AWS Private CA with popular MDM solutions.
+
 # __1.12.740__ __2024-06-10__
 ## __Amazon CloudWatch Application Signals__
   - ### Features

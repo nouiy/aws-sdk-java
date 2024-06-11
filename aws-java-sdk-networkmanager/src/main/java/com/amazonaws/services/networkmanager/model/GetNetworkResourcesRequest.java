@@ -65,22 +65,17 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>dxcon</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">Connection</a>.
+     * <code>dxcon</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>dx-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html"
-     * >DirectConnectGateway</a>.
+     * <code>dx-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>dx-vif</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html"
-     * >VirtualInterface</a>.
+     * <code>dx-vif</code>
      * </p>
      * </li>
      * </ul>
@@ -90,26 +85,42 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>connection</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Connection.html">Connection</a>.
+     * <code>attachment</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>device</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Device.html">Device</a>.
+     * <code>connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>link</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Link.html">Link</a>.
+     * <code>connection</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>site</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Site.html">Site</a>.
+     * <code>core-network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>device</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>link</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peering</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>site</code>
      * </p>
      * </li>
      * </ul>
@@ -119,41 +130,32 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>customer-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CustomerGateway.html">CustomerGateway</a>.
+     * <code>customer-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGateway.html">TransitGateway</a>.
+     * <code>transit-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-attachment</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayAttachment.html"
-     * >TransitGatewayAttachment</a>.
+     * <code>transit-gateway-attachment</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-connect-peer</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayConnectPeer.html"
-     * >TransitGatewayConnectPeer</a>.
+     * <code>transit-gateway-connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-route-table</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayRouteTable.html"
-     * >TransitGatewayRouteTable</a>.
+     * <code>transit-gateway-route-table</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>vpn-connection</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html">VpnConnection</a>.
+     * <code>vpn-connection</code>
      * </p>
      * </li>
      * </ul>
@@ -388,22 +390,17 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>dxcon</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">Connection</a>.
+     * <code>dxcon</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>dx-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html"
-     * >DirectConnectGateway</a>.
+     * <code>dx-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>dx-vif</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html"
-     * >VirtualInterface</a>.
+     * <code>dx-vif</code>
      * </p>
      * </li>
      * </ul>
@@ -413,26 +410,42 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>connection</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Connection.html">Connection</a>.
+     * <code>attachment</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>device</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Device.html">Device</a>.
+     * <code>connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>link</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Link.html">Link</a>.
+     * <code>connection</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>site</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Site.html">Site</a>.
+     * <code>core-network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>device</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>link</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peering</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>site</code>
      * </p>
      * </li>
      * </ul>
@@ -442,41 +455,32 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>customer-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CustomerGateway.html">CustomerGateway</a>.
+     * <code>customer-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGateway.html">TransitGateway</a>.
+     * <code>transit-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-attachment</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayAttachment.html"
-     * >TransitGatewayAttachment</a>.
+     * <code>transit-gateway-attachment</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-connect-peer</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayConnectPeer.html"
-     * >TransitGatewayConnectPeer</a>.
+     * <code>transit-gateway-connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-route-table</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayRouteTable.html"
-     * >TransitGatewayRouteTable</a>.
+     * <code>transit-gateway-route-table</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>vpn-connection</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html">VpnConnection</a>.
+     * <code>vpn-connection</code>
      * </p>
      * </li>
      * </ul>
@@ -489,22 +493,17 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>dxcon</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">Connection</a>.
+     *        <code>dxcon</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>dx-gateway</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html"
-     *        >DirectConnectGateway</a>.
+     *        <code>dx-gateway</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>dx-vif</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html"
-     *        >VirtualInterface</a>.
+     *        <code>dx-vif</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -514,26 +513,42 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>connection</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Connection.html">Connection</a>.
+     *        <code>attachment</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>device</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Device.html">Device</a>.
+     *        <code>connect-peer</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>link</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Link.html">Link</a>.
+     *        <code>connection</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>site</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Site.html">Site</a>.
+     *        <code>core-network</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>device</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>link</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peering</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>site</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -543,42 +558,32 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>customer-gateway</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CustomerGateway.html"
-     *        >CustomerGateway</a>.
+     *        <code>customer-gateway</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGateway.html">TransitGateway</a>.
+     *        <code>transit-gateway</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-attachment</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayAttachment.html"
-     *        >TransitGatewayAttachment</a>.
+     *        <code>transit-gateway-attachment</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-connect-peer</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayConnectPeer.html"
-     *        >TransitGatewayConnectPeer</a>.
+     *        <code>transit-gateway-connect-peer</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-route-table</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayRouteTable.html"
-     *        >TransitGatewayRouteTable</a>.
+     *        <code>transit-gateway-route-table</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>vpn-connection</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html">VpnConnection</a>.
+     *        <code>vpn-connection</code>
      *        </p>
      *        </li>
      */
@@ -597,22 +602,17 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>dxcon</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">Connection</a>.
+     * <code>dxcon</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>dx-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html"
-     * >DirectConnectGateway</a>.
+     * <code>dx-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>dx-vif</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html"
-     * >VirtualInterface</a>.
+     * <code>dx-vif</code>
      * </p>
      * </li>
      * </ul>
@@ -622,26 +622,42 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>connection</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Connection.html">Connection</a>.
+     * <code>attachment</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>device</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Device.html">Device</a>.
+     * <code>connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>link</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Link.html">Link</a>.
+     * <code>connection</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>site</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Site.html">Site</a>.
+     * <code>core-network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>device</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>link</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peering</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>site</code>
      * </p>
      * </li>
      * </ul>
@@ -651,41 +667,32 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>customer-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CustomerGateway.html">CustomerGateway</a>.
+     * <code>customer-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGateway.html">TransitGateway</a>.
+     * <code>transit-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-attachment</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayAttachment.html"
-     * >TransitGatewayAttachment</a>.
+     * <code>transit-gateway-attachment</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-connect-peer</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayConnectPeer.html"
-     * >TransitGatewayConnectPeer</a>.
+     * <code>transit-gateway-connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-route-table</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayRouteTable.html"
-     * >TransitGatewayRouteTable</a>.
+     * <code>transit-gateway-route-table</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>vpn-connection</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html">VpnConnection</a>.
+     * <code>vpn-connection</code>
      * </p>
      * </li>
      * </ul>
@@ -697,22 +704,17 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>dxcon</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">Connection</a>.
+     *         <code>dxcon</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>dx-gateway</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html"
-     *         >DirectConnectGateway</a>.
+     *         <code>dx-gateway</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>dx-vif</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html"
-     *         >VirtualInterface</a>.
+     *         <code>dx-vif</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -722,26 +724,42 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>connection</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Connection.html">Connection</a>.
+     *         <code>attachment</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>device</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Device.html">Device</a>.
+     *         <code>connect-peer</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>link</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Link.html">Link</a>.
+     *         <code>connection</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>site</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Site.html">Site</a>.
+     *         <code>core-network</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>device</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>link</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>peering</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>site</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -751,42 +769,32 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>customer-gateway</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CustomerGateway.html"
-     *         >CustomerGateway</a>.
+     *         <code>customer-gateway</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>transit-gateway</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGateway.html">TransitGateway</a>.
+     *         <code>transit-gateway</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>transit-gateway-attachment</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayAttachment.html"
-     *         >TransitGatewayAttachment</a>.
+     *         <code>transit-gateway-attachment</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>transit-gateway-connect-peer</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayConnectPeer.html"
-     *         >TransitGatewayConnectPeer</a>.
+     *         <code>transit-gateway-connect-peer</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>transit-gateway-route-table</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayRouteTable.html"
-     *         >TransitGatewayRouteTable</a>.
+     *         <code>transit-gateway-route-table</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>vpn-connection</code> - The definition model is <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html">VpnConnection</a>.
+     *         <code>vpn-connection</code>
      *         </p>
      *         </li>
      */
@@ -805,22 +813,17 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>dxcon</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">Connection</a>.
+     * <code>dxcon</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>dx-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html"
-     * >DirectConnectGateway</a>.
+     * <code>dx-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>dx-vif</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html"
-     * >VirtualInterface</a>.
+     * <code>dx-vif</code>
      * </p>
      * </li>
      * </ul>
@@ -830,26 +833,42 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>connection</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Connection.html">Connection</a>.
+     * <code>attachment</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>device</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Device.html">Device</a>.
+     * <code>connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>link</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Link.html">Link</a>.
+     * <code>connection</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>site</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Site.html">Site</a>.
+     * <code>core-network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>device</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>link</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peering</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>site</code>
      * </p>
      * </li>
      * </ul>
@@ -859,41 +878,32 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * <code>customer-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CustomerGateway.html">CustomerGateway</a>.
+     * <code>customer-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGateway.html">TransitGateway</a>.
+     * <code>transit-gateway</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-attachment</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayAttachment.html"
-     * >TransitGatewayAttachment</a>.
+     * <code>transit-gateway-attachment</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-connect-peer</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayConnectPeer.html"
-     * >TransitGatewayConnectPeer</a>.
+     * <code>transit-gateway-connect-peer</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>transit-gateway-route-table</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayRouteTable.html"
-     * >TransitGatewayRouteTable</a>.
+     * <code>transit-gateway-route-table</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>vpn-connection</code> - The definition model is <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html">VpnConnection</a>.
+     * <code>vpn-connection</code>
      * </p>
      * </li>
      * </ul>
@@ -906,22 +916,17 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>dxcon</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html">Connection</a>.
+     *        <code>dxcon</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>dx-gateway</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html"
-     *        >DirectConnectGateway</a>.
+     *        <code>dx-gateway</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>dx-vif</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html"
-     *        >VirtualInterface</a>.
+     *        <code>dx-vif</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -931,26 +936,42 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>connection</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Connection.html">Connection</a>.
+     *        <code>attachment</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>device</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Device.html">Device</a>.
+     *        <code>connect-peer</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>link</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Link.html">Link</a>.
+     *        <code>connection</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>site</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_Site.html">Site</a>.
+     *        <code>core-network</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>device</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>link</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peering</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>site</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -960,42 +981,32 @@ public class GetNetworkResourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>customer-gateway</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CustomerGateway.html"
-     *        >CustomerGateway</a>.
+     *        <code>customer-gateway</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGateway.html">TransitGateway</a>.
+     *        <code>transit-gateway</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-attachment</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayAttachment.html"
-     *        >TransitGatewayAttachment</a>.
+     *        <code>transit-gateway-attachment</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-connect-peer</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayConnectPeer.html"
-     *        >TransitGatewayConnectPeer</a>.
+     *        <code>transit-gateway-connect-peer</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>transit-gateway-route-table</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayRouteTable.html"
-     *        >TransitGatewayRouteTable</a>.
+     *        <code>transit-gateway-route-table</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>vpn-connection</code> - The definition model is <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html">VpnConnection</a>.
+     *        <code>vpn-connection</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

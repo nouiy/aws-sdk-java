@@ -44,6 +44,8 @@ public class S3BucketDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("defaultServerSideEncryption").build();
     private static final MarshallingInfo<StructuredPojo> PUBLICACCESS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("publicAccess").build();
+    private static final MarshallingInfo<List> S3OBJECTDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3ObjectDetails").build();
 
     private static final S3BucketDetailMarshaller instance = new S3BucketDetailMarshaller();
 
@@ -69,6 +71,7 @@ public class S3BucketDetailMarshaller {
             protocolMarshaller.marshall(s3BucketDetail.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(s3BucketDetail.getDefaultServerSideEncryption(), DEFAULTSERVERSIDEENCRYPTION_BINDING);
             protocolMarshaller.marshall(s3BucketDetail.getPublicAccess(), PUBLICACCESS_BINDING);
+            protocolMarshaller.marshall(s3BucketDetail.getS3ObjectDetails(), S3OBJECTDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

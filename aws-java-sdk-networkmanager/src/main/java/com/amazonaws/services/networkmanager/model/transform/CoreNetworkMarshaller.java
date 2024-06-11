@@ -42,6 +42,8 @@ public class CoreNetworkMarshaller {
             .marshallLocationName("State").build();
     private static final MarshallingInfo<List> SEGMENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Segments").build();
+    private static final MarshallingInfo<List> NETWORKFUNCTIONGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkFunctionGroups").build();
     private static final MarshallingInfo<List> EDGES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Edges").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -70,6 +72,7 @@ public class CoreNetworkMarshaller {
             protocolMarshaller.marshall(coreNetwork.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(coreNetwork.getState(), STATE_BINDING);
             protocolMarshaller.marshall(coreNetwork.getSegments(), SEGMENTS_BINDING);
+            protocolMarshaller.marshall(coreNetwork.getNetworkFunctionGroups(), NETWORKFUNCTIONGROUPS_BINDING);
             protocolMarshaller.marshall(coreNetwork.getEdges(), EDGES_BINDING);
             protocolMarshaller.marshall(coreNetwork.getTags(), TAGS_BINDING);
         } catch (Exception e) {

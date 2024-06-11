@@ -90,6 +90,12 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
     private String segmentName;
     /**
      * <p>
+     * The name of the network function group.
+     * </p>
+     */
+    private String networkFunctionGroupName;
+    /**
+     * <p>
      * The tags associated with the attachment.
      * </p>
      */
@@ -100,6 +106,12 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ProposedSegmentChange proposedSegmentChange;
+    /**
+     * <p>
+     * Describes a proposed change to a network function group associated with the attachment.
+     * </p>
+     */
+    private ProposedNetworkFunctionGroupChange proposedNetworkFunctionGroupChange;
     /**
      * <p>
      * The timestamp when the attachment was created.
@@ -553,6 +565,46 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The name of the network function group.
+     * </p>
+     * 
+     * @param networkFunctionGroupName
+     *        The name of the network function group.
+     */
+
+    public void setNetworkFunctionGroupName(String networkFunctionGroupName) {
+        this.networkFunctionGroupName = networkFunctionGroupName;
+    }
+
+    /**
+     * <p>
+     * The name of the network function group.
+     * </p>
+     * 
+     * @return The name of the network function group.
+     */
+
+    public String getNetworkFunctionGroupName() {
+        return this.networkFunctionGroupName;
+    }
+
+    /**
+     * <p>
+     * The name of the network function group.
+     * </p>
+     * 
+     * @param networkFunctionGroupName
+     *        The name of the network function group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Attachment withNetworkFunctionGroupName(String networkFunctionGroupName) {
+        setNetworkFunctionGroupName(networkFunctionGroupName);
+        return this;
+    }
+
+    /**
+     * <p>
      * The tags associated with the attachment.
      * </p>
      * 
@@ -658,6 +710,46 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     public Attachment withProposedSegmentChange(ProposedSegmentChange proposedSegmentChange) {
         setProposedSegmentChange(proposedSegmentChange);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes a proposed change to a network function group associated with the attachment.
+     * </p>
+     * 
+     * @param proposedNetworkFunctionGroupChange
+     *        Describes a proposed change to a network function group associated with the attachment.
+     */
+
+    public void setProposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChange proposedNetworkFunctionGroupChange) {
+        this.proposedNetworkFunctionGroupChange = proposedNetworkFunctionGroupChange;
+    }
+
+    /**
+     * <p>
+     * Describes a proposed change to a network function group associated with the attachment.
+     * </p>
+     * 
+     * @return Describes a proposed change to a network function group associated with the attachment.
+     */
+
+    public ProposedNetworkFunctionGroupChange getProposedNetworkFunctionGroupChange() {
+        return this.proposedNetworkFunctionGroupChange;
+    }
+
+    /**
+     * <p>
+     * Describes a proposed change to a network function group associated with the attachment.
+     * </p>
+     * 
+     * @param proposedNetworkFunctionGroupChange
+     *        Describes a proposed change to a network function group associated with the attachment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Attachment withProposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChange proposedNetworkFunctionGroupChange) {
+        setProposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange);
         return this;
     }
 
@@ -773,10 +865,14 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
             sb.append("AttachmentPolicyRuleNumber: ").append(getAttachmentPolicyRuleNumber()).append(",");
         if (getSegmentName() != null)
             sb.append("SegmentName: ").append(getSegmentName()).append(",");
+        if (getNetworkFunctionGroupName() != null)
+            sb.append("NetworkFunctionGroupName: ").append(getNetworkFunctionGroupName()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getProposedSegmentChange() != null)
             sb.append("ProposedSegmentChange: ").append(getProposedSegmentChange()).append(",");
+        if (getProposedNetworkFunctionGroupChange() != null)
+            sb.append("ProposedNetworkFunctionGroupChange: ").append(getProposedNetworkFunctionGroupChange()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getUpdatedAt() != null)
@@ -835,6 +931,10 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSegmentName() != null && other.getSegmentName().equals(this.getSegmentName()) == false)
             return false;
+        if (other.getNetworkFunctionGroupName() == null ^ this.getNetworkFunctionGroupName() == null)
+            return false;
+        if (other.getNetworkFunctionGroupName() != null && other.getNetworkFunctionGroupName().equals(this.getNetworkFunctionGroupName()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -842,6 +942,11 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
         if (other.getProposedSegmentChange() == null ^ this.getProposedSegmentChange() == null)
             return false;
         if (other.getProposedSegmentChange() != null && other.getProposedSegmentChange().equals(this.getProposedSegmentChange()) == false)
+            return false;
+        if (other.getProposedNetworkFunctionGroupChange() == null ^ this.getProposedNetworkFunctionGroupChange() == null)
+            return false;
+        if (other.getProposedNetworkFunctionGroupChange() != null
+                && other.getProposedNetworkFunctionGroupChange().equals(this.getProposedNetworkFunctionGroupChange()) == false)
             return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
@@ -869,8 +974,10 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         hashCode = prime * hashCode + ((getAttachmentPolicyRuleNumber() == null) ? 0 : getAttachmentPolicyRuleNumber().hashCode());
         hashCode = prime * hashCode + ((getSegmentName() == null) ? 0 : getSegmentName().hashCode());
+        hashCode = prime * hashCode + ((getNetworkFunctionGroupName() == null) ? 0 : getNetworkFunctionGroupName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getProposedSegmentChange() == null) ? 0 : getProposedSegmentChange().hashCode());
+        hashCode = prime * hashCode + ((getProposedNetworkFunctionGroupChange() == null) ? 0 : getProposedNetworkFunctionGroupChange().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;

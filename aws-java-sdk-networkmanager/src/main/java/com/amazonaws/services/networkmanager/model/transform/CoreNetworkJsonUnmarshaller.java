@@ -78,6 +78,13 @@ public class CoreNetworkJsonUnmarshaller implements Unmarshaller<CoreNetwork, Js
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("NetworkFunctionGroups", targetDepth)) {
+                    context.nextToken();
+                    coreNetwork.setNetworkFunctionGroups(new ListUnmarshaller<CoreNetworkNetworkFunctionGroup>(CoreNetworkNetworkFunctionGroupJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Edges", targetDepth)) {
                     context.nextToken();
                     coreNetwork.setEdges(new ListUnmarshaller<CoreNetworkEdge>(CoreNetworkEdgeJsonUnmarshaller.getInstance())

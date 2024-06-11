@@ -171,6 +171,31 @@ public interface AWSAccessAnalyzer {
 
     /**
      * <p>
+     * Checks whether a resource policy can grant public access to the specified resource type.
+     * </p>
+     * 
+     * @param checkNoPublicAccessRequest
+     * @return Result of the CheckNoPublicAccess operation returned by the service.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws InternalServerException
+     *         Internal server error.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid.
+     * @throws UnprocessableEntityException
+     *         The specified entity could not be processed.
+     * @throws ThrottlingException
+     *         Throttling limit exceeded error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSAccessAnalyzer.CheckNoPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/CheckNoPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CheckNoPublicAccessResult checkNoPublicAccess(CheckNoPublicAccessRequest checkNoPublicAccessRequest);
+
+    /**
+     * <p>
      * Creates an access preview that allows you to preview IAM Access Analyzer findings for your resource before
      * deploying resource permissions.
      * </p>
@@ -309,6 +334,27 @@ public interface AWSAccessAnalyzer {
 
     /**
      * <p>
+     * Creates a recommendation for an unused permissions finding.
+     * </p>
+     * 
+     * @param generateFindingRecommendationRequest
+     * @return Result of the GenerateFindingRecommendation operation returned by the service.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws InternalServerException
+     *         Internal server error.
+     * @throws ThrottlingException
+     *         Throttling limit exceeded error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSAccessAnalyzer.GenerateFindingRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/GenerateFindingRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GenerateFindingRecommendationResult generateFindingRecommendation(GenerateFindingRecommendationRequest generateFindingRecommendationRequest);
+
+    /**
+     * <p>
      * Retrieves information about an access preview for the specified analyzer.
      * </p>
      * 
@@ -432,6 +478,29 @@ public interface AWSAccessAnalyzer {
      *      Documentation</a>
      */
     GetFindingResult getFinding(GetFindingRequest getFindingRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a finding recommendation for the specified analyzer.
+     * </p>
+     * 
+     * @param getFindingRecommendationRequest
+     * @return Result of the GetFindingRecommendation operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws InternalServerException
+     *         Internal server error.
+     * @throws ThrottlingException
+     *         Throttling limit exceeded error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSAccessAnalyzer.GetFindingRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/GetFindingRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetFindingRecommendationResult getFindingRecommendation(GetFindingRecommendationRequest getFindingRecommendationRequest);
 
     /**
      * <p>

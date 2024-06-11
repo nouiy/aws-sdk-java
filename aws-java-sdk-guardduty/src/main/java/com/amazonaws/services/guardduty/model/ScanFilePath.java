@@ -36,7 +36,7 @@ public class ScanFilePath implements Serializable, Cloneable, StructuredPojo {
     private String filePath;
     /**
      * <p>
-     * EBS volume Arn details of the infected file.
+     * EBS volume ARN details of the infected file.
      * </p>
      */
     private String volumeArn;
@@ -95,11 +95,11 @@ public class ScanFilePath implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EBS volume Arn details of the infected file.
+     * EBS volume ARN details of the infected file.
      * </p>
      * 
      * @param volumeArn
-     *        EBS volume Arn details of the infected file.
+     *        EBS volume ARN details of the infected file.
      */
 
     public void setVolumeArn(String volumeArn) {
@@ -108,10 +108,10 @@ public class ScanFilePath implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EBS volume Arn details of the infected file.
+     * EBS volume ARN details of the infected file.
      * </p>
      * 
-     * @return EBS volume Arn details of the infected file.
+     * @return EBS volume ARN details of the infected file.
      */
 
     public String getVolumeArn() {
@@ -120,11 +120,11 @@ public class ScanFilePath implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EBS volume Arn details of the infected file.
+     * EBS volume ARN details of the infected file.
      * </p>
      * 
      * @param volumeArn
-     *        EBS volume Arn details of the infected file.
+     *        EBS volume ARN details of the infected file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

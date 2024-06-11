@@ -76,6 +76,15 @@ public class OidcConfigForResponseJsonUnmarshaller implements Unmarshaller<OidcC
                     context.nextToken();
                     oidcConfigForResponse.setJwksUri(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Scope", targetDepth)) {
+                    context.nextToken();
+                    oidcConfigForResponse.setScope(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AuthenticationRequestExtraParams", targetDepth)) {
+                    context.nextToken();
+                    oidcConfigForResponse.setAuthenticationRequestExtraParams(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class),
+                            context.getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

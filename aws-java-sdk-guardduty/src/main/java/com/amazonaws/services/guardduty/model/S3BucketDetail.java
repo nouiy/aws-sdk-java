@@ -76,6 +76,12 @@ public class S3BucketDetail implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private PublicAccess publicAccess;
+    /**
+     * <p>
+     * Information about the S3 object that was scanned.
+     * </p>
+     */
+    private java.util.List<S3ObjectDetail> s3ObjectDetails;
 
     /**
      * <p>
@@ -428,6 +434,76 @@ public class S3BucketDetail implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about the S3 object that was scanned.
+     * </p>
+     * 
+     * @return Information about the S3 object that was scanned.
+     */
+
+    public java.util.List<S3ObjectDetail> getS3ObjectDetails() {
+        return s3ObjectDetails;
+    }
+
+    /**
+     * <p>
+     * Information about the S3 object that was scanned.
+     * </p>
+     * 
+     * @param s3ObjectDetails
+     *        Information about the S3 object that was scanned.
+     */
+
+    public void setS3ObjectDetails(java.util.Collection<S3ObjectDetail> s3ObjectDetails) {
+        if (s3ObjectDetails == null) {
+            this.s3ObjectDetails = null;
+            return;
+        }
+
+        this.s3ObjectDetails = new java.util.ArrayList<S3ObjectDetail>(s3ObjectDetails);
+    }
+
+    /**
+     * <p>
+     * Information about the S3 object that was scanned.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setS3ObjectDetails(java.util.Collection)} or {@link #withS3ObjectDetails(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param s3ObjectDetails
+     *        Information about the S3 object that was scanned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3BucketDetail withS3ObjectDetails(S3ObjectDetail... s3ObjectDetails) {
+        if (this.s3ObjectDetails == null) {
+            setS3ObjectDetails(new java.util.ArrayList<S3ObjectDetail>(s3ObjectDetails.length));
+        }
+        for (S3ObjectDetail ele : s3ObjectDetails) {
+            this.s3ObjectDetails.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the S3 object that was scanned.
+     * </p>
+     * 
+     * @param s3ObjectDetails
+     *        Information about the S3 object that was scanned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3BucketDetail withS3ObjectDetails(java.util.Collection<S3ObjectDetail> s3ObjectDetails) {
+        setS3ObjectDetails(s3ObjectDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -454,7 +530,9 @@ public class S3BucketDetail implements Serializable, Cloneable, StructuredPojo {
         if (getDefaultServerSideEncryption() != null)
             sb.append("DefaultServerSideEncryption: ").append(getDefaultServerSideEncryption()).append(",");
         if (getPublicAccess() != null)
-            sb.append("PublicAccess: ").append(getPublicAccess());
+            sb.append("PublicAccess: ").append(getPublicAccess()).append(",");
+        if (getS3ObjectDetails() != null)
+            sb.append("S3ObjectDetails: ").append(getS3ObjectDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -501,6 +579,10 @@ public class S3BucketDetail implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPublicAccess() != null && other.getPublicAccess().equals(this.getPublicAccess()) == false)
             return false;
+        if (other.getS3ObjectDetails() == null ^ this.getS3ObjectDetails() == null)
+            return false;
+        if (other.getS3ObjectDetails() != null && other.getS3ObjectDetails().equals(this.getS3ObjectDetails()) == false)
+            return false;
         return true;
     }
 
@@ -517,6 +599,7 @@ public class S3BucketDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getDefaultServerSideEncryption() == null) ? 0 : getDefaultServerSideEncryption().hashCode());
         hashCode = prime * hashCode + ((getPublicAccess() == null) ? 0 : getPublicAccess().hashCode());
+        hashCode = prime * hashCode + ((getS3ObjectDetails() == null) ? 0 : getS3ObjectDetails().hashCode());
         return hashCode;
     }
 

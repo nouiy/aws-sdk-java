@@ -44,7 +44,7 @@ public class UnusedPermissionDetails implements Serializable, Cloneable, Structu
     private String serviceNamespace;
     /**
      * <p>
-     * The time at which the permission last accessed.
+     * The time at which the permission was last accessed.
      * </p>
      */
     private java.util.Date lastAccessed;
@@ -161,11 +161,11 @@ public class UnusedPermissionDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The time at which the permission last accessed.
+     * The time at which the permission was last accessed.
      * </p>
      * 
      * @param lastAccessed
-     *        The time at which the permission last accessed.
+     *        The time at which the permission was last accessed.
      */
 
     public void setLastAccessed(java.util.Date lastAccessed) {
@@ -174,10 +174,10 @@ public class UnusedPermissionDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The time at which the permission last accessed.
+     * The time at which the permission was last accessed.
      * </p>
      * 
-     * @return The time at which the permission last accessed.
+     * @return The time at which the permission was last accessed.
      */
 
     public java.util.Date getLastAccessed() {
@@ -186,11 +186,11 @@ public class UnusedPermissionDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The time at which the permission last accessed.
+     * The time at which the permission was last accessed.
      * </p>
      * 
      * @param lastAccessed
-     *        The time at which the permission last accessed.
+     *        The time at which the permission was last accessed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -72,6 +72,12 @@ public class CoreNetwork implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<CoreNetworkSegment> segments;
     /**
      * <p>
+     * The network function groups associated with a core network.
+     * </p>
+     */
+    private java.util.List<CoreNetworkNetworkFunctionGroup> networkFunctionGroups;
+    /**
+     * <p>
      * The edges within a core network.
      * </p>
      */
@@ -414,6 +420,76 @@ public class CoreNetwork implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The network function groups associated with a core network.
+     * </p>
+     * 
+     * @return The network function groups associated with a core network.
+     */
+
+    public java.util.List<CoreNetworkNetworkFunctionGroup> getNetworkFunctionGroups() {
+        return networkFunctionGroups;
+    }
+
+    /**
+     * <p>
+     * The network function groups associated with a core network.
+     * </p>
+     * 
+     * @param networkFunctionGroups
+     *        The network function groups associated with a core network.
+     */
+
+    public void setNetworkFunctionGroups(java.util.Collection<CoreNetworkNetworkFunctionGroup> networkFunctionGroups) {
+        if (networkFunctionGroups == null) {
+            this.networkFunctionGroups = null;
+            return;
+        }
+
+        this.networkFunctionGroups = new java.util.ArrayList<CoreNetworkNetworkFunctionGroup>(networkFunctionGroups);
+    }
+
+    /**
+     * <p>
+     * The network function groups associated with a core network.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setNetworkFunctionGroups(java.util.Collection)} or
+     * {@link #withNetworkFunctionGroups(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param networkFunctionGroups
+     *        The network function groups associated with a core network.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoreNetwork withNetworkFunctionGroups(CoreNetworkNetworkFunctionGroup... networkFunctionGroups) {
+        if (this.networkFunctionGroups == null) {
+            setNetworkFunctionGroups(new java.util.ArrayList<CoreNetworkNetworkFunctionGroup>(networkFunctionGroups.length));
+        }
+        for (CoreNetworkNetworkFunctionGroup ele : networkFunctionGroups) {
+            this.networkFunctionGroups.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The network function groups associated with a core network.
+     * </p>
+     * 
+     * @param networkFunctionGroups
+     *        The network function groups associated with a core network.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoreNetwork withNetworkFunctionGroups(java.util.Collection<CoreNetworkNetworkFunctionGroup> networkFunctionGroups) {
+        setNetworkFunctionGroups(networkFunctionGroups);
+        return this;
+    }
+
+    /**
+     * <p>
      * The edges within a core network.
      * </p>
      * 
@@ -578,6 +654,8 @@ public class CoreNetwork implements Serializable, Cloneable, StructuredPojo {
             sb.append("State: ").append(getState()).append(",");
         if (getSegments() != null)
             sb.append("Segments: ").append(getSegments()).append(",");
+        if (getNetworkFunctionGroups() != null)
+            sb.append("NetworkFunctionGroups: ").append(getNetworkFunctionGroups()).append(",");
         if (getEdges() != null)
             sb.append("Edges: ").append(getEdges()).append(",");
         if (getTags() != null)
@@ -624,6 +702,10 @@ public class CoreNetwork implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSegments() != null && other.getSegments().equals(this.getSegments()) == false)
             return false;
+        if (other.getNetworkFunctionGroups() == null ^ this.getNetworkFunctionGroups() == null)
+            return false;
+        if (other.getNetworkFunctionGroups() != null && other.getNetworkFunctionGroups().equals(this.getNetworkFunctionGroups()) == false)
+            return false;
         if (other.getEdges() == null ^ this.getEdges() == null)
             return false;
         if (other.getEdges() != null && other.getEdges().equals(this.getEdges()) == false)
@@ -647,6 +729,7 @@ public class CoreNetwork implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getSegments() == null) ? 0 : getSegments().hashCode());
+        hashCode = prime * hashCode + ((getNetworkFunctionGroups() == null) ? 0 : getNetworkFunctionGroups().hashCode());
         hashCode = prime * hashCode + ((getEdges() == null) ? 0 : getEdges().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

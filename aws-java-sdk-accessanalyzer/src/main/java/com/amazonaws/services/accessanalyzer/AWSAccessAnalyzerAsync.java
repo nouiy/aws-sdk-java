@@ -199,6 +199,37 @@ public interface AWSAccessAnalyzerAsync extends AWSAccessAnalyzer {
 
     /**
      * <p>
+     * Checks whether a resource policy can grant public access to the specified resource type.
+     * </p>
+     * 
+     * @param checkNoPublicAccessRequest
+     * @return A Java Future containing the result of the CheckNoPublicAccess operation returned by the service.
+     * @sample AWSAccessAnalyzerAsync.CheckNoPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/CheckNoPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CheckNoPublicAccessResult> checkNoPublicAccessAsync(CheckNoPublicAccessRequest checkNoPublicAccessRequest);
+
+    /**
+     * <p>
+     * Checks whether a resource policy can grant public access to the specified resource type.
+     * </p>
+     * 
+     * @param checkNoPublicAccessRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CheckNoPublicAccess operation returned by the service.
+     * @sample AWSAccessAnalyzerAsyncHandler.CheckNoPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/CheckNoPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CheckNoPublicAccessResult> checkNoPublicAccessAsync(CheckNoPublicAccessRequest checkNoPublicAccessRequest,
+            com.amazonaws.handlers.AsyncHandler<CheckNoPublicAccessRequest, CheckNoPublicAccessResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an access preview that allows you to preview IAM Access Analyzer findings for your resource before
      * deploying resource permissions.
      * </p>
@@ -380,6 +411,41 @@ public interface AWSAccessAnalyzerAsync extends AWSAccessAnalyzer {
 
     /**
      * <p>
+     * Creates a recommendation for an unused permissions finding.
+     * </p>
+     * 
+     * @param generateFindingRecommendationRequest
+     * @return A Java Future containing the result of the GenerateFindingRecommendation operation returned by the
+     *         service.
+     * @sample AWSAccessAnalyzerAsync.GenerateFindingRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/GenerateFindingRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateFindingRecommendationResult> generateFindingRecommendationAsync(
+            GenerateFindingRecommendationRequest generateFindingRecommendationRequest);
+
+    /**
+     * <p>
+     * Creates a recommendation for an unused permissions finding.
+     * </p>
+     * 
+     * @param generateFindingRecommendationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GenerateFindingRecommendation operation returned by the
+     *         service.
+     * @sample AWSAccessAnalyzerAsyncHandler.GenerateFindingRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/GenerateFindingRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateFindingRecommendationResult> generateFindingRecommendationAsync(
+            GenerateFindingRecommendationRequest generateFindingRecommendationRequest,
+            com.amazonaws.handlers.AsyncHandler<GenerateFindingRecommendationRequest, GenerateFindingRecommendationResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves information about an access preview for the specified analyzer.
      * </p>
      * 
@@ -554,6 +620,37 @@ public interface AWSAccessAnalyzerAsync extends AWSAccessAnalyzer {
      */
     java.util.concurrent.Future<GetFindingResult> getFindingAsync(GetFindingRequest getFindingRequest,
             com.amazonaws.handlers.AsyncHandler<GetFindingRequest, GetFindingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves information about a finding recommendation for the specified analyzer.
+     * </p>
+     * 
+     * @param getFindingRecommendationRequest
+     * @return A Java Future containing the result of the GetFindingRecommendation operation returned by the service.
+     * @sample AWSAccessAnalyzerAsync.GetFindingRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/GetFindingRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetFindingRecommendationResult> getFindingRecommendationAsync(GetFindingRecommendationRequest getFindingRecommendationRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a finding recommendation for the specified analyzer.
+     * </p>
+     * 
+     * @param getFindingRecommendationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetFindingRecommendation operation returned by the service.
+     * @sample AWSAccessAnalyzerAsyncHandler.GetFindingRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/accessanalyzer-2019-11-01/GetFindingRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetFindingRecommendationResult> getFindingRecommendationAsync(GetFindingRecommendationRequest getFindingRecommendationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetFindingRecommendationRequest, GetFindingRecommendationResult> asyncHandler);
 
     /**
      * <p>

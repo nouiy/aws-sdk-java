@@ -36,6 +36,12 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
     private String segmentName;
     /**
      * <p>
+     * The network function group name if the change event is associated with a network function group.
+     * </p>
+     */
+    private String networkFunctionGroupName;
+    /**
+     * <p>
      * The Regions where edges are located in a core network.
      * </p>
      */
@@ -70,6 +76,12 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
      * </p>
      */
     private java.util.List<String> sharedSegments;
+    /**
+     * <p>
+     * Describes the service insertion action.
+     * </p>
+     */
+    private java.util.List<ServiceInsertionAction> serviceInsertionActions;
 
     /**
      * <p>
@@ -108,6 +120,46 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
 
     public CoreNetworkChangeValues withSegmentName(String segmentName) {
         setSegmentName(segmentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The network function group name if the change event is associated with a network function group.
+     * </p>
+     * 
+     * @param networkFunctionGroupName
+     *        The network function group name if the change event is associated with a network function group.
+     */
+
+    public void setNetworkFunctionGroupName(String networkFunctionGroupName) {
+        this.networkFunctionGroupName = networkFunctionGroupName;
+    }
+
+    /**
+     * <p>
+     * The network function group name if the change event is associated with a network function group.
+     * </p>
+     * 
+     * @return The network function group name if the change event is associated with a network function group.
+     */
+
+    public String getNetworkFunctionGroupName() {
+        return this.networkFunctionGroupName;
+    }
+
+    /**
+     * <p>
+     * The network function group name if the change event is associated with a network function group.
+     * </p>
+     * 
+     * @param networkFunctionGroupName
+     *        The network function group name if the change event is associated with a network function group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoreNetworkChangeValues withNetworkFunctionGroupName(String networkFunctionGroupName) {
+        setNetworkFunctionGroupName(networkFunctionGroupName);
         return this;
     }
 
@@ -442,6 +494,76 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Describes the service insertion action.
+     * </p>
+     * 
+     * @return Describes the service insertion action.
+     */
+
+    public java.util.List<ServiceInsertionAction> getServiceInsertionActions() {
+        return serviceInsertionActions;
+    }
+
+    /**
+     * <p>
+     * Describes the service insertion action.
+     * </p>
+     * 
+     * @param serviceInsertionActions
+     *        Describes the service insertion action.
+     */
+
+    public void setServiceInsertionActions(java.util.Collection<ServiceInsertionAction> serviceInsertionActions) {
+        if (serviceInsertionActions == null) {
+            this.serviceInsertionActions = null;
+            return;
+        }
+
+        this.serviceInsertionActions = new java.util.ArrayList<ServiceInsertionAction>(serviceInsertionActions);
+    }
+
+    /**
+     * <p>
+     * Describes the service insertion action.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setServiceInsertionActions(java.util.Collection)} or
+     * {@link #withServiceInsertionActions(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param serviceInsertionActions
+     *        Describes the service insertion action.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoreNetworkChangeValues withServiceInsertionActions(ServiceInsertionAction... serviceInsertionActions) {
+        if (this.serviceInsertionActions == null) {
+            setServiceInsertionActions(new java.util.ArrayList<ServiceInsertionAction>(serviceInsertionActions.length));
+        }
+        for (ServiceInsertionAction ele : serviceInsertionActions) {
+            this.serviceInsertionActions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the service insertion action.
+     * </p>
+     * 
+     * @param serviceInsertionActions
+     *        Describes the service insertion action.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoreNetworkChangeValues withServiceInsertionActions(java.util.Collection<ServiceInsertionAction> serviceInsertionActions) {
+        setServiceInsertionActions(serviceInsertionActions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -455,6 +577,8 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
         sb.append("{");
         if (getSegmentName() != null)
             sb.append("SegmentName: ").append(getSegmentName()).append(",");
+        if (getNetworkFunctionGroupName() != null)
+            sb.append("NetworkFunctionGroupName: ").append(getNetworkFunctionGroupName()).append(",");
         if (getEdgeLocations() != null)
             sb.append("EdgeLocations: ").append(getEdgeLocations()).append(",");
         if (getAsn() != null)
@@ -466,7 +590,9 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
         if (getInsideCidrBlocks() != null)
             sb.append("InsideCidrBlocks: ").append(getInsideCidrBlocks()).append(",");
         if (getSharedSegments() != null)
-            sb.append("SharedSegments: ").append(getSharedSegments());
+            sb.append("SharedSegments: ").append(getSharedSegments()).append(",");
+        if (getServiceInsertionActions() != null)
+            sb.append("ServiceInsertionActions: ").append(getServiceInsertionActions());
         sb.append("}");
         return sb.toString();
     }
@@ -484,6 +610,10 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
         if (other.getSegmentName() == null ^ this.getSegmentName() == null)
             return false;
         if (other.getSegmentName() != null && other.getSegmentName().equals(this.getSegmentName()) == false)
+            return false;
+        if (other.getNetworkFunctionGroupName() == null ^ this.getNetworkFunctionGroupName() == null)
+            return false;
+        if (other.getNetworkFunctionGroupName() != null && other.getNetworkFunctionGroupName().equals(this.getNetworkFunctionGroupName()) == false)
             return false;
         if (other.getEdgeLocations() == null ^ this.getEdgeLocations() == null)
             return false;
@@ -509,6 +639,10 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
             return false;
         if (other.getSharedSegments() != null && other.getSharedSegments().equals(this.getSharedSegments()) == false)
             return false;
+        if (other.getServiceInsertionActions() == null ^ this.getServiceInsertionActions() == null)
+            return false;
+        if (other.getServiceInsertionActions() != null && other.getServiceInsertionActions().equals(this.getServiceInsertionActions()) == false)
+            return false;
         return true;
     }
 
@@ -518,12 +652,14 @@ public class CoreNetworkChangeValues implements Serializable, Cloneable, Structu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getSegmentName() == null) ? 0 : getSegmentName().hashCode());
+        hashCode = prime * hashCode + ((getNetworkFunctionGroupName() == null) ? 0 : getNetworkFunctionGroupName().hashCode());
         hashCode = prime * hashCode + ((getEdgeLocations() == null) ? 0 : getEdgeLocations().hashCode());
         hashCode = prime * hashCode + ((getAsn() == null) ? 0 : getAsn().hashCode());
         hashCode = prime * hashCode + ((getCidr() == null) ? 0 : getCidr().hashCode());
         hashCode = prime * hashCode + ((getDestinationIdentifier() == null) ? 0 : getDestinationIdentifier().hashCode());
         hashCode = prime * hashCode + ((getInsideCidrBlocks() == null) ? 0 : getInsideCidrBlocks().hashCode());
         hashCode = prime * hashCode + ((getSharedSegments() == null) ? 0 : getSharedSegments().hashCode());
+        hashCode = prime * hashCode + ((getServiceInsertionActions() == null) ? 0 : getServiceInsertionActions().hashCode());
         return hashCode;
     }
 

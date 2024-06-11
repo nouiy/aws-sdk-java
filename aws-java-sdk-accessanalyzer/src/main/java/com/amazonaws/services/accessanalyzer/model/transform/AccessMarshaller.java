@@ -30,6 +30,8 @@ public class AccessMarshaller {
 
     private static final MarshallingInfo<List> ACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("actions").build();
+    private static final MarshallingInfo<List> RESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("resources").build();
 
     private static final AccessMarshaller instance = new AccessMarshaller();
 
@@ -48,6 +50,7 @@ public class AccessMarshaller {
 
         try {
             protocolMarshaller.marshall(access.getActions(), ACTIONS_BINDING);
+            protocolMarshaller.marshall(access.getResources(), RESOURCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
