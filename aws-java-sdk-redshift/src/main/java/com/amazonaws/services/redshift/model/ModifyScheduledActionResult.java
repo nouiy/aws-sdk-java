@@ -39,7 +39,7 @@ public class ModifyScheduledActionResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * "
-     * <code>{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
+     * <code>{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
      * ".
      * </p>
      */
@@ -151,7 +151,7 @@ public class ModifyScheduledActionResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * "
-     * <code>{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
+     * <code>{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
      * ".
      * </p>
      * 
@@ -159,7 +159,7 @@ public class ModifyScheduledActionResult extends com.amazonaws.AmazonWebServiceR
      *        A JSON format string of the Amazon Redshift API operation with input parameters. </p>
      *        <p>
      *        "
-     *        <code>{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
+     *        <code>{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
      *        ".
      */
 
@@ -173,14 +173,14 @@ public class ModifyScheduledActionResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * "
-     * <code>{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
+     * <code>{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
      * ".
      * </p>
      * 
      * @return A JSON format string of the Amazon Redshift API operation with input parameters. </p>
      *         <p>
      *         "
-     *         <code>{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
+     *         <code>{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
      *         ".
      */
 
@@ -194,7 +194,7 @@ public class ModifyScheduledActionResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * "
-     * <code>{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
+     * <code>{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
      * ".
      * </p>
      * 
@@ -202,7 +202,7 @@ public class ModifyScheduledActionResult extends com.amazonaws.AmazonWebServiceR
      *        A JSON format string of the Amazon Redshift API operation with input parameters. </p>
      *        <p>
      *        "
-     *        <code>{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
+     *        <code>{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}</code>
      *        ".
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -51,6 +51,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      * If the secret was created by using the Secrets Manager console, or if the secret value was originally provided as
      * a string, then this field is omitted. The secret value appears in <code>SecretString</code> instead.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      */
     private java.nio.ByteBuffer secretBinary;
     /**
@@ -61,6 +65,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      * <p>
      * If this secret was created by using the console, then Secrets Manager stores the information as a JSON structure
      * of key/value pairs.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
      * </p>
      */
     private String secretString;
@@ -210,6 +218,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      * a string, then this field is omitted. The secret value appears in <code>SecretString</code> instead.
      * </p>
      * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
      * Users of the SDK should not perform Base64 encoding on this field.
      * </p>
@@ -228,6 +240,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      *        If the secret was created by using the Secrets Manager console, or if the secret value was originally
      *        provided as a string, then this field is omitted. The secret value appears in <code>SecretString</code>
      *        instead.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      */
 
     public void setSecretBinary(java.nio.ByteBuffer secretBinary) {
@@ -245,6 +261,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      * a string, then this field is omitted. The secret value appears in <code>SecretString</code> instead.
      * </p>
      * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
      * using {@link java.nio.ByteBuffer#asReadOnlyBuffer()} to create a read-only view of the buffer with an independent
      * {@code position}, and calling {@code get} methods on this rather than directly on the returned {@code ByteBuffer}.
@@ -259,6 +279,11 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      *         If the secret was created by using the Secrets Manager console, or if the secret value was originally
      *         provided as a string, then this field is omitted. The secret value appears in <code>SecretString</code>
      *         instead.
+     *         </p>
+     *         <p>
+     *         Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail
+     *         log entries. If you create your own log entries, you must also avoid logging the information in this
+     *         field.
      */
 
     public java.nio.ByteBuffer getSecretBinary() {
@@ -274,6 +299,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      * <p>
      * If the secret was created by using the Secrets Manager console, or if the secret value was originally provided as
      * a string, then this field is omitted. The secret value appears in <code>SecretString</code> instead.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -294,6 +323,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      *        If the secret was created by using the Secrets Manager console, or if the secret value was originally
      *        provided as a string, then this field is omitted. The secret value appears in <code>SecretString</code>
      *        instead.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,6 +344,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      * If this secret was created by using the console, then Secrets Manager stores the information as a JSON structure
      * of key/value pairs.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @param secretString
      *        The decrypted secret value, if the secret value was originally provided as a string or through the Secrets
@@ -318,6 +355,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      *        <p>
      *        If this secret was created by using the console, then Secrets Manager stores the information as a JSON
      *        structure of key/value pairs.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      */
 
     public void setSecretString(String secretString) {
@@ -333,12 +374,21 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      * If this secret was created by using the console, then Secrets Manager stores the information as a JSON structure
      * of key/value pairs.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @return The decrypted secret value, if the secret value was originally provided as a string or through the
      *         Secrets Manager console.</p>
      *         <p>
      *         If this secret was created by using the console, then Secrets Manager stores the information as a JSON
      *         structure of key/value pairs.
+     *         </p>
+     *         <p>
+     *         Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail
+     *         log entries. If you create your own log entries, you must also avoid logging the information in this
+     *         field.
      */
 
     public String getSecretString() {
@@ -354,6 +404,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      * If this secret was created by using the console, then Secrets Manager stores the information as a JSON structure
      * of key/value pairs.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @param secretString
      *        The decrypted secret value, if the secret value was originally provided as a string or through the Secrets
@@ -361,6 +415,10 @@ public class GetSecretValueResult extends com.amazonaws.AmazonWebServiceResult<c
      *        <p>
      *        If this secret was created by using the console, then Secrets Manager stores the information as a JSON
      *        structure of key/value pairs.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

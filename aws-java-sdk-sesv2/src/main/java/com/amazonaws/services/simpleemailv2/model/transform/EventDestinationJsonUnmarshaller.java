@@ -74,6 +74,10 @@ public class EventDestinationJsonUnmarshaller implements Unmarshaller<EventDesti
                     context.nextToken();
                     eventDestination.setSnsDestination(SnsDestinationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("EventBridgeDestination", targetDepth)) {
+                    context.nextToken();
+                    eventDestination.setEventBridgeDestination(EventBridgeDestinationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("PinpointDestination", targetDepth)) {
                     context.nextToken();
                     eventDestination.setPinpointDestination(PinpointDestinationJsonUnmarshaller.getInstance().unmarshall(context));

@@ -48,8 +48,8 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
     private java.util.Date createdAt;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
-     * resource share invitation, you can view details related to the RAM resource share.
+     * The Amazon Resource Name (ARN) which uniquely defines the Amazon Web Services RAM resource share. Before
+     * accepting the RAM resource share invitation, you can view details related to the RAM resource share.
      * </p>
      * <p>
      * This field is available only for Lake Formation subscribers created after March 8, 2023.
@@ -110,7 +110,7 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
     private String subscriberId;
     /**
      * <p>
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      * </p>
      */
     private AwsIdentity subscriberIdentity;
@@ -318,16 +318,16 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
-     * resource share invitation, you can view details related to the RAM resource share.
+     * The Amazon Resource Name (ARN) which uniquely defines the Amazon Web Services RAM resource share. Before
+     * accepting the RAM resource share invitation, you can view details related to the RAM resource share.
      * </p>
      * <p>
      * This field is available only for Lake Formation subscribers created after March 8, 2023.
      * </p>
      * 
      * @param resourceShareArn
-     *        The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
-     *        resource share invitation, you can view details related to the RAM resource share.</p>
+     *        The Amazon Resource Name (ARN) which uniquely defines the Amazon Web Services RAM resource share. Before
+     *        accepting the RAM resource share invitation, you can view details related to the RAM resource share.</p>
      *        <p>
      *        This field is available only for Lake Formation subscribers created after March 8, 2023.
      */
@@ -338,15 +338,15 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
-     * resource share invitation, you can view details related to the RAM resource share.
+     * The Amazon Resource Name (ARN) which uniquely defines the Amazon Web Services RAM resource share. Before
+     * accepting the RAM resource share invitation, you can view details related to the RAM resource share.
      * </p>
      * <p>
      * This field is available only for Lake Formation subscribers created after March 8, 2023.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the
-     *         RAM resource share invitation, you can view details related to the RAM resource share.</p>
+     * @return The Amazon Resource Name (ARN) which uniquely defines the Amazon Web Services RAM resource share. Before
+     *         accepting the RAM resource share invitation, you can view details related to the RAM resource share.</p>
      *         <p>
      *         This field is available only for Lake Formation subscribers created after March 8, 2023.
      */
@@ -357,16 +357,16 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
-     * resource share invitation, you can view details related to the RAM resource share.
+     * The Amazon Resource Name (ARN) which uniquely defines the Amazon Web Services RAM resource share. Before
+     * accepting the RAM resource share invitation, you can view details related to the RAM resource share.
      * </p>
      * <p>
      * This field is available only for Lake Formation subscribers created after March 8, 2023.
      * </p>
      * 
      * @param resourceShareArn
-     *        The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
-     *        resource share invitation, you can view details related to the RAM resource share.</p>
+     *        The Amazon Resource Name (ARN) which uniquely defines the Amazon Web Services RAM resource share. Before
+     *        accepting the RAM resource share invitation, you can view details related to the RAM resource share.</p>
      *        <p>
      *        This field is available only for Lake Formation subscribers created after March 8, 2023.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -762,11 +762,11 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      * </p>
      * 
      * @param subscriberIdentity
-     *        The AWS identity used to access your data.
+     *        The Amazon Web Services identity used to access your data.
      */
 
     public void setSubscriberIdentity(AwsIdentity subscriberIdentity) {
@@ -775,10 +775,10 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      * </p>
      * 
-     * @return The AWS identity used to access your data.
+     * @return The Amazon Web Services identity used to access your data.
      */
 
     public AwsIdentity getSubscriberIdentity() {
@@ -787,11 +787,11 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      * </p>
      * 
      * @param subscriberIdentity
-     *        The AWS identity used to access your data.
+     *        The Amazon Web Services identity used to access your data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

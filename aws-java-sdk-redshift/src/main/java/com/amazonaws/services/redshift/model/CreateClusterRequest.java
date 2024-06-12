@@ -134,8 +134,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      * <p>
-     * Valid Values: <code>ds2.xlarge</code> | <code>ds2.8xlarge</code> | <code>dc1.large</code> |
-     * <code>dc1.8xlarge</code> | <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
+     * Valid Values: <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
      * <code>ra3.4xlarge</code> | <code>ra3.16xlarge</code>
      * </p>
      */
@@ -364,7 +363,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     * For clusters with dc2 nodes - Select a port within the range <code>1150-65535</code>.
      * </p>
      * </li>
      * </ul>
@@ -1204,8 +1203,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      * <p>
-     * Valid Values: <code>ds2.xlarge</code> | <code>ds2.8xlarge</code> | <code>dc1.large</code> |
-     * <code>dc1.8xlarge</code> | <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
+     * Valid Values: <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
      * <code>ra3.4xlarge</code> | <code>ra3.16xlarge</code>
      * </p>
      * 
@@ -1214,8 +1212,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes"> Working
      *        with Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>. </p>
      *        <p>
-     *        Valid Values: <code>ds2.xlarge</code> | <code>ds2.8xlarge</code> | <code>dc1.large</code> |
-     *        <code>dc1.8xlarge</code> | <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
+     *        Valid Values: <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
      *        <code>ra3.4xlarge</code> | <code>ra3.16xlarge</code>
      */
 
@@ -1230,8 +1227,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      * <p>
-     * Valid Values: <code>ds2.xlarge</code> | <code>ds2.8xlarge</code> | <code>dc1.large</code> |
-     * <code>dc1.8xlarge</code> | <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
+     * Valid Values: <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
      * <code>ra3.4xlarge</code> | <code>ra3.16xlarge</code>
      * </p>
      * 
@@ -1239,8 +1235,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes">
      *         Working with Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>. </p>
      *         <p>
-     *         Valid Values: <code>ds2.xlarge</code> | <code>ds2.8xlarge</code> | <code>dc1.large</code> |
-     *         <code>dc1.8xlarge</code> | <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
+     *         Valid Values: <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
      *         <code>ra3.4xlarge</code> | <code>ra3.16xlarge</code>
      */
 
@@ -1255,8 +1250,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      * <p>
-     * Valid Values: <code>ds2.xlarge</code> | <code>ds2.8xlarge</code> | <code>dc1.large</code> |
-     * <code>dc1.8xlarge</code> | <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
+     * Valid Values: <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
      * <code>ra3.4xlarge</code> | <code>ra3.16xlarge</code>
      * </p>
      * 
@@ -1265,8 +1259,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes"> Working
      *        with Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>. </p>
      *        <p>
-     *        Valid Values: <code>ds2.xlarge</code> | <code>ds2.8xlarge</code> | <code>dc1.large</code> |
-     *        <code>dc1.8xlarge</code> | <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
+     *        Valid Values: <code>dc2.large</code> | <code>dc2.8xlarge</code> | <code>ra3.xlplus</code> |
      *        <code>ra3.4xlarge</code> | <code>ra3.16xlarge</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2603,7 +2596,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     * For clusters with dc2 nodes - Select a port within the range <code>1150-65535</code>.
      * </p>
      * </li>
      * </ul>
@@ -2630,7 +2623,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     *        For clusters with dc2 nodes - Select a port within the range <code>1150-65535</code>.
      *        </p>
      *        </li>
      */
@@ -2662,7 +2655,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     * For clusters with dc2 nodes - Select a port within the range <code>1150-65535</code>.
      * </p>
      * </li>
      * </ul>
@@ -2688,7 +2681,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         </li>
      *         <li>
      *         <p>
-     *         For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     *         For clusters with dc2 nodes - Select a port within the range <code>1150-65535</code>.
      *         </p>
      *         </li>
      */
@@ -2720,7 +2713,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     * For clusters with dc2 nodes - Select a port within the range <code>1150-65535</code>.
      * </p>
      * </li>
      * </ul>
@@ -2747,7 +2740,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     *        For clusters with dc2 nodes - Select a port within the range <code>1150-65535</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

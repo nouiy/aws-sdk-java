@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification when
+ * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notifications when
  * certain email events occur.
  * </p>
  * 

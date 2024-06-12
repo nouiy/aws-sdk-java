@@ -1552,8 +1552,8 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      * </p>
      * <p>
      * Secrets Manager generates a CloudTrail log entry when you call this action. Do not include sensitive information
-     * in request parameters except <code>SecretBinary</code> or <code>SecretString</code> because it might be logged.
-     * For more information, see <a
+     * in request parameters except <code>SecretBinary</code>, <code>SecretString</code>, or <code>RotationToken</code>
+     * because it might be logged. For more information, see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieve-ct-entries.html">Logging Secrets
      * Manager events with CloudTrail</a>.
      * </p>

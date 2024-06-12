@@ -12435,6 +12435,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeTrafficMirrorFilterRulesResult> describeTrafficMirrorFilterRulesAsync(
+            DescribeTrafficMirrorFilterRulesRequest request) {
+
+        return describeTrafficMirrorFilterRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTrafficMirrorFilterRulesResult> describeTrafficMirrorFilterRulesAsync(
+            final DescribeTrafficMirrorFilterRulesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTrafficMirrorFilterRulesRequest, DescribeTrafficMirrorFilterRulesResult> asyncHandler) {
+        final DescribeTrafficMirrorFilterRulesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTrafficMirrorFilterRulesResult>() {
+            @Override
+            public DescribeTrafficMirrorFilterRulesResult call() throws Exception {
+                DescribeTrafficMirrorFilterRulesResult result = null;
+
+                try {
+                    result = executeDescribeTrafficMirrorFilterRules(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeTrafficMirrorFiltersResult> describeTrafficMirrorFiltersAsync(DescribeTrafficMirrorFiltersRequest request) {
 
         return describeTrafficMirrorFiltersAsync(request, null);

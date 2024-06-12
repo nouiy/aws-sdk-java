@@ -25,19 +25,34 @@ public class ModifyTrafficMirrorFilterRuleResult extends com.amazonaws.AmazonWeb
         Cloneable {
 
     /**
+     * <note>
      * <p>
-     * Modifies a Traffic Mirror rule.
+     * Tags are not returned for ModifyTrafficMirrorFilterRule.
+     * </p>
+     * </note>
+     * <p>
+     * A Traffic Mirror rule.
      * </p>
      */
     private TrafficMirrorFilterRule trafficMirrorFilterRule;
 
     /**
+     * <note>
      * <p>
-     * Modifies a Traffic Mirror rule.
+     * Tags are not returned for ModifyTrafficMirrorFilterRule.
+     * </p>
+     * </note>
+     * <p>
+     * A Traffic Mirror rule.
      * </p>
      * 
      * @param trafficMirrorFilterRule
-     *        Modifies a Traffic Mirror rule.
+     *        <p>
+     *        Tags are not returned for ModifyTrafficMirrorFilterRule.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        A Traffic Mirror rule.
      */
 
     public void setTrafficMirrorFilterRule(TrafficMirrorFilterRule trafficMirrorFilterRule) {
@@ -45,11 +60,21 @@ public class ModifyTrafficMirrorFilterRuleResult extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <note>
      * <p>
-     * Modifies a Traffic Mirror rule.
+     * Tags are not returned for ModifyTrafficMirrorFilterRule.
+     * </p>
+     * </note>
+     * <p>
+     * A Traffic Mirror rule.
      * </p>
      * 
-     * @return Modifies a Traffic Mirror rule.
+     * @return <p>
+     *         Tags are not returned for ModifyTrafficMirrorFilterRule.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         A Traffic Mirror rule.
      */
 
     public TrafficMirrorFilterRule getTrafficMirrorFilterRule() {
@@ -57,12 +82,22 @@ public class ModifyTrafficMirrorFilterRuleResult extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <note>
      * <p>
-     * Modifies a Traffic Mirror rule.
+     * Tags are not returned for ModifyTrafficMirrorFilterRule.
+     * </p>
+     * </note>
+     * <p>
+     * A Traffic Mirror rule.
      * </p>
      * 
      * @param trafficMirrorFilterRule
-     *        Modifies a Traffic Mirror rule.
+     *        <p>
+     *        Tags are not returned for ModifyTrafficMirrorFilterRule.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        A Traffic Mirror rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

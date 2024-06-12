@@ -1935,6 +1935,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DescribeTrafficMirrorFilterRulesResult describeTrafficMirrorFilterRules(DescribeTrafficMirrorFilterRulesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeTrafficMirrorFiltersResult describeTrafficMirrorFilters(DescribeTrafficMirrorFiltersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

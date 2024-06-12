@@ -46,6 +46,13 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private VpcAttachmentOptions vpcAttachmentOptions;
+    /**
+     * <p>
+     * Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured for the
+     * pipeline.
+     * </p>
+     */
+    private String vpcEndpointManagement;
 
     /**
      * <p>
@@ -228,6 +235,73 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured for the
+     * pipeline.
+     * </p>
+     * 
+     * @param vpcEndpointManagement
+     *        Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured
+     *        for the pipeline.
+     * @see VpcEndpointManagement
+     */
+
+    public void setVpcEndpointManagement(String vpcEndpointManagement) {
+        this.vpcEndpointManagement = vpcEndpointManagement;
+    }
+
+    /**
+     * <p>
+     * Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured for the
+     * pipeline.
+     * </p>
+     * 
+     * @return Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured
+     *         for the pipeline.
+     * @see VpcEndpointManagement
+     */
+
+    public String getVpcEndpointManagement() {
+        return this.vpcEndpointManagement;
+    }
+
+    /**
+     * <p>
+     * Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured for the
+     * pipeline.
+     * </p>
+     * 
+     * @param vpcEndpointManagement
+     *        Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured
+     *        for the pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VpcEndpointManagement
+     */
+
+    public VpcOptions withVpcEndpointManagement(String vpcEndpointManagement) {
+        setVpcEndpointManagement(vpcEndpointManagement);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured for the
+     * pipeline.
+     * </p>
+     * 
+     * @param vpcEndpointManagement
+     *        Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured
+     *        for the pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VpcEndpointManagement
+     */
+
+    public VpcOptions withVpcEndpointManagement(VpcEndpointManagement vpcEndpointManagement) {
+        this.vpcEndpointManagement = vpcEndpointManagement.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -244,7 +318,9 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
         if (getSecurityGroupIds() != null)
             sb.append("SecurityGroupIds: ").append(getSecurityGroupIds()).append(",");
         if (getVpcAttachmentOptions() != null)
-            sb.append("VpcAttachmentOptions: ").append(getVpcAttachmentOptions());
+            sb.append("VpcAttachmentOptions: ").append(getVpcAttachmentOptions()).append(",");
+        if (getVpcEndpointManagement() != null)
+            sb.append("VpcEndpointManagement: ").append(getVpcEndpointManagement());
         sb.append("}");
         return sb.toString();
     }
@@ -271,6 +347,10 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getVpcAttachmentOptions() != null && other.getVpcAttachmentOptions().equals(this.getVpcAttachmentOptions()) == false)
             return false;
+        if (other.getVpcEndpointManagement() == null ^ this.getVpcEndpointManagement() == null)
+            return false;
+        if (other.getVpcEndpointManagement() != null && other.getVpcEndpointManagement().equals(this.getVpcEndpointManagement()) == false)
+            return false;
         return true;
     }
 
@@ -282,6 +362,7 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
         hashCode = prime * hashCode + ((getSecurityGroupIds() == null) ? 0 : getSecurityGroupIds().hashCode());
         hashCode = prime * hashCode + ((getVpcAttachmentOptions() == null) ? 0 : getVpcAttachmentOptions().hashCode());
+        hashCode = prime * hashCode + ((getVpcEndpointManagement() == null) ? 0 : getVpcEndpointManagement().hashCode());
         return hashCode;
     }
 

@@ -103,6 +103,7 @@ public enum ResourceType {
     VerifiedAccessTrustProvider("verified-access-trust-provider"),
     VpnConnectionDeviceType("vpn-connection-device-type"),
     VpcBlockPublicAccessExclusion("vpc-block-public-access-exclusion"),
+    VpcEncryptionControl("vpc-encryption-control"),
     IpamResourceDiscovery("ipam-resource-discovery"),
     IpamResourceDiscoveryAssociation("ipam-resource-discovery-association"),
     InstanceConnectEndpoint("instance-connect-endpoint");

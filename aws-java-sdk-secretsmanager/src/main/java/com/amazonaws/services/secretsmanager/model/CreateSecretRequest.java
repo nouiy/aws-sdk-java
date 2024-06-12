@@ -126,6 +126,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * This parameter is not available in the Secrets Manager console.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      */
     private java.nio.ByteBuffer secretBinary;
     /**
@@ -140,6 +144,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text
      * in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a JSON
      * structure of key/value pairs that a Lambda rotation function can parse.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
      * </p>
      */
     private String secretString;
@@ -751,6 +759,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * This parameter is not available in the Secrets Manager console.
      * </p>
      * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
      * Users of the SDK should not perform Base64 encoding on this field.
      * </p>
@@ -769,6 +781,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        This parameter is not available in the Secrets Manager console.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      */
 
     public void setSecretBinary(java.nio.ByteBuffer secretBinary) {
@@ -787,6 +803,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * This parameter is not available in the Secrets Manager console.
      * </p>
      * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
      * using {@link java.nio.ByteBuffer#asReadOnlyBuffer()} to create a read-only view of the buffer with an independent
      * {@code position}, and calling {@code get} methods on this rather than directly on the returned {@code ByteBuffer}.
@@ -801,6 +821,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </p>
      *         <p>
      *         This parameter is not available in the Secrets Manager console.
+     *         </p>
+     *         <p>
+     *         Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail
+     *         log entries. If you create your own log entries, you must also avoid logging the information in this
+     *         field.
      */
 
     public java.nio.ByteBuffer getSecretBinary() {
@@ -817,6 +842,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * This parameter is not available in the Secrets Manager console.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -837,6 +866,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        This parameter is not available in the Secrets Manager console.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -858,6 +891,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a JSON
      * structure of key/value pairs that a Lambda rotation function can parse.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @param secretString
      *        The text data to encrypt and store in this new version of the secret. We recommend you use a JSON
@@ -869,6 +906,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret
      *        text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information
      *        as a JSON structure of key/value pairs that a Lambda rotation function can parse.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      */
 
     public void setSecretString(String secretString) {
@@ -888,6 +929,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a JSON
      * structure of key/value pairs that a Lambda rotation function can parse.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @return The text data to encrypt and store in this new version of the secret. We recommend you use a JSON
      *         structure of key/value pairs for your secret value.</p>
@@ -898,6 +943,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected
      *         secret text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the
      *         information as a JSON structure of key/value pairs that a Lambda rotation function can parse.
+     *         </p>
+     *         <p>
+     *         Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail
+     *         log entries. If you create your own log entries, you must also avoid logging the information in this
+     *         field.
      */
 
     public String getSecretString() {
@@ -917,6 +967,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a JSON
      * structure of key/value pairs that a Lambda rotation function can parse.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @param secretString
      *        The text data to encrypt and store in this new version of the secret. We recommend you use a JSON
@@ -928,6 +982,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret
      *        text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information
      *        as a JSON structure of key/value pairs that a Lambda rotation function can parse.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

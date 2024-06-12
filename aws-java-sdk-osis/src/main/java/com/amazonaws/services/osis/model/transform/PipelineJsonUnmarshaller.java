@@ -108,6 +108,10 @@ public class PipelineJsonUnmarshaller implements Unmarshaller<Pipeline, JsonUnma
                     context.nextToken();
                     pipeline.setEncryptionAtRestOptions(EncryptionAtRestOptionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("VpcEndpointService", targetDepth)) {
+                    context.nextToken();
+                    pipeline.setVpcEndpointService(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ServiceVpcEndpoints", targetDepth)) {
                     context.nextToken();
                     pipeline.setServiceVpcEndpoints(new ListUnmarshaller<ServiceVpcEndpoint>(ServiceVpcEndpointJsonUnmarshaller.getInstance())

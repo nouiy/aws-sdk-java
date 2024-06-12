@@ -7089,6 +7089,19 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Describe traffic mirror filters that determine the traffic that is mirrored.
+     * </p>
+     * 
+     * @param describeTrafficMirrorFilterRulesRequest
+     * @return Result of the DescribeTrafficMirrorFilterRules operation returned by the service.
+     * @sample AmazonEC2.DescribeTrafficMirrorFilterRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTrafficMirrorFilterRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTrafficMirrorFilterRulesResult describeTrafficMirrorFilterRules(DescribeTrafficMirrorFilterRulesRequest describeTrafficMirrorFilterRulesRequest);
+
+    /**
+     * <p>
      * Describes one or more Traffic Mirror filters.
      * </p>
      * 

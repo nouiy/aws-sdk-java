@@ -138,11 +138,18 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
     private CloudWatchDestination cloudWatchDestination;
     /**
      * <p>
-     * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification
+     * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notifications
      * when certain email events occur.
      * </p>
      */
     private SnsDestination snsDestination;
+    /**
+     * <p>
+     * An object that defines an Amazon EventBridge destination for email events. You can use Amazon EventBridge to send
+     * notifications when certain email events occur.
+     * </p>
+     */
+    private EventBridgeDestination eventBridgeDestination;
     /**
      * <p>
      * An object that defines an Amazon Pinpoint project destination for email events. You can send email event data to
@@ -1154,13 +1161,13 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification
+     * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notifications
      * when certain email events occur.
      * </p>
      * 
      * @param snsDestination
      *        An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send
-     *        notification when certain email events occur.
+     *        notifications when certain email events occur.
      */
 
     public void setSnsDestination(SnsDestination snsDestination) {
@@ -1169,12 +1176,12 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification
+     * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notifications
      * when certain email events occur.
      * </p>
      * 
      * @return An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send
-     *         notification when certain email events occur.
+     *         notifications when certain email events occur.
      */
 
     public SnsDestination getSnsDestination() {
@@ -1183,18 +1190,64 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification
+     * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notifications
      * when certain email events occur.
      * </p>
      * 
      * @param snsDestination
      *        An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send
-     *        notification when certain email events occur.
+     *        notifications when certain email events occur.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public EventDestination withSnsDestination(SnsDestination snsDestination) {
         setSnsDestination(snsDestination);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object that defines an Amazon EventBridge destination for email events. You can use Amazon EventBridge to send
+     * notifications when certain email events occur.
+     * </p>
+     * 
+     * @param eventBridgeDestination
+     *        An object that defines an Amazon EventBridge destination for email events. You can use Amazon EventBridge
+     *        to send notifications when certain email events occur.
+     */
+
+    public void setEventBridgeDestination(EventBridgeDestination eventBridgeDestination) {
+        this.eventBridgeDestination = eventBridgeDestination;
+    }
+
+    /**
+     * <p>
+     * An object that defines an Amazon EventBridge destination for email events. You can use Amazon EventBridge to send
+     * notifications when certain email events occur.
+     * </p>
+     * 
+     * @return An object that defines an Amazon EventBridge destination for email events. You can use Amazon EventBridge
+     *         to send notifications when certain email events occur.
+     */
+
+    public EventBridgeDestination getEventBridgeDestination() {
+        return this.eventBridgeDestination;
+    }
+
+    /**
+     * <p>
+     * An object that defines an Amazon EventBridge destination for email events. You can use Amazon EventBridge to send
+     * notifications when certain email events occur.
+     * </p>
+     * 
+     * @param eventBridgeDestination
+     *        An object that defines an Amazon EventBridge destination for email events. You can use Amazon EventBridge
+     *        to send notifications when certain email events occur.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EventDestination withEventBridgeDestination(EventBridgeDestination eventBridgeDestination) {
+        setEventBridgeDestination(eventBridgeDestination);
         return this;
     }
 
@@ -1286,6 +1339,8 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
             sb.append("CloudWatchDestination: ").append(getCloudWatchDestination()).append(",");
         if (getSnsDestination() != null)
             sb.append("SnsDestination: ").append(getSnsDestination()).append(",");
+        if (getEventBridgeDestination() != null)
+            sb.append("EventBridgeDestination: ").append(getEventBridgeDestination()).append(",");
         if (getPinpointDestination() != null)
             sb.append("PinpointDestination: ").append(getPinpointDestination());
         sb.append("}");
@@ -1326,6 +1381,10 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getSnsDestination() != null && other.getSnsDestination().equals(this.getSnsDestination()) == false)
             return false;
+        if (other.getEventBridgeDestination() == null ^ this.getEventBridgeDestination() == null)
+            return false;
+        if (other.getEventBridgeDestination() != null && other.getEventBridgeDestination().equals(this.getEventBridgeDestination()) == false)
+            return false;
         if (other.getPinpointDestination() == null ^ this.getPinpointDestination() == null)
             return false;
         if (other.getPinpointDestination() != null && other.getPinpointDestination().equals(this.getPinpointDestination()) == false)
@@ -1344,6 +1403,7 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getKinesisFirehoseDestination() == null) ? 0 : getKinesisFirehoseDestination().hashCode());
         hashCode = prime * hashCode + ((getCloudWatchDestination() == null) ? 0 : getCloudWatchDestination().hashCode());
         hashCode = prime * hashCode + ((getSnsDestination() == null) ? 0 : getSnsDestination().hashCode());
+        hashCode = prime * hashCode + ((getEventBridgeDestination() == null) ? 0 : getEventBridgeDestination().hashCode());
         hashCode = prime * hashCode + ((getPinpointDestination() == null) ? 0 : getPinpointDestination().hashCode());
         return hashCode;
     }

@@ -56,6 +56,8 @@ public class PipelineMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BufferOptions").build();
     private static final MarshallingInfo<StructuredPojo> ENCRYPTIONATRESTOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAtRestOptions").build();
+    private static final MarshallingInfo<String> VPCENDPOINTSERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcEndpointService").build();
     private static final MarshallingInfo<List> SERVICEVPCENDPOINTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServiceVpcEndpoints").build();
     private static final MarshallingInfo<List> DESTINATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -93,6 +95,7 @@ public class PipelineMarshaller {
             protocolMarshaller.marshall(pipeline.getVpcEndpoints(), VPCENDPOINTS_BINDING);
             protocolMarshaller.marshall(pipeline.getBufferOptions(), BUFFEROPTIONS_BINDING);
             protocolMarshaller.marshall(pipeline.getEncryptionAtRestOptions(), ENCRYPTIONATRESTOPTIONS_BINDING);
+            protocolMarshaller.marshall(pipeline.getVpcEndpointService(), VPCENDPOINTSERVICE_BINDING);
             protocolMarshaller.marshall(pipeline.getServiceVpcEndpoints(), SERVICEVPCENDPOINTS_BINDING);
             protocolMarshaller.marshall(pipeline.getDestinations(), DESTINATIONS_BINDING);
             protocolMarshaller.marshall(pipeline.getTags(), TAGS_BINDING);

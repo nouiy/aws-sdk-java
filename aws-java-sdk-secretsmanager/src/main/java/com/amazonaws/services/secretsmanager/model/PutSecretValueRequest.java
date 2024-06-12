@@ -99,6 +99,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * You can't access this value from the Secrets Manager console.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      */
     private java.nio.ByteBuffer secretBinary;
     /**
@@ -110,6 +114,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * We recommend you create the secret string as JSON key/value pairs, as shown in the example.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
      * </p>
      */
     private String secretString;
@@ -130,6 +138,20 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private java.util.List<String> versionStages;
+    /**
+     * <p>
+     * A unique identifier that indicates the source of the request. For cross-account rotation (when you rotate a
+     * secret in one account by using a Lambda rotation function in another account) and the Lambda rotation function
+     * assumes an IAM role to call Secrets Manager, Secrets Manager validates the identity with the rotation token. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">How rotation works</a>.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     */
+    private String rotationToken;
 
     /**
      * <p>
@@ -515,6 +537,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * You can't access this value from the Secrets Manager console.
      * </p>
      * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
      * Users of the SDK should not perform Base64 encoding on this field.
      * </p>
@@ -534,6 +560,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <p>
      *        You can't access this value from the Secrets Manager console.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      */
 
     public void setSecretBinary(java.nio.ByteBuffer secretBinary) {
@@ -553,6 +583,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * You can't access this value from the Secrets Manager console.
      * </p>
      * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
      * using {@link java.nio.ByteBuffer#asReadOnlyBuffer()} to create a read-only view of the buffer with an independent
      * {@code position}, and calling {@code get} methods on this rather than directly on the returned {@code ByteBuffer}.
@@ -568,6 +602,11 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </p>
      *         <p>
      *         You can't access this value from the Secrets Manager console.
+     *         </p>
+     *         <p>
+     *         Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail
+     *         log entries. If you create your own log entries, you must also avoid logging the information in this
+     *         field.
      */
 
     public java.nio.ByteBuffer getSecretBinary() {
@@ -585,6 +624,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * You can't access this value from the Secrets Manager console.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -606,6 +649,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <p>
      *        You can't access this value from the Secrets Manager console.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -624,6 +671,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @param secretString
      *        The text to encrypt and store in the new version of the secret. </p>
@@ -632,6 +683,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <p>
      *        We recommend you create the secret string as JSON key/value pairs, as shown in the example.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      */
 
     public void setSecretString(String secretString) {
@@ -648,6 +703,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @return The text to encrypt and store in the new version of the secret. </p>
      *         <p>
@@ -655,6 +714,11 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </p>
      *         <p>
      *         We recommend you create the secret string as JSON key/value pairs, as shown in the example.
+     *         </p>
+     *         <p>
+     *         Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail
+     *         log entries. If you create your own log entries, you must also avoid logging the information in this
+     *         field.
      */
 
     public String getSecretString() {
@@ -671,6 +735,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
      * 
      * @param secretString
      *        The text to encrypt and store in the new version of the secret. </p>
@@ -679,6 +747,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <p>
      *        We recommend you create the secret string as JSON key/value pairs, as shown in the example.
+     *        </p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -843,6 +915,95 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * A unique identifier that indicates the source of the request. For cross-account rotation (when you rotate a
+     * secret in one account by using a Lambda rotation function in another account) and the Lambda rotation function
+     * assumes an IAM role to call Secrets Manager, Secrets Manager validates the identity with the rotation token. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">How rotation works</a>.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * 
+     * @param rotationToken
+     *        A unique identifier that indicates the source of the request. For cross-account rotation (when you rotate
+     *        a secret in one account by using a Lambda rotation function in another account) and the Lambda rotation
+     *        function assumes an IAM role to call Secrets Manager, Secrets Manager validates the identity with the
+     *        rotation token. For more information, see <a
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">How rotation
+     *        works</a>.</p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
+     */
+
+    public void setRotationToken(String rotationToken) {
+        this.rotationToken = rotationToken;
+    }
+
+    /**
+     * <p>
+     * A unique identifier that indicates the source of the request. For cross-account rotation (when you rotate a
+     * secret in one account by using a Lambda rotation function in another account) and the Lambda rotation function
+     * assumes an IAM role to call Secrets Manager, Secrets Manager validates the identity with the rotation token. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">How rotation works</a>.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * 
+     * @return A unique identifier that indicates the source of the request. For cross-account rotation (when you rotate
+     *         a secret in one account by using a Lambda rotation function in another account) and the Lambda rotation
+     *         function assumes an IAM role to call Secrets Manager, Secrets Manager validates the identity with the
+     *         rotation token. For more information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">How rotation
+     *         works</a>.</p>
+     *         <p>
+     *         Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail
+     *         log entries. If you create your own log entries, you must also avoid logging the information in this
+     *         field.
+     */
+
+    public String getRotationToken() {
+        return this.rotationToken;
+    }
+
+    /**
+     * <p>
+     * A unique identifier that indicates the source of the request. For cross-account rotation (when you rotate a
+     * secret in one account by using a Lambda rotation function in another account) and the Lambda rotation function
+     * assumes an IAM role to call Secrets Manager, Secrets Manager validates the identity with the rotation token. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">How rotation works</a>.
+     * </p>
+     * <p>
+     * Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     * entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * </p>
+     * 
+     * @param rotationToken
+     *        A unique identifier that indicates the source of the request. For cross-account rotation (when you rotate
+     *        a secret in one account by using a Lambda rotation function in another account) and the Lambda rotation
+     *        function assumes an IAM role to call Secrets Manager, Secrets Manager validates the identity with the
+     *        rotation token. For more information, see <a
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">How rotation
+     *        works</a>.</p>
+     *        <p>
+     *        Sensitive: This field contains sensitive information, so the service does not include it in CloudTrail log
+     *        entries. If you create your own log entries, you must also avoid logging the information in this field.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutSecretValueRequest withRotationToken(String rotationToken) {
+        setRotationToken(rotationToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -863,7 +1024,9 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getSecretString() != null)
             sb.append("SecretString: ").append("***Sensitive Data Redacted***").append(",");
         if (getVersionStages() != null)
-            sb.append("VersionStages: ").append(getVersionStages());
+            sb.append("VersionStages: ").append(getVersionStages()).append(",");
+        if (getRotationToken() != null)
+            sb.append("RotationToken: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -898,6 +1061,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getVersionStages() != null && other.getVersionStages().equals(this.getVersionStages()) == false)
             return false;
+        if (other.getRotationToken() == null ^ this.getRotationToken() == null)
+            return false;
+        if (other.getRotationToken() != null && other.getRotationToken().equals(this.getRotationToken()) == false)
+            return false;
         return true;
     }
 
@@ -911,6 +1078,7 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getSecretBinary() == null) ? 0 : getSecretBinary().hashCode());
         hashCode = prime * hashCode + ((getSecretString() == null) ? 0 : getSecretString().hashCode());
         hashCode = prime * hashCode + ((getVersionStages() == null) ? 0 : getVersionStages().hashCode());
+        hashCode = prime * hashCode + ((getRotationToken() == null) ? 0 : getRotationToken().hashCode());
         return hashCode;
     }
 

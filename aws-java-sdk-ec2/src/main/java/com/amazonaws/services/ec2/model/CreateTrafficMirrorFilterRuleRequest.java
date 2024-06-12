@@ -95,12 +95,17 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * Traffic Mirroring tags specifications.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<TagSpecification> tagSpecifications;
 
     /**
      * <p>
@@ -576,16 +581,14 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *        idempotency</a>.
+     *        information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to
+     *        ensure idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -595,15 +598,13 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *         idempotency</a>.
+     *         information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How
+     *         to ensure idempotency</a>.
      */
 
     public String getClientToken() {
@@ -613,21 +614,92 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *        idempotency</a>.
+     *        information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to
+     *        ensure idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateTrafficMirrorFilterRuleRequest withClientToken(String clientToken) {
         setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Traffic Mirroring tags specifications.
+     * </p>
+     * 
+     * @return Traffic Mirroring tags specifications.
+     */
+
+    public java.util.List<TagSpecification> getTagSpecifications() {
+        if (tagSpecifications == null) {
+            tagSpecifications = new com.amazonaws.internal.SdkInternalList<TagSpecification>();
+        }
+        return tagSpecifications;
+    }
+
+    /**
+     * <p>
+     * Traffic Mirroring tags specifications.
+     * </p>
+     * 
+     * @param tagSpecifications
+     *        Traffic Mirroring tags specifications.
+     */
+
+    public void setTagSpecifications(java.util.Collection<TagSpecification> tagSpecifications) {
+        if (tagSpecifications == null) {
+            this.tagSpecifications = null;
+            return;
+        }
+
+        this.tagSpecifications = new com.amazonaws.internal.SdkInternalList<TagSpecification>(tagSpecifications);
+    }
+
+    /**
+     * <p>
+     * Traffic Mirroring tags specifications.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTagSpecifications(java.util.Collection)} or {@link #withTagSpecifications(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param tagSpecifications
+     *        Traffic Mirroring tags specifications.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTrafficMirrorFilterRuleRequest withTagSpecifications(TagSpecification... tagSpecifications) {
+        if (this.tagSpecifications == null) {
+            setTagSpecifications(new com.amazonaws.internal.SdkInternalList<TagSpecification>(tagSpecifications.length));
+        }
+        for (TagSpecification ele : tagSpecifications) {
+            this.tagSpecifications.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Traffic Mirroring tags specifications.
+     * </p>
+     * 
+     * @param tagSpecifications
+     *        Traffic Mirroring tags specifications.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTrafficMirrorFilterRuleRequest withTagSpecifications(java.util.Collection<TagSpecification> tagSpecifications) {
+        setTagSpecifications(tagSpecifications);
         return this;
     }
 
@@ -675,7 +747,9 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getTagSpecifications() != null)
+            sb.append("TagSpecifications: ").append(getTagSpecifications());
         sb.append("}");
         return sb.toString();
     }
@@ -734,6 +808,10 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getTagSpecifications() == null ^ this.getTagSpecifications() == null)
+            return false;
+        if (other.getTagSpecifications() != null && other.getTagSpecifications().equals(this.getTagSpecifications()) == false)
+            return false;
         return true;
     }
 
@@ -753,6 +831,7 @@ public class CreateTrafficMirrorFilterRuleRequest extends AmazonWebServiceReques
         hashCode = prime * hashCode + ((getSourceCidrBlock() == null) ? 0 : getSourceCidrBlock().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         return hashCode;
     }
 

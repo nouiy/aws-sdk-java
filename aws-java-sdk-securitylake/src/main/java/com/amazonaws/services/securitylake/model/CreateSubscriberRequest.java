@@ -46,7 +46,7 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
     private String subscriberDescription;
     /**
      * <p>
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      * </p>
      */
     private AwsIdentity subscriberIdentity;
@@ -282,11 +282,11 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      * </p>
      * 
      * @param subscriberIdentity
-     *        The AWS identity used to access your data.
+     *        The Amazon Web Services identity used to access your data.
      */
 
     public void setSubscriberIdentity(AwsIdentity subscriberIdentity) {
@@ -295,10 +295,10 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      * </p>
      * 
-     * @return The AWS identity used to access your data.
+     * @return The Amazon Web Services identity used to access your data.
      */
 
     public AwsIdentity getSubscriberIdentity() {
@@ -307,11 +307,11 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      * </p>
      * 
      * @param subscriberIdentity
-     *        The AWS identity used to access your data.
+     *        The Amazon Web Services identity used to access your data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

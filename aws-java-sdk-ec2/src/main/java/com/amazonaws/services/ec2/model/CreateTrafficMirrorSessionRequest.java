@@ -75,8 +75,8 @@ public class CreateTrafficMirrorSessionRequest extends AmazonWebServiceRequest i
     /**
      * <p>
      * The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see <a
-     * href="https://tools.ietf.org/html/rfc7348">RFC 7348</a>. If you do not specify a <code>VirtualNetworkId</code>,
-     * an account-wide unique id is chosen at random.
+     * href="https://datatracker.ietf.org/doc/html/rfc7348">RFC 7348</a>. If you do not specify a
+     * <code>VirtualNetworkId</code>, an account-wide unique ID is chosen at random.
      * </p>
      */
     private Integer virtualNetworkId;
@@ -95,8 +95,7 @@ public class CreateTrafficMirrorSessionRequest extends AmazonWebServiceRequest i
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      */
@@ -395,14 +394,14 @@ public class CreateTrafficMirrorSessionRequest extends AmazonWebServiceRequest i
     /**
      * <p>
      * The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see <a
-     * href="https://tools.ietf.org/html/rfc7348">RFC 7348</a>. If you do not specify a <code>VirtualNetworkId</code>,
-     * an account-wide unique id is chosen at random.
+     * href="https://datatracker.ietf.org/doc/html/rfc7348">RFC 7348</a>. If you do not specify a
+     * <code>VirtualNetworkId</code>, an account-wide unique ID is chosen at random.
      * </p>
      * 
      * @param virtualNetworkId
      *        The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see <a
-     *        href="https://tools.ietf.org/html/rfc7348">RFC 7348</a>. If you do not specify a
-     *        <code>VirtualNetworkId</code>, an account-wide unique id is chosen at random.
+     *        href="https://datatracker.ietf.org/doc/html/rfc7348">RFC 7348</a>. If you do not specify a
+     *        <code>VirtualNetworkId</code>, an account-wide unique ID is chosen at random.
      */
 
     public void setVirtualNetworkId(Integer virtualNetworkId) {
@@ -412,13 +411,13 @@ public class CreateTrafficMirrorSessionRequest extends AmazonWebServiceRequest i
     /**
      * <p>
      * The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see <a
-     * href="https://tools.ietf.org/html/rfc7348">RFC 7348</a>. If you do not specify a <code>VirtualNetworkId</code>,
-     * an account-wide unique id is chosen at random.
+     * href="https://datatracker.ietf.org/doc/html/rfc7348">RFC 7348</a>. If you do not specify a
+     * <code>VirtualNetworkId</code>, an account-wide unique ID is chosen at random.
      * </p>
      * 
      * @return The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see <a
-     *         href="https://tools.ietf.org/html/rfc7348">RFC 7348</a>. If you do not specify a
-     *         <code>VirtualNetworkId</code>, an account-wide unique id is chosen at random.
+     *         href="https://datatracker.ietf.org/doc/html/rfc7348">RFC 7348</a>. If you do not specify a
+     *         <code>VirtualNetworkId</code>, an account-wide unique ID is chosen at random.
      */
 
     public Integer getVirtualNetworkId() {
@@ -428,14 +427,14 @@ public class CreateTrafficMirrorSessionRequest extends AmazonWebServiceRequest i
     /**
      * <p>
      * The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see <a
-     * href="https://tools.ietf.org/html/rfc7348">RFC 7348</a>. If you do not specify a <code>VirtualNetworkId</code>,
-     * an account-wide unique id is chosen at random.
+     * href="https://datatracker.ietf.org/doc/html/rfc7348">RFC 7348</a>. If you do not specify a
+     * <code>VirtualNetworkId</code>, an account-wide unique ID is chosen at random.
      * </p>
      * 
      * @param virtualNetworkId
      *        The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see <a
-     *        href="https://tools.ietf.org/html/rfc7348">RFC 7348</a>. If you do not specify a
-     *        <code>VirtualNetworkId</code>, an account-wide unique id is chosen at random.
+     *        href="https://datatracker.ietf.org/doc/html/rfc7348">RFC 7348</a>. If you do not specify a
+     *        <code>VirtualNetworkId</code>, an account-wide unique ID is chosen at random.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -560,16 +559,14 @@ public class CreateTrafficMirrorSessionRequest extends AmazonWebServiceRequest i
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *        idempotency</a>.
+     *        information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to
+     *        ensure idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -579,15 +576,13 @@ public class CreateTrafficMirrorSessionRequest extends AmazonWebServiceRequest i
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *         idempotency</a>.
+     *         information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How
+     *         to ensure idempotency</a>.
      */
 
     public String getClientToken() {
@@ -597,16 +592,14 @@ public class CreateTrafficMirrorSessionRequest extends AmazonWebServiceRequest i
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *        idempotency</a>.
+     *        information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to
+     *        ensure idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

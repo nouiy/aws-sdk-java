@@ -53,7 +53,7 @@ public class ReservedNodeExchangeStatus implements Serializable, Cloneable {
     private String sourceReservedNodeId;
     /**
      * <p>
-     * The source reserved-node type, for example ds2.xlarge.
+     * The source reserved-node type, for example ra3.4xlarge.
      * </p>
      */
     private String sourceReservedNodeType;
@@ -263,11 +263,11 @@ public class ReservedNodeExchangeStatus implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The source reserved-node type, for example ds2.xlarge.
+     * The source reserved-node type, for example ra3.4xlarge.
      * </p>
      * 
      * @param sourceReservedNodeType
-     *        The source reserved-node type, for example ds2.xlarge.
+     *        The source reserved-node type, for example ra3.4xlarge.
      */
 
     public void setSourceReservedNodeType(String sourceReservedNodeType) {
@@ -276,10 +276,10 @@ public class ReservedNodeExchangeStatus implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The source reserved-node type, for example ds2.xlarge.
+     * The source reserved-node type, for example ra3.4xlarge.
      * </p>
      * 
-     * @return The source reserved-node type, for example ds2.xlarge.
+     * @return The source reserved-node type, for example ra3.4xlarge.
      */
 
     public String getSourceReservedNodeType() {
@@ -288,11 +288,11 @@ public class ReservedNodeExchangeStatus implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The source reserved-node type, for example ds2.xlarge.
+     * The source reserved-node type, for example ra3.4xlarge.
      * </p>
      * 
      * @param sourceReservedNodeType
-     *        The source reserved-node type, for example ds2.xlarge.
+     *        The source reserved-node type, for example ra3.4xlarge.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

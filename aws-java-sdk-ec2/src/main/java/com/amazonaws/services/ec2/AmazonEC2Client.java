@@ -21576,6 +21576,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describe traffic mirror filters that determine the traffic that is mirrored.
+     * </p>
+     * 
+     * @param describeTrafficMirrorFilterRulesRequest
+     * @return Result of the DescribeTrafficMirrorFilterRules operation returned by the service.
+     * @sample AmazonEC2.DescribeTrafficMirrorFilterRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTrafficMirrorFilterRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeTrafficMirrorFilterRulesResult describeTrafficMirrorFilterRules(DescribeTrafficMirrorFilterRulesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeTrafficMirrorFilterRules(request);
+    }
+
+    @SdkInternalApi
+    final DescribeTrafficMirrorFilterRulesResult executeDescribeTrafficMirrorFilterRules(
+            DescribeTrafficMirrorFilterRulesRequest describeTrafficMirrorFilterRulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeTrafficMirrorFilterRulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeTrafficMirrorFilterRulesRequest> request = null;
+        Response<DescribeTrafficMirrorFilterRulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeTrafficMirrorFilterRulesRequestMarshaller().marshall(super.beforeMarshalling(describeTrafficMirrorFilterRulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeTrafficMirrorFilterRules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeTrafficMirrorFilterRulesResult> responseHandler = new StaxResponseHandler<DescribeTrafficMirrorFilterRulesResult>(
+                    new DescribeTrafficMirrorFilterRulesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes one or more Traffic Mirror filters.
      * </p>
      * 

@@ -5523,6 +5523,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeTrafficMirrorFilterRulesResult> describeTrafficMirrorFilterRulesAsync(
+            DescribeTrafficMirrorFilterRulesRequest request) {
+
+        return describeTrafficMirrorFilterRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTrafficMirrorFilterRulesResult> describeTrafficMirrorFilterRulesAsync(
+            DescribeTrafficMirrorFilterRulesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTrafficMirrorFilterRulesRequest, DescribeTrafficMirrorFilterRulesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeTrafficMirrorFiltersResult> describeTrafficMirrorFiltersAsync(DescribeTrafficMirrorFiltersRequest request) {
 
         return describeTrafficMirrorFiltersAsync(request, null);

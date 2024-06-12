@@ -106,6 +106,12 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
     private EncryptionAtRestOptions encryptionAtRestOptions;
     /**
      * <p>
+     * The VPC endpoint service name for the pipeline.
+     * </p>
+     */
+    private String vpcEndpointService;
+    /**
+     * <p>
      * A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * </p>
      */
@@ -736,6 +742,46 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The VPC endpoint service name for the pipeline.
+     * </p>
+     * 
+     * @param vpcEndpointService
+     *        The VPC endpoint service name for the pipeline.
+     */
+
+    public void setVpcEndpointService(String vpcEndpointService) {
+        this.vpcEndpointService = vpcEndpointService;
+    }
+
+    /**
+     * <p>
+     * The VPC endpoint service name for the pipeline.
+     * </p>
+     * 
+     * @return The VPC endpoint service name for the pipeline.
+     */
+
+    public String getVpcEndpointService() {
+        return this.vpcEndpointService;
+    }
+
+    /**
+     * <p>
+     * The VPC endpoint service name for the pipeline.
+     * </p>
+     * 
+     * @param vpcEndpointService
+     *        The VPC endpoint service name for the pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withVpcEndpointService(String vpcEndpointService) {
+        setVpcEndpointService(vpcEndpointService);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * </p>
      * 
@@ -984,6 +1030,8 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
             sb.append("BufferOptions: ").append(getBufferOptions()).append(",");
         if (getEncryptionAtRestOptions() != null)
             sb.append("EncryptionAtRestOptions: ").append(getEncryptionAtRestOptions()).append(",");
+        if (getVpcEndpointService() != null)
+            sb.append("VpcEndpointService: ").append(getVpcEndpointService()).append(",");
         if (getServiceVpcEndpoints() != null)
             sb.append("ServiceVpcEndpoints: ").append(getServiceVpcEndpoints()).append(",");
         if (getDestinations() != null)
@@ -1060,6 +1108,10 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEncryptionAtRestOptions() != null && other.getEncryptionAtRestOptions().equals(this.getEncryptionAtRestOptions()) == false)
             return false;
+        if (other.getVpcEndpointService() == null ^ this.getVpcEndpointService() == null)
+            return false;
+        if (other.getVpcEndpointService() != null && other.getVpcEndpointService().equals(this.getVpcEndpointService()) == false)
+            return false;
         if (other.getServiceVpcEndpoints() == null ^ this.getServiceVpcEndpoints() == null)
             return false;
         if (other.getServiceVpcEndpoints() != null && other.getServiceVpcEndpoints().equals(this.getServiceVpcEndpoints()) == false)
@@ -1094,6 +1146,7 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVpcEndpoints() == null) ? 0 : getVpcEndpoints().hashCode());
         hashCode = prime * hashCode + ((getBufferOptions() == null) ? 0 : getBufferOptions().hashCode());
         hashCode = prime * hashCode + ((getEncryptionAtRestOptions() == null) ? 0 : getEncryptionAtRestOptions().hashCode());
+        hashCode = prime * hashCode + ((getVpcEndpointService() == null) ? 0 : getVpcEndpointService().hashCode());
         hashCode = prime * hashCode + ((getServiceVpcEndpoints() == null) ? 0 : getServiceVpcEndpoints().hashCode());
         hashCode = prime * hashCode + ((getDestinations() == null) ? 0 : getDestinations().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

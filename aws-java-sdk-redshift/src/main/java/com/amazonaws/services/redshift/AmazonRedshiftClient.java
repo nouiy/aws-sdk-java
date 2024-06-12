@@ -9380,32 +9380,12 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * <ul>
      * <li>
      * <p>
-     * dc1.large (if your cluster is in a VPC)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * dc1.8xlarge (if your cluster is in a VPC)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * dc2.large
      * </p>
      * </li>
      * <li>
      * <p>
      * dc2.8xlarge
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * ds2.xlarge
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * ds2.8xlarge
      * </p>
      * </li>
      * <li>

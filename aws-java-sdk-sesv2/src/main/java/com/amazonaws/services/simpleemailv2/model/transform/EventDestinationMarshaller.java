@@ -40,6 +40,8 @@ public class EventDestinationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchDestination").build();
     private static final MarshallingInfo<StructuredPojo> SNSDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnsDestination").build();
+    private static final MarshallingInfo<StructuredPojo> EVENTBRIDGEDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EventBridgeDestination").build();
     private static final MarshallingInfo<StructuredPojo> PINPOINTDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinpointDestination").build();
 
@@ -65,6 +67,7 @@ public class EventDestinationMarshaller {
             protocolMarshaller.marshall(eventDestination.getKinesisFirehoseDestination(), KINESISFIREHOSEDESTINATION_BINDING);
             protocolMarshaller.marshall(eventDestination.getCloudWatchDestination(), CLOUDWATCHDESTINATION_BINDING);
             protocolMarshaller.marshall(eventDestination.getSnsDestination(), SNSDESTINATION_BINDING);
+            protocolMarshaller.marshall(eventDestination.getEventBridgeDestination(), EVENTBRIDGEDESTINATION_BINDING);
             protocolMarshaller.marshall(eventDestination.getPinpointDestination(), PINPOINTDESTINATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

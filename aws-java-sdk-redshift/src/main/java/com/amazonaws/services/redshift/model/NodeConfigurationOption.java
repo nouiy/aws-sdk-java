@@ -28,7 +28,7 @@ public class NodeConfigurationOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The node type, such as, "ds2.8xlarge".
+     * The node type, such as, "ra3.4xlarge".
      * </p>
      */
     private String nodeType;
@@ -53,11 +53,11 @@ public class NodeConfigurationOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The node type, such as, "ds2.8xlarge".
+     * The node type, such as, "ra3.4xlarge".
      * </p>
      * 
      * @param nodeType
-     *        The node type, such as, "ds2.8xlarge".
+     *        The node type, such as, "ra3.4xlarge".
      */
 
     public void setNodeType(String nodeType) {
@@ -66,10 +66,10 @@ public class NodeConfigurationOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The node type, such as, "ds2.8xlarge".
+     * The node type, such as, "ra3.4xlarge".
      * </p>
      * 
-     * @return The node type, such as, "ds2.8xlarge".
+     * @return The node type, such as, "ra3.4xlarge".
      */
 
     public String getNodeType() {
@@ -78,11 +78,11 @@ public class NodeConfigurationOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The node type, such as, "ds2.8xlarge".
+     * The node type, such as, "ra3.4xlarge".
      * </p>
      * 
      * @param nodeType
-     *        The node type, such as, "ds2.8xlarge".
+     *        The node type, such as, "ra3.4xlarge".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
