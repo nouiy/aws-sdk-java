@@ -1465,6 +1465,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<CreateUsageProfileResult> createUsageProfileAsync(CreateUsageProfileRequest request) {
+
+        return createUsageProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateUsageProfileResult> createUsageProfileAsync(final CreateUsageProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateUsageProfileRequest, CreateUsageProfileResult> asyncHandler) {
+        final CreateUsageProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateUsageProfileResult>() {
+            @Override
+            public CreateUsageProfileResult call() throws Exception {
+                CreateUsageProfileResult result = null;
+
+                try {
+                    result = executeCreateUsageProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateUserDefinedFunctionResult> createUserDefinedFunctionAsync(CreateUserDefinedFunctionRequest request) {
 
         return createUserDefinedFunctionAsync(request, null);
@@ -2310,6 +2343,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeDeleteTrigger(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteUsageProfileResult> deleteUsageProfileAsync(DeleteUsageProfileRequest request) {
+
+        return deleteUsageProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteUsageProfileResult> deleteUsageProfileAsync(final DeleteUsageProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteUsageProfileRequest, DeleteUsageProfileResult> asyncHandler) {
+        final DeleteUsageProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteUsageProfileResult>() {
+            @Override
+            public DeleteUsageProfileResult call() throws Exception {
+                DeleteUsageProfileResult result = null;
+
+                try {
+                    result = executeDeleteUsageProfile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4449,6 +4515,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetUsageProfileResult> getUsageProfileAsync(GetUsageProfileRequest request) {
+
+        return getUsageProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUsageProfileResult> getUsageProfileAsync(final GetUsageProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetUsageProfileRequest, GetUsageProfileResult> asyncHandler) {
+        final GetUsageProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetUsageProfileResult>() {
+            @Override
+            public GetUsageProfileResult call() throws Exception {
+                GetUsageProfileResult result = null;
+
+                try {
+                    result = executeGetUsageProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetUserDefinedFunctionResult> getUserDefinedFunctionAsync(GetUserDefinedFunctionRequest request) {
 
         return getUserDefinedFunctionAsync(request, null);
@@ -5295,6 +5394,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeListTriggers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUsageProfilesResult> listUsageProfilesAsync(ListUsageProfilesRequest request) {
+
+        return listUsageProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUsageProfilesResult> listUsageProfilesAsync(final ListUsageProfilesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListUsageProfilesRequest, ListUsageProfilesResult> asyncHandler) {
+        final ListUsageProfilesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListUsageProfilesResult>() {
+            @Override
+            public ListUsageProfilesResult call() throws Exception {
+                ListUsageProfilesResult result = null;
+
+                try {
+                    result = executeListUsageProfiles(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -7055,6 +7187,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeUpdateTrigger(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateUsageProfileResult> updateUsageProfileAsync(UpdateUsageProfileRequest request) {
+
+        return updateUsageProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateUsageProfileResult> updateUsageProfileAsync(final UpdateUsageProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateUsageProfileRequest, UpdateUsageProfileResult> asyncHandler) {
+        final UpdateUsageProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateUsageProfileResult>() {
+            @Override
+            public UpdateUsageProfileResult call() throws Exception {
+                UpdateUsageProfileResult result = null;
+
+                try {
+                    result = executeUpdateUsageProfile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

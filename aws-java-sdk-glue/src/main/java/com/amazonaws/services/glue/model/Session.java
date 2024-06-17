@@ -145,6 +145,12 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer idleTimeout;
+    /**
+     * <p>
+     * The name of an Glue usage profile associated with the session.
+     * </p>
+     */
+    private String profileName;
 
     /**
      * <p>
@@ -1001,6 +1007,46 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of an Glue usage profile associated with the session.
+     * </p>
+     * 
+     * @param profileName
+     *        The name of an Glue usage profile associated with the session.
+     */
+
+    public void setProfileName(String profileName) {
+        this.profileName = profileName;
+    }
+
+    /**
+     * <p>
+     * The name of an Glue usage profile associated with the session.
+     * </p>
+     * 
+     * @return The name of an Glue usage profile associated with the session.
+     */
+
+    public String getProfileName() {
+        return this.profileName;
+    }
+
+    /**
+     * <p>
+     * The name of an Glue usage profile associated with the session.
+     * </p>
+     * 
+     * @param profileName
+     *        The name of an Glue usage profile associated with the session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Session withProfileName(String profileName) {
+        setProfileName(profileName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1049,7 +1095,9 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
         if (getDPUSeconds() != null)
             sb.append("DPUSeconds: ").append(getDPUSeconds()).append(",");
         if (getIdleTimeout() != null)
-            sb.append("IdleTimeout: ").append(getIdleTimeout());
+            sb.append("IdleTimeout: ").append(getIdleTimeout()).append(",");
+        if (getProfileName() != null)
+            sb.append("ProfileName: ").append(getProfileName());
         sb.append("}");
         return sb.toString();
     }
@@ -1140,6 +1188,10 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getIdleTimeout() != null && other.getIdleTimeout().equals(this.getIdleTimeout()) == false)
             return false;
+        if (other.getProfileName() == null ^ this.getProfileName() == null)
+            return false;
+        if (other.getProfileName() != null && other.getProfileName().equals(this.getProfileName()) == false)
+            return false;
         return true;
     }
 
@@ -1167,6 +1219,7 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getExecutionTime() == null) ? 0 : getExecutionTime().hashCode());
         hashCode = prime * hashCode + ((getDPUSeconds() == null) ? 0 : getDPUSeconds().hashCode());
         hashCode = prime * hashCode + ((getIdleTimeout() == null) ? 0 : getIdleTimeout().hashCode());
+        hashCode = prime * hashCode + ((getProfileName() == null) ? 0 : getProfileName().hashCode());
         return hashCode;
     }
 

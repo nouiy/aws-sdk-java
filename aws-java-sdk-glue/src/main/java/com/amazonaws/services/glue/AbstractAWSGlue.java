@@ -238,6 +238,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public CreateUsageProfileResult createUsageProfile(CreateUsageProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateUserDefinedFunctionResult createUserDefinedFunction(CreateUserDefinedFunctionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -364,6 +369,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public DeleteTriggerResult deleteTrigger(DeleteTriggerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteUsageProfileResult deleteUsageProfile(DeleteUsageProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -688,6 +698,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public GetUsageProfileResult getUsageProfile(GetUsageProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetUserDefinedFunctionResult getUserDefinedFunction(GetUserDefinedFunctionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -814,6 +829,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public ListTriggersResult listTriggers(ListTriggersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListUsageProfilesResult listUsageProfiles(ListUsageProfilesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1079,6 +1099,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public UpdateTriggerResult updateTrigger(UpdateTriggerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateUsageProfileResult updateUsageProfile(UpdateUsageProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

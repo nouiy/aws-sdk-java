@@ -125,6 +125,10 @@ public class SessionJsonUnmarshaller implements Unmarshaller<Session, JsonUnmars
                     context.nextToken();
                     session.setIdleTimeout(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("ProfileName", targetDepth)) {
+                    context.nextToken();
+                    session.setProfileName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

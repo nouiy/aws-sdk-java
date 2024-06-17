@@ -100,6 +100,17 @@ public class Webhook implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date lastModifiedSecret;
+    /**
+     * <p>
+     * The scope configuration for global or organization webhooks.
+     * </p>
+     * <note>
+     * <p>
+     * Global or organization webhooks are only available for GitHub and Github Enterprise webhooks.
+     * </p>
+     * </note>
+     */
+    private ScopeConfiguration scopeConfiguration;
 
     /**
      * <p>
@@ -635,6 +646,70 @@ public class Webhook implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The scope configuration for global or organization webhooks.
+     * </p>
+     * <note>
+     * <p>
+     * Global or organization webhooks are only available for GitHub and Github Enterprise webhooks.
+     * </p>
+     * </note>
+     * 
+     * @param scopeConfiguration
+     *        The scope configuration for global or organization webhooks.</p> <note>
+     *        <p>
+     *        Global or organization webhooks are only available for GitHub and Github Enterprise webhooks.
+     *        </p>
+     */
+
+    public void setScopeConfiguration(ScopeConfiguration scopeConfiguration) {
+        this.scopeConfiguration = scopeConfiguration;
+    }
+
+    /**
+     * <p>
+     * The scope configuration for global or organization webhooks.
+     * </p>
+     * <note>
+     * <p>
+     * Global or organization webhooks are only available for GitHub and Github Enterprise webhooks.
+     * </p>
+     * </note>
+     * 
+     * @return The scope configuration for global or organization webhooks.</p> <note>
+     *         <p>
+     *         Global or organization webhooks are only available for GitHub and Github Enterprise webhooks.
+     *         </p>
+     */
+
+    public ScopeConfiguration getScopeConfiguration() {
+        return this.scopeConfiguration;
+    }
+
+    /**
+     * <p>
+     * The scope configuration for global or organization webhooks.
+     * </p>
+     * <note>
+     * <p>
+     * Global or organization webhooks are only available for GitHub and Github Enterprise webhooks.
+     * </p>
+     * </note>
+     * 
+     * @param scopeConfiguration
+     *        The scope configuration for global or organization webhooks.</p> <note>
+     *        <p>
+     *        Global or organization webhooks are only available for GitHub and Github Enterprise webhooks.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Webhook withScopeConfiguration(ScopeConfiguration scopeConfiguration) {
+        setScopeConfiguration(scopeConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -661,7 +736,9 @@ public class Webhook implements Serializable, Cloneable, StructuredPojo {
         if (getManualCreation() != null)
             sb.append("ManualCreation: ").append(getManualCreation()).append(",");
         if (getLastModifiedSecret() != null)
-            sb.append("LastModifiedSecret: ").append(getLastModifiedSecret());
+            sb.append("LastModifiedSecret: ").append(getLastModifiedSecret()).append(",");
+        if (getScopeConfiguration() != null)
+            sb.append("ScopeConfiguration: ").append(getScopeConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -708,6 +785,10 @@ public class Webhook implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLastModifiedSecret() != null && other.getLastModifiedSecret().equals(this.getLastModifiedSecret()) == false)
             return false;
+        if (other.getScopeConfiguration() == null ^ this.getScopeConfiguration() == null)
+            return false;
+        if (other.getScopeConfiguration() != null && other.getScopeConfiguration().equals(this.getScopeConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -724,6 +805,7 @@ public class Webhook implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getBuildType() == null) ? 0 : getBuildType().hashCode());
         hashCode = prime * hashCode + ((getManualCreation() == null) ? 0 : getManualCreation().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedSecret() == null) ? 0 : getLastModifiedSecret().hashCode());
+        hashCode = prime * hashCode + ((getScopeConfiguration() == null) ? 0 : getScopeConfiguration().hashCode());
         return hashCode;
     }
 

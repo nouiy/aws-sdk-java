@@ -1082,6 +1082,31 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Creates an Glue usage profile.
+     * </p>
+     * 
+     * @param createUsageProfileRequest
+     * @return Result of the CreateUsageProfile operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws ResourceNumberLimitExceededException
+     *         A resource numerical limit was exceeded.
+     * @throws OperationNotSupportedException
+     *         The operation is not available in the region.
+     * @sample AWSGlue.CreateUsageProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateUsageProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateUsageProfileResult createUsageProfile(CreateUsageProfileRequest createUsageProfileRequest);
+
+    /**
+     * <p>
      * Creates a new function definition in the Data Catalog.
      * </p>
      * 
@@ -1705,6 +1730,27 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     DeleteTriggerResult deleteTrigger(DeleteTriggerRequest deleteTriggerRequest);
+
+    /**
+     * <p>
+     * Deletes the Glue specified usage profile.
+     * </p>
+     * 
+     * @param deleteUsageProfileRequest
+     * @return Result of the DeleteUsageProfile operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws OperationNotSupportedException
+     *         The operation is not available in the region.
+     * @sample AWSGlue.DeleteUsageProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteUsageProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteUsageProfileResult deleteUsageProfile(DeleteUsageProfileRequest deleteUsageProfileRequest);
 
     /**
      * <p>
@@ -2351,7 +2397,8 @@ public interface AWSGlue {
 
     /**
      * <p>
-     * Retrieves the metadata for a given job run.
+     * Retrieves the metadata for a given job run. Job run history is accessible for 90 days for your workflow and job
+     * run.
      * </p>
      * 
      * @param getJobRunRequest
@@ -3166,6 +3213,29 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Retrieves information about the specified Glue usage profile.
+     * </p>
+     * 
+     * @param getUsageProfileRequest
+     * @return Result of the GetUsageProfile operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws OperationNotSupportedException
+     *         The operation is not available in the region.
+     * @sample AWSGlue.GetUsageProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUsageProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetUsageProfileResult getUsageProfile(GetUsageProfileRequest getUsageProfileRequest);
+
+    /**
+     * <p>
      * Retrieves a specified function definition from the Data Catalog.
      * </p>
      * 
@@ -3233,7 +3303,8 @@ public interface AWSGlue {
 
     /**
      * <p>
-     * Retrieves the metadata for a given workflow run.
+     * Retrieves the metadata for a given workflow run. Job run history is accessible for 90 days for your workflow and
+     * job run.
      * </p>
      * 
      * @param getWorkflowRunRequest
@@ -3752,6 +3823,27 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     ListTriggersResult listTriggers(ListTriggersRequest listTriggersRequest);
+
+    /**
+     * <p>
+     * List all the Glue usage profiles.
+     * </p>
+     * 
+     * @param listUsageProfilesRequest
+     * @return Result of the ListUsageProfiles operation returned by the service.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationNotSupportedException
+     *         The operation is not available in the region.
+     * @sample AWSGlue.ListUsageProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListUsageProfiles" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListUsageProfilesResult listUsageProfiles(ListUsageProfilesRequest listUsageProfilesRequest);
 
     /**
      * <p>
@@ -5128,6 +5220,31 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     UpdateTriggerResult updateTrigger(UpdateTriggerRequest updateTriggerRequest);
+
+    /**
+     * <p>
+     * Update an Glue usage profile.
+     * </p>
+     * 
+     * @param updateUsageProfileRequest
+     * @return Result of the UpdateUsageProfile operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws OperationNotSupportedException
+     *         The operation is not available in the region.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSGlue.UpdateUsageProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateUsageProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateUsageProfileResult updateUsageProfile(UpdateUsageProfileRequest updateUsageProfileRequest);
 
     /**
      * <p>

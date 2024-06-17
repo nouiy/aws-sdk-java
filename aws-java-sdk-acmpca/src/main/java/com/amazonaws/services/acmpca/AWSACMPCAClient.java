@@ -230,7 +230,7 @@ public class AWSACMPCAClient extends AmazonWebServiceClient implements AWSACMPCA
      * <p>
      * Amazon Web Services Private CA assets that are stored in Amazon S3 can be protected with encryption. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#crl-encryption">Encrypting Your
+     * href="https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html#crl-encryption">Encrypting Your
      * CRLs</a>.
      * </p>
      * 
@@ -1407,47 +1407,12 @@ public class AWSACMPCAClient extends AmazonWebServiceClient implements AWSACMPCA
      * <ul>
      * <li>
      * <p>
-     * Basic constraints (<i>must</i> be marked critical)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject alternative names
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Key usage
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extended key usage
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Authority key identifier
      * </p>
      * </li>
      * <li>
      * <p>
-     * Subject key identifier
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Issuer alternative name
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject directory attributes
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject information access
+     * Basic constraints (<i>must</i> be marked critical)
      * </p>
      * </li>
      * <li>
@@ -1457,12 +1422,52 @@ public class AWSACMPCAClient extends AmazonWebServiceClient implements AWSACMPCA
      * </li>
      * <li>
      * <p>
-     * Policy mappings
+     * Extended key usage
      * </p>
      * </li>
      * <li>
      * <p>
      * Inhibit anyPolicy
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Issuer alternative name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Key usage
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Name constraints
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Policy mappings
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Subject alternative name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Subject directory attributes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Subject key identifier
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Subject information access
      * </p>
      * </li>
      * </ul>
@@ -1473,12 +1478,7 @@ public class AWSACMPCAClient extends AmazonWebServiceClient implements AWSACMPCA
      * <ul>
      * <li>
      * <p>
-     * Name constraints
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Policy constraints
+     * Authority information access
      * </p>
      * </li>
      * <li>
@@ -1488,20 +1488,19 @@ public class AWSACMPCAClient extends AmazonWebServiceClient implements AWSACMPCA
      * </li>
      * <li>
      * <p>
-     * Authority information access
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Freshest CRL
      * </p>
      * </li>
      * <li>
      * <p>
-     * Any other extension
+     * Policy constraints
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Amazon Web Services Private Certificate Authority will also reject any other extension marked as critical not
+     * contained on the preceding list of allowed extensions.
+     * </p>
      * 
      * @param importCertificateAuthorityCertificateRequest
      * @return Result of the ImportCertificateAuthorityCertificate operation returned by the service.

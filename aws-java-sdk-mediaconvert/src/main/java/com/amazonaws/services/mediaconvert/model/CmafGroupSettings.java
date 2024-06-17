@@ -48,6 +48,17 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     /** Specification to use (RFC-6381 or the default RFC-4281) during m3u8 playlist generation. */
     private String codecSpecification;
     /**
+     * Specify whether MediaConvert generates I-frame only video segments for DASH trick play, also known as trick mode.
+     * When specified, the I-frame only video segments are included within an additional AdaptationSet in your DASH
+     * output manifest. To generate I-frame only video segments: Enter a name as a text string, up to 256 character long.
+     * This name is appended to the end of this output group's base filename, that you specify as part of your
+     * destination URI, and used for the I-frame only video segment files. You may also include format identifiers. For
+     * more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/using-variables-in-your-job-settings.html
+     * #using-settings-variables-with-streaming-outputs To not generate I-frame only video segments: Leave blank.
+     */
+    private String dashIFrameTrickPlayNameModifier;
+    /**
      * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
      * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
      * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
@@ -417,6 +428,85 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
 
     public CmafGroupSettings withCodecSpecification(CmafCodecSpecification codecSpecification) {
         this.codecSpecification = codecSpecification.toString();
+        return this;
+    }
+
+    /**
+     * Specify whether MediaConvert generates I-frame only video segments for DASH trick play, also known as trick mode.
+     * When specified, the I-frame only video segments are included within an additional AdaptationSet in your DASH
+     * output manifest. To generate I-frame only video segments: Enter a name as a text string, up to 256 character long.
+     * This name is appended to the end of this output group's base filename, that you specify as part of your
+     * destination URI, and used for the I-frame only video segment files. You may also include format identifiers. For
+     * more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/using-variables-in-your-job-settings.html
+     * #using-settings-variables-with-streaming-outputs To not generate I-frame only video segments: Leave blank.
+     * 
+     * @param dashIFrameTrickPlayNameModifier
+     *        Specify whether MediaConvert generates I-frame only video segments for DASH trick play, also known as
+     *        trick mode. When specified, the I-frame only video segments are included within an additional
+     *        AdaptationSet in your DASH output manifest. To generate I-frame only video segments: Enter a name as a
+     *        text string, up to 256 character long. This name is appended to the end of this output group's base
+     *        filename, that you specify as part of your destination URI, and used for the I-frame only video segment
+     *        files. You may also include format identifiers. For more information, see:
+     *        https://docs.aws.amazon.com/mediaconvert
+     *        /latest/ug/using-variables-in-your-job-settings.html#using-settings-variables-with-streaming-outputs To
+     *        not generate I-frame only video segments: Leave blank.
+     */
+
+    public void setDashIFrameTrickPlayNameModifier(String dashIFrameTrickPlayNameModifier) {
+        this.dashIFrameTrickPlayNameModifier = dashIFrameTrickPlayNameModifier;
+    }
+
+    /**
+     * Specify whether MediaConvert generates I-frame only video segments for DASH trick play, also known as trick mode.
+     * When specified, the I-frame only video segments are included within an additional AdaptationSet in your DASH
+     * output manifest. To generate I-frame only video segments: Enter a name as a text string, up to 256 character long.
+     * This name is appended to the end of this output group's base filename, that you specify as part of your
+     * destination URI, and used for the I-frame only video segment files. You may also include format identifiers. For
+     * more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/using-variables-in-your-job-settings.html
+     * #using-settings-variables-with-streaming-outputs To not generate I-frame only video segments: Leave blank.
+     * 
+     * @return Specify whether MediaConvert generates I-frame only video segments for DASH trick play, also known as
+     *         trick mode. When specified, the I-frame only video segments are included within an additional
+     *         AdaptationSet in your DASH output manifest. To generate I-frame only video segments: Enter a name as a
+     *         text string, up to 256 character long. This name is appended to the end of this output group's base
+     *         filename, that you specify as part of your destination URI, and used for the I-frame only video segment
+     *         files. You may also include format identifiers. For more information, see:
+     *         https://docs.aws.amazon.com/mediaconvert
+     *         /latest/ug/using-variables-in-your-job-settings.html#using-settings-variables-with-streaming-outputs To
+     *         not generate I-frame only video segments: Leave blank.
+     */
+
+    public String getDashIFrameTrickPlayNameModifier() {
+        return this.dashIFrameTrickPlayNameModifier;
+    }
+
+    /**
+     * Specify whether MediaConvert generates I-frame only video segments for DASH trick play, also known as trick mode.
+     * When specified, the I-frame only video segments are included within an additional AdaptationSet in your DASH
+     * output manifest. To generate I-frame only video segments: Enter a name as a text string, up to 256 character long.
+     * This name is appended to the end of this output group's base filename, that you specify as part of your
+     * destination URI, and used for the I-frame only video segment files. You may also include format identifiers. For
+     * more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/using-variables-in-your-job-settings.html
+     * #using-settings-variables-with-streaming-outputs To not generate I-frame only video segments: Leave blank.
+     * 
+     * @param dashIFrameTrickPlayNameModifier
+     *        Specify whether MediaConvert generates I-frame only video segments for DASH trick play, also known as
+     *        trick mode. When specified, the I-frame only video segments are included within an additional
+     *        AdaptationSet in your DASH output manifest. To generate I-frame only video segments: Enter a name as a
+     *        text string, up to 256 character long. This name is appended to the end of this output group's base
+     *        filename, that you specify as part of your destination URI, and used for the I-frame only video segment
+     *        files. You may also include format identifiers. For more information, see:
+     *        https://docs.aws.amazon.com/mediaconvert
+     *        /latest/ug/using-variables-in-your-job-settings.html#using-settings-variables-with-streaming-outputs To
+     *        not generate I-frame only video segments: Leave blank.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CmafGroupSettings withDashIFrameTrickPlayNameModifier(String dashIFrameTrickPlayNameModifier) {
+        setDashIFrameTrickPlayNameModifier(dashIFrameTrickPlayNameModifier);
         return this;
     }
 
@@ -1871,6 +1961,8 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
             sb.append("ClientCache: ").append(getClientCache()).append(",");
         if (getCodecSpecification() != null)
             sb.append("CodecSpecification: ").append(getCodecSpecification()).append(",");
+        if (getDashIFrameTrickPlayNameModifier() != null)
+            sb.append("DashIFrameTrickPlayNameModifier: ").append(getDashIFrameTrickPlayNameModifier()).append(",");
         if (getDashManifestStyle() != null)
             sb.append("DashManifestStyle: ").append(getDashManifestStyle()).append(",");
         if (getDestination() != null)
@@ -1946,6 +2038,11 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
         if (other.getCodecSpecification() == null ^ this.getCodecSpecification() == null)
             return false;
         if (other.getCodecSpecification() != null && other.getCodecSpecification().equals(this.getCodecSpecification()) == false)
+            return false;
+        if (other.getDashIFrameTrickPlayNameModifier() == null ^ this.getDashIFrameTrickPlayNameModifier() == null)
+            return false;
+        if (other.getDashIFrameTrickPlayNameModifier() != null
+                && other.getDashIFrameTrickPlayNameModifier().equals(this.getDashIFrameTrickPlayNameModifier()) == false)
             return false;
         if (other.getDashManifestStyle() == null ^ this.getDashManifestStyle() == null)
             return false;
@@ -2053,6 +2150,7 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getBaseUrl() == null) ? 0 : getBaseUrl().hashCode());
         hashCode = prime * hashCode + ((getClientCache() == null) ? 0 : getClientCache().hashCode());
         hashCode = prime * hashCode + ((getCodecSpecification() == null) ? 0 : getCodecSpecification().hashCode());
+        hashCode = prime * hashCode + ((getDashIFrameTrickPlayNameModifier() == null) ? 0 : getDashIFrameTrickPlayNameModifier().hashCode());
         hashCode = prime * hashCode + ((getDashManifestStyle() == null) ? 0 : getDashManifestStyle().hashCode());
         hashCode = prime * hashCode + ((getDestination() == null) ? 0 : getDestination().hashCode());
         hashCode = prime * hashCode + ((getDestinationSettings() == null) ? 0 : getDestinationSettings().hashCode());

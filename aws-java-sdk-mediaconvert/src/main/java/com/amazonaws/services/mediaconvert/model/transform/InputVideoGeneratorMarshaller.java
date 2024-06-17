@@ -27,8 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class InputVideoGeneratorMarshaller {
 
+    private static final MarshallingInfo<Integer> CHANNELS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channels").build();
     private static final MarshallingInfo<Integer> DURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("duration").build();
+    private static final MarshallingInfo<Integer> FRAMERATEDENOMINATOR_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("framerateDenominator").build();
+    private static final MarshallingInfo<Integer> FRAMERATENUMERATOR_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("framerateNumerator").build();
+    private static final MarshallingInfo<Integer> SAMPLERATE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sampleRate").build();
 
     private static final InputVideoGeneratorMarshaller instance = new InputVideoGeneratorMarshaller();
 
@@ -46,7 +54,11 @@ public class InputVideoGeneratorMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(inputVideoGenerator.getChannels(), CHANNELS_BINDING);
             protocolMarshaller.marshall(inputVideoGenerator.getDuration(), DURATION_BINDING);
+            protocolMarshaller.marshall(inputVideoGenerator.getFramerateDenominator(), FRAMERATEDENOMINATOR_BINDING);
+            protocolMarshaller.marshall(inputVideoGenerator.getFramerateNumerator(), FRAMERATENUMERATOR_BINDING);
+            protocolMarshaller.marshall(inputVideoGenerator.getSampleRate(), SAMPLERATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

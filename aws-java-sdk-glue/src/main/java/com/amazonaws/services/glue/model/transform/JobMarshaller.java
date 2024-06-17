@@ -79,6 +79,8 @@ public class JobMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceControlDetails").build();
     private static final MarshallingInfo<String> MAINTENANCEWINDOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaintenanceWindow").build();
+    private static final MarshallingInfo<String> PROFILENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProfileName").build();
 
     private static final JobMarshaller instance = new JobMarshaller();
 
@@ -121,6 +123,7 @@ public class JobMarshaller {
             protocolMarshaller.marshall(job.getExecutionClass(), EXECUTIONCLASS_BINDING);
             protocolMarshaller.marshall(job.getSourceControlDetails(), SOURCECONTROLDETAILS_BINDING);
             protocolMarshaller.marshall(job.getMaintenanceWindow(), MAINTENANCEWINDOW_BINDING);
+            protocolMarshaller.marshall(job.getProfileName(), PROFILENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

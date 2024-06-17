@@ -48,9 +48,25 @@ public class InputVideoGeneratorJsonUnmarshaller implements Unmarshaller<InputVi
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("channels", targetDepth)) {
+                    context.nextToken();
+                    inputVideoGenerator.setChannels(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("duration", targetDepth)) {
                     context.nextToken();
                     inputVideoGenerator.setDuration(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("framerateDenominator", targetDepth)) {
+                    context.nextToken();
+                    inputVideoGenerator.setFramerateDenominator(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("framerateNumerator", targetDepth)) {
+                    context.nextToken();
+                    inputVideoGenerator.setFramerateNumerator(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("sampleRate", targetDepth)) {
+                    context.nextToken();
+                    inputVideoGenerator.setSampleRate(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

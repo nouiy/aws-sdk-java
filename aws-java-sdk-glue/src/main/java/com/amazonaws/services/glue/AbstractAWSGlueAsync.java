@@ -577,6 +577,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<CreateUsageProfileResult> createUsageProfileAsync(CreateUsageProfileRequest request) {
+
+        return createUsageProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateUsageProfileResult> createUsageProfileAsync(CreateUsageProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateUsageProfileRequest, CreateUsageProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateUserDefinedFunctionResult> createUserDefinedFunctionAsync(CreateUserDefinedFunctionRequest request) {
 
         return createUserDefinedFunctionAsync(request, null);
@@ -912,6 +925,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<DeleteTriggerResult> deleteTriggerAsync(DeleteTriggerRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteTriggerRequest, DeleteTriggerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteUsageProfileResult> deleteUsageProfileAsync(DeleteUsageProfileRequest request) {
+
+        return deleteUsageProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteUsageProfileResult> deleteUsageProfileAsync(DeleteUsageProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteUsageProfileRequest, DeleteUsageProfileResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1759,6 +1785,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<GetUsageProfileResult> getUsageProfileAsync(GetUsageProfileRequest request) {
+
+        return getUsageProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUsageProfileResult> getUsageProfileAsync(GetUsageProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetUsageProfileRequest, GetUsageProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetUserDefinedFunctionResult> getUserDefinedFunctionAsync(GetUserDefinedFunctionRequest request) {
 
         return getUserDefinedFunctionAsync(request, null);
@@ -2096,6 +2135,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<ListTriggersResult> listTriggersAsync(ListTriggersRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTriggersRequest, ListTriggersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUsageProfilesResult> listUsageProfilesAsync(ListUsageProfilesRequest request) {
+
+        return listUsageProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUsageProfilesResult> listUsageProfilesAsync(ListUsageProfilesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListUsageProfilesRequest, ListUsageProfilesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2795,6 +2847,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<UpdateTriggerResult> updateTriggerAsync(UpdateTriggerRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateTriggerRequest, UpdateTriggerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateUsageProfileResult> updateUsageProfileAsync(UpdateUsageProfileRequest request) {
+
+        return updateUsageProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateUsageProfileResult> updateUsageProfileAsync(UpdateUsageProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateUsageProfileRequest, UpdateUsageProfileResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

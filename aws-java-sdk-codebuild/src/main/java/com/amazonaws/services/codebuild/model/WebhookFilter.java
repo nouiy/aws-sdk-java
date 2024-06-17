@@ -174,6 +174,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * REPOSITORY_NAME
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A webhook triggers a build when the repository name matches the regular expression pattern.
+     * </p>
+     * <note>
+     * <p>
+     * Works with GitHub global or organization webhooks only.
+     * </p>
+     * </note></li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * WORKFLOW_NAME
      * </p>
      * <ul>
@@ -360,6 +376,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * REPOSITORY_NAME
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A webhook triggers a build when the repository name matches the regular expression pattern.
+     * </p>
+     * <note>
+     * <p>
+     * Works with GitHub global or organization webhooks only.
+     * </p>
+     * </note></li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * WORKFLOW_NAME
      * </p>
      * <ul>
@@ -519,6 +551,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      *        <note>
      *        <p>
      *        Works with <code>RELEASED</code> and <code>PRERELEASED</code> events only.
+     *        </p>
+     *        </note></li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        REPOSITORY_NAME
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        A webhook triggers a build when the repository name matches the regular expression pattern.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Works with GitHub global or organization webhooks only.
      *        </p>
      *        </note></li>
      *        </ul>
@@ -692,6 +740,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * REPOSITORY_NAME
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A webhook triggers a build when the repository name matches the regular expression pattern.
+     * </p>
+     * <note>
+     * <p>
+     * Works with GitHub global or organization webhooks only.
+     * </p>
+     * </note></li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * WORKFLOW_NAME
      * </p>
      * <ul>
@@ -850,6 +914,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      *         <note>
      *         <p>
      *         Works with <code>RELEASED</code> and <code>PRERELEASED</code> events only.
+     *         </p>
+     *         </note></li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         REPOSITORY_NAME
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         A webhook triggers a build when the repository name matches the regular expression pattern.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Works with GitHub global or organization webhooks only.
      *         </p>
      *         </note></li>
      *         </ul>
@@ -1023,6 +1103,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * REPOSITORY_NAME
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A webhook triggers a build when the repository name matches the regular expression pattern.
+     * </p>
+     * <note>
+     * <p>
+     * Works with GitHub global or organization webhooks only.
+     * </p>
+     * </note></li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * WORKFLOW_NAME
      * </p>
      * <ul>
@@ -1182,6 +1278,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      *        <note>
      *        <p>
      *        Works with <code>RELEASED</code> and <code>PRERELEASED</code> events only.
+     *        </p>
+     *        </note></li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        REPOSITORY_NAME
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        A webhook triggers a build when the repository name matches the regular expression pattern.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Works with GitHub global or organization webhooks only.
      *        </p>
      *        </note></li>
      *        </ul>
@@ -1357,6 +1469,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * REPOSITORY_NAME
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A webhook triggers a build when the repository name matches the regular expression pattern.
+     * </p>
+     * <note>
+     * <p>
+     * Works with GitHub global or organization webhooks only.
+     * </p>
+     * </note></li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * WORKFLOW_NAME
      * </p>
      * <ul>
@@ -1516,6 +1644,22 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      *        <note>
      *        <p>
      *        Works with <code>RELEASED</code> and <code>PRERELEASED</code> events only.
+     *        </p>
+     *        </note></li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        REPOSITORY_NAME
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        A webhook triggers a build when the repository name matches the regular expression pattern.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Works with GitHub global or organization webhooks only.
      *        </p>
      *        </note></li>
      *        </ul>

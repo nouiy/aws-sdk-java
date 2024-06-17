@@ -67,6 +67,8 @@ public class SessionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DPUSeconds").build();
     private static final MarshallingInfo<Integer> IDLETIMEOUT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdleTimeout").build();
+    private static final MarshallingInfo<String> PROFILENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProfileName").build();
 
     private static final SessionMarshaller instance = new SessionMarshaller();
 
@@ -103,6 +105,7 @@ public class SessionMarshaller {
             protocolMarshaller.marshall(session.getExecutionTime(), EXECUTIONTIME_BINDING);
             protocolMarshaller.marshall(session.getDPUSeconds(), DPUSECONDS_BINDING);
             protocolMarshaller.marshall(session.getIdleTimeout(), IDLETIMEOUT_BINDING);
+            protocolMarshaller.marshall(session.getProfileName(), PROFILENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

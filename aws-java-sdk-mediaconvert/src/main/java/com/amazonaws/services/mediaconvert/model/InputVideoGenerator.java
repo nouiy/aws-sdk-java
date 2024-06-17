@@ -30,18 +30,78 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class InputVideoGenerator implements Serializable, Cloneable, StructuredPojo {
 
     /**
-     * Specify an integer value for Black video duration from 50 to 86400000 to generate a black video input for that
-     * many milliseconds. Required when you include Video generator.
+     * Specify the number of audio channels to include in your video generator input. MediaConvert creates these audio
+     * channels as silent audio within a single audio track. Enter an integer from 1 to 32.
+     */
+    private Integer channels;
+    /**
+     * Specify the duration, in milliseconds, for your video generator input. Enter an integer from 50 to 86400000.
      */
     private Integer duration;
+    /**
+     * Specify the denominator of the fraction that represents the frame rate for your video generator input. When you
+     * do, you must also specify a value for Frame rate numerator. MediaConvert uses a default frame rate of 29.97 when
+     * you leave Frame rate numerator and Frame rate denominator blank.
+     */
+    private Integer framerateDenominator;
+    /**
+     * Specify the numerator of the fraction that represents the frame rate for your video generator input. When you do,
+     * you must also specify a value for Frame rate denominator. MediaConvert uses a default frame rate of 29.97 when
+     * you leave Frame rate numerator and Frame rate denominator blank.
+     */
+    private Integer framerateNumerator;
+    /**
+     * Specify the audio sample rate, in Hz, for the silent audio in your video generator input. Enter an integer from
+     * 32000 to 48000.
+     */
+    private Integer sampleRate;
 
     /**
-     * Specify an integer value for Black video duration from 50 to 86400000 to generate a black video input for that
-     * many milliseconds. Required when you include Video generator.
+     * Specify the number of audio channels to include in your video generator input. MediaConvert creates these audio
+     * channels as silent audio within a single audio track. Enter an integer from 1 to 32.
+     * 
+     * @param channels
+     *        Specify the number of audio channels to include in your video generator input. MediaConvert creates these
+     *        audio channels as silent audio within a single audio track. Enter an integer from 1 to 32.
+     */
+
+    public void setChannels(Integer channels) {
+        this.channels = channels;
+    }
+
+    /**
+     * Specify the number of audio channels to include in your video generator input. MediaConvert creates these audio
+     * channels as silent audio within a single audio track. Enter an integer from 1 to 32.
+     * 
+     * @return Specify the number of audio channels to include in your video generator input. MediaConvert creates these
+     *         audio channels as silent audio within a single audio track. Enter an integer from 1 to 32.
+     */
+
+    public Integer getChannels() {
+        return this.channels;
+    }
+
+    /**
+     * Specify the number of audio channels to include in your video generator input. MediaConvert creates these audio
+     * channels as silent audio within a single audio track. Enter an integer from 1 to 32.
+     * 
+     * @param channels
+     *        Specify the number of audio channels to include in your video generator input. MediaConvert creates these
+     *        audio channels as silent audio within a single audio track. Enter an integer from 1 to 32.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InputVideoGenerator withChannels(Integer channels) {
+        setChannels(channels);
+        return this;
+    }
+
+    /**
+     * Specify the duration, in milliseconds, for your video generator input. Enter an integer from 50 to 86400000.
      * 
      * @param duration
-     *        Specify an integer value for Black video duration from 50 to 86400000 to generate a black video input for
-     *        that many milliseconds. Required when you include Video generator.
+     *        Specify the duration, in milliseconds, for your video generator input. Enter an integer from 50 to
+     *        86400000.
      */
 
     public void setDuration(Integer duration) {
@@ -49,11 +109,10 @@ public class InputVideoGenerator implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * Specify an integer value for Black video duration from 50 to 86400000 to generate a black video input for that
-     * many milliseconds. Required when you include Video generator.
+     * Specify the duration, in milliseconds, for your video generator input. Enter an integer from 50 to 86400000.
      * 
-     * @return Specify an integer value for Black video duration from 50 to 86400000 to generate a black video input for
-     *         that many milliseconds. Required when you include Video generator.
+     * @return Specify the duration, in milliseconds, for your video generator input. Enter an integer from 50 to
+     *         86400000.
      */
 
     public Integer getDuration() {
@@ -61,17 +120,148 @@ public class InputVideoGenerator implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * Specify an integer value for Black video duration from 50 to 86400000 to generate a black video input for that
-     * many milliseconds. Required when you include Video generator.
+     * Specify the duration, in milliseconds, for your video generator input. Enter an integer from 50 to 86400000.
      * 
      * @param duration
-     *        Specify an integer value for Black video duration from 50 to 86400000 to generate a black video input for
-     *        that many milliseconds. Required when you include Video generator.
+     *        Specify the duration, in milliseconds, for your video generator input. Enter an integer from 50 to
+     *        86400000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public InputVideoGenerator withDuration(Integer duration) {
         setDuration(duration);
+        return this;
+    }
+
+    /**
+     * Specify the denominator of the fraction that represents the frame rate for your video generator input. When you
+     * do, you must also specify a value for Frame rate numerator. MediaConvert uses a default frame rate of 29.97 when
+     * you leave Frame rate numerator and Frame rate denominator blank.
+     * 
+     * @param framerateDenominator
+     *        Specify the denominator of the fraction that represents the frame rate for your video generator input.
+     *        When you do, you must also specify a value for Frame rate numerator. MediaConvert uses a default frame
+     *        rate of 29.97 when you leave Frame rate numerator and Frame rate denominator blank.
+     */
+
+    public void setFramerateDenominator(Integer framerateDenominator) {
+        this.framerateDenominator = framerateDenominator;
+    }
+
+    /**
+     * Specify the denominator of the fraction that represents the frame rate for your video generator input. When you
+     * do, you must also specify a value for Frame rate numerator. MediaConvert uses a default frame rate of 29.97 when
+     * you leave Frame rate numerator and Frame rate denominator blank.
+     * 
+     * @return Specify the denominator of the fraction that represents the frame rate for your video generator input.
+     *         When you do, you must also specify a value for Frame rate numerator. MediaConvert uses a default frame
+     *         rate of 29.97 when you leave Frame rate numerator and Frame rate denominator blank.
+     */
+
+    public Integer getFramerateDenominator() {
+        return this.framerateDenominator;
+    }
+
+    /**
+     * Specify the denominator of the fraction that represents the frame rate for your video generator input. When you
+     * do, you must also specify a value for Frame rate numerator. MediaConvert uses a default frame rate of 29.97 when
+     * you leave Frame rate numerator and Frame rate denominator blank.
+     * 
+     * @param framerateDenominator
+     *        Specify the denominator of the fraction that represents the frame rate for your video generator input.
+     *        When you do, you must also specify a value for Frame rate numerator. MediaConvert uses a default frame
+     *        rate of 29.97 when you leave Frame rate numerator and Frame rate denominator blank.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InputVideoGenerator withFramerateDenominator(Integer framerateDenominator) {
+        setFramerateDenominator(framerateDenominator);
+        return this;
+    }
+
+    /**
+     * Specify the numerator of the fraction that represents the frame rate for your video generator input. When you do,
+     * you must also specify a value for Frame rate denominator. MediaConvert uses a default frame rate of 29.97 when
+     * you leave Frame rate numerator and Frame rate denominator blank.
+     * 
+     * @param framerateNumerator
+     *        Specify the numerator of the fraction that represents the frame rate for your video generator input. When
+     *        you do, you must also specify a value for Frame rate denominator. MediaConvert uses a default frame rate
+     *        of 29.97 when you leave Frame rate numerator and Frame rate denominator blank.
+     */
+
+    public void setFramerateNumerator(Integer framerateNumerator) {
+        this.framerateNumerator = framerateNumerator;
+    }
+
+    /**
+     * Specify the numerator of the fraction that represents the frame rate for your video generator input. When you do,
+     * you must also specify a value for Frame rate denominator. MediaConvert uses a default frame rate of 29.97 when
+     * you leave Frame rate numerator and Frame rate denominator blank.
+     * 
+     * @return Specify the numerator of the fraction that represents the frame rate for your video generator input. When
+     *         you do, you must also specify a value for Frame rate denominator. MediaConvert uses a default frame rate
+     *         of 29.97 when you leave Frame rate numerator and Frame rate denominator blank.
+     */
+
+    public Integer getFramerateNumerator() {
+        return this.framerateNumerator;
+    }
+
+    /**
+     * Specify the numerator of the fraction that represents the frame rate for your video generator input. When you do,
+     * you must also specify a value for Frame rate denominator. MediaConvert uses a default frame rate of 29.97 when
+     * you leave Frame rate numerator and Frame rate denominator blank.
+     * 
+     * @param framerateNumerator
+     *        Specify the numerator of the fraction that represents the frame rate for your video generator input. When
+     *        you do, you must also specify a value for Frame rate denominator. MediaConvert uses a default frame rate
+     *        of 29.97 when you leave Frame rate numerator and Frame rate denominator blank.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InputVideoGenerator withFramerateNumerator(Integer framerateNumerator) {
+        setFramerateNumerator(framerateNumerator);
+        return this;
+    }
+
+    /**
+     * Specify the audio sample rate, in Hz, for the silent audio in your video generator input. Enter an integer from
+     * 32000 to 48000.
+     * 
+     * @param sampleRate
+     *        Specify the audio sample rate, in Hz, for the silent audio in your video generator input. Enter an integer
+     *        from 32000 to 48000.
+     */
+
+    public void setSampleRate(Integer sampleRate) {
+        this.sampleRate = sampleRate;
+    }
+
+    /**
+     * Specify the audio sample rate, in Hz, for the silent audio in your video generator input. Enter an integer from
+     * 32000 to 48000.
+     * 
+     * @return Specify the audio sample rate, in Hz, for the silent audio in your video generator input. Enter an
+     *         integer from 32000 to 48000.
+     */
+
+    public Integer getSampleRate() {
+        return this.sampleRate;
+    }
+
+    /**
+     * Specify the audio sample rate, in Hz, for the silent audio in your video generator input. Enter an integer from
+     * 32000 to 48000.
+     * 
+     * @param sampleRate
+     *        Specify the audio sample rate, in Hz, for the silent audio in your video generator input. Enter an integer
+     *        from 32000 to 48000.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InputVideoGenerator withSampleRate(Integer sampleRate) {
+        setSampleRate(sampleRate);
         return this;
     }
 
@@ -87,8 +277,16 @@ public class InputVideoGenerator implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getChannels() != null)
+            sb.append("Channels: ").append(getChannels()).append(",");
         if (getDuration() != null)
-            sb.append("Duration: ").append(getDuration());
+            sb.append("Duration: ").append(getDuration()).append(",");
+        if (getFramerateDenominator() != null)
+            sb.append("FramerateDenominator: ").append(getFramerateDenominator()).append(",");
+        if (getFramerateNumerator() != null)
+            sb.append("FramerateNumerator: ").append(getFramerateNumerator()).append(",");
+        if (getSampleRate() != null)
+            sb.append("SampleRate: ").append(getSampleRate());
         sb.append("}");
         return sb.toString();
     }
@@ -103,9 +301,25 @@ public class InputVideoGenerator implements Serializable, Cloneable, StructuredP
         if (obj instanceof InputVideoGenerator == false)
             return false;
         InputVideoGenerator other = (InputVideoGenerator) obj;
+        if (other.getChannels() == null ^ this.getChannels() == null)
+            return false;
+        if (other.getChannels() != null && other.getChannels().equals(this.getChannels()) == false)
+            return false;
         if (other.getDuration() == null ^ this.getDuration() == null)
             return false;
         if (other.getDuration() != null && other.getDuration().equals(this.getDuration()) == false)
+            return false;
+        if (other.getFramerateDenominator() == null ^ this.getFramerateDenominator() == null)
+            return false;
+        if (other.getFramerateDenominator() != null && other.getFramerateDenominator().equals(this.getFramerateDenominator()) == false)
+            return false;
+        if (other.getFramerateNumerator() == null ^ this.getFramerateNumerator() == null)
+            return false;
+        if (other.getFramerateNumerator() != null && other.getFramerateNumerator().equals(this.getFramerateNumerator()) == false)
+            return false;
+        if (other.getSampleRate() == null ^ this.getSampleRate() == null)
+            return false;
+        if (other.getSampleRate() != null && other.getSampleRate().equals(this.getSampleRate()) == false)
             return false;
         return true;
     }
@@ -115,7 +329,11 @@ public class InputVideoGenerator implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getChannels() == null) ? 0 : getChannels().hashCode());
         hashCode = prime * hashCode + ((getDuration() == null) ? 0 : getDuration().hashCode());
+        hashCode = prime * hashCode + ((getFramerateDenominator() == null) ? 0 : getFramerateDenominator().hashCode());
+        hashCode = prime * hashCode + ((getFramerateNumerator() == null) ? 0 : getFramerateNumerator().hashCode());
+        hashCode = prime * hashCode + ((getSampleRate() == null) ? 0 : getSampleRate().hashCode());
         return hashCode;
     }
 

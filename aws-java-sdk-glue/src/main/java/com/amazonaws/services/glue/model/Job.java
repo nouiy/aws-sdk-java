@@ -341,6 +341,12 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String maintenanceWindow;
+    /**
+     * <p>
+     * The name of an Glue usage profile associated with the job.
+     * </p>
+     */
+    private String profileName;
 
     /**
      * <p>
@@ -2623,6 +2629,46 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of an Glue usage profile associated with the job.
+     * </p>
+     * 
+     * @param profileName
+     *        The name of an Glue usage profile associated with the job.
+     */
+
+    public void setProfileName(String profileName) {
+        this.profileName = profileName;
+    }
+
+    /**
+     * <p>
+     * The name of an Glue usage profile associated with the job.
+     * </p>
+     * 
+     * @return The name of an Glue usage profile associated with the job.
+     */
+
+    public String getProfileName() {
+        return this.profileName;
+    }
+
+    /**
+     * <p>
+     * The name of an Glue usage profile associated with the job.
+     * </p>
+     * 
+     * @param profileName
+     *        The name of an Glue usage profile associated with the job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withProfileName(String profileName) {
+        setProfileName(profileName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2683,7 +2729,9 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         if (getSourceControlDetails() != null)
             sb.append("SourceControlDetails: ").append(getSourceControlDetails()).append(",");
         if (getMaintenanceWindow() != null)
-            sb.append("MaintenanceWindow: ").append(getMaintenanceWindow());
+            sb.append("MaintenanceWindow: ").append(getMaintenanceWindow()).append(",");
+        if (getProfileName() != null)
+            sb.append("ProfileName: ").append(getProfileName());
         sb.append("}");
         return sb.toString();
     }
@@ -2798,6 +2846,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMaintenanceWindow() != null && other.getMaintenanceWindow().equals(this.getMaintenanceWindow()) == false)
             return false;
+        if (other.getProfileName() == null ^ this.getProfileName() == null)
+            return false;
+        if (other.getProfileName() != null && other.getProfileName().equals(this.getProfileName()) == false)
+            return false;
         return true;
     }
 
@@ -2831,6 +2883,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getExecutionClass() == null) ? 0 : getExecutionClass().hashCode());
         hashCode = prime * hashCode + ((getSourceControlDetails() == null) ? 0 : getSourceControlDetails().hashCode());
         hashCode = prime * hashCode + ((getMaintenanceWindow() == null) ? 0 : getMaintenanceWindow().hashCode());
+        hashCode = prime * hashCode + ((getProfileName() == null) ? 0 : getProfileName().hashCode());
         return hashCode;
     }
 
