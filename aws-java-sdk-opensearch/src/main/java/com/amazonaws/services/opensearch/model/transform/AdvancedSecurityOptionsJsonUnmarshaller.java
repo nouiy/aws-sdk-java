@@ -60,6 +60,10 @@ public class AdvancedSecurityOptionsJsonUnmarshaller implements Unmarshaller<Adv
                     context.nextToken();
                     advancedSecurityOptions.setSAMLOptions(SAMLOptionsOutputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("JWTOptions", targetDepth)) {
+                    context.nextToken();
+                    advancedSecurityOptions.setJWTOptions(JWTOptionsOutputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("AnonymousAuthDisableDate", targetDepth)) {
                     context.nextToken();
                     advancedSecurityOptions.setAnonymousAuthDisableDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

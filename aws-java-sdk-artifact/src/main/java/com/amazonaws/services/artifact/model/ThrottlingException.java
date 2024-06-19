@@ -25,6 +25,12 @@ public class ThrottlingException extends com.amazonaws.services.artifact.model.A
 
     /**
      * <p>
+     * Code for the affected service.
+     * </p>
+     */
+    private String serviceCode;
+    /**
+     * <p>
      * Code for the affected quota.
      * </p>
      */
@@ -35,12 +41,6 @@ public class ThrottlingException extends com.amazonaws.services.artifact.model.A
      * </p>
      */
     private Integer retryAfterSeconds;
-    /**
-     * <p>
-     * Code for the affected service.
-     * </p>
-     */
-    private String serviceCode;
 
     /**
      * Constructs a new ThrottlingException with the specified error message.
@@ -50,6 +50,48 @@ public class ThrottlingException extends com.amazonaws.services.artifact.model.A
      */
     public ThrottlingException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * Code for the affected service.
+     * </p>
+     * 
+     * @param serviceCode
+     *        Code for the affected service.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    /**
+     * <p>
+     * Code for the affected service.
+     * </p>
+     * 
+     * @return Code for the affected service.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    /**
+     * <p>
+     * Code for the affected service.
+     * </p>
+     * 
+     * @param serviceCode
+     *        Code for the affected service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ThrottlingException withServiceCode(String serviceCode) {
+        setServiceCode(serviceCode);
+        return this;
     }
 
     /**
@@ -133,48 +175,6 @@ public class ThrottlingException extends com.amazonaws.services.artifact.model.A
 
     public ThrottlingException withRetryAfterSeconds(Integer retryAfterSeconds) {
         setRetryAfterSeconds(retryAfterSeconds);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Code for the affected service.
-     * </p>
-     * 
-     * @param serviceCode
-     *        Code for the affected service.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-    }
-
-    /**
-     * <p>
-     * Code for the affected service.
-     * </p>
-     * 
-     * @return Code for the affected service.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
-    public String getServiceCode() {
-        return this.serviceCode;
-    }
-
-    /**
-     * <p>
-     * Code for the affected service.
-     * </p>
-     * 
-     * @param serviceCode
-     *        Code for the affected service.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ThrottlingException withServiceCode(String serviceCode) {
-        setServiceCode(serviceCode);
         return this;
     }
 

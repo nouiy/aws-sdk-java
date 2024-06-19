@@ -43,7 +43,7 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
     private String description;
     /**
      * <p>
-     * The status of the data source response.
+     * The status of the data source.
      * </p>
      */
     private String status;
@@ -170,11 +170,11 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the data source response.
+     * The status of the data source.
      * </p>
      * 
      * @param status
-     *        The status of the data source response.
+     *        The status of the data source.
      * @see DataSourceStatus
      */
 
@@ -184,10 +184,10 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the data source response.
+     * The status of the data source.
      * </p>
      * 
-     * @return The status of the data source response.
+     * @return The status of the data source.
      * @see DataSourceStatus
      */
 
@@ -197,11 +197,11 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the data source response.
+     * The status of the data source.
      * </p>
      * 
      * @param status
-     *        The status of the data source response.
+     *        The status of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */
@@ -213,11 +213,11 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the data source response.
+     * The status of the data source.
      * </p>
      * 
      * @param status
-     *        The status of the data source response.
+     *        The status of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */

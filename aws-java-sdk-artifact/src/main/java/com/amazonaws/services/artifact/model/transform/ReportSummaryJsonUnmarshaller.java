@@ -48,9 +48,45 @@ public class ReportSummaryJsonUnmarshaller implements Unmarshaller<ReportSummary
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("id", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("name", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("state", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     reportSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("version", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setVersion(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("uploadState", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setUploadState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("periodStart", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setPeriodStart(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("periodEnd", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setPeriodEnd(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("series", targetDepth)) {
+                    context.nextToken();
+                    reportSummary.setSeries(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("category", targetDepth)) {
                     context.nextToken();
@@ -60,49 +96,17 @@ public class ReportSummaryJsonUnmarshaller implements Unmarshaller<ReportSummary
                     context.nextToken();
                     reportSummary.setCompanyName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("description", targetDepth)) {
-                    context.nextToken();
-                    reportSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("id", targetDepth)) {
-                    context.nextToken();
-                    reportSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("name", targetDepth)) {
-                    context.nextToken();
-                    reportSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("periodEnd", targetDepth)) {
-                    context.nextToken();
-                    reportSummary.setPeriodEnd(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("periodStart", targetDepth)) {
-                    context.nextToken();
-                    reportSummary.setPeriodStart(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("productName", targetDepth)) {
                     context.nextToken();
                     reportSummary.setProductName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("series", targetDepth)) {
-                    context.nextToken();
-                    reportSummary.setSeries(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("state", targetDepth)) {
-                    context.nextToken();
-                    reportSummary.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("statusMessage", targetDepth)) {
                     context.nextToken();
                     reportSummary.setStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("uploadState", targetDepth)) {
+                if (context.testExpression("acceptanceType", targetDepth)) {
                     context.nextToken();
-                    reportSummary.setUploadState(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("version", targetDepth)) {
-                    context.nextToken();
-                    reportSummary.setVersion(context.getUnmarshaller(Long.class).unmarshall(context));
+                    reportSummary.setAcceptanceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

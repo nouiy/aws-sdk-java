@@ -25,12 +25,6 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.artifa
 
     /**
      * <p>
-     * Code for the affected quota.
-     * </p>
-     */
-    private String quotaCode;
-    /**
-     * <p>
      * Identifier of the affected resource.
      * </p>
      */
@@ -47,6 +41,12 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.artifa
      * </p>
      */
     private String serviceCode;
+    /**
+     * <p>
+     * Code for the affected quota.
+     * </p>
+     */
+    private String quotaCode;
 
     /**
      * Constructs a new ServiceQuotaExceededException with the specified error message.
@@ -56,48 +56,6 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.artifa
      */
     public ServiceQuotaExceededException(String message) {
         super(message);
-    }
-
-    /**
-     * <p>
-     * Code for the affected quota.
-     * </p>
-     * 
-     * @param quotaCode
-     *        Code for the affected quota.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
-    public void setQuotaCode(String quotaCode) {
-        this.quotaCode = quotaCode;
-    }
-
-    /**
-     * <p>
-     * Code for the affected quota.
-     * </p>
-     * 
-     * @return Code for the affected quota.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
-    public String getQuotaCode() {
-        return this.quotaCode;
-    }
-
-    /**
-     * <p>
-     * Code for the affected quota.
-     * </p>
-     * 
-     * @param quotaCode
-     *        Code for the affected quota.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ServiceQuotaExceededException withQuotaCode(String quotaCode) {
-        setQuotaCode(quotaCode);
-        return this;
     }
 
     /**
@@ -223,6 +181,48 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.artifa
 
     public ServiceQuotaExceededException withServiceCode(String serviceCode) {
         setServiceCode(serviceCode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Code for the affected quota.
+     * </p>
+     * 
+     * @param quotaCode
+     *        Code for the affected quota.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
+    public void setQuotaCode(String quotaCode) {
+        this.quotaCode = quotaCode;
+    }
+
+    /**
+     * <p>
+     * Code for the affected quota.
+     * </p>
+     * 
+     * @return Code for the affected quota.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
+    public String getQuotaCode() {
+        return this.quotaCode;
+    }
+
+    /**
+     * <p>
+     * Code for the affected quota.
+     * </p>
+     * 
+     * @param quotaCode
+     *        Code for the affected quota.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ServiceQuotaExceededException withQuotaCode(String quotaCode) {
+        setQuotaCode(quotaCode);
         return this;
     }
 

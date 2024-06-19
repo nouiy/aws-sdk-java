@@ -30,10 +30,64 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Unique resource ID for the report resource.
+     * </p>
+     */
+    private String id;
+    /**
+     * <p>
+     * Name for the report resource.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * Current state of the report resource.
+     * </p>
+     */
+    private String state;
+    /**
+     * <p>
      * ARN for the report resource.
      * </p>
      */
     private String arn;
+    /**
+     * <p>
+     * Version for the report resource.
+     * </p>
+     */
+    private Long version;
+    /**
+     * <p>
+     * The current state of the document upload.
+     * </p>
+     */
+    private String uploadState;
+    /**
+     * <p>
+     * Description for the report resource.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * Timestamp indicating the report resource effective start.
+     * </p>
+     */
+    private java.util.Date periodStart;
+    /**
+     * <p>
+     * Timestamp indicating the report resource effective end.
+     * </p>
+     */
+    private java.util.Date periodEnd;
+    /**
+     * <p>
+     * Series for the report resource.
+     * </p>
+     */
+    private String series;
     /**
      * <p>
      * Category for the report resource.
@@ -48,52 +102,10 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
     private String companyName;
     /**
      * <p>
-     * Description for the report resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
-     * Unique resource ID for the report resource.
-     * </p>
-     */
-    private String id;
-    /**
-     * <p>
-     * Name for the report resource.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
-     * Timestamp indicating the report resource effective end.
-     * </p>
-     */
-    private java.util.Date periodEnd;
-    /**
-     * <p>
-     * Timestamp indicating the report resource effective start.
-     * </p>
-     */
-    private java.util.Date periodStart;
-    /**
-     * <p>
      * Associated product name for the report resource.
      * </p>
      */
     private String productName;
-    /**
-     * <p>
-     * Series for the report resource.
-     * </p>
-     */
-    private String series;
-    /**
-     * <p>
-     * Current state of the report resource.
-     * </p>
-     */
-    private String state;
     /**
      * <p>
      * The message associated with the current upload state.
@@ -102,16 +114,149 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
     private String statusMessage;
     /**
      * <p>
-     * The current state of the document upload.
+     * Acceptance type for report.
      * </p>
      */
-    private String uploadState;
+    private String acceptanceType;
+
     /**
      * <p>
-     * Version for the report resource.
+     * Unique resource ID for the report resource.
      * </p>
+     * 
+     * @param id
+     *        Unique resource ID for the report resource.
      */
-    private Long version;
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * <p>
+     * Unique resource ID for the report resource.
+     * </p>
+     * 
+     * @return Unique resource ID for the report resource.
+     */
+
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     * <p>
+     * Unique resource ID for the report resource.
+     * </p>
+     * 
+     * @param id
+     *        Unique resource ID for the report resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReportSummary withId(String id) {
+        setId(id);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Name for the report resource.
+     * </p>
+     * 
+     * @param name
+     *        Name for the report resource.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Name for the report resource.
+     * </p>
+     * 
+     * @return Name for the report resource.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Name for the report resource.
+     * </p>
+     * 
+     * @param name
+     *        Name for the report resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReportSummary withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Current state of the report resource.
+     * </p>
+     * 
+     * @param state
+     *        Current state of the report resource.
+     * @see PublishedState
+     */
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    /**
+     * <p>
+     * Current state of the report resource.
+     * </p>
+     * 
+     * @return Current state of the report resource.
+     * @see PublishedState
+     */
+
+    public String getState() {
+        return this.state;
+    }
+
+    /**
+     * <p>
+     * Current state of the report resource.
+     * </p>
+     * 
+     * @param state
+     *        Current state of the report resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PublishedState
+     */
+
+    public ReportSummary withState(String state) {
+        setState(state);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Current state of the report resource.
+     * </p>
+     * 
+     * @param state
+     *        Current state of the report resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PublishedState
+     */
+
+    public ReportSummary withState(PublishedState state) {
+        this.state = state.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -150,6 +295,265 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
 
     public ReportSummary withArn(String arn) {
         setArn(arn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Version for the report resource.
+     * </p>
+     * 
+     * @param version
+     *        Version for the report resource.
+     */
+
+    public void setVersion(Long version) {
+        this.version = version;
+    }
+
+    /**
+     * <p>
+     * Version for the report resource.
+     * </p>
+     * 
+     * @return Version for the report resource.
+     */
+
+    public Long getVersion() {
+        return this.version;
+    }
+
+    /**
+     * <p>
+     * Version for the report resource.
+     * </p>
+     * 
+     * @param version
+     *        Version for the report resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReportSummary withVersion(Long version) {
+        setVersion(version);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current state of the document upload.
+     * </p>
+     * 
+     * @param uploadState
+     *        The current state of the document upload.
+     * @see UploadState
+     */
+
+    public void setUploadState(String uploadState) {
+        this.uploadState = uploadState;
+    }
+
+    /**
+     * <p>
+     * The current state of the document upload.
+     * </p>
+     * 
+     * @return The current state of the document upload.
+     * @see UploadState
+     */
+
+    public String getUploadState() {
+        return this.uploadState;
+    }
+
+    /**
+     * <p>
+     * The current state of the document upload.
+     * </p>
+     * 
+     * @param uploadState
+     *        The current state of the document upload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UploadState
+     */
+
+    public ReportSummary withUploadState(String uploadState) {
+        setUploadState(uploadState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current state of the document upload.
+     * </p>
+     * 
+     * @param uploadState
+     *        The current state of the document upload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UploadState
+     */
+
+    public ReportSummary withUploadState(UploadState uploadState) {
+        this.uploadState = uploadState.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Description for the report resource.
+     * </p>
+     * 
+     * @param description
+     *        Description for the report resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Description for the report resource.
+     * </p>
+     * 
+     * @return Description for the report resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Description for the report resource.
+     * </p>
+     * 
+     * @param description
+     *        Description for the report resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReportSummary withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Timestamp indicating the report resource effective start.
+     * </p>
+     * 
+     * @param periodStart
+     *        Timestamp indicating the report resource effective start.
+     */
+
+    public void setPeriodStart(java.util.Date periodStart) {
+        this.periodStart = periodStart;
+    }
+
+    /**
+     * <p>
+     * Timestamp indicating the report resource effective start.
+     * </p>
+     * 
+     * @return Timestamp indicating the report resource effective start.
+     */
+
+    public java.util.Date getPeriodStart() {
+        return this.periodStart;
+    }
+
+    /**
+     * <p>
+     * Timestamp indicating the report resource effective start.
+     * </p>
+     * 
+     * @param periodStart
+     *        Timestamp indicating the report resource effective start.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReportSummary withPeriodStart(java.util.Date periodStart) {
+        setPeriodStart(periodStart);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Timestamp indicating the report resource effective end.
+     * </p>
+     * 
+     * @param periodEnd
+     *        Timestamp indicating the report resource effective end.
+     */
+
+    public void setPeriodEnd(java.util.Date periodEnd) {
+        this.periodEnd = periodEnd;
+    }
+
+    /**
+     * <p>
+     * Timestamp indicating the report resource effective end.
+     * </p>
+     * 
+     * @return Timestamp indicating the report resource effective end.
+     */
+
+    public java.util.Date getPeriodEnd() {
+        return this.periodEnd;
+    }
+
+    /**
+     * <p>
+     * Timestamp indicating the report resource effective end.
+     * </p>
+     * 
+     * @param periodEnd
+     *        Timestamp indicating the report resource effective end.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReportSummary withPeriodEnd(java.util.Date periodEnd) {
+        setPeriodEnd(periodEnd);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Series for the report resource.
+     * </p>
+     * 
+     * @param series
+     *        Series for the report resource.
+     */
+
+    public void setSeries(String series) {
+        this.series = series;
+    }
+
+    /**
+     * <p>
+     * Series for the report resource.
+     * </p>
+     * 
+     * @return Series for the report resource.
+     */
+
+    public String getSeries() {
+        return this.series;
+    }
+
+    /**
+     * <p>
+     * Series for the report resource.
+     * </p>
+     * 
+     * @param series
+     *        Series for the report resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReportSummary withSeries(String series) {
+        setSeries(series);
         return this;
     }
 
@@ -235,206 +639,6 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Description for the report resource.
-     * </p>
-     * 
-     * @param description
-     *        Description for the report resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * Description for the report resource.
-     * </p>
-     * 
-     * @return Description for the report resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * Description for the report resource.
-     * </p>
-     * 
-     * @param description
-     *        Description for the report resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReportSummary withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Unique resource ID for the report resource.
-     * </p>
-     * 
-     * @param id
-     *        Unique resource ID for the report resource.
-     */
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    /**
-     * <p>
-     * Unique resource ID for the report resource.
-     * </p>
-     * 
-     * @return Unique resource ID for the report resource.
-     */
-
-    public String getId() {
-        return this.id;
-    }
-
-    /**
-     * <p>
-     * Unique resource ID for the report resource.
-     * </p>
-     * 
-     * @param id
-     *        Unique resource ID for the report resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReportSummary withId(String id) {
-        setId(id);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Name for the report resource.
-     * </p>
-     * 
-     * @param name
-     *        Name for the report resource.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * Name for the report resource.
-     * </p>
-     * 
-     * @return Name for the report resource.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * Name for the report resource.
-     * </p>
-     * 
-     * @param name
-     *        Name for the report resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReportSummary withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Timestamp indicating the report resource effective end.
-     * </p>
-     * 
-     * @param periodEnd
-     *        Timestamp indicating the report resource effective end.
-     */
-
-    public void setPeriodEnd(java.util.Date periodEnd) {
-        this.periodEnd = periodEnd;
-    }
-
-    /**
-     * <p>
-     * Timestamp indicating the report resource effective end.
-     * </p>
-     * 
-     * @return Timestamp indicating the report resource effective end.
-     */
-
-    public java.util.Date getPeriodEnd() {
-        return this.periodEnd;
-    }
-
-    /**
-     * <p>
-     * Timestamp indicating the report resource effective end.
-     * </p>
-     * 
-     * @param periodEnd
-     *        Timestamp indicating the report resource effective end.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReportSummary withPeriodEnd(java.util.Date periodEnd) {
-        setPeriodEnd(periodEnd);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Timestamp indicating the report resource effective start.
-     * </p>
-     * 
-     * @param periodStart
-     *        Timestamp indicating the report resource effective start.
-     */
-
-    public void setPeriodStart(java.util.Date periodStart) {
-        this.periodStart = periodStart;
-    }
-
-    /**
-     * <p>
-     * Timestamp indicating the report resource effective start.
-     * </p>
-     * 
-     * @return Timestamp indicating the report resource effective start.
-     */
-
-    public java.util.Date getPeriodStart() {
-        return this.periodStart;
-    }
-
-    /**
-     * <p>
-     * Timestamp indicating the report resource effective start.
-     * </p>
-     * 
-     * @param periodStart
-     *        Timestamp indicating the report resource effective start.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReportSummary withPeriodStart(java.util.Date periodStart) {
-        setPeriodStart(periodStart);
-        return this;
-    }
-
-    /**
-     * <p>
      * Associated product name for the report resource.
      * </p>
      * 
@@ -470,105 +674,6 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
 
     public ReportSummary withProductName(String productName) {
         setProductName(productName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Series for the report resource.
-     * </p>
-     * 
-     * @param series
-     *        Series for the report resource.
-     */
-
-    public void setSeries(String series) {
-        this.series = series;
-    }
-
-    /**
-     * <p>
-     * Series for the report resource.
-     * </p>
-     * 
-     * @return Series for the report resource.
-     */
-
-    public String getSeries() {
-        return this.series;
-    }
-
-    /**
-     * <p>
-     * Series for the report resource.
-     * </p>
-     * 
-     * @param series
-     *        Series for the report resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReportSummary withSeries(String series) {
-        setSeries(series);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Current state of the report resource.
-     * </p>
-     * 
-     * @param state
-     *        Current state of the report resource.
-     * @see PublishedState
-     */
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    /**
-     * <p>
-     * Current state of the report resource.
-     * </p>
-     * 
-     * @return Current state of the report resource.
-     * @see PublishedState
-     */
-
-    public String getState() {
-        return this.state;
-    }
-
-    /**
-     * <p>
-     * Current state of the report resource.
-     * </p>
-     * 
-     * @param state
-     *        Current state of the report resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PublishedState
-     */
-
-    public ReportSummary withState(String state) {
-        setState(state);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Current state of the report resource.
-     * </p>
-     * 
-     * @param state
-     *        Current state of the report resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PublishedState
-     */
-
-    public ReportSummary withState(PublishedState state) {
-        this.state = state.toString();
         return this;
     }
 
@@ -614,100 +719,60 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current state of the document upload.
+     * Acceptance type for report.
      * </p>
      * 
-     * @param uploadState
-     *        The current state of the document upload.
-     * @see UploadState
+     * @param acceptanceType
+     *        Acceptance type for report.
+     * @see AcceptanceType
      */
 
-    public void setUploadState(String uploadState) {
-        this.uploadState = uploadState;
+    public void setAcceptanceType(String acceptanceType) {
+        this.acceptanceType = acceptanceType;
     }
 
     /**
      * <p>
-     * The current state of the document upload.
+     * Acceptance type for report.
      * </p>
      * 
-     * @return The current state of the document upload.
-     * @see UploadState
+     * @return Acceptance type for report.
+     * @see AcceptanceType
      */
 
-    public String getUploadState() {
-        return this.uploadState;
+    public String getAcceptanceType() {
+        return this.acceptanceType;
     }
 
     /**
      * <p>
-     * The current state of the document upload.
+     * Acceptance type for report.
      * </p>
      * 
-     * @param uploadState
-     *        The current state of the document upload.
+     * @param acceptanceType
+     *        Acceptance type for report.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see UploadState
+     * @see AcceptanceType
      */
 
-    public ReportSummary withUploadState(String uploadState) {
-        setUploadState(uploadState);
+    public ReportSummary withAcceptanceType(String acceptanceType) {
+        setAcceptanceType(acceptanceType);
         return this;
     }
 
     /**
      * <p>
-     * The current state of the document upload.
+     * Acceptance type for report.
      * </p>
      * 
-     * @param uploadState
-     *        The current state of the document upload.
+     * @param acceptanceType
+     *        Acceptance type for report.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see UploadState
+     * @see AcceptanceType
      */
 
-    public ReportSummary withUploadState(UploadState uploadState) {
-        this.uploadState = uploadState.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * Version for the report resource.
-     * </p>
-     * 
-     * @param version
-     *        Version for the report resource.
-     */
-
-    public void setVersion(Long version) {
-        this.version = version;
-    }
-
-    /**
-     * <p>
-     * Version for the report resource.
-     * </p>
-     * 
-     * @return Version for the report resource.
-     */
-
-    public Long getVersion() {
-        return this.version;
-    }
-
-    /**
-     * <p>
-     * Version for the report resource.
-     * </p>
-     * 
-     * @param version
-     *        Version for the report resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReportSummary withVersion(Long version) {
-        setVersion(version);
+    public ReportSummary withAcceptanceType(AcceptanceType acceptanceType) {
+        this.acceptanceType = acceptanceType.toString();
         return this;
     }
 
@@ -723,34 +788,36 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getArn() != null)
-            sb.append("Arn: ").append(getArn()).append(",");
-        if (getCategory() != null)
-            sb.append("Category: ").append(getCategory()).append(",");
-        if (getCompanyName() != null)
-            sb.append("CompanyName: ").append(getCompanyName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getPeriodEnd() != null)
-            sb.append("PeriodEnd: ").append(getPeriodEnd()).append(",");
-        if (getPeriodStart() != null)
-            sb.append("PeriodStart: ").append(getPeriodStart()).append(",");
-        if (getProductName() != null)
-            sb.append("ProductName: ").append(getProductName()).append(",");
-        if (getSeries() != null)
-            sb.append("Series: ").append(getSeries()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
-        if (getStatusMessage() != null)
-            sb.append("StatusMessage: ").append(getStatusMessage()).append(",");
+        if (getArn() != null)
+            sb.append("Arn: ").append(getArn()).append(",");
+        if (getVersion() != null)
+            sb.append("Version: ").append(getVersion()).append(",");
         if (getUploadState() != null)
             sb.append("UploadState: ").append(getUploadState()).append(",");
-        if (getVersion() != null)
-            sb.append("Version: ").append(getVersion());
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getPeriodStart() != null)
+            sb.append("PeriodStart: ").append(getPeriodStart()).append(",");
+        if (getPeriodEnd() != null)
+            sb.append("PeriodEnd: ").append(getPeriodEnd()).append(",");
+        if (getSeries() != null)
+            sb.append("Series: ").append(getSeries()).append(",");
+        if (getCategory() != null)
+            sb.append("Category: ").append(getCategory()).append(",");
+        if (getCompanyName() != null)
+            sb.append("CompanyName: ").append(getCompanyName()).append(",");
+        if (getProductName() != null)
+            sb.append("ProductName: ").append(getProductName()).append(",");
+        if (getStatusMessage() != null)
+            sb.append("StatusMessage: ").append(getStatusMessage()).append(",");
+        if (getAcceptanceType() != null)
+            sb.append("AcceptanceType: ").append(getAcceptanceType());
         sb.append("}");
         return sb.toString();
     }
@@ -765,9 +832,45 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof ReportSummary == false)
             return false;
         ReportSummary other = (ReportSummary) obj;
+        if (other.getId() == null ^ this.getId() == null)
+            return false;
+        if (other.getId() != null && other.getId().equals(this.getId()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getState() == null ^ this.getState() == null)
+            return false;
+        if (other.getState() != null && other.getState().equals(this.getState()) == false)
+            return false;
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
+        if (other.getVersion() == null ^ this.getVersion() == null)
+            return false;
+        if (other.getVersion() != null && other.getVersion().equals(this.getVersion()) == false)
+            return false;
+        if (other.getUploadState() == null ^ this.getUploadState() == null)
+            return false;
+        if (other.getUploadState() != null && other.getUploadState().equals(this.getUploadState()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getPeriodStart() == null ^ this.getPeriodStart() == null)
+            return false;
+        if (other.getPeriodStart() != null && other.getPeriodStart().equals(this.getPeriodStart()) == false)
+            return false;
+        if (other.getPeriodEnd() == null ^ this.getPeriodEnd() == null)
+            return false;
+        if (other.getPeriodEnd() != null && other.getPeriodEnd().equals(this.getPeriodEnd()) == false)
+            return false;
+        if (other.getSeries() == null ^ this.getSeries() == null)
+            return false;
+        if (other.getSeries() != null && other.getSeries().equals(this.getSeries()) == false)
             return false;
         if (other.getCategory() == null ^ this.getCategory() == null)
             return false;
@@ -777,49 +880,17 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCompanyName() != null && other.getCompanyName().equals(this.getCompanyName()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getId() == null ^ this.getId() == null)
-            return false;
-        if (other.getId() != null && other.getId().equals(this.getId()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getPeriodEnd() == null ^ this.getPeriodEnd() == null)
-            return false;
-        if (other.getPeriodEnd() != null && other.getPeriodEnd().equals(this.getPeriodEnd()) == false)
-            return false;
-        if (other.getPeriodStart() == null ^ this.getPeriodStart() == null)
-            return false;
-        if (other.getPeriodStart() != null && other.getPeriodStart().equals(this.getPeriodStart()) == false)
-            return false;
         if (other.getProductName() == null ^ this.getProductName() == null)
             return false;
         if (other.getProductName() != null && other.getProductName().equals(this.getProductName()) == false)
-            return false;
-        if (other.getSeries() == null ^ this.getSeries() == null)
-            return false;
-        if (other.getSeries() != null && other.getSeries().equals(this.getSeries()) == false)
-            return false;
-        if (other.getState() == null ^ this.getState() == null)
-            return false;
-        if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
         if (other.getStatusMessage() == null ^ this.getStatusMessage() == null)
             return false;
         if (other.getStatusMessage() != null && other.getStatusMessage().equals(this.getStatusMessage()) == false)
             return false;
-        if (other.getUploadState() == null ^ this.getUploadState() == null)
+        if (other.getAcceptanceType() == null ^ this.getAcceptanceType() == null)
             return false;
-        if (other.getUploadState() != null && other.getUploadState().equals(this.getUploadState()) == false)
-            return false;
-        if (other.getVersion() == null ^ this.getVersion() == null)
-            return false;
-        if (other.getVersion() != null && other.getVersion().equals(this.getVersion()) == false)
+        if (other.getAcceptanceType() != null && other.getAcceptanceType().equals(this.getAcceptanceType()) == false)
             return false;
         return true;
     }
@@ -829,20 +900,21 @@ public class ReportSummary implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getCategory() == null) ? 0 : getCategory().hashCode());
-        hashCode = prime * hashCode + ((getCompanyName() == null) ? 0 : getCompanyName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getPeriodEnd() == null) ? 0 : getPeriodEnd().hashCode());
-        hashCode = prime * hashCode + ((getPeriodStart() == null) ? 0 : getPeriodStart().hashCode());
-        hashCode = prime * hashCode + ((getProductName() == null) ? 0 : getProductName().hashCode());
-        hashCode = prime * hashCode + ((getSeries() == null) ? 0 : getSeries().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
-        hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
-        hashCode = prime * hashCode + ((getUploadState() == null) ? 0 : getUploadState().hashCode());
+        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
+        hashCode = prime * hashCode + ((getUploadState() == null) ? 0 : getUploadState().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getPeriodStart() == null) ? 0 : getPeriodStart().hashCode());
+        hashCode = prime * hashCode + ((getPeriodEnd() == null) ? 0 : getPeriodEnd().hashCode());
+        hashCode = prime * hashCode + ((getSeries() == null) ? 0 : getSeries().hashCode());
+        hashCode = prime * hashCode + ((getCategory() == null) ? 0 : getCategory().hashCode());
+        hashCode = prime * hashCode + ((getCompanyName() == null) ? 0 : getCompanyName().hashCode());
+        hashCode = prime * hashCode + ((getProductName() == null) ? 0 : getProductName().hashCode());
+        hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
+        hashCode = prime * hashCode + ((getAcceptanceType() == null) ? 0 : getAcceptanceType().hashCode());
         return hashCode;
     }
 

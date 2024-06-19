@@ -45,6 +45,12 @@ public class AdvancedSecurityOptions implements Serializable, Cloneable, Structu
     private SAMLOptionsOutput sAMLOptions;
     /**
      * <p>
+     * Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     * </p>
+     */
+    private JWTOptionsOutput jWTOptions;
+    /**
+     * <p>
      * Date and time when the migration period will be disabled. Only necessary when <a
      * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/fgac.html#fgac-enabling-existing"
      * >enabling fine-grained access control on an existing domain</a>.
@@ -207,6 +213,46 @@ public class AdvancedSecurityOptions implements Serializable, Cloneable, Structu
 
     /**
      * <p>
+     * Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     * </p>
+     * 
+     * @param jWTOptions
+     *        Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     */
+
+    public void setJWTOptions(JWTOptionsOutput jWTOptions) {
+        this.jWTOptions = jWTOptions;
+    }
+
+    /**
+     * <p>
+     * Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     * </p>
+     * 
+     * @return Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     */
+
+    public JWTOptionsOutput getJWTOptions() {
+        return this.jWTOptions;
+    }
+
+    /**
+     * <p>
+     * Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     * </p>
+     * 
+     * @param jWTOptions
+     *        Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AdvancedSecurityOptions withJWTOptions(JWTOptionsOutput jWTOptions) {
+        setJWTOptions(jWTOptions);
+        return this;
+    }
+
+    /**
+     * <p>
      * Date and time when the migration period will be disabled. Only necessary when <a
      * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/fgac.html#fgac-enabling-existing"
      * >enabling fine-grained access control on an existing domain</a>.
@@ -351,6 +397,8 @@ public class AdvancedSecurityOptions implements Serializable, Cloneable, Structu
             sb.append("InternalUserDatabaseEnabled: ").append(getInternalUserDatabaseEnabled()).append(",");
         if (getSAMLOptions() != null)
             sb.append("SAMLOptions: ").append(getSAMLOptions()).append(",");
+        if (getJWTOptions() != null)
+            sb.append("JWTOptions: ").append(getJWTOptions()).append(",");
         if (getAnonymousAuthDisableDate() != null)
             sb.append("AnonymousAuthDisableDate: ").append(getAnonymousAuthDisableDate()).append(",");
         if (getAnonymousAuthEnabled() != null)
@@ -381,6 +429,10 @@ public class AdvancedSecurityOptions implements Serializable, Cloneable, Structu
             return false;
         if (other.getSAMLOptions() != null && other.getSAMLOptions().equals(this.getSAMLOptions()) == false)
             return false;
+        if (other.getJWTOptions() == null ^ this.getJWTOptions() == null)
+            return false;
+        if (other.getJWTOptions() != null && other.getJWTOptions().equals(this.getJWTOptions()) == false)
+            return false;
         if (other.getAnonymousAuthDisableDate() == null ^ this.getAnonymousAuthDisableDate() == null)
             return false;
         if (other.getAnonymousAuthDisableDate() != null && other.getAnonymousAuthDisableDate().equals(this.getAnonymousAuthDisableDate()) == false)
@@ -400,6 +452,7 @@ public class AdvancedSecurityOptions implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
         hashCode = prime * hashCode + ((getInternalUserDatabaseEnabled() == null) ? 0 : getInternalUserDatabaseEnabled().hashCode());
         hashCode = prime * hashCode + ((getSAMLOptions() == null) ? 0 : getSAMLOptions().hashCode());
+        hashCode = prime * hashCode + ((getJWTOptions() == null) ? 0 : getJWTOptions().hashCode());
         hashCode = prime * hashCode + ((getAnonymousAuthDisableDate() == null) ? 0 : getAnonymousAuthDisableDate().hashCode());
         hashCode = prime * hashCode + ((getAnonymousAuthEnabled() == null) ? 0 : getAnonymousAuthEnabled().hashCode());
         return hashCode;

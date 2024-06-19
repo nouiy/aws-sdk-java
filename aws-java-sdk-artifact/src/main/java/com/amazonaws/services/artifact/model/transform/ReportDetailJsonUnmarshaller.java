@@ -48,13 +48,49 @@ public class ReportDetailJsonUnmarshaller implements Unmarshaller<ReportDetail, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("acceptanceType", targetDepth)) {
+                if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
-                    reportDetail.setAcceptanceType(context.getUnmarshaller(String.class).unmarshall(context));
+                    reportDetail.setId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("name", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("periodStart", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setPeriodStart(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("periodEnd", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setPeriodEnd(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("lastModifiedAt", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setLastModifiedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("deletedAt", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setDeletedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("state", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     reportDetail.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("series", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setSeries(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("category", targetDepth)) {
                     context.nextToken();
@@ -64,69 +100,33 @@ public class ReportDetailJsonUnmarshaller implements Unmarshaller<ReportDetail, 
                     context.nextToken();
                     reportDetail.setCompanyName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createdAt", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("deletedAt", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setDeletedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("description", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("id", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("lastModifiedAt", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setLastModifiedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("name", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("periodEnd", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setPeriodEnd(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("periodStart", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setPeriodStart(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("productName", targetDepth)) {
                     context.nextToken();
                     reportDetail.setProductName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("sequenceNumber", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setSequenceNumber(context.getUnmarshaller(Long.class).unmarshall(context));
-                }
-                if (context.testExpression("series", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setSeries(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("state", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setState(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("statusMessage", targetDepth)) {
-                    context.nextToken();
-                    reportDetail.setStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("termArn", targetDepth)) {
                     context.nextToken();
                     reportDetail.setTermArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("version", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setVersion(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("acceptanceType", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setAcceptanceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("sequenceNumber", targetDepth)) {
+                    context.nextToken();
+                    reportDetail.setSequenceNumber(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("uploadState", targetDepth)) {
                     context.nextToken();
                     reportDetail.setUploadState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("version", targetDepth)) {
+                if (context.testExpression("statusMessage", targetDepth)) {
                     context.nextToken();
-                    reportDetail.setVersion(context.getUnmarshaller(Long.class).unmarshall(context));
+                    reportDetail.setStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

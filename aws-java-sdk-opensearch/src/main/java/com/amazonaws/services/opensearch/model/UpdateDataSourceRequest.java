@@ -51,7 +51,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String description;
     /**
      * <p>
-     * The status of the data source update request.
+     * The status of the data source update.
      * </p>
      */
     private String status;
@@ -218,11 +218,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The status of the data source update request.
+     * The status of the data source update.
      * </p>
      * 
      * @param status
-     *        The status of the data source update request.
+     *        The status of the data source update.
      * @see DataSourceStatus
      */
 
@@ -232,10 +232,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The status of the data source update request.
+     * The status of the data source update.
      * </p>
      * 
-     * @return The status of the data source update request.
+     * @return The status of the data source update.
      * @see DataSourceStatus
      */
 
@@ -245,11 +245,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The status of the data source update request.
+     * The status of the data source update.
      * </p>
      * 
      * @param status
-     *        The status of the data source update request.
+     *        The status of the data source update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */
@@ -261,11 +261,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The status of the data source update request.
+     * The status of the data source update.
      * </p>
      * 
      * @param status
-     *        The status of the data source update request.
+     *        The status of the data source update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */

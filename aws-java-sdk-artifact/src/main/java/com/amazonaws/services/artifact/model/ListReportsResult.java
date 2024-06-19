@@ -25,56 +25,16 @@ public class ListReportsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Pagination token to request the next page of resources.
-     * </p>
-     */
-    private String nextToken;
-    /**
-     * <p>
      * List of report resources.
      * </p>
      */
     private java.util.List<ReportSummary> reports;
-
     /**
      * <p>
      * Pagination token to request the next page of resources.
      * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to request the next page of resources.
      */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * Pagination token to request the next page of resources.
-     * </p>
-     * 
-     * @return Pagination token to request the next page of resources.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Pagination token to request the next page of resources.
-     * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to request the next page of resources.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListReportsResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
+    private String nextToken;
 
     /**
      * <p>
@@ -147,6 +107,46 @@ public class ListReportsResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * Pagination token to request the next page of resources.
+     * </p>
+     * 
+     * @param nextToken
+     *        Pagination token to request the next page of resources.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * Pagination token to request the next page of resources.
+     * </p>
+     * 
+     * @return Pagination token to request the next page of resources.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * Pagination token to request the next page of resources.
+     * </p>
+     * 
+     * @param nextToken
+     *        Pagination token to request the next page of resources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListReportsResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -158,10 +158,10 @@ public class ListReportsResult extends com.amazonaws.AmazonWebServiceResult<com.
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getReports() != null)
-            sb.append("Reports: ").append(getReports());
+            sb.append("Reports: ").append(getReports()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -176,13 +176,13 @@ public class ListReportsResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (obj instanceof ListReportsResult == false)
             return false;
         ListReportsResult other = (ListReportsResult) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getReports() == null ^ this.getReports() == null)
             return false;
         if (other.getReports() != null && other.getReports().equals(this.getReports()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -192,8 +192,8 @@ public class ListReportsResult extends com.amazonaws.AmazonWebServiceResult<com.
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getReports() == null) ? 0 : getReports().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

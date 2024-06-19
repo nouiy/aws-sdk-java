@@ -64,6 +64,10 @@ public class AdvancedSecurityOptionsInputJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     advancedSecurityOptionsInput.setSAMLOptions(SAMLOptionsInputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("JWTOptions", targetDepth)) {
+                    context.nextToken();
+                    advancedSecurityOptionsInput.setJWTOptions(JWTOptionsInputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("AnonymousAuthEnabled", targetDepth)) {
                     context.nextToken();
                     advancedSecurityOptionsInput.setAnonymousAuthEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
