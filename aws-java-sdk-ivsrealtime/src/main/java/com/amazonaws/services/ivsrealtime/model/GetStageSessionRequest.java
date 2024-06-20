@@ -27,56 +27,16 @@ public class GetStageSessionRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * ID of a session within the stage.
-     * </p>
-     */
-    private String sessionId;
-    /**
-     * <p>
      * ARN of the stage for which the information is to be retrieved.
      * </p>
      */
     private String stageArn;
-
     /**
      * <p>
      * ID of a session within the stage.
      * </p>
-     * 
-     * @param sessionId
-     *        ID of a session within the stage.
      */
-
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-    }
-
-    /**
-     * <p>
-     * ID of a session within the stage.
-     * </p>
-     * 
-     * @return ID of a session within the stage.
-     */
-
-    public String getSessionId() {
-        return this.sessionId;
-    }
-
-    /**
-     * <p>
-     * ID of a session within the stage.
-     * </p>
-     * 
-     * @param sessionId
-     *        ID of a session within the stage.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetStageSessionRequest withSessionId(String sessionId) {
-        setSessionId(sessionId);
-        return this;
-    }
+    private String sessionId;
 
     /**
      * <p>
@@ -119,6 +79,46 @@ public class GetStageSessionRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * ID of a session within the stage.
+     * </p>
+     * 
+     * @param sessionId
+     *        ID of a session within the stage.
+     */
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
+
+    /**
+     * <p>
+     * ID of a session within the stage.
+     * </p>
+     * 
+     * @return ID of a session within the stage.
+     */
+
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
+     * <p>
+     * ID of a session within the stage.
+     * </p>
+     * 
+     * @param sessionId
+     *        ID of a session within the stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetStageSessionRequest withSessionId(String sessionId) {
+        setSessionId(sessionId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -130,10 +130,10 @@ public class GetStageSessionRequest extends com.amazonaws.AmazonWebServiceReques
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getSessionId() != null)
-            sb.append("SessionId: ").append(getSessionId()).append(",");
         if (getStageArn() != null)
-            sb.append("StageArn: ").append(getStageArn());
+            sb.append("StageArn: ").append(getStageArn()).append(",");
+        if (getSessionId() != null)
+            sb.append("SessionId: ").append(getSessionId());
         sb.append("}");
         return sb.toString();
     }
@@ -148,13 +148,13 @@ public class GetStageSessionRequest extends com.amazonaws.AmazonWebServiceReques
         if (obj instanceof GetStageSessionRequest == false)
             return false;
         GetStageSessionRequest other = (GetStageSessionRequest) obj;
-        if (other.getSessionId() == null ^ this.getSessionId() == null)
-            return false;
-        if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
-            return false;
         if (other.getStageArn() == null ^ this.getStageArn() == null)
             return false;
         if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
+            return false;
+        if (other.getSessionId() == null ^ this.getSessionId() == null)
+            return false;
+        if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
             return false;
         return true;
     }
@@ -164,8 +164,8 @@ public class GetStageSessionRequest extends com.amazonaws.AmazonWebServiceReques
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         hashCode = prime * hashCode + ((getStageArn() == null) ? 0 : getStageArn().hashCode());
+        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         return hashCode;
     }
 

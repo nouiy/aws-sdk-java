@@ -28,10 +28,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ResourceCostCalculationMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> PRICING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pricing").build();
     private static final MarshallingInfo<List> USAGES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("usages").build();
+    private static final MarshallingInfo<StructuredPojo> PRICING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pricing").build();
 
     private static final ResourceCostCalculationMarshaller instance = new ResourceCostCalculationMarshaller();
 
@@ -49,8 +49,8 @@ public class ResourceCostCalculationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(resourceCostCalculation.getPricing(), PRICING_BINDING);
             protocolMarshaller.marshall(resourceCostCalculation.getUsages(), USAGES_BINDING);
+            protocolMarshaller.marshall(resourceCostCalculation.getPricing(), PRICING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

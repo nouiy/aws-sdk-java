@@ -48,22 +48,30 @@ public class ParticipantJsonUnmarshaller implements Unmarshaller<Participant, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("participantId", targetDepth)) {
+                    context.nextToken();
+                    participant.setParticipantId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("userId", targetDepth)) {
+                    context.nextToken();
+                    participant.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("state", targetDepth)) {
+                    context.nextToken();
+                    participant.setState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("firstJoinTime", targetDepth)) {
+                    context.nextToken();
+                    participant.setFirstJoinTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("attributes", targetDepth)) {
                     context.nextToken();
                     participant.setAttributes(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
-                if (context.testExpression("browserName", targetDepth)) {
+                if (context.testExpression("published", targetDepth)) {
                     context.nextToken();
-                    participant.setBrowserName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("browserVersion", targetDepth)) {
-                    context.nextToken();
-                    participant.setBrowserVersion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("firstJoinTime", targetDepth)) {
-                    context.nextToken();
-                    participant.setFirstJoinTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    participant.setPublished(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("ispName", targetDepth)) {
                     context.nextToken();
@@ -77,25 +85,29 @@ public class ParticipantJsonUnmarshaller implements Unmarshaller<Participant, Js
                     context.nextToken();
                     participant.setOsVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("participantId", targetDepth)) {
+                if (context.testExpression("browserName", targetDepth)) {
                     context.nextToken();
-                    participant.setParticipantId(context.getUnmarshaller(String.class).unmarshall(context));
+                    participant.setBrowserName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("published", targetDepth)) {
+                if (context.testExpression("browserVersion", targetDepth)) {
                     context.nextToken();
-                    participant.setPublished(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    participant.setBrowserVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("sdkVersion", targetDepth)) {
                     context.nextToken();
                     participant.setSdkVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("state", targetDepth)) {
+                if (context.testExpression("recordingS3BucketName", targetDepth)) {
                     context.nextToken();
-                    participant.setState(context.getUnmarshaller(String.class).unmarshall(context));
+                    participant.setRecordingS3BucketName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("userId", targetDepth)) {
+                if (context.testExpression("recordingS3Prefix", targetDepth)) {
                     context.nextToken();
-                    participant.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
+                    participant.setRecordingS3Prefix(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("recordingState", targetDepth)) {
+                    context.nextToken();
+                    participant.setRecordingState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

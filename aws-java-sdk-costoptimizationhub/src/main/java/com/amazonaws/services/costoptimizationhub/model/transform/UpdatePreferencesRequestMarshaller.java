@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdatePreferencesRequestMarshaller {
 
-    private static final MarshallingInfo<String> MEMBERACCOUNTDISCOUNTVISIBILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memberAccountDiscountVisibility").build();
     private static final MarshallingInfo<String> SAVINGSESTIMATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsEstimationMode").build();
+    private static final MarshallingInfo<String> MEMBERACCOUNTDISCOUNTVISIBILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memberAccountDiscountVisibility").build();
 
     private static final UpdatePreferencesRequestMarshaller instance = new UpdatePreferencesRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class UpdatePreferencesRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updatePreferencesRequest.getMemberAccountDiscountVisibility(), MEMBERACCOUNTDISCOUNTVISIBILITY_BINDING);
             protocolMarshaller.marshall(updatePreferencesRequest.getSavingsEstimationMode(), SAVINGSESTIMATIONMODE_BINDING);
+            protocolMarshaller.marshall(updatePreferencesRequest.getMemberAccountDiscountVisibility(), MEMBERACCOUNTDISCOUNTVISIBILITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

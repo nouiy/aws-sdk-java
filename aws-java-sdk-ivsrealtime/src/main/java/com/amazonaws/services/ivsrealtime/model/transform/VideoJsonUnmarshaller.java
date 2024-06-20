@@ -48,21 +48,21 @@ public class VideoJsonUnmarshaller implements Unmarshaller<Video, JsonUnmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("bitrate", targetDepth)) {
+                if (context.testExpression("width", targetDepth)) {
                     context.nextToken();
-                    video.setBitrate(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("framerate", targetDepth)) {
-                    context.nextToken();
-                    video.setFramerate(context.getUnmarshaller(Float.class).unmarshall(context));
+                    video.setWidth(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("height", targetDepth)) {
                     context.nextToken();
                     video.setHeight(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
-                if (context.testExpression("width", targetDepth)) {
+                if (context.testExpression("framerate", targetDepth)) {
                     context.nextToken();
-                    video.setWidth(context.getUnmarshaller(Integer.class).unmarshall(context));
+                    video.setFramerate(context.getUnmarshaller(Float.class).unmarshall(context));
+                }
+                if (context.testExpression("bitrate", targetDepth)) {
+                    context.nextToken();
+                    video.setBitrate(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

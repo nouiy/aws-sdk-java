@@ -48,13 +48,13 @@ public class DestinationConfigurationJsonUnmarshaller implements Unmarshaller<De
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("channel", targetDepth)) {
-                    context.nextToken();
-                    destinationConfiguration.setChannel(ChannelDestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     destinationConfiguration.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("channel", targetDepth)) {
+                    context.nextToken();
+                    destinationConfiguration.setChannel(ChannelDestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("s3", targetDepth)) {
                     context.nextToken();

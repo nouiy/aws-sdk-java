@@ -30,16 +30,11 @@ public class Video implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Bitrate for generated output, in bps. Default: 2500000.
+     * Video-resolution width. Note that the maximum value is determined by <code>width</code> times <code>height</code>
+     * , such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default: 1280.
      * </p>
      */
-    private Integer bitrate;
-    /**
-     * <p>
-     * Video frame rate, in fps. Default: 30.
-     * </p>
-     */
-    private Float framerate;
+    private Integer width;
     /**
      * <p>
      * Video-resolution height. Note that the maximum value is determined by <code>width</code> times
@@ -49,89 +44,63 @@ public class Video implements Serializable, Cloneable, StructuredPojo {
     private Integer height;
     /**
      * <p>
+     * Video frame rate, in fps. Default: 30.
+     * </p>
+     */
+    private Float framerate;
+    /**
+     * <p>
+     * Bitrate for generated output, in bps. Default: 2500000.
+     * </p>
+     */
+    private Integer bitrate;
+
+    /**
+     * <p>
      * Video-resolution width. Note that the maximum value is determined by <code>width</code> times <code>height</code>
      * , such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default: 1280.
      * </p>
-     */
-    private Integer width;
-
-    /**
-     * <p>
-     * Bitrate for generated output, in bps. Default: 2500000.
-     * </p>
      * 
-     * @param bitrate
-     *        Bitrate for generated output, in bps. Default: 2500000.
+     * @param width
+     *        Video-resolution width. Note that the maximum value is determined by <code>width</code> times
+     *        <code>height</code>, such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default:
+     *        1280.
      */
 
-    public void setBitrate(Integer bitrate) {
-        this.bitrate = bitrate;
+    public void setWidth(Integer width) {
+        this.width = width;
     }
 
     /**
      * <p>
-     * Bitrate for generated output, in bps. Default: 2500000.
+     * Video-resolution width. Note that the maximum value is determined by <code>width</code> times <code>height</code>
+     * , such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default: 1280.
      * </p>
      * 
-     * @return Bitrate for generated output, in bps. Default: 2500000.
+     * @return Video-resolution width. Note that the maximum value is determined by <code>width</code> times
+     *         <code>height</code>, such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default:
+     *         1280.
      */
 
-    public Integer getBitrate() {
-        return this.bitrate;
+    public Integer getWidth() {
+        return this.width;
     }
 
     /**
      * <p>
-     * Bitrate for generated output, in bps. Default: 2500000.
+     * Video-resolution width. Note that the maximum value is determined by <code>width</code> times <code>height</code>
+     * , such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default: 1280.
      * </p>
      * 
-     * @param bitrate
-     *        Bitrate for generated output, in bps. Default: 2500000.
+     * @param width
+     *        Video-resolution width. Note that the maximum value is determined by <code>width</code> times
+     *        <code>height</code>, such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default:
+     *        1280.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Video withBitrate(Integer bitrate) {
-        setBitrate(bitrate);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Video frame rate, in fps. Default: 30.
-     * </p>
-     * 
-     * @param framerate
-     *        Video frame rate, in fps. Default: 30.
-     */
-
-    public void setFramerate(Float framerate) {
-        this.framerate = framerate;
-    }
-
-    /**
-     * <p>
-     * Video frame rate, in fps. Default: 30.
-     * </p>
-     * 
-     * @return Video frame rate, in fps. Default: 30.
-     */
-
-    public Float getFramerate() {
-        return this.framerate;
-    }
-
-    /**
-     * <p>
-     * Video frame rate, in fps. Default: 30.
-     * </p>
-     * 
-     * @param framerate
-     *        Video frame rate, in fps. Default: 30.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Video withFramerate(Float framerate) {
-        setFramerate(framerate);
+    public Video withWidth(Integer width) {
+        setWidth(width);
         return this;
     }
 
@@ -184,50 +153,81 @@ public class Video implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Video-resolution width. Note that the maximum value is determined by <code>width</code> times <code>height</code>
-     * , such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default: 1280.
+     * Video frame rate, in fps. Default: 30.
      * </p>
      * 
-     * @param width
-     *        Video-resolution width. Note that the maximum value is determined by <code>width</code> times
-     *        <code>height</code>, such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default:
-     *        1280.
+     * @param framerate
+     *        Video frame rate, in fps. Default: 30.
      */
 
-    public void setWidth(Integer width) {
-        this.width = width;
+    public void setFramerate(Float framerate) {
+        this.framerate = framerate;
     }
 
     /**
      * <p>
-     * Video-resolution width. Note that the maximum value is determined by <code>width</code> times <code>height</code>
-     * , such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default: 1280.
+     * Video frame rate, in fps. Default: 30.
      * </p>
      * 
-     * @return Video-resolution width. Note that the maximum value is determined by <code>width</code> times
-     *         <code>height</code>, such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default:
-     *         1280.
+     * @return Video frame rate, in fps. Default: 30.
      */
 
-    public Integer getWidth() {
-        return this.width;
+    public Float getFramerate() {
+        return this.framerate;
     }
 
     /**
      * <p>
-     * Video-resolution width. Note that the maximum value is determined by <code>width</code> times <code>height</code>
-     * , such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default: 1280.
+     * Video frame rate, in fps. Default: 30.
      * </p>
      * 
-     * @param width
-     *        Video-resolution width. Note that the maximum value is determined by <code>width</code> times
-     *        <code>height</code>, such that the maximum total pixels is 2073600 (1920x1080 or 1080x1920). Default:
-     *        1280.
+     * @param framerate
+     *        Video frame rate, in fps. Default: 30.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Video withWidth(Integer width) {
-        setWidth(width);
+    public Video withFramerate(Float framerate) {
+        setFramerate(framerate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Bitrate for generated output, in bps. Default: 2500000.
+     * </p>
+     * 
+     * @param bitrate
+     *        Bitrate for generated output, in bps. Default: 2500000.
+     */
+
+    public void setBitrate(Integer bitrate) {
+        this.bitrate = bitrate;
+    }
+
+    /**
+     * <p>
+     * Bitrate for generated output, in bps. Default: 2500000.
+     * </p>
+     * 
+     * @return Bitrate for generated output, in bps. Default: 2500000.
+     */
+
+    public Integer getBitrate() {
+        return this.bitrate;
+    }
+
+    /**
+     * <p>
+     * Bitrate for generated output, in bps. Default: 2500000.
+     * </p>
+     * 
+     * @param bitrate
+     *        Bitrate for generated output, in bps. Default: 2500000.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Video withBitrate(Integer bitrate) {
+        setBitrate(bitrate);
         return this;
     }
 
@@ -243,14 +243,14 @@ public class Video implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getBitrate() != null)
-            sb.append("Bitrate: ").append(getBitrate()).append(",");
-        if (getFramerate() != null)
-            sb.append("Framerate: ").append(getFramerate()).append(",");
+        if (getWidth() != null)
+            sb.append("Width: ").append(getWidth()).append(",");
         if (getHeight() != null)
             sb.append("Height: ").append(getHeight()).append(",");
-        if (getWidth() != null)
-            sb.append("Width: ").append(getWidth());
+        if (getFramerate() != null)
+            sb.append("Framerate: ").append(getFramerate()).append(",");
+        if (getBitrate() != null)
+            sb.append("Bitrate: ").append(getBitrate());
         sb.append("}");
         return sb.toString();
     }
@@ -265,21 +265,21 @@ public class Video implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Video == false)
             return false;
         Video other = (Video) obj;
-        if (other.getBitrate() == null ^ this.getBitrate() == null)
+        if (other.getWidth() == null ^ this.getWidth() == null)
             return false;
-        if (other.getBitrate() != null && other.getBitrate().equals(this.getBitrate()) == false)
-            return false;
-        if (other.getFramerate() == null ^ this.getFramerate() == null)
-            return false;
-        if (other.getFramerate() != null && other.getFramerate().equals(this.getFramerate()) == false)
+        if (other.getWidth() != null && other.getWidth().equals(this.getWidth()) == false)
             return false;
         if (other.getHeight() == null ^ this.getHeight() == null)
             return false;
         if (other.getHeight() != null && other.getHeight().equals(this.getHeight()) == false)
             return false;
-        if (other.getWidth() == null ^ this.getWidth() == null)
+        if (other.getFramerate() == null ^ this.getFramerate() == null)
             return false;
-        if (other.getWidth() != null && other.getWidth().equals(this.getWidth()) == false)
+        if (other.getFramerate() != null && other.getFramerate().equals(this.getFramerate()) == false)
+            return false;
+        if (other.getBitrate() == null ^ this.getBitrate() == null)
+            return false;
+        if (other.getBitrate() != null && other.getBitrate().equals(this.getBitrate()) == false)
             return false;
         return true;
     }
@@ -289,10 +289,10 @@ public class Video implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getBitrate() == null) ? 0 : getBitrate().hashCode());
-        hashCode = prime * hashCode + ((getFramerate() == null) ? 0 : getFramerate().hashCode());
-        hashCode = prime * hashCode + ((getHeight() == null) ? 0 : getHeight().hashCode());
         hashCode = prime * hashCode + ((getWidth() == null) ? 0 : getWidth().hashCode());
+        hashCode = prime * hashCode + ((getHeight() == null) ? 0 : getHeight().hashCode());
+        hashCode = prime * hashCode + ((getFramerate() == null) ? 0 : getFramerate().hashCode());
+        hashCode = prime * hashCode + ((getBitrate() == null) ? 0 : getBitrate().hashCode());
         return hashCode;
     }
 

@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ComputeConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> ARCHITECTURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("architecture").build();
-    private static final MarshallingInfo<Integer> MEMORYSIZEINMB_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memorySizeInMB").build();
-    private static final MarshallingInfo<String> PLATFORM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("platform").build();
     private static final MarshallingInfo<Double> VCPU_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("vCpu").build();
+    private static final MarshallingInfo<Integer> MEMORYSIZEINMB_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memorySizeInMB").build();
+    private static final MarshallingInfo<String> ARCHITECTURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("architecture").build();
+    private static final MarshallingInfo<String> PLATFORM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("platform").build();
 
     private static final ComputeConfigurationMarshaller instance = new ComputeConfigurationMarshaller();
 
@@ -52,10 +52,10 @@ public class ComputeConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(computeConfiguration.getArchitecture(), ARCHITECTURE_BINDING);
-            protocolMarshaller.marshall(computeConfiguration.getMemorySizeInMB(), MEMORYSIZEINMB_BINDING);
-            protocolMarshaller.marshall(computeConfiguration.getPlatform(), PLATFORM_BINDING);
             protocolMarshaller.marshall(computeConfiguration.getVCpu(), VCPU_BINDING);
+            protocolMarshaller.marshall(computeConfiguration.getMemorySizeInMB(), MEMORYSIZEINMB_BINDING);
+            protocolMarshaller.marshall(computeConfiguration.getArchitecture(), ARCHITECTURE_BINDING);
+            protocolMarshaller.marshall(computeConfiguration.getPlatform(), PLATFORM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

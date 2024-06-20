@@ -27,10 +27,10 @@ public class ListStageSessionsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 50.
+     * Stage ARN.
      * </p>
      */
-    private Integer maxResults;
+    private String stageArn;
     /**
      * <p>
      * The first stage session to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
@@ -39,48 +39,48 @@ public class ListStageSessionsRequest extends com.amazonaws.AmazonWebServiceRequ
     private String nextToken;
     /**
      * <p>
+     * Maximum number of results to return. Default: 50.
+     * </p>
+     */
+    private Integer maxResults;
+
+    /**
+     * <p>
      * Stage ARN.
      * </p>
-     */
-    private String stageArn;
-
-    /**
-     * <p>
-     * Maximum number of results to return. Default: 50.
-     * </p>
      * 
-     * @param maxResults
-     *        Maximum number of results to return. Default: 50.
+     * @param stageArn
+     *        Stage ARN.
      */
 
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public void setStageArn(String stageArn) {
+        this.stageArn = stageArn;
     }
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 50.
+     * Stage ARN.
      * </p>
      * 
-     * @return Maximum number of results to return. Default: 50.
+     * @return Stage ARN.
      */
 
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getStageArn() {
+        return this.stageArn;
     }
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 50.
+     * Stage ARN.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum number of results to return. Default: 50.
+     * @param stageArn
+     *        Stage ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListStageSessionsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
+    public ListStageSessionsRequest withStageArn(String stageArn) {
+        setStageArn(stageArn);
         return this;
     }
 
@@ -129,41 +129,41 @@ public class ListStageSessionsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Stage ARN.
+     * Maximum number of results to return. Default: 50.
      * </p>
      * 
-     * @param stageArn
-     *        Stage ARN.
+     * @param maxResults
+     *        Maximum number of results to return. Default: 50.
      */
 
-    public void setStageArn(String stageArn) {
-        this.stageArn = stageArn;
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
     }
 
     /**
      * <p>
-     * Stage ARN.
+     * Maximum number of results to return. Default: 50.
      * </p>
      * 
-     * @return Stage ARN.
+     * @return Maximum number of results to return. Default: 50.
      */
 
-    public String getStageArn() {
-        return this.stageArn;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
      * <p>
-     * Stage ARN.
+     * Maximum number of results to return. Default: 50.
      * </p>
      * 
-     * @param stageArn
-     *        Stage ARN.
+     * @param maxResults
+     *        Maximum number of results to return. Default: 50.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListStageSessionsRequest withStageArn(String stageArn) {
-        setStageArn(stageArn);
+    public ListStageSessionsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
         return this;
     }
 
@@ -179,12 +179,12 @@ public class ListStageSessionsRequest extends com.amazonaws.AmazonWebServiceRequ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getStageArn() != null)
+            sb.append("StageArn: ").append(getStageArn()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getStageArn() != null)
-            sb.append("StageArn: ").append(getStageArn());
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -199,17 +199,17 @@ public class ListStageSessionsRequest extends com.amazonaws.AmazonWebServiceRequ
         if (obj instanceof ListStageSessionsRequest == false)
             return false;
         ListStageSessionsRequest other = (ListStageSessionsRequest) obj;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+        if (other.getStageArn() == null ^ this.getStageArn() == null)
             return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
             return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
-        if (other.getStageArn() == null ^ this.getStageArn() == null)
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
-        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -219,9 +219,9 @@ public class ListStageSessionsRequest extends com.amazonaws.AmazonWebServiceRequ
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getStageArn() == null) ? 0 : getStageArn().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

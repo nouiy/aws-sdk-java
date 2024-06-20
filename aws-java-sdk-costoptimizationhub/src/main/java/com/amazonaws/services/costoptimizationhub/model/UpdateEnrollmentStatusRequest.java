@@ -27,68 +27,16 @@ public class UpdateEnrollmentStatusRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Indicates whether to enroll member accounts of the organization if the account is the management account.
-     * </p>
-     */
-    private Boolean includeMemberAccounts;
-    /**
-     * <p>
      * Sets the account status.
      * </p>
      */
     private String status;
-
     /**
      * <p>
      * Indicates whether to enroll member accounts of the organization if the account is the management account.
      * </p>
-     * 
-     * @param includeMemberAccounts
-     *        Indicates whether to enroll member accounts of the organization if the account is the management account.
      */
-
-    public void setIncludeMemberAccounts(Boolean includeMemberAccounts) {
-        this.includeMemberAccounts = includeMemberAccounts;
-    }
-
-    /**
-     * <p>
-     * Indicates whether to enroll member accounts of the organization if the account is the management account.
-     * </p>
-     * 
-     * @return Indicates whether to enroll member accounts of the organization if the account is the management account.
-     */
-
-    public Boolean getIncludeMemberAccounts() {
-        return this.includeMemberAccounts;
-    }
-
-    /**
-     * <p>
-     * Indicates whether to enroll member accounts of the organization if the account is the management account.
-     * </p>
-     * 
-     * @param includeMemberAccounts
-     *        Indicates whether to enroll member accounts of the organization if the account is the management account.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnrollmentStatusRequest withIncludeMemberAccounts(Boolean includeMemberAccounts) {
-        setIncludeMemberAccounts(includeMemberAccounts);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Indicates whether to enroll member accounts of the organization if the account is the management account.
-     * </p>
-     * 
-     * @return Indicates whether to enroll member accounts of the organization if the account is the management account.
-     */
-
-    public Boolean isIncludeMemberAccounts() {
-        return this.includeMemberAccounts;
-    }
+    private Boolean includeMemberAccounts;
 
     /**
      * <p>
@@ -150,6 +98,58 @@ public class UpdateEnrollmentStatusRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Indicates whether to enroll member accounts of the organization if the account is the management account.
+     * </p>
+     * 
+     * @param includeMemberAccounts
+     *        Indicates whether to enroll member accounts of the organization if the account is the management account.
+     */
+
+    public void setIncludeMemberAccounts(Boolean includeMemberAccounts) {
+        this.includeMemberAccounts = includeMemberAccounts;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enroll member accounts of the organization if the account is the management account.
+     * </p>
+     * 
+     * @return Indicates whether to enroll member accounts of the organization if the account is the management account.
+     */
+
+    public Boolean getIncludeMemberAccounts() {
+        return this.includeMemberAccounts;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enroll member accounts of the organization if the account is the management account.
+     * </p>
+     * 
+     * @param includeMemberAccounts
+     *        Indicates whether to enroll member accounts of the organization if the account is the management account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnrollmentStatusRequest withIncludeMemberAccounts(Boolean includeMemberAccounts) {
+        setIncludeMemberAccounts(includeMemberAccounts);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enroll member accounts of the organization if the account is the management account.
+     * </p>
+     * 
+     * @return Indicates whether to enroll member accounts of the organization if the account is the management account.
+     */
+
+    public Boolean isIncludeMemberAccounts() {
+        return this.includeMemberAccounts;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -161,10 +161,10 @@ public class UpdateEnrollmentStatusRequest extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getIncludeMemberAccounts() != null)
-            sb.append("IncludeMemberAccounts: ").append(getIncludeMemberAccounts()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getIncludeMemberAccounts() != null)
+            sb.append("IncludeMemberAccounts: ").append(getIncludeMemberAccounts());
         sb.append("}");
         return sb.toString();
     }
@@ -179,13 +179,13 @@ public class UpdateEnrollmentStatusRequest extends com.amazonaws.AmazonWebServic
         if (obj instanceof UpdateEnrollmentStatusRequest == false)
             return false;
         UpdateEnrollmentStatusRequest other = (UpdateEnrollmentStatusRequest) obj;
-        if (other.getIncludeMemberAccounts() == null ^ this.getIncludeMemberAccounts() == null)
-            return false;
-        if (other.getIncludeMemberAccounts() != null && other.getIncludeMemberAccounts().equals(this.getIncludeMemberAccounts()) == false)
-            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
+        if (other.getIncludeMemberAccounts() == null ^ this.getIncludeMemberAccounts() == null)
+            return false;
+        if (other.getIncludeMemberAccounts() != null && other.getIncludeMemberAccounts().equals(this.getIncludeMemberAccounts()) == false)
             return false;
         return true;
     }
@@ -195,8 +195,8 @@ public class UpdateEnrollmentStatusRequest extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getIncludeMemberAccounts() == null) ? 0 : getIncludeMemberAccounts().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getIncludeMemberAccounts() == null) ? 0 : getIncludeMemberAccounts().hashCode());
         return hashCode;
     }
 

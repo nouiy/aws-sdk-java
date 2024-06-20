@@ -30,56 +30,16 @@ public class ResourceCostCalculation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Pricing details of the resource recommendation.
-     * </p>
-     */
-    private ResourcePricing pricing;
-    /**
-     * <p>
      * Usage details of the resource recommendation.
      * </p>
      */
     private java.util.List<Usage> usages;
-
     /**
      * <p>
      * Pricing details of the resource recommendation.
      * </p>
-     * 
-     * @param pricing
-     *        Pricing details of the resource recommendation.
      */
-
-    public void setPricing(ResourcePricing pricing) {
-        this.pricing = pricing;
-    }
-
-    /**
-     * <p>
-     * Pricing details of the resource recommendation.
-     * </p>
-     * 
-     * @return Pricing details of the resource recommendation.
-     */
-
-    public ResourcePricing getPricing() {
-        return this.pricing;
-    }
-
-    /**
-     * <p>
-     * Pricing details of the resource recommendation.
-     * </p>
-     * 
-     * @param pricing
-     *        Pricing details of the resource recommendation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ResourceCostCalculation withPricing(ResourcePricing pricing) {
-        setPricing(pricing);
-        return this;
-    }
+    private ResourcePricing pricing;
 
     /**
      * <p>
@@ -152,6 +112,46 @@ public class ResourceCostCalculation implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Pricing details of the resource recommendation.
+     * </p>
+     * 
+     * @param pricing
+     *        Pricing details of the resource recommendation.
+     */
+
+    public void setPricing(ResourcePricing pricing) {
+        this.pricing = pricing;
+    }
+
+    /**
+     * <p>
+     * Pricing details of the resource recommendation.
+     * </p>
+     * 
+     * @return Pricing details of the resource recommendation.
+     */
+
+    public ResourcePricing getPricing() {
+        return this.pricing;
+    }
+
+    /**
+     * <p>
+     * Pricing details of the resource recommendation.
+     * </p>
+     * 
+     * @param pricing
+     *        Pricing details of the resource recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceCostCalculation withPricing(ResourcePricing pricing) {
+        setPricing(pricing);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -163,10 +163,10 @@ public class ResourceCostCalculation implements Serializable, Cloneable, Structu
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getPricing() != null)
-            sb.append("Pricing: ").append(getPricing()).append(",");
         if (getUsages() != null)
-            sb.append("Usages: ").append(getUsages());
+            sb.append("Usages: ").append(getUsages()).append(",");
+        if (getPricing() != null)
+            sb.append("Pricing: ").append(getPricing());
         sb.append("}");
         return sb.toString();
     }
@@ -181,13 +181,13 @@ public class ResourceCostCalculation implements Serializable, Cloneable, Structu
         if (obj instanceof ResourceCostCalculation == false)
             return false;
         ResourceCostCalculation other = (ResourceCostCalculation) obj;
-        if (other.getPricing() == null ^ this.getPricing() == null)
-            return false;
-        if (other.getPricing() != null && other.getPricing().equals(this.getPricing()) == false)
-            return false;
         if (other.getUsages() == null ^ this.getUsages() == null)
             return false;
         if (other.getUsages() != null && other.getUsages().equals(this.getUsages()) == false)
+            return false;
+        if (other.getPricing() == null ^ this.getPricing() == null)
+            return false;
+        if (other.getPricing() != null && other.getPricing().equals(this.getPricing()) == false)
             return false;
         return true;
     }
@@ -197,8 +197,8 @@ public class ResourceCostCalculation implements Serializable, Cloneable, Structu
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getPricing() == null) ? 0 : getPricing().hashCode());
         hashCode = prime * hashCode + ((getUsages() == null) ? 0 : getUsages().hashCode());
+        hashCode = prime * hashCode + ((getPricing() == null) ? 0 : getPricing().hashCode());
         return hashCode;
     }
 

@@ -27,20 +27,22 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListParticipantsRequestMarshaller {
 
+    private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("stageArn").build();
+    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sessionId").build();
+    private static final MarshallingInfo<String> FILTERBYUSERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterByUserId").build();
     private static final MarshallingInfo<Boolean> FILTERBYPUBLISHED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterByPublished").build();
     private static final MarshallingInfo<String> FILTERBYSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterByState").build();
-    private static final MarshallingInfo<String> FILTERBYUSERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterByUserId").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
-    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("sessionId").build();
-    private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("stageArn").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> FILTERBYRECORDINGSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterByRecordingState").build();
 
     private static final ListParticipantsRequestMarshaller instance = new ListParticipantsRequestMarshaller();
 
@@ -58,13 +60,14 @@ public class ListParticipantsRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(listParticipantsRequest.getStageArn(), STAGEARN_BINDING);
+            protocolMarshaller.marshall(listParticipantsRequest.getSessionId(), SESSIONID_BINDING);
+            protocolMarshaller.marshall(listParticipantsRequest.getFilterByUserId(), FILTERBYUSERID_BINDING);
             protocolMarshaller.marshall(listParticipantsRequest.getFilterByPublished(), FILTERBYPUBLISHED_BINDING);
             protocolMarshaller.marshall(listParticipantsRequest.getFilterByState(), FILTERBYSTATE_BINDING);
-            protocolMarshaller.marshall(listParticipantsRequest.getFilterByUserId(), FILTERBYUSERID_BINDING);
-            protocolMarshaller.marshall(listParticipantsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listParticipantsRequest.getNextToken(), NEXTTOKEN_BINDING);
-            protocolMarshaller.marshall(listParticipantsRequest.getSessionId(), SESSIONID_BINDING);
-            protocolMarshaller.marshall(listParticipantsRequest.getStageArn(), STAGEARN_BINDING);
+            protocolMarshaller.marshall(listParticipantsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listParticipantsRequest.getFilterByRecordingState(), FILTERBYRECORDINGSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

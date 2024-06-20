@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListEnrollmentStatusesRequestMarshaller {
 
-    private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("accountId").build();
     private static final MarshallingInfo<Boolean> INCLUDEORGANIZATIONINFO_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeOrganizationInfo").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("accountId").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
 
     private static final ListEnrollmentStatusesRequestMarshaller instance = new ListEnrollmentStatusesRequestMarshaller();
 
@@ -52,10 +52,10 @@ public class ListEnrollmentStatusesRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listEnrollmentStatusesRequest.getAccountId(), ACCOUNTID_BINDING);
             protocolMarshaller.marshall(listEnrollmentStatusesRequest.getIncludeOrganizationInfo(), INCLUDEORGANIZATIONINFO_BINDING);
-            protocolMarshaller.marshall(listEnrollmentStatusesRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listEnrollmentStatusesRequest.getAccountId(), ACCOUNTID_BINDING);
             protocolMarshaller.marshall(listEnrollmentStatusesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listEnrollmentStatusesRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

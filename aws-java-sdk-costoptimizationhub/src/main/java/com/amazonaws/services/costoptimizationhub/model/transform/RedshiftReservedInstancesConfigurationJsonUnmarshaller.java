@@ -52,9 +52,25 @@ public class RedshiftReservedInstancesConfigurationJsonUnmarshaller implements U
                     context.nextToken();
                     redshiftReservedInstancesConfiguration.setAccountScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("currentGeneration", targetDepth)) {
+                if (context.testExpression("service", targetDepth)) {
                     context.nextToken();
-                    redshiftReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
+                    redshiftReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("normalizedUnitsToPurchase", targetDepth)) {
+                    context.nextToken();
+                    redshiftReservedInstancesConfiguration.setNormalizedUnitsToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("term", targetDepth)) {
+                    context.nextToken();
+                    redshiftReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("paymentOption", targetDepth)) {
+                    context.nextToken();
+                    redshiftReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
+                    context.nextToken();
+                    redshiftReservedInstancesConfiguration.setNumberOfInstancesToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("instanceFamily", targetDepth)) {
                     context.nextToken();
@@ -64,41 +80,25 @@ public class RedshiftReservedInstancesConfigurationJsonUnmarshaller implements U
                     context.nextToken();
                     redshiftReservedInstancesConfiguration.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
-                    context.nextToken();
-                    redshiftReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("normalizedUnitsToPurchase", targetDepth)) {
-                    context.nextToken();
-                    redshiftReservedInstancesConfiguration.setNormalizedUnitsToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
-                    context.nextToken();
-                    redshiftReservedInstancesConfiguration.setNumberOfInstancesToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("paymentOption", targetDepth)) {
-                    context.nextToken();
-                    redshiftReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("reservedInstancesRegion", targetDepth)) {
                     context.nextToken();
                     redshiftReservedInstancesConfiguration.setReservedInstancesRegion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("service", targetDepth)) {
-                    context.nextToken();
-                    redshiftReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("sizeFlexEligible", targetDepth)) {
                     context.nextToken();
                     redshiftReservedInstancesConfiguration.setSizeFlexEligible(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("term", targetDepth)) {
+                if (context.testExpression("currentGeneration", targetDepth)) {
                     context.nextToken();
-                    redshiftReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                    redshiftReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("upfrontCost", targetDepth)) {
                     context.nextToken();
                     redshiftReservedInstancesConfiguration.setUpfrontCost(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
+                    context.nextToken();
+                    redshiftReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -39,19 +39,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * <li>
      * <p>
      * A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute Optimizer
-     * returns recommendations that consist of Graviton2 instance types only.
+     * returns recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization metrics
-     * for Graviton2 instance type recommendations only.
+     * for Graviton instance type recommendations only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     * Optimizer exports recommendations that consist of Graviton2 instance types only.
+     * Optimizer exports recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * </ul>
@@ -135,19 +135,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * <li>
      * <p>
      * A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute Optimizer
-     * returns recommendations that consist of Graviton2 instance types only.
+     * returns recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization metrics
-     * for Graviton2 instance type recommendations only.
+     * for Graviton instance type recommendations only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     * Optimizer exports recommendations that consist of Graviton2 instance types only.
+     * Optimizer exports recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * </ul>
@@ -160,19 +160,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      *         <li>
      *         <p>
      *         A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute
-     *         Optimizer returns recommendations that consist of Graviton2 instance types only.
+     *         Optimizer returns recommendations that consist of Graviton instance types only.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization
-     *         metrics for Graviton2 instance type recommendations only.
+     *         metrics for Graviton instance type recommendations only.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request,
-     *         Compute Optimizer exports recommendations that consist of Graviton2 instance types only.
+     *         Compute Optimizer exports recommendations that consist of Graviton instance types only.
      *         </p>
      *         </li>
      * @see CpuVendorArchitecture
@@ -193,19 +193,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * <li>
      * <p>
      * A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute Optimizer
-     * returns recommendations that consist of Graviton2 instance types only.
+     * returns recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization metrics
-     * for Graviton2 instance type recommendations only.
+     * for Graviton instance type recommendations only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     * Optimizer exports recommendations that consist of Graviton2 instance types only.
+     * Optimizer exports recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * </ul>
@@ -219,19 +219,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute
-     *        Optimizer returns recommendations that consist of Graviton2 instance types only.
+     *        Optimizer returns recommendations that consist of Graviton instance types only.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization
-     *        metrics for Graviton2 instance type recommendations only.
+     *        metrics for Graviton instance type recommendations only.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     *        Optimizer exports recommendations that consist of Graviton2 instance types only.
+     *        Optimizer exports recommendations that consist of Graviton instance types only.
      *        </p>
      *        </li>
      * @see CpuVendorArchitecture
@@ -257,19 +257,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * <li>
      * <p>
      * A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute Optimizer
-     * returns recommendations that consist of Graviton2 instance types only.
+     * returns recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization metrics
-     * for Graviton2 instance type recommendations only.
+     * for Graviton instance type recommendations only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     * Optimizer exports recommendations that consist of Graviton2 instance types only.
+     * Optimizer exports recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * </ul>
@@ -288,19 +288,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute
-     *        Optimizer returns recommendations that consist of Graviton2 instance types only.
+     *        Optimizer returns recommendations that consist of Graviton instance types only.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization
-     *        metrics for Graviton2 instance type recommendations only.
+     *        metrics for Graviton instance type recommendations only.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     *        Optimizer exports recommendations that consist of Graviton2 instance types only.
+     *        Optimizer exports recommendations that consist of Graviton instance types only.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -328,19 +328,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * <li>
      * <p>
      * A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute Optimizer
-     * returns recommendations that consist of Graviton2 instance types only.
+     * returns recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization metrics
-     * for Graviton2 instance type recommendations only.
+     * for Graviton instance type recommendations only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     * Optimizer exports recommendations that consist of Graviton2 instance types only.
+     * Optimizer exports recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * </ul>
@@ -354,19 +354,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute
-     *        Optimizer returns recommendations that consist of Graviton2 instance types only.
+     *        Optimizer returns recommendations that consist of Graviton instance types only.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization
-     *        metrics for Graviton2 instance type recommendations only.
+     *        metrics for Graviton instance type recommendations only.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     *        Optimizer exports recommendations that consist of Graviton2 instance types only.
+     *        Optimizer exports recommendations that consist of Graviton instance types only.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -389,19 +389,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * <li>
      * <p>
      * A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute Optimizer
-     * returns recommendations that consist of Graviton2 instance types only.
+     * returns recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization metrics
-     * for Graviton2 instance type recommendations only.
+     * for Graviton instance type recommendations only.
      * </p>
      * </li>
      * <li>
      * <p>
      * A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     * Optimizer exports recommendations that consist of Graviton2 instance types only.
+     * Optimizer exports recommendations that consist of Graviton instance types only.
      * </p>
      * </li>
      * </ul>
@@ -415,19 +415,19 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        A <a>GetEC2InstanceRecommendations</a> or <a>GetAutoScalingGroupRecommendations</a> request, Compute
-     *        Optimizer returns recommendations that consist of Graviton2 instance types only.
+     *        Optimizer returns recommendations that consist of Graviton instance types only.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A <a>GetEC2RecommendationProjectedMetrics</a> request, Compute Optimizer returns projected utilization
-     *        metrics for Graviton2 instance type recommendations only.
+     *        metrics for Graviton instance type recommendations only.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A <a>ExportEC2InstanceRecommendations</a> or <a>ExportAutoScalingGroupRecommendations</a> request, Compute
-     *        Optimizer exports recommendations that consist of Graviton2 instance types only.
+     *        Optimizer exports recommendations that consist of Graviton instance types only.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

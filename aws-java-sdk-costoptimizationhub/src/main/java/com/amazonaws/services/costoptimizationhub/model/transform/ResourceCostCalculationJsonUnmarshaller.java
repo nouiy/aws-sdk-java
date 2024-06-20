@@ -48,15 +48,15 @@ public class ResourceCostCalculationJsonUnmarshaller implements Unmarshaller<Res
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("pricing", targetDepth)) {
-                    context.nextToken();
-                    resourceCostCalculation.setPricing(ResourcePricingJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("usages", targetDepth)) {
                     context.nextToken();
                     resourceCostCalculation.setUsages(new ListUnmarshaller<Usage>(UsageJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("pricing", targetDepth)) {
+                    context.nextToken();
+                    resourceCostCalculation.setPricing(ResourcePricingJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

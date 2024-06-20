@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EstimatedDiscountsMarshaller {
 
-    private static final MarshallingInfo<Double> OTHERDISCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("otherDiscount").build();
-    private static final MarshallingInfo<Double> RESERVEDINSTANCESDISCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("reservedInstancesDiscount").build();
     private static final MarshallingInfo<Double> SAVINGSPLANSDISCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsPlansDiscount").build();
+    private static final MarshallingInfo<Double> RESERVEDINSTANCESDISCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("reservedInstancesDiscount").build();
+    private static final MarshallingInfo<Double> OTHERDISCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("otherDiscount").build();
 
     private static final EstimatedDiscountsMarshaller instance = new EstimatedDiscountsMarshaller();
 
@@ -50,9 +50,9 @@ public class EstimatedDiscountsMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(estimatedDiscounts.getOtherDiscount(), OTHERDISCOUNT_BINDING);
-            protocolMarshaller.marshall(estimatedDiscounts.getReservedInstancesDiscount(), RESERVEDINSTANCESDISCOUNT_BINDING);
             protocolMarshaller.marshall(estimatedDiscounts.getSavingsPlansDiscount(), SAVINGSPLANSDISCOUNT_BINDING);
+            protocolMarshaller.marshall(estimatedDiscounts.getReservedInstancesDiscount(), RESERVEDINSTANCESDISCOUNT_BINDING);
+            protocolMarshaller.marshall(estimatedDiscounts.getOtherDiscount(), OTHERDISCOUNT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

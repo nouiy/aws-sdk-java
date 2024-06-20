@@ -52,29 +52,29 @@ public class PipConfigurationJsonUnmarshaller implements Unmarshaller<PipConfigu
                     context.nextToken();
                     pipConfiguration.setFeaturedParticipantAttribute(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("omitStoppedVideo", targetDepth)) {
+                    context.nextToken();
+                    pipConfiguration.setOmitStoppedVideo(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("videoFillMode", targetDepth)) {
+                    context.nextToken();
+                    pipConfiguration.setVideoFillMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("gridGap", targetDepth)) {
                     context.nextToken();
                     pipConfiguration.setGridGap(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
-                if (context.testExpression("omitStoppedVideo", targetDepth)) {
+                if (context.testExpression("pipParticipantAttribute", targetDepth)) {
                     context.nextToken();
-                    pipConfiguration.setOmitStoppedVideo(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    pipConfiguration.setPipParticipantAttribute(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("pipBehavior", targetDepth)) {
                     context.nextToken();
                     pipConfiguration.setPipBehavior(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("pipHeight", targetDepth)) {
-                    context.nextToken();
-                    pipConfiguration.setPipHeight(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (context.testExpression("pipOffset", targetDepth)) {
                     context.nextToken();
                     pipConfiguration.setPipOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("pipParticipantAttribute", targetDepth)) {
-                    context.nextToken();
-                    pipConfiguration.setPipParticipantAttribute(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("pipPosition", targetDepth)) {
                     context.nextToken();
@@ -84,9 +84,9 @@ public class PipConfigurationJsonUnmarshaller implements Unmarshaller<PipConfigu
                     context.nextToken();
                     pipConfiguration.setPipWidth(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
-                if (context.testExpression("videoFillMode", targetDepth)) {
+                if (context.testExpression("pipHeight", targetDepth)) {
                     context.nextToken();
-                    pipConfiguration.setVideoFillMode(context.getUnmarshaller(String.class).unmarshall(context));
+                    pipConfiguration.setPipHeight(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

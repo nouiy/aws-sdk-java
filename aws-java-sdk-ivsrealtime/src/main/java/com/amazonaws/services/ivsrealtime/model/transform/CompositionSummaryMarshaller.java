@@ -31,18 +31,18 @@ public class CompositionSummaryMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
-    private static final MarshallingInfo<List> DESTINATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("destinations").build();
-    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("stageArn").build();
-    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<List> DESTINATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("destinations").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
 
     private static final CompositionSummaryMarshaller instance = new CompositionSummaryMarshaller();
 
@@ -61,12 +61,12 @@ public class CompositionSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(compositionSummary.getArn(), ARN_BINDING);
-            protocolMarshaller.marshall(compositionSummary.getDestinations(), DESTINATIONS_BINDING);
-            protocolMarshaller.marshall(compositionSummary.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(compositionSummary.getStageArn(), STAGEARN_BINDING);
-            protocolMarshaller.marshall(compositionSummary.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(compositionSummary.getDestinations(), DESTINATIONS_BINDING);
             protocolMarshaller.marshall(compositionSummary.getState(), STATE_BINDING);
             protocolMarshaller.marshall(compositionSummary.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(compositionSummary.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(compositionSummary.getEndTime(), ENDTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

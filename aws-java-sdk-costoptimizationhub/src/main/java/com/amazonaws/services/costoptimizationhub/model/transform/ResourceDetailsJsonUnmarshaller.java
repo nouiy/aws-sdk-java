@@ -48,9 +48,17 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("computeSavingsPlans", targetDepth)) {
+                if (context.testExpression("lambdaFunction", targetDepth)) {
                     context.nextToken();
-                    resourceDetails.setComputeSavingsPlans(ComputeSavingsPlansJsonUnmarshaller.getInstance().unmarshall(context));
+                    resourceDetails.setLambdaFunction(LambdaFunctionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ecsService", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setEcsService(EcsServiceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ec2Instance", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setEc2Instance(Ec2InstanceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("ebsVolume", targetDepth)) {
                     context.nextToken();
@@ -60,45 +68,45 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                     context.nextToken();
                     resourceDetails.setEc2AutoScalingGroup(Ec2AutoScalingGroupJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("ec2Instance", targetDepth)) {
-                    context.nextToken();
-                    resourceDetails.setEc2Instance(Ec2InstanceJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("ec2InstanceSavingsPlans", targetDepth)) {
-                    context.nextToken();
-                    resourceDetails.setEc2InstanceSavingsPlans(Ec2InstanceSavingsPlansJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("ec2ReservedInstances", targetDepth)) {
                     context.nextToken();
                     resourceDetails.setEc2ReservedInstances(Ec2ReservedInstancesJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("ecsService", targetDepth)) {
-                    context.nextToken();
-                    resourceDetails.setEcsService(EcsServiceJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("elastiCacheReservedInstances", targetDepth)) {
-                    context.nextToken();
-                    resourceDetails.setElastiCacheReservedInstances(ElastiCacheReservedInstancesJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("lambdaFunction", targetDepth)) {
-                    context.nextToken();
-                    resourceDetails.setLambdaFunction(LambdaFunctionJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("openSearchReservedInstances", targetDepth)) {
-                    context.nextToken();
-                    resourceDetails.setOpenSearchReservedInstances(OpenSearchReservedInstancesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("rdsReservedInstances", targetDepth)) {
                     context.nextToken();
                     resourceDetails.setRdsReservedInstances(RdsReservedInstancesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("elastiCacheReservedInstances", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setElastiCacheReservedInstances(ElastiCacheReservedInstancesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("openSearchReservedInstances", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setOpenSearchReservedInstances(OpenSearchReservedInstancesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("redshiftReservedInstances", targetDepth)) {
                     context.nextToken();
                     resourceDetails.setRedshiftReservedInstances(RedshiftReservedInstancesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ec2InstanceSavingsPlans", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setEc2InstanceSavingsPlans(Ec2InstanceSavingsPlansJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("computeSavingsPlans", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setComputeSavingsPlans(ComputeSavingsPlansJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("sageMakerSavingsPlans", targetDepth)) {
                     context.nextToken();
                     resourceDetails.setSageMakerSavingsPlans(SageMakerSavingsPlansJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("rdsDbInstance", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setRdsDbInstance(RdsDbInstanceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("rdsDbInstanceStorage", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setRdsDbInstanceStorage(RdsDbInstanceStorageJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -48,10 +48,6 @@ public class StageJsonUnmarshaller implements Unmarshaller<Stage, JsonUnmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("activeSessionId", targetDepth)) {
-                    context.nextToken();
-                    stage.setActiveSessionId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     stage.setArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -60,10 +56,18 @@ public class StageJsonUnmarshaller implements Unmarshaller<Stage, JsonUnmarshall
                     context.nextToken();
                     stage.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("activeSessionId", targetDepth)) {
+                    context.nextToken();
+                    stage.setActiveSessionId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     stage.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
+                }
+                if (context.testExpression("autoParticipantRecordingConfiguration", targetDepth)) {
+                    context.nextToken();
+                    stage.setAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -52,9 +52,57 @@ public class RdsReservedInstancesConfigurationJsonUnmarshaller implements Unmars
                     context.nextToken();
                     rdsReservedInstancesConfiguration.setAccountScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("service", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("normalizedUnitsToPurchase", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setNormalizedUnitsToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("term", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("paymentOption", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setNumberOfInstancesToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("instanceFamily", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setInstanceFamily(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("instanceType", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("reservedInstancesRegion", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setReservedInstancesRegion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("sizeFlexEligible", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setSizeFlexEligible(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("currentGeneration", targetDepth)) {
                     context.nextToken();
                     rdsReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("upfrontCost", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setUpfrontCost(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("licenseModel", targetDepth)) {
+                    context.nextToken();
+                    rdsReservedInstancesConfiguration.setLicenseModel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("databaseEdition", targetDepth)) {
                     context.nextToken();
@@ -67,54 +115,6 @@ public class RdsReservedInstancesConfigurationJsonUnmarshaller implements Unmars
                 if (context.testExpression("deploymentOption", targetDepth)) {
                     context.nextToken();
                     rdsReservedInstancesConfiguration.setDeploymentOption(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("instanceFamily", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setInstanceFamily(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("instanceType", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("licenseModel", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setLicenseModel(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("normalizedUnitsToPurchase", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setNormalizedUnitsToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setNumberOfInstancesToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("paymentOption", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("reservedInstancesRegion", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setReservedInstancesRegion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("service", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("sizeFlexEligible", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setSizeFlexEligible(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("term", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("upfrontCost", targetDepth)) {
-                    context.nextToken();
-                    rdsReservedInstancesConfiguration.setUpfrontCost(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -34,12 +34,12 @@ public class ECSServiceRecommendationOptionMarshaller {
             .marshallLocationName("cpu").build();
     private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunity").build();
+    private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITYAFTERDISCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunityAfterDiscounts").build();
     private static final MarshallingInfo<List> PROJECTEDUTILIZATIONMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("projectedUtilizationMetrics").build();
     private static final MarshallingInfo<List> CONTAINERRECOMMENDATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("containerRecommendations").build();
-    private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITYAFTERDISCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunityAfterDiscounts").build();
 
     private static final ECSServiceRecommendationOptionMarshaller instance = new ECSServiceRecommendationOptionMarshaller();
 
@@ -60,9 +60,9 @@ public class ECSServiceRecommendationOptionMarshaller {
             protocolMarshaller.marshall(eCSServiceRecommendationOption.getMemory(), MEMORY_BINDING);
             protocolMarshaller.marshall(eCSServiceRecommendationOption.getCpu(), CPU_BINDING);
             protocolMarshaller.marshall(eCSServiceRecommendationOption.getSavingsOpportunity(), SAVINGSOPPORTUNITY_BINDING);
+            protocolMarshaller.marshall(eCSServiceRecommendationOption.getSavingsOpportunityAfterDiscounts(), SAVINGSOPPORTUNITYAFTERDISCOUNTS_BINDING);
             protocolMarshaller.marshall(eCSServiceRecommendationOption.getProjectedUtilizationMetrics(), PROJECTEDUTILIZATIONMETRICS_BINDING);
             protocolMarshaller.marshall(eCSServiceRecommendationOption.getContainerRecommendations(), CONTAINERRECOMMENDATIONS_BINDING);
-            protocolMarshaller.marshall(eCSServiceRecommendationOption.getSavingsOpportunityAfterDiscounts(), SAVINGSOPPORTUNITYAFTERDISCOUNTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

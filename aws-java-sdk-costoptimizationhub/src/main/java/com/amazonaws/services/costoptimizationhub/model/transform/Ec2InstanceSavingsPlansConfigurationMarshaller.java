@@ -29,16 +29,16 @@ public class Ec2InstanceSavingsPlansConfigurationMarshaller {
 
     private static final MarshallingInfo<String> ACCOUNTSCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accountScope").build();
+    private static final MarshallingInfo<String> TERM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("term").build();
+    private static final MarshallingInfo<String> PAYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentOption").build();
     private static final MarshallingInfo<String> HOURLYCOMMITMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hourlyCommitment").build();
     private static final MarshallingInfo<String> INSTANCEFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceFamily").build();
-    private static final MarshallingInfo<String> PAYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentOption").build();
     private static final MarshallingInfo<String> SAVINGSPLANSREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsPlansRegion").build();
-    private static final MarshallingInfo<String> TERM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("term").build();
 
     private static final Ec2InstanceSavingsPlansConfigurationMarshaller instance = new Ec2InstanceSavingsPlansConfigurationMarshaller();
 
@@ -57,11 +57,11 @@ public class Ec2InstanceSavingsPlansConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(ec2InstanceSavingsPlansConfiguration.getAccountScope(), ACCOUNTSCOPE_BINDING);
+            protocolMarshaller.marshall(ec2InstanceSavingsPlansConfiguration.getTerm(), TERM_BINDING);
+            protocolMarshaller.marshall(ec2InstanceSavingsPlansConfiguration.getPaymentOption(), PAYMENTOPTION_BINDING);
             protocolMarshaller.marshall(ec2InstanceSavingsPlansConfiguration.getHourlyCommitment(), HOURLYCOMMITMENT_BINDING);
             protocolMarshaller.marshall(ec2InstanceSavingsPlansConfiguration.getInstanceFamily(), INSTANCEFAMILY_BINDING);
-            protocolMarshaller.marshall(ec2InstanceSavingsPlansConfiguration.getPaymentOption(), PAYMENTOPTION_BINDING);
             protocolMarshaller.marshall(ec2InstanceSavingsPlansConfiguration.getSavingsPlansRegion(), SAVINGSPLANSREGION_BINDING);
-            protocolMarshaller.marshall(ec2InstanceSavingsPlansConfiguration.getTerm(), TERM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

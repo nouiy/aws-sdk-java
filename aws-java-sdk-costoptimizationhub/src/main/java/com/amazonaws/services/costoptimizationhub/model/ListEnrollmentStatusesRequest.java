@@ -27,68 +27,28 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The account ID of a member account in the organization.
-     * </p>
-     */
-    private String accountId;
-    /**
-     * <p>
      * Indicates whether to return the enrollment status for the organization.
      * </p>
      */
     private Boolean includeOrganizationInfo;
     /**
      * <p>
-     * The maximum number of objects that are returned for the request.
+     * The account ID of a member account in the organization.
      * </p>
      */
-    private Integer maxResults;
+    private String accountId;
     /**
      * <p>
      * The token to retrieve the next set of results.
      * </p>
      */
     private String nextToken;
-
     /**
      * <p>
-     * The account ID of a member account in the organization.
+     * The maximum number of objects that are returned for the request.
      * </p>
-     * 
-     * @param accountId
-     *        The account ID of a member account in the organization.
      */
-
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
-    }
-
-    /**
-     * <p>
-     * The account ID of a member account in the organization.
-     * </p>
-     * 
-     * @return The account ID of a member account in the organization.
-     */
-
-    public String getAccountId() {
-        return this.accountId;
-    }
-
-    /**
-     * <p>
-     * The account ID of a member account in the organization.
-     * </p>
-     * 
-     * @param accountId
-     *        The account ID of a member account in the organization.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListEnrollmentStatusesRequest withAccountId(String accountId) {
-        setAccountId(accountId);
-        return this;
-    }
+    private Integer maxResults;
 
     /**
      * <p>
@@ -144,41 +104,41 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The maximum number of objects that are returned for the request.
+     * The account ID of a member account in the organization.
      * </p>
      * 
-     * @param maxResults
-     *        The maximum number of objects that are returned for the request.
+     * @param accountId
+     *        The account ID of a member account in the organization.
      */
 
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
     /**
      * <p>
-     * The maximum number of objects that are returned for the request.
+     * The account ID of a member account in the organization.
      * </p>
      * 
-     * @return The maximum number of objects that are returned for the request.
+     * @return The account ID of a member account in the organization.
      */
 
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     /**
      * <p>
-     * The maximum number of objects that are returned for the request.
+     * The account ID of a member account in the organization.
      * </p>
      * 
-     * @param maxResults
-     *        The maximum number of objects that are returned for the request.
+     * @param accountId
+     *        The account ID of a member account in the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListEnrollmentStatusesRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
+    public ListEnrollmentStatusesRequest withAccountId(String accountId) {
+        setAccountId(accountId);
         return this;
     }
 
@@ -223,6 +183,46 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The maximum number of objects that are returned for the request.
+     * </p>
+     * 
+     * @param maxResults
+     *        The maximum number of objects that are returned for the request.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * The maximum number of objects that are returned for the request.
+     * </p>
+     * 
+     * @return The maximum number of objects that are returned for the request.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * The maximum number of objects that are returned for the request.
+     * </p>
+     * 
+     * @param maxResults
+     *        The maximum number of objects that are returned for the request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListEnrollmentStatusesRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -234,14 +234,14 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAccountId() != null)
-            sb.append("AccountId: ").append(getAccountId()).append(",");
         if (getIncludeOrganizationInfo() != null)
             sb.append("IncludeOrganizationInfo: ").append(getIncludeOrganizationInfo()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getAccountId() != null)
+            sb.append("AccountId: ").append(getAccountId()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -256,21 +256,21 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
         if (obj instanceof ListEnrollmentStatusesRequest == false)
             return false;
         ListEnrollmentStatusesRequest other = (ListEnrollmentStatusesRequest) obj;
-        if (other.getAccountId() == null ^ this.getAccountId() == null)
-            return false;
-        if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
-            return false;
         if (other.getIncludeOrganizationInfo() == null ^ this.getIncludeOrganizationInfo() == null)
             return false;
         if (other.getIncludeOrganizationInfo() != null && other.getIncludeOrganizationInfo().equals(this.getIncludeOrganizationInfo()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+        if (other.getAccountId() == null ^ this.getAccountId() == null)
             return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+        if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
             return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -280,10 +280,10 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         hashCode = prime * hashCode + ((getIncludeOrganizationInfo() == null) ? 0 : getIncludeOrganizationInfo().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

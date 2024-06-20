@@ -32,12 +32,6 @@ public class StageSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is active.
-     * </p>
-     */
-    private java.util.Date endTime;
-    /**
-     * <p>
      * ID of the session within the stage.
      * </p>
      */
@@ -48,49 +42,12 @@ public class StageSession implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date startTime;
-
     /**
      * <p>
      * ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is active.
      * </p>
-     * 
-     * @param endTime
-     *        ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is
-     *        active.
      */
-
-    public void setEndTime(java.util.Date endTime) {
-        this.endTime = endTime;
-    }
-
-    /**
-     * <p>
-     * ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is active.
-     * </p>
-     * 
-     * @return ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is
-     *         active.
-     */
-
-    public java.util.Date getEndTime() {
-        return this.endTime;
-    }
-
-    /**
-     * <p>
-     * ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is active.
-     * </p>
-     * 
-     * @param endTime
-     *        ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is
-     *        active.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StageSession withEndTime(java.util.Date endTime) {
-        setEndTime(endTime);
-        return this;
-    }
+    private java.util.Date endTime;
 
     /**
      * <p>
@@ -173,6 +130,49 @@ public class StageSession implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is active.
+     * </p>
+     * 
+     * @param endTime
+     *        ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is
+     *        active.
+     */
+
+    public void setEndTime(java.util.Date endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * <p>
+     * ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is active.
+     * </p>
+     * 
+     * @return ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is
+     *         active.
+     */
+
+    public java.util.Date getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * <p>
+     * ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is active.
+     * </p>
+     * 
+     * @param endTime
+     *        ISO 8601 timestamp (returned as a string) when the stage session ended. This is null if the stage is
+     *        active.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StageSession withEndTime(java.util.Date endTime) {
+        setEndTime(endTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,12 +184,12 @@ public class StageSession implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEndTime() != null)
-            sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getSessionId() != null)
             sb.append("SessionId: ").append(getSessionId()).append(",");
         if (getStartTime() != null)
-            sb.append("StartTime: ").append(getStartTime());
+            sb.append("StartTime: ").append(getStartTime()).append(",");
+        if (getEndTime() != null)
+            sb.append("EndTime: ").append(getEndTime());
         sb.append("}");
         return sb.toString();
     }
@@ -204,10 +204,6 @@ public class StageSession implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof StageSession == false)
             return false;
         StageSession other = (StageSession) obj;
-        if (other.getEndTime() == null ^ this.getEndTime() == null)
-            return false;
-        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
-            return false;
         if (other.getSessionId() == null ^ this.getSessionId() == null)
             return false;
         if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
@@ -215,6 +211,10 @@ public class StageSession implements Serializable, Cloneable, StructuredPojo {
         if (other.getStartTime() == null ^ this.getStartTime() == null)
             return false;
         if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
+            return false;
+        if (other.getEndTime() == null ^ this.getEndTime() == null)
+            return false;
+        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
             return false;
         return true;
     }
@@ -224,9 +224,9 @@ public class StageSession implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
+        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         return hashCode;
     }
 

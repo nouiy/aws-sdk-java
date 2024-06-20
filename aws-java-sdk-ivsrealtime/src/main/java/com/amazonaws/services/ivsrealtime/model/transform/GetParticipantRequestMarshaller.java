@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetParticipantRequestMarshaller {
 
-    private static final MarshallingInfo<String> PARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantId").build();
-    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("sessionId").build();
     private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("stageArn").build();
+    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sessionId").build();
+    private static final MarshallingInfo<String> PARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantId").build();
 
     private static final GetParticipantRequestMarshaller instance = new GetParticipantRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class GetParticipantRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(getParticipantRequest.getParticipantId(), PARTICIPANTID_BINDING);
-            protocolMarshaller.marshall(getParticipantRequest.getSessionId(), SESSIONID_BINDING);
             protocolMarshaller.marshall(getParticipantRequest.getStageArn(), STAGEARN_BINDING);
+            protocolMarshaller.marshall(getParticipantRequest.getSessionId(), SESSIONID_BINDING);
+            protocolMarshaller.marshall(getParticipantRequest.getParticipantId(), PARTICIPANTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DisconnectParticipantRequestMarshaller {
 
+    private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("stageArn").build();
     private static final MarshallingInfo<String> PARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantId").build();
     private static final MarshallingInfo<String> REASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("reason").build();
-    private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("stageArn").build();
 
     private static final DisconnectParticipantRequestMarshaller instance = new DisconnectParticipantRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class DisconnectParticipantRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(disconnectParticipantRequest.getStageArn(), STAGEARN_BINDING);
             protocolMarshaller.marshall(disconnectParticipantRequest.getParticipantId(), PARTICIPANTID_BINDING);
             protocolMarshaller.marshall(disconnectParticipantRequest.getReason(), REASON_BINDING);
-            protocolMarshaller.marshall(disconnectParticipantRequest.getStageArn(), STAGEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

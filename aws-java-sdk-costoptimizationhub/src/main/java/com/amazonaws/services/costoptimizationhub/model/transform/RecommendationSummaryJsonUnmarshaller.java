@@ -48,13 +48,13 @@ public class RecommendationSummaryJsonUnmarshaller implements Unmarshaller<Recom
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("estimatedMonthlySavings", targetDepth)) {
-                    context.nextToken();
-                    recommendationSummary.setEstimatedMonthlySavings(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
                 if (context.testExpression("group", targetDepth)) {
                     context.nextToken();
                     recommendationSummary.setGroup(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("estimatedMonthlySavings", targetDepth)) {
+                    context.nextToken();
+                    recommendationSummary.setEstimatedMonthlySavings(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
                 if (context.testExpression("recommendationCount", targetDepth)) {
                     context.nextToken();

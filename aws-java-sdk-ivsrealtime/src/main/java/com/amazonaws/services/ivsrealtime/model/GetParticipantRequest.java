@@ -27,10 +27,10 @@ public class GetParticipantRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Unique identifier for the participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * Stage ARN.
      * </p>
      */
-    private String participantId;
+    private String stageArn;
     /**
      * <p>
      * ID of a session within the stage.
@@ -39,51 +39,48 @@ public class GetParticipantRequest extends com.amazonaws.AmazonWebServiceRequest
     private String sessionId;
     /**
      * <p>
+     * Unique identifier for the participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * </p>
+     */
+    private String participantId;
+
+    /**
+     * <p>
      * Stage ARN.
      * </p>
-     */
-    private String stageArn;
-
-    /**
-     * <p>
-     * Unique identifier for the participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
-     * </p>
      * 
-     * @param participantId
-     *        Unique identifier for the participant. This is assigned by IVS and returned by
-     *        <a>CreateParticipantToken</a>.
+     * @param stageArn
+     *        Stage ARN.
      */
 
-    public void setParticipantId(String participantId) {
-        this.participantId = participantId;
+    public void setStageArn(String stageArn) {
+        this.stageArn = stageArn;
     }
 
     /**
      * <p>
-     * Unique identifier for the participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * Stage ARN.
      * </p>
      * 
-     * @return Unique identifier for the participant. This is assigned by IVS and returned by
-     *         <a>CreateParticipantToken</a>.
+     * @return Stage ARN.
      */
 
-    public String getParticipantId() {
-        return this.participantId;
+    public String getStageArn() {
+        return this.stageArn;
     }
 
     /**
      * <p>
-     * Unique identifier for the participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * Stage ARN.
      * </p>
      * 
-     * @param participantId
-     *        Unique identifier for the participant. This is assigned by IVS and returned by
-     *        <a>CreateParticipantToken</a>.
+     * @param stageArn
+     *        Stage ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetParticipantRequest withParticipantId(String participantId) {
-        setParticipantId(participantId);
+    public GetParticipantRequest withStageArn(String stageArn) {
+        setStageArn(stageArn);
         return this;
     }
 
@@ -129,41 +126,44 @@ public class GetParticipantRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Stage ARN.
+     * Unique identifier for the participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
      * </p>
      * 
-     * @param stageArn
-     *        Stage ARN.
+     * @param participantId
+     *        Unique identifier for the participant. This is assigned by IVS and returned by
+     *        <a>CreateParticipantToken</a>.
      */
 
-    public void setStageArn(String stageArn) {
-        this.stageArn = stageArn;
+    public void setParticipantId(String participantId) {
+        this.participantId = participantId;
     }
 
     /**
      * <p>
-     * Stage ARN.
+     * Unique identifier for the participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
      * </p>
      * 
-     * @return Stage ARN.
+     * @return Unique identifier for the participant. This is assigned by IVS and returned by
+     *         <a>CreateParticipantToken</a>.
      */
 
-    public String getStageArn() {
-        return this.stageArn;
+    public String getParticipantId() {
+        return this.participantId;
     }
 
     /**
      * <p>
-     * Stage ARN.
+     * Unique identifier for the participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
      * </p>
      * 
-     * @param stageArn
-     *        Stage ARN.
+     * @param participantId
+     *        Unique identifier for the participant. This is assigned by IVS and returned by
+     *        <a>CreateParticipantToken</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetParticipantRequest withStageArn(String stageArn) {
-        setStageArn(stageArn);
+    public GetParticipantRequest withParticipantId(String participantId) {
+        setParticipantId(participantId);
         return this;
     }
 
@@ -179,12 +179,12 @@ public class GetParticipantRequest extends com.amazonaws.AmazonWebServiceRequest
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getParticipantId() != null)
-            sb.append("ParticipantId: ").append(getParticipantId()).append(",");
+        if (getStageArn() != null)
+            sb.append("StageArn: ").append(getStageArn()).append(",");
         if (getSessionId() != null)
             sb.append("SessionId: ").append(getSessionId()).append(",");
-        if (getStageArn() != null)
-            sb.append("StageArn: ").append(getStageArn());
+        if (getParticipantId() != null)
+            sb.append("ParticipantId: ").append(getParticipantId());
         sb.append("}");
         return sb.toString();
     }
@@ -199,17 +199,17 @@ public class GetParticipantRequest extends com.amazonaws.AmazonWebServiceRequest
         if (obj instanceof GetParticipantRequest == false)
             return false;
         GetParticipantRequest other = (GetParticipantRequest) obj;
-        if (other.getParticipantId() == null ^ this.getParticipantId() == null)
+        if (other.getStageArn() == null ^ this.getStageArn() == null)
             return false;
-        if (other.getParticipantId() != null && other.getParticipantId().equals(this.getParticipantId()) == false)
+        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
             return false;
         if (other.getSessionId() == null ^ this.getSessionId() == null)
             return false;
         if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
             return false;
-        if (other.getStageArn() == null ^ this.getStageArn() == null)
+        if (other.getParticipantId() == null ^ this.getParticipantId() == null)
             return false;
-        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
+        if (other.getParticipantId() != null && other.getParticipantId().equals(this.getParticipantId()) == false)
             return false;
         return true;
     }
@@ -219,9 +219,9 @@ public class GetParticipantRequest extends com.amazonaws.AmazonWebServiceRequest
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
-        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         hashCode = prime * hashCode + ((getStageArn() == null) ? 0 : getStageArn().hashCode());
+        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
+        hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
         return hashCode;
     }
 

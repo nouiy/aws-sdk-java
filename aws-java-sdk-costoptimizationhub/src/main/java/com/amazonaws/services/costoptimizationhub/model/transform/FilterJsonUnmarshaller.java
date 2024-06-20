@@ -48,17 +48,13 @@ public class FilterJsonUnmarshaller implements Unmarshaller<Filter, JsonUnmarsha
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("accountIds", targetDepth)) {
+                if (context.testExpression("restartNeeded", targetDepth)) {
                     context.nextToken();
-                    filter.setAccountIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
+                    filter.setRestartNeeded(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("actionTypes", targetDepth)) {
+                if (context.testExpression("rollbackPossible", targetDepth)) {
                     context.nextToken();
-                    filter.setActionTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
+                    filter.setRollbackPossible(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("implementationEfforts", targetDepth)) {
                     context.nextToken();
@@ -66,9 +62,9 @@ public class FilterJsonUnmarshaller implements Unmarshaller<Filter, JsonUnmarsha
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("recommendationIds", targetDepth)) {
+                if (context.testExpression("accountIds", targetDepth)) {
                     context.nextToken();
-                    filter.setRecommendationIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+                    filter.setAccountIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
@@ -78,9 +74,21 @@ public class FilterJsonUnmarshaller implements Unmarshaller<Filter, JsonUnmarsha
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("resourceArns", targetDepth)) {
+                if (context.testExpression("resourceTypes", targetDepth)) {
                     context.nextToken();
-                    filter.setResourceArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+                    filter.setResourceTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("actionTypes", targetDepth)) {
+                    context.nextToken();
+                    filter.setActionTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("tags", targetDepth)) {
+                    context.nextToken();
+                    filter.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }
@@ -90,23 +98,15 @@ public class FilterJsonUnmarshaller implements Unmarshaller<Filter, JsonUnmarsha
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("resourceTypes", targetDepth)) {
+                if (context.testExpression("resourceArns", targetDepth)) {
                     context.nextToken();
-                    filter.setResourceTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+                    filter.setResourceArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("restartNeeded", targetDepth)) {
+                if (context.testExpression("recommendationIds", targetDepth)) {
                     context.nextToken();
-                    filter.setRestartNeeded(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("rollbackPossible", targetDepth)) {
-                    context.nextToken();
-                    filter.setRollbackPossible(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("tags", targetDepth)) {
-                    context.nextToken();
-                    filter.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())
+                    filter.setRecommendationIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }

@@ -72,6 +72,8 @@ public enum ExportableAutoScalingGroupField {
     EffectiveRecommendationPreferencesCpuVendorArchitectures("EffectiveRecommendationPreferencesCpuVendorArchitectures"),
     EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics("EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics"),
     EffectiveRecommendationPreferencesInferredWorkloadTypes("EffectiveRecommendationPreferencesInferredWorkloadTypes"),
+    EffectiveRecommendationPreferencesPreferredResources("EffectiveRecommendationPreferencesPreferredResources"),
+    EffectiveRecommendationPreferencesLookBackPeriod("EffectiveRecommendationPreferencesLookBackPeriod"),
     InferredWorkloadTypes("InferredWorkloadTypes"),
     RecommendationOptionsMigrationEffort("RecommendationOptionsMigrationEffort"),
     CurrentInstanceGpuInfo("CurrentInstanceGpuInfo"),
@@ -83,9 +85,7 @@ public enum ExportableAutoScalingGroupField {
     EffectiveRecommendationPreferencesSavingsEstimationMode("EffectiveRecommendationPreferencesSavingsEstimationMode"),
     RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage("RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage"),
     RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts"),
-    RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts"),
-    EffectiveRecommendationPreferencesPreferredResources("EffectiveRecommendationPreferencesPreferredResources"),
-    EffectiveRecommendationPreferencesLookBackPeriod("EffectiveRecommendationPreferencesLookBackPeriod");
+    RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts");
 
     private String value;
 

@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EventMarshaller {
 
-    private static final MarshallingInfo<String> ERRORCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("errorCode").build();
-    private static final MarshallingInfo<java.util.Date> EVENTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eventTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> PARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantId").build();
+    private static final MarshallingInfo<java.util.Date> EVENTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eventTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> REMOTEPARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("remoteParticipantId").build();
+    private static final MarshallingInfo<String> ERRORCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("errorCode").build();
 
     private static final EventMarshaller instance = new EventMarshaller();
 
@@ -54,11 +54,11 @@ public class EventMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(event.getErrorCode(), ERRORCODE_BINDING);
-            protocolMarshaller.marshall(event.getEventTime(), EVENTTIME_BINDING);
             protocolMarshaller.marshall(event.getName(), NAME_BINDING);
             protocolMarshaller.marshall(event.getParticipantId(), PARTICIPANTID_BINDING);
+            protocolMarshaller.marshall(event.getEventTime(), EVENTTIME_BINDING);
             protocolMarshaller.marshall(event.getRemoteParticipantId(), REMOTEPARTICIPANTID_BINDING);
+            protocolMarshaller.marshall(event.getErrorCode(), ERRORCODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

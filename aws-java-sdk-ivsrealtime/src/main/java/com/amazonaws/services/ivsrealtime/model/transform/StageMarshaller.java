@@ -29,14 +29,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StageMarshaller {
 
-    private static final MarshallingInfo<String> ACTIVESESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("activeSessionId").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> ACTIVESESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("activeSessionId").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> AUTOPARTICIPANTRECORDINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoParticipantRecordingConfiguration").build();
 
     private static final StageMarshaller instance = new StageMarshaller();
 
@@ -54,10 +56,11 @@ public class StageMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(stage.getActiveSessionId(), ACTIVESESSIONID_BINDING);
             protocolMarshaller.marshall(stage.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(stage.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(stage.getActiveSessionId(), ACTIVESESSIONID_BINDING);
             protocolMarshaller.marshall(stage.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(stage.getAutoParticipantRecordingConfiguration(), AUTOPARTICIPANTRECORDINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

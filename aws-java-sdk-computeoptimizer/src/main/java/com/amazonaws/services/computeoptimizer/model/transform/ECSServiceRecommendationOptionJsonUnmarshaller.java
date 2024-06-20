@@ -60,6 +60,11 @@ public class ECSServiceRecommendationOptionJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     eCSServiceRecommendationOption.setSavingsOpportunity(SavingsOpportunityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("savingsOpportunityAfterDiscounts", targetDepth)) {
+                    context.nextToken();
+                    eCSServiceRecommendationOption.setSavingsOpportunityAfterDiscounts(ECSSavingsOpportunityAfterDiscountsJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
                 if (context.testExpression("projectedUtilizationMetrics", targetDepth)) {
                     context.nextToken();
                     eCSServiceRecommendationOption.setProjectedUtilizationMetrics(new ListUnmarshaller<ECSServiceProjectedUtilizationMetric>(
@@ -73,11 +78,6 @@ public class ECSServiceRecommendationOptionJsonUnmarshaller implements Unmarshal
                             ContainerRecommendationJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("savingsOpportunityAfterDiscounts", targetDepth)) {
-                    context.nextToken();
-                    eCSServiceRecommendationOption.setSavingsOpportunityAfterDiscounts(ECSSavingsOpportunityAfterDiscountsJsonUnmarshaller.getInstance()
-                            .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

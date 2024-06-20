@@ -836,6 +836,92 @@ public class AWSComputeOptimizerClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Export optimization recommendations for your Amazon Relational Database Service (Amazon RDS).
+     * </p>
+     * <p>
+     * Recommendations are exported in a comma-separated values (CSV) file, and its metadata in a JavaScript Object
+     * Notation (JSON) file, to an existing Amazon Simple Storage Service (Amazon S3) bucket that you specify. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/exporting-recommendations.html">Exporting
+     * Recommendations</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * <p>
+     * You can have only one Amazon RDS export job in progress per Amazon Web Services Region.
+     * </p>
+     * 
+     * @param exportRDSDatabaseRecommendationsRequest
+     * @return Result of the ExportRDSDatabaseRecommendations operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeds a limit of the service.
+     * @sample AWSComputeOptimizer.ExportRDSDatabaseRecommendations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/ExportRDSDatabaseRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ExportRDSDatabaseRecommendationsResult exportRDSDatabaseRecommendations(ExportRDSDatabaseRecommendationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeExportRDSDatabaseRecommendations(request);
+    }
+
+    @SdkInternalApi
+    final ExportRDSDatabaseRecommendationsResult executeExportRDSDatabaseRecommendations(
+            ExportRDSDatabaseRecommendationsRequest exportRDSDatabaseRecommendationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(exportRDSDatabaseRecommendationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ExportRDSDatabaseRecommendationsRequest> request = null;
+        Response<ExportRDSDatabaseRecommendationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ExportRDSDatabaseRecommendationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(exportRDSDatabaseRecommendationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Compute Optimizer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ExportRDSDatabaseRecommendations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ExportRDSDatabaseRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ExportRDSDatabaseRecommendationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns Auto Scaling group recommendations.
      * </p>
      * <p>
@@ -1702,6 +1788,163 @@ public class AWSComputeOptimizerClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<GetLicenseRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetLicenseRecommendationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the projected metrics of Amazon RDS recommendations.
+     * </p>
+     * 
+     * @param getRDSDatabaseRecommendationProjectedMetricsRequest
+     * @return Result of the GetRDSDatabaseRecommendationProjectedMetrics operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSComputeOptimizer.GetRDSDatabaseRecommendationProjectedMetrics
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRDSDatabaseRecommendationProjectedMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetRDSDatabaseRecommendationProjectedMetricsResult getRDSDatabaseRecommendationProjectedMetrics(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRDSDatabaseRecommendationProjectedMetrics(request);
+    }
+
+    @SdkInternalApi
+    final GetRDSDatabaseRecommendationProjectedMetricsResult executeGetRDSDatabaseRecommendationProjectedMetrics(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest getRDSDatabaseRecommendationProjectedMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRDSDatabaseRecommendationProjectedMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRDSDatabaseRecommendationProjectedMetricsRequest> request = null;
+        Response<GetRDSDatabaseRecommendationProjectedMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRDSDatabaseRecommendationProjectedMetricsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getRDSDatabaseRecommendationProjectedMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Compute Optimizer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRDSDatabaseRecommendationProjectedMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRDSDatabaseRecommendationProjectedMetricsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetRDSDatabaseRecommendationProjectedMetricsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns Amazon RDS recommendations.
+     * </p>
+     * <p>
+     * Compute Optimizer generates recommendations for Amazon RDS that meet a specific set of requirements. For more
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param getRDSDatabaseRecommendationsRequest
+     * @return Result of the GetRDSDatabaseRecommendations operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSComputeOptimizer.GetRDSDatabaseRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRDSDatabaseRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetRDSDatabaseRecommendationsResult getRDSDatabaseRecommendations(GetRDSDatabaseRecommendationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRDSDatabaseRecommendations(request);
+    }
+
+    @SdkInternalApi
+    final GetRDSDatabaseRecommendationsResult executeGetRDSDatabaseRecommendations(GetRDSDatabaseRecommendationsRequest getRDSDatabaseRecommendationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRDSDatabaseRecommendationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRDSDatabaseRecommendationsRequest> request = null;
+        Response<GetRDSDatabaseRecommendationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRDSDatabaseRecommendationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getRDSDatabaseRecommendationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Compute Optimizer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRDSDatabaseRecommendations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRDSDatabaseRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetRDSDatabaseRecommendationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

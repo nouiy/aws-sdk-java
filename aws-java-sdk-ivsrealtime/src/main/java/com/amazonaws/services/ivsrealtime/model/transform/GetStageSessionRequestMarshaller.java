@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetStageSessionRequestMarshaller {
 
-    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("sessionId").build();
     private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("stageArn").build();
+    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sessionId").build();
 
     private static final GetStageSessionRequestMarshaller instance = new GetStageSessionRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class GetStageSessionRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(getStageSessionRequest.getSessionId(), SESSIONID_BINDING);
             protocolMarshaller.marshall(getStageSessionRequest.getStageArn(), STAGEARN_BINDING);
+            protocolMarshaller.marshall(getStageSessionRequest.getSessionId(), SESSIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

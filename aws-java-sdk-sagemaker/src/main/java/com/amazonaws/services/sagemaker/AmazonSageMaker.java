@@ -902,11 +902,6 @@ public interface AmazonSageMaker {
      * <p>
      * Create a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param createHubRequest
      * @return Result of the CreateHub operation returned by the service.
@@ -920,6 +915,26 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     CreateHubResult createHub(CreateHubRequest createHubRequest);
+
+    /**
+     * <p>
+     * Create a hub content reference in order to add a model in the JumpStart public hub to a private hub.
+     * </p>
+     * 
+     * @param createHubContentReferenceRequest
+     * @return Result of the CreateHubContentReference operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateHubContentReference
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateHubContentReference"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateHubContentReferenceResult createHubContentReference(CreateHubContentReferenceRequest createHubContentReferenceRequest);
 
     /**
      * <p>
@@ -2342,11 +2357,6 @@ public interface AmazonSageMaker {
      * <p>
      * Delete a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param deleteHubRequest
      * @return Result of the DeleteHub operation returned by the service.
@@ -2364,11 +2374,6 @@ public interface AmazonSageMaker {
      * <p>
      * Delete the contents of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param deleteHubContentRequest
      * @return Result of the DeleteHubContent operation returned by the service.
@@ -2381,6 +2386,21 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     DeleteHubContentResult deleteHubContent(DeleteHubContentRequest deleteHubContentRequest);
+
+    /**
+     * <p>
+     * Delete a hub content reference in order to remove a model from a private hub.
+     * </p>
+     * 
+     * @param deleteHubContentReferenceRequest
+     * @return Result of the DeleteHubContentReference operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DeleteHubContentReference
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteHubContentReference"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteHubContentReferenceResult deleteHubContentReference(DeleteHubContentReferenceRequest deleteHubContentReferenceRequest);
 
     /**
      * <p>
@@ -3263,13 +3283,8 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * Describe a hub.
+     * Describes a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param describeHubRequest
      * @return Result of the DescribeHub operation returned by the service.
@@ -3285,11 +3300,6 @@ public interface AmazonSageMaker {
      * <p>
      * Describe the content of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param describeHubContentRequest
      * @return Result of the DescribeHubContent operation returned by the service.
@@ -4014,11 +4024,6 @@ public interface AmazonSageMaker {
      * <p>
      * Import hub content.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param importHubContentRequest
      * @return Result of the ImportHubContent operation returned by the service.
@@ -4387,11 +4392,6 @@ public interface AmazonSageMaker {
      * <p>
      * List hub content versions.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubContentVersionsRequest
      * @return Result of the ListHubContentVersions operation returned by the service.
@@ -4407,11 +4407,6 @@ public interface AmazonSageMaker {
      * <p>
      * List the contents of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubContentsRequest
      * @return Result of the ListHubContents operation returned by the service.
@@ -4427,11 +4422,6 @@ public interface AmazonSageMaker {
      * <p>
      * List all existing hubs.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubsRequest
      * @return Result of the ListHubs operation returned by the service.
@@ -6022,11 +6012,6 @@ public interface AmazonSageMaker {
      * <p>
      * Update a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param updateHubRequest
      * @return Result of the UpdateHub operation returned by the service.

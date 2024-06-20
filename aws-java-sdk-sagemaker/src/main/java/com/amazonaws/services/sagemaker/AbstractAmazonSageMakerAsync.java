@@ -379,6 +379,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateHubContentReferenceResult> createHubContentReferenceAsync(CreateHubContentReferenceRequest request) {
+
+        return createHubContentReferenceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateHubContentReferenceResult> createHubContentReferenceAsync(CreateHubContentReferenceRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateHubContentReferenceRequest, CreateHubContentReferenceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateHumanTaskUiResult> createHumanTaskUiAsync(CreateHumanTaskUiRequest request) {
 
         return createHumanTaskUiAsync(request, null);
@@ -1127,6 +1140,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<DeleteHubContentResult> deleteHubContentAsync(DeleteHubContentRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteHubContentRequest, DeleteHubContentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteHubContentReferenceResult> deleteHubContentReferenceAsync(DeleteHubContentReferenceRequest request) {
+
+        return deleteHubContentReferenceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteHubContentReferenceResult> deleteHubContentReferenceAsync(DeleteHubContentReferenceRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteHubContentReferenceRequest, DeleteHubContentReferenceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -362,6 +362,41 @@ public class AWSComputeOptimizerAsyncClient extends AWSComputeOptimizerClient im
     }
 
     @Override
+    public java.util.concurrent.Future<ExportRDSDatabaseRecommendationsResult> exportRDSDatabaseRecommendationsAsync(
+            ExportRDSDatabaseRecommendationsRequest request) {
+
+        return exportRDSDatabaseRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExportRDSDatabaseRecommendationsResult> exportRDSDatabaseRecommendationsAsync(
+            final ExportRDSDatabaseRecommendationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ExportRDSDatabaseRecommendationsRequest, ExportRDSDatabaseRecommendationsResult> asyncHandler) {
+        final ExportRDSDatabaseRecommendationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ExportRDSDatabaseRecommendationsResult>() {
+            @Override
+            public ExportRDSDatabaseRecommendationsResult call() throws Exception {
+                ExportRDSDatabaseRecommendationsResult result = null;
+
+                try {
+                    result = executeExportRDSDatabaseRecommendations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAutoScalingGroupRecommendationsResult> getAutoScalingGroupRecommendationsAsync(
             GetAutoScalingGroupRecommendationsRequest request) {
 
@@ -722,6 +757,75 @@ public class AWSComputeOptimizerAsyncClient extends AWSComputeOptimizerClient im
 
                 try {
                     result = executeGetLicenseRecommendations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRDSDatabaseRecommendationProjectedMetricsResult> getRDSDatabaseRecommendationProjectedMetricsAsync(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest request) {
+
+        return getRDSDatabaseRecommendationProjectedMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRDSDatabaseRecommendationProjectedMetricsResult> getRDSDatabaseRecommendationProjectedMetricsAsync(
+            final GetRDSDatabaseRecommendationProjectedMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRDSDatabaseRecommendationProjectedMetricsRequest, GetRDSDatabaseRecommendationProjectedMetricsResult> asyncHandler) {
+        final GetRDSDatabaseRecommendationProjectedMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRDSDatabaseRecommendationProjectedMetricsResult>() {
+            @Override
+            public GetRDSDatabaseRecommendationProjectedMetricsResult call() throws Exception {
+                GetRDSDatabaseRecommendationProjectedMetricsResult result = null;
+
+                try {
+                    result = executeGetRDSDatabaseRecommendationProjectedMetrics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRDSDatabaseRecommendationsResult> getRDSDatabaseRecommendationsAsync(GetRDSDatabaseRecommendationsRequest request) {
+
+        return getRDSDatabaseRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRDSDatabaseRecommendationsResult> getRDSDatabaseRecommendationsAsync(
+            final GetRDSDatabaseRecommendationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRDSDatabaseRecommendationsRequest, GetRDSDatabaseRecommendationsResult> asyncHandler) {
+        final GetRDSDatabaseRecommendationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRDSDatabaseRecommendationsResult>() {
+            @Override
+            public GetRDSDatabaseRecommendationsResult call() throws Exception {
+                GetRDSDatabaseRecommendationsResult result = null;
+
+                try {
+                    result = executeGetRDSDatabaseRecommendations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

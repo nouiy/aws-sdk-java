@@ -52,17 +52,17 @@ public class AccountEnrollmentStatusJsonUnmarshaller implements Unmarshaller<Acc
                     context.nextToken();
                     accountEnrollmentStatus.setAccountId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createdTimestamp", targetDepth)) {
+                if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
-                    accountEnrollmentStatus.setCreatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                    accountEnrollmentStatus.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("lastUpdatedTimestamp", targetDepth)) {
                     context.nextToken();
                     accountEnrollmentStatus.setLastUpdatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
-                if (context.testExpression("status", targetDepth)) {
+                if (context.testExpression("createdTimestamp", targetDepth)) {
                     context.nextToken();
-                    accountEnrollmentStatus.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                    accountEnrollmentStatus.setCreatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

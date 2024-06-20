@@ -31,6 +31,8 @@ public class ContentBlockMarshaller {
             .marshallLocationName("text").build();
     private static final MarshallingInfo<StructuredPojo> IMAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("image").build();
+    private static final MarshallingInfo<StructuredPojo> DOCUMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("document").build();
     private static final MarshallingInfo<StructuredPojo> TOOLRESULT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("toolResult").build();
     private static final MarshallingInfo<StructuredPojo> GUARDCONTENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -54,6 +56,7 @@ public class ContentBlockMarshaller {
         try {
             protocolMarshaller.marshall(contentBlock.getText(), TEXT_BINDING);
             protocolMarshaller.marshall(contentBlock.getImage(), IMAGE_BINDING);
+            protocolMarshaller.marshall(contentBlock.getDocument(), DOCUMENT_BINDING);
             protocolMarshaller.marshall(contentBlock.getToolResult(), TOOLRESULT_BINDING);
             protocolMarshaller.marshall(contentBlock.getGuardContent(), GUARDCONTENT_BINDING);
         } catch (Exception e) {

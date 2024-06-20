@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class VideoMarshaller {
 
-    private static final MarshallingInfo<Integer> BITRATE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("bitrate").build();
-    private static final MarshallingInfo<Float> FRAMERATE_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("framerate").build();
-    private static final MarshallingInfo<Integer> HEIGHT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("height").build();
     private static final MarshallingInfo<Integer> WIDTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("width").build();
+    private static final MarshallingInfo<Integer> HEIGHT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("height").build();
+    private static final MarshallingInfo<Float> FRAMERATE_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("framerate").build();
+    private static final MarshallingInfo<Integer> BITRATE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("bitrate").build();
 
     private static final VideoMarshaller instance = new VideoMarshaller();
 
@@ -52,10 +52,10 @@ public class VideoMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(video.getBitrate(), BITRATE_BINDING);
-            protocolMarshaller.marshall(video.getFramerate(), FRAMERATE_BINDING);
-            protocolMarshaller.marshall(video.getHeight(), HEIGHT_BINDING);
             protocolMarshaller.marshall(video.getWidth(), WIDTH_BINDING);
+            protocolMarshaller.marshall(video.getHeight(), HEIGHT_BINDING);
+            protocolMarshaller.marshall(video.getFramerate(), FRAMERATE_BINDING);
+            protocolMarshaller.marshall(video.getBitrate(), BITRATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

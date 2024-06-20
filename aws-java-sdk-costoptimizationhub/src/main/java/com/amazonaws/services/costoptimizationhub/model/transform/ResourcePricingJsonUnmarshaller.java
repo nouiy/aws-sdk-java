@@ -48,21 +48,21 @@ public class ResourcePricingJsonUnmarshaller implements Unmarshaller<ResourcePri
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("estimatedCostAfterDiscounts", targetDepth)) {
-                    context.nextToken();
-                    resourcePricing.setEstimatedCostAfterDiscounts(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
                 if (context.testExpression("estimatedCostBeforeDiscounts", targetDepth)) {
                     context.nextToken();
                     resourcePricing.setEstimatedCostBeforeDiscounts(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("estimatedNetUnusedAmortizedCommitments", targetDepth)) {
+                    context.nextToken();
+                    resourcePricing.setEstimatedNetUnusedAmortizedCommitments(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
                 if (context.testExpression("estimatedDiscounts", targetDepth)) {
                     context.nextToken();
                     resourcePricing.setEstimatedDiscounts(EstimatedDiscountsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("estimatedNetUnusedAmortizedCommitments", targetDepth)) {
+                if (context.testExpression("estimatedCostAfterDiscounts", targetDepth)) {
                     context.nextToken();
-                    resourcePricing.setEstimatedNetUnusedAmortizedCommitments(context.getUnmarshaller(Double.class).unmarshall(context));
+                    resourcePricing.setEstimatedCostAfterDiscounts(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

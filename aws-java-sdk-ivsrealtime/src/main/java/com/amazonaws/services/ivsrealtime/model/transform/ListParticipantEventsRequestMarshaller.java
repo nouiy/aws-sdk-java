@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListParticipantEventsRequestMarshaller {
 
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
-    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("nextToken").build();
-    private static final MarshallingInfo<String> PARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantId").build();
-    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("sessionId").build();
     private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("stageArn").build();
+    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sessionId").build();
+    private static final MarshallingInfo<String> PARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantId").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
 
     private static final ListParticipantEventsRequestMarshaller instance = new ListParticipantEventsRequestMarshaller();
 
@@ -54,11 +54,11 @@ public class ListParticipantEventsRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listParticipantEventsRequest.getMaxResults(), MAXRESULTS_BINDING);
-            protocolMarshaller.marshall(listParticipantEventsRequest.getNextToken(), NEXTTOKEN_BINDING);
-            protocolMarshaller.marshall(listParticipantEventsRequest.getParticipantId(), PARTICIPANTID_BINDING);
-            protocolMarshaller.marshall(listParticipantEventsRequest.getSessionId(), SESSIONID_BINDING);
             protocolMarshaller.marshall(listParticipantEventsRequest.getStageArn(), STAGEARN_BINDING);
+            protocolMarshaller.marshall(listParticipantEventsRequest.getSessionId(), SESSIONID_BINDING);
+            protocolMarshaller.marshall(listParticipantEventsRequest.getParticipantId(), PARTICIPANTID_BINDING);
+            protocolMarshaller.marshall(listParticipantEventsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listParticipantEventsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

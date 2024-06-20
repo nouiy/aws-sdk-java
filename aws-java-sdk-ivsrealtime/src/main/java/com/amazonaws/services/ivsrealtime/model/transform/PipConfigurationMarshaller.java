@@ -29,24 +29,24 @@ public class PipConfigurationMarshaller {
 
     private static final MarshallingInfo<String> FEATUREDPARTICIPANTATTRIBUTE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("featuredParticipantAttribute").build();
-    private static final MarshallingInfo<Integer> GRIDGAP_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("gridGap").build();
     private static final MarshallingInfo<Boolean> OMITSTOPPEDVIDEO_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("omitStoppedVideo").build();
-    private static final MarshallingInfo<String> PIPBEHAVIOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipBehavior").build();
-    private static final MarshallingInfo<Integer> PIPHEIGHT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipHeight").build();
-    private static final MarshallingInfo<Integer> PIPOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipOffset").build();
+    private static final MarshallingInfo<String> VIDEOFILLMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("videoFillMode").build();
+    private static final MarshallingInfo<Integer> GRIDGAP_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("gridGap").build();
     private static final MarshallingInfo<String> PIPPARTICIPANTATTRIBUTE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipParticipantAttribute").build();
+    private static final MarshallingInfo<String> PIPBEHAVIOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipBehavior").build();
+    private static final MarshallingInfo<Integer> PIPOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipOffset").build();
     private static final MarshallingInfo<String> PIPPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipPosition").build();
     private static final MarshallingInfo<Integer> PIPWIDTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipWidth").build();
-    private static final MarshallingInfo<String> VIDEOFILLMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("videoFillMode").build();
+    private static final MarshallingInfo<Integer> PIPHEIGHT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipHeight").build();
 
     private static final PipConfigurationMarshaller instance = new PipConfigurationMarshaller();
 
@@ -65,15 +65,15 @@ public class PipConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(pipConfiguration.getFeaturedParticipantAttribute(), FEATUREDPARTICIPANTATTRIBUTE_BINDING);
-            protocolMarshaller.marshall(pipConfiguration.getGridGap(), GRIDGAP_BINDING);
             protocolMarshaller.marshall(pipConfiguration.getOmitStoppedVideo(), OMITSTOPPEDVIDEO_BINDING);
-            protocolMarshaller.marshall(pipConfiguration.getPipBehavior(), PIPBEHAVIOR_BINDING);
-            protocolMarshaller.marshall(pipConfiguration.getPipHeight(), PIPHEIGHT_BINDING);
-            protocolMarshaller.marshall(pipConfiguration.getPipOffset(), PIPOFFSET_BINDING);
+            protocolMarshaller.marshall(pipConfiguration.getVideoFillMode(), VIDEOFILLMODE_BINDING);
+            protocolMarshaller.marshall(pipConfiguration.getGridGap(), GRIDGAP_BINDING);
             protocolMarshaller.marshall(pipConfiguration.getPipParticipantAttribute(), PIPPARTICIPANTATTRIBUTE_BINDING);
+            protocolMarshaller.marshall(pipConfiguration.getPipBehavior(), PIPBEHAVIOR_BINDING);
+            protocolMarshaller.marshall(pipConfiguration.getPipOffset(), PIPOFFSET_BINDING);
             protocolMarshaller.marshall(pipConfiguration.getPipPosition(), PIPPOSITION_BINDING);
             protocolMarshaller.marshall(pipConfiguration.getPipWidth(), PIPWIDTH_BINDING);
-            protocolMarshaller.marshall(pipConfiguration.getVideoFillMode(), VIDEOFILLMODE_BINDING);
+            protocolMarshaller.marshall(pipConfiguration.getPipHeight(), PIPHEIGHT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

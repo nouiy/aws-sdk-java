@@ -30,6 +30,12 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
+     * Name that can be specified to help identify the destination.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
      * An IVS channel to be used for broadcasting, for server-side composition. Either a <code>channel</code> or an
      * <code>s3</code> must be specified.
      * </p>
@@ -37,17 +43,51 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
     private ChannelDestinationConfiguration channel;
     /**
      * <p>
-     * Name that can be specified to help identify the destination.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
      * An S3 storage configuration to be used for recording video data. Either a <code>channel</code> or an
      * <code>s3</code> must be specified.
      * </p>
      */
     private S3DestinationConfiguration s3;
+
+    /**
+     * <p>
+     * Name that can be specified to help identify the destination.
+     * </p>
+     * 
+     * @param name
+     *        Name that can be specified to help identify the destination.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Name that can be specified to help identify the destination.
+     * </p>
+     * 
+     * @return Name that can be specified to help identify the destination.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Name that can be specified to help identify the destination.
+     * </p>
+     * 
+     * @param name
+     *        Name that can be specified to help identify the destination.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationConfiguration withName(String name) {
+        setName(name);
+        return this;
+    }
 
     /**
      * <p>
@@ -92,46 +132,6 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
 
     public DestinationConfiguration withChannel(ChannelDestinationConfiguration channel) {
         setChannel(channel);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Name that can be specified to help identify the destination.
-     * </p>
-     * 
-     * @param name
-     *        Name that can be specified to help identify the destination.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * Name that can be specified to help identify the destination.
-     * </p>
-     * 
-     * @return Name that can be specified to help identify the destination.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * Name that can be specified to help identify the destination.
-     * </p>
-     * 
-     * @param name
-     *        Name that can be specified to help identify the destination.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DestinationConfiguration withName(String name) {
-        setName(name);
         return this;
     }
 
@@ -193,10 +193,10 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getChannel() != null)
-            sb.append("Channel: ").append(getChannel()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getChannel() != null)
+            sb.append("Channel: ").append(getChannel()).append(",");
         if (getS3() != null)
             sb.append("S3: ").append(getS3());
         sb.append("}");
@@ -213,13 +213,13 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
         if (obj instanceof DestinationConfiguration == false)
             return false;
         DestinationConfiguration other = (DestinationConfiguration) obj;
-        if (other.getChannel() == null ^ this.getChannel() == null)
-            return false;
-        if (other.getChannel() != null && other.getChannel().equals(this.getChannel()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getChannel() == null ^ this.getChannel() == null)
+            return false;
+        if (other.getChannel() != null && other.getChannel().equals(this.getChannel()) == false)
             return false;
         if (other.getS3() == null ^ this.getS3() == null)
             return false;
@@ -233,8 +233,8 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getChannel() == null) ? 0 : getChannel().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getChannel() == null) ? 0 : getChannel().hashCode());
         hashCode = prime * hashCode + ((getS3() == null) ? 0 : getS3().hashCode());
         return hashCode;
     }

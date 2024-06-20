@@ -27,10 +27,10 @@ public class StartCompositionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Array of destination configuration.
+     * ARN of the stage to be used for compositing.
      * </p>
      */
-    private java.util.List<DestinationConfiguration> destinations;
+    private String stageArn;
     /**
      * <p>
      * Idempotency token.
@@ -45,10 +45,10 @@ public class StartCompositionRequest extends com.amazonaws.AmazonWebServiceReque
     private LayoutConfiguration layout;
     /**
      * <p>
-     * ARN of the stage to be used for compositing.
+     * Array of destination configuration.
      * </p>
      */
-    private String stageArn;
+    private java.util.List<DestinationConfiguration> destinations;
     /**
      * <p>
      * Tags attached to the resource. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
@@ -61,71 +61,41 @@ public class StartCompositionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Array of destination configuration.
+     * ARN of the stage to be used for compositing.
      * </p>
      * 
-     * @return Array of destination configuration.
+     * @param stageArn
+     *        ARN of the stage to be used for compositing.
      */
 
-    public java.util.List<DestinationConfiguration> getDestinations() {
-        return destinations;
+    public void setStageArn(String stageArn) {
+        this.stageArn = stageArn;
     }
 
     /**
      * <p>
-     * Array of destination configuration.
+     * ARN of the stage to be used for compositing.
      * </p>
      * 
-     * @param destinations
-     *        Array of destination configuration.
+     * @return ARN of the stage to be used for compositing.
      */
 
-    public void setDestinations(java.util.Collection<DestinationConfiguration> destinations) {
-        if (destinations == null) {
-            this.destinations = null;
-            return;
-        }
-
-        this.destinations = new java.util.ArrayList<DestinationConfiguration>(destinations);
+    public String getStageArn() {
+        return this.stageArn;
     }
 
     /**
      * <p>
-     * Array of destination configuration.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setDestinations(java.util.Collection)} or {@link #withDestinations(java.util.Collection)} if you want to
-     * override the existing values.
+     * ARN of the stage to be used for compositing.
      * </p>
      * 
-     * @param destinations
-     *        Array of destination configuration.
+     * @param stageArn
+     *        ARN of the stage to be used for compositing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StartCompositionRequest withDestinations(DestinationConfiguration... destinations) {
-        if (this.destinations == null) {
-            setDestinations(new java.util.ArrayList<DestinationConfiguration>(destinations.length));
-        }
-        for (DestinationConfiguration ele : destinations) {
-            this.destinations.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * Array of destination configuration.
-     * </p>
-     * 
-     * @param destinations
-     *        Array of destination configuration.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StartCompositionRequest withDestinations(java.util.Collection<DestinationConfiguration> destinations) {
-        setDestinations(destinations);
+    public StartCompositionRequest withStageArn(String stageArn) {
+        setStageArn(stageArn);
         return this;
     }
 
@@ -211,41 +181,71 @@ public class StartCompositionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * ARN of the stage to be used for compositing.
+     * Array of destination configuration.
      * </p>
      * 
-     * @param stageArn
-     *        ARN of the stage to be used for compositing.
+     * @return Array of destination configuration.
      */
 
-    public void setStageArn(String stageArn) {
-        this.stageArn = stageArn;
+    public java.util.List<DestinationConfiguration> getDestinations() {
+        return destinations;
     }
 
     /**
      * <p>
-     * ARN of the stage to be used for compositing.
+     * Array of destination configuration.
      * </p>
      * 
-     * @return ARN of the stage to be used for compositing.
+     * @param destinations
+     *        Array of destination configuration.
      */
 
-    public String getStageArn() {
-        return this.stageArn;
+    public void setDestinations(java.util.Collection<DestinationConfiguration> destinations) {
+        if (destinations == null) {
+            this.destinations = null;
+            return;
+        }
+
+        this.destinations = new java.util.ArrayList<DestinationConfiguration>(destinations);
     }
 
     /**
      * <p>
-     * ARN of the stage to be used for compositing.
+     * Array of destination configuration.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDestinations(java.util.Collection)} or {@link #withDestinations(java.util.Collection)} if you want to
+     * override the existing values.
      * </p>
      * 
-     * @param stageArn
-     *        ARN of the stage to be used for compositing.
+     * @param destinations
+     *        Array of destination configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StartCompositionRequest withStageArn(String stageArn) {
-        setStageArn(stageArn);
+    public StartCompositionRequest withDestinations(DestinationConfiguration... destinations) {
+        if (this.destinations == null) {
+            setDestinations(new java.util.ArrayList<DestinationConfiguration>(destinations.length));
+        }
+        for (DestinationConfiguration ele : destinations) {
+            this.destinations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Array of destination configuration.
+     * </p>
+     * 
+     * @param destinations
+     *        Array of destination configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartCompositionRequest withDestinations(java.util.Collection<DestinationConfiguration> destinations) {
+        setDestinations(destinations);
         return this;
     }
 
@@ -347,14 +347,14 @@ public class StartCompositionRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDestinations() != null)
-            sb.append("Destinations: ").append(getDestinations()).append(",");
+        if (getStageArn() != null)
+            sb.append("StageArn: ").append(getStageArn()).append(",");
         if (getIdempotencyToken() != null)
             sb.append("IdempotencyToken: ").append(getIdempotencyToken()).append(",");
         if (getLayout() != null)
             sb.append("Layout: ").append(getLayout()).append(",");
-        if (getStageArn() != null)
-            sb.append("StageArn: ").append(getStageArn()).append(",");
+        if (getDestinations() != null)
+            sb.append("Destinations: ").append(getDestinations()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -371,9 +371,9 @@ public class StartCompositionRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof StartCompositionRequest == false)
             return false;
         StartCompositionRequest other = (StartCompositionRequest) obj;
-        if (other.getDestinations() == null ^ this.getDestinations() == null)
+        if (other.getStageArn() == null ^ this.getStageArn() == null)
             return false;
-        if (other.getDestinations() != null && other.getDestinations().equals(this.getDestinations()) == false)
+        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
             return false;
         if (other.getIdempotencyToken() == null ^ this.getIdempotencyToken() == null)
             return false;
@@ -383,9 +383,9 @@ public class StartCompositionRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getLayout() != null && other.getLayout().equals(this.getLayout()) == false)
             return false;
-        if (other.getStageArn() == null ^ this.getStageArn() == null)
+        if (other.getDestinations() == null ^ this.getDestinations() == null)
             return false;
-        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
+        if (other.getDestinations() != null && other.getDestinations().equals(this.getDestinations()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -399,10 +399,10 @@ public class StartCompositionRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDestinations() == null) ? 0 : getDestinations().hashCode());
+        hashCode = prime * hashCode + ((getStageArn() == null) ? 0 : getStageArn().hashCode());
         hashCode = prime * hashCode + ((getIdempotencyToken() == null) ? 0 : getIdempotencyToken().hashCode());
         hashCode = prime * hashCode + ((getLayout() == null) ? 0 : getLayout().hashCode());
-        hashCode = prime * hashCode + ((getStageArn() == null) ? 0 : getStageArn().hashCode());
+        hashCode = prime * hashCode + ((getDestinations() == null) ? 0 : getDestinations().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

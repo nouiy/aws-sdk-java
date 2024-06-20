@@ -1692,11 +1692,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Create a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param createHubRequest
      * @return A Java Future containing the result of the CreateHub operation returned by the service.
@@ -1710,11 +1705,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Create a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param createHubRequest
      * @param asyncHandler
@@ -1728,6 +1718,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<CreateHubResult> createHubAsync(CreateHubRequest createHubRequest,
             com.amazonaws.handlers.AsyncHandler<CreateHubRequest, CreateHubResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create a hub content reference in order to add a model in the JumpStart public hub to a private hub.
+     * </p>
+     * 
+     * @param createHubContentReferenceRequest
+     * @return A Java Future containing the result of the CreateHubContentReference operation returned by the service.
+     * @sample AmazonSageMakerAsync.CreateHubContentReference
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateHubContentReference"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateHubContentReferenceResult> createHubContentReferenceAsync(
+            CreateHubContentReferenceRequest createHubContentReferenceRequest);
+
+    /**
+     * <p>
+     * Create a hub content reference in order to add a model in the JumpStart public hub to a private hub.
+     * </p>
+     * 
+     * @param createHubContentReferenceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateHubContentReference operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.CreateHubContentReference
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateHubContentReference"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateHubContentReferenceResult> createHubContentReferenceAsync(
+            CreateHubContentReferenceRequest createHubContentReferenceRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateHubContentReferenceRequest, CreateHubContentReferenceResult> asyncHandler);
 
     /**
      * <p>
@@ -4478,11 +4501,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Delete a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param deleteHubRequest
      * @return A Java Future containing the result of the DeleteHub operation returned by the service.
@@ -4496,11 +4514,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Delete a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param deleteHubRequest
      * @param asyncHandler
@@ -4519,11 +4532,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Delete the contents of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param deleteHubContentRequest
      * @return A Java Future containing the result of the DeleteHubContent operation returned by the service.
@@ -4537,11 +4545,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Delete the contents of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param deleteHubContentRequest
      * @param asyncHandler
@@ -4555,6 +4558,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<DeleteHubContentResult> deleteHubContentAsync(DeleteHubContentRequest deleteHubContentRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteHubContentRequest, DeleteHubContentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete a hub content reference in order to remove a model from a private hub.
+     * </p>
+     * 
+     * @param deleteHubContentReferenceRequest
+     * @return A Java Future containing the result of the DeleteHubContentReference operation returned by the service.
+     * @sample AmazonSageMakerAsync.DeleteHubContentReference
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteHubContentReference"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteHubContentReferenceResult> deleteHubContentReferenceAsync(
+            DeleteHubContentReferenceRequest deleteHubContentReferenceRequest);
+
+    /**
+     * <p>
+     * Delete a hub content reference in order to remove a model from a private hub.
+     * </p>
+     * 
+     * @param deleteHubContentReferenceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteHubContentReference operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DeleteHubContentReference
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteHubContentReference"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteHubContentReferenceResult> deleteHubContentReferenceAsync(
+            DeleteHubContentReferenceRequest deleteHubContentReferenceRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteHubContentReferenceRequest, DeleteHubContentReferenceResult> asyncHandler);
 
     /**
      * <p>
@@ -6407,13 +6443,8 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Describe a hub.
+     * Describes a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param describeHubRequest
      * @return A Java Future containing the result of the DescribeHub operation returned by the service.
@@ -6425,13 +6456,8 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Describe a hub.
+     * Describes a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param describeHubRequest
      * @param asyncHandler
@@ -6450,11 +6476,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Describe the content of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param describeHubContentRequest
      * @return A Java Future containing the result of the DescribeHubContent operation returned by the service.
@@ -6468,11 +6489,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Describe the content of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param describeHubContentRequest
      * @param asyncHandler
@@ -8066,11 +8082,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Import hub content.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param importHubContentRequest
      * @return A Java Future containing the result of the ImportHubContent operation returned by the service.
@@ -8084,11 +8095,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Import hub content.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param importHubContentRequest
      * @param asyncHandler
@@ -8906,11 +8912,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * List hub content versions.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubContentVersionsRequest
      * @return A Java Future containing the result of the ListHubContentVersions operation returned by the service.
@@ -8924,11 +8925,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * List hub content versions.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubContentVersionsRequest
      * @param asyncHandler
@@ -8947,11 +8943,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * List the contents of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubContentsRequest
      * @return A Java Future containing the result of the ListHubContents operation returned by the service.
@@ -8965,11 +8956,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * List the contents of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubContentsRequest
      * @param asyncHandler
@@ -8988,11 +8974,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * List all existing hubs.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubsRequest
      * @return A Java Future containing the result of the ListHubs operation returned by the service.
@@ -9006,11 +8987,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * List all existing hubs.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubsRequest
      * @param asyncHandler
@@ -12345,11 +12321,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Update a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param updateHubRequest
      * @return A Java Future containing the result of the UpdateHub operation returned by the service.
@@ -12363,11 +12334,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Update a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param updateHubRequest
      * @param asyncHandler

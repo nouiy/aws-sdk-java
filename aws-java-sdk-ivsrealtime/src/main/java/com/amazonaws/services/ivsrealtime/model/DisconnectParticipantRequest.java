@@ -27,6 +27,12 @@ public class DisconnectParticipantRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
+     * ARN of the stage to which the participant is attached.
+     * </p>
+     */
+    private String stageArn;
+    /**
+     * <p>
      * Identifier of the participant to be disconnected. This is assigned by IVS and returned by
      * <a>CreateParticipantToken</a>.
      * </p>
@@ -38,12 +44,46 @@ public class DisconnectParticipantRequest extends com.amazonaws.AmazonWebService
      * </p>
      */
     private String reason;
+
     /**
      * <p>
      * ARN of the stage to which the participant is attached.
      * </p>
+     * 
+     * @param stageArn
+     *        ARN of the stage to which the participant is attached.
      */
-    private String stageArn;
+
+    public void setStageArn(String stageArn) {
+        this.stageArn = stageArn;
+    }
+
+    /**
+     * <p>
+     * ARN of the stage to which the participant is attached.
+     * </p>
+     * 
+     * @return ARN of the stage to which the participant is attached.
+     */
+
+    public String getStageArn() {
+        return this.stageArn;
+    }
+
+    /**
+     * <p>
+     * ARN of the stage to which the participant is attached.
+     * </p>
+     * 
+     * @param stageArn
+     *        ARN of the stage to which the participant is attached.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DisconnectParticipantRequest withStageArn(String stageArn) {
+        setStageArn(stageArn);
+        return this;
+    }
 
     /**
      * <p>
@@ -132,46 +172,6 @@ public class DisconnectParticipantRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p>
-     * ARN of the stage to which the participant is attached.
-     * </p>
-     * 
-     * @param stageArn
-     *        ARN of the stage to which the participant is attached.
-     */
-
-    public void setStageArn(String stageArn) {
-        this.stageArn = stageArn;
-    }
-
-    /**
-     * <p>
-     * ARN of the stage to which the participant is attached.
-     * </p>
-     * 
-     * @return ARN of the stage to which the participant is attached.
-     */
-
-    public String getStageArn() {
-        return this.stageArn;
-    }
-
-    /**
-     * <p>
-     * ARN of the stage to which the participant is attached.
-     * </p>
-     * 
-     * @param stageArn
-     *        ARN of the stage to which the participant is attached.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DisconnectParticipantRequest withStageArn(String stageArn) {
-        setStageArn(stageArn);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -183,12 +183,12 @@ public class DisconnectParticipantRequest extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getStageArn() != null)
+            sb.append("StageArn: ").append(getStageArn()).append(",");
         if (getParticipantId() != null)
             sb.append("ParticipantId: ").append(getParticipantId()).append(",");
         if (getReason() != null)
-            sb.append("Reason: ").append(getReason()).append(",");
-        if (getStageArn() != null)
-            sb.append("StageArn: ").append(getStageArn());
+            sb.append("Reason: ").append(getReason());
         sb.append("}");
         return sb.toString();
     }
@@ -203,6 +203,10 @@ public class DisconnectParticipantRequest extends com.amazonaws.AmazonWebService
         if (obj instanceof DisconnectParticipantRequest == false)
             return false;
         DisconnectParticipantRequest other = (DisconnectParticipantRequest) obj;
+        if (other.getStageArn() == null ^ this.getStageArn() == null)
+            return false;
+        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
+            return false;
         if (other.getParticipantId() == null ^ this.getParticipantId() == null)
             return false;
         if (other.getParticipantId() != null && other.getParticipantId().equals(this.getParticipantId()) == false)
@@ -210,10 +214,6 @@ public class DisconnectParticipantRequest extends com.amazonaws.AmazonWebService
         if (other.getReason() == null ^ this.getReason() == null)
             return false;
         if (other.getReason() != null && other.getReason().equals(this.getReason()) == false)
-            return false;
-        if (other.getStageArn() == null ^ this.getStageArn() == null)
-            return false;
-        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
             return false;
         return true;
     }
@@ -223,9 +223,9 @@ public class DisconnectParticipantRequest extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getStageArn() == null) ? 0 : getStageArn().hashCode());
         hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
         hashCode = prime * hashCode + ((getReason() == null) ? 0 : getReason().hashCode());
-        hashCode = prime * hashCode + ((getStageArn() == null) ? 0 : getStageArn().hashCode());
         return hashCode;
     }
 

@@ -26,7 +26,8 @@ public enum PackageFormat {
     Nuget("nuget"),
     Generic("generic"),
     Ruby("ruby"),
-    Swift("swift");
+    Swift("swift"),
+    Cargo("cargo");
 
     private String value;
 

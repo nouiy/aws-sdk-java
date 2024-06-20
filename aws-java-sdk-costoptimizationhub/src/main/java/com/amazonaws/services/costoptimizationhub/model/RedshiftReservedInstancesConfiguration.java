@@ -37,10 +37,34 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
     private String accountScope;
     /**
      * <p>
-     * Determines whether the recommendation is for a current generation instance.
+     * The service that you want your recommendations for.
      * </p>
      */
-    private String currentGeneration;
+    private String service;
+    /**
+     * <p>
+     * The number of normalized units that Amazon Web Services recommends that you purchase.
+     * </p>
+     */
+    private String normalizedUnitsToPurchase;
+    /**
+     * <p>
+     * The reserved instances recommendation term in years.
+     * </p>
+     */
+    private String term;
+    /**
+     * <p>
+     * The payment option for the commitment.
+     * </p>
+     */
+    private String paymentOption;
+    /**
+     * <p>
+     * The number of instances that Amazon Web Services recommends that you purchase.
+     * </p>
+     */
+    private String numberOfInstancesToPurchase;
     /**
      * <p>
      * The instance family of the recommended reservation.
@@ -55,40 +79,10 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
     private String instanceType;
     /**
      * <p>
-     * How much purchasing reserved instances costs you on a monthly basis.
-     * </p>
-     */
-    private String monthlyRecurringCost;
-    /**
-     * <p>
-     * The number of normalized units that Amazon Web Services recommends that you purchase.
-     * </p>
-     */
-    private String normalizedUnitsToPurchase;
-    /**
-     * <p>
-     * The number of instances that Amazon Web Services recommends that you purchase.
-     * </p>
-     */
-    private String numberOfInstancesToPurchase;
-    /**
-     * <p>
-     * The payment option for the commitment.
-     * </p>
-     */
-    private String paymentOption;
-    /**
-     * <p>
      * The Amazon Web Services Region of the commitment.
      * </p>
      */
     private String reservedInstancesRegion;
-    /**
-     * <p>
-     * The service that you want your recommendations for.
-     * </p>
-     */
-    private String service;
     /**
      * <p>
      * Determines whether the recommendation is size flexible.
@@ -97,16 +91,22 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
     private Boolean sizeFlexEligible;
     /**
      * <p>
-     * The reserved instances recommendation term in years.
+     * Determines whether the recommendation is for a current generation instance.
      * </p>
      */
-    private String term;
+    private String currentGeneration;
     /**
      * <p>
      * How much purchasing this instance costs you upfront.
      * </p>
      */
     private String upfrontCost;
+    /**
+     * <p>
+     * How much purchasing reserved instances costs you on a monthly basis.
+     * </p>
+     */
+    private String monthlyRecurringCost;
 
     /**
      * <p>
@@ -150,41 +150,201 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * Determines whether the recommendation is for a current generation instance.
+     * The service that you want your recommendations for.
      * </p>
      * 
-     * @param currentGeneration
-     *        Determines whether the recommendation is for a current generation instance.
+     * @param service
+     *        The service that you want your recommendations for.
      */
 
-    public void setCurrentGeneration(String currentGeneration) {
-        this.currentGeneration = currentGeneration;
+    public void setService(String service) {
+        this.service = service;
     }
 
     /**
      * <p>
-     * Determines whether the recommendation is for a current generation instance.
+     * The service that you want your recommendations for.
      * </p>
      * 
-     * @return Determines whether the recommendation is for a current generation instance.
+     * @return The service that you want your recommendations for.
      */
 
-    public String getCurrentGeneration() {
-        return this.currentGeneration;
+    public String getService() {
+        return this.service;
     }
 
     /**
      * <p>
-     * Determines whether the recommendation is for a current generation instance.
+     * The service that you want your recommendations for.
      * </p>
      * 
-     * @param currentGeneration
-     *        Determines whether the recommendation is for a current generation instance.
+     * @param service
+     *        The service that you want your recommendations for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public RedshiftReservedInstancesConfiguration withCurrentGeneration(String currentGeneration) {
-        setCurrentGeneration(currentGeneration);
+    public RedshiftReservedInstancesConfiguration withService(String service) {
+        setService(service);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of normalized units that Amazon Web Services recommends that you purchase.
+     * </p>
+     * 
+     * @param normalizedUnitsToPurchase
+     *        The number of normalized units that Amazon Web Services recommends that you purchase.
+     */
+
+    public void setNormalizedUnitsToPurchase(String normalizedUnitsToPurchase) {
+        this.normalizedUnitsToPurchase = normalizedUnitsToPurchase;
+    }
+
+    /**
+     * <p>
+     * The number of normalized units that Amazon Web Services recommends that you purchase.
+     * </p>
+     * 
+     * @return The number of normalized units that Amazon Web Services recommends that you purchase.
+     */
+
+    public String getNormalizedUnitsToPurchase() {
+        return this.normalizedUnitsToPurchase;
+    }
+
+    /**
+     * <p>
+     * The number of normalized units that Amazon Web Services recommends that you purchase.
+     * </p>
+     * 
+     * @param normalizedUnitsToPurchase
+     *        The number of normalized units that Amazon Web Services recommends that you purchase.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedshiftReservedInstancesConfiguration withNormalizedUnitsToPurchase(String normalizedUnitsToPurchase) {
+        setNormalizedUnitsToPurchase(normalizedUnitsToPurchase);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The reserved instances recommendation term in years.
+     * </p>
+     * 
+     * @param term
+     *        The reserved instances recommendation term in years.
+     */
+
+    public void setTerm(String term) {
+        this.term = term;
+    }
+
+    /**
+     * <p>
+     * The reserved instances recommendation term in years.
+     * </p>
+     * 
+     * @return The reserved instances recommendation term in years.
+     */
+
+    public String getTerm() {
+        return this.term;
+    }
+
+    /**
+     * <p>
+     * The reserved instances recommendation term in years.
+     * </p>
+     * 
+     * @param term
+     *        The reserved instances recommendation term in years.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedshiftReservedInstancesConfiguration withTerm(String term) {
+        setTerm(term);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The payment option for the commitment.
+     * </p>
+     * 
+     * @param paymentOption
+     *        The payment option for the commitment.
+     */
+
+    public void setPaymentOption(String paymentOption) {
+        this.paymentOption = paymentOption;
+    }
+
+    /**
+     * <p>
+     * The payment option for the commitment.
+     * </p>
+     * 
+     * @return The payment option for the commitment.
+     */
+
+    public String getPaymentOption() {
+        return this.paymentOption;
+    }
+
+    /**
+     * <p>
+     * The payment option for the commitment.
+     * </p>
+     * 
+     * @param paymentOption
+     *        The payment option for the commitment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedshiftReservedInstancesConfiguration withPaymentOption(String paymentOption) {
+        setPaymentOption(paymentOption);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of instances that Amazon Web Services recommends that you purchase.
+     * </p>
+     * 
+     * @param numberOfInstancesToPurchase
+     *        The number of instances that Amazon Web Services recommends that you purchase.
+     */
+
+    public void setNumberOfInstancesToPurchase(String numberOfInstancesToPurchase) {
+        this.numberOfInstancesToPurchase = numberOfInstancesToPurchase;
+    }
+
+    /**
+     * <p>
+     * The number of instances that Amazon Web Services recommends that you purchase.
+     * </p>
+     * 
+     * @return The number of instances that Amazon Web Services recommends that you purchase.
+     */
+
+    public String getNumberOfInstancesToPurchase() {
+        return this.numberOfInstancesToPurchase;
+    }
+
+    /**
+     * <p>
+     * The number of instances that Amazon Web Services recommends that you purchase.
+     * </p>
+     * 
+     * @param numberOfInstancesToPurchase
+     *        The number of instances that Amazon Web Services recommends that you purchase.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedshiftReservedInstancesConfiguration withNumberOfInstancesToPurchase(String numberOfInstancesToPurchase) {
+        setNumberOfInstancesToPurchase(numberOfInstancesToPurchase);
         return this;
     }
 
@@ -270,166 +430,6 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * How much purchasing reserved instances costs you on a monthly basis.
-     * </p>
-     * 
-     * @param monthlyRecurringCost
-     *        How much purchasing reserved instances costs you on a monthly basis.
-     */
-
-    public void setMonthlyRecurringCost(String monthlyRecurringCost) {
-        this.monthlyRecurringCost = monthlyRecurringCost;
-    }
-
-    /**
-     * <p>
-     * How much purchasing reserved instances costs you on a monthly basis.
-     * </p>
-     * 
-     * @return How much purchasing reserved instances costs you on a monthly basis.
-     */
-
-    public String getMonthlyRecurringCost() {
-        return this.monthlyRecurringCost;
-    }
-
-    /**
-     * <p>
-     * How much purchasing reserved instances costs you on a monthly basis.
-     * </p>
-     * 
-     * @param monthlyRecurringCost
-     *        How much purchasing reserved instances costs you on a monthly basis.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RedshiftReservedInstancesConfiguration withMonthlyRecurringCost(String monthlyRecurringCost) {
-        setMonthlyRecurringCost(monthlyRecurringCost);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The number of normalized units that Amazon Web Services recommends that you purchase.
-     * </p>
-     * 
-     * @param normalizedUnitsToPurchase
-     *        The number of normalized units that Amazon Web Services recommends that you purchase.
-     */
-
-    public void setNormalizedUnitsToPurchase(String normalizedUnitsToPurchase) {
-        this.normalizedUnitsToPurchase = normalizedUnitsToPurchase;
-    }
-
-    /**
-     * <p>
-     * The number of normalized units that Amazon Web Services recommends that you purchase.
-     * </p>
-     * 
-     * @return The number of normalized units that Amazon Web Services recommends that you purchase.
-     */
-
-    public String getNormalizedUnitsToPurchase() {
-        return this.normalizedUnitsToPurchase;
-    }
-
-    /**
-     * <p>
-     * The number of normalized units that Amazon Web Services recommends that you purchase.
-     * </p>
-     * 
-     * @param normalizedUnitsToPurchase
-     *        The number of normalized units that Amazon Web Services recommends that you purchase.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RedshiftReservedInstancesConfiguration withNormalizedUnitsToPurchase(String normalizedUnitsToPurchase) {
-        setNormalizedUnitsToPurchase(normalizedUnitsToPurchase);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The number of instances that Amazon Web Services recommends that you purchase.
-     * </p>
-     * 
-     * @param numberOfInstancesToPurchase
-     *        The number of instances that Amazon Web Services recommends that you purchase.
-     */
-
-    public void setNumberOfInstancesToPurchase(String numberOfInstancesToPurchase) {
-        this.numberOfInstancesToPurchase = numberOfInstancesToPurchase;
-    }
-
-    /**
-     * <p>
-     * The number of instances that Amazon Web Services recommends that you purchase.
-     * </p>
-     * 
-     * @return The number of instances that Amazon Web Services recommends that you purchase.
-     */
-
-    public String getNumberOfInstancesToPurchase() {
-        return this.numberOfInstancesToPurchase;
-    }
-
-    /**
-     * <p>
-     * The number of instances that Amazon Web Services recommends that you purchase.
-     * </p>
-     * 
-     * @param numberOfInstancesToPurchase
-     *        The number of instances that Amazon Web Services recommends that you purchase.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RedshiftReservedInstancesConfiguration withNumberOfInstancesToPurchase(String numberOfInstancesToPurchase) {
-        setNumberOfInstancesToPurchase(numberOfInstancesToPurchase);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The payment option for the commitment.
-     * </p>
-     * 
-     * @param paymentOption
-     *        The payment option for the commitment.
-     */
-
-    public void setPaymentOption(String paymentOption) {
-        this.paymentOption = paymentOption;
-    }
-
-    /**
-     * <p>
-     * The payment option for the commitment.
-     * </p>
-     * 
-     * @return The payment option for the commitment.
-     */
-
-    public String getPaymentOption() {
-        return this.paymentOption;
-    }
-
-    /**
-     * <p>
-     * The payment option for the commitment.
-     * </p>
-     * 
-     * @param paymentOption
-     *        The payment option for the commitment.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RedshiftReservedInstancesConfiguration withPaymentOption(String paymentOption) {
-        setPaymentOption(paymentOption);
-        return this;
-    }
-
-    /**
-     * <p>
      * The Amazon Web Services Region of the commitment.
      * </p>
      * 
@@ -465,46 +465,6 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
 
     public RedshiftReservedInstancesConfiguration withReservedInstancesRegion(String reservedInstancesRegion) {
         setReservedInstancesRegion(reservedInstancesRegion);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The service that you want your recommendations for.
-     * </p>
-     * 
-     * @param service
-     *        The service that you want your recommendations for.
-     */
-
-    public void setService(String service) {
-        this.service = service;
-    }
-
-    /**
-     * <p>
-     * The service that you want your recommendations for.
-     * </p>
-     * 
-     * @return The service that you want your recommendations for.
-     */
-
-    public String getService() {
-        return this.service;
-    }
-
-    /**
-     * <p>
-     * The service that you want your recommendations for.
-     * </p>
-     * 
-     * @param service
-     *        The service that you want your recommendations for.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RedshiftReservedInstancesConfiguration withService(String service) {
-        setService(service);
         return this;
     }
 
@@ -562,41 +522,41 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * The reserved instances recommendation term in years.
+     * Determines whether the recommendation is for a current generation instance.
      * </p>
      * 
-     * @param term
-     *        The reserved instances recommendation term in years.
+     * @param currentGeneration
+     *        Determines whether the recommendation is for a current generation instance.
      */
 
-    public void setTerm(String term) {
-        this.term = term;
+    public void setCurrentGeneration(String currentGeneration) {
+        this.currentGeneration = currentGeneration;
     }
 
     /**
      * <p>
-     * The reserved instances recommendation term in years.
+     * Determines whether the recommendation is for a current generation instance.
      * </p>
      * 
-     * @return The reserved instances recommendation term in years.
+     * @return Determines whether the recommendation is for a current generation instance.
      */
 
-    public String getTerm() {
-        return this.term;
+    public String getCurrentGeneration() {
+        return this.currentGeneration;
     }
 
     /**
      * <p>
-     * The reserved instances recommendation term in years.
+     * Determines whether the recommendation is for a current generation instance.
      * </p>
      * 
-     * @param term
-     *        The reserved instances recommendation term in years.
+     * @param currentGeneration
+     *        Determines whether the recommendation is for a current generation instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public RedshiftReservedInstancesConfiguration withTerm(String term) {
-        setTerm(term);
+    public RedshiftReservedInstancesConfiguration withCurrentGeneration(String currentGeneration) {
+        setCurrentGeneration(currentGeneration);
         return this;
     }
 
@@ -641,6 +601,46 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
     }
 
     /**
+     * <p>
+     * How much purchasing reserved instances costs you on a monthly basis.
+     * </p>
+     * 
+     * @param monthlyRecurringCost
+     *        How much purchasing reserved instances costs you on a monthly basis.
+     */
+
+    public void setMonthlyRecurringCost(String monthlyRecurringCost) {
+        this.monthlyRecurringCost = monthlyRecurringCost;
+    }
+
+    /**
+     * <p>
+     * How much purchasing reserved instances costs you on a monthly basis.
+     * </p>
+     * 
+     * @return How much purchasing reserved instances costs you on a monthly basis.
+     */
+
+    public String getMonthlyRecurringCost() {
+        return this.monthlyRecurringCost;
+    }
+
+    /**
+     * <p>
+     * How much purchasing reserved instances costs you on a monthly basis.
+     * </p>
+     * 
+     * @param monthlyRecurringCost
+     *        How much purchasing reserved instances costs you on a monthly basis.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedshiftReservedInstancesConfiguration withMonthlyRecurringCost(String monthlyRecurringCost) {
+        setMonthlyRecurringCost(monthlyRecurringCost);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -654,30 +654,30 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
         sb.append("{");
         if (getAccountScope() != null)
             sb.append("AccountScope: ").append(getAccountScope()).append(",");
-        if (getCurrentGeneration() != null)
-            sb.append("CurrentGeneration: ").append(getCurrentGeneration()).append(",");
+        if (getService() != null)
+            sb.append("Service: ").append(getService()).append(",");
+        if (getNormalizedUnitsToPurchase() != null)
+            sb.append("NormalizedUnitsToPurchase: ").append(getNormalizedUnitsToPurchase()).append(",");
+        if (getTerm() != null)
+            sb.append("Term: ").append(getTerm()).append(",");
+        if (getPaymentOption() != null)
+            sb.append("PaymentOption: ").append(getPaymentOption()).append(",");
+        if (getNumberOfInstancesToPurchase() != null)
+            sb.append("NumberOfInstancesToPurchase: ").append(getNumberOfInstancesToPurchase()).append(",");
         if (getInstanceFamily() != null)
             sb.append("InstanceFamily: ").append(getInstanceFamily()).append(",");
         if (getInstanceType() != null)
             sb.append("InstanceType: ").append(getInstanceType()).append(",");
-        if (getMonthlyRecurringCost() != null)
-            sb.append("MonthlyRecurringCost: ").append(getMonthlyRecurringCost()).append(",");
-        if (getNormalizedUnitsToPurchase() != null)
-            sb.append("NormalizedUnitsToPurchase: ").append(getNormalizedUnitsToPurchase()).append(",");
-        if (getNumberOfInstancesToPurchase() != null)
-            sb.append("NumberOfInstancesToPurchase: ").append(getNumberOfInstancesToPurchase()).append(",");
-        if (getPaymentOption() != null)
-            sb.append("PaymentOption: ").append(getPaymentOption()).append(",");
         if (getReservedInstancesRegion() != null)
             sb.append("ReservedInstancesRegion: ").append(getReservedInstancesRegion()).append(",");
-        if (getService() != null)
-            sb.append("Service: ").append(getService()).append(",");
         if (getSizeFlexEligible() != null)
             sb.append("SizeFlexEligible: ").append(getSizeFlexEligible()).append(",");
-        if (getTerm() != null)
-            sb.append("Term: ").append(getTerm()).append(",");
+        if (getCurrentGeneration() != null)
+            sb.append("CurrentGeneration: ").append(getCurrentGeneration()).append(",");
         if (getUpfrontCost() != null)
-            sb.append("UpfrontCost: ").append(getUpfrontCost());
+            sb.append("UpfrontCost: ").append(getUpfrontCost()).append(",");
+        if (getMonthlyRecurringCost() != null)
+            sb.append("MonthlyRecurringCost: ").append(getMonthlyRecurringCost());
         sb.append("}");
         return sb.toString();
     }
@@ -696,9 +696,25 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
             return false;
         if (other.getAccountScope() != null && other.getAccountScope().equals(this.getAccountScope()) == false)
             return false;
-        if (other.getCurrentGeneration() == null ^ this.getCurrentGeneration() == null)
+        if (other.getService() == null ^ this.getService() == null)
             return false;
-        if (other.getCurrentGeneration() != null && other.getCurrentGeneration().equals(this.getCurrentGeneration()) == false)
+        if (other.getService() != null && other.getService().equals(this.getService()) == false)
+            return false;
+        if (other.getNormalizedUnitsToPurchase() == null ^ this.getNormalizedUnitsToPurchase() == null)
+            return false;
+        if (other.getNormalizedUnitsToPurchase() != null && other.getNormalizedUnitsToPurchase().equals(this.getNormalizedUnitsToPurchase()) == false)
+            return false;
+        if (other.getTerm() == null ^ this.getTerm() == null)
+            return false;
+        if (other.getTerm() != null && other.getTerm().equals(this.getTerm()) == false)
+            return false;
+        if (other.getPaymentOption() == null ^ this.getPaymentOption() == null)
+            return false;
+        if (other.getPaymentOption() != null && other.getPaymentOption().equals(this.getPaymentOption()) == false)
+            return false;
+        if (other.getNumberOfInstancesToPurchase() == null ^ this.getNumberOfInstancesToPurchase() == null)
+            return false;
+        if (other.getNumberOfInstancesToPurchase() != null && other.getNumberOfInstancesToPurchase().equals(this.getNumberOfInstancesToPurchase()) == false)
             return false;
         if (other.getInstanceFamily() == null ^ this.getInstanceFamily() == null)
             return false;
@@ -708,41 +724,25 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
             return false;
         if (other.getInstanceType() != null && other.getInstanceType().equals(this.getInstanceType()) == false)
             return false;
-        if (other.getMonthlyRecurringCost() == null ^ this.getMonthlyRecurringCost() == null)
-            return false;
-        if (other.getMonthlyRecurringCost() != null && other.getMonthlyRecurringCost().equals(this.getMonthlyRecurringCost()) == false)
-            return false;
-        if (other.getNormalizedUnitsToPurchase() == null ^ this.getNormalizedUnitsToPurchase() == null)
-            return false;
-        if (other.getNormalizedUnitsToPurchase() != null && other.getNormalizedUnitsToPurchase().equals(this.getNormalizedUnitsToPurchase()) == false)
-            return false;
-        if (other.getNumberOfInstancesToPurchase() == null ^ this.getNumberOfInstancesToPurchase() == null)
-            return false;
-        if (other.getNumberOfInstancesToPurchase() != null && other.getNumberOfInstancesToPurchase().equals(this.getNumberOfInstancesToPurchase()) == false)
-            return false;
-        if (other.getPaymentOption() == null ^ this.getPaymentOption() == null)
-            return false;
-        if (other.getPaymentOption() != null && other.getPaymentOption().equals(this.getPaymentOption()) == false)
-            return false;
         if (other.getReservedInstancesRegion() == null ^ this.getReservedInstancesRegion() == null)
             return false;
         if (other.getReservedInstancesRegion() != null && other.getReservedInstancesRegion().equals(this.getReservedInstancesRegion()) == false)
-            return false;
-        if (other.getService() == null ^ this.getService() == null)
-            return false;
-        if (other.getService() != null && other.getService().equals(this.getService()) == false)
             return false;
         if (other.getSizeFlexEligible() == null ^ this.getSizeFlexEligible() == null)
             return false;
         if (other.getSizeFlexEligible() != null && other.getSizeFlexEligible().equals(this.getSizeFlexEligible()) == false)
             return false;
-        if (other.getTerm() == null ^ this.getTerm() == null)
+        if (other.getCurrentGeneration() == null ^ this.getCurrentGeneration() == null)
             return false;
-        if (other.getTerm() != null && other.getTerm().equals(this.getTerm()) == false)
+        if (other.getCurrentGeneration() != null && other.getCurrentGeneration().equals(this.getCurrentGeneration()) == false)
             return false;
         if (other.getUpfrontCost() == null ^ this.getUpfrontCost() == null)
             return false;
         if (other.getUpfrontCost() != null && other.getUpfrontCost().equals(this.getUpfrontCost()) == false)
+            return false;
+        if (other.getMonthlyRecurringCost() == null ^ this.getMonthlyRecurringCost() == null)
+            return false;
+        if (other.getMonthlyRecurringCost() != null && other.getMonthlyRecurringCost().equals(this.getMonthlyRecurringCost()) == false)
             return false;
         return true;
     }
@@ -753,18 +753,18 @@ public class RedshiftReservedInstancesConfiguration implements Serializable, Clo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAccountScope() == null) ? 0 : getAccountScope().hashCode());
-        hashCode = prime * hashCode + ((getCurrentGeneration() == null) ? 0 : getCurrentGeneration().hashCode());
+        hashCode = prime * hashCode + ((getService() == null) ? 0 : getService().hashCode());
+        hashCode = prime * hashCode + ((getNormalizedUnitsToPurchase() == null) ? 0 : getNormalizedUnitsToPurchase().hashCode());
+        hashCode = prime * hashCode + ((getTerm() == null) ? 0 : getTerm().hashCode());
+        hashCode = prime * hashCode + ((getPaymentOption() == null) ? 0 : getPaymentOption().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfInstancesToPurchase() == null) ? 0 : getNumberOfInstancesToPurchase().hashCode());
         hashCode = prime * hashCode + ((getInstanceFamily() == null) ? 0 : getInstanceFamily().hashCode());
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
-        hashCode = prime * hashCode + ((getMonthlyRecurringCost() == null) ? 0 : getMonthlyRecurringCost().hashCode());
-        hashCode = prime * hashCode + ((getNormalizedUnitsToPurchase() == null) ? 0 : getNormalizedUnitsToPurchase().hashCode());
-        hashCode = prime * hashCode + ((getNumberOfInstancesToPurchase() == null) ? 0 : getNumberOfInstancesToPurchase().hashCode());
-        hashCode = prime * hashCode + ((getPaymentOption() == null) ? 0 : getPaymentOption().hashCode());
         hashCode = prime * hashCode + ((getReservedInstancesRegion() == null) ? 0 : getReservedInstancesRegion().hashCode());
-        hashCode = prime * hashCode + ((getService() == null) ? 0 : getService().hashCode());
         hashCode = prime * hashCode + ((getSizeFlexEligible() == null) ? 0 : getSizeFlexEligible().hashCode());
-        hashCode = prime * hashCode + ((getTerm() == null) ? 0 : getTerm().hashCode());
+        hashCode = prime * hashCode + ((getCurrentGeneration() == null) ? 0 : getCurrentGeneration().hashCode());
         hashCode = prime * hashCode + ((getUpfrontCost() == null) ? 0 : getUpfrontCost().hashCode());
+        hashCode = prime * hashCode + ((getMonthlyRecurringCost() == null) ? 0 : getMonthlyRecurringCost().hashCode());
         return hashCode;
     }
 

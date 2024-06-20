@@ -32,6 +32,8 @@ public class HubContentInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HubContentName").build();
     private static final MarshallingInfo<String> HUBCONTENTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HubContentArn").build();
+    private static final MarshallingInfo<String> SAGEMAKERPUBLICHUBCONTENTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SageMakerPublicHubContentArn").build();
     private static final MarshallingInfo<String> HUBCONTENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HubContentVersion").build();
     private static final MarshallingInfo<String> HUBCONTENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -42,12 +44,16 @@ public class HubContentInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HubContentDisplayName").build();
     private static final MarshallingInfo<String> HUBCONTENTDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HubContentDescription").build();
+    private static final MarshallingInfo<String> SUPPORTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SupportStatus").build();
     private static final MarshallingInfo<List> HUBCONTENTSEARCHKEYWORDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HubContentSearchKeywords").build();
     private static final MarshallingInfo<String> HUBCONTENTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HubContentStatus").build();
     private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ORIGINALCREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OriginalCreationTime").timestampFormat("unixTimestamp").build();
 
     private static final HubContentInfoMarshaller instance = new HubContentInfoMarshaller();
 
@@ -67,14 +73,17 @@ public class HubContentInfoMarshaller {
         try {
             protocolMarshaller.marshall(hubContentInfo.getHubContentName(), HUBCONTENTNAME_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getHubContentArn(), HUBCONTENTARN_BINDING);
+            protocolMarshaller.marshall(hubContentInfo.getSageMakerPublicHubContentArn(), SAGEMAKERPUBLICHUBCONTENTARN_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getHubContentVersion(), HUBCONTENTVERSION_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getHubContentType(), HUBCONTENTTYPE_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getDocumentSchemaVersion(), DOCUMENTSCHEMAVERSION_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getHubContentDisplayName(), HUBCONTENTDISPLAYNAME_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getHubContentDescription(), HUBCONTENTDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(hubContentInfo.getSupportStatus(), SUPPORTSTATUS_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getHubContentSearchKeywords(), HUBCONTENTSEARCHKEYWORDS_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getHubContentStatus(), HUBCONTENTSTATUS_BINDING);
             protocolMarshaller.marshall(hubContentInfo.getCreationTime(), CREATIONTIME_BINDING);
+            protocolMarshaller.marshall(hubContentInfo.getOriginalCreationTime(), ORIGINALCREATIONTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

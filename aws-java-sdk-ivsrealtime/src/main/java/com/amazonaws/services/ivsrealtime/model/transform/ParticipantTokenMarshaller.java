@@ -29,20 +29,20 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ParticipantTokenMarshaller {
 
-    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("attributes").build();
-    private static final MarshallingInfo<List> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("capabilities").build();
-    private static final MarshallingInfo<Integer> DURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("duration").build();
-    private static final MarshallingInfo<java.util.Date> EXPIRATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("expirationTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> PARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantId").build();
     private static final MarshallingInfo<String> TOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("token").build();
     private static final MarshallingInfo<String> USERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("userId").build();
+    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("attributes").build();
+    private static final MarshallingInfo<Integer> DURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("duration").build();
+    private static final MarshallingInfo<List> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("capabilities").build();
+    private static final MarshallingInfo<java.util.Date> EXPIRATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("expirationTime").timestampFormat("iso8601").build();
 
     private static final ParticipantTokenMarshaller instance = new ParticipantTokenMarshaller();
 
@@ -60,13 +60,13 @@ public class ParticipantTokenMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(participantToken.getAttributes(), ATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(participantToken.getCapabilities(), CAPABILITIES_BINDING);
-            protocolMarshaller.marshall(participantToken.getDuration(), DURATION_BINDING);
-            protocolMarshaller.marshall(participantToken.getExpirationTime(), EXPIRATIONTIME_BINDING);
             protocolMarshaller.marshall(participantToken.getParticipantId(), PARTICIPANTID_BINDING);
             protocolMarshaller.marshall(participantToken.getToken(), TOKEN_BINDING);
             protocolMarshaller.marshall(participantToken.getUserId(), USERID_BINDING);
+            protocolMarshaller.marshall(participantToken.getAttributes(), ATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(participantToken.getDuration(), DURATION_BINDING);
+            protocolMarshaller.marshall(participantToken.getCapabilities(), CAPABILITIES_BINDING);
+            protocolMarshaller.marshall(participantToken.getExpirationTime(), EXPIRATIONTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

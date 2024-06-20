@@ -48,13 +48,13 @@ public class GetPreferencesResultJsonUnmarshaller implements Unmarshaller<GetPre
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("memberAccountDiscountVisibility", targetDepth)) {
-                    context.nextToken();
-                    getPreferencesResult.setMemberAccountDiscountVisibility(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("savingsEstimationMode", targetDepth)) {
                     context.nextToken();
                     getPreferencesResult.setSavingsEstimationMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("memberAccountDiscountVisibility", targetDepth)) {
+                    context.nextToken();
+                    getPreferencesResult.setMemberAccountDiscountVisibility(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

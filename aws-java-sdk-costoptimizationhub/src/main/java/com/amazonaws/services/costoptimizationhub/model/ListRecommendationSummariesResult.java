@@ -25,22 +25,10 @@ public class ListRecommendationSummariesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The currency code used for the recommendation.
-     * </p>
-     */
-    private String currencyCode;
-    /**
-     * <p>
      * The total overall savings for the aggregated view.
      * </p>
      */
     private Double estimatedTotalDedupedSavings;
-    /**
-     * <p>
-     * The dimension used to group the recommendations by.
-     * </p>
-     */
-    private String groupBy;
     /**
      * <p>
      * List of all savings recommendations.
@@ -49,50 +37,22 @@ public class ListRecommendationSummariesResult extends com.amazonaws.AmazonWebSe
     private java.util.List<RecommendationSummary> items;
     /**
      * <p>
+     * The dimension used to group the recommendations by.
+     * </p>
+     */
+    private String groupBy;
+    /**
+     * <p>
+     * The currency code used for the recommendation.
+     * </p>
+     */
+    private String currencyCode;
+    /**
+     * <p>
      * The token to retrieve the next set of results.
      * </p>
      */
     private String nextToken;
-
-    /**
-     * <p>
-     * The currency code used for the recommendation.
-     * </p>
-     * 
-     * @param currencyCode
-     *        The currency code used for the recommendation.
-     */
-
-    public void setCurrencyCode(String currencyCode) {
-        this.currencyCode = currencyCode;
-    }
-
-    /**
-     * <p>
-     * The currency code used for the recommendation.
-     * </p>
-     * 
-     * @return The currency code used for the recommendation.
-     */
-
-    public String getCurrencyCode() {
-        return this.currencyCode;
-    }
-
-    /**
-     * <p>
-     * The currency code used for the recommendation.
-     * </p>
-     * 
-     * @param currencyCode
-     *        The currency code used for the recommendation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRecommendationSummariesResult withCurrencyCode(String currencyCode) {
-        setCurrencyCode(currencyCode);
-        return this;
-    }
 
     /**
      * <p>
@@ -131,46 +91,6 @@ public class ListRecommendationSummariesResult extends com.amazonaws.AmazonWebSe
 
     public ListRecommendationSummariesResult withEstimatedTotalDedupedSavings(Double estimatedTotalDedupedSavings) {
         setEstimatedTotalDedupedSavings(estimatedTotalDedupedSavings);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The dimension used to group the recommendations by.
-     * </p>
-     * 
-     * @param groupBy
-     *        The dimension used to group the recommendations by.
-     */
-
-    public void setGroupBy(String groupBy) {
-        this.groupBy = groupBy;
-    }
-
-    /**
-     * <p>
-     * The dimension used to group the recommendations by.
-     * </p>
-     * 
-     * @return The dimension used to group the recommendations by.
-     */
-
-    public String getGroupBy() {
-        return this.groupBy;
-    }
-
-    /**
-     * <p>
-     * The dimension used to group the recommendations by.
-     * </p>
-     * 
-     * @param groupBy
-     *        The dimension used to group the recommendations by.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRecommendationSummariesResult withGroupBy(String groupBy) {
-        setGroupBy(groupBy);
         return this;
     }
 
@@ -246,6 +166,86 @@ public class ListRecommendationSummariesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
+     * The dimension used to group the recommendations by.
+     * </p>
+     * 
+     * @param groupBy
+     *        The dimension used to group the recommendations by.
+     */
+
+    public void setGroupBy(String groupBy) {
+        this.groupBy = groupBy;
+    }
+
+    /**
+     * <p>
+     * The dimension used to group the recommendations by.
+     * </p>
+     * 
+     * @return The dimension used to group the recommendations by.
+     */
+
+    public String getGroupBy() {
+        return this.groupBy;
+    }
+
+    /**
+     * <p>
+     * The dimension used to group the recommendations by.
+     * </p>
+     * 
+     * @param groupBy
+     *        The dimension used to group the recommendations by.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRecommendationSummariesResult withGroupBy(String groupBy) {
+        setGroupBy(groupBy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The currency code used for the recommendation.
+     * </p>
+     * 
+     * @param currencyCode
+     *        The currency code used for the recommendation.
+     */
+
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+    }
+
+    /**
+     * <p>
+     * The currency code used for the recommendation.
+     * </p>
+     * 
+     * @return The currency code used for the recommendation.
+     */
+
+    public String getCurrencyCode() {
+        return this.currencyCode;
+    }
+
+    /**
+     * <p>
+     * The currency code used for the recommendation.
+     * </p>
+     * 
+     * @param currencyCode
+     *        The currency code used for the recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRecommendationSummariesResult withCurrencyCode(String currencyCode) {
+        setCurrencyCode(currencyCode);
+        return this;
+    }
+
+    /**
+     * <p>
      * The token to retrieve the next set of results.
      * </p>
      * 
@@ -296,14 +296,14 @@ public class ListRecommendationSummariesResult extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCurrencyCode() != null)
-            sb.append("CurrencyCode: ").append(getCurrencyCode()).append(",");
         if (getEstimatedTotalDedupedSavings() != null)
             sb.append("EstimatedTotalDedupedSavings: ").append(getEstimatedTotalDedupedSavings()).append(",");
-        if (getGroupBy() != null)
-            sb.append("GroupBy: ").append(getGroupBy()).append(",");
         if (getItems() != null)
             sb.append("Items: ").append(getItems()).append(",");
+        if (getGroupBy() != null)
+            sb.append("GroupBy: ").append(getGroupBy()).append(",");
+        if (getCurrencyCode() != null)
+            sb.append("CurrencyCode: ").append(getCurrencyCode()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
@@ -320,21 +320,21 @@ public class ListRecommendationSummariesResult extends com.amazonaws.AmazonWebSe
         if (obj instanceof ListRecommendationSummariesResult == false)
             return false;
         ListRecommendationSummariesResult other = (ListRecommendationSummariesResult) obj;
-        if (other.getCurrencyCode() == null ^ this.getCurrencyCode() == null)
-            return false;
-        if (other.getCurrencyCode() != null && other.getCurrencyCode().equals(this.getCurrencyCode()) == false)
-            return false;
         if (other.getEstimatedTotalDedupedSavings() == null ^ this.getEstimatedTotalDedupedSavings() == null)
             return false;
         if (other.getEstimatedTotalDedupedSavings() != null && other.getEstimatedTotalDedupedSavings().equals(this.getEstimatedTotalDedupedSavings()) == false)
+            return false;
+        if (other.getItems() == null ^ this.getItems() == null)
+            return false;
+        if (other.getItems() != null && other.getItems().equals(this.getItems()) == false)
             return false;
         if (other.getGroupBy() == null ^ this.getGroupBy() == null)
             return false;
         if (other.getGroupBy() != null && other.getGroupBy().equals(this.getGroupBy()) == false)
             return false;
-        if (other.getItems() == null ^ this.getItems() == null)
+        if (other.getCurrencyCode() == null ^ this.getCurrencyCode() == null)
             return false;
-        if (other.getItems() != null && other.getItems().equals(this.getItems()) == false)
+        if (other.getCurrencyCode() != null && other.getCurrencyCode().equals(this.getCurrencyCode()) == false)
             return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
@@ -348,10 +348,10 @@ public class ListRecommendationSummariesResult extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCurrencyCode() == null) ? 0 : getCurrencyCode().hashCode());
         hashCode = prime * hashCode + ((getEstimatedTotalDedupedSavings() == null) ? 0 : getEstimatedTotalDedupedSavings().hashCode());
-        hashCode = prime * hashCode + ((getGroupBy() == null) ? 0 : getGroupBy().hashCode());
         hashCode = prime * hashCode + ((getItems() == null) ? 0 : getItems().hashCode());
+        hashCode = prime * hashCode + ((getGroupBy() == null) ? 0 : getGroupBy().hashCode());
+        hashCode = prime * hashCode + ((getCurrencyCode() == null) ? 0 : getCurrencyCode().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }

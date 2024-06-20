@@ -29,16 +29,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateParticipantTokenRequestMarshaller {
 
+    private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("stageArn").build();
+    private static final MarshallingInfo<Integer> DURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("duration").build();
+    private static final MarshallingInfo<String> USERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("userId").build();
     private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("attributes").build();
     private static final MarshallingInfo<List> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("capabilities").build();
-    private static final MarshallingInfo<Integer> DURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("duration").build();
-    private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("stageArn").build();
-    private static final MarshallingInfo<String> USERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("userId").build();
 
     private static final CreateParticipantTokenRequestMarshaller instance = new CreateParticipantTokenRequestMarshaller();
 
@@ -56,11 +56,11 @@ public class CreateParticipantTokenRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(createParticipantTokenRequest.getStageArn(), STAGEARN_BINDING);
+            protocolMarshaller.marshall(createParticipantTokenRequest.getDuration(), DURATION_BINDING);
+            protocolMarshaller.marshall(createParticipantTokenRequest.getUserId(), USERID_BINDING);
             protocolMarshaller.marshall(createParticipantTokenRequest.getAttributes(), ATTRIBUTES_BINDING);
             protocolMarshaller.marshall(createParticipantTokenRequest.getCapabilities(), CAPABILITIES_BINDING);
-            protocolMarshaller.marshall(createParticipantTokenRequest.getDuration(), DURATION_BINDING);
-            protocolMarshaller.marshall(createParticipantTokenRequest.getStageArn(), STAGEARN_BINDING);
-            protocolMarshaller.marshall(createParticipantTokenRequest.getUserId(), USERID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

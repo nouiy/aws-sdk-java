@@ -27,32 +27,36 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ResourceDetailsMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> COMPUTESAVINGSPLANS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeSavingsPlans").build();
+    private static final MarshallingInfo<StructuredPojo> LAMBDAFUNCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaFunction").build();
+    private static final MarshallingInfo<StructuredPojo> ECSSERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ecsService").build();
+    private static final MarshallingInfo<StructuredPojo> EC2INSTANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2Instance").build();
     private static final MarshallingInfo<StructuredPojo> EBSVOLUME_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ebsVolume").build();
     private static final MarshallingInfo<StructuredPojo> EC2AUTOSCALINGGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2AutoScalingGroup").build();
-    private static final MarshallingInfo<StructuredPojo> EC2INSTANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2Instance").build();
-    private static final MarshallingInfo<StructuredPojo> EC2INSTANCESAVINGSPLANS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2InstanceSavingsPlans").build();
     private static final MarshallingInfo<StructuredPojo> EC2RESERVEDINSTANCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2ReservedInstances").build();
-    private static final MarshallingInfo<StructuredPojo> ECSSERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ecsService").build();
-    private static final MarshallingInfo<StructuredPojo> ELASTICACHERESERVEDINSTANCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("elastiCacheReservedInstances").build();
-    private static final MarshallingInfo<StructuredPojo> LAMBDAFUNCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaFunction").build();
-    private static final MarshallingInfo<StructuredPojo> OPENSEARCHRESERVEDINSTANCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("openSearchReservedInstances").build();
     private static final MarshallingInfo<StructuredPojo> RDSRESERVEDINSTANCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsReservedInstances").build();
+    private static final MarshallingInfo<StructuredPojo> ELASTICACHERESERVEDINSTANCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("elastiCacheReservedInstances").build();
+    private static final MarshallingInfo<StructuredPojo> OPENSEARCHRESERVEDINSTANCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("openSearchReservedInstances").build();
     private static final MarshallingInfo<StructuredPojo> REDSHIFTRESERVEDINSTANCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("redshiftReservedInstances").build();
+    private static final MarshallingInfo<StructuredPojo> EC2INSTANCESAVINGSPLANS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2InstanceSavingsPlans").build();
+    private static final MarshallingInfo<StructuredPojo> COMPUTESAVINGSPLANS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeSavingsPlans").build();
     private static final MarshallingInfo<StructuredPojo> SAGEMAKERSAVINGSPLANS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sageMakerSavingsPlans").build();
+    private static final MarshallingInfo<StructuredPojo> RDSDBINSTANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsDbInstance").build();
+    private static final MarshallingInfo<StructuredPojo> RDSDBINSTANCESTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsDbInstanceStorage").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -70,19 +74,21 @@ public class ResourceDetailsMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(resourceDetails.getComputeSavingsPlans(), COMPUTESAVINGSPLANS_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getLambdaFunction(), LAMBDAFUNCTION_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getEcsService(), ECSSERVICE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getEc2Instance(), EC2INSTANCE_BINDING);
             protocolMarshaller.marshall(resourceDetails.getEbsVolume(), EBSVOLUME_BINDING);
             protocolMarshaller.marshall(resourceDetails.getEc2AutoScalingGroup(), EC2AUTOSCALINGGROUP_BINDING);
-            protocolMarshaller.marshall(resourceDetails.getEc2Instance(), EC2INSTANCE_BINDING);
-            protocolMarshaller.marshall(resourceDetails.getEc2InstanceSavingsPlans(), EC2INSTANCESAVINGSPLANS_BINDING);
             protocolMarshaller.marshall(resourceDetails.getEc2ReservedInstances(), EC2RESERVEDINSTANCES_BINDING);
-            protocolMarshaller.marshall(resourceDetails.getEcsService(), ECSSERVICE_BINDING);
-            protocolMarshaller.marshall(resourceDetails.getElastiCacheReservedInstances(), ELASTICACHERESERVEDINSTANCES_BINDING);
-            protocolMarshaller.marshall(resourceDetails.getLambdaFunction(), LAMBDAFUNCTION_BINDING);
-            protocolMarshaller.marshall(resourceDetails.getOpenSearchReservedInstances(), OPENSEARCHRESERVEDINSTANCES_BINDING);
             protocolMarshaller.marshall(resourceDetails.getRdsReservedInstances(), RDSRESERVEDINSTANCES_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getElastiCacheReservedInstances(), ELASTICACHERESERVEDINSTANCES_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getOpenSearchReservedInstances(), OPENSEARCHRESERVEDINSTANCES_BINDING);
             protocolMarshaller.marshall(resourceDetails.getRedshiftReservedInstances(), REDSHIFTRESERVEDINSTANCES_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getEc2InstanceSavingsPlans(), EC2INSTANCESAVINGSPLANS_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getComputeSavingsPlans(), COMPUTESAVINGSPLANS_BINDING);
             protocolMarshaller.marshall(resourceDetails.getSageMakerSavingsPlans(), SAGEMAKERSAVINGSPLANS_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getRdsDbInstance(), RDSDBINSTANCE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getRdsDbInstanceStorage(), RDSDBINSTANCESTORAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

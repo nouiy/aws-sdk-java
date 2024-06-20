@@ -30,12 +30,6 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ID of the active session within the stage.
-     * </p>
-     */
-    private String activeSessionId;
-    /**
-     * <p>
      * Stage ARN.
      * </p>
      */
@@ -48,6 +42,12 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
+     * ID of the active session within the stage.
+     * </p>
+     */
+    private String activeSessionId;
+    /**
+     * <p>
      * Tags attached to the resource. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
      * including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS has no constraints
@@ -55,46 +55,12 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
-
     /**
      * <p>
-     * ID of the active session within the stage.
+     * Auto-participant-recording configuration object attached to the stage.
      * </p>
-     * 
-     * @param activeSessionId
-     *        ID of the active session within the stage.
      */
-
-    public void setActiveSessionId(String activeSessionId) {
-        this.activeSessionId = activeSessionId;
-    }
-
-    /**
-     * <p>
-     * ID of the active session within the stage.
-     * </p>
-     * 
-     * @return ID of the active session within the stage.
-     */
-
-    public String getActiveSessionId() {
-        return this.activeSessionId;
-    }
-
-    /**
-     * <p>
-     * ID of the active session within the stage.
-     * </p>
-     * 
-     * @param activeSessionId
-     *        ID of the active session within the stage.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Stage withActiveSessionId(String activeSessionId) {
-        setActiveSessionId(activeSessionId);
-        return this;
-    }
+    private AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration;
 
     /**
      * <p>
@@ -173,6 +139,46 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     public Stage withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * ID of the active session within the stage.
+     * </p>
+     * 
+     * @param activeSessionId
+     *        ID of the active session within the stage.
+     */
+
+    public void setActiveSessionId(String activeSessionId) {
+        this.activeSessionId = activeSessionId;
+    }
+
+    /**
+     * <p>
+     * ID of the active session within the stage.
+     * </p>
+     * 
+     * @return ID of the active session within the stage.
+     */
+
+    public String getActiveSessionId() {
+        return this.activeSessionId;
+    }
+
+    /**
+     * <p>
+     * ID of the active session within the stage.
+     * </p>
+     * 
+     * @param activeSessionId
+     *        ID of the active session within the stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Stage withActiveSessionId(String activeSessionId) {
+        setActiveSessionId(activeSessionId);
         return this;
     }
 
@@ -263,6 +269,46 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Auto-participant-recording configuration object attached to the stage.
+     * </p>
+     * 
+     * @param autoParticipantRecordingConfiguration
+     *        Auto-participant-recording configuration object attached to the stage.
+     */
+
+    public void setAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
+        this.autoParticipantRecordingConfiguration = autoParticipantRecordingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Auto-participant-recording configuration object attached to the stage.
+     * </p>
+     * 
+     * @return Auto-participant-recording configuration object attached to the stage.
+     */
+
+    public AutoParticipantRecordingConfiguration getAutoParticipantRecordingConfiguration() {
+        return this.autoParticipantRecordingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Auto-participant-recording configuration object attached to the stage.
+     * </p>
+     * 
+     * @param autoParticipantRecordingConfiguration
+     *        Auto-participant-recording configuration object attached to the stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Stage withAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
+        setAutoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -274,14 +320,16 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getActiveSessionId() != null)
-            sb.append("ActiveSessionId: ").append(getActiveSessionId()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getActiveSessionId() != null)
+            sb.append("ActiveSessionId: ").append(getActiveSessionId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getAutoParticipantRecordingConfiguration() != null)
+            sb.append("AutoParticipantRecordingConfiguration: ").append(getAutoParticipantRecordingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -296,10 +344,6 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Stage == false)
             return false;
         Stage other = (Stage) obj;
-        if (other.getActiveSessionId() == null ^ this.getActiveSessionId() == null)
-            return false;
-        if (other.getActiveSessionId() != null && other.getActiveSessionId().equals(this.getActiveSessionId()) == false)
-            return false;
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
@@ -308,9 +352,18 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getActiveSessionId() == null ^ this.getActiveSessionId() == null)
+            return false;
+        if (other.getActiveSessionId() != null && other.getActiveSessionId().equals(this.getActiveSessionId()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getAutoParticipantRecordingConfiguration() == null ^ this.getAutoParticipantRecordingConfiguration() == null)
+            return false;
+        if (other.getAutoParticipantRecordingConfiguration() != null
+                && other.getAutoParticipantRecordingConfiguration().equals(this.getAutoParticipantRecordingConfiguration()) == false)
             return false;
         return true;
     }
@@ -320,10 +373,11 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getActiveSessionId() == null) ? 0 : getActiveSessionId().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getActiveSessionId() == null) ? 0 : getActiveSessionId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getAutoParticipantRecordingConfiguration() == null) ? 0 : getAutoParticipantRecordingConfiguration().hashCode());
         return hashCode;
     }
 

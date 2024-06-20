@@ -30,12 +30,6 @@ public class StageSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ID of the active session within the stage.
-     * </p>
-     */
-    private String activeSessionId;
-    /**
-     * <p>
      * Stage ARN.
      * </p>
      */
@@ -48,6 +42,12 @@ public class StageSummary implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
+     * ID of the active session within the stage.
+     * </p>
+     */
+    private String activeSessionId;
+    /**
+     * <p>
      * Tags attached to the resource. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
      * including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS has no constraints
@@ -55,46 +55,6 @@ public class StageSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
-
-    /**
-     * <p>
-     * ID of the active session within the stage.
-     * </p>
-     * 
-     * @param activeSessionId
-     *        ID of the active session within the stage.
-     */
-
-    public void setActiveSessionId(String activeSessionId) {
-        this.activeSessionId = activeSessionId;
-    }
-
-    /**
-     * <p>
-     * ID of the active session within the stage.
-     * </p>
-     * 
-     * @return ID of the active session within the stage.
-     */
-
-    public String getActiveSessionId() {
-        return this.activeSessionId;
-    }
-
-    /**
-     * <p>
-     * ID of the active session within the stage.
-     * </p>
-     * 
-     * @param activeSessionId
-     *        ID of the active session within the stage.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StageSummary withActiveSessionId(String activeSessionId) {
-        setActiveSessionId(activeSessionId);
-        return this;
-    }
 
     /**
      * <p>
@@ -173,6 +133,46 @@ public class StageSummary implements Serializable, Cloneable, StructuredPojo {
 
     public StageSummary withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * ID of the active session within the stage.
+     * </p>
+     * 
+     * @param activeSessionId
+     *        ID of the active session within the stage.
+     */
+
+    public void setActiveSessionId(String activeSessionId) {
+        this.activeSessionId = activeSessionId;
+    }
+
+    /**
+     * <p>
+     * ID of the active session within the stage.
+     * </p>
+     * 
+     * @return ID of the active session within the stage.
+     */
+
+    public String getActiveSessionId() {
+        return this.activeSessionId;
+    }
+
+    /**
+     * <p>
+     * ID of the active session within the stage.
+     * </p>
+     * 
+     * @param activeSessionId
+     *        ID of the active session within the stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StageSummary withActiveSessionId(String activeSessionId) {
+        setActiveSessionId(activeSessionId);
         return this;
     }
 
@@ -274,12 +274,12 @@ public class StageSummary implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getActiveSessionId() != null)
-            sb.append("ActiveSessionId: ").append(getActiveSessionId()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getActiveSessionId() != null)
+            sb.append("ActiveSessionId: ").append(getActiveSessionId()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -296,10 +296,6 @@ public class StageSummary implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof StageSummary == false)
             return false;
         StageSummary other = (StageSummary) obj;
-        if (other.getActiveSessionId() == null ^ this.getActiveSessionId() == null)
-            return false;
-        if (other.getActiveSessionId() != null && other.getActiveSessionId().equals(this.getActiveSessionId()) == false)
-            return false;
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
@@ -307,6 +303,10 @@ public class StageSummary implements Serializable, Cloneable, StructuredPojo {
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getActiveSessionId() == null ^ this.getActiveSessionId() == null)
+            return false;
+        if (other.getActiveSessionId() != null && other.getActiveSessionId().equals(this.getActiveSessionId()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -320,9 +320,9 @@ public class StageSummary implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getActiveSessionId() == null) ? 0 : getActiveSessionId().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getActiveSessionId() == null) ? 0 : getActiveSessionId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

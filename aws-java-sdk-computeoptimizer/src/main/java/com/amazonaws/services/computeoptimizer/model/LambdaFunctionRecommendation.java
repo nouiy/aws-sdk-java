@@ -178,16 +178,16 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     private String currentPerformanceRisk;
     /**
      * <p>
-     * A list of tags assigned to your Lambda function recommendations.
-     * </p>
-     */
-    private java.util.List<Tag> tags;
-    /**
-     * <p>
      * Describes the effective recommendation preferences for Lambda functions.
      * </p>
      */
     private LambdaEffectiveRecommendationPreferences effectiveRecommendationPreferences;
+    /**
+     * <p>
+     * A list of tags assigned to your Lambda function recommendations.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -1515,6 +1515,46 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
 
     /**
      * <p>
+     * Describes the effective recommendation preferences for Lambda functions.
+     * </p>
+     * 
+     * @param effectiveRecommendationPreferences
+     *        Describes the effective recommendation preferences for Lambda functions.
+     */
+
+    public void setEffectiveRecommendationPreferences(LambdaEffectiveRecommendationPreferences effectiveRecommendationPreferences) {
+        this.effectiveRecommendationPreferences = effectiveRecommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * Describes the effective recommendation preferences for Lambda functions.
+     * </p>
+     * 
+     * @return Describes the effective recommendation preferences for Lambda functions.
+     */
+
+    public LambdaEffectiveRecommendationPreferences getEffectiveRecommendationPreferences() {
+        return this.effectiveRecommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * Describes the effective recommendation preferences for Lambda functions.
+     * </p>
+     * 
+     * @param effectiveRecommendationPreferences
+     *        Describes the effective recommendation preferences for Lambda functions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LambdaFunctionRecommendation withEffectiveRecommendationPreferences(LambdaEffectiveRecommendationPreferences effectiveRecommendationPreferences) {
+        setEffectiveRecommendationPreferences(effectiveRecommendationPreferences);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of tags assigned to your Lambda function recommendations.
      * </p>
      * 
@@ -1584,46 +1624,6 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     }
 
     /**
-     * <p>
-     * Describes the effective recommendation preferences for Lambda functions.
-     * </p>
-     * 
-     * @param effectiveRecommendationPreferences
-     *        Describes the effective recommendation preferences for Lambda functions.
-     */
-
-    public void setEffectiveRecommendationPreferences(LambdaEffectiveRecommendationPreferences effectiveRecommendationPreferences) {
-        this.effectiveRecommendationPreferences = effectiveRecommendationPreferences;
-    }
-
-    /**
-     * <p>
-     * Describes the effective recommendation preferences for Lambda functions.
-     * </p>
-     * 
-     * @return Describes the effective recommendation preferences for Lambda functions.
-     */
-
-    public LambdaEffectiveRecommendationPreferences getEffectiveRecommendationPreferences() {
-        return this.effectiveRecommendationPreferences;
-    }
-
-    /**
-     * <p>
-     * Describes the effective recommendation preferences for Lambda functions.
-     * </p>
-     * 
-     * @param effectiveRecommendationPreferences
-     *        Describes the effective recommendation preferences for Lambda functions.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public LambdaFunctionRecommendation withEffectiveRecommendationPreferences(LambdaEffectiveRecommendationPreferences effectiveRecommendationPreferences) {
-        setEffectiveRecommendationPreferences(effectiveRecommendationPreferences);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1659,10 +1659,10 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
             sb.append("MemorySizeRecommendationOptions: ").append(getMemorySizeRecommendationOptions()).append(",");
         if (getCurrentPerformanceRisk() != null)
             sb.append("CurrentPerformanceRisk: ").append(getCurrentPerformanceRisk()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
         if (getEffectiveRecommendationPreferences() != null)
-            sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences());
+            sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -1726,14 +1726,14 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
             return false;
         if (other.getCurrentPerformanceRisk() != null && other.getCurrentPerformanceRisk().equals(this.getCurrentPerformanceRisk()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
-            return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
-            return false;
         if (other.getEffectiveRecommendationPreferences() == null ^ this.getEffectiveRecommendationPreferences() == null)
             return false;
         if (other.getEffectiveRecommendationPreferences() != null
                 && other.getEffectiveRecommendationPreferences().equals(this.getEffectiveRecommendationPreferences()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
         return true;
     }
@@ -1755,8 +1755,8 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getFindingReasonCodes() == null) ? 0 : getFindingReasonCodes().hashCode());
         hashCode = prime * hashCode + ((getMemorySizeRecommendationOptions() == null) ? 0 : getMemorySizeRecommendationOptions().hashCode());
         hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getEffectiveRecommendationPreferences() == null) ? 0 : getEffectiveRecommendationPreferences().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

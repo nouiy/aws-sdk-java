@@ -26,7 +26,8 @@ public enum ResourceType {
     LambdaFunction("LambdaFunction"),
     NotApplicable("NotApplicable"),
     EcsService("EcsService"),
-    License("License");
+    License("License"),
+    RdsDBInstance("RdsDBInstance");
 
     private String value;
 

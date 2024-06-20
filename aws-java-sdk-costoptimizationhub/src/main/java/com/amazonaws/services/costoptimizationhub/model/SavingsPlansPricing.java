@@ -30,108 +30,28 @@ public class SavingsPlansPricing implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Estimated monthly commitment for the Savings Plan.
-     * </p>
-     */
-    private Double estimatedMonthlyCommitment;
-    /**
-     * <p>
-     * Estimated On-Demand cost you will pay after buying the Savings Plan.
-     * </p>
-     */
-    private Double estimatedOnDemandCost;
-    /**
-     * <p>
      * The cost of paying for the recommended Savings Plan monthly.
      * </p>
      */
     private Double monthlySavingsPlansEligibleCost;
     /**
      * <p>
+     * Estimated monthly commitment for the Savings Plan.
+     * </p>
+     */
+    private Double estimatedMonthlyCommitment;
+    /**
+     * <p>
      * Estimated savings as a percentage of your overall costs after buying the Savings Plan.
      * </p>
      */
     private Double savingsPercentage;
-
-    /**
-     * <p>
-     * Estimated monthly commitment for the Savings Plan.
-     * </p>
-     * 
-     * @param estimatedMonthlyCommitment
-     *        Estimated monthly commitment for the Savings Plan.
-     */
-
-    public void setEstimatedMonthlyCommitment(Double estimatedMonthlyCommitment) {
-        this.estimatedMonthlyCommitment = estimatedMonthlyCommitment;
-    }
-
-    /**
-     * <p>
-     * Estimated monthly commitment for the Savings Plan.
-     * </p>
-     * 
-     * @return Estimated monthly commitment for the Savings Plan.
-     */
-
-    public Double getEstimatedMonthlyCommitment() {
-        return this.estimatedMonthlyCommitment;
-    }
-
-    /**
-     * <p>
-     * Estimated monthly commitment for the Savings Plan.
-     * </p>
-     * 
-     * @param estimatedMonthlyCommitment
-     *        Estimated monthly commitment for the Savings Plan.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SavingsPlansPricing withEstimatedMonthlyCommitment(Double estimatedMonthlyCommitment) {
-        setEstimatedMonthlyCommitment(estimatedMonthlyCommitment);
-        return this;
-    }
-
     /**
      * <p>
      * Estimated On-Demand cost you will pay after buying the Savings Plan.
      * </p>
-     * 
-     * @param estimatedOnDemandCost
-     *        Estimated On-Demand cost you will pay after buying the Savings Plan.
      */
-
-    public void setEstimatedOnDemandCost(Double estimatedOnDemandCost) {
-        this.estimatedOnDemandCost = estimatedOnDemandCost;
-    }
-
-    /**
-     * <p>
-     * Estimated On-Demand cost you will pay after buying the Savings Plan.
-     * </p>
-     * 
-     * @return Estimated On-Demand cost you will pay after buying the Savings Plan.
-     */
-
-    public Double getEstimatedOnDemandCost() {
-        return this.estimatedOnDemandCost;
-    }
-
-    /**
-     * <p>
-     * Estimated On-Demand cost you will pay after buying the Savings Plan.
-     * </p>
-     * 
-     * @param estimatedOnDemandCost
-     *        Estimated On-Demand cost you will pay after buying the Savings Plan.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SavingsPlansPricing withEstimatedOnDemandCost(Double estimatedOnDemandCost) {
-        setEstimatedOnDemandCost(estimatedOnDemandCost);
-        return this;
-    }
+    private Double estimatedOnDemandCost;
 
     /**
      * <p>
@@ -170,6 +90,46 @@ public class SavingsPlansPricing implements Serializable, Cloneable, StructuredP
 
     public SavingsPlansPricing withMonthlySavingsPlansEligibleCost(Double monthlySavingsPlansEligibleCost) {
         setMonthlySavingsPlansEligibleCost(monthlySavingsPlansEligibleCost);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Estimated monthly commitment for the Savings Plan.
+     * </p>
+     * 
+     * @param estimatedMonthlyCommitment
+     *        Estimated monthly commitment for the Savings Plan.
+     */
+
+    public void setEstimatedMonthlyCommitment(Double estimatedMonthlyCommitment) {
+        this.estimatedMonthlyCommitment = estimatedMonthlyCommitment;
+    }
+
+    /**
+     * <p>
+     * Estimated monthly commitment for the Savings Plan.
+     * </p>
+     * 
+     * @return Estimated monthly commitment for the Savings Plan.
+     */
+
+    public Double getEstimatedMonthlyCommitment() {
+        return this.estimatedMonthlyCommitment;
+    }
+
+    /**
+     * <p>
+     * Estimated monthly commitment for the Savings Plan.
+     * </p>
+     * 
+     * @param estimatedMonthlyCommitment
+     *        Estimated monthly commitment for the Savings Plan.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SavingsPlansPricing withEstimatedMonthlyCommitment(Double estimatedMonthlyCommitment) {
+        setEstimatedMonthlyCommitment(estimatedMonthlyCommitment);
         return this;
     }
 
@@ -214,6 +174,46 @@ public class SavingsPlansPricing implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Estimated On-Demand cost you will pay after buying the Savings Plan.
+     * </p>
+     * 
+     * @param estimatedOnDemandCost
+     *        Estimated On-Demand cost you will pay after buying the Savings Plan.
+     */
+
+    public void setEstimatedOnDemandCost(Double estimatedOnDemandCost) {
+        this.estimatedOnDemandCost = estimatedOnDemandCost;
+    }
+
+    /**
+     * <p>
+     * Estimated On-Demand cost you will pay after buying the Savings Plan.
+     * </p>
+     * 
+     * @return Estimated On-Demand cost you will pay after buying the Savings Plan.
+     */
+
+    public Double getEstimatedOnDemandCost() {
+        return this.estimatedOnDemandCost;
+    }
+
+    /**
+     * <p>
+     * Estimated On-Demand cost you will pay after buying the Savings Plan.
+     * </p>
+     * 
+     * @param estimatedOnDemandCost
+     *        Estimated On-Demand cost you will pay after buying the Savings Plan.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SavingsPlansPricing withEstimatedOnDemandCost(Double estimatedOnDemandCost) {
+        setEstimatedOnDemandCost(estimatedOnDemandCost);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -225,14 +225,14 @@ public class SavingsPlansPricing implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEstimatedMonthlyCommitment() != null)
-            sb.append("EstimatedMonthlyCommitment: ").append(getEstimatedMonthlyCommitment()).append(",");
-        if (getEstimatedOnDemandCost() != null)
-            sb.append("EstimatedOnDemandCost: ").append(getEstimatedOnDemandCost()).append(",");
         if (getMonthlySavingsPlansEligibleCost() != null)
             sb.append("MonthlySavingsPlansEligibleCost: ").append(getMonthlySavingsPlansEligibleCost()).append(",");
+        if (getEstimatedMonthlyCommitment() != null)
+            sb.append("EstimatedMonthlyCommitment: ").append(getEstimatedMonthlyCommitment()).append(",");
         if (getSavingsPercentage() != null)
-            sb.append("SavingsPercentage: ").append(getSavingsPercentage());
+            sb.append("SavingsPercentage: ").append(getSavingsPercentage()).append(",");
+        if (getEstimatedOnDemandCost() != null)
+            sb.append("EstimatedOnDemandCost: ").append(getEstimatedOnDemandCost());
         sb.append("}");
         return sb.toString();
     }
@@ -247,22 +247,22 @@ public class SavingsPlansPricing implements Serializable, Cloneable, StructuredP
         if (obj instanceof SavingsPlansPricing == false)
             return false;
         SavingsPlansPricing other = (SavingsPlansPricing) obj;
-        if (other.getEstimatedMonthlyCommitment() == null ^ this.getEstimatedMonthlyCommitment() == null)
-            return false;
-        if (other.getEstimatedMonthlyCommitment() != null && other.getEstimatedMonthlyCommitment().equals(this.getEstimatedMonthlyCommitment()) == false)
-            return false;
-        if (other.getEstimatedOnDemandCost() == null ^ this.getEstimatedOnDemandCost() == null)
-            return false;
-        if (other.getEstimatedOnDemandCost() != null && other.getEstimatedOnDemandCost().equals(this.getEstimatedOnDemandCost()) == false)
-            return false;
         if (other.getMonthlySavingsPlansEligibleCost() == null ^ this.getMonthlySavingsPlansEligibleCost() == null)
             return false;
         if (other.getMonthlySavingsPlansEligibleCost() != null
                 && other.getMonthlySavingsPlansEligibleCost().equals(this.getMonthlySavingsPlansEligibleCost()) == false)
             return false;
+        if (other.getEstimatedMonthlyCommitment() == null ^ this.getEstimatedMonthlyCommitment() == null)
+            return false;
+        if (other.getEstimatedMonthlyCommitment() != null && other.getEstimatedMonthlyCommitment().equals(this.getEstimatedMonthlyCommitment()) == false)
+            return false;
         if (other.getSavingsPercentage() == null ^ this.getSavingsPercentage() == null)
             return false;
         if (other.getSavingsPercentage() != null && other.getSavingsPercentage().equals(this.getSavingsPercentage()) == false)
+            return false;
+        if (other.getEstimatedOnDemandCost() == null ^ this.getEstimatedOnDemandCost() == null)
+            return false;
+        if (other.getEstimatedOnDemandCost() != null && other.getEstimatedOnDemandCost().equals(this.getEstimatedOnDemandCost()) == false)
             return false;
         return true;
     }
@@ -272,10 +272,10 @@ public class SavingsPlansPricing implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEstimatedMonthlyCommitment() == null) ? 0 : getEstimatedMonthlyCommitment().hashCode());
-        hashCode = prime * hashCode + ((getEstimatedOnDemandCost() == null) ? 0 : getEstimatedOnDemandCost().hashCode());
         hashCode = prime * hashCode + ((getMonthlySavingsPlansEligibleCost() == null) ? 0 : getMonthlySavingsPlansEligibleCost().hashCode());
+        hashCode = prime * hashCode + ((getEstimatedMonthlyCommitment() == null) ? 0 : getEstimatedMonthlyCommitment().hashCode());
         hashCode = prime * hashCode + ((getSavingsPercentage() == null) ? 0 : getSavingsPercentage().hashCode());
+        hashCode = prime * hashCode + ((getEstimatedOnDemandCost() == null) ? 0 : getEstimatedOnDemandCost().hashCode());
         return hashCode;
     }
 

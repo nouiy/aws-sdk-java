@@ -25,7 +25,9 @@ public enum RecommendationSourceType {
     EbsVolume("EbsVolume"),
     LambdaFunction("LambdaFunction"),
     EcsService("EcsService"),
-    License("License");
+    License("License"),
+    RdsDBInstance("RdsDBInstance"),
+    RdsDBInstanceStorage("RdsDBInstanceStorage");
 
     private String value;
 

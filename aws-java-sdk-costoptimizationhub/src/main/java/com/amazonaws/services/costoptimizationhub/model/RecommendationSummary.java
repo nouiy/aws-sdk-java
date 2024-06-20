@@ -30,62 +30,22 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The estimated total savings resulting from modifications, on a monthly basis.
-     * </p>
-     */
-    private Double estimatedMonthlySavings;
-    /**
-     * <p>
      * The grouping of recommendations.
      * </p>
      */
     private String group;
     /**
      * <p>
+     * The estimated total savings resulting from modifications, on a monthly basis.
+     * </p>
+     */
+    private Double estimatedMonthlySavings;
+    /**
+     * <p>
      * The total number of instance recommendations.
      * </p>
      */
     private Integer recommendationCount;
-
-    /**
-     * <p>
-     * The estimated total savings resulting from modifications, on a monthly basis.
-     * </p>
-     * 
-     * @param estimatedMonthlySavings
-     *        The estimated total savings resulting from modifications, on a monthly basis.
-     */
-
-    public void setEstimatedMonthlySavings(Double estimatedMonthlySavings) {
-        this.estimatedMonthlySavings = estimatedMonthlySavings;
-    }
-
-    /**
-     * <p>
-     * The estimated total savings resulting from modifications, on a monthly basis.
-     * </p>
-     * 
-     * @return The estimated total savings resulting from modifications, on a monthly basis.
-     */
-
-    public Double getEstimatedMonthlySavings() {
-        return this.estimatedMonthlySavings;
-    }
-
-    /**
-     * <p>
-     * The estimated total savings resulting from modifications, on a monthly basis.
-     * </p>
-     * 
-     * @param estimatedMonthlySavings
-     *        The estimated total savings resulting from modifications, on a monthly basis.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RecommendationSummary withEstimatedMonthlySavings(Double estimatedMonthlySavings) {
-        setEstimatedMonthlySavings(estimatedMonthlySavings);
-        return this;
-    }
 
     /**
      * <p>
@@ -124,6 +84,46 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
 
     public RecommendationSummary withGroup(String group) {
         setGroup(group);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The estimated total savings resulting from modifications, on a monthly basis.
+     * </p>
+     * 
+     * @param estimatedMonthlySavings
+     *        The estimated total savings resulting from modifications, on a monthly basis.
+     */
+
+    public void setEstimatedMonthlySavings(Double estimatedMonthlySavings) {
+        this.estimatedMonthlySavings = estimatedMonthlySavings;
+    }
+
+    /**
+     * <p>
+     * The estimated total savings resulting from modifications, on a monthly basis.
+     * </p>
+     * 
+     * @return The estimated total savings resulting from modifications, on a monthly basis.
+     */
+
+    public Double getEstimatedMonthlySavings() {
+        return this.estimatedMonthlySavings;
+    }
+
+    /**
+     * <p>
+     * The estimated total savings resulting from modifications, on a monthly basis.
+     * </p>
+     * 
+     * @param estimatedMonthlySavings
+     *        The estimated total savings resulting from modifications, on a monthly basis.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationSummary withEstimatedMonthlySavings(Double estimatedMonthlySavings) {
+        setEstimatedMonthlySavings(estimatedMonthlySavings);
         return this;
     }
 
@@ -179,10 +179,10 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEstimatedMonthlySavings() != null)
-            sb.append("EstimatedMonthlySavings: ").append(getEstimatedMonthlySavings()).append(",");
         if (getGroup() != null)
             sb.append("Group: ").append(getGroup()).append(",");
+        if (getEstimatedMonthlySavings() != null)
+            sb.append("EstimatedMonthlySavings: ").append(getEstimatedMonthlySavings()).append(",");
         if (getRecommendationCount() != null)
             sb.append("RecommendationCount: ").append(getRecommendationCount());
         sb.append("}");
@@ -199,13 +199,13 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
         if (obj instanceof RecommendationSummary == false)
             return false;
         RecommendationSummary other = (RecommendationSummary) obj;
-        if (other.getEstimatedMonthlySavings() == null ^ this.getEstimatedMonthlySavings() == null)
-            return false;
-        if (other.getEstimatedMonthlySavings() != null && other.getEstimatedMonthlySavings().equals(this.getEstimatedMonthlySavings()) == false)
-            return false;
         if (other.getGroup() == null ^ this.getGroup() == null)
             return false;
         if (other.getGroup() != null && other.getGroup().equals(this.getGroup()) == false)
+            return false;
+        if (other.getEstimatedMonthlySavings() == null ^ this.getEstimatedMonthlySavings() == null)
+            return false;
+        if (other.getEstimatedMonthlySavings() != null && other.getEstimatedMonthlySavings().equals(this.getEstimatedMonthlySavings()) == false)
             return false;
         if (other.getRecommendationCount() == null ^ this.getRecommendationCount() == null)
             return false;
@@ -219,8 +219,8 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEstimatedMonthlySavings() == null) ? 0 : getEstimatedMonthlySavings().hashCode());
         hashCode = prime * hashCode + ((getGroup() == null) ? 0 : getGroup().hashCode());
+        hashCode = prime * hashCode + ((getEstimatedMonthlySavings() == null) ? 0 : getEstimatedMonthlySavings().hashCode());
         hashCode = prime * hashCode + ((getRecommendationCount() == null) ? 0 : getRecommendationCount().hashCode());
         return hashCode;
     }

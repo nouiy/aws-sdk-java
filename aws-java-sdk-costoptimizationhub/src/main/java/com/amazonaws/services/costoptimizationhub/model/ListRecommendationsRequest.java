@@ -33,6 +33,12 @@ public class ListRecommendationsRequest extends com.amazonaws.AmazonWebServiceRe
     private Filter filter;
     /**
      * <p>
+     * The ordering of recommendations by a dimension.
+     * </p>
+     */
+    private OrderBy orderBy;
+    /**
+     * <p>
      * List of all recommendations for a resource, or a single recommendation if de-duped by <code>resourceId</code>.
      * </p>
      */
@@ -49,12 +55,6 @@ public class ListRecommendationsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String nextToken;
-    /**
-     * <p>
-     * The ordering of recommendations by a dimension.
-     * </p>
-     */
-    private OrderBy orderBy;
 
     /**
      * <p>
@@ -93,6 +93,46 @@ public class ListRecommendationsRequest extends com.amazonaws.AmazonWebServiceRe
 
     public ListRecommendationsRequest withFilter(Filter filter) {
         setFilter(filter);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ordering of recommendations by a dimension.
+     * </p>
+     * 
+     * @param orderBy
+     *        The ordering of recommendations by a dimension.
+     */
+
+    public void setOrderBy(OrderBy orderBy) {
+        this.orderBy = orderBy;
+    }
+
+    /**
+     * <p>
+     * The ordering of recommendations by a dimension.
+     * </p>
+     * 
+     * @return The ordering of recommendations by a dimension.
+     */
+
+    public OrderBy getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
+     * <p>
+     * The ordering of recommendations by a dimension.
+     * </p>
+     * 
+     * @param orderBy
+     *        The ordering of recommendations by a dimension.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRecommendationsRequest withOrderBy(OrderBy orderBy) {
+        setOrderBy(orderBy);
         return this;
     }
 
@@ -233,46 +273,6 @@ public class ListRecommendationsRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p>
-     * The ordering of recommendations by a dimension.
-     * </p>
-     * 
-     * @param orderBy
-     *        The ordering of recommendations by a dimension.
-     */
-
-    public void setOrderBy(OrderBy orderBy) {
-        this.orderBy = orderBy;
-    }
-
-    /**
-     * <p>
-     * The ordering of recommendations by a dimension.
-     * </p>
-     * 
-     * @return The ordering of recommendations by a dimension.
-     */
-
-    public OrderBy getOrderBy() {
-        return this.orderBy;
-    }
-
-    /**
-     * <p>
-     * The ordering of recommendations by a dimension.
-     * </p>
-     * 
-     * @param orderBy
-     *        The ordering of recommendations by a dimension.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRecommendationsRequest withOrderBy(OrderBy orderBy) {
-        setOrderBy(orderBy);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -286,14 +286,14 @@ public class ListRecommendationsRequest extends com.amazonaws.AmazonWebServiceRe
         sb.append("{");
         if (getFilter() != null)
             sb.append("Filter: ").append(getFilter()).append(",");
+        if (getOrderBy() != null)
+            sb.append("OrderBy: ").append(getOrderBy()).append(",");
         if (getIncludeAllRecommendations() != null)
             sb.append("IncludeAllRecommendations: ").append(getIncludeAllRecommendations()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getOrderBy() != null)
-            sb.append("OrderBy: ").append(getOrderBy());
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -312,6 +312,10 @@ public class ListRecommendationsRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
             return false;
+        if (other.getOrderBy() == null ^ this.getOrderBy() == null)
+            return false;
+        if (other.getOrderBy() != null && other.getOrderBy().equals(this.getOrderBy()) == false)
+            return false;
         if (other.getIncludeAllRecommendations() == null ^ this.getIncludeAllRecommendations() == null)
             return false;
         if (other.getIncludeAllRecommendations() != null && other.getIncludeAllRecommendations().equals(this.getIncludeAllRecommendations()) == false)
@@ -324,10 +328,6 @@ public class ListRecommendationsRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
-        if (other.getOrderBy() == null ^ this.getOrderBy() == null)
-            return false;
-        if (other.getOrderBy() != null && other.getOrderBy().equals(this.getOrderBy()) == false)
-            return false;
         return true;
     }
 
@@ -337,10 +337,10 @@ public class ListRecommendationsRequest extends com.amazonaws.AmazonWebServiceRe
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
+        hashCode = prime * hashCode + ((getOrderBy() == null) ? 0 : getOrderBy().hashCode());
         hashCode = prime * hashCode + ((getIncludeAllRecommendations() == null) ? 0 : getIncludeAllRecommendations().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
-        hashCode = prime * hashCode + ((getOrderBy() == null) ? 0 : getOrderBy().hashCode());
         return hashCode;
     }
 

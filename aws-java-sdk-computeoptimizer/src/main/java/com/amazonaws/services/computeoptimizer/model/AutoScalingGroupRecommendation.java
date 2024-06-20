@@ -90,6 +90,12 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
     private AutoScalingGroupConfiguration currentConfiguration;
     /**
      * <p>
+     * Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
+     * </p>
+     */
+    private GpuInfo currentInstanceGpuInfo;
+    /**
+     * <p>
      * An array of objects that describe the recommendation options for the Auto Scaling group.
      * </p>
      */
@@ -171,12 +177,6 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * </ul>
      */
     private java.util.List<String> inferredWorkloadTypes;
-    /**
-     * <p>
-     * Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
-     * </p>
-     */
-    private GpuInfo currentInstanceGpuInfo;
 
     /**
      * <p>
@@ -644,6 +644,46 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
 
     public AutoScalingGroupRecommendation withCurrentConfiguration(AutoScalingGroupConfiguration currentConfiguration) {
         setCurrentConfiguration(currentConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
+     * </p>
+     * 
+     * @param currentInstanceGpuInfo
+     *        Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
+     */
+
+    public void setCurrentInstanceGpuInfo(GpuInfo currentInstanceGpuInfo) {
+        this.currentInstanceGpuInfo = currentInstanceGpuInfo;
+    }
+
+    /**
+     * <p>
+     * Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
+     * </p>
+     * 
+     * @return Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
+     */
+
+    public GpuInfo getCurrentInstanceGpuInfo() {
+        return this.currentInstanceGpuInfo;
+    }
+
+    /**
+     * <p>
+     * Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
+     * </p>
+     * 
+     * @param currentInstanceGpuInfo
+     *        Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoScalingGroupRecommendation withCurrentInstanceGpuInfo(GpuInfo currentInstanceGpuInfo) {
+        setCurrentInstanceGpuInfo(currentInstanceGpuInfo);
         return this;
     }
 
@@ -1476,46 +1516,6 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
     }
 
     /**
-     * <p>
-     * Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
-     * </p>
-     * 
-     * @param currentInstanceGpuInfo
-     *        Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
-     */
-
-    public void setCurrentInstanceGpuInfo(GpuInfo currentInstanceGpuInfo) {
-        this.currentInstanceGpuInfo = currentInstanceGpuInfo;
-    }
-
-    /**
-     * <p>
-     * Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
-     * </p>
-     * 
-     * @return Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
-     */
-
-    public GpuInfo getCurrentInstanceGpuInfo() {
-        return this.currentInstanceGpuInfo;
-    }
-
-    /**
-     * <p>
-     * Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
-     * </p>
-     * 
-     * @param currentInstanceGpuInfo
-     *        Describes the GPU accelerator settings for the current instance type of the Auto Scaling group.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AutoScalingGroupRecommendation withCurrentInstanceGpuInfo(GpuInfo currentInstanceGpuInfo) {
-        setCurrentInstanceGpuInfo(currentInstanceGpuInfo);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1541,6 +1541,8 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
             sb.append("LookBackPeriodInDays: ").append(getLookBackPeriodInDays()).append(",");
         if (getCurrentConfiguration() != null)
             sb.append("CurrentConfiguration: ").append(getCurrentConfiguration()).append(",");
+        if (getCurrentInstanceGpuInfo() != null)
+            sb.append("CurrentInstanceGpuInfo: ").append(getCurrentInstanceGpuInfo()).append(",");
         if (getRecommendationOptions() != null)
             sb.append("RecommendationOptions: ").append(getRecommendationOptions()).append(",");
         if (getLastRefreshTimestamp() != null)
@@ -1550,9 +1552,7 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
         if (getEffectiveRecommendationPreferences() != null)
             sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences()).append(",");
         if (getInferredWorkloadTypes() != null)
-            sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes()).append(",");
-        if (getCurrentInstanceGpuInfo() != null)
-            sb.append("CurrentInstanceGpuInfo: ").append(getCurrentInstanceGpuInfo());
+            sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -1595,6 +1595,10 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
             return false;
         if (other.getCurrentConfiguration() != null && other.getCurrentConfiguration().equals(this.getCurrentConfiguration()) == false)
             return false;
+        if (other.getCurrentInstanceGpuInfo() == null ^ this.getCurrentInstanceGpuInfo() == null)
+            return false;
+        if (other.getCurrentInstanceGpuInfo() != null && other.getCurrentInstanceGpuInfo().equals(this.getCurrentInstanceGpuInfo()) == false)
+            return false;
         if (other.getRecommendationOptions() == null ^ this.getRecommendationOptions() == null)
             return false;
         if (other.getRecommendationOptions() != null && other.getRecommendationOptions().equals(this.getRecommendationOptions()) == false)
@@ -1616,10 +1620,6 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
             return false;
         if (other.getInferredWorkloadTypes() != null && other.getInferredWorkloadTypes().equals(this.getInferredWorkloadTypes()) == false)
             return false;
-        if (other.getCurrentInstanceGpuInfo() == null ^ this.getCurrentInstanceGpuInfo() == null)
-            return false;
-        if (other.getCurrentInstanceGpuInfo() != null && other.getCurrentInstanceGpuInfo().equals(this.getCurrentInstanceGpuInfo()) == false)
-            return false;
         return true;
     }
 
@@ -1635,12 +1635,12 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getUtilizationMetrics() == null) ? 0 : getUtilizationMetrics().hashCode());
         hashCode = prime * hashCode + ((getLookBackPeriodInDays() == null) ? 0 : getLookBackPeriodInDays().hashCode());
         hashCode = prime * hashCode + ((getCurrentConfiguration() == null) ? 0 : getCurrentConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getCurrentInstanceGpuInfo() == null) ? 0 : getCurrentInstanceGpuInfo().hashCode());
         hashCode = prime * hashCode + ((getRecommendationOptions() == null) ? 0 : getRecommendationOptions().hashCode());
         hashCode = prime * hashCode + ((getLastRefreshTimestamp() == null) ? 0 : getLastRefreshTimestamp().hashCode());
         hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
         hashCode = prime * hashCode + ((getEffectiveRecommendationPreferences() == null) ? 0 : getEffectiveRecommendationPreferences().hashCode());
         hashCode = prime * hashCode + ((getInferredWorkloadTypes() == null) ? 0 : getInferredWorkloadTypes().hashCode());
-        hashCode = prime * hashCode + ((getCurrentInstanceGpuInfo() == null) ? 0 : getCurrentInstanceGpuInfo().hashCode());
         return hashCode;
     }
 

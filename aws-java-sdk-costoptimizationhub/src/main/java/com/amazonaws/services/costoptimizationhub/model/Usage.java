@@ -30,6 +30,18 @@ public class Usage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The usage type.
+     * </p>
+     */
+    private String usageType;
+    /**
+     * <p>
+     * The usage amount.
+     * </p>
+     */
+    private Double usageAmount;
+    /**
+     * <p>
      * The operation value.
      * </p>
      */
@@ -46,18 +58,86 @@ public class Usage implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String unit;
-    /**
-     * <p>
-     * The usage amount.
-     * </p>
-     */
-    private Double usageAmount;
+
     /**
      * <p>
      * The usage type.
      * </p>
+     * 
+     * @param usageType
+     *        The usage type.
      */
-    private String usageType;
+
+    public void setUsageType(String usageType) {
+        this.usageType = usageType;
+    }
+
+    /**
+     * <p>
+     * The usage type.
+     * </p>
+     * 
+     * @return The usage type.
+     */
+
+    public String getUsageType() {
+        return this.usageType;
+    }
+
+    /**
+     * <p>
+     * The usage type.
+     * </p>
+     * 
+     * @param usageType
+     *        The usage type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Usage withUsageType(String usageType) {
+        setUsageType(usageType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The usage amount.
+     * </p>
+     * 
+     * @param usageAmount
+     *        The usage amount.
+     */
+
+    public void setUsageAmount(Double usageAmount) {
+        this.usageAmount = usageAmount;
+    }
+
+    /**
+     * <p>
+     * The usage amount.
+     * </p>
+     * 
+     * @return The usage amount.
+     */
+
+    public Double getUsageAmount() {
+        return this.usageAmount;
+    }
+
+    /**
+     * <p>
+     * The usage amount.
+     * </p>
+     * 
+     * @param usageAmount
+     *        The usage amount.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Usage withUsageAmount(Double usageAmount) {
+        setUsageAmount(usageAmount);
+        return this;
+    }
 
     /**
      * <p>
@@ -180,86 +260,6 @@ public class Usage implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p>
-     * The usage amount.
-     * </p>
-     * 
-     * @param usageAmount
-     *        The usage amount.
-     */
-
-    public void setUsageAmount(Double usageAmount) {
-        this.usageAmount = usageAmount;
-    }
-
-    /**
-     * <p>
-     * The usage amount.
-     * </p>
-     * 
-     * @return The usage amount.
-     */
-
-    public Double getUsageAmount() {
-        return this.usageAmount;
-    }
-
-    /**
-     * <p>
-     * The usage amount.
-     * </p>
-     * 
-     * @param usageAmount
-     *        The usage amount.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Usage withUsageAmount(Double usageAmount) {
-        setUsageAmount(usageAmount);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The usage type.
-     * </p>
-     * 
-     * @param usageType
-     *        The usage type.
-     */
-
-    public void setUsageType(String usageType) {
-        this.usageType = usageType;
-    }
-
-    /**
-     * <p>
-     * The usage type.
-     * </p>
-     * 
-     * @return The usage type.
-     */
-
-    public String getUsageType() {
-        return this.usageType;
-    }
-
-    /**
-     * <p>
-     * The usage type.
-     * </p>
-     * 
-     * @param usageType
-     *        The usage type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Usage withUsageType(String usageType) {
-        setUsageType(usageType);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -271,16 +271,16 @@ public class Usage implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getUsageType() != null)
+            sb.append("UsageType: ").append(getUsageType()).append(",");
+        if (getUsageAmount() != null)
+            sb.append("UsageAmount: ").append(getUsageAmount()).append(",");
         if (getOperation() != null)
             sb.append("Operation: ").append(getOperation()).append(",");
         if (getProductCode() != null)
             sb.append("ProductCode: ").append(getProductCode()).append(",");
         if (getUnit() != null)
-            sb.append("Unit: ").append(getUnit()).append(",");
-        if (getUsageAmount() != null)
-            sb.append("UsageAmount: ").append(getUsageAmount()).append(",");
-        if (getUsageType() != null)
-            sb.append("UsageType: ").append(getUsageType());
+            sb.append("Unit: ").append(getUnit());
         sb.append("}");
         return sb.toString();
     }
@@ -295,6 +295,14 @@ public class Usage implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Usage == false)
             return false;
         Usage other = (Usage) obj;
+        if (other.getUsageType() == null ^ this.getUsageType() == null)
+            return false;
+        if (other.getUsageType() != null && other.getUsageType().equals(this.getUsageType()) == false)
+            return false;
+        if (other.getUsageAmount() == null ^ this.getUsageAmount() == null)
+            return false;
+        if (other.getUsageAmount() != null && other.getUsageAmount().equals(this.getUsageAmount()) == false)
+            return false;
         if (other.getOperation() == null ^ this.getOperation() == null)
             return false;
         if (other.getOperation() != null && other.getOperation().equals(this.getOperation()) == false)
@@ -307,14 +315,6 @@ public class Usage implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getUnit() != null && other.getUnit().equals(this.getUnit()) == false)
             return false;
-        if (other.getUsageAmount() == null ^ this.getUsageAmount() == null)
-            return false;
-        if (other.getUsageAmount() != null && other.getUsageAmount().equals(this.getUsageAmount()) == false)
-            return false;
-        if (other.getUsageType() == null ^ this.getUsageType() == null)
-            return false;
-        if (other.getUsageType() != null && other.getUsageType().equals(this.getUsageType()) == false)
-            return false;
         return true;
     }
 
@@ -323,11 +323,11 @@ public class Usage implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getUsageType() == null) ? 0 : getUsageType().hashCode());
+        hashCode = prime * hashCode + ((getUsageAmount() == null) ? 0 : getUsageAmount().hashCode());
         hashCode = prime * hashCode + ((getOperation() == null) ? 0 : getOperation().hashCode());
         hashCode = prime * hashCode + ((getProductCode() == null) ? 0 : getProductCode().hashCode());
         hashCode = prime * hashCode + ((getUnit() == null) ? 0 : getUnit().hashCode());
-        hashCode = prime * hashCode + ((getUsageAmount() == null) ? 0 : getUsageAmount().hashCode());
-        hashCode = prime * hashCode + ((getUsageType() == null) ? 0 : getUsageType().hashCode());
         return hashCode;
     }
 

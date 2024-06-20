@@ -48,15 +48,15 @@ public class CreateStageResultJsonUnmarshaller implements Unmarshaller<CreateSta
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("stage", targetDepth)) {
+                    context.nextToken();
+                    createStageResult.setStage(StageJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("participantTokens", targetDepth)) {
                     context.nextToken();
                     createStageResult.setParticipantTokens(new ListUnmarshaller<ParticipantToken>(ParticipantTokenJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("stage", targetDepth)) {
-                    context.nextToken();
-                    createStageResult.setStage(StageJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

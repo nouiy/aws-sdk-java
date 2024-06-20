@@ -27,10 +27,22 @@ public class ListParticipantEventsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 50.
+     * Stage ARN.
      * </p>
      */
-    private Integer maxResults;
+    private String stageArn;
+    /**
+     * <p>
+     * ID of a session within the stage.
+     * </p>
+     */
+    private String sessionId;
+    /**
+     * <p>
+     * Unique identifier for this participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * </p>
+     */
+    private String participantId;
     /**
      * <p>
      * The first participant event to retrieve. This is used for pagination; see the <code>nextToken</code> response
@@ -40,60 +52,131 @@ public class ListParticipantEventsRequest extends com.amazonaws.AmazonWebService
     private String nextToken;
     /**
      * <p>
-     * Unique identifier for this participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * Maximum number of results to return. Default: 50.
      * </p>
      */
-    private String participantId;
-    /**
-     * <p>
-     * ID of a session within the stage.
-     * </p>
-     */
-    private String sessionId;
+    private Integer maxResults;
+
     /**
      * <p>
      * Stage ARN.
      * </p>
-     */
-    private String stageArn;
-
-    /**
-     * <p>
-     * Maximum number of results to return. Default: 50.
-     * </p>
      * 
-     * @param maxResults
-     *        Maximum number of results to return. Default: 50.
+     * @param stageArn
+     *        Stage ARN.
      */
 
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public void setStageArn(String stageArn) {
+        this.stageArn = stageArn;
     }
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 50.
+     * Stage ARN.
      * </p>
      * 
-     * @return Maximum number of results to return. Default: 50.
+     * @return Stage ARN.
      */
 
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getStageArn() {
+        return this.stageArn;
     }
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 50.
+     * Stage ARN.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum number of results to return. Default: 50.
+     * @param stageArn
+     *        Stage ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListParticipantEventsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
+    public ListParticipantEventsRequest withStageArn(String stageArn) {
+        setStageArn(stageArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * ID of a session within the stage.
+     * </p>
+     * 
+     * @param sessionId
+     *        ID of a session within the stage.
+     */
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
+
+    /**
+     * <p>
+     * ID of a session within the stage.
+     * </p>
+     * 
+     * @return ID of a session within the stage.
+     */
+
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
+     * <p>
+     * ID of a session within the stage.
+     * </p>
+     * 
+     * @param sessionId
+     *        ID of a session within the stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListParticipantEventsRequest withSessionId(String sessionId) {
+        setSessionId(sessionId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for this participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * </p>
+     * 
+     * @param participantId
+     *        Unique identifier for this participant. This is assigned by IVS and returned by
+     *        <a>CreateParticipantToken</a>.
+     */
+
+    public void setParticipantId(String participantId) {
+        this.participantId = participantId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for this participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * </p>
+     * 
+     * @return Unique identifier for this participant. This is assigned by IVS and returned by
+     *         <a>CreateParticipantToken</a>.
+     */
+
+    public String getParticipantId() {
+        return this.participantId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for this participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * </p>
+     * 
+     * @param participantId
+     *        Unique identifier for this participant. This is assigned by IVS and returned by
+     *        <a>CreateParticipantToken</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListParticipantEventsRequest withParticipantId(String participantId) {
+        setParticipantId(participantId);
         return this;
     }
 
@@ -145,124 +228,41 @@ public class ListParticipantEventsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Unique identifier for this participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * Maximum number of results to return. Default: 50.
      * </p>
      * 
-     * @param participantId
-     *        Unique identifier for this participant. This is assigned by IVS and returned by
-     *        <a>CreateParticipantToken</a>.
+     * @param maxResults
+     *        Maximum number of results to return. Default: 50.
      */
 
-    public void setParticipantId(String participantId) {
-        this.participantId = participantId;
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
     }
 
     /**
      * <p>
-     * Unique identifier for this participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * Maximum number of results to return. Default: 50.
      * </p>
      * 
-     * @return Unique identifier for this participant. This is assigned by IVS and returned by
-     *         <a>CreateParticipantToken</a>.
+     * @return Maximum number of results to return. Default: 50.
      */
 
-    public String getParticipantId() {
-        return this.participantId;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
      * <p>
-     * Unique identifier for this participant. This is assigned by IVS and returned by <a>CreateParticipantToken</a>.
+     * Maximum number of results to return. Default: 50.
      * </p>
      * 
-     * @param participantId
-     *        Unique identifier for this participant. This is assigned by IVS and returned by
-     *        <a>CreateParticipantToken</a>.
+     * @param maxResults
+     *        Maximum number of results to return. Default: 50.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListParticipantEventsRequest withParticipantId(String participantId) {
-        setParticipantId(participantId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * ID of a session within the stage.
-     * </p>
-     * 
-     * @param sessionId
-     *        ID of a session within the stage.
-     */
-
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-    }
-
-    /**
-     * <p>
-     * ID of a session within the stage.
-     * </p>
-     * 
-     * @return ID of a session within the stage.
-     */
-
-    public String getSessionId() {
-        return this.sessionId;
-    }
-
-    /**
-     * <p>
-     * ID of a session within the stage.
-     * </p>
-     * 
-     * @param sessionId
-     *        ID of a session within the stage.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListParticipantEventsRequest withSessionId(String sessionId) {
-        setSessionId(sessionId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Stage ARN.
-     * </p>
-     * 
-     * @param stageArn
-     *        Stage ARN.
-     */
-
-    public void setStageArn(String stageArn) {
-        this.stageArn = stageArn;
-    }
-
-    /**
-     * <p>
-     * Stage ARN.
-     * </p>
-     * 
-     * @return Stage ARN.
-     */
-
-    public String getStageArn() {
-        return this.stageArn;
-    }
-
-    /**
-     * <p>
-     * Stage ARN.
-     * </p>
-     * 
-     * @param stageArn
-     *        Stage ARN.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListParticipantEventsRequest withStageArn(String stageArn) {
-        setStageArn(stageArn);
+    public ListParticipantEventsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
         return this;
     }
 
@@ -278,16 +278,16 @@ public class ListParticipantEventsRequest extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getParticipantId() != null)
-            sb.append("ParticipantId: ").append(getParticipantId()).append(",");
+        if (getStageArn() != null)
+            sb.append("StageArn: ").append(getStageArn()).append(",");
         if (getSessionId() != null)
             sb.append("SessionId: ").append(getSessionId()).append(",");
-        if (getStageArn() != null)
-            sb.append("StageArn: ").append(getStageArn());
+        if (getParticipantId() != null)
+            sb.append("ParticipantId: ").append(getParticipantId()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -302,25 +302,25 @@ public class ListParticipantEventsRequest extends com.amazonaws.AmazonWebService
         if (obj instanceof ListParticipantEventsRequest == false)
             return false;
         ListParticipantEventsRequest other = (ListParticipantEventsRequest) obj;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+        if (other.getStageArn() == null ^ this.getStageArn() == null)
             return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
-        if (other.getParticipantId() == null ^ this.getParticipantId() == null)
-            return false;
-        if (other.getParticipantId() != null && other.getParticipantId().equals(this.getParticipantId()) == false)
+        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
             return false;
         if (other.getSessionId() == null ^ this.getSessionId() == null)
             return false;
         if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
             return false;
-        if (other.getStageArn() == null ^ this.getStageArn() == null)
+        if (other.getParticipantId() == null ^ this.getParticipantId() == null)
             return false;
-        if (other.getStageArn() != null && other.getStageArn().equals(this.getStageArn()) == false)
+        if (other.getParticipantId() != null && other.getParticipantId().equals(this.getParticipantId()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -330,11 +330,11 @@ public class ListParticipantEventsRequest extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
-        hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
-        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         hashCode = prime * hashCode + ((getStageArn() == null) ? 0 : getStageArn().hashCode());
+        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
+        hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

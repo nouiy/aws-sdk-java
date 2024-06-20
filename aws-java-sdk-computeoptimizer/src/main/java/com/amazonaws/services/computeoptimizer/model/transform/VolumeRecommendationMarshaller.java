@@ -46,10 +46,10 @@ public class VolumeRecommendationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastRefreshTimestamp").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> CURRENTPERFORMANCERISK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentPerformanceRisk").build();
-    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> EFFECTIVERECOMMENDATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("effectiveRecommendationPreferences").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final VolumeRecommendationMarshaller instance = new VolumeRecommendationMarshaller();
 
@@ -76,8 +76,8 @@ public class VolumeRecommendationMarshaller {
             protocolMarshaller.marshall(volumeRecommendation.getVolumeRecommendationOptions(), VOLUMERECOMMENDATIONOPTIONS_BINDING);
             protocolMarshaller.marshall(volumeRecommendation.getLastRefreshTimestamp(), LASTREFRESHTIMESTAMP_BINDING);
             protocolMarshaller.marshall(volumeRecommendation.getCurrentPerformanceRisk(), CURRENTPERFORMANCERISK_BINDING);
-            protocolMarshaller.marshall(volumeRecommendation.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(volumeRecommendation.getEffectiveRecommendationPreferences(), EFFECTIVERECOMMENDATIONPREFERENCES_BINDING);
+            protocolMarshaller.marshall(volumeRecommendation.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

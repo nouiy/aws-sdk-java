@@ -27,71 +27,28 @@ public class ListCompositionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its output.
-     * </p>
-     */
-    private String filterByEncoderConfigurationArn;
-    /**
-     * <p>
      * Filters the Composition list to match the specified Stage ARN.
      * </p>
      */
     private String filterByStageArn;
     /**
      * <p>
-     * Maximum number of results to return. Default: 100.
+     * Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its output.
      * </p>
      */
-    private Integer maxResults;
+    private String filterByEncoderConfigurationArn;
     /**
      * <p>
      * The first Composition to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * </p>
      */
     private String nextToken;
-
     /**
      * <p>
-     * Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its output.
+     * Maximum number of results to return. Default: 100.
      * </p>
-     * 
-     * @param filterByEncoderConfigurationArn
-     *        Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its
-     *        output.
      */
-
-    public void setFilterByEncoderConfigurationArn(String filterByEncoderConfigurationArn) {
-        this.filterByEncoderConfigurationArn = filterByEncoderConfigurationArn;
-    }
-
-    /**
-     * <p>
-     * Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its output.
-     * </p>
-     * 
-     * @return Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its
-     *         output.
-     */
-
-    public String getFilterByEncoderConfigurationArn() {
-        return this.filterByEncoderConfigurationArn;
-    }
-
-    /**
-     * <p>
-     * Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its output.
-     * </p>
-     * 
-     * @param filterByEncoderConfigurationArn
-     *        Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its
-     *        output.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListCompositionsRequest withFilterByEncoderConfigurationArn(String filterByEncoderConfigurationArn) {
-        setFilterByEncoderConfigurationArn(filterByEncoderConfigurationArn);
-        return this;
-    }
+    private Integer maxResults;
 
     /**
      * <p>
@@ -135,41 +92,44 @@ public class ListCompositionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 100.
+     * Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its output.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum number of results to return. Default: 100.
+     * @param filterByEncoderConfigurationArn
+     *        Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its
+     *        output.
      */
 
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public void setFilterByEncoderConfigurationArn(String filterByEncoderConfigurationArn) {
+        this.filterByEncoderConfigurationArn = filterByEncoderConfigurationArn;
     }
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 100.
+     * Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its output.
      * </p>
      * 
-     * @return Maximum number of results to return. Default: 100.
+     * @return Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its
+     *         output.
      */
 
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getFilterByEncoderConfigurationArn() {
+        return this.filterByEncoderConfigurationArn;
     }
 
     /**
      * <p>
-     * Maximum number of results to return. Default: 100.
+     * Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its output.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum number of results to return. Default: 100.
+     * @param filterByEncoderConfigurationArn
+     *        Filters the Composition list to match the specified EncoderConfiguration attached to at least one of its
+     *        output.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListCompositionsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
+    public ListCompositionsRequest withFilterByEncoderConfigurationArn(String filterByEncoderConfigurationArn) {
+        setFilterByEncoderConfigurationArn(filterByEncoderConfigurationArn);
         return this;
     }
 
@@ -217,6 +177,46 @@ public class ListCompositionsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Maximum number of results to return. Default: 100.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of results to return. Default: 100.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of results to return. Default: 100.
+     * </p>
+     * 
+     * @return Maximum number of results to return. Default: 100.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of results to return. Default: 100.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of results to return. Default: 100.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListCompositionsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -228,14 +228,14 @@ public class ListCompositionsRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getFilterByEncoderConfigurationArn() != null)
-            sb.append("FilterByEncoderConfigurationArn: ").append(getFilterByEncoderConfigurationArn()).append(",");
         if (getFilterByStageArn() != null)
             sb.append("FilterByStageArn: ").append(getFilterByStageArn()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getFilterByEncoderConfigurationArn() != null)
+            sb.append("FilterByEncoderConfigurationArn: ").append(getFilterByEncoderConfigurationArn()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -250,22 +250,22 @@ public class ListCompositionsRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof ListCompositionsRequest == false)
             return false;
         ListCompositionsRequest other = (ListCompositionsRequest) obj;
+        if (other.getFilterByStageArn() == null ^ this.getFilterByStageArn() == null)
+            return false;
+        if (other.getFilterByStageArn() != null && other.getFilterByStageArn().equals(this.getFilterByStageArn()) == false)
+            return false;
         if (other.getFilterByEncoderConfigurationArn() == null ^ this.getFilterByEncoderConfigurationArn() == null)
             return false;
         if (other.getFilterByEncoderConfigurationArn() != null
                 && other.getFilterByEncoderConfigurationArn().equals(this.getFilterByEncoderConfigurationArn()) == false)
             return false;
-        if (other.getFilterByStageArn() == null ^ this.getFilterByStageArn() == null)
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
-        if (other.getFilterByStageArn() != null && other.getFilterByStageArn().equals(this.getFilterByStageArn()) == false)
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -275,10 +275,10 @@ public class ListCompositionsRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getFilterByEncoderConfigurationArn() == null) ? 0 : getFilterByEncoderConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getFilterByStageArn() == null) ? 0 : getFilterByStageArn().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getFilterByEncoderConfigurationArn() == null) ? 0 : getFilterByEncoderConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StageSessionSummaryMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sessionId").build();
     private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
 
     private static final StageSessionSummaryMarshaller instance = new StageSessionSummaryMarshaller();
 
@@ -50,9 +50,9 @@ public class StageSessionSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(stageSessionSummary.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(stageSessionSummary.getSessionId(), SESSIONID_BINDING);
             protocolMarshaller.marshall(stageSessionSummary.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(stageSessionSummary.getEndTime(), ENDTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

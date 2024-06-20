@@ -48,10 +48,6 @@ public class StageSummaryJsonUnmarshaller implements Unmarshaller<StageSummary, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("activeSessionId", targetDepth)) {
-                    context.nextToken();
-                    stageSummary.setActiveSessionId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     stageSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class StageSummaryJsonUnmarshaller implements Unmarshaller<StageSummary, 
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     stageSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("activeSessionId", targetDepth)) {
+                    context.nextToken();
+                    stageSummary.setActiveSessionId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();

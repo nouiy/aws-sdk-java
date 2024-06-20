@@ -48,15 +48,15 @@ public class ListParticipantsResultJsonUnmarshaller implements Unmarshaller<List
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("nextToken", targetDepth)) {
-                    context.nextToken();
-                    listParticipantsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("participants", targetDepth)) {
                     context.nextToken();
                     listParticipantsResult.setParticipants(new ListUnmarshaller<ParticipantSummary>(ParticipantSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    listParticipantsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

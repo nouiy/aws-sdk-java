@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StorageConfigurationMarshaller {
 
-    private static final MarshallingInfo<Double> SIZEINGB_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("sizeInGb").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<Double> SIZEINGB_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sizeInGb").build();
 
     private static final StorageConfigurationMarshaller instance = new StorageConfigurationMarshaller();
 
@@ -48,8 +48,8 @@ public class StorageConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(storageConfiguration.getSizeInGb(), SIZEINGB_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(storageConfiguration.getSizeInGb(), SIZEINGB_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

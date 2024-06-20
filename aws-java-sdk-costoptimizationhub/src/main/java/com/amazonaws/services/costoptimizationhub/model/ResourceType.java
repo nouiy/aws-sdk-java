@@ -32,7 +32,9 @@ public enum ResourceType {
     RdsReservedInstances("RdsReservedInstances"),
     OpenSearchReservedInstances("OpenSearchReservedInstances"),
     RedshiftReservedInstances("RedshiftReservedInstances"),
-    ElastiCacheReservedInstances("ElastiCacheReservedInstances");
+    ElastiCacheReservedInstances("ElastiCacheReservedInstances"),
+    RdsDbInstanceStorage("RdsDbInstanceStorage"),
+    RdsDbInstance("RdsDbInstance");
 
     private String value;
 

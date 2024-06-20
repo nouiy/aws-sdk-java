@@ -37,6 +37,13 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording configuration
+     * cannot be updated while recording is active.
+     * </p>
+     */
+    private AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration;
 
     /**
      * <p>
@@ -119,6 +126,52 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording configuration
+     * cannot be updated while recording is active.
+     * </p>
+     * 
+     * @param autoParticipantRecordingConfiguration
+     *        Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording
+     *        configuration cannot be updated while recording is active.
+     */
+
+    public void setAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
+        this.autoParticipantRecordingConfiguration = autoParticipantRecordingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording configuration
+     * cannot be updated while recording is active.
+     * </p>
+     * 
+     * @return Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording
+     *         configuration cannot be updated while recording is active.
+     */
+
+    public AutoParticipantRecordingConfiguration getAutoParticipantRecordingConfiguration() {
+        return this.autoParticipantRecordingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording configuration
+     * cannot be updated while recording is active.
+     * </p>
+     * 
+     * @param autoParticipantRecordingConfiguration
+     *        Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording
+     *        configuration cannot be updated while recording is active.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateStageRequest withAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
+        setAutoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +186,9 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getAutoParticipantRecordingConfiguration() != null)
+            sb.append("AutoParticipantRecordingConfiguration: ").append(getAutoParticipantRecordingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +211,11 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getAutoParticipantRecordingConfiguration() == null ^ this.getAutoParticipantRecordingConfiguration() == null)
+            return false;
+        if (other.getAutoParticipantRecordingConfiguration() != null
+                && other.getAutoParticipantRecordingConfiguration().equals(this.getAutoParticipantRecordingConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +226,7 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getAutoParticipantRecordingConfiguration() == null) ? 0 : getAutoParticipantRecordingConfiguration().hashCode());
         return hashCode;
     }
 

@@ -30,28 +30,10 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     * </p>
-     */
-    private java.util.Date firstJoinTime;
-    /**
-     * <p>
      * Unique identifier for this participant, assigned by IVS.
      * </p>
      */
     private String participantId;
-    /**
-     * <p>
-     * Whether the participant ever published to the stage session.
-     * </p>
-     */
-    private Boolean published;
-    /**
-     * <p>
-     * Whether the participant is connected to or disconnected from the stage.
-     * </p>
-     */
-    private String state;
     /**
      * <p>
      * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
@@ -60,46 +42,30 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String userId;
-
+    /**
+     * <p>
+     * Whether the participant is connected to or disconnected from the stage.
+     * </p>
+     */
+    private String state;
     /**
      * <p>
      * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      * </p>
-     * 
-     * @param firstJoinTime
-     *        ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      */
-
-    public void setFirstJoinTime(java.util.Date firstJoinTime) {
-        this.firstJoinTime = firstJoinTime;
-    }
-
+    private java.util.Date firstJoinTime;
     /**
      * <p>
-     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     * Whether the participant ever published to the stage session.
      * </p>
-     * 
-     * @return ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      */
-
-    public java.util.Date getFirstJoinTime() {
-        return this.firstJoinTime;
-    }
-
+    private Boolean published;
     /**
      * <p>
-     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     * Participant’s recording state.
      * </p>
-     * 
-     * @param firstJoinTime
-     *        ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     * @return Returns a reference to this object so that method calls can be chained together.
      */
-
-    public ParticipantSummary withFirstJoinTime(java.util.Date firstJoinTime) {
-        setFirstJoinTime(firstJoinTime);
-        return this;
-    }
+    private String recordingState;
 
     /**
      * <p>
@@ -143,54 +109,57 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Whether the participant ever published to the stage session.
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information</i>.
      * </p>
      * 
-     * @param published
-     *        Whether the participant ever published to the stage session.
+     * @param userId
+     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *        participants and should not be used for personally identifying, confidential, or sensitive
+     *        information</i>.
      */
 
-    public void setPublished(Boolean published) {
-        this.published = published;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     /**
      * <p>
-     * Whether the participant ever published to the stage session.
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information</i>.
      * </p>
      * 
-     * @return Whether the participant ever published to the stage session.
+     * @return Customer-assigned name to help identify the token; this can be used to link a participant to a user in
+     *         the customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *         participants and should not be used for personally identifying, confidential, or sensitive
+     *         information</i>.
      */
 
-    public Boolean getPublished() {
-        return this.published;
+    public String getUserId() {
+        return this.userId;
     }
 
     /**
      * <p>
-     * Whether the participant ever published to the stage session.
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information</i>.
      * </p>
      * 
-     * @param published
-     *        Whether the participant ever published to the stage session.
+     * @param userId
+     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *        participants and should not be used for personally identifying, confidential, or sensitive
+     *        information</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ParticipantSummary withPublished(Boolean published) {
-        setPublished(published);
+    public ParticipantSummary withUserId(String userId) {
+        setUserId(userId);
         return this;
-    }
-
-    /**
-     * <p>
-     * Whether the participant ever published to the stage session.
-     * </p>
-     * 
-     * @return Whether the participant ever published to the stage session.
-     */
-
-    public Boolean isPublished() {
-        return this.published;
     }
 
     /**
@@ -254,56 +223,152 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      * </p>
      * 
-     * @param userId
-     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *        participants and should not be used for personally identifying, confidential, or sensitive
-     *        information</i>.
+     * @param firstJoinTime
+     *        ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      */
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setFirstJoinTime(java.util.Date firstJoinTime) {
+        this.firstJoinTime = firstJoinTime;
     }
 
     /**
      * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      * </p>
      * 
-     * @return Customer-assigned name to help identify the token; this can be used to link a participant to a user in
-     *         the customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *         participants and should not be used for personally identifying, confidential, or sensitive
-     *         information</i>.
+     * @return ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      */
 
-    public String getUserId() {
-        return this.userId;
+    public java.util.Date getFirstJoinTime() {
+        return this.firstJoinTime;
     }
 
     /**
      * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      * </p>
      * 
-     * @param userId
-     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *        participants and should not be used for personally identifying, confidential, or sensitive
-     *        information</i>.
+     * @param firstJoinTime
+     *        ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ParticipantSummary withUserId(String userId) {
-        setUserId(userId);
+    public ParticipantSummary withFirstJoinTime(java.util.Date firstJoinTime) {
+        setFirstJoinTime(firstJoinTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the participant ever published to the stage session.
+     * </p>
+     * 
+     * @param published
+     *        Whether the participant ever published to the stage session.
+     */
+
+    public void setPublished(Boolean published) {
+        this.published = published;
+    }
+
+    /**
+     * <p>
+     * Whether the participant ever published to the stage session.
+     * </p>
+     * 
+     * @return Whether the participant ever published to the stage session.
+     */
+
+    public Boolean getPublished() {
+        return this.published;
+    }
+
+    /**
+     * <p>
+     * Whether the participant ever published to the stage session.
+     * </p>
+     * 
+     * @param published
+     *        Whether the participant ever published to the stage session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ParticipantSummary withPublished(Boolean published) {
+        setPublished(published);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the participant ever published to the stage session.
+     * </p>
+     * 
+     * @return Whether the participant ever published to the stage session.
+     */
+
+    public Boolean isPublished() {
+        return this.published;
+    }
+
+    /**
+     * <p>
+     * Participant’s recording state.
+     * </p>
+     * 
+     * @param recordingState
+     *        Participant’s recording state.
+     * @see ParticipantRecordingState
+     */
+
+    public void setRecordingState(String recordingState) {
+        this.recordingState = recordingState;
+    }
+
+    /**
+     * <p>
+     * Participant’s recording state.
+     * </p>
+     * 
+     * @return Participant’s recording state.
+     * @see ParticipantRecordingState
+     */
+
+    public String getRecordingState() {
+        return this.recordingState;
+    }
+
+    /**
+     * <p>
+     * Participant’s recording state.
+     * </p>
+     * 
+     * @param recordingState
+     *        Participant’s recording state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ParticipantRecordingState
+     */
+
+    public ParticipantSummary withRecordingState(String recordingState) {
+        setRecordingState(recordingState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Participant’s recording state.
+     * </p>
+     * 
+     * @param recordingState
+     *        Participant’s recording state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ParticipantRecordingState
+     */
+
+    public ParticipantSummary withRecordingState(ParticipantRecordingState recordingState) {
+        this.recordingState = recordingState.toString();
         return this;
     }
 
@@ -319,16 +384,18 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getFirstJoinTime() != null)
-            sb.append("FirstJoinTime: ").append(getFirstJoinTime()).append(",");
         if (getParticipantId() != null)
             sb.append("ParticipantId: ").append(getParticipantId()).append(",");
-        if (getPublished() != null)
-            sb.append("Published: ").append(getPublished()).append(",");
+        if (getUserId() != null)
+            sb.append("UserId: ").append(getUserId()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
-        if (getUserId() != null)
-            sb.append("UserId: ").append(getUserId());
+        if (getFirstJoinTime() != null)
+            sb.append("FirstJoinTime: ").append(getFirstJoinTime()).append(",");
+        if (getPublished() != null)
+            sb.append("Published: ").append(getPublished()).append(",");
+        if (getRecordingState() != null)
+            sb.append("RecordingState: ").append(getRecordingState());
         sb.append("}");
         return sb.toString();
     }
@@ -343,25 +410,29 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
         if (obj instanceof ParticipantSummary == false)
             return false;
         ParticipantSummary other = (ParticipantSummary) obj;
-        if (other.getFirstJoinTime() == null ^ this.getFirstJoinTime() == null)
-            return false;
-        if (other.getFirstJoinTime() != null && other.getFirstJoinTime().equals(this.getFirstJoinTime()) == false)
-            return false;
         if (other.getParticipantId() == null ^ this.getParticipantId() == null)
             return false;
         if (other.getParticipantId() != null && other.getParticipantId().equals(this.getParticipantId()) == false)
             return false;
-        if (other.getPublished() == null ^ this.getPublished() == null)
+        if (other.getUserId() == null ^ this.getUserId() == null)
             return false;
-        if (other.getPublished() != null && other.getPublished().equals(this.getPublished()) == false)
+        if (other.getUserId() != null && other.getUserId().equals(this.getUserId()) == false)
             return false;
         if (other.getState() == null ^ this.getState() == null)
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
-        if (other.getUserId() == null ^ this.getUserId() == null)
+        if (other.getFirstJoinTime() == null ^ this.getFirstJoinTime() == null)
             return false;
-        if (other.getUserId() != null && other.getUserId().equals(this.getUserId()) == false)
+        if (other.getFirstJoinTime() != null && other.getFirstJoinTime().equals(this.getFirstJoinTime()) == false)
+            return false;
+        if (other.getPublished() == null ^ this.getPublished() == null)
+            return false;
+        if (other.getPublished() != null && other.getPublished().equals(this.getPublished()) == false)
+            return false;
+        if (other.getRecordingState() == null ^ this.getRecordingState() == null)
+            return false;
+        if (other.getRecordingState() != null && other.getRecordingState().equals(this.getRecordingState()) == false)
             return false;
         return true;
     }
@@ -371,11 +442,12 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getFirstJoinTime() == null) ? 0 : getFirstJoinTime().hashCode());
         hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
-        hashCode = prime * hashCode + ((getPublished() == null) ? 0 : getPublished().hashCode());
-        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getUserId() == null) ? 0 : getUserId().hashCode());
+        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getFirstJoinTime() == null) ? 0 : getFirstJoinTime().hashCode());
+        hashCode = prime * hashCode + ((getPublished() == null) ? 0 : getPublished().hashCode());
+        hashCode = prime * hashCode + ((getRecordingState() == null) ? 0 : getRecordingState().hashCode());
         return hashCode;
     }
 

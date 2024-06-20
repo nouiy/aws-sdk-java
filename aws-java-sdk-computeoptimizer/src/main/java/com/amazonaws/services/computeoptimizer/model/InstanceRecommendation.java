@@ -83,6 +83,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     * </p>
+     * </note>
      */
     private String finding;
     /**
@@ -564,6 +569,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     * </p>
+     * </note>
      * 
      * @param finding
      *        The finding classification of the instance.</p>
@@ -594,6 +604,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        type.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     *        </p>
      * @see Finding
      */
 
@@ -632,6 +647,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     * </p>
+     * </note>
      * 
      * @return The finding classification of the instance.</p>
      *         <p>
@@ -661,6 +681,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *         type.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     *         </p>
      * @see Finding
      */
 
@@ -699,6 +724,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     * </p>
+     * </note>
      * 
      * @param finding
      *        The finding classification of the instance.</p>
@@ -729,6 +759,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        type.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Finding
      */
@@ -769,6 +804,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     * </p>
+     * </note>
      * 
      * @param finding
      *        The finding classification of the instance.</p>
@@ -799,6 +839,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        type.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The valid values in your API responses appear as OVER_PROVISIONED, UNDER_PROVISIONED, or OPTIMIZED.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Finding
      */

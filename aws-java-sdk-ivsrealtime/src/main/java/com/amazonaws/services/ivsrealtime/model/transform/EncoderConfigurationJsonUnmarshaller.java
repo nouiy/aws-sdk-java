@@ -56,14 +56,14 @@ public class EncoderConfigurationJsonUnmarshaller implements Unmarshaller<Encode
                     context.nextToken();
                     encoderConfiguration.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("video", targetDepth)) {
+                    context.nextToken();
+                    encoderConfiguration.setVideo(VideoJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     encoderConfiguration.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
-                }
-                if (context.testExpression("video", targetDepth)) {
-                    context.nextToken();
-                    encoderConfiguration.setVideo(VideoJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -30,10 +30,10 @@ public class ComputeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The architecture of the resource.
+     * The number of vCPU cores in the resource.
      * </p>
      */
-    private String architecture;
+    private Double vCpu;
     /**
      * <p>
      * The memory size of the resource.
@@ -42,55 +42,55 @@ public class ComputeConfiguration implements Serializable, Cloneable, Structured
     private Integer memorySizeInMB;
     /**
      * <p>
+     * The architecture of the resource.
+     * </p>
+     */
+    private String architecture;
+    /**
+     * <p>
      * The platform of the resource. The platform is the specific combination of operating system, license model, and
      * software on an instance.
      * </p>
      */
     private String platform;
+
     /**
      * <p>
      * The number of vCPU cores in the resource.
      * </p>
-     */
-    private Double vCpu;
-
-    /**
-     * <p>
-     * The architecture of the resource.
-     * </p>
      * 
-     * @param architecture
-     *        The architecture of the resource.
+     * @param vCpu
+     *        The number of vCPU cores in the resource.
      */
 
-    public void setArchitecture(String architecture) {
-        this.architecture = architecture;
+    public void setVCpu(Double vCpu) {
+        this.vCpu = vCpu;
     }
 
     /**
      * <p>
-     * The architecture of the resource.
+     * The number of vCPU cores in the resource.
      * </p>
      * 
-     * @return The architecture of the resource.
+     * @return The number of vCPU cores in the resource.
      */
 
-    public String getArchitecture() {
-        return this.architecture;
+    public Double getVCpu() {
+        return this.vCpu;
     }
 
     /**
      * <p>
-     * The architecture of the resource.
+     * The number of vCPU cores in the resource.
      * </p>
      * 
-     * @param architecture
-     *        The architecture of the resource.
+     * @param vCpu
+     *        The number of vCPU cores in the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ComputeConfiguration withArchitecture(String architecture) {
-        setArchitecture(architecture);
+    public ComputeConfiguration withVCpu(Double vCpu) {
+        setVCpu(vCpu);
         return this;
     }
 
@@ -131,6 +131,46 @@ public class ComputeConfiguration implements Serializable, Cloneable, Structured
 
     public ComputeConfiguration withMemorySizeInMB(Integer memorySizeInMB) {
         setMemorySizeInMB(memorySizeInMB);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The architecture of the resource.
+     * </p>
+     * 
+     * @param architecture
+     *        The architecture of the resource.
+     */
+
+    public void setArchitecture(String architecture) {
+        this.architecture = architecture;
+    }
+
+    /**
+     * <p>
+     * The architecture of the resource.
+     * </p>
+     * 
+     * @return The architecture of the resource.
+     */
+
+    public String getArchitecture() {
+        return this.architecture;
+    }
+
+    /**
+     * <p>
+     * The architecture of the resource.
+     * </p>
+     * 
+     * @param architecture
+     *        The architecture of the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComputeConfiguration withArchitecture(String architecture) {
+        setArchitecture(architecture);
         return this;
     }
 
@@ -181,46 +221,6 @@ public class ComputeConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p>
-     * The number of vCPU cores in the resource.
-     * </p>
-     * 
-     * @param vCpu
-     *        The number of vCPU cores in the resource.
-     */
-
-    public void setVCpu(Double vCpu) {
-        this.vCpu = vCpu;
-    }
-
-    /**
-     * <p>
-     * The number of vCPU cores in the resource.
-     * </p>
-     * 
-     * @return The number of vCPU cores in the resource.
-     */
-
-    public Double getVCpu() {
-        return this.vCpu;
-    }
-
-    /**
-     * <p>
-     * The number of vCPU cores in the resource.
-     * </p>
-     * 
-     * @param vCpu
-     *        The number of vCPU cores in the resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ComputeConfiguration withVCpu(Double vCpu) {
-        setVCpu(vCpu);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,14 +232,14 @@ public class ComputeConfiguration implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getArchitecture() != null)
-            sb.append("Architecture: ").append(getArchitecture()).append(",");
+        if (getVCpu() != null)
+            sb.append("VCpu: ").append(getVCpu()).append(",");
         if (getMemorySizeInMB() != null)
             sb.append("MemorySizeInMB: ").append(getMemorySizeInMB()).append(",");
+        if (getArchitecture() != null)
+            sb.append("Architecture: ").append(getArchitecture()).append(",");
         if (getPlatform() != null)
-            sb.append("Platform: ").append(getPlatform()).append(",");
-        if (getVCpu() != null)
-            sb.append("VCpu: ").append(getVCpu());
+            sb.append("Platform: ").append(getPlatform());
         sb.append("}");
         return sb.toString();
     }
@@ -254,21 +254,21 @@ public class ComputeConfiguration implements Serializable, Cloneable, Structured
         if (obj instanceof ComputeConfiguration == false)
             return false;
         ComputeConfiguration other = (ComputeConfiguration) obj;
-        if (other.getArchitecture() == null ^ this.getArchitecture() == null)
+        if (other.getVCpu() == null ^ this.getVCpu() == null)
             return false;
-        if (other.getArchitecture() != null && other.getArchitecture().equals(this.getArchitecture()) == false)
+        if (other.getVCpu() != null && other.getVCpu().equals(this.getVCpu()) == false)
             return false;
         if (other.getMemorySizeInMB() == null ^ this.getMemorySizeInMB() == null)
             return false;
         if (other.getMemorySizeInMB() != null && other.getMemorySizeInMB().equals(this.getMemorySizeInMB()) == false)
             return false;
+        if (other.getArchitecture() == null ^ this.getArchitecture() == null)
+            return false;
+        if (other.getArchitecture() != null && other.getArchitecture().equals(this.getArchitecture()) == false)
+            return false;
         if (other.getPlatform() == null ^ this.getPlatform() == null)
             return false;
         if (other.getPlatform() != null && other.getPlatform().equals(this.getPlatform()) == false)
-            return false;
-        if (other.getVCpu() == null ^ this.getVCpu() == null)
-            return false;
-        if (other.getVCpu() != null && other.getVCpu().equals(this.getVCpu()) == false)
             return false;
         return true;
     }
@@ -278,10 +278,10 @@ public class ComputeConfiguration implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getArchitecture() == null) ? 0 : getArchitecture().hashCode());
-        hashCode = prime * hashCode + ((getMemorySizeInMB() == null) ? 0 : getMemorySizeInMB().hashCode());
-        hashCode = prime * hashCode + ((getPlatform() == null) ? 0 : getPlatform().hashCode());
         hashCode = prime * hashCode + ((getVCpu() == null) ? 0 : getVCpu().hashCode());
+        hashCode = prime * hashCode + ((getMemorySizeInMB() == null) ? 0 : getMemorySizeInMB().hashCode());
+        hashCode = prime * hashCode + ((getArchitecture() == null) ? 0 : getArchitecture().hashCode());
+        hashCode = prime * hashCode + ((getPlatform() == null) ? 0 : getPlatform().hashCode());
         return hashCode;
     }
 

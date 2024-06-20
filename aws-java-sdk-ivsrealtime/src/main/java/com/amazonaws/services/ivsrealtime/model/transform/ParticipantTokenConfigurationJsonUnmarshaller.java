@@ -48,6 +48,14 @@ public class ParticipantTokenConfigurationJsonUnmarshaller implements Unmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("duration", targetDepth)) {
+                    context.nextToken();
+                    participantTokenConfiguration.setDuration(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("userId", targetDepth)) {
+                    context.nextToken();
+                    participantTokenConfiguration.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("attributes", targetDepth)) {
                     context.nextToken();
                     participantTokenConfiguration.setAttributes(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
@@ -58,14 +66,6 @@ public class ParticipantTokenConfigurationJsonUnmarshaller implements Unmarshall
                     participantTokenConfiguration.setCapabilities(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("duration", targetDepth)) {
-                    context.nextToken();
-                    participantTokenConfiguration.setDuration(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("userId", targetDepth)) {
-                    context.nextToken();
-                    participantTokenConfiguration.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

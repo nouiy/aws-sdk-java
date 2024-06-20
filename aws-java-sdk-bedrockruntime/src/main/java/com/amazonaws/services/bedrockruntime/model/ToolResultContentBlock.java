@@ -45,6 +45,12 @@ public class ToolResultContentBlock implements Serializable, Cloneable, Structur
      * </note>
      */
     private ImageBlock image;
+    /**
+     * <p>
+     * A tool result that is a document.
+     * </p>
+     */
+    private DocumentBlock document;
 
     /**
      * <p>
@@ -151,6 +157,46 @@ public class ToolResultContentBlock implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * A tool result that is a document.
+     * </p>
+     * 
+     * @param document
+     *        A tool result that is a document.
+     */
+
+    public void setDocument(DocumentBlock document) {
+        this.document = document;
+    }
+
+    /**
+     * <p>
+     * A tool result that is a document.
+     * </p>
+     * 
+     * @return A tool result that is a document.
+     */
+
+    public DocumentBlock getDocument() {
+        return this.document;
+    }
+
+    /**
+     * <p>
+     * A tool result that is a document.
+     * </p>
+     * 
+     * @param document
+     *        A tool result that is a document.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ToolResultContentBlock withDocument(DocumentBlock document) {
+        setDocument(document);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -165,7 +211,9 @@ public class ToolResultContentBlock implements Serializable, Cloneable, Structur
         if (getText() != null)
             sb.append("Text: ").append(getText()).append(",");
         if (getImage() != null)
-            sb.append("Image: ").append(getImage());
+            sb.append("Image: ").append(getImage()).append(",");
+        if (getDocument() != null)
+            sb.append("Document: ").append(getDocument());
         sb.append("}");
         return sb.toString();
     }
@@ -188,6 +236,10 @@ public class ToolResultContentBlock implements Serializable, Cloneable, Structur
             return false;
         if (other.getImage() != null && other.getImage().equals(this.getImage()) == false)
             return false;
+        if (other.getDocument() == null ^ this.getDocument() == null)
+            return false;
+        if (other.getDocument() != null && other.getDocument().equals(this.getDocument()) == false)
+            return false;
         return true;
     }
 
@@ -198,6 +250,7 @@ public class ToolResultContentBlock implements Serializable, Cloneable, Structur
 
         hashCode = prime * hashCode + ((getText() == null) ? 0 : getText().hashCode());
         hashCode = prime * hashCode + ((getImage() == null) ? 0 : getImage().hashCode());
+        hashCode = prime * hashCode + ((getDocument() == null) ? 0 : getDocument().hashCode());
         return hashCode;
     }
 

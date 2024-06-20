@@ -144,6 +144,21 @@ public class AbstractAWSComputeOptimizerAsync extends AbstractAWSComputeOptimize
     }
 
     @Override
+    public java.util.concurrent.Future<ExportRDSDatabaseRecommendationsResult> exportRDSDatabaseRecommendationsAsync(
+            ExportRDSDatabaseRecommendationsRequest request) {
+
+        return exportRDSDatabaseRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExportRDSDatabaseRecommendationsResult> exportRDSDatabaseRecommendationsAsync(
+            ExportRDSDatabaseRecommendationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ExportRDSDatabaseRecommendationsRequest, ExportRDSDatabaseRecommendationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAutoScalingGroupRecommendationsResult> getAutoScalingGroupRecommendationsAsync(
             GetAutoScalingGroupRecommendationsRequest request) {
 
@@ -294,6 +309,34 @@ public class AbstractAWSComputeOptimizerAsync extends AbstractAWSComputeOptimize
     @Override
     public java.util.concurrent.Future<GetLicenseRecommendationsResult> getLicenseRecommendationsAsync(GetLicenseRecommendationsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetLicenseRecommendationsRequest, GetLicenseRecommendationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRDSDatabaseRecommendationProjectedMetricsResult> getRDSDatabaseRecommendationProjectedMetricsAsync(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest request) {
+
+        return getRDSDatabaseRecommendationProjectedMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRDSDatabaseRecommendationProjectedMetricsResult> getRDSDatabaseRecommendationProjectedMetricsAsync(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRDSDatabaseRecommendationProjectedMetricsRequest, GetRDSDatabaseRecommendationProjectedMetricsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRDSDatabaseRecommendationsResult> getRDSDatabaseRecommendationsAsync(GetRDSDatabaseRecommendationsRequest request) {
+
+        return getRDSDatabaseRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRDSDatabaseRecommendationsResult> getRDSDatabaseRecommendationsAsync(GetRDSDatabaseRecommendationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRDSDatabaseRecommendationsRequest, GetRDSDatabaseRecommendationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

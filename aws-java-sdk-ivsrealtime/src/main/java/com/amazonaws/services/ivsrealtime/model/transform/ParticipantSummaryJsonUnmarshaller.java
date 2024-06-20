@@ -48,25 +48,29 @@ public class ParticipantSummaryJsonUnmarshaller implements Unmarshaller<Particip
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("firstJoinTime", targetDepth)) {
-                    context.nextToken();
-                    participantSummary.setFirstJoinTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("participantId", targetDepth)) {
                     context.nextToken();
                     participantSummary.setParticipantId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("published", targetDepth)) {
+                if (context.testExpression("userId", targetDepth)) {
                     context.nextToken();
-                    participantSummary.setPublished(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    participantSummary.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();
                     participantSummary.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("userId", targetDepth)) {
+                if (context.testExpression("firstJoinTime", targetDepth)) {
                     context.nextToken();
-                    participantSummary.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
+                    participantSummary.setFirstJoinTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("published", targetDepth)) {
+                    context.nextToken();
+                    participantSummary.setPublished(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("recordingState", targetDepth)) {
+                    context.nextToken();
+                    participantSummary.setRecordingState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

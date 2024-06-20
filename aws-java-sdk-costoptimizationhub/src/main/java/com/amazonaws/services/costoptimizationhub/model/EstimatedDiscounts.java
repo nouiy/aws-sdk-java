@@ -30,11 +30,10 @@ public class EstimatedDiscounts implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Estimated other discounts include all discounts that are not itemized. Itemized discounts include
-     * <code>reservedInstanceDiscount</code> and <code>savingsPlansDiscount</code>.
+     * Estimated Savings Plans discounts.
      * </p>
      */
-    private Double otherDiscount;
+    private Double savingsPlansDiscount;
     /**
      * <p>
      * Estimated reserved instance discounts.
@@ -43,10 +42,91 @@ public class EstimatedDiscounts implements Serializable, Cloneable, StructuredPo
     private Double reservedInstancesDiscount;
     /**
      * <p>
-     * Estimated Savings Plans discounts.
+     * Estimated other discounts include all discounts that are not itemized. Itemized discounts include
+     * <code>reservedInstanceDiscount</code> and <code>savingsPlansDiscount</code>.
      * </p>
      */
-    private Double savingsPlansDiscount;
+    private Double otherDiscount;
+
+    /**
+     * <p>
+     * Estimated Savings Plans discounts.
+     * </p>
+     * 
+     * @param savingsPlansDiscount
+     *        Estimated Savings Plans discounts.
+     */
+
+    public void setSavingsPlansDiscount(Double savingsPlansDiscount) {
+        this.savingsPlansDiscount = savingsPlansDiscount;
+    }
+
+    /**
+     * <p>
+     * Estimated Savings Plans discounts.
+     * </p>
+     * 
+     * @return Estimated Savings Plans discounts.
+     */
+
+    public Double getSavingsPlansDiscount() {
+        return this.savingsPlansDiscount;
+    }
+
+    /**
+     * <p>
+     * Estimated Savings Plans discounts.
+     * </p>
+     * 
+     * @param savingsPlansDiscount
+     *        Estimated Savings Plans discounts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EstimatedDiscounts withSavingsPlansDiscount(Double savingsPlansDiscount) {
+        setSavingsPlansDiscount(savingsPlansDiscount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Estimated reserved instance discounts.
+     * </p>
+     * 
+     * @param reservedInstancesDiscount
+     *        Estimated reserved instance discounts.
+     */
+
+    public void setReservedInstancesDiscount(Double reservedInstancesDiscount) {
+        this.reservedInstancesDiscount = reservedInstancesDiscount;
+    }
+
+    /**
+     * <p>
+     * Estimated reserved instance discounts.
+     * </p>
+     * 
+     * @return Estimated reserved instance discounts.
+     */
+
+    public Double getReservedInstancesDiscount() {
+        return this.reservedInstancesDiscount;
+    }
+
+    /**
+     * <p>
+     * Estimated reserved instance discounts.
+     * </p>
+     * 
+     * @param reservedInstancesDiscount
+     *        Estimated reserved instance discounts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EstimatedDiscounts withReservedInstancesDiscount(Double reservedInstancesDiscount) {
+        setReservedInstancesDiscount(reservedInstancesDiscount);
+        return this;
+    }
 
     /**
      * <p>
@@ -95,86 +175,6 @@ public class EstimatedDiscounts implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p>
-     * Estimated reserved instance discounts.
-     * </p>
-     * 
-     * @param reservedInstancesDiscount
-     *        Estimated reserved instance discounts.
-     */
-
-    public void setReservedInstancesDiscount(Double reservedInstancesDiscount) {
-        this.reservedInstancesDiscount = reservedInstancesDiscount;
-    }
-
-    /**
-     * <p>
-     * Estimated reserved instance discounts.
-     * </p>
-     * 
-     * @return Estimated reserved instance discounts.
-     */
-
-    public Double getReservedInstancesDiscount() {
-        return this.reservedInstancesDiscount;
-    }
-
-    /**
-     * <p>
-     * Estimated reserved instance discounts.
-     * </p>
-     * 
-     * @param reservedInstancesDiscount
-     *        Estimated reserved instance discounts.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EstimatedDiscounts withReservedInstancesDiscount(Double reservedInstancesDiscount) {
-        setReservedInstancesDiscount(reservedInstancesDiscount);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Estimated Savings Plans discounts.
-     * </p>
-     * 
-     * @param savingsPlansDiscount
-     *        Estimated Savings Plans discounts.
-     */
-
-    public void setSavingsPlansDiscount(Double savingsPlansDiscount) {
-        this.savingsPlansDiscount = savingsPlansDiscount;
-    }
-
-    /**
-     * <p>
-     * Estimated Savings Plans discounts.
-     * </p>
-     * 
-     * @return Estimated Savings Plans discounts.
-     */
-
-    public Double getSavingsPlansDiscount() {
-        return this.savingsPlansDiscount;
-    }
-
-    /**
-     * <p>
-     * Estimated Savings Plans discounts.
-     * </p>
-     * 
-     * @param savingsPlansDiscount
-     *        Estimated Savings Plans discounts.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EstimatedDiscounts withSavingsPlansDiscount(Double savingsPlansDiscount) {
-        setSavingsPlansDiscount(savingsPlansDiscount);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -186,12 +186,12 @@ public class EstimatedDiscounts implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getOtherDiscount() != null)
-            sb.append("OtherDiscount: ").append(getOtherDiscount()).append(",");
+        if (getSavingsPlansDiscount() != null)
+            sb.append("SavingsPlansDiscount: ").append(getSavingsPlansDiscount()).append(",");
         if (getReservedInstancesDiscount() != null)
             sb.append("ReservedInstancesDiscount: ").append(getReservedInstancesDiscount()).append(",");
-        if (getSavingsPlansDiscount() != null)
-            sb.append("SavingsPlansDiscount: ").append(getSavingsPlansDiscount());
+        if (getOtherDiscount() != null)
+            sb.append("OtherDiscount: ").append(getOtherDiscount());
         sb.append("}");
         return sb.toString();
     }
@@ -206,17 +206,17 @@ public class EstimatedDiscounts implements Serializable, Cloneable, StructuredPo
         if (obj instanceof EstimatedDiscounts == false)
             return false;
         EstimatedDiscounts other = (EstimatedDiscounts) obj;
-        if (other.getOtherDiscount() == null ^ this.getOtherDiscount() == null)
+        if (other.getSavingsPlansDiscount() == null ^ this.getSavingsPlansDiscount() == null)
             return false;
-        if (other.getOtherDiscount() != null && other.getOtherDiscount().equals(this.getOtherDiscount()) == false)
+        if (other.getSavingsPlansDiscount() != null && other.getSavingsPlansDiscount().equals(this.getSavingsPlansDiscount()) == false)
             return false;
         if (other.getReservedInstancesDiscount() == null ^ this.getReservedInstancesDiscount() == null)
             return false;
         if (other.getReservedInstancesDiscount() != null && other.getReservedInstancesDiscount().equals(this.getReservedInstancesDiscount()) == false)
             return false;
-        if (other.getSavingsPlansDiscount() == null ^ this.getSavingsPlansDiscount() == null)
+        if (other.getOtherDiscount() == null ^ this.getOtherDiscount() == null)
             return false;
-        if (other.getSavingsPlansDiscount() != null && other.getSavingsPlansDiscount().equals(this.getSavingsPlansDiscount()) == false)
+        if (other.getOtherDiscount() != null && other.getOtherDiscount().equals(this.getOtherDiscount()) == false)
             return false;
         return true;
     }
@@ -226,9 +226,9 @@ public class EstimatedDiscounts implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getOtherDiscount() == null) ? 0 : getOtherDiscount().hashCode());
-        hashCode = prime * hashCode + ((getReservedInstancesDiscount() == null) ? 0 : getReservedInstancesDiscount().hashCode());
         hashCode = prime * hashCode + ((getSavingsPlansDiscount() == null) ? 0 : getSavingsPlansDiscount().hashCode());
+        hashCode = prime * hashCode + ((getReservedInstancesDiscount() == null) ? 0 : getReservedInstancesDiscount().hashCode());
+        hashCode = prime * hashCode + ((getOtherDiscount() == null) ? 0 : getOtherDiscount().hashCode());
         return hashCode;
     }
 

@@ -30,6 +30,32 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Unique identifier for this participant, assigned by IVS.
+     * </p>
+     */
+    private String participantId;
+    /**
+     * <p>
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * </p>
+     */
+    private String userId;
+    /**
+     * <p>
+     * Whether the participant is connected to or disconnected from the stage.
+     * </p>
+     */
+    private String state;
+    /**
+     * <p>
+     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     * </p>
+     */
+    private java.util.Date firstJoinTime;
+    /**
+     * <p>
      * Application-provided attributes to encode into the token and attach to a stage. Map keys and values can contain
      * UTF-8 encoded text. The maximum length of this field is 1 KB total. <i>This field is exposed to all stage
      * participants and should not be used for personally identifying, confidential, or sensitive information</i>.
@@ -38,22 +64,10 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> attributes;
     /**
      * <p>
-     * The participant’s browser.
+     * Whether the participant ever published to the stage session.
      * </p>
      */
-    private String browserName;
-    /**
-     * <p>
-     * The participant’s browser version.
-     * </p>
-     */
-    private String browserVersion;
-    /**
-     * <p>
-     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     * </p>
-     */
-    private java.util.Date firstJoinTime;
+    private Boolean published;
     /**
      * <p>
      * The participant’s Internet Service Provider.
@@ -74,16 +88,16 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     private String osVersion;
     /**
      * <p>
-     * Unique identifier for this participant, assigned by IVS.
+     * The participant’s browser.
      * </p>
      */
-    private String participantId;
+    private String browserName;
     /**
      * <p>
-     * Whether the participant ever published to the stage session.
+     * The participant’s browser version.
      * </p>
      */
-    private Boolean published;
+    private String browserVersion;
     /**
      * <p>
      * The participant’s SDK version.
@@ -92,18 +106,218 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     private String sdkVersion;
     /**
      * <p>
-     * Whether the participant is connected to or disconnected from the stage.
+     * Name of the S3 bucket to where the participant is being recorded, if individual participant recording is enabled,
+     * or "" (empty string), if recording is not enabled.
      * </p>
      */
-    private String state;
+    private String recordingS3BucketName;
+    /**
+     * <p>
+     * S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording is
+     * enabled, or "" (empty string), if recording is not enabled.
+     * </p>
+     */
+    private String recordingS3Prefix;
+    /**
+     * <p>
+     * Participant’s recording state.
+     * </p>
+     */
+    private String recordingState;
+
+    /**
+     * <p>
+     * Unique identifier for this participant, assigned by IVS.
+     * </p>
+     * 
+     * @param participantId
+     *        Unique identifier for this participant, assigned by IVS.
+     */
+
+    public void setParticipantId(String participantId) {
+        this.participantId = participantId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for this participant, assigned by IVS.
+     * </p>
+     * 
+     * @return Unique identifier for this participant, assigned by IVS.
+     */
+
+    public String getParticipantId() {
+        return this.participantId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for this participant, assigned by IVS.
+     * </p>
+     * 
+     * @param participantId
+     *        Unique identifier for this participant, assigned by IVS.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withParticipantId(String participantId) {
+        setParticipantId(participantId);
+        return this;
+    }
+
     /**
      * <p>
      * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
      * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
      * and should not be used for personally identifying, confidential, or sensitive information</i>.
      * </p>
+     * 
+     * @param userId
+     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *        participants and should not be used for personally identifying, confidential, or sensitive
+     *        information</i>.
      */
-    private String userId;
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    /**
+     * <p>
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * </p>
+     * 
+     * @return Customer-assigned name to help identify the token; this can be used to link a participant to a user in
+     *         the customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *         participants and should not be used for personally identifying, confidential, or sensitive
+     *         information</i>.
+     */
+
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
+     * <p>
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * </p>
+     * 
+     * @param userId
+     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *        participants and should not be used for personally identifying, confidential, or sensitive
+     *        information</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withUserId(String userId) {
+        setUserId(userId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the participant is connected to or disconnected from the stage.
+     * </p>
+     * 
+     * @param state
+     *        Whether the participant is connected to or disconnected from the stage.
+     * @see ParticipantState
+     */
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    /**
+     * <p>
+     * Whether the participant is connected to or disconnected from the stage.
+     * </p>
+     * 
+     * @return Whether the participant is connected to or disconnected from the stage.
+     * @see ParticipantState
+     */
+
+    public String getState() {
+        return this.state;
+    }
+
+    /**
+     * <p>
+     * Whether the participant is connected to or disconnected from the stage.
+     * </p>
+     * 
+     * @param state
+     *        Whether the participant is connected to or disconnected from the stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ParticipantState
+     */
+
+    public Participant withState(String state) {
+        setState(state);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the participant is connected to or disconnected from the stage.
+     * </p>
+     * 
+     * @param state
+     *        Whether the participant is connected to or disconnected from the stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ParticipantState
+     */
+
+    public Participant withState(ParticipantState state) {
+        this.state = state.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     * </p>
+     * 
+     * @param firstJoinTime
+     *        ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     */
+
+    public void setFirstJoinTime(java.util.Date firstJoinTime) {
+        this.firstJoinTime = firstJoinTime;
+    }
+
+    /**
+     * <p>
+     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     * </p>
+     * 
+     * @return ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     */
+
+    public java.util.Date getFirstJoinTime() {
+        return this.firstJoinTime;
+    }
+
+    /**
+     * <p>
+     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     * </p>
+     * 
+     * @param firstJoinTime
+     *        ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withFirstJoinTime(java.util.Date firstJoinTime) {
+        setFirstJoinTime(firstJoinTime);
+        return this;
+    }
 
     /**
      * <p>
@@ -190,122 +404,54 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The participant’s browser.
+     * Whether the participant ever published to the stage session.
      * </p>
      * 
-     * @param browserName
-     *        The participant’s browser.
+     * @param published
+     *        Whether the participant ever published to the stage session.
      */
 
-    public void setBrowserName(String browserName) {
-        this.browserName = browserName;
+    public void setPublished(Boolean published) {
+        this.published = published;
     }
 
     /**
      * <p>
-     * The participant’s browser.
+     * Whether the participant ever published to the stage session.
      * </p>
      * 
-     * @return The participant’s browser.
+     * @return Whether the participant ever published to the stage session.
      */
 
-    public String getBrowserName() {
-        return this.browserName;
+    public Boolean getPublished() {
+        return this.published;
     }
 
     /**
      * <p>
-     * The participant’s browser.
+     * Whether the participant ever published to the stage session.
      * </p>
      * 
-     * @param browserName
-     *        The participant’s browser.
+     * @param published
+     *        Whether the participant ever published to the stage session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Participant withBrowserName(String browserName) {
-        setBrowserName(browserName);
+    public Participant withPublished(Boolean published) {
+        setPublished(published);
         return this;
     }
 
     /**
      * <p>
-     * The participant’s browser version.
+     * Whether the participant ever published to the stage session.
      * </p>
      * 
-     * @param browserVersion
-     *        The participant’s browser version.
+     * @return Whether the participant ever published to the stage session.
      */
 
-    public void setBrowserVersion(String browserVersion) {
-        this.browserVersion = browserVersion;
-    }
-
-    /**
-     * <p>
-     * The participant’s browser version.
-     * </p>
-     * 
-     * @return The participant’s browser version.
-     */
-
-    public String getBrowserVersion() {
-        return this.browserVersion;
-    }
-
-    /**
-     * <p>
-     * The participant’s browser version.
-     * </p>
-     * 
-     * @param browserVersion
-     *        The participant’s browser version.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Participant withBrowserVersion(String browserVersion) {
-        setBrowserVersion(browserVersion);
-        return this;
-    }
-
-    /**
-     * <p>
-     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     * </p>
-     * 
-     * @param firstJoinTime
-     *        ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     */
-
-    public void setFirstJoinTime(java.util.Date firstJoinTime) {
-        this.firstJoinTime = firstJoinTime;
-    }
-
-    /**
-     * <p>
-     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     * </p>
-     * 
-     * @return ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     */
-
-    public java.util.Date getFirstJoinTime() {
-        return this.firstJoinTime;
-    }
-
-    /**
-     * <p>
-     * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     * </p>
-     * 
-     * @param firstJoinTime
-     *        ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Participant withFirstJoinTime(java.util.Date firstJoinTime) {
-        setFirstJoinTime(firstJoinTime);
-        return this;
+    public Boolean isPublished() {
+        return this.published;
     }
 
     /**
@@ -430,94 +576,82 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Unique identifier for this participant, assigned by IVS.
+     * The participant’s browser.
      * </p>
      * 
-     * @param participantId
-     *        Unique identifier for this participant, assigned by IVS.
+     * @param browserName
+     *        The participant’s browser.
      */
 
-    public void setParticipantId(String participantId) {
-        this.participantId = participantId;
+    public void setBrowserName(String browserName) {
+        this.browserName = browserName;
     }
 
     /**
      * <p>
-     * Unique identifier for this participant, assigned by IVS.
+     * The participant’s browser.
      * </p>
      * 
-     * @return Unique identifier for this participant, assigned by IVS.
+     * @return The participant’s browser.
      */
 
-    public String getParticipantId() {
-        return this.participantId;
+    public String getBrowserName() {
+        return this.browserName;
     }
 
     /**
      * <p>
-     * Unique identifier for this participant, assigned by IVS.
+     * The participant’s browser.
      * </p>
      * 
-     * @param participantId
-     *        Unique identifier for this participant, assigned by IVS.
+     * @param browserName
+     *        The participant’s browser.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Participant withParticipantId(String participantId) {
-        setParticipantId(participantId);
+    public Participant withBrowserName(String browserName) {
+        setBrowserName(browserName);
         return this;
     }
 
     /**
      * <p>
-     * Whether the participant ever published to the stage session.
+     * The participant’s browser version.
      * </p>
      * 
-     * @param published
-     *        Whether the participant ever published to the stage session.
+     * @param browserVersion
+     *        The participant’s browser version.
      */
 
-    public void setPublished(Boolean published) {
-        this.published = published;
+    public void setBrowserVersion(String browserVersion) {
+        this.browserVersion = browserVersion;
     }
 
     /**
      * <p>
-     * Whether the participant ever published to the stage session.
+     * The participant’s browser version.
      * </p>
      * 
-     * @return Whether the participant ever published to the stage session.
+     * @return The participant’s browser version.
      */
 
-    public Boolean getPublished() {
-        return this.published;
+    public String getBrowserVersion() {
+        return this.browserVersion;
     }
 
     /**
      * <p>
-     * Whether the participant ever published to the stage session.
+     * The participant’s browser version.
      * </p>
      * 
-     * @param published
-     *        Whether the participant ever published to the stage session.
+     * @param browserVersion
+     *        The participant’s browser version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Participant withPublished(Boolean published) {
-        setPublished(published);
+    public Participant withBrowserVersion(String browserVersion) {
+        setBrowserVersion(browserVersion);
         return this;
-    }
-
-    /**
-     * <p>
-     * Whether the participant ever published to the stage session.
-     * </p>
-     * 
-     * @return Whether the participant ever published to the stage session.
-     */
-
-    public Boolean isPublished() {
-        return this.published;
     }
 
     /**
@@ -562,115 +696,152 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the participant is connected to or disconnected from the stage.
+     * Name of the S3 bucket to where the participant is being recorded, if individual participant recording is enabled,
+     * or "" (empty string), if recording is not enabled.
      * </p>
      * 
-     * @param state
-     *        Whether the participant is connected to or disconnected from the stage.
-     * @see ParticipantState
+     * @param recordingS3BucketName
+     *        Name of the S3 bucket to where the participant is being recorded, if individual participant recording is
+     *        enabled, or "" (empty string), if recording is not enabled.
      */
 
-    public void setState(String state) {
-        this.state = state;
+    public void setRecordingS3BucketName(String recordingS3BucketName) {
+        this.recordingS3BucketName = recordingS3BucketName;
     }
 
     /**
      * <p>
-     * Whether the participant is connected to or disconnected from the stage.
+     * Name of the S3 bucket to where the participant is being recorded, if individual participant recording is enabled,
+     * or "" (empty string), if recording is not enabled.
      * </p>
      * 
-     * @return Whether the participant is connected to or disconnected from the stage.
-     * @see ParticipantState
+     * @return Name of the S3 bucket to where the participant is being recorded, if individual participant recording is
+     *         enabled, or "" (empty string), if recording is not enabled.
      */
 
-    public String getState() {
-        return this.state;
+    public String getRecordingS3BucketName() {
+        return this.recordingS3BucketName;
     }
 
     /**
      * <p>
-     * Whether the participant is connected to or disconnected from the stage.
+     * Name of the S3 bucket to where the participant is being recorded, if individual participant recording is enabled,
+     * or "" (empty string), if recording is not enabled.
      * </p>
      * 
-     * @param state
-     *        Whether the participant is connected to or disconnected from the stage.
+     * @param recordingS3BucketName
+     *        Name of the S3 bucket to where the participant is being recorded, if individual participant recording is
+     *        enabled, or "" (empty string), if recording is not enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ParticipantState
      */
 
-    public Participant withState(String state) {
-        setState(state);
+    public Participant withRecordingS3BucketName(String recordingS3BucketName) {
+        setRecordingS3BucketName(recordingS3BucketName);
         return this;
     }
 
     /**
      * <p>
-     * Whether the participant is connected to or disconnected from the stage.
+     * S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording is
+     * enabled, or "" (empty string), if recording is not enabled.
      * </p>
      * 
-     * @param state
-     *        Whether the participant is connected to or disconnected from the stage.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ParticipantState
+     * @param recordingS3Prefix
+     *        S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording
+     *        is enabled, or "" (empty string), if recording is not enabled.
      */
 
-    public Participant withState(ParticipantState state) {
-        this.state = state.toString();
+    public void setRecordingS3Prefix(String recordingS3Prefix) {
+        this.recordingS3Prefix = recordingS3Prefix;
+    }
+
+    /**
+     * <p>
+     * S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording is
+     * enabled, or "" (empty string), if recording is not enabled.
+     * </p>
+     * 
+     * @return S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant
+     *         recording is enabled, or "" (empty string), if recording is not enabled.
+     */
+
+    public String getRecordingS3Prefix() {
+        return this.recordingS3Prefix;
+    }
+
+    /**
+     * <p>
+     * S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording is
+     * enabled, or "" (empty string), if recording is not enabled.
+     * </p>
+     * 
+     * @param recordingS3Prefix
+     *        S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording
+     *        is enabled, or "" (empty string), if recording is not enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withRecordingS3Prefix(String recordingS3Prefix) {
+        setRecordingS3Prefix(recordingS3Prefix);
         return this;
     }
 
     /**
      * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * Participant’s recording state.
      * </p>
      * 
-     * @param userId
-     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *        participants and should not be used for personally identifying, confidential, or sensitive
-     *        information</i>.
+     * @param recordingState
+     *        Participant’s recording state.
+     * @see ParticipantRecordingState
      */
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setRecordingState(String recordingState) {
+        this.recordingState = recordingState;
     }
 
     /**
      * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * Participant’s recording state.
      * </p>
      * 
-     * @return Customer-assigned name to help identify the token; this can be used to link a participant to a user in
-     *         the customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *         participants and should not be used for personally identifying, confidential, or sensitive
-     *         information</i>.
+     * @return Participant’s recording state.
+     * @see ParticipantRecordingState
      */
 
-    public String getUserId() {
-        return this.userId;
+    public String getRecordingState() {
+        return this.recordingState;
     }
 
     /**
      * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information</i>.
+     * Participant’s recording state.
      * </p>
      * 
-     * @param userId
-     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *        participants and should not be used for personally identifying, confidential, or sensitive
-     *        information</i>.
+     * @param recordingState
+     *        Participant’s recording state.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ParticipantRecordingState
      */
 
-    public Participant withUserId(String userId) {
-        setUserId(userId);
+    public Participant withRecordingState(String recordingState) {
+        setRecordingState(recordingState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Participant’s recording state.
+     * </p>
+     * 
+     * @param recordingState
+     *        Participant’s recording state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ParticipantRecordingState
+     */
+
+    public Participant withRecordingState(ParticipantRecordingState recordingState) {
+        this.recordingState = recordingState.toString();
         return this;
     }
 
@@ -686,30 +857,36 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAttributes() != null)
-            sb.append("Attributes: ").append(getAttributes()).append(",");
-        if (getBrowserName() != null)
-            sb.append("BrowserName: ").append(getBrowserName()).append(",");
-        if (getBrowserVersion() != null)
-            sb.append("BrowserVersion: ").append(getBrowserVersion()).append(",");
+        if (getParticipantId() != null)
+            sb.append("ParticipantId: ").append(getParticipantId()).append(",");
+        if (getUserId() != null)
+            sb.append("UserId: ").append(getUserId()).append(",");
+        if (getState() != null)
+            sb.append("State: ").append(getState()).append(",");
         if (getFirstJoinTime() != null)
             sb.append("FirstJoinTime: ").append(getFirstJoinTime()).append(",");
+        if (getAttributes() != null)
+            sb.append("Attributes: ").append(getAttributes()).append(",");
+        if (getPublished() != null)
+            sb.append("Published: ").append(getPublished()).append(",");
         if (getIspName() != null)
             sb.append("IspName: ").append(getIspName()).append(",");
         if (getOsName() != null)
             sb.append("OsName: ").append(getOsName()).append(",");
         if (getOsVersion() != null)
             sb.append("OsVersion: ").append(getOsVersion()).append(",");
-        if (getParticipantId() != null)
-            sb.append("ParticipantId: ").append(getParticipantId()).append(",");
-        if (getPublished() != null)
-            sb.append("Published: ").append(getPublished()).append(",");
+        if (getBrowserName() != null)
+            sb.append("BrowserName: ").append(getBrowserName()).append(",");
+        if (getBrowserVersion() != null)
+            sb.append("BrowserVersion: ").append(getBrowserVersion()).append(",");
         if (getSdkVersion() != null)
             sb.append("SdkVersion: ").append(getSdkVersion()).append(",");
-        if (getState() != null)
-            sb.append("State: ").append(getState()).append(",");
-        if (getUserId() != null)
-            sb.append("UserId: ").append(getUserId());
+        if (getRecordingS3BucketName() != null)
+            sb.append("RecordingS3BucketName: ").append(getRecordingS3BucketName()).append(",");
+        if (getRecordingS3Prefix() != null)
+            sb.append("RecordingS3Prefix: ").append(getRecordingS3Prefix()).append(",");
+        if (getRecordingState() != null)
+            sb.append("RecordingState: ").append(getRecordingState());
         sb.append("}");
         return sb.toString();
     }
@@ -724,21 +901,29 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Participant == false)
             return false;
         Participant other = (Participant) obj;
-        if (other.getAttributes() == null ^ this.getAttributes() == null)
+        if (other.getParticipantId() == null ^ this.getParticipantId() == null)
             return false;
-        if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
+        if (other.getParticipantId() != null && other.getParticipantId().equals(this.getParticipantId()) == false)
             return false;
-        if (other.getBrowserName() == null ^ this.getBrowserName() == null)
+        if (other.getUserId() == null ^ this.getUserId() == null)
             return false;
-        if (other.getBrowserName() != null && other.getBrowserName().equals(this.getBrowserName()) == false)
+        if (other.getUserId() != null && other.getUserId().equals(this.getUserId()) == false)
             return false;
-        if (other.getBrowserVersion() == null ^ this.getBrowserVersion() == null)
+        if (other.getState() == null ^ this.getState() == null)
             return false;
-        if (other.getBrowserVersion() != null && other.getBrowserVersion().equals(this.getBrowserVersion()) == false)
+        if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
         if (other.getFirstJoinTime() == null ^ this.getFirstJoinTime() == null)
             return false;
         if (other.getFirstJoinTime() != null && other.getFirstJoinTime().equals(this.getFirstJoinTime()) == false)
+            return false;
+        if (other.getAttributes() == null ^ this.getAttributes() == null)
+            return false;
+        if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
+            return false;
+        if (other.getPublished() == null ^ this.getPublished() == null)
+            return false;
+        if (other.getPublished() != null && other.getPublished().equals(this.getPublished()) == false)
             return false;
         if (other.getIspName() == null ^ this.getIspName() == null)
             return false;
@@ -752,25 +937,29 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getOsVersion() != null && other.getOsVersion().equals(this.getOsVersion()) == false)
             return false;
-        if (other.getParticipantId() == null ^ this.getParticipantId() == null)
+        if (other.getBrowserName() == null ^ this.getBrowserName() == null)
             return false;
-        if (other.getParticipantId() != null && other.getParticipantId().equals(this.getParticipantId()) == false)
+        if (other.getBrowserName() != null && other.getBrowserName().equals(this.getBrowserName()) == false)
             return false;
-        if (other.getPublished() == null ^ this.getPublished() == null)
+        if (other.getBrowserVersion() == null ^ this.getBrowserVersion() == null)
             return false;
-        if (other.getPublished() != null && other.getPublished().equals(this.getPublished()) == false)
+        if (other.getBrowserVersion() != null && other.getBrowserVersion().equals(this.getBrowserVersion()) == false)
             return false;
         if (other.getSdkVersion() == null ^ this.getSdkVersion() == null)
             return false;
         if (other.getSdkVersion() != null && other.getSdkVersion().equals(this.getSdkVersion()) == false)
             return false;
-        if (other.getState() == null ^ this.getState() == null)
+        if (other.getRecordingS3BucketName() == null ^ this.getRecordingS3BucketName() == null)
             return false;
-        if (other.getState() != null && other.getState().equals(this.getState()) == false)
+        if (other.getRecordingS3BucketName() != null && other.getRecordingS3BucketName().equals(this.getRecordingS3BucketName()) == false)
             return false;
-        if (other.getUserId() == null ^ this.getUserId() == null)
+        if (other.getRecordingS3Prefix() == null ^ this.getRecordingS3Prefix() == null)
             return false;
-        if (other.getUserId() != null && other.getUserId().equals(this.getUserId()) == false)
+        if (other.getRecordingS3Prefix() != null && other.getRecordingS3Prefix().equals(this.getRecordingS3Prefix()) == false)
+            return false;
+        if (other.getRecordingState() == null ^ this.getRecordingState() == null)
+            return false;
+        if (other.getRecordingState() != null && other.getRecordingState().equals(this.getRecordingState()) == false)
             return false;
         return true;
     }
@@ -780,18 +969,21 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
-        hashCode = prime * hashCode + ((getBrowserName() == null) ? 0 : getBrowserName().hashCode());
-        hashCode = prime * hashCode + ((getBrowserVersion() == null) ? 0 : getBrowserVersion().hashCode());
+        hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
+        hashCode = prime * hashCode + ((getUserId() == null) ? 0 : getUserId().hashCode());
+        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getFirstJoinTime() == null) ? 0 : getFirstJoinTime().hashCode());
+        hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
+        hashCode = prime * hashCode + ((getPublished() == null) ? 0 : getPublished().hashCode());
         hashCode = prime * hashCode + ((getIspName() == null) ? 0 : getIspName().hashCode());
         hashCode = prime * hashCode + ((getOsName() == null) ? 0 : getOsName().hashCode());
         hashCode = prime * hashCode + ((getOsVersion() == null) ? 0 : getOsVersion().hashCode());
-        hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
-        hashCode = prime * hashCode + ((getPublished() == null) ? 0 : getPublished().hashCode());
+        hashCode = prime * hashCode + ((getBrowserName() == null) ? 0 : getBrowserName().hashCode());
+        hashCode = prime * hashCode + ((getBrowserVersion() == null) ? 0 : getBrowserVersion().hashCode());
         hashCode = prime * hashCode + ((getSdkVersion() == null) ? 0 : getSdkVersion().hashCode());
-        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
-        hashCode = prime * hashCode + ((getUserId() == null) ? 0 : getUserId().hashCode());
+        hashCode = prime * hashCode + ((getRecordingS3BucketName() == null) ? 0 : getRecordingS3BucketName().hashCode());
+        hashCode = prime * hashCode + ((getRecordingS3Prefix() == null) ? 0 : getRecordingS3Prefix().hashCode());
+        hashCode = prime * hashCode + ((getRecordingState() == null) ? 0 : getRecordingState().hashCode());
         return hashCode;
     }
 

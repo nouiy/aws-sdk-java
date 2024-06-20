@@ -56,6 +56,10 @@ public class ContentBlockJsonUnmarshaller implements Unmarshaller<ContentBlock, 
                     context.nextToken();
                     contentBlock.setImage(ImageBlockJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("document", targetDepth)) {
+                    context.nextToken();
+                    contentBlock.setDocument(DocumentBlockJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("toolResult", targetDepth)) {
                     context.nextToken();
                     contentBlock.setToolResult(ToolResultBlockJsonUnmarshaller.getInstance().unmarshall(context));

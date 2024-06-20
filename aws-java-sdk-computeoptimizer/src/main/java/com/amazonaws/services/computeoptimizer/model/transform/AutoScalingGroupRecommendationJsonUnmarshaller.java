@@ -79,6 +79,10 @@ public class AutoScalingGroupRecommendationJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     autoScalingGroupRecommendation.setCurrentConfiguration(AutoScalingGroupConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("currentInstanceGpuInfo", targetDepth)) {
+                    context.nextToken();
+                    autoScalingGroupRecommendation.setCurrentInstanceGpuInfo(GpuInfoJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("recommendationOptions", targetDepth)) {
                     context.nextToken();
                     autoScalingGroupRecommendation.setRecommendationOptions(new ListUnmarshaller<AutoScalingGroupRecommendationOption>(
@@ -104,10 +108,6 @@ public class AutoScalingGroupRecommendationJsonUnmarshaller implements Unmarshal
                     autoScalingGroupRecommendation.setInferredWorkloadTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("currentInstanceGpuInfo", targetDepth)) {
-                    context.nextToken();
-                    autoScalingGroupRecommendation.setCurrentInstanceGpuInfo(GpuInfoJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

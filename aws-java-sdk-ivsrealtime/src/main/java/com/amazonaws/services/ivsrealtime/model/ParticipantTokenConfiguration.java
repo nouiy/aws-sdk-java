@@ -30,6 +30,20 @@ public class ParticipantTokenConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
+     * Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
+     * </p>
+     */
+    private Integer duration;
+    /**
+     * <p>
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information.</i>
+     * </p>
+     */
+    private String userId;
+    /**
+     * <p>
      * Application-provided attributes to encode into the corresponding participant token and attach to a stage. Map
      * keys and values can contain UTF-8 encoded text. The maximum length of this field is 1 KB total. <i>This field is
      * exposed to all stage participants and should not be used for personally identifying, confidential, or sensitive
@@ -43,20 +57,101 @@ public class ParticipantTokenConfiguration implements Serializable, Cloneable, S
      * </p>
      */
     private java.util.List<String> capabilities;
+
     /**
      * <p>
      * Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
      * </p>
+     * 
+     * @param duration
+     *        Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
      */
-    private Integer duration;
+
+    public void setDuration(Integer duration) {
+        this.duration = duration;
+    }
+
+    /**
+     * <p>
+     * Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
+     * </p>
+     * 
+     * @return Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
+     */
+
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    /**
+     * <p>
+     * Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
+     * </p>
+     * 
+     * @param duration
+     *        Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ParticipantTokenConfiguration withDuration(Integer duration) {
+        setDuration(duration);
+        return this;
+    }
+
     /**
      * <p>
      * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
      * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
      * and should not be used for personally identifying, confidential, or sensitive information.</i>
      * </p>
+     * 
+     * @param userId
+     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *        participants and should not be used for personally identifying, confidential, or sensitive
+     *        information.</i>
      */
-    private String userId;
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    /**
+     * <p>
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information.</i>
+     * </p>
+     * 
+     * @return Customer-assigned name to help identify the token; this can be used to link a participant to a user in
+     *         the customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *         participants and should not be used for personally identifying, confidential, or sensitive
+     *         information.</i>
+     */
+
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
+     * <p>
+     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
+     * and should not be used for personally identifying, confidential, or sensitive information.</i>
+     * </p>
+     * 
+     * @param userId
+     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
+     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
+     *        participants and should not be used for personally identifying, confidential, or sensitive
+     *        information.</i>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ParticipantTokenConfiguration withUserId(String userId) {
+        setUserId(userId);
+        return this;
+    }
 
     /**
      * <p>
@@ -243,101 +338,6 @@ public class ParticipantTokenConfiguration implements Serializable, Cloneable, S
     }
 
     /**
-     * <p>
-     * Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
-     * </p>
-     * 
-     * @param duration
-     *        Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
-     */
-
-    public void setDuration(Integer duration) {
-        this.duration = duration;
-    }
-
-    /**
-     * <p>
-     * Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
-     * </p>
-     * 
-     * @return Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
-     */
-
-    public Integer getDuration() {
-        return this.duration;
-    }
-
-    /**
-     * <p>
-     * Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
-     * </p>
-     * 
-     * @param duration
-     *        Duration (in minutes), after which the corresponding participant token expires. Default: 720 (12 hours).
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ParticipantTokenConfiguration withDuration(Integer duration) {
-        setDuration(duration);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information.</i>
-     * </p>
-     * 
-     * @param userId
-     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *        participants and should not be used for personally identifying, confidential, or sensitive
-     *        information.</i>
-     */
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    /**
-     * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information.</i>
-     * </p>
-     * 
-     * @return Customer-assigned name to help identify the token; this can be used to link a participant to a user in
-     *         the customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *         participants and should not be used for personally identifying, confidential, or sensitive
-     *         information.</i>
-     */
-
-    public String getUserId() {
-        return this.userId;
-    }
-
-    /**
-     * <p>
-     * Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     * customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage participants
-     * and should not be used for personally identifying, confidential, or sensitive information.</i>
-     * </p>
-     * 
-     * @param userId
-     *        Customer-assigned name to help identify the token; this can be used to link a participant to a user in the
-     *        customer’s own systems. This can be any UTF-8 encoded text. <i>This field is exposed to all stage
-     *        participants and should not be used for personally identifying, confidential, or sensitive
-     *        information.</i>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ParticipantTokenConfiguration withUserId(String userId) {
-        setUserId(userId);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -349,14 +349,14 @@ public class ParticipantTokenConfiguration implements Serializable, Cloneable, S
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAttributes() != null)
-            sb.append("Attributes: ").append(getAttributes()).append(",");
-        if (getCapabilities() != null)
-            sb.append("Capabilities: ").append(getCapabilities()).append(",");
         if (getDuration() != null)
             sb.append("Duration: ").append(getDuration()).append(",");
         if (getUserId() != null)
-            sb.append("UserId: ").append(getUserId());
+            sb.append("UserId: ").append(getUserId()).append(",");
+        if (getAttributes() != null)
+            sb.append("Attributes: ").append(getAttributes()).append(",");
+        if (getCapabilities() != null)
+            sb.append("Capabilities: ").append(getCapabilities());
         sb.append("}");
         return sb.toString();
     }
@@ -371,14 +371,6 @@ public class ParticipantTokenConfiguration implements Serializable, Cloneable, S
         if (obj instanceof ParticipantTokenConfiguration == false)
             return false;
         ParticipantTokenConfiguration other = (ParticipantTokenConfiguration) obj;
-        if (other.getAttributes() == null ^ this.getAttributes() == null)
-            return false;
-        if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
-            return false;
-        if (other.getCapabilities() == null ^ this.getCapabilities() == null)
-            return false;
-        if (other.getCapabilities() != null && other.getCapabilities().equals(this.getCapabilities()) == false)
-            return false;
         if (other.getDuration() == null ^ this.getDuration() == null)
             return false;
         if (other.getDuration() != null && other.getDuration().equals(this.getDuration()) == false)
@@ -386,6 +378,14 @@ public class ParticipantTokenConfiguration implements Serializable, Cloneable, S
         if (other.getUserId() == null ^ this.getUserId() == null)
             return false;
         if (other.getUserId() != null && other.getUserId().equals(this.getUserId()) == false)
+            return false;
+        if (other.getAttributes() == null ^ this.getAttributes() == null)
+            return false;
+        if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
+            return false;
+        if (other.getCapabilities() == null ^ this.getCapabilities() == null)
+            return false;
+        if (other.getCapabilities() != null && other.getCapabilities().equals(this.getCapabilities()) == false)
             return false;
         return true;
     }
@@ -395,10 +395,10 @@ public class ParticipantTokenConfiguration implements Serializable, Cloneable, S
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
-        hashCode = prime * hashCode + ((getCapabilities() == null) ? 0 : getCapabilities().hashCode());
         hashCode = prime * hashCode + ((getDuration() == null) ? 0 : getDuration().hashCode());
         hashCode = prime * hashCode + ((getUserId() == null) ? 0 : getUserId().hashCode());
+        hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
+        hashCode = prime * hashCode + ((getCapabilities() == null) ? 0 : getCapabilities().hashCode());
         return hashCode;
     }
 

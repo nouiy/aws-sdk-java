@@ -48,65 +48,45 @@ public class GetRecommendationResultJsonUnmarshaller implements Unmarshaller<Get
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("recommendationId", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationResult.setRecommendationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("resourceId", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationResult.setResourceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("resourceArn", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationResult.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("accountId", targetDepth)) {
                     context.nextToken();
                     getRecommendationResult.setAccountId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("actionType", targetDepth)) {
-                    context.nextToken();
-                    getRecommendationResult.setActionType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("costCalculationLookbackPeriodInDays", targetDepth)) {
-                    context.nextToken();
-                    getRecommendationResult.setCostCalculationLookbackPeriodInDays(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("currencyCode", targetDepth)) {
                     context.nextToken();
                     getRecommendationResult.setCurrencyCode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("currentResourceDetails", targetDepth)) {
+                if (context.testExpression("recommendationLookbackPeriodInDays", targetDepth)) {
                     context.nextToken();
-                    getRecommendationResult.setCurrentResourceDetails(ResourceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                    getRecommendationResult.setRecommendationLookbackPeriodInDays(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
-                if (context.testExpression("currentResourceType", targetDepth)) {
+                if (context.testExpression("costCalculationLookbackPeriodInDays", targetDepth)) {
                     context.nextToken();
-                    getRecommendationResult.setCurrentResourceType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("estimatedMonthlyCost", targetDepth)) {
-                    context.nextToken();
-                    getRecommendationResult.setEstimatedMonthlyCost(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
-                if (context.testExpression("estimatedMonthlySavings", targetDepth)) {
-                    context.nextToken();
-                    getRecommendationResult.setEstimatedMonthlySavings(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
-                if (context.testExpression("estimatedSavingsOverCostCalculationLookbackPeriod", targetDepth)) {
-                    context.nextToken();
-                    getRecommendationResult.setEstimatedSavingsOverCostCalculationLookbackPeriod(context.getUnmarshaller(Double.class).unmarshall(context));
+                    getRecommendationResult.setCostCalculationLookbackPeriodInDays(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("estimatedSavingsPercentage", targetDepth)) {
                     context.nextToken();
                     getRecommendationResult.setEstimatedSavingsPercentage(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("implementationEffort", targetDepth)) {
+                if (context.testExpression("estimatedSavingsOverCostCalculationLookbackPeriod", targetDepth)) {
                     context.nextToken();
-                    getRecommendationResult.setImplementationEffort(context.getUnmarshaller(String.class).unmarshall(context));
+                    getRecommendationResult.setEstimatedSavingsOverCostCalculationLookbackPeriod(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("lastRefreshTimestamp", targetDepth)) {
+                if (context.testExpression("currentResourceType", targetDepth)) {
                     context.nextToken();
-                    getRecommendationResult.setLastRefreshTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("recommendationId", targetDepth)) {
-                    context.nextToken();
-                    getRecommendationResult.setRecommendationId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("recommendationLookbackPeriodInDays", targetDepth)) {
-                    context.nextToken();
-                    getRecommendationResult.setRecommendationLookbackPeriodInDays(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("recommendedResourceDetails", targetDepth)) {
-                    context.nextToken();
-                    getRecommendationResult.setRecommendedResourceDetails(ResourceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                    getRecommendationResult.setCurrentResourceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("recommendedResourceType", targetDepth)) {
                     context.nextToken();
@@ -116,25 +96,45 @@ public class GetRecommendationResultJsonUnmarshaller implements Unmarshaller<Get
                     context.nextToken();
                     getRecommendationResult.setRegion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("resourceArn", targetDepth)) {
+                if (context.testExpression("source", targetDepth)) {
                     context.nextToken();
-                    getRecommendationResult.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    getRecommendationResult.setSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("resourceId", targetDepth)) {
+                if (context.testExpression("lastRefreshTimestamp", targetDepth)) {
                     context.nextToken();
-                    getRecommendationResult.setResourceId(context.getUnmarshaller(String.class).unmarshall(context));
+                    getRecommendationResult.setLastRefreshTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("estimatedMonthlySavings", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationResult.setEstimatedMonthlySavings(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("estimatedMonthlyCost", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationResult.setEstimatedMonthlyCost(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("implementationEffort", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationResult.setImplementationEffort(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("restartNeeded", targetDepth)) {
                     context.nextToken();
                     getRecommendationResult.setRestartNeeded(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("actionType", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationResult.setActionType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("rollbackPossible", targetDepth)) {
                     context.nextToken();
                     getRecommendationResult.setRollbackPossible(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("source", targetDepth)) {
+                if (context.testExpression("currentResourceDetails", targetDepth)) {
                     context.nextToken();
-                    getRecommendationResult.setSource(context.getUnmarshaller(String.class).unmarshall(context));
+                    getRecommendationResult.setCurrentResourceDetails(ResourceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("recommendedResourceDetails", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationResult.setRecommendedResourceDetails(ResourceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();

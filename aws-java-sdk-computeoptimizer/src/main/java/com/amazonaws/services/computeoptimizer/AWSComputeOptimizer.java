@@ -369,6 +369,47 @@ public interface AWSComputeOptimizer {
 
     /**
      * <p>
+     * Export optimization recommendations for your Amazon Relational Database Service (Amazon RDS).
+     * </p>
+     * <p>
+     * Recommendations are exported in a comma-separated values (CSV) file, and its metadata in a JavaScript Object
+     * Notation (JSON) file, to an existing Amazon Simple Storage Service (Amazon S3) bucket that you specify. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/exporting-recommendations.html">Exporting
+     * Recommendations</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * <p>
+     * You can have only one Amazon RDS export job in progress per Amazon Web Services Region.
+     * </p>
+     * 
+     * @param exportRDSDatabaseRecommendationsRequest
+     * @return Result of the ExportRDSDatabaseRecommendations operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeds a limit of the service.
+     * @sample AWSComputeOptimizer.ExportRDSDatabaseRecommendations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/ExportRDSDatabaseRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ExportRDSDatabaseRecommendationsResult exportRDSDatabaseRecommendations(ExportRDSDatabaseRecommendationsRequest exportRDSDatabaseRecommendationsRequest);
+
+    /**
+     * <p>
      * Returns Auto Scaling group recommendations.
      * </p>
      * <p>
@@ -760,6 +801,74 @@ public interface AWSComputeOptimizer {
      *      target="_top">AWS API Documentation</a>
      */
     GetLicenseRecommendationsResult getLicenseRecommendations(GetLicenseRecommendationsRequest getLicenseRecommendationsRequest);
+
+    /**
+     * <p>
+     * Returns the projected metrics of Amazon RDS recommendations.
+     * </p>
+     * 
+     * @param getRDSDatabaseRecommendationProjectedMetricsRequest
+     * @return Result of the GetRDSDatabaseRecommendationProjectedMetrics operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSComputeOptimizer.GetRDSDatabaseRecommendationProjectedMetrics
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRDSDatabaseRecommendationProjectedMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRDSDatabaseRecommendationProjectedMetricsResult getRDSDatabaseRecommendationProjectedMetrics(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest getRDSDatabaseRecommendationProjectedMetricsRequest);
+
+    /**
+     * <p>
+     * Returns Amazon RDS recommendations.
+     * </p>
+     * <p>
+     * Compute Optimizer generates recommendations for Amazon RDS that meet a specific set of requirements. For more
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param getRDSDatabaseRecommendationsRequest
+     * @return Result of the GetRDSDatabaseRecommendations operation returned by the service.
+     * @throws OptInRequiredException
+     *         The account is not opted in to Compute Optimizer.
+     * @throws InternalServerException
+     *         An internal error has occurred. Try your call again.
+     * @throws ServiceUnavailableException
+     *         The request has failed due to a temporary failure of the server.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws InvalidParameterValueException
+     *         The value supplied for the input parameter is out of range or not valid.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws MissingAuthenticationTokenException
+     *         The request must contain either a valid (registered) Amazon Web Services access key ID or X.509
+     *         certificate.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSComputeOptimizer.GetRDSDatabaseRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRDSDatabaseRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRDSDatabaseRecommendationsResult getRDSDatabaseRecommendations(GetRDSDatabaseRecommendationsRequest getRDSDatabaseRecommendationsRequest);
 
     /**
      * <p>

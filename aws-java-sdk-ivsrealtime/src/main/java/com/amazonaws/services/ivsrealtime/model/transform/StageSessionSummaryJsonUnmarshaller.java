@@ -48,10 +48,6 @@ public class StageSessionSummaryJsonUnmarshaller implements Unmarshaller<StageSe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("endTime", targetDepth)) {
-                    context.nextToken();
-                    stageSessionSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("sessionId", targetDepth)) {
                     context.nextToken();
                     stageSessionSummary.setSessionId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class StageSessionSummaryJsonUnmarshaller implements Unmarshaller<StageSe
                 if (context.testExpression("startTime", targetDepth)) {
                     context.nextToken();
                     stageSessionSummary.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("endTime", targetDepth)) {
+                    context.nextToken();
+                    stageSessionSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

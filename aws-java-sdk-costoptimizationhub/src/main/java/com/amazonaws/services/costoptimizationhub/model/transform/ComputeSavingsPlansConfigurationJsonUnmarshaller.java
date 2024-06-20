@@ -52,17 +52,17 @@ public class ComputeSavingsPlansConfigurationJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     computeSavingsPlansConfiguration.setAccountScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("hourlyCommitment", targetDepth)) {
+                if (context.testExpression("term", targetDepth)) {
                     context.nextToken();
-                    computeSavingsPlansConfiguration.setHourlyCommitment(context.getUnmarshaller(String.class).unmarshall(context));
+                    computeSavingsPlansConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("paymentOption", targetDepth)) {
                     context.nextToken();
                     computeSavingsPlansConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("term", targetDepth)) {
+                if (context.testExpression("hourlyCommitment", targetDepth)) {
                     context.nextToken();
-                    computeSavingsPlansConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                    computeSavingsPlansConfiguration.setHourlyCommitment(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

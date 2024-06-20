@@ -25,63 +25,17 @@ public class ListStageSessionsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
+     * List of matching stage sessions.
+     * </p>
+     */
+    private java.util.List<StageSessionSummary> stageSessions;
+    /**
+     * <p>
      * If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request to get
      * the next set.
      * </p>
      */
     private String nextToken;
-    /**
-     * <p>
-     * List of matching stage sessions.
-     * </p>
-     */
-    private java.util.List<StageSessionSummary> stageSessions;
-
-    /**
-     * <p>
-     * If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request to get
-     * the next set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request
-     *        to get the next set.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request to get
-     * the next set.
-     * </p>
-     * 
-     * @return If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request
-     *         to get the next set.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request to get
-     * the next set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request
-     *        to get the next set.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListStageSessionsResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
 
     /**
      * <p>
@@ -154,6 +108,52 @@ public class ListStageSessionsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request to get
+     * the next set.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request
+     *        to get the next set.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request to get
+     * the next set.
+     * </p>
+     * 
+     * @return If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request
+     *         to get the next set.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request to get
+     * the next set.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more stage sessions than <code>maxResults</code>, use <code>nextToken</code> in the request
+     *        to get the next set.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListStageSessionsResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -165,10 +165,10 @@ public class ListStageSessionsResult extends com.amazonaws.AmazonWebServiceResul
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getStageSessions() != null)
-            sb.append("StageSessions: ").append(getStageSessions());
+            sb.append("StageSessions: ").append(getStageSessions()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -183,13 +183,13 @@ public class ListStageSessionsResult extends com.amazonaws.AmazonWebServiceResul
         if (obj instanceof ListStageSessionsResult == false)
             return false;
         ListStageSessionsResult other = (ListStageSessionsResult) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getStageSessions() == null ^ this.getStageSessions() == null)
             return false;
         if (other.getStageSessions() != null && other.getStageSessions().equals(this.getStageSessions()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -199,8 +199,8 @@ public class ListStageSessionsResult extends com.amazonaws.AmazonWebServiceResul
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getStageSessions() == null) ? 0 : getStageSessions().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

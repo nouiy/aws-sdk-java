@@ -52,6 +52,10 @@ public class AutoScalingGroupRecommendationOptionJsonUnmarshaller implements Unm
                     context.nextToken();
                     autoScalingGroupRecommendationOption.setConfiguration(AutoScalingGroupConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("instanceGpuInfo", targetDepth)) {
+                    context.nextToken();
+                    autoScalingGroupRecommendationOption.setInstanceGpuInfo(GpuInfoJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("projectedUtilizationMetrics", targetDepth)) {
                     context.nextToken();
                     autoScalingGroupRecommendationOption.setProjectedUtilizationMetrics(new ListUnmarshaller<UtilizationMetric>(
@@ -71,18 +75,14 @@ public class AutoScalingGroupRecommendationOptionJsonUnmarshaller implements Unm
                     context.nextToken();
                     autoScalingGroupRecommendationOption.setSavingsOpportunity(SavingsOpportunityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("migrationEffort", targetDepth)) {
-                    context.nextToken();
-                    autoScalingGroupRecommendationOption.setMigrationEffort(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("instanceGpuInfo", targetDepth)) {
-                    context.nextToken();
-                    autoScalingGroupRecommendationOption.setInstanceGpuInfo(GpuInfoJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("savingsOpportunityAfterDiscounts", targetDepth)) {
                     context.nextToken();
                     autoScalingGroupRecommendationOption.setSavingsOpportunityAfterDiscounts(AutoScalingGroupSavingsOpportunityAfterDiscountsJsonUnmarshaller
                             .getInstance().unmarshall(context));
+                }
+                if (context.testExpression("migrationEffort", targetDepth)) {
+                    context.nextToken();
+                    autoScalingGroupRecommendationOption.setMigrationEffort(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

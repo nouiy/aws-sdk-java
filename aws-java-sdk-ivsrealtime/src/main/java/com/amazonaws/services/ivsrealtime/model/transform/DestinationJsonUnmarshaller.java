@@ -48,6 +48,22 @@ public class DestinationJsonUnmarshaller implements Unmarshaller<Destination, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("id", targetDepth)) {
+                    context.nextToken();
+                    destination.setId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("state", targetDepth)) {
+                    context.nextToken();
+                    destination.setState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("startTime", targetDepth)) {
+                    context.nextToken();
+                    destination.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("endTime", targetDepth)) {
+                    context.nextToken();
+                    destination.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("configuration", targetDepth)) {
                     context.nextToken();
                     destination.setConfiguration(DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
@@ -55,22 +71,6 @@ public class DestinationJsonUnmarshaller implements Unmarshaller<Destination, Js
                 if (context.testExpression("detail", targetDepth)) {
                     context.nextToken();
                     destination.setDetail(DestinationDetailJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("endTime", targetDepth)) {
-                    context.nextToken();
-                    destination.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("id", targetDepth)) {
-                    context.nextToken();
-                    destination.setId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("startTime", targetDepth)) {
-                    context.nextToken();
-                    destination.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("state", targetDepth)) {
-                    context.nextToken();
-                    destination.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

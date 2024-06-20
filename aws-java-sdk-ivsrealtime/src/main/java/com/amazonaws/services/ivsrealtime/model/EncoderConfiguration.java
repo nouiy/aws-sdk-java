@@ -42,6 +42,12 @@ public class EncoderConfiguration implements Serializable, Cloneable, Structured
     private String name;
     /**
      * <p>
+     * Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
+     * </p>
+     */
+    private Video video;
+    /**
+     * <p>
      * Tags attached to the resource. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
      * including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS has no constraints
@@ -49,12 +55,6 @@ public class EncoderConfiguration implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.Map<String, String> tags;
-    /**
-     * <p>
-     * Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
-     * </p>
-     */
-    private Video video;
 
     /**
      * <p>
@@ -133,6 +133,46 @@ public class EncoderConfiguration implements Serializable, Cloneable, Structured
 
     public EncoderConfiguration withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
+     * </p>
+     * 
+     * @param video
+     *        Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
+     */
+
+    public void setVideo(Video video) {
+        this.video = video;
+    }
+
+    /**
+     * <p>
+     * Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
+     * </p>
+     * 
+     * @return Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
+     */
+
+    public Video getVideo() {
+        return this.video;
+    }
+
+    /**
+     * <p>
+     * Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
+     * </p>
+     * 
+     * @param video
+     *        Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EncoderConfiguration withVideo(Video video) {
+        setVideo(video);
         return this;
     }
 
@@ -223,46 +263,6 @@ public class EncoderConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p>
-     * Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
-     * </p>
-     * 
-     * @param video
-     *        Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
-     */
-
-    public void setVideo(Video video) {
-        this.video = video;
-    }
-
-    /**
-     * <p>
-     * Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
-     * </p>
-     * 
-     * @return Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
-     */
-
-    public Video getVideo() {
-        return this.video;
-    }
-
-    /**
-     * <p>
-     * Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
-     * </p>
-     * 
-     * @param video
-     *        Video configuration. Default: video resolution 1280x720, bitrate 2500 kbps, 30 fps
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EncoderConfiguration withVideo(Video video) {
-        setVideo(video);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -278,10 +278,10 @@ public class EncoderConfiguration implements Serializable, Cloneable, Structured
             sb.append("Arn: ").append(getArn()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
         if (getVideo() != null)
-            sb.append("Video: ").append(getVideo());
+            sb.append("Video: ").append(getVideo()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -304,13 +304,13 @@ public class EncoderConfiguration implements Serializable, Cloneable, Structured
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
-            return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
-            return false;
         if (other.getVideo() == null ^ this.getVideo() == null)
             return false;
         if (other.getVideo() != null && other.getVideo().equals(this.getVideo()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
         return true;
     }
@@ -322,8 +322,8 @@ public class EncoderConfiguration implements Serializable, Cloneable, Structured
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getVideo() == null) ? 0 : getVideo().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

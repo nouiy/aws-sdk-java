@@ -48,15 +48,15 @@ public class ListEnrollmentStatusesResultJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("includeMemberAccounts", targetDepth)) {
-                    context.nextToken();
-                    listEnrollmentStatusesResult.setIncludeMemberAccounts(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
                 if (context.testExpression("items", targetDepth)) {
                     context.nextToken();
                     listEnrollmentStatusesResult.setItems(new ListUnmarshaller<AccountEnrollmentStatus>(AccountEnrollmentStatusJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("includeMemberAccounts", targetDepth)) {
+                    context.nextToken();
+                    listEnrollmentStatusesResult.setIncludeMemberAccounts(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("nextToken", targetDepth)) {
                     context.nextToken();

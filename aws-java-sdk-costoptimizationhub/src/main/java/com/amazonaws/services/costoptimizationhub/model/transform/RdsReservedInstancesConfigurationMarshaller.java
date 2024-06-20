@@ -29,38 +29,38 @@ public class RdsReservedInstancesConfigurationMarshaller {
 
     private static final MarshallingInfo<String> ACCOUNTSCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accountScope").build();
+    private static final MarshallingInfo<String> SERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("service").build();
+    private static final MarshallingInfo<String> NORMALIZEDUNITSTOPURCHASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("normalizedUnitsToPurchase").build();
+    private static final MarshallingInfo<String> TERM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("term").build();
+    private static final MarshallingInfo<String> PAYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentOption").build();
+    private static final MarshallingInfo<String> NUMBEROFINSTANCESTOPURCHASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfInstancesToPurchase").build();
+    private static final MarshallingInfo<String> INSTANCEFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceFamily").build();
+    private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceType").build();
+    private static final MarshallingInfo<String> RESERVEDINSTANCESREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("reservedInstancesRegion").build();
+    private static final MarshallingInfo<Boolean> SIZEFLEXELIGIBLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sizeFlexEligible").build();
     private static final MarshallingInfo<String> CURRENTGENERATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentGeneration").build();
+    private static final MarshallingInfo<String> UPFRONTCOST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("upfrontCost").build();
+    private static final MarshallingInfo<String> MONTHLYRECURRINGCOST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("monthlyRecurringCost").build();
+    private static final MarshallingInfo<String> LICENSEMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("licenseModel").build();
     private static final MarshallingInfo<String> DATABASEEDITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("databaseEdition").build();
     private static final MarshallingInfo<String> DATABASEENGINE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("databaseEngine").build();
     private static final MarshallingInfo<String> DEPLOYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deploymentOption").build();
-    private static final MarshallingInfo<String> INSTANCEFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceFamily").build();
-    private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceType").build();
-    private static final MarshallingInfo<String> LICENSEMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("licenseModel").build();
-    private static final MarshallingInfo<String> MONTHLYRECURRINGCOST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("monthlyRecurringCost").build();
-    private static final MarshallingInfo<String> NORMALIZEDUNITSTOPURCHASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("normalizedUnitsToPurchase").build();
-    private static final MarshallingInfo<String> NUMBEROFINSTANCESTOPURCHASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfInstancesToPurchase").build();
-    private static final MarshallingInfo<String> PAYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentOption").build();
-    private static final MarshallingInfo<String> RESERVEDINSTANCESREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("reservedInstancesRegion").build();
-    private static final MarshallingInfo<String> SERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("service").build();
-    private static final MarshallingInfo<Boolean> SIZEFLEXELIGIBLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sizeFlexEligible").build();
-    private static final MarshallingInfo<String> TERM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("term").build();
-    private static final MarshallingInfo<String> UPFRONTCOST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("upfrontCost").build();
 
     private static final RdsReservedInstancesConfigurationMarshaller instance = new RdsReservedInstancesConfigurationMarshaller();
 
@@ -79,22 +79,22 @@ public class RdsReservedInstancesConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getAccountScope(), ACCOUNTSCOPE_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getService(), SERVICE_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getNormalizedUnitsToPurchase(), NORMALIZEDUNITSTOPURCHASE_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getTerm(), TERM_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getPaymentOption(), PAYMENTOPTION_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getNumberOfInstancesToPurchase(), NUMBEROFINSTANCESTOPURCHASE_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getInstanceFamily(), INSTANCEFAMILY_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getInstanceType(), INSTANCETYPE_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getReservedInstancesRegion(), RESERVEDINSTANCESREGION_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getSizeFlexEligible(), SIZEFLEXELIGIBLE_BINDING);
             protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getCurrentGeneration(), CURRENTGENERATION_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getUpfrontCost(), UPFRONTCOST_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getMonthlyRecurringCost(), MONTHLYRECURRINGCOST_BINDING);
+            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getLicenseModel(), LICENSEMODEL_BINDING);
             protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getDatabaseEdition(), DATABASEEDITION_BINDING);
             protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getDatabaseEngine(), DATABASEENGINE_BINDING);
             protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getDeploymentOption(), DEPLOYMENTOPTION_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getInstanceFamily(), INSTANCEFAMILY_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getInstanceType(), INSTANCETYPE_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getLicenseModel(), LICENSEMODEL_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getMonthlyRecurringCost(), MONTHLYRECURRINGCOST_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getNormalizedUnitsToPurchase(), NORMALIZEDUNITSTOPURCHASE_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getNumberOfInstancesToPurchase(), NUMBEROFINSTANCESTOPURCHASE_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getPaymentOption(), PAYMENTOPTION_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getReservedInstancesRegion(), RESERVEDINSTANCESREGION_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getService(), SERVICE_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getSizeFlexEligible(), SIZEFLEXELIGIBLE_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getTerm(), TERM_BINDING);
-            protocolMarshaller.marshall(rdsReservedInstancesConfiguration.getUpfrontCost(), UPFRONTCOST_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

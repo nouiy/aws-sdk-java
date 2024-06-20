@@ -52,25 +52,21 @@ public class Ec2ReservedInstancesConfigurationJsonUnmarshaller implements Unmars
                     context.nextToken();
                     ec2ReservedInstancesConfiguration.setAccountScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("currentGeneration", targetDepth)) {
+                if (context.testExpression("service", targetDepth)) {
                     context.nextToken();
-                    ec2ReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("instanceFamily", targetDepth)) {
-                    context.nextToken();
-                    ec2ReservedInstancesConfiguration.setInstanceFamily(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("instanceType", targetDepth)) {
-                    context.nextToken();
-                    ec2ReservedInstancesConfiguration.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
-                    context.nextToken();
-                    ec2ReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
+                    ec2ReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("normalizedUnitsToPurchase", targetDepth)) {
                     context.nextToken();
                     ec2ReservedInstancesConfiguration.setNormalizedUnitsToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("term", targetDepth)) {
+                    context.nextToken();
+                    ec2ReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("paymentOption", targetDepth)) {
+                    context.nextToken();
+                    ec2ReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
                     context.nextToken();
@@ -80,37 +76,41 @@ public class Ec2ReservedInstancesConfigurationJsonUnmarshaller implements Unmars
                     context.nextToken();
                     ec2ReservedInstancesConfiguration.setOfferingClass(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("paymentOption", targetDepth)) {
+                if (context.testExpression("instanceFamily", targetDepth)) {
                     context.nextToken();
-                    ec2ReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
+                    ec2ReservedInstancesConfiguration.setInstanceFamily(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("platform", targetDepth)) {
+                if (context.testExpression("instanceType", targetDepth)) {
                     context.nextToken();
-                    ec2ReservedInstancesConfiguration.setPlatform(context.getUnmarshaller(String.class).unmarshall(context));
+                    ec2ReservedInstancesConfiguration.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("reservedInstancesRegion", targetDepth)) {
                     context.nextToken();
                     ec2ReservedInstancesConfiguration.setReservedInstancesRegion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("service", targetDepth)) {
+                if (context.testExpression("currentGeneration", targetDepth)) {
                     context.nextToken();
-                    ec2ReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
+                    ec2ReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("sizeFlexEligible", targetDepth)) {
+                if (context.testExpression("platform", targetDepth)) {
                     context.nextToken();
-                    ec2ReservedInstancesConfiguration.setSizeFlexEligible(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    ec2ReservedInstancesConfiguration.setPlatform(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("tenancy", targetDepth)) {
                     context.nextToken();
                     ec2ReservedInstancesConfiguration.setTenancy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("term", targetDepth)) {
+                if (context.testExpression("sizeFlexEligible", targetDepth)) {
                     context.nextToken();
-                    ec2ReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                    ec2ReservedInstancesConfiguration.setSizeFlexEligible(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("upfrontCost", targetDepth)) {
                     context.nextToken();
                     ec2ReservedInstancesConfiguration.setUpfrontCost(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
+                    context.nextToken();
+                    ec2ReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

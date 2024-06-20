@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateEnrollmentStatusRequestMarshaller {
 
-    private static final MarshallingInfo<Boolean> INCLUDEMEMBERACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeMemberAccounts").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<Boolean> INCLUDEMEMBERACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeMemberAccounts").build();
 
     private static final UpdateEnrollmentStatusRequestMarshaller instance = new UpdateEnrollmentStatusRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class UpdateEnrollmentStatusRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updateEnrollmentStatusRequest.getIncludeMemberAccounts(), INCLUDEMEMBERACCOUNTS_BINDING);
             protocolMarshaller.marshall(updateEnrollmentStatusRequest.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(updateEnrollmentStatusRequest.getIncludeMemberAccounts(), INCLUDEMEMBERACCOUNTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

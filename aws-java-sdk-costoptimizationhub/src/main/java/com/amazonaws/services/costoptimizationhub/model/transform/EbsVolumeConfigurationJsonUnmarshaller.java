@@ -48,17 +48,17 @@ public class EbsVolumeConfigurationJsonUnmarshaller implements Unmarshaller<EbsV
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("attachmentState", targetDepth)) {
+                if (context.testExpression("storage", targetDepth)) {
                     context.nextToken();
-                    ebsVolumeConfiguration.setAttachmentState(context.getUnmarshaller(String.class).unmarshall(context));
+                    ebsVolumeConfiguration.setStorage(StorageConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("performance", targetDepth)) {
                     context.nextToken();
                     ebsVolumeConfiguration.setPerformance(BlockStoragePerformanceConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("storage", targetDepth)) {
+                if (context.testExpression("attachmentState", targetDepth)) {
                     context.nextToken();
-                    ebsVolumeConfiguration.setStorage(StorageConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                    ebsVolumeConfiguration.setAttachmentState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

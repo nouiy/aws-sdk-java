@@ -27,16 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ParticipantSummaryMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> FIRSTJOINTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("firstJoinTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> PARTICIPANTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantId").build();
-    private static final MarshallingInfo<Boolean> PUBLISHED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("published").build();
-    private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("state").build();
     private static final MarshallingInfo<String> USERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("userId").build();
+    private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("state").build();
+    private static final MarshallingInfo<java.util.Date> FIRSTJOINTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("firstJoinTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<Boolean> PUBLISHED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("published").build();
+    private static final MarshallingInfo<String> RECORDINGSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingState").build();
 
     private static final ParticipantSummaryMarshaller instance = new ParticipantSummaryMarshaller();
 
@@ -54,11 +56,12 @@ public class ParticipantSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(participantSummary.getFirstJoinTime(), FIRSTJOINTIME_BINDING);
             protocolMarshaller.marshall(participantSummary.getParticipantId(), PARTICIPANTID_BINDING);
-            protocolMarshaller.marshall(participantSummary.getPublished(), PUBLISHED_BINDING);
-            protocolMarshaller.marshall(participantSummary.getState(), STATE_BINDING);
             protocolMarshaller.marshall(participantSummary.getUserId(), USERID_BINDING);
+            protocolMarshaller.marshall(participantSummary.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(participantSummary.getFirstJoinTime(), FIRSTJOINTIME_BINDING);
+            protocolMarshaller.marshall(participantSummary.getPublished(), PUBLISHED_BINDING);
+            protocolMarshaller.marshall(participantSummary.getRecordingState(), RECORDINGSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

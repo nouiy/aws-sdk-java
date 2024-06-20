@@ -982,6 +982,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateHubContentReferenceResult> createHubContentReferenceAsync(CreateHubContentReferenceRequest request) {
+
+        return createHubContentReferenceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateHubContentReferenceResult> createHubContentReferenceAsync(final CreateHubContentReferenceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateHubContentReferenceRequest, CreateHubContentReferenceResult> asyncHandler) {
+        final CreateHubContentReferenceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateHubContentReferenceResult>() {
+            @Override
+            public CreateHubContentReferenceResult call() throws Exception {
+                CreateHubContentReferenceResult result = null;
+
+                try {
+                    result = executeCreateHubContentReference(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateHumanTaskUiResult> createHumanTaskUiAsync(CreateHumanTaskUiRequest request) {
 
         return createHumanTaskUiAsync(request, null);
@@ -2861,6 +2894,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDeleteHubContent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteHubContentReferenceResult> deleteHubContentReferenceAsync(DeleteHubContentReferenceRequest request) {
+
+        return deleteHubContentReferenceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteHubContentReferenceResult> deleteHubContentReferenceAsync(final DeleteHubContentReferenceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteHubContentReferenceRequest, DeleteHubContentReferenceResult> asyncHandler) {
+        final DeleteHubContentReferenceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteHubContentReferenceResult>() {
+            @Override
+            public DeleteHubContentReferenceResult call() throws Exception {
+                DeleteHubContentReferenceResult result = null;
+
+                try {
+                    result = executeDeleteHubContentReference(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

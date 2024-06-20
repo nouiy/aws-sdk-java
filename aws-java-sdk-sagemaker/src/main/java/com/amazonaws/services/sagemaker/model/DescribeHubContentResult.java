@@ -93,6 +93,24 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
     private String hubContentDocument;
     /**
      * <p>
+     * The ARN of the public hub content.
+     * </p>
+     */
+    private String sageMakerPublicHubContentArn;
+    /**
+     * <p>
+     * The minimum version of the hub content.
+     * </p>
+     */
+    private String referenceMinVersion;
+    /**
+     * <p>
+     * The support status of the hub content.
+     * </p>
+     */
+    private String supportStatus;
+    /**
+     * <p>
      * The searchable keywords for the hub content.
      * </p>
      */
@@ -596,6 +614,145 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
+     * The ARN of the public hub content.
+     * </p>
+     * 
+     * @param sageMakerPublicHubContentArn
+     *        The ARN of the public hub content.
+     */
+
+    public void setSageMakerPublicHubContentArn(String sageMakerPublicHubContentArn) {
+        this.sageMakerPublicHubContentArn = sageMakerPublicHubContentArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public hub content.
+     * </p>
+     * 
+     * @return The ARN of the public hub content.
+     */
+
+    public String getSageMakerPublicHubContentArn() {
+        return this.sageMakerPublicHubContentArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public hub content.
+     * </p>
+     * 
+     * @param sageMakerPublicHubContentArn
+     *        The ARN of the public hub content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeHubContentResult withSageMakerPublicHubContentArn(String sageMakerPublicHubContentArn) {
+        setSageMakerPublicHubContentArn(sageMakerPublicHubContentArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The minimum version of the hub content.
+     * </p>
+     * 
+     * @param referenceMinVersion
+     *        The minimum version of the hub content.
+     */
+
+    public void setReferenceMinVersion(String referenceMinVersion) {
+        this.referenceMinVersion = referenceMinVersion;
+    }
+
+    /**
+     * <p>
+     * The minimum version of the hub content.
+     * </p>
+     * 
+     * @return The minimum version of the hub content.
+     */
+
+    public String getReferenceMinVersion() {
+        return this.referenceMinVersion;
+    }
+
+    /**
+     * <p>
+     * The minimum version of the hub content.
+     * </p>
+     * 
+     * @param referenceMinVersion
+     *        The minimum version of the hub content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeHubContentResult withReferenceMinVersion(String referenceMinVersion) {
+        setReferenceMinVersion(referenceMinVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The support status of the hub content.
+     * </p>
+     * 
+     * @param supportStatus
+     *        The support status of the hub content.
+     * @see HubContentSupportStatus
+     */
+
+    public void setSupportStatus(String supportStatus) {
+        this.supportStatus = supportStatus;
+    }
+
+    /**
+     * <p>
+     * The support status of the hub content.
+     * </p>
+     * 
+     * @return The support status of the hub content.
+     * @see HubContentSupportStatus
+     */
+
+    public String getSupportStatus() {
+        return this.supportStatus;
+    }
+
+    /**
+     * <p>
+     * The support status of the hub content.
+     * </p>
+     * 
+     * @param supportStatus
+     *        The support status of the hub content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HubContentSupportStatus
+     */
+
+    public DescribeHubContentResult withSupportStatus(String supportStatus) {
+        setSupportStatus(supportStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The support status of the hub content.
+     * </p>
+     * 
+     * @param supportStatus
+     *        The support status of the hub content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HubContentSupportStatus
+     */
+
+    public DescribeHubContentResult withSupportStatus(HubContentSupportStatus supportStatus) {
+        this.supportStatus = supportStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The searchable keywords for the hub content.
      * </p>
      * 
@@ -915,6 +1072,12 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
             sb.append("HubContentMarkdown: ").append(getHubContentMarkdown()).append(",");
         if (getHubContentDocument() != null)
             sb.append("HubContentDocument: ").append(getHubContentDocument()).append(",");
+        if (getSageMakerPublicHubContentArn() != null)
+            sb.append("SageMakerPublicHubContentArn: ").append(getSageMakerPublicHubContentArn()).append(",");
+        if (getReferenceMinVersion() != null)
+            sb.append("ReferenceMinVersion: ").append(getReferenceMinVersion()).append(",");
+        if (getSupportStatus() != null)
+            sb.append("SupportStatus: ").append(getSupportStatus()).append(",");
         if (getHubContentSearchKeywords() != null)
             sb.append("HubContentSearchKeywords: ").append(getHubContentSearchKeywords()).append(",");
         if (getHubContentDependencies() != null)
@@ -983,6 +1146,18 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getHubContentDocument() != null && other.getHubContentDocument().equals(this.getHubContentDocument()) == false)
             return false;
+        if (other.getSageMakerPublicHubContentArn() == null ^ this.getSageMakerPublicHubContentArn() == null)
+            return false;
+        if (other.getSageMakerPublicHubContentArn() != null && other.getSageMakerPublicHubContentArn().equals(this.getSageMakerPublicHubContentArn()) == false)
+            return false;
+        if (other.getReferenceMinVersion() == null ^ this.getReferenceMinVersion() == null)
+            return false;
+        if (other.getReferenceMinVersion() != null && other.getReferenceMinVersion().equals(this.getReferenceMinVersion()) == false)
+            return false;
+        if (other.getSupportStatus() == null ^ this.getSupportStatus() == null)
+            return false;
+        if (other.getSupportStatus() != null && other.getSupportStatus().equals(this.getSupportStatus()) == false)
+            return false;
         if (other.getHubContentSearchKeywords() == null ^ this.getHubContentSearchKeywords() == null)
             return false;
         if (other.getHubContentSearchKeywords() != null && other.getHubContentSearchKeywords().equals(this.getHubContentSearchKeywords()) == false)
@@ -1022,6 +1197,9 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
         hashCode = prime * hashCode + ((getHubContentDescription() == null) ? 0 : getHubContentDescription().hashCode());
         hashCode = prime * hashCode + ((getHubContentMarkdown() == null) ? 0 : getHubContentMarkdown().hashCode());
         hashCode = prime * hashCode + ((getHubContentDocument() == null) ? 0 : getHubContentDocument().hashCode());
+        hashCode = prime * hashCode + ((getSageMakerPublicHubContentArn() == null) ? 0 : getSageMakerPublicHubContentArn().hashCode());
+        hashCode = prime * hashCode + ((getReferenceMinVersion() == null) ? 0 : getReferenceMinVersion().hashCode());
+        hashCode = prime * hashCode + ((getSupportStatus() == null) ? 0 : getSupportStatus().hashCode());
         hashCode = prime * hashCode + ((getHubContentSearchKeywords() == null) ? 0 : getHubContentSearchKeywords().hashCode());
         hashCode = prime * hashCode + ((getHubContentDependencies() == null) ? 0 : getHubContentDependencies().hashCode());
         hashCode = prime * hashCode + ((getHubContentStatus() == null) ? 0 : getHubContentStatus().hashCode());

@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DestinationConfigurationMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> CHANNEL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channel").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<StructuredPojo> CHANNEL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channel").build();
     private static final MarshallingInfo<StructuredPojo> S3_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3").build();
 
@@ -50,8 +50,8 @@ public class DestinationConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(destinationConfiguration.getChannel(), CHANNEL_BINDING);
             protocolMarshaller.marshall(destinationConfiguration.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(destinationConfiguration.getChannel(), CHANNEL_BINDING);
             protocolMarshaller.marshall(destinationConfiguration.getS3(), S3_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

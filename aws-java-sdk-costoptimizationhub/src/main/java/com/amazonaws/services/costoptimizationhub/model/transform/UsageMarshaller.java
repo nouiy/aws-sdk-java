@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UsageMarshaller {
 
+    private static final MarshallingInfo<String> USAGETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("usageType").build();
+    private static final MarshallingInfo<Double> USAGEAMOUNT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("usageAmount").build();
     private static final MarshallingInfo<String> OPERATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("operation").build();
     private static final MarshallingInfo<String> PRODUCTCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("productCode").build();
     private static final MarshallingInfo<String> UNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("unit").build();
-    private static final MarshallingInfo<Double> USAGEAMOUNT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("usageAmount").build();
-    private static final MarshallingInfo<String> USAGETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("usageType").build();
 
     private static final UsageMarshaller instance = new UsageMarshaller();
 
@@ -54,11 +54,11 @@ public class UsageMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(usage.getUsageType(), USAGETYPE_BINDING);
+            protocolMarshaller.marshall(usage.getUsageAmount(), USAGEAMOUNT_BINDING);
             protocolMarshaller.marshall(usage.getOperation(), OPERATION_BINDING);
             protocolMarshaller.marshall(usage.getProductCode(), PRODUCTCODE_BINDING);
             protocolMarshaller.marshall(usage.getUnit(), UNIT_BINDING);
-            protocolMarshaller.marshall(usage.getUsageAmount(), USAGEAMOUNT_BINDING);
-            protocolMarshaller.marshall(usage.getUsageType(), USAGETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

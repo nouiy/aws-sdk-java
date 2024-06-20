@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum HubContentType {
 
     Model("Model"),
-    Notebook("Notebook");
+    Notebook("Notebook"),
+    ModelReference("ModelReference");
 
     private String value;
 

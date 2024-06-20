@@ -30,10 +30,22 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Compute Savings Plans recommendation details.
+     * The Lambda function recommendation details.
      * </p>
      */
-    private ComputeSavingsPlans computeSavingsPlans;
+    private LambdaFunction lambdaFunction;
+    /**
+     * <p>
+     * The ECS service recommendation details.
+     * </p>
+     */
+    private EcsService ecsService;
+    /**
+     * <p>
+     * The EC2 instance recommendation details.
+     * </p>
+     */
+    private Ec2Instance ec2Instance;
     /**
      * <p>
      * The Amazon Elastic Block Store volume recommendation details.
@@ -48,46 +60,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private Ec2AutoScalingGroup ec2AutoScalingGroup;
     /**
      * <p>
-     * The EC2 instance recommendation details.
-     * </p>
-     */
-    private Ec2Instance ec2Instance;
-    /**
-     * <p>
-     * The EC2 instance Savings Plans recommendation details.
-     * </p>
-     */
-    private Ec2InstanceSavingsPlans ec2InstanceSavingsPlans;
-    /**
-     * <p>
      * The EC2 reserved instances recommendation details.
      * </p>
      */
     private Ec2ReservedInstances ec2ReservedInstances;
-    /**
-     * <p>
-     * The ECS service recommendation details.
-     * </p>
-     */
-    private EcsService ecsService;
-    /**
-     * <p>
-     * The ElastiCache reserved instances recommendation details.
-     * </p>
-     */
-    private ElastiCacheReservedInstances elastiCacheReservedInstances;
-    /**
-     * <p>
-     * The Lambda function recommendation details.
-     * </p>
-     */
-    private LambdaFunction lambdaFunction;
-    /**
-     * <p>
-     * The OpenSearch reserved instances recommendation details.
-     * </p>
-     */
-    private OpenSearchReservedInstances openSearchReservedInstances;
     /**
      * <p>
      * The RDS reserved instances recommendation details.
@@ -96,54 +72,170 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private RdsReservedInstances rdsReservedInstances;
     /**
      * <p>
+     * The ElastiCache reserved instances recommendation details.
+     * </p>
+     */
+    private ElastiCacheReservedInstances elastiCacheReservedInstances;
+    /**
+     * <p>
+     * The OpenSearch reserved instances recommendation details.
+     * </p>
+     */
+    private OpenSearchReservedInstances openSearchReservedInstances;
+    /**
+     * <p>
      * The Redshift reserved instances recommendation details.
      * </p>
      */
     private RedshiftReservedInstances redshiftReservedInstances;
     /**
      * <p>
+     * The EC2 instance Savings Plans recommendation details.
+     * </p>
+     */
+    private Ec2InstanceSavingsPlans ec2InstanceSavingsPlans;
+    /**
+     * <p>
+     * The Compute Savings Plans recommendation details.
+     * </p>
+     */
+    private ComputeSavingsPlans computeSavingsPlans;
+    /**
+     * <p>
      * The SageMaker Savings Plans recommendation details.
      * </p>
      */
     private SageMakerSavingsPlans sageMakerSavingsPlans;
+    /**
+     * <p>
+     * The DB instance recommendation details.
+     * </p>
+     */
+    private RdsDbInstance rdsDbInstance;
+    /**
+     * <p>
+     * The DB instance storage recommendation details.
+     * </p>
+     */
+    private RdsDbInstanceStorage rdsDbInstanceStorage;
 
     /**
      * <p>
-     * The Compute Savings Plans recommendation details.
+     * The Lambda function recommendation details.
      * </p>
      * 
-     * @param computeSavingsPlans
-     *        The Compute Savings Plans recommendation details.
+     * @param lambdaFunction
+     *        The Lambda function recommendation details.
      */
 
-    public void setComputeSavingsPlans(ComputeSavingsPlans computeSavingsPlans) {
-        this.computeSavingsPlans = computeSavingsPlans;
+    public void setLambdaFunction(LambdaFunction lambdaFunction) {
+        this.lambdaFunction = lambdaFunction;
     }
 
     /**
      * <p>
-     * The Compute Savings Plans recommendation details.
+     * The Lambda function recommendation details.
      * </p>
      * 
-     * @return The Compute Savings Plans recommendation details.
+     * @return The Lambda function recommendation details.
      */
 
-    public ComputeSavingsPlans getComputeSavingsPlans() {
-        return this.computeSavingsPlans;
+    public LambdaFunction getLambdaFunction() {
+        return this.lambdaFunction;
     }
 
     /**
      * <p>
-     * The Compute Savings Plans recommendation details.
+     * The Lambda function recommendation details.
      * </p>
      * 
-     * @param computeSavingsPlans
-     *        The Compute Savings Plans recommendation details.
+     * @param lambdaFunction
+     *        The Lambda function recommendation details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ResourceDetails withComputeSavingsPlans(ComputeSavingsPlans computeSavingsPlans) {
-        setComputeSavingsPlans(computeSavingsPlans);
+    public ResourceDetails withLambdaFunction(LambdaFunction lambdaFunction) {
+        setLambdaFunction(lambdaFunction);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ECS service recommendation details.
+     * </p>
+     * 
+     * @param ecsService
+     *        The ECS service recommendation details.
+     */
+
+    public void setEcsService(EcsService ecsService) {
+        this.ecsService = ecsService;
+    }
+
+    /**
+     * <p>
+     * The ECS service recommendation details.
+     * </p>
+     * 
+     * @return The ECS service recommendation details.
+     */
+
+    public EcsService getEcsService() {
+        return this.ecsService;
+    }
+
+    /**
+     * <p>
+     * The ECS service recommendation details.
+     * </p>
+     * 
+     * @param ecsService
+     *        The ECS service recommendation details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withEcsService(EcsService ecsService) {
+        setEcsService(ecsService);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The EC2 instance recommendation details.
+     * </p>
+     * 
+     * @param ec2Instance
+     *        The EC2 instance recommendation details.
+     */
+
+    public void setEc2Instance(Ec2Instance ec2Instance) {
+        this.ec2Instance = ec2Instance;
+    }
+
+    /**
+     * <p>
+     * The EC2 instance recommendation details.
+     * </p>
+     * 
+     * @return The EC2 instance recommendation details.
+     */
+
+    public Ec2Instance getEc2Instance() {
+        return this.ec2Instance;
+    }
+
+    /**
+     * <p>
+     * The EC2 instance recommendation details.
+     * </p>
+     * 
+     * @param ec2Instance
+     *        The EC2 instance recommendation details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withEc2Instance(Ec2Instance ec2Instance) {
+        setEc2Instance(ec2Instance);
         return this;
     }
 
@@ -229,86 +321,6 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The EC2 instance recommendation details.
-     * </p>
-     * 
-     * @param ec2Instance
-     *        The EC2 instance recommendation details.
-     */
-
-    public void setEc2Instance(Ec2Instance ec2Instance) {
-        this.ec2Instance = ec2Instance;
-    }
-
-    /**
-     * <p>
-     * The EC2 instance recommendation details.
-     * </p>
-     * 
-     * @return The EC2 instance recommendation details.
-     */
-
-    public Ec2Instance getEc2Instance() {
-        return this.ec2Instance;
-    }
-
-    /**
-     * <p>
-     * The EC2 instance recommendation details.
-     * </p>
-     * 
-     * @param ec2Instance
-     *        The EC2 instance recommendation details.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ResourceDetails withEc2Instance(Ec2Instance ec2Instance) {
-        setEc2Instance(ec2Instance);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The EC2 instance Savings Plans recommendation details.
-     * </p>
-     * 
-     * @param ec2InstanceSavingsPlans
-     *        The EC2 instance Savings Plans recommendation details.
-     */
-
-    public void setEc2InstanceSavingsPlans(Ec2InstanceSavingsPlans ec2InstanceSavingsPlans) {
-        this.ec2InstanceSavingsPlans = ec2InstanceSavingsPlans;
-    }
-
-    /**
-     * <p>
-     * The EC2 instance Savings Plans recommendation details.
-     * </p>
-     * 
-     * @return The EC2 instance Savings Plans recommendation details.
-     */
-
-    public Ec2InstanceSavingsPlans getEc2InstanceSavingsPlans() {
-        return this.ec2InstanceSavingsPlans;
-    }
-
-    /**
-     * <p>
-     * The EC2 instance Savings Plans recommendation details.
-     * </p>
-     * 
-     * @param ec2InstanceSavingsPlans
-     *        The EC2 instance Savings Plans recommendation details.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ResourceDetails withEc2InstanceSavingsPlans(Ec2InstanceSavingsPlans ec2InstanceSavingsPlans) {
-        setEc2InstanceSavingsPlans(ec2InstanceSavingsPlans);
-        return this;
-    }
-
-    /**
-     * <p>
      * The EC2 reserved instances recommendation details.
      * </p>
      * 
@@ -344,166 +356,6 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     public ResourceDetails withEc2ReservedInstances(Ec2ReservedInstances ec2ReservedInstances) {
         setEc2ReservedInstances(ec2ReservedInstances);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The ECS service recommendation details.
-     * </p>
-     * 
-     * @param ecsService
-     *        The ECS service recommendation details.
-     */
-
-    public void setEcsService(EcsService ecsService) {
-        this.ecsService = ecsService;
-    }
-
-    /**
-     * <p>
-     * The ECS service recommendation details.
-     * </p>
-     * 
-     * @return The ECS service recommendation details.
-     */
-
-    public EcsService getEcsService() {
-        return this.ecsService;
-    }
-
-    /**
-     * <p>
-     * The ECS service recommendation details.
-     * </p>
-     * 
-     * @param ecsService
-     *        The ECS service recommendation details.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ResourceDetails withEcsService(EcsService ecsService) {
-        setEcsService(ecsService);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The ElastiCache reserved instances recommendation details.
-     * </p>
-     * 
-     * @param elastiCacheReservedInstances
-     *        The ElastiCache reserved instances recommendation details.
-     */
-
-    public void setElastiCacheReservedInstances(ElastiCacheReservedInstances elastiCacheReservedInstances) {
-        this.elastiCacheReservedInstances = elastiCacheReservedInstances;
-    }
-
-    /**
-     * <p>
-     * The ElastiCache reserved instances recommendation details.
-     * </p>
-     * 
-     * @return The ElastiCache reserved instances recommendation details.
-     */
-
-    public ElastiCacheReservedInstances getElastiCacheReservedInstances() {
-        return this.elastiCacheReservedInstances;
-    }
-
-    /**
-     * <p>
-     * The ElastiCache reserved instances recommendation details.
-     * </p>
-     * 
-     * @param elastiCacheReservedInstances
-     *        The ElastiCache reserved instances recommendation details.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ResourceDetails withElastiCacheReservedInstances(ElastiCacheReservedInstances elastiCacheReservedInstances) {
-        setElastiCacheReservedInstances(elastiCacheReservedInstances);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Lambda function recommendation details.
-     * </p>
-     * 
-     * @param lambdaFunction
-     *        The Lambda function recommendation details.
-     */
-
-    public void setLambdaFunction(LambdaFunction lambdaFunction) {
-        this.lambdaFunction = lambdaFunction;
-    }
-
-    /**
-     * <p>
-     * The Lambda function recommendation details.
-     * </p>
-     * 
-     * @return The Lambda function recommendation details.
-     */
-
-    public LambdaFunction getLambdaFunction() {
-        return this.lambdaFunction;
-    }
-
-    /**
-     * <p>
-     * The Lambda function recommendation details.
-     * </p>
-     * 
-     * @param lambdaFunction
-     *        The Lambda function recommendation details.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ResourceDetails withLambdaFunction(LambdaFunction lambdaFunction) {
-        setLambdaFunction(lambdaFunction);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The OpenSearch reserved instances recommendation details.
-     * </p>
-     * 
-     * @param openSearchReservedInstances
-     *        The OpenSearch reserved instances recommendation details.
-     */
-
-    public void setOpenSearchReservedInstances(OpenSearchReservedInstances openSearchReservedInstances) {
-        this.openSearchReservedInstances = openSearchReservedInstances;
-    }
-
-    /**
-     * <p>
-     * The OpenSearch reserved instances recommendation details.
-     * </p>
-     * 
-     * @return The OpenSearch reserved instances recommendation details.
-     */
-
-    public OpenSearchReservedInstances getOpenSearchReservedInstances() {
-        return this.openSearchReservedInstances;
-    }
-
-    /**
-     * <p>
-     * The OpenSearch reserved instances recommendation details.
-     * </p>
-     * 
-     * @param openSearchReservedInstances
-     *        The OpenSearch reserved instances recommendation details.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ResourceDetails withOpenSearchReservedInstances(OpenSearchReservedInstances openSearchReservedInstances) {
-        setOpenSearchReservedInstances(openSearchReservedInstances);
         return this;
     }
 
@@ -549,6 +401,86 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * The ElastiCache reserved instances recommendation details.
+     * </p>
+     * 
+     * @param elastiCacheReservedInstances
+     *        The ElastiCache reserved instances recommendation details.
+     */
+
+    public void setElastiCacheReservedInstances(ElastiCacheReservedInstances elastiCacheReservedInstances) {
+        this.elastiCacheReservedInstances = elastiCacheReservedInstances;
+    }
+
+    /**
+     * <p>
+     * The ElastiCache reserved instances recommendation details.
+     * </p>
+     * 
+     * @return The ElastiCache reserved instances recommendation details.
+     */
+
+    public ElastiCacheReservedInstances getElastiCacheReservedInstances() {
+        return this.elastiCacheReservedInstances;
+    }
+
+    /**
+     * <p>
+     * The ElastiCache reserved instances recommendation details.
+     * </p>
+     * 
+     * @param elastiCacheReservedInstances
+     *        The ElastiCache reserved instances recommendation details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withElastiCacheReservedInstances(ElastiCacheReservedInstances elastiCacheReservedInstances) {
+        setElastiCacheReservedInstances(elastiCacheReservedInstances);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The OpenSearch reserved instances recommendation details.
+     * </p>
+     * 
+     * @param openSearchReservedInstances
+     *        The OpenSearch reserved instances recommendation details.
+     */
+
+    public void setOpenSearchReservedInstances(OpenSearchReservedInstances openSearchReservedInstances) {
+        this.openSearchReservedInstances = openSearchReservedInstances;
+    }
+
+    /**
+     * <p>
+     * The OpenSearch reserved instances recommendation details.
+     * </p>
+     * 
+     * @return The OpenSearch reserved instances recommendation details.
+     */
+
+    public OpenSearchReservedInstances getOpenSearchReservedInstances() {
+        return this.openSearchReservedInstances;
+    }
+
+    /**
+     * <p>
+     * The OpenSearch reserved instances recommendation details.
+     * </p>
+     * 
+     * @param openSearchReservedInstances
+     *        The OpenSearch reserved instances recommendation details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withOpenSearchReservedInstances(OpenSearchReservedInstances openSearchReservedInstances) {
+        setOpenSearchReservedInstances(openSearchReservedInstances);
+        return this;
+    }
+
+    /**
+     * <p>
      * The Redshift reserved instances recommendation details.
      * </p>
      * 
@@ -584,6 +516,86 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     public ResourceDetails withRedshiftReservedInstances(RedshiftReservedInstances redshiftReservedInstances) {
         setRedshiftReservedInstances(redshiftReservedInstances);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The EC2 instance Savings Plans recommendation details.
+     * </p>
+     * 
+     * @param ec2InstanceSavingsPlans
+     *        The EC2 instance Savings Plans recommendation details.
+     */
+
+    public void setEc2InstanceSavingsPlans(Ec2InstanceSavingsPlans ec2InstanceSavingsPlans) {
+        this.ec2InstanceSavingsPlans = ec2InstanceSavingsPlans;
+    }
+
+    /**
+     * <p>
+     * The EC2 instance Savings Plans recommendation details.
+     * </p>
+     * 
+     * @return The EC2 instance Savings Plans recommendation details.
+     */
+
+    public Ec2InstanceSavingsPlans getEc2InstanceSavingsPlans() {
+        return this.ec2InstanceSavingsPlans;
+    }
+
+    /**
+     * <p>
+     * The EC2 instance Savings Plans recommendation details.
+     * </p>
+     * 
+     * @param ec2InstanceSavingsPlans
+     *        The EC2 instance Savings Plans recommendation details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withEc2InstanceSavingsPlans(Ec2InstanceSavingsPlans ec2InstanceSavingsPlans) {
+        setEc2InstanceSavingsPlans(ec2InstanceSavingsPlans);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Compute Savings Plans recommendation details.
+     * </p>
+     * 
+     * @param computeSavingsPlans
+     *        The Compute Savings Plans recommendation details.
+     */
+
+    public void setComputeSavingsPlans(ComputeSavingsPlans computeSavingsPlans) {
+        this.computeSavingsPlans = computeSavingsPlans;
+    }
+
+    /**
+     * <p>
+     * The Compute Savings Plans recommendation details.
+     * </p>
+     * 
+     * @return The Compute Savings Plans recommendation details.
+     */
+
+    public ComputeSavingsPlans getComputeSavingsPlans() {
+        return this.computeSavingsPlans;
+    }
+
+    /**
+     * <p>
+     * The Compute Savings Plans recommendation details.
+     * </p>
+     * 
+     * @param computeSavingsPlans
+     *        The Compute Savings Plans recommendation details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withComputeSavingsPlans(ComputeSavingsPlans computeSavingsPlans) {
+        setComputeSavingsPlans(computeSavingsPlans);
         return this;
     }
 
@@ -628,6 +640,86 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The DB instance recommendation details.
+     * </p>
+     * 
+     * @param rdsDbInstance
+     *        The DB instance recommendation details.
+     */
+
+    public void setRdsDbInstance(RdsDbInstance rdsDbInstance) {
+        this.rdsDbInstance = rdsDbInstance;
+    }
+
+    /**
+     * <p>
+     * The DB instance recommendation details.
+     * </p>
+     * 
+     * @return The DB instance recommendation details.
+     */
+
+    public RdsDbInstance getRdsDbInstance() {
+        return this.rdsDbInstance;
+    }
+
+    /**
+     * <p>
+     * The DB instance recommendation details.
+     * </p>
+     * 
+     * @param rdsDbInstance
+     *        The DB instance recommendation details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withRdsDbInstance(RdsDbInstance rdsDbInstance) {
+        setRdsDbInstance(rdsDbInstance);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The DB instance storage recommendation details.
+     * </p>
+     * 
+     * @param rdsDbInstanceStorage
+     *        The DB instance storage recommendation details.
+     */
+
+    public void setRdsDbInstanceStorage(RdsDbInstanceStorage rdsDbInstanceStorage) {
+        this.rdsDbInstanceStorage = rdsDbInstanceStorage;
+    }
+
+    /**
+     * <p>
+     * The DB instance storage recommendation details.
+     * </p>
+     * 
+     * @return The DB instance storage recommendation details.
+     */
+
+    public RdsDbInstanceStorage getRdsDbInstanceStorage() {
+        return this.rdsDbInstanceStorage;
+    }
+
+    /**
+     * <p>
+     * The DB instance storage recommendation details.
+     * </p>
+     * 
+     * @param rdsDbInstanceStorage
+     *        The DB instance storage recommendation details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withRdsDbInstanceStorage(RdsDbInstanceStorage rdsDbInstanceStorage) {
+        setRdsDbInstanceStorage(rdsDbInstanceStorage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -639,32 +731,36 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getComputeSavingsPlans() != null)
-            sb.append("ComputeSavingsPlans: ").append(getComputeSavingsPlans()).append(",");
+        if (getLambdaFunction() != null)
+            sb.append("LambdaFunction: ").append(getLambdaFunction()).append(",");
+        if (getEcsService() != null)
+            sb.append("EcsService: ").append(getEcsService()).append(",");
+        if (getEc2Instance() != null)
+            sb.append("Ec2Instance: ").append(getEc2Instance()).append(",");
         if (getEbsVolume() != null)
             sb.append("EbsVolume: ").append(getEbsVolume()).append(",");
         if (getEc2AutoScalingGroup() != null)
             sb.append("Ec2AutoScalingGroup: ").append(getEc2AutoScalingGroup()).append(",");
-        if (getEc2Instance() != null)
-            sb.append("Ec2Instance: ").append(getEc2Instance()).append(",");
-        if (getEc2InstanceSavingsPlans() != null)
-            sb.append("Ec2InstanceSavingsPlans: ").append(getEc2InstanceSavingsPlans()).append(",");
         if (getEc2ReservedInstances() != null)
             sb.append("Ec2ReservedInstances: ").append(getEc2ReservedInstances()).append(",");
-        if (getEcsService() != null)
-            sb.append("EcsService: ").append(getEcsService()).append(",");
-        if (getElastiCacheReservedInstances() != null)
-            sb.append("ElastiCacheReservedInstances: ").append(getElastiCacheReservedInstances()).append(",");
-        if (getLambdaFunction() != null)
-            sb.append("LambdaFunction: ").append(getLambdaFunction()).append(",");
-        if (getOpenSearchReservedInstances() != null)
-            sb.append("OpenSearchReservedInstances: ").append(getOpenSearchReservedInstances()).append(",");
         if (getRdsReservedInstances() != null)
             sb.append("RdsReservedInstances: ").append(getRdsReservedInstances()).append(",");
+        if (getElastiCacheReservedInstances() != null)
+            sb.append("ElastiCacheReservedInstances: ").append(getElastiCacheReservedInstances()).append(",");
+        if (getOpenSearchReservedInstances() != null)
+            sb.append("OpenSearchReservedInstances: ").append(getOpenSearchReservedInstances()).append(",");
         if (getRedshiftReservedInstances() != null)
             sb.append("RedshiftReservedInstances: ").append(getRedshiftReservedInstances()).append(",");
+        if (getEc2InstanceSavingsPlans() != null)
+            sb.append("Ec2InstanceSavingsPlans: ").append(getEc2InstanceSavingsPlans()).append(",");
+        if (getComputeSavingsPlans() != null)
+            sb.append("ComputeSavingsPlans: ").append(getComputeSavingsPlans()).append(",");
         if (getSageMakerSavingsPlans() != null)
-            sb.append("SageMakerSavingsPlans: ").append(getSageMakerSavingsPlans());
+            sb.append("SageMakerSavingsPlans: ").append(getSageMakerSavingsPlans()).append(",");
+        if (getRdsDbInstance() != null)
+            sb.append("RdsDbInstance: ").append(getRdsDbInstance()).append(",");
+        if (getRdsDbInstanceStorage() != null)
+            sb.append("RdsDbInstanceStorage: ").append(getRdsDbInstanceStorage());
         sb.append("}");
         return sb.toString();
     }
@@ -679,9 +775,17 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (obj instanceof ResourceDetails == false)
             return false;
         ResourceDetails other = (ResourceDetails) obj;
-        if (other.getComputeSavingsPlans() == null ^ this.getComputeSavingsPlans() == null)
+        if (other.getLambdaFunction() == null ^ this.getLambdaFunction() == null)
             return false;
-        if (other.getComputeSavingsPlans() != null && other.getComputeSavingsPlans().equals(this.getComputeSavingsPlans()) == false)
+        if (other.getLambdaFunction() != null && other.getLambdaFunction().equals(this.getLambdaFunction()) == false)
+            return false;
+        if (other.getEcsService() == null ^ this.getEcsService() == null)
+            return false;
+        if (other.getEcsService() != null && other.getEcsService().equals(this.getEcsService()) == false)
+            return false;
+        if (other.getEc2Instance() == null ^ this.getEc2Instance() == null)
+            return false;
+        if (other.getEc2Instance() != null && other.getEc2Instance().equals(this.getEc2Instance()) == false)
             return false;
         if (other.getEbsVolume() == null ^ this.getEbsVolume() == null)
             return false;
@@ -691,45 +795,45 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getEc2AutoScalingGroup() != null && other.getEc2AutoScalingGroup().equals(this.getEc2AutoScalingGroup()) == false)
             return false;
-        if (other.getEc2Instance() == null ^ this.getEc2Instance() == null)
-            return false;
-        if (other.getEc2Instance() != null && other.getEc2Instance().equals(this.getEc2Instance()) == false)
-            return false;
-        if (other.getEc2InstanceSavingsPlans() == null ^ this.getEc2InstanceSavingsPlans() == null)
-            return false;
-        if (other.getEc2InstanceSavingsPlans() != null && other.getEc2InstanceSavingsPlans().equals(this.getEc2InstanceSavingsPlans()) == false)
-            return false;
         if (other.getEc2ReservedInstances() == null ^ this.getEc2ReservedInstances() == null)
             return false;
         if (other.getEc2ReservedInstances() != null && other.getEc2ReservedInstances().equals(this.getEc2ReservedInstances()) == false)
-            return false;
-        if (other.getEcsService() == null ^ this.getEcsService() == null)
-            return false;
-        if (other.getEcsService() != null && other.getEcsService().equals(this.getEcsService()) == false)
-            return false;
-        if (other.getElastiCacheReservedInstances() == null ^ this.getElastiCacheReservedInstances() == null)
-            return false;
-        if (other.getElastiCacheReservedInstances() != null && other.getElastiCacheReservedInstances().equals(this.getElastiCacheReservedInstances()) == false)
-            return false;
-        if (other.getLambdaFunction() == null ^ this.getLambdaFunction() == null)
-            return false;
-        if (other.getLambdaFunction() != null && other.getLambdaFunction().equals(this.getLambdaFunction()) == false)
-            return false;
-        if (other.getOpenSearchReservedInstances() == null ^ this.getOpenSearchReservedInstances() == null)
-            return false;
-        if (other.getOpenSearchReservedInstances() != null && other.getOpenSearchReservedInstances().equals(this.getOpenSearchReservedInstances()) == false)
             return false;
         if (other.getRdsReservedInstances() == null ^ this.getRdsReservedInstances() == null)
             return false;
         if (other.getRdsReservedInstances() != null && other.getRdsReservedInstances().equals(this.getRdsReservedInstances()) == false)
             return false;
+        if (other.getElastiCacheReservedInstances() == null ^ this.getElastiCacheReservedInstances() == null)
+            return false;
+        if (other.getElastiCacheReservedInstances() != null && other.getElastiCacheReservedInstances().equals(this.getElastiCacheReservedInstances()) == false)
+            return false;
+        if (other.getOpenSearchReservedInstances() == null ^ this.getOpenSearchReservedInstances() == null)
+            return false;
+        if (other.getOpenSearchReservedInstances() != null && other.getOpenSearchReservedInstances().equals(this.getOpenSearchReservedInstances()) == false)
+            return false;
         if (other.getRedshiftReservedInstances() == null ^ this.getRedshiftReservedInstances() == null)
             return false;
         if (other.getRedshiftReservedInstances() != null && other.getRedshiftReservedInstances().equals(this.getRedshiftReservedInstances()) == false)
             return false;
+        if (other.getEc2InstanceSavingsPlans() == null ^ this.getEc2InstanceSavingsPlans() == null)
+            return false;
+        if (other.getEc2InstanceSavingsPlans() != null && other.getEc2InstanceSavingsPlans().equals(this.getEc2InstanceSavingsPlans()) == false)
+            return false;
+        if (other.getComputeSavingsPlans() == null ^ this.getComputeSavingsPlans() == null)
+            return false;
+        if (other.getComputeSavingsPlans() != null && other.getComputeSavingsPlans().equals(this.getComputeSavingsPlans()) == false)
+            return false;
         if (other.getSageMakerSavingsPlans() == null ^ this.getSageMakerSavingsPlans() == null)
             return false;
         if (other.getSageMakerSavingsPlans() != null && other.getSageMakerSavingsPlans().equals(this.getSageMakerSavingsPlans()) == false)
+            return false;
+        if (other.getRdsDbInstance() == null ^ this.getRdsDbInstance() == null)
+            return false;
+        if (other.getRdsDbInstance() != null && other.getRdsDbInstance().equals(this.getRdsDbInstance()) == false)
+            return false;
+        if (other.getRdsDbInstanceStorage() == null ^ this.getRdsDbInstanceStorage() == null)
+            return false;
+        if (other.getRdsDbInstanceStorage() != null && other.getRdsDbInstanceStorage().equals(this.getRdsDbInstanceStorage()) == false)
             return false;
         return true;
     }
@@ -739,19 +843,21 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getComputeSavingsPlans() == null) ? 0 : getComputeSavingsPlans().hashCode());
+        hashCode = prime * hashCode + ((getLambdaFunction() == null) ? 0 : getLambdaFunction().hashCode());
+        hashCode = prime * hashCode + ((getEcsService() == null) ? 0 : getEcsService().hashCode());
+        hashCode = prime * hashCode + ((getEc2Instance() == null) ? 0 : getEc2Instance().hashCode());
         hashCode = prime * hashCode + ((getEbsVolume() == null) ? 0 : getEbsVolume().hashCode());
         hashCode = prime * hashCode + ((getEc2AutoScalingGroup() == null) ? 0 : getEc2AutoScalingGroup().hashCode());
-        hashCode = prime * hashCode + ((getEc2Instance() == null) ? 0 : getEc2Instance().hashCode());
-        hashCode = prime * hashCode + ((getEc2InstanceSavingsPlans() == null) ? 0 : getEc2InstanceSavingsPlans().hashCode());
         hashCode = prime * hashCode + ((getEc2ReservedInstances() == null) ? 0 : getEc2ReservedInstances().hashCode());
-        hashCode = prime * hashCode + ((getEcsService() == null) ? 0 : getEcsService().hashCode());
-        hashCode = prime * hashCode + ((getElastiCacheReservedInstances() == null) ? 0 : getElastiCacheReservedInstances().hashCode());
-        hashCode = prime * hashCode + ((getLambdaFunction() == null) ? 0 : getLambdaFunction().hashCode());
-        hashCode = prime * hashCode + ((getOpenSearchReservedInstances() == null) ? 0 : getOpenSearchReservedInstances().hashCode());
         hashCode = prime * hashCode + ((getRdsReservedInstances() == null) ? 0 : getRdsReservedInstances().hashCode());
+        hashCode = prime * hashCode + ((getElastiCacheReservedInstances() == null) ? 0 : getElastiCacheReservedInstances().hashCode());
+        hashCode = prime * hashCode + ((getOpenSearchReservedInstances() == null) ? 0 : getOpenSearchReservedInstances().hashCode());
         hashCode = prime * hashCode + ((getRedshiftReservedInstances() == null) ? 0 : getRedshiftReservedInstances().hashCode());
+        hashCode = prime * hashCode + ((getEc2InstanceSavingsPlans() == null) ? 0 : getEc2InstanceSavingsPlans().hashCode());
+        hashCode = prime * hashCode + ((getComputeSavingsPlans() == null) ? 0 : getComputeSavingsPlans().hashCode());
         hashCode = prime * hashCode + ((getSageMakerSavingsPlans() == null) ? 0 : getSageMakerSavingsPlans().hashCode());
+        hashCode = prime * hashCode + ((getRdsDbInstance() == null) ? 0 : getRdsDbInstance().hashCode());
+        hashCode = prime * hashCode + ((getRdsDbInstanceStorage() == null) ? 0 : getRdsDbInstanceStorage().hashCode());
         return hashCode;
     }
 

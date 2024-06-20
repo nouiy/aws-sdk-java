@@ -48,6 +48,14 @@ public class UsageJsonUnmarshaller implements Unmarshaller<Usage, JsonUnmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("usageType", targetDepth)) {
+                    context.nextToken();
+                    usage.setUsageType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("usageAmount", targetDepth)) {
+                    context.nextToken();
+                    usage.setUsageAmount(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
                 if (context.testExpression("operation", targetDepth)) {
                     context.nextToken();
                     usage.setOperation(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,14 +67,6 @@ public class UsageJsonUnmarshaller implements Unmarshaller<Usage, JsonUnmarshall
                 if (context.testExpression("unit", targetDepth)) {
                     context.nextToken();
                     usage.setUnit(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("usageAmount", targetDepth)) {
-                    context.nextToken();
-                    usage.setUsageAmount(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
-                if (context.testExpression("usageType", targetDepth)) {
-                    context.nextToken();
-                    usage.setUsageType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

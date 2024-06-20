@@ -31,6 +31,8 @@ public class UpdateStageRequestMarshaller {
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<StructuredPojo> AUTOPARTICIPANTRECORDINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoParticipantRecordingConfiguration").build();
 
     private static final UpdateStageRequestMarshaller instance = new UpdateStageRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class UpdateStageRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateStageRequest.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(updateStageRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(updateStageRequest.getAutoParticipantRecordingConfiguration(), AUTOPARTICIPANTRECORDINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

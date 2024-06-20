@@ -30,10 +30,10 @@ public class EbsVolumeConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Elastic Block Store attachment state.
+     * The disk storage of the Amazon Elastic Block Store volume.
      * </p>
      */
-    private String attachmentState;
+    private StorageConfiguration storage;
     /**
      * <p>
      * The Amazon Elastic Block Store performance configuration.
@@ -42,48 +42,48 @@ public class EbsVolumeConfiguration implements Serializable, Cloneable, Structur
     private BlockStoragePerformanceConfiguration performance;
     /**
      * <p>
+     * The Amazon Elastic Block Store attachment state.
+     * </p>
+     */
+    private String attachmentState;
+
+    /**
+     * <p>
      * The disk storage of the Amazon Elastic Block Store volume.
      * </p>
-     */
-    private StorageConfiguration storage;
-
-    /**
-     * <p>
-     * The Amazon Elastic Block Store attachment state.
-     * </p>
      * 
-     * @param attachmentState
-     *        The Amazon Elastic Block Store attachment state.
+     * @param storage
+     *        The disk storage of the Amazon Elastic Block Store volume.
      */
 
-    public void setAttachmentState(String attachmentState) {
-        this.attachmentState = attachmentState;
+    public void setStorage(StorageConfiguration storage) {
+        this.storage = storage;
     }
 
     /**
      * <p>
-     * The Amazon Elastic Block Store attachment state.
+     * The disk storage of the Amazon Elastic Block Store volume.
      * </p>
      * 
-     * @return The Amazon Elastic Block Store attachment state.
+     * @return The disk storage of the Amazon Elastic Block Store volume.
      */
 
-    public String getAttachmentState() {
-        return this.attachmentState;
+    public StorageConfiguration getStorage() {
+        return this.storage;
     }
 
     /**
      * <p>
-     * The Amazon Elastic Block Store attachment state.
+     * The disk storage of the Amazon Elastic Block Store volume.
      * </p>
      * 
-     * @param attachmentState
-     *        The Amazon Elastic Block Store attachment state.
+     * @param storage
+     *        The disk storage of the Amazon Elastic Block Store volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public EbsVolumeConfiguration withAttachmentState(String attachmentState) {
-        setAttachmentState(attachmentState);
+    public EbsVolumeConfiguration withStorage(StorageConfiguration storage) {
+        setStorage(storage);
         return this;
     }
 
@@ -129,41 +129,41 @@ public class EbsVolumeConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The disk storage of the Amazon Elastic Block Store volume.
+     * The Amazon Elastic Block Store attachment state.
      * </p>
      * 
-     * @param storage
-     *        The disk storage of the Amazon Elastic Block Store volume.
+     * @param attachmentState
+     *        The Amazon Elastic Block Store attachment state.
      */
 
-    public void setStorage(StorageConfiguration storage) {
-        this.storage = storage;
+    public void setAttachmentState(String attachmentState) {
+        this.attachmentState = attachmentState;
     }
 
     /**
      * <p>
-     * The disk storage of the Amazon Elastic Block Store volume.
+     * The Amazon Elastic Block Store attachment state.
      * </p>
      * 
-     * @return The disk storage of the Amazon Elastic Block Store volume.
+     * @return The Amazon Elastic Block Store attachment state.
      */
 
-    public StorageConfiguration getStorage() {
-        return this.storage;
+    public String getAttachmentState() {
+        return this.attachmentState;
     }
 
     /**
      * <p>
-     * The disk storage of the Amazon Elastic Block Store volume.
+     * The Amazon Elastic Block Store attachment state.
      * </p>
      * 
-     * @param storage
-     *        The disk storage of the Amazon Elastic Block Store volume.
+     * @param attachmentState
+     *        The Amazon Elastic Block Store attachment state.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public EbsVolumeConfiguration withStorage(StorageConfiguration storage) {
-        setStorage(storage);
+    public EbsVolumeConfiguration withAttachmentState(String attachmentState) {
+        setAttachmentState(attachmentState);
         return this;
     }
 
@@ -179,12 +179,12 @@ public class EbsVolumeConfiguration implements Serializable, Cloneable, Structur
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAttachmentState() != null)
-            sb.append("AttachmentState: ").append(getAttachmentState()).append(",");
+        if (getStorage() != null)
+            sb.append("Storage: ").append(getStorage()).append(",");
         if (getPerformance() != null)
             sb.append("Performance: ").append(getPerformance()).append(",");
-        if (getStorage() != null)
-            sb.append("Storage: ").append(getStorage());
+        if (getAttachmentState() != null)
+            sb.append("AttachmentState: ").append(getAttachmentState());
         sb.append("}");
         return sb.toString();
     }
@@ -199,17 +199,17 @@ public class EbsVolumeConfiguration implements Serializable, Cloneable, Structur
         if (obj instanceof EbsVolumeConfiguration == false)
             return false;
         EbsVolumeConfiguration other = (EbsVolumeConfiguration) obj;
-        if (other.getAttachmentState() == null ^ this.getAttachmentState() == null)
+        if (other.getStorage() == null ^ this.getStorage() == null)
             return false;
-        if (other.getAttachmentState() != null && other.getAttachmentState().equals(this.getAttachmentState()) == false)
+        if (other.getStorage() != null && other.getStorage().equals(this.getStorage()) == false)
             return false;
         if (other.getPerformance() == null ^ this.getPerformance() == null)
             return false;
         if (other.getPerformance() != null && other.getPerformance().equals(this.getPerformance()) == false)
             return false;
-        if (other.getStorage() == null ^ this.getStorage() == null)
+        if (other.getAttachmentState() == null ^ this.getAttachmentState() == null)
             return false;
-        if (other.getStorage() != null && other.getStorage().equals(this.getStorage()) == false)
+        if (other.getAttachmentState() != null && other.getAttachmentState().equals(this.getAttachmentState()) == false)
             return false;
         return true;
     }
@@ -219,9 +219,9 @@ public class EbsVolumeConfiguration implements Serializable, Cloneable, Structur
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAttachmentState() == null) ? 0 : getAttachmentState().hashCode());
-        hashCode = prime * hashCode + ((getPerformance() == null) ? 0 : getPerformance().hashCode());
         hashCode = prime * hashCode + ((getStorage() == null) ? 0 : getStorage().hashCode());
+        hashCode = prime * hashCode + ((getPerformance() == null) ? 0 : getPerformance().hashCode());
+        hashCode = prime * hashCode + ((getAttachmentState() == null) ? 0 : getAttachmentState().hashCode());
         return hashCode;
     }
 

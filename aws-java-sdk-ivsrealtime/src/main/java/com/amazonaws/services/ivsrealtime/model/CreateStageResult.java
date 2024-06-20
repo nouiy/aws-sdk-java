@@ -25,16 +25,56 @@ public class CreateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Participant tokens attached to the stage. These correspond to the <code>participants</code> in the request.
-     * </p>
-     */
-    private java.util.List<ParticipantToken> participantTokens;
-    /**
-     * <p>
      * The stage that was created.
      * </p>
      */
     private Stage stage;
+    /**
+     * <p>
+     * Participant tokens attached to the stage. These correspond to the <code>participants</code> in the request.
+     * </p>
+     */
+    private java.util.List<ParticipantToken> participantTokens;
+
+    /**
+     * <p>
+     * The stage that was created.
+     * </p>
+     * 
+     * @param stage
+     *        The stage that was created.
+     */
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    /**
+     * <p>
+     * The stage that was created.
+     * </p>
+     * 
+     * @return The stage that was created.
+     */
+
+    public Stage getStage() {
+        return this.stage;
+    }
+
+    /**
+     * <p>
+     * The stage that was created.
+     * </p>
+     * 
+     * @param stage
+     *        The stage that was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateStageResult withStage(Stage stage) {
+        setStage(stage);
+        return this;
+    }
 
     /**
      * <p>
@@ -111,46 +151,6 @@ public class CreateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * <p>
-     * The stage that was created.
-     * </p>
-     * 
-     * @param stage
-     *        The stage that was created.
-     */
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
-
-    /**
-     * <p>
-     * The stage that was created.
-     * </p>
-     * 
-     * @return The stage that was created.
-     */
-
-    public Stage getStage() {
-        return this.stage;
-    }
-
-    /**
-     * <p>
-     * The stage that was created.
-     * </p>
-     * 
-     * @param stage
-     *        The stage that was created.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateStageResult withStage(Stage stage) {
-        setStage(stage);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -162,10 +162,10 @@ public class CreateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getParticipantTokens() != null)
-            sb.append("ParticipantTokens: ").append(getParticipantTokens()).append(",");
         if (getStage() != null)
-            sb.append("Stage: ").append(getStage());
+            sb.append("Stage: ").append(getStage()).append(",");
+        if (getParticipantTokens() != null)
+            sb.append("ParticipantTokens: ").append(getParticipantTokens());
         sb.append("}");
         return sb.toString();
     }
@@ -180,13 +180,13 @@ public class CreateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (obj instanceof CreateStageResult == false)
             return false;
         CreateStageResult other = (CreateStageResult) obj;
-        if (other.getParticipantTokens() == null ^ this.getParticipantTokens() == null)
-            return false;
-        if (other.getParticipantTokens() != null && other.getParticipantTokens().equals(this.getParticipantTokens()) == false)
-            return false;
         if (other.getStage() == null ^ this.getStage() == null)
             return false;
         if (other.getStage() != null && other.getStage().equals(this.getStage()) == false)
+            return false;
+        if (other.getParticipantTokens() == null ^ this.getParticipantTokens() == null)
+            return false;
+        if (other.getParticipantTokens() != null && other.getParticipantTokens().equals(this.getParticipantTokens()) == false)
             return false;
         return true;
     }
@@ -196,8 +196,8 @@ public class CreateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getParticipantTokens() == null) ? 0 : getParticipantTokens().hashCode());
         hashCode = prime * hashCode + ((getStage() == null) ? 0 : getStage().hashCode());
+        hashCode = prime * hashCode + ((getParticipantTokens() == null) ? 0 : getParticipantTokens().hashCode());
         return hashCode;
     }
 

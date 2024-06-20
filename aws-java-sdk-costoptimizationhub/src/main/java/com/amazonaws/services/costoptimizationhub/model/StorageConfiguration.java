@@ -30,56 +30,16 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The storage volume.
-     * </p>
-     */
-    private Double sizeInGb;
-    /**
-     * <p>
      * The storage type.
      * </p>
      */
     private String type;
-
     /**
      * <p>
      * The storage volume.
      * </p>
-     * 
-     * @param sizeInGb
-     *        The storage volume.
      */
-
-    public void setSizeInGb(Double sizeInGb) {
-        this.sizeInGb = sizeInGb;
-    }
-
-    /**
-     * <p>
-     * The storage volume.
-     * </p>
-     * 
-     * @return The storage volume.
-     */
-
-    public Double getSizeInGb() {
-        return this.sizeInGb;
-    }
-
-    /**
-     * <p>
-     * The storage volume.
-     * </p>
-     * 
-     * @param sizeInGb
-     *        The storage volume.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StorageConfiguration withSizeInGb(Double sizeInGb) {
-        setSizeInGb(sizeInGb);
-        return this;
-    }
+    private Double sizeInGb;
 
     /**
      * <p>
@@ -122,6 +82,46 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The storage volume.
+     * </p>
+     * 
+     * @param sizeInGb
+     *        The storage volume.
+     */
+
+    public void setSizeInGb(Double sizeInGb) {
+        this.sizeInGb = sizeInGb;
+    }
+
+    /**
+     * <p>
+     * The storage volume.
+     * </p>
+     * 
+     * @return The storage volume.
+     */
+
+    public Double getSizeInGb() {
+        return this.sizeInGb;
+    }
+
+    /**
+     * <p>
+     * The storage volume.
+     * </p>
+     * 
+     * @param sizeInGb
+     *        The storage volume.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageConfiguration withSizeInGb(Double sizeInGb) {
+        setSizeInGb(sizeInGb);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,10 +133,10 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getSizeInGb() != null)
-            sb.append("SizeInGb: ").append(getSizeInGb()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getSizeInGb() != null)
+            sb.append("SizeInGb: ").append(getSizeInGb());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         if (obj instanceof StorageConfiguration == false)
             return false;
         StorageConfiguration other = (StorageConfiguration) obj;
-        if (other.getSizeInGb() == null ^ this.getSizeInGb() == null)
-            return false;
-        if (other.getSizeInGb() != null && other.getSizeInGb().equals(this.getSizeInGb()) == false)
-            return false;
         if (other.getType() == null ^ this.getType() == null)
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
+        if (other.getSizeInGb() == null ^ this.getSizeInGb() == null)
+            return false;
+        if (other.getSizeInGb() != null && other.getSizeInGb().equals(this.getSizeInGb()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getSizeInGb() == null) ? 0 : getSizeInGb().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getSizeInGb() == null) ? 0 : getSizeInGb().hashCode());
         return hashCode;
     }
 

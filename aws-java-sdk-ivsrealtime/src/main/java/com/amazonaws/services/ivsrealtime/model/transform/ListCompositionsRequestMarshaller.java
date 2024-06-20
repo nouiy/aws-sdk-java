@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListCompositionsRequestMarshaller {
 
-    private static final MarshallingInfo<String> FILTERBYENCODERCONFIGURATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterByEncoderConfigurationArn").build();
     private static final MarshallingInfo<String> FILTERBYSTAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterByStageArn").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> FILTERBYENCODERCONFIGURATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterByEncoderConfigurationArn").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
 
     private static final ListCompositionsRequestMarshaller instance = new ListCompositionsRequestMarshaller();
 
@@ -52,10 +52,10 @@ public class ListCompositionsRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listCompositionsRequest.getFilterByEncoderConfigurationArn(), FILTERBYENCODERCONFIGURATIONARN_BINDING);
             protocolMarshaller.marshall(listCompositionsRequest.getFilterByStageArn(), FILTERBYSTAGEARN_BINDING);
-            protocolMarshaller.marshall(listCompositionsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listCompositionsRequest.getFilterByEncoderConfigurationArn(), FILTERBYENCODERCONFIGURATIONARN_BINDING);
             protocolMarshaller.marshall(listCompositionsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listCompositionsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

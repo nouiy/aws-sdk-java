@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ResourcePricingMarshaller {
 
-    private static final MarshallingInfo<Double> ESTIMATEDCOSTAFTERDISCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedCostAfterDiscounts").build();
     private static final MarshallingInfo<Double> ESTIMATEDCOSTBEFOREDISCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedCostBeforeDiscounts").build();
-    private static final MarshallingInfo<StructuredPojo> ESTIMATEDDISCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedDiscounts").build();
     private static final MarshallingInfo<Double> ESTIMATEDNETUNUSEDAMORTIZEDCOMMITMENTS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedNetUnusedAmortizedCommitments").build();
+    private static final MarshallingInfo<StructuredPojo> ESTIMATEDDISCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedDiscounts").build();
+    private static final MarshallingInfo<Double> ESTIMATEDCOSTAFTERDISCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedCostAfterDiscounts").build();
 
     private static final ResourcePricingMarshaller instance = new ResourcePricingMarshaller();
 
@@ -52,10 +52,10 @@ public class ResourcePricingMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(resourcePricing.getEstimatedCostAfterDiscounts(), ESTIMATEDCOSTAFTERDISCOUNTS_BINDING);
             protocolMarshaller.marshall(resourcePricing.getEstimatedCostBeforeDiscounts(), ESTIMATEDCOSTBEFOREDISCOUNTS_BINDING);
-            protocolMarshaller.marshall(resourcePricing.getEstimatedDiscounts(), ESTIMATEDDISCOUNTS_BINDING);
             protocolMarshaller.marshall(resourcePricing.getEstimatedNetUnusedAmortizedCommitments(), ESTIMATEDNETUNUSEDAMORTIZEDCOMMITMENTS_BINDING);
+            protocolMarshaller.marshall(resourcePricing.getEstimatedDiscounts(), ESTIMATEDDISCOUNTS_BINDING);
+            protocolMarshaller.marshall(resourcePricing.getEstimatedCostAfterDiscounts(), ESTIMATEDCOSTAFTERDISCOUNTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

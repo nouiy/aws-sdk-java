@@ -48,17 +48,17 @@ public class EstimatedDiscountsJsonUnmarshaller implements Unmarshaller<Estimate
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("otherDiscount", targetDepth)) {
+                if (context.testExpression("savingsPlansDiscount", targetDepth)) {
                     context.nextToken();
-                    estimatedDiscounts.setOtherDiscount(context.getUnmarshaller(Double.class).unmarshall(context));
+                    estimatedDiscounts.setSavingsPlansDiscount(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
                 if (context.testExpression("reservedInstancesDiscount", targetDepth)) {
                     context.nextToken();
                     estimatedDiscounts.setReservedInstancesDiscount(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("savingsPlansDiscount", targetDepth)) {
+                if (context.testExpression("otherDiscount", targetDepth)) {
                     context.nextToken();
-                    estimatedDiscounts.setSavingsPlansDiscount(context.getUnmarshaller(Double.class).unmarshall(context));
+                    estimatedDiscounts.setOtherDiscount(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

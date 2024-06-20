@@ -48,21 +48,21 @@ public class DestinationSummaryJsonUnmarshaller implements Unmarshaller<Destinat
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("endTime", targetDepth)) {
-                    context.nextToken();
-                    destinationSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     destinationSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("state", targetDepth)) {
+                    context.nextToken();
+                    destinationSummary.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("startTime", targetDepth)) {
                     context.nextToken();
                     destinationSummary.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("state", targetDepth)) {
+                if (context.testExpression("endTime", targetDepth)) {
                     context.nextToken();
-                    destinationSummary.setState(context.getUnmarshaller(String.class).unmarshall(context));
+                    destinationSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

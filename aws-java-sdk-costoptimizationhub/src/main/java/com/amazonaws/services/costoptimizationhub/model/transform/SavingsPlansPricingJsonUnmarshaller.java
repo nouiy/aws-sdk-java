@@ -48,21 +48,21 @@ public class SavingsPlansPricingJsonUnmarshaller implements Unmarshaller<Savings
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("estimatedMonthlyCommitment", targetDepth)) {
-                    context.nextToken();
-                    savingsPlansPricing.setEstimatedMonthlyCommitment(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
-                if (context.testExpression("estimatedOnDemandCost", targetDepth)) {
-                    context.nextToken();
-                    savingsPlansPricing.setEstimatedOnDemandCost(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
                 if (context.testExpression("monthlySavingsPlansEligibleCost", targetDepth)) {
                     context.nextToken();
                     savingsPlansPricing.setMonthlySavingsPlansEligibleCost(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
+                if (context.testExpression("estimatedMonthlyCommitment", targetDepth)) {
+                    context.nextToken();
+                    savingsPlansPricing.setEstimatedMonthlyCommitment(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
                 if (context.testExpression("savingsPercentage", targetDepth)) {
                     context.nextToken();
                     savingsPlansPricing.setSavingsPercentage(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("estimatedOnDemandCost", targetDepth)) {
+                    context.nextToken();
+                    savingsPlansPricing.setEstimatedOnDemandCost(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

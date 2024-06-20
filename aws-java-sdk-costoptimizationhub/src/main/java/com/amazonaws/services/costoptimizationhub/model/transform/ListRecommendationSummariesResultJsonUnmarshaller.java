@@ -48,23 +48,23 @@ public class ListRecommendationSummariesResultJsonUnmarshaller implements Unmars
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("currencyCode", targetDepth)) {
-                    context.nextToken();
-                    listRecommendationSummariesResult.setCurrencyCode(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("estimatedTotalDedupedSavings", targetDepth)) {
                     context.nextToken();
                     listRecommendationSummariesResult.setEstimatedTotalDedupedSavings(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
-                if (context.testExpression("groupBy", targetDepth)) {
-                    context.nextToken();
-                    listRecommendationSummariesResult.setGroupBy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("items", targetDepth)) {
                     context.nextToken();
                     listRecommendationSummariesResult.setItems(new ListUnmarshaller<RecommendationSummary>(RecommendationSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("groupBy", targetDepth)) {
+                    context.nextToken();
+                    listRecommendationSummariesResult.setGroupBy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("currencyCode", targetDepth)) {
+                    context.nextToken();
+                    listRecommendationSummariesResult.setCurrencyCode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("nextToken", targetDepth)) {
                     context.nextToken();

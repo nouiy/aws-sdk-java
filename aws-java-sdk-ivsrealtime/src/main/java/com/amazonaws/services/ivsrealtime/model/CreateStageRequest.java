@@ -46,6 +46,12 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * Auto participant recording configuration object attached to the stage.
+     * </p>
+     */
+    private AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration;
 
     /**
      * <p>
@@ -244,6 +250,46 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Auto participant recording configuration object attached to the stage.
+     * </p>
+     * 
+     * @param autoParticipantRecordingConfiguration
+     *        Auto participant recording configuration object attached to the stage.
+     */
+
+    public void setAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
+        this.autoParticipantRecordingConfiguration = autoParticipantRecordingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Auto participant recording configuration object attached to the stage.
+     * </p>
+     * 
+     * @return Auto participant recording configuration object attached to the stage.
+     */
+
+    public AutoParticipantRecordingConfiguration getAutoParticipantRecordingConfiguration() {
+        return this.autoParticipantRecordingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Auto participant recording configuration object attached to the stage.
+     * </p>
+     * 
+     * @param autoParticipantRecordingConfiguration
+     *        Auto participant recording configuration object attached to the stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateStageRequest withAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
+        setAutoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -260,7 +306,9 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getParticipantTokenConfigurations() != null)
             sb.append("ParticipantTokenConfigurations: ").append(getParticipantTokenConfigurations()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getAutoParticipantRecordingConfiguration() != null)
+            sb.append("AutoParticipantRecordingConfiguration: ").append(getAutoParticipantRecordingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -288,6 +336,11 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getAutoParticipantRecordingConfiguration() == null ^ this.getAutoParticipantRecordingConfiguration() == null)
+            return false;
+        if (other.getAutoParticipantRecordingConfiguration() != null
+                && other.getAutoParticipantRecordingConfiguration().equals(this.getAutoParticipantRecordingConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -299,6 +352,7 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getParticipantTokenConfigurations() == null) ? 0 : getParticipantTokenConfigurations().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getAutoParticipantRecordingConfiguration() == null) ? 0 : getAutoParticipantRecordingConfiguration().hashCode());
         return hashCode;
     }
 

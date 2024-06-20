@@ -52,6 +52,14 @@ public class Ec2InstanceSavingsPlansConfigurationJsonUnmarshaller implements Unm
                     context.nextToken();
                     ec2InstanceSavingsPlansConfiguration.setAccountScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("term", targetDepth)) {
+                    context.nextToken();
+                    ec2InstanceSavingsPlansConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("paymentOption", targetDepth)) {
+                    context.nextToken();
+                    ec2InstanceSavingsPlansConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("hourlyCommitment", targetDepth)) {
                     context.nextToken();
                     ec2InstanceSavingsPlansConfiguration.setHourlyCommitment(context.getUnmarshaller(String.class).unmarshall(context));
@@ -60,17 +68,9 @@ public class Ec2InstanceSavingsPlansConfigurationJsonUnmarshaller implements Unm
                     context.nextToken();
                     ec2InstanceSavingsPlansConfiguration.setInstanceFamily(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("paymentOption", targetDepth)) {
-                    context.nextToken();
-                    ec2InstanceSavingsPlansConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("savingsPlansRegion", targetDepth)) {
                     context.nextToken();
                     ec2InstanceSavingsPlansConfiguration.setSavingsPlansRegion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("term", targetDepth)) {
-                    context.nextToken();
-                    ec2InstanceSavingsPlansConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

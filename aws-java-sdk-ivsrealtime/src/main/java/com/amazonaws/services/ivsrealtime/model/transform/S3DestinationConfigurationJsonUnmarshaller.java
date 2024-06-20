@@ -48,6 +48,10 @@ public class S3DestinationConfigurationJsonUnmarshaller implements Unmarshaller<
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("storageConfigurationArn", targetDepth)) {
+                    context.nextToken();
+                    s3DestinationConfiguration.setStorageConfigurationArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("encoderConfigurationArns", targetDepth)) {
                     context.nextToken();
                     s3DestinationConfiguration.setEncoderConfigurationArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
@@ -57,10 +61,6 @@ public class S3DestinationConfigurationJsonUnmarshaller implements Unmarshaller<
                 if (context.testExpression("recordingConfiguration", targetDepth)) {
                     context.nextToken();
                     s3DestinationConfiguration.setRecordingConfiguration(RecordingConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("storageConfigurationArn", targetDepth)) {
-                    context.nextToken();
-                    s3DestinationConfiguration.setStorageConfigurationArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

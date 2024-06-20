@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListStageSessionsRequestMarshaller {
 
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
-    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("nextToken").build();
     private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("stageArn").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
 
     private static final ListStageSessionsRequestMarshaller instance = new ListStageSessionsRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class ListStageSessionsRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listStageSessionsRequest.getMaxResults(), MAXRESULTS_BINDING);
-            protocolMarshaller.marshall(listStageSessionsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listStageSessionsRequest.getStageArn(), STAGEARN_BINDING);
+            protocolMarshaller.marshall(listStageSessionsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listStageSessionsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

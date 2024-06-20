@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DestinationSummaryMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
-    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
 
     private static final DestinationSummaryMarshaller instance = new DestinationSummaryMarshaller();
 
@@ -52,10 +52,10 @@ public class DestinationSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(destinationSummary.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(destinationSummary.getId(), ID_BINDING);
-            protocolMarshaller.marshall(destinationSummary.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(destinationSummary.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(destinationSummary.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(destinationSummary.getEndTime(), ENDTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

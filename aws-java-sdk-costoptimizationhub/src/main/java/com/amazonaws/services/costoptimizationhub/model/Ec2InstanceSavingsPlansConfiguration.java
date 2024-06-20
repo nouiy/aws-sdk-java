@@ -37,6 +37,18 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
     private String accountScope;
     /**
      * <p>
+     * The Savings Plans recommendation term in years.
+     * </p>
+     */
+    private String term;
+    /**
+     * <p>
+     * The payment option for the commitment.
+     * </p>
+     */
+    private String paymentOption;
+    /**
+     * <p>
      * The hourly commitment for the Savings Plans type.
      * </p>
      */
@@ -49,22 +61,10 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
     private String instanceFamily;
     /**
      * <p>
-     * The payment option for the commitment.
-     * </p>
-     */
-    private String paymentOption;
-    /**
-     * <p>
      * The Amazon Web Services Region of the commitment.
      * </p>
      */
     private String savingsPlansRegion;
-    /**
-     * <p>
-     * The Savings Plans recommendation term in years.
-     * </p>
-     */
-    private String term;
 
     /**
      * <p>
@@ -103,6 +103,86 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
 
     public Ec2InstanceSavingsPlansConfiguration withAccountScope(String accountScope) {
         setAccountScope(accountScope);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Savings Plans recommendation term in years.
+     * </p>
+     * 
+     * @param term
+     *        The Savings Plans recommendation term in years.
+     */
+
+    public void setTerm(String term) {
+        this.term = term;
+    }
+
+    /**
+     * <p>
+     * The Savings Plans recommendation term in years.
+     * </p>
+     * 
+     * @return The Savings Plans recommendation term in years.
+     */
+
+    public String getTerm() {
+        return this.term;
+    }
+
+    /**
+     * <p>
+     * The Savings Plans recommendation term in years.
+     * </p>
+     * 
+     * @param term
+     *        The Savings Plans recommendation term in years.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Ec2InstanceSavingsPlansConfiguration withTerm(String term) {
+        setTerm(term);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The payment option for the commitment.
+     * </p>
+     * 
+     * @param paymentOption
+     *        The payment option for the commitment.
+     */
+
+    public void setPaymentOption(String paymentOption) {
+        this.paymentOption = paymentOption;
+    }
+
+    /**
+     * <p>
+     * The payment option for the commitment.
+     * </p>
+     * 
+     * @return The payment option for the commitment.
+     */
+
+    public String getPaymentOption() {
+        return this.paymentOption;
+    }
+
+    /**
+     * <p>
+     * The payment option for the commitment.
+     * </p>
+     * 
+     * @param paymentOption
+     *        The payment option for the commitment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Ec2InstanceSavingsPlansConfiguration withPaymentOption(String paymentOption) {
+        setPaymentOption(paymentOption);
         return this;
     }
 
@@ -188,46 +268,6 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The payment option for the commitment.
-     * </p>
-     * 
-     * @param paymentOption
-     *        The payment option for the commitment.
-     */
-
-    public void setPaymentOption(String paymentOption) {
-        this.paymentOption = paymentOption;
-    }
-
-    /**
-     * <p>
-     * The payment option for the commitment.
-     * </p>
-     * 
-     * @return The payment option for the commitment.
-     */
-
-    public String getPaymentOption() {
-        return this.paymentOption;
-    }
-
-    /**
-     * <p>
-     * The payment option for the commitment.
-     * </p>
-     * 
-     * @param paymentOption
-     *        The payment option for the commitment.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Ec2InstanceSavingsPlansConfiguration withPaymentOption(String paymentOption) {
-        setPaymentOption(paymentOption);
-        return this;
-    }
-
-    /**
-     * <p>
      * The Amazon Web Services Region of the commitment.
      * </p>
      * 
@@ -267,46 +307,6 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
     }
 
     /**
-     * <p>
-     * The Savings Plans recommendation term in years.
-     * </p>
-     * 
-     * @param term
-     *        The Savings Plans recommendation term in years.
-     */
-
-    public void setTerm(String term) {
-        this.term = term;
-    }
-
-    /**
-     * <p>
-     * The Savings Plans recommendation term in years.
-     * </p>
-     * 
-     * @return The Savings Plans recommendation term in years.
-     */
-
-    public String getTerm() {
-        return this.term;
-    }
-
-    /**
-     * <p>
-     * The Savings Plans recommendation term in years.
-     * </p>
-     * 
-     * @param term
-     *        The Savings Plans recommendation term in years.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Ec2InstanceSavingsPlansConfiguration withTerm(String term) {
-        setTerm(term);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -320,16 +320,16 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
         sb.append("{");
         if (getAccountScope() != null)
             sb.append("AccountScope: ").append(getAccountScope()).append(",");
+        if (getTerm() != null)
+            sb.append("Term: ").append(getTerm()).append(",");
+        if (getPaymentOption() != null)
+            sb.append("PaymentOption: ").append(getPaymentOption()).append(",");
         if (getHourlyCommitment() != null)
             sb.append("HourlyCommitment: ").append(getHourlyCommitment()).append(",");
         if (getInstanceFamily() != null)
             sb.append("InstanceFamily: ").append(getInstanceFamily()).append(",");
-        if (getPaymentOption() != null)
-            sb.append("PaymentOption: ").append(getPaymentOption()).append(",");
         if (getSavingsPlansRegion() != null)
-            sb.append("SavingsPlansRegion: ").append(getSavingsPlansRegion()).append(",");
-        if (getTerm() != null)
-            sb.append("Term: ").append(getTerm());
+            sb.append("SavingsPlansRegion: ").append(getSavingsPlansRegion());
         sb.append("}");
         return sb.toString();
     }
@@ -348,6 +348,14 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
             return false;
         if (other.getAccountScope() != null && other.getAccountScope().equals(this.getAccountScope()) == false)
             return false;
+        if (other.getTerm() == null ^ this.getTerm() == null)
+            return false;
+        if (other.getTerm() != null && other.getTerm().equals(this.getTerm()) == false)
+            return false;
+        if (other.getPaymentOption() == null ^ this.getPaymentOption() == null)
+            return false;
+        if (other.getPaymentOption() != null && other.getPaymentOption().equals(this.getPaymentOption()) == false)
+            return false;
         if (other.getHourlyCommitment() == null ^ this.getHourlyCommitment() == null)
             return false;
         if (other.getHourlyCommitment() != null && other.getHourlyCommitment().equals(this.getHourlyCommitment()) == false)
@@ -356,17 +364,9 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
             return false;
         if (other.getInstanceFamily() != null && other.getInstanceFamily().equals(this.getInstanceFamily()) == false)
             return false;
-        if (other.getPaymentOption() == null ^ this.getPaymentOption() == null)
-            return false;
-        if (other.getPaymentOption() != null && other.getPaymentOption().equals(this.getPaymentOption()) == false)
-            return false;
         if (other.getSavingsPlansRegion() == null ^ this.getSavingsPlansRegion() == null)
             return false;
         if (other.getSavingsPlansRegion() != null && other.getSavingsPlansRegion().equals(this.getSavingsPlansRegion()) == false)
-            return false;
-        if (other.getTerm() == null ^ this.getTerm() == null)
-            return false;
-        if (other.getTerm() != null && other.getTerm().equals(this.getTerm()) == false)
             return false;
         return true;
     }
@@ -377,11 +377,11 @@ public class Ec2InstanceSavingsPlansConfiguration implements Serializable, Clone
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAccountScope() == null) ? 0 : getAccountScope().hashCode());
+        hashCode = prime * hashCode + ((getTerm() == null) ? 0 : getTerm().hashCode());
+        hashCode = prime * hashCode + ((getPaymentOption() == null) ? 0 : getPaymentOption().hashCode());
         hashCode = prime * hashCode + ((getHourlyCommitment() == null) ? 0 : getHourlyCommitment().hashCode());
         hashCode = prime * hashCode + ((getInstanceFamily() == null) ? 0 : getInstanceFamily().hashCode());
-        hashCode = prime * hashCode + ((getPaymentOption() == null) ? 0 : getPaymentOption().hashCode());
         hashCode = prime * hashCode + ((getSavingsPlansRegion() == null) ? 0 : getSavingsPlansRegion().hashCode());
-        hashCode = prime * hashCode + ((getTerm() == null) ? 0 : getTerm().hashCode());
         return hashCode;
     }
 

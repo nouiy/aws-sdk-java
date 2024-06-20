@@ -148,6 +148,12 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private ModelAccessConfig modelAccessConfig;
+    /**
+     * <p>
+     * Configuration information for hub access.
+     * </p>
+     */
+    private InferenceHubAccessConfig hubAccessConfig;
 
     /**
      * <p>
@@ -1113,6 +1119,46 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Configuration information for hub access.
+     * </p>
+     * 
+     * @param hubAccessConfig
+     *        Configuration information for hub access.
+     */
+
+    public void setHubAccessConfig(InferenceHubAccessConfig hubAccessConfig) {
+        this.hubAccessConfig = hubAccessConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration information for hub access.
+     * </p>
+     * 
+     * @return Configuration information for hub access.
+     */
+
+    public InferenceHubAccessConfig getHubAccessConfig() {
+        return this.hubAccessConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration information for hub access.
+     * </p>
+     * 
+     * @param hubAccessConfig
+     *        Configuration information for hub access.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3ModelDataSource withHubAccessConfig(InferenceHubAccessConfig hubAccessConfig) {
+        setHubAccessConfig(hubAccessConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1131,7 +1177,9 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
         if (getCompressionType() != null)
             sb.append("CompressionType: ").append(getCompressionType()).append(",");
         if (getModelAccessConfig() != null)
-            sb.append("ModelAccessConfig: ").append(getModelAccessConfig());
+            sb.append("ModelAccessConfig: ").append(getModelAccessConfig()).append(",");
+        if (getHubAccessConfig() != null)
+            sb.append("HubAccessConfig: ").append(getHubAccessConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1162,6 +1210,10 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getModelAccessConfig() != null && other.getModelAccessConfig().equals(this.getModelAccessConfig()) == false)
             return false;
+        if (other.getHubAccessConfig() == null ^ this.getHubAccessConfig() == null)
+            return false;
+        if (other.getHubAccessConfig() != null && other.getHubAccessConfig().equals(this.getHubAccessConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1174,6 +1226,7 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getS3DataType() == null) ? 0 : getS3DataType().hashCode());
         hashCode = prime * hashCode + ((getCompressionType() == null) ? 0 : getCompressionType().hashCode());
         hashCode = prime * hashCode + ((getModelAccessConfig() == null) ? 0 : getModelAccessConfig().hashCode());
+        hashCode = prime * hashCode + ((getHubAccessConfig() == null) ? 0 : getHubAccessConfig().hashCode());
         return hashCode;
     }
 

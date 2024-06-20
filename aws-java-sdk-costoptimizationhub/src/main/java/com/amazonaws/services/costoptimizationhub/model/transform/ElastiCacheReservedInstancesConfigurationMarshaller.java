@@ -29,30 +29,30 @@ public class ElastiCacheReservedInstancesConfigurationMarshaller {
 
     private static final MarshallingInfo<String> ACCOUNTSCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accountScope").build();
-    private static final MarshallingInfo<String> CURRENTGENERATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentGeneration").build();
+    private static final MarshallingInfo<String> SERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("service").build();
+    private static final MarshallingInfo<String> NORMALIZEDUNITSTOPURCHASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("normalizedUnitsToPurchase").build();
+    private static final MarshallingInfo<String> TERM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("term").build();
+    private static final MarshallingInfo<String> PAYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentOption").build();
+    private static final MarshallingInfo<String> NUMBEROFINSTANCESTOPURCHASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfInstancesToPurchase").build();
     private static final MarshallingInfo<String> INSTANCEFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceFamily").build();
     private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceType").build();
-    private static final MarshallingInfo<String> MONTHLYRECURRINGCOST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("monthlyRecurringCost").build();
-    private static final MarshallingInfo<String> NORMALIZEDUNITSTOPURCHASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("normalizedUnitsToPurchase").build();
-    private static final MarshallingInfo<String> NUMBEROFINSTANCESTOPURCHASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfInstancesToPurchase").build();
-    private static final MarshallingInfo<String> PAYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentOption").build();
     private static final MarshallingInfo<String> RESERVEDINSTANCESREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("reservedInstancesRegion").build();
-    private static final MarshallingInfo<String> SERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("service").build();
+    private static final MarshallingInfo<String> CURRENTGENERATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentGeneration").build();
     private static final MarshallingInfo<Boolean> SIZEFLEXELIGIBLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sizeFlexEligible").build();
-    private static final MarshallingInfo<String> TERM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("term").build();
     private static final MarshallingInfo<String> UPFRONTCOST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("upfrontCost").build();
+    private static final MarshallingInfo<String> MONTHLYRECURRINGCOST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("monthlyRecurringCost").build();
 
     private static final ElastiCacheReservedInstancesConfigurationMarshaller instance = new ElastiCacheReservedInstancesConfigurationMarshaller();
 
@@ -71,18 +71,18 @@ public class ElastiCacheReservedInstancesConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getAccountScope(), ACCOUNTSCOPE_BINDING);
-            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getCurrentGeneration(), CURRENTGENERATION_BINDING);
+            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getService(), SERVICE_BINDING);
+            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getNormalizedUnitsToPurchase(), NORMALIZEDUNITSTOPURCHASE_BINDING);
+            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getTerm(), TERM_BINDING);
+            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getPaymentOption(), PAYMENTOPTION_BINDING);
+            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getNumberOfInstancesToPurchase(), NUMBEROFINSTANCESTOPURCHASE_BINDING);
             protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getInstanceFamily(), INSTANCEFAMILY_BINDING);
             protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getInstanceType(), INSTANCETYPE_BINDING);
-            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getMonthlyRecurringCost(), MONTHLYRECURRINGCOST_BINDING);
-            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getNormalizedUnitsToPurchase(), NORMALIZEDUNITSTOPURCHASE_BINDING);
-            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getNumberOfInstancesToPurchase(), NUMBEROFINSTANCESTOPURCHASE_BINDING);
-            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getPaymentOption(), PAYMENTOPTION_BINDING);
             protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getReservedInstancesRegion(), RESERVEDINSTANCESREGION_BINDING);
-            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getService(), SERVICE_BINDING);
+            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getCurrentGeneration(), CURRENTGENERATION_BINDING);
             protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getSizeFlexEligible(), SIZEFLEXELIGIBLE_BINDING);
-            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getTerm(), TERM_BINDING);
             protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getUpfrontCost(), UPFRONTCOST_BINDING);
+            protocolMarshaller.marshall(elastiCacheReservedInstancesConfiguration.getMonthlyRecurringCost(), MONTHLYRECURRINGCOST_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

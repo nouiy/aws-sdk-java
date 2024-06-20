@@ -48,21 +48,21 @@ public class ComputeConfigurationJsonUnmarshaller implements Unmarshaller<Comput
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("architecture", targetDepth)) {
+                if (context.testExpression("vCpu", targetDepth)) {
                     context.nextToken();
-                    computeConfiguration.setArchitecture(context.getUnmarshaller(String.class).unmarshall(context));
+                    computeConfiguration.setVCpu(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
                 if (context.testExpression("memorySizeInMB", targetDepth)) {
                     context.nextToken();
                     computeConfiguration.setMemorySizeInMB(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("architecture", targetDepth)) {
+                    context.nextToken();
+                    computeConfiguration.setArchitecture(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("platform", targetDepth)) {
                     context.nextToken();
                     computeConfiguration.setPlatform(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("vCpu", targetDepth)) {
-                    context.nextToken();
-                    computeConfiguration.setVCpu(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

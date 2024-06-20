@@ -30,6 +30,12 @@ public class S3DestinationConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
+     * ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
+     * </p>
+     */
+    private String storageConfigurationArn;
+    /**
+     * <p>
      * ARNs of the <a>EncoderConfiguration</a> resource. The encoder configuration and stage resources must be in the
      * same AWS account and region.
      * </p>
@@ -42,12 +48,46 @@ public class S3DestinationConfiguration implements Serializable, Cloneable, Stru
      * </p>
      */
     private RecordingConfiguration recordingConfiguration;
+
     /**
      * <p>
      * ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
      * </p>
+     * 
+     * @param storageConfigurationArn
+     *        ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
      */
-    private String storageConfigurationArn;
+
+    public void setStorageConfigurationArn(String storageConfigurationArn) {
+        this.storageConfigurationArn = storageConfigurationArn;
+    }
+
+    /**
+     * <p>
+     * ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
+     * </p>
+     * 
+     * @return ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
+     */
+
+    public String getStorageConfigurationArn() {
+        return this.storageConfigurationArn;
+    }
+
+    /**
+     * <p>
+     * ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
+     * </p>
+     * 
+     * @param storageConfigurationArn
+     *        ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3DestinationConfiguration withStorageConfigurationArn(String storageConfigurationArn) {
+        setStorageConfigurationArn(storageConfigurationArn);
+        return this;
+    }
 
     /**
      * <p>
@@ -174,46 +214,6 @@ public class S3DestinationConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p>
-     * ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
-     * </p>
-     * 
-     * @param storageConfigurationArn
-     *        ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
-     */
-
-    public void setStorageConfigurationArn(String storageConfigurationArn) {
-        this.storageConfigurationArn = storageConfigurationArn;
-    }
-
-    /**
-     * <p>
-     * ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
-     * </p>
-     * 
-     * @return ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
-     */
-
-    public String getStorageConfigurationArn() {
-        return this.storageConfigurationArn;
-    }
-
-    /**
-     * <p>
-     * ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
-     * </p>
-     * 
-     * @param storageConfigurationArn
-     *        ARN of the <a>StorageConfiguration</a> where recorded videos will be stored.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public S3DestinationConfiguration withStorageConfigurationArn(String storageConfigurationArn) {
-        setStorageConfigurationArn(storageConfigurationArn);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -225,12 +225,12 @@ public class S3DestinationConfiguration implements Serializable, Cloneable, Stru
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getStorageConfigurationArn() != null)
+            sb.append("StorageConfigurationArn: ").append(getStorageConfigurationArn()).append(",");
         if (getEncoderConfigurationArns() != null)
             sb.append("EncoderConfigurationArns: ").append(getEncoderConfigurationArns()).append(",");
         if (getRecordingConfiguration() != null)
-            sb.append("RecordingConfiguration: ").append(getRecordingConfiguration()).append(",");
-        if (getStorageConfigurationArn() != null)
-            sb.append("StorageConfigurationArn: ").append(getStorageConfigurationArn());
+            sb.append("RecordingConfiguration: ").append(getRecordingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -245,6 +245,10 @@ public class S3DestinationConfiguration implements Serializable, Cloneable, Stru
         if (obj instanceof S3DestinationConfiguration == false)
             return false;
         S3DestinationConfiguration other = (S3DestinationConfiguration) obj;
+        if (other.getStorageConfigurationArn() == null ^ this.getStorageConfigurationArn() == null)
+            return false;
+        if (other.getStorageConfigurationArn() != null && other.getStorageConfigurationArn().equals(this.getStorageConfigurationArn()) == false)
+            return false;
         if (other.getEncoderConfigurationArns() == null ^ this.getEncoderConfigurationArns() == null)
             return false;
         if (other.getEncoderConfigurationArns() != null && other.getEncoderConfigurationArns().equals(this.getEncoderConfigurationArns()) == false)
@@ -252,10 +256,6 @@ public class S3DestinationConfiguration implements Serializable, Cloneable, Stru
         if (other.getRecordingConfiguration() == null ^ this.getRecordingConfiguration() == null)
             return false;
         if (other.getRecordingConfiguration() != null && other.getRecordingConfiguration().equals(this.getRecordingConfiguration()) == false)
-            return false;
-        if (other.getStorageConfigurationArn() == null ^ this.getStorageConfigurationArn() == null)
-            return false;
-        if (other.getStorageConfigurationArn() != null && other.getStorageConfigurationArn().equals(this.getStorageConfigurationArn()) == false)
             return false;
         return true;
     }
@@ -265,9 +265,9 @@ public class S3DestinationConfiguration implements Serializable, Cloneable, Stru
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getStorageConfigurationArn() == null) ? 0 : getStorageConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getEncoderConfigurationArns() == null) ? 0 : getEncoderConfigurationArns().hashCode());
         hashCode = prime * hashCode + ((getRecordingConfiguration() == null) ? 0 : getRecordingConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getStorageConfigurationArn() == null) ? 0 : getStorageConfigurationArn().hashCode());
         return hashCode;
     }
 

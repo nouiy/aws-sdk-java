@@ -39,10 +39,10 @@ public class ComputeSavingsPlansConfiguration implements Serializable, Cloneable
     private String accountScope;
     /**
      * <p>
-     * The hourly commitment for the Savings Plans type.
+     * The Savings Plans recommendation term in years.
      * </p>
      */
-    private String hourlyCommitment;
+    private String term;
     /**
      * <p>
      * The payment option for the commitment.
@@ -51,10 +51,10 @@ public class ComputeSavingsPlansConfiguration implements Serializable, Cloneable
     private String paymentOption;
     /**
      * <p>
-     * The Savings Plans recommendation term in years.
+     * The hourly commitment for the Savings Plans type.
      * </p>
      */
-    private String term;
+    private String hourlyCommitment;
 
     /**
      * <p>
@@ -110,41 +110,41 @@ public class ComputeSavingsPlansConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The hourly commitment for the Savings Plans type.
+     * The Savings Plans recommendation term in years.
      * </p>
      * 
-     * @param hourlyCommitment
-     *        The hourly commitment for the Savings Plans type.
+     * @param term
+     *        The Savings Plans recommendation term in years.
      */
 
-    public void setHourlyCommitment(String hourlyCommitment) {
-        this.hourlyCommitment = hourlyCommitment;
+    public void setTerm(String term) {
+        this.term = term;
     }
 
     /**
      * <p>
-     * The hourly commitment for the Savings Plans type.
+     * The Savings Plans recommendation term in years.
      * </p>
      * 
-     * @return The hourly commitment for the Savings Plans type.
+     * @return The Savings Plans recommendation term in years.
      */
 
-    public String getHourlyCommitment() {
-        return this.hourlyCommitment;
+    public String getTerm() {
+        return this.term;
     }
 
     /**
      * <p>
-     * The hourly commitment for the Savings Plans type.
+     * The Savings Plans recommendation term in years.
      * </p>
      * 
-     * @param hourlyCommitment
-     *        The hourly commitment for the Savings Plans type.
+     * @param term
+     *        The Savings Plans recommendation term in years.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ComputeSavingsPlansConfiguration withHourlyCommitment(String hourlyCommitment) {
-        setHourlyCommitment(hourlyCommitment);
+    public ComputeSavingsPlansConfiguration withTerm(String term) {
+        setTerm(term);
         return this;
     }
 
@@ -190,41 +190,41 @@ public class ComputeSavingsPlansConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The Savings Plans recommendation term in years.
+     * The hourly commitment for the Savings Plans type.
      * </p>
      * 
-     * @param term
-     *        The Savings Plans recommendation term in years.
+     * @param hourlyCommitment
+     *        The hourly commitment for the Savings Plans type.
      */
 
-    public void setTerm(String term) {
-        this.term = term;
+    public void setHourlyCommitment(String hourlyCommitment) {
+        this.hourlyCommitment = hourlyCommitment;
     }
 
     /**
      * <p>
-     * The Savings Plans recommendation term in years.
+     * The hourly commitment for the Savings Plans type.
      * </p>
      * 
-     * @return The Savings Plans recommendation term in years.
+     * @return The hourly commitment for the Savings Plans type.
      */
 
-    public String getTerm() {
-        return this.term;
+    public String getHourlyCommitment() {
+        return this.hourlyCommitment;
     }
 
     /**
      * <p>
-     * The Savings Plans recommendation term in years.
+     * The hourly commitment for the Savings Plans type.
      * </p>
      * 
-     * @param term
-     *        The Savings Plans recommendation term in years.
+     * @param hourlyCommitment
+     *        The hourly commitment for the Savings Plans type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ComputeSavingsPlansConfiguration withTerm(String term) {
-        setTerm(term);
+    public ComputeSavingsPlansConfiguration withHourlyCommitment(String hourlyCommitment) {
+        setHourlyCommitment(hourlyCommitment);
         return this;
     }
 
@@ -242,12 +242,12 @@ public class ComputeSavingsPlansConfiguration implements Serializable, Cloneable
         sb.append("{");
         if (getAccountScope() != null)
             sb.append("AccountScope: ").append(getAccountScope()).append(",");
-        if (getHourlyCommitment() != null)
-            sb.append("HourlyCommitment: ").append(getHourlyCommitment()).append(",");
+        if (getTerm() != null)
+            sb.append("Term: ").append(getTerm()).append(",");
         if (getPaymentOption() != null)
             sb.append("PaymentOption: ").append(getPaymentOption()).append(",");
-        if (getTerm() != null)
-            sb.append("Term: ").append(getTerm());
+        if (getHourlyCommitment() != null)
+            sb.append("HourlyCommitment: ").append(getHourlyCommitment());
         sb.append("}");
         return sb.toString();
     }
@@ -266,17 +266,17 @@ public class ComputeSavingsPlansConfiguration implements Serializable, Cloneable
             return false;
         if (other.getAccountScope() != null && other.getAccountScope().equals(this.getAccountScope()) == false)
             return false;
-        if (other.getHourlyCommitment() == null ^ this.getHourlyCommitment() == null)
+        if (other.getTerm() == null ^ this.getTerm() == null)
             return false;
-        if (other.getHourlyCommitment() != null && other.getHourlyCommitment().equals(this.getHourlyCommitment()) == false)
+        if (other.getTerm() != null && other.getTerm().equals(this.getTerm()) == false)
             return false;
         if (other.getPaymentOption() == null ^ this.getPaymentOption() == null)
             return false;
         if (other.getPaymentOption() != null && other.getPaymentOption().equals(this.getPaymentOption()) == false)
             return false;
-        if (other.getTerm() == null ^ this.getTerm() == null)
+        if (other.getHourlyCommitment() == null ^ this.getHourlyCommitment() == null)
             return false;
-        if (other.getTerm() != null && other.getTerm().equals(this.getTerm()) == false)
+        if (other.getHourlyCommitment() != null && other.getHourlyCommitment().equals(this.getHourlyCommitment()) == false)
             return false;
         return true;
     }
@@ -287,9 +287,9 @@ public class ComputeSavingsPlansConfiguration implements Serializable, Cloneable
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAccountScope() == null) ? 0 : getAccountScope().hashCode());
-        hashCode = prime * hashCode + ((getHourlyCommitment() == null) ? 0 : getHourlyCommitment().hashCode());
-        hashCode = prime * hashCode + ((getPaymentOption() == null) ? 0 : getPaymentOption().hashCode());
         hashCode = prime * hashCode + ((getTerm() == null) ? 0 : getTerm().hashCode());
+        hashCode = prime * hashCode + ((getPaymentOption() == null) ? 0 : getPaymentOption().hashCode());
+        hashCode = prime * hashCode + ((getHourlyCommitment() == null) ? 0 : getHourlyCommitment().hashCode());
         return hashCode;
     }
 

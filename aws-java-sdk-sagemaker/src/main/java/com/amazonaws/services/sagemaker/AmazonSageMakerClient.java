@@ -2103,11 +2103,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Create a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param createHubRequest
      * @return Result of the CreateHub operation returned by the service.
@@ -2154,6 +2149,70 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateHubResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateHubResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create a hub content reference in order to add a model in the JumpStart public hub to a private hub.
+     * </p>
+     * 
+     * @param createHubContentReferenceRequest
+     * @return Result of the CreateHubContentReference operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateHubContentReference
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateHubContentReference"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateHubContentReferenceResult createHubContentReference(CreateHubContentReferenceRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateHubContentReference(request);
+    }
+
+    @SdkInternalApi
+    final CreateHubContentReferenceResult executeCreateHubContentReference(CreateHubContentReferenceRequest createHubContentReferenceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createHubContentReferenceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateHubContentReferenceRequest> request = null;
+        Response<CreateHubContentReferenceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateHubContentReferenceRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createHubContentReferenceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateHubContentReference");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateHubContentReferenceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateHubContentReferenceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -5936,11 +5995,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Delete a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param deleteHubRequest
      * @return Result of the DeleteHub operation returned by the service.
@@ -6000,11 +6054,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Delete the contents of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param deleteHubContentRequest
      * @return Result of the DeleteHubContent operation returned by the service.
@@ -6050,6 +6099,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteHubContentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteHubContentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete a hub content reference in order to remove a model from a private hub.
+     * </p>
+     * 
+     * @param deleteHubContentReferenceRequest
+     * @return Result of the DeleteHubContentReference operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DeleteHubContentReference
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteHubContentReference"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteHubContentReferenceResult deleteHubContentReference(DeleteHubContentReferenceRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteHubContentReference(request);
+    }
+
+    @SdkInternalApi
+    final DeleteHubContentReferenceResult executeDeleteHubContentReference(DeleteHubContentReferenceRequest deleteHubContentReferenceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteHubContentReferenceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteHubContentReferenceRequest> request = null;
+        Response<DeleteHubContentReferenceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteHubContentReferenceRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteHubContentReferenceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteHubContentReference");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteHubContentReferenceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteHubContentReferenceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -9207,13 +9315,8 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Describe a hub.
+     * Describes a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param describeHubRequest
      * @return Result of the DescribeHub operation returned by the service.
@@ -9271,11 +9374,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Describe the content of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param describeHubContentRequest
      * @return Result of the DescribeHubContent operation returned by the service.
@@ -11983,11 +12081,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Import hub content.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param importHubContentRequest
      * @return Result of the ImportHubContent operation returned by the service.
@@ -13455,11 +13548,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * List hub content versions.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubContentVersionsRequest
      * @return Result of the ListHubContentVersions operation returned by the service.
@@ -13518,11 +13606,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * List the contents of a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubContentsRequest
      * @return Result of the ListHubContents operation returned by the service.
@@ -13580,11 +13663,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * List all existing hubs.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param listHubsRequest
      * @return Result of the ListHubs operation returned by the service.
@@ -19162,11 +19240,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Update a hub.
      * </p>
-     * <note>
-     * <p>
-     * Hub APIs are only callable through SageMaker Studio.
-     * </p>
-     * </note>
      * 
      * @param updateHubRequest
      * @return Result of the UpdateHub operation returned by the service.

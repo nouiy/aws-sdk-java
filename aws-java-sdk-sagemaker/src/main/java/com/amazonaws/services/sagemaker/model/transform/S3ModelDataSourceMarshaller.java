@@ -35,6 +35,8 @@ public class S3ModelDataSourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CompressionType").build();
     private static final MarshallingInfo<StructuredPojo> MODELACCESSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelAccessConfig").build();
+    private static final MarshallingInfo<StructuredPojo> HUBACCESSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HubAccessConfig").build();
 
     private static final S3ModelDataSourceMarshaller instance = new S3ModelDataSourceMarshaller();
 
@@ -56,6 +58,7 @@ public class S3ModelDataSourceMarshaller {
             protocolMarshaller.marshall(s3ModelDataSource.getS3DataType(), S3DATATYPE_BINDING);
             protocolMarshaller.marshall(s3ModelDataSource.getCompressionType(), COMPRESSIONTYPE_BINDING);
             protocolMarshaller.marshall(s3ModelDataSource.getModelAccessConfig(), MODELACCESSCONFIG_BINDING);
+            protocolMarshaller.marshall(s3ModelDataSource.getHubAccessConfig(), HUBACCESSCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

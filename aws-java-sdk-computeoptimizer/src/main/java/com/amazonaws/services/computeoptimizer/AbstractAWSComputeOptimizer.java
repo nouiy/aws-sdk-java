@@ -68,6 +68,11 @@ public class AbstractAWSComputeOptimizer implements AWSComputeOptimizer {
     }
 
     @Override
+    public ExportRDSDatabaseRecommendationsResult exportRDSDatabaseRecommendations(ExportRDSDatabaseRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAutoScalingGroupRecommendationsResult getAutoScalingGroupRecommendations(GetAutoScalingGroupRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -120,6 +125,17 @@ public class AbstractAWSComputeOptimizer implements AWSComputeOptimizer {
 
     @Override
     public GetLicenseRecommendationsResult getLicenseRecommendations(GetLicenseRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRDSDatabaseRecommendationProjectedMetricsResult getRDSDatabaseRecommendationProjectedMetrics(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRDSDatabaseRecommendationsResult getRDSDatabaseRecommendations(GetRDSDatabaseRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

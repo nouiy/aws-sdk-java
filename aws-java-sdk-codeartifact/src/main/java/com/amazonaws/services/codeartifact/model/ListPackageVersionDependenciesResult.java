@@ -35,6 +35,18 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      * The namespace of the package version that contains the returned dependencies. The package component that
      * specifies its namespace depends on its type. For example:
      * </p>
+     * <note>
+     * <p>
+     * The namespace is required when listing dependencies from package versions of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Maven
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -43,18 +55,13 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm or Swift package version is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of a generic package is its <code>namespace</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Python, NuGet, and Ruby package versions do not contain a corresponding component, package versions of those
-     * formats do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
@@ -158,6 +165,18 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      * The namespace of the package version that contains the returned dependencies. The package component that
      * specifies its namespace depends on its type. For example:
      * </p>
+     * <note>
+     * <p>
+     * The namespace is required when listing dependencies from package versions of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Maven
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -166,25 +185,31 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm or Swift package version is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of a generic package is its <code>namespace</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Python, NuGet, and Ruby package versions do not contain a corresponding component, package versions of those
-     * formats do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
      *        The namespace of the package version that contains the returned dependencies. The package component that
-     *        specifies its namespace depends on its type. For example:</p>
+     *        specifies its namespace depends on its type. For example:</p> <note>
+     *        <p>
+     *        The namespace is required when listing dependencies from package versions of the following formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Maven
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </note>
      *        <ul>
      *        <li>
      *        <p>
@@ -193,18 +218,13 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of an npm or Swift package version is its <code>scope</code>.
+     *        The namespace of an npm package version is its <code>scope</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of a generic package is its <code>namespace</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Python, NuGet, and Ruby package versions do not contain a corresponding component, package versions of
-     *        those formats do not have a namespace.
+     *        Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *        formats do not have a namespace.
      *        </p>
      *        </li>
      */
@@ -218,6 +238,18 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      * The namespace of the package version that contains the returned dependencies. The package component that
      * specifies its namespace depends on its type. For example:
      * </p>
+     * <note>
+     * <p>
+     * The namespace is required when listing dependencies from package versions of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Maven
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -226,24 +258,30 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm or Swift package version is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of a generic package is its <code>namespace</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Python, NuGet, and Ruby package versions do not contain a corresponding component, package versions of those
-     * formats do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @return The namespace of the package version that contains the returned dependencies. The package component that
-     *         specifies its namespace depends on its type. For example:</p>
+     *         specifies its namespace depends on its type. For example:</p> <note>
+     *         <p>
+     *         The namespace is required when listing dependencies from package versions of the following formats:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Maven
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </note>
      *         <ul>
      *         <li>
      *         <p>
@@ -252,18 +290,13 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      *         </li>
      *         <li>
      *         <p>
-     *         The namespace of an npm or Swift package version is its <code>scope</code>.
+     *         The namespace of an npm package version is its <code>scope</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         The namespace of a generic package is its <code>namespace</code>.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Python, NuGet, and Ruby package versions do not contain a corresponding component, package versions of
-     *         those formats do not have a namespace.
+     *         Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *         formats do not have a namespace.
      *         </p>
      *         </li>
      */
@@ -277,6 +310,18 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      * The namespace of the package version that contains the returned dependencies. The package component that
      * specifies its namespace depends on its type. For example:
      * </p>
+     * <note>
+     * <p>
+     * The namespace is required when listing dependencies from package versions of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Maven
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -285,25 +330,31 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm or Swift package version is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of a generic package is its <code>namespace</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Python, NuGet, and Ruby package versions do not contain a corresponding component, package versions of those
-     * formats do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
      *        The namespace of the package version that contains the returned dependencies. The package component that
-     *        specifies its namespace depends on its type. For example:</p>
+     *        specifies its namespace depends on its type. For example:</p> <note>
+     *        <p>
+     *        The namespace is required when listing dependencies from package versions of the following formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Maven
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </note>
      *        <ul>
      *        <li>
      *        <p>
@@ -312,18 +363,13 @@ public class ListPackageVersionDependenciesResult extends com.amazonaws.AmazonWe
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of an npm or Swift package version is its <code>scope</code>.
+     *        The namespace of an npm package version is its <code>scope</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of a generic package is its <code>namespace</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Python, NuGet, and Ruby package versions do not contain a corresponding component, package versions of
-     *        those formats do not have a namespace.
+     *        Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *        formats do not have a namespace.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

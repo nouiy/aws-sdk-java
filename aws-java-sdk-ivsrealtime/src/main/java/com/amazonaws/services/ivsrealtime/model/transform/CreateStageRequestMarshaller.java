@@ -35,6 +35,8 @@ public class CreateStageRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("participantTokenConfigurations").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> AUTOPARTICIPANTRECORDINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoParticipantRecordingConfiguration").build();
 
     private static final CreateStageRequestMarshaller instance = new CreateStageRequestMarshaller();
 
@@ -55,6 +57,7 @@ public class CreateStageRequestMarshaller {
             protocolMarshaller.marshall(createStageRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createStageRequest.getParticipantTokenConfigurations(), PARTICIPANTTOKENCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(createStageRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createStageRequest.getAutoParticipantRecordingConfiguration(), AUTOPARTICIPANTRECORDINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

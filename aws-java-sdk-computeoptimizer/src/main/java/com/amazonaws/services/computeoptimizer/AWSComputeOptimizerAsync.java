@@ -473,6 +473,63 @@ public interface AWSComputeOptimizerAsync extends AWSComputeOptimizer {
 
     /**
      * <p>
+     * Export optimization recommendations for your Amazon Relational Database Service (Amazon RDS).
+     * </p>
+     * <p>
+     * Recommendations are exported in a comma-separated values (CSV) file, and its metadata in a JavaScript Object
+     * Notation (JSON) file, to an existing Amazon Simple Storage Service (Amazon S3) bucket that you specify. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/exporting-recommendations.html">Exporting
+     * Recommendations</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * <p>
+     * You can have only one Amazon RDS export job in progress per Amazon Web Services Region.
+     * </p>
+     * 
+     * @param exportRDSDatabaseRecommendationsRequest
+     * @return A Java Future containing the result of the ExportRDSDatabaseRecommendations operation returned by the
+     *         service.
+     * @sample AWSComputeOptimizerAsync.ExportRDSDatabaseRecommendations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/ExportRDSDatabaseRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ExportRDSDatabaseRecommendationsResult> exportRDSDatabaseRecommendationsAsync(
+            ExportRDSDatabaseRecommendationsRequest exportRDSDatabaseRecommendationsRequest);
+
+    /**
+     * <p>
+     * Export optimization recommendations for your Amazon Relational Database Service (Amazon RDS).
+     * </p>
+     * <p>
+     * Recommendations are exported in a comma-separated values (CSV) file, and its metadata in a JavaScript Object
+     * Notation (JSON) file, to an existing Amazon Simple Storage Service (Amazon S3) bucket that you specify. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/exporting-recommendations.html">Exporting
+     * Recommendations</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * <p>
+     * You can have only one Amazon RDS export job in progress per Amazon Web Services Region.
+     * </p>
+     * 
+     * @param exportRDSDatabaseRecommendationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ExportRDSDatabaseRecommendations operation returned by the
+     *         service.
+     * @sample AWSComputeOptimizerAsyncHandler.ExportRDSDatabaseRecommendations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/ExportRDSDatabaseRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ExportRDSDatabaseRecommendationsResult> exportRDSDatabaseRecommendationsAsync(
+            ExportRDSDatabaseRecommendationsRequest exportRDSDatabaseRecommendationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ExportRDSDatabaseRecommendationsRequest, ExportRDSDatabaseRecommendationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns Auto Scaling group recommendations.
      * </p>
      * <p>
@@ -981,6 +1038,90 @@ public interface AWSComputeOptimizerAsync extends AWSComputeOptimizer {
     java.util.concurrent.Future<GetLicenseRecommendationsResult> getLicenseRecommendationsAsync(
             GetLicenseRecommendationsRequest getLicenseRecommendationsRequest,
             com.amazonaws.handlers.AsyncHandler<GetLicenseRecommendationsRequest, GetLicenseRecommendationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the projected metrics of Amazon RDS recommendations.
+     * </p>
+     * 
+     * @param getRDSDatabaseRecommendationProjectedMetricsRequest
+     * @return A Java Future containing the result of the GetRDSDatabaseRecommendationProjectedMetrics operation
+     *         returned by the service.
+     * @sample AWSComputeOptimizerAsync.GetRDSDatabaseRecommendationProjectedMetrics
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRDSDatabaseRecommendationProjectedMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRDSDatabaseRecommendationProjectedMetricsResult> getRDSDatabaseRecommendationProjectedMetricsAsync(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest getRDSDatabaseRecommendationProjectedMetricsRequest);
+
+    /**
+     * <p>
+     * Returns the projected metrics of Amazon RDS recommendations.
+     * </p>
+     * 
+     * @param getRDSDatabaseRecommendationProjectedMetricsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRDSDatabaseRecommendationProjectedMetrics operation
+     *         returned by the service.
+     * @sample AWSComputeOptimizerAsyncHandler.GetRDSDatabaseRecommendationProjectedMetrics
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRDSDatabaseRecommendationProjectedMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRDSDatabaseRecommendationProjectedMetricsResult> getRDSDatabaseRecommendationProjectedMetricsAsync(
+            GetRDSDatabaseRecommendationProjectedMetricsRequest getRDSDatabaseRecommendationProjectedMetricsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRDSDatabaseRecommendationProjectedMetricsRequest, GetRDSDatabaseRecommendationProjectedMetricsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns Amazon RDS recommendations.
+     * </p>
+     * <p>
+     * Compute Optimizer generates recommendations for Amazon RDS that meet a specific set of requirements. For more
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param getRDSDatabaseRecommendationsRequest
+     * @return A Java Future containing the result of the GetRDSDatabaseRecommendations operation returned by the
+     *         service.
+     * @sample AWSComputeOptimizerAsync.GetRDSDatabaseRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRDSDatabaseRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRDSDatabaseRecommendationsResult> getRDSDatabaseRecommendationsAsync(
+            GetRDSDatabaseRecommendationsRequest getRDSDatabaseRecommendationsRequest);
+
+    /**
+     * <p>
+     * Returns Amazon RDS recommendations.
+     * </p>
+     * <p>
+     * Compute Optimizer generates recommendations for Amazon RDS that meet a specific set of requirements. For more
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/requirements.html">Supported resources and
+     * requirements</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param getRDSDatabaseRecommendationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRDSDatabaseRecommendations operation returned by the
+     *         service.
+     * @sample AWSComputeOptimizerAsyncHandler.GetRDSDatabaseRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRDSDatabaseRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRDSDatabaseRecommendationsResult> getRDSDatabaseRecommendationsAsync(
+            GetRDSDatabaseRecommendationsRequest getRDSDatabaseRecommendationsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRDSDatabaseRecommendationsRequest, GetRDSDatabaseRecommendationsResult> asyncHandler);
 
     /**
      * <p>

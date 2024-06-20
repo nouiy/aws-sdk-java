@@ -53,49 +53,49 @@ public class OpenSearchReservedInstancesConfigurationJsonUnmarshaller implements
                     context.nextToken();
                     openSearchReservedInstancesConfiguration.setAccountScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("currentGeneration", targetDepth)) {
+                if (context.testExpression("service", targetDepth)) {
                     context.nextToken();
-                    openSearchReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("instanceType", targetDepth)) {
-                    context.nextToken();
-                    openSearchReservedInstancesConfiguration.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
-                    context.nextToken();
-                    openSearchReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
+                    openSearchReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("normalizedUnitsToPurchase", targetDepth)) {
                     context.nextToken();
                     openSearchReservedInstancesConfiguration.setNormalizedUnitsToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
+                if (context.testExpression("term", targetDepth)) {
                     context.nextToken();
-                    openSearchReservedInstancesConfiguration.setNumberOfInstancesToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
+                    openSearchReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("paymentOption", targetDepth)) {
                     context.nextToken();
                     openSearchReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
+                    context.nextToken();
+                    openSearchReservedInstancesConfiguration.setNumberOfInstancesToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("instanceType", targetDepth)) {
+                    context.nextToken();
+                    openSearchReservedInstancesConfiguration.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("reservedInstancesRegion", targetDepth)) {
                     context.nextToken();
                     openSearchReservedInstancesConfiguration.setReservedInstancesRegion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("service", targetDepth)) {
+                if (context.testExpression("currentGeneration", targetDepth)) {
                     context.nextToken();
-                    openSearchReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
+                    openSearchReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("sizeFlexEligible", targetDepth)) {
                     context.nextToken();
                     openSearchReservedInstancesConfiguration.setSizeFlexEligible(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("term", targetDepth)) {
-                    context.nextToken();
-                    openSearchReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("upfrontCost", targetDepth)) {
                     context.nextToken();
                     openSearchReservedInstancesConfiguration.setUpfrontCost(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
+                    context.nextToken();
+                    openSearchReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

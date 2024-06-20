@@ -29,14 +29,14 @@ public class ListRecommendationsRequestMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> FILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filter").build();
+    private static final MarshallingInfo<StructuredPojo> ORDERBY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("orderBy").build();
     private static final MarshallingInfo<Boolean> INCLUDEALLRECOMMENDATIONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeAllRecommendations").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
-    private static final MarshallingInfo<StructuredPojo> ORDERBY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("orderBy").build();
 
     private static final ListRecommendationsRequestMarshaller instance = new ListRecommendationsRequestMarshaller();
 
@@ -55,10 +55,10 @@ public class ListRecommendationsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(listRecommendationsRequest.getFilter(), FILTER_BINDING);
+            protocolMarshaller.marshall(listRecommendationsRequest.getOrderBy(), ORDERBY_BINDING);
             protocolMarshaller.marshall(listRecommendationsRequest.getIncludeAllRecommendations(), INCLUDEALLRECOMMENDATIONS_BINDING);
             protocolMarshaller.marshall(listRecommendationsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listRecommendationsRequest.getNextToken(), NEXTTOKEN_BINDING);
-            protocolMarshaller.marshall(listRecommendationsRequest.getOrderBy(), ORDERBY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

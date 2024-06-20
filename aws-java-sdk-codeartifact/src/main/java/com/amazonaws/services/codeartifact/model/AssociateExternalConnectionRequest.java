@@ -89,6 +89,16 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      * <code>public:maven-clojars</code> - for the Clojars repository.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>public:ruby-gems-org</code> - for RubyGems.org.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>public:crates-io</code> - for Crates.io.
+     * </p>
+     * </li>
      * </ul>
      */
     private String externalConnection;
@@ -264,6 +274,16 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      * <code>public:maven-clojars</code> - for the Clojars repository.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>public:ruby-gems-org</code> - for RubyGems.org.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>public:crates-io</code> - for Crates.io.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param externalConnection
@@ -307,6 +327,16 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        <code>public:maven-clojars</code> - for the Clojars repository.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>public:ruby-gems-org</code> - for RubyGems.org.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>public:crates-io</code> - for Crates.io.
      *        </p>
      *        </li>
      */
@@ -360,6 +390,16 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      * <code>public:maven-clojars</code> - for the Clojars repository.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>public:ruby-gems-org</code> - for RubyGems.org.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>public:crates-io</code> - for Crates.io.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The name of the external connection to add to the repository. The following values are supported: </p>
@@ -402,6 +442,16 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      *         <li>
      *         <p>
      *         <code>public:maven-clojars</code> - for the Clojars repository.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>public:ruby-gems-org</code> - for RubyGems.org.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>public:crates-io</code> - for Crates.io.
      *         </p>
      *         </li>
      */
@@ -455,6 +505,16 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      * <code>public:maven-clojars</code> - for the Clojars repository.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>public:ruby-gems-org</code> - for RubyGems.org.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>public:crates-io</code> - for Crates.io.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param externalConnection
@@ -498,6 +558,16 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        <code>public:maven-clojars</code> - for the Clojars repository.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>public:ruby-gems-org</code> - for RubyGems.org.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>public:crates-io</code> - for Crates.io.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

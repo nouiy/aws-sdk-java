@@ -52,36 +52,36 @@ public class CompositionJsonUnmarshaller implements Unmarshaller<Composition, Js
                     context.nextToken();
                     composition.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("stageArn", targetDepth)) {
+                    context.nextToken();
+                    composition.setStageArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("state", targetDepth)) {
+                    context.nextToken();
+                    composition.setState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("layout", targetDepth)) {
+                    context.nextToken();
+                    composition.setLayout(LayoutConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("destinations", targetDepth)) {
                     context.nextToken();
                     composition.setDestinations(new ListUnmarshaller<Destination>(DestinationJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("endTime", targetDepth)) {
+                if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
-                    composition.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("layout", targetDepth)) {
-                    context.nextToken();
-                    composition.setLayout(LayoutConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("stageArn", targetDepth)) {
-                    context.nextToken();
-                    composition.setStageArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    composition.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
+                            .unmarshall(context));
                 }
                 if (context.testExpression("startTime", targetDepth)) {
                     context.nextToken();
                     composition.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("state", targetDepth)) {
+                if (context.testExpression("endTime", targetDepth)) {
                     context.nextToken();
-                    composition.setState(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("tags", targetDepth)) {
-                    context.nextToken();
-                    composition.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
-                            .unmarshall(context));
+                    composition.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -92,6 +92,18 @@ public class DescribeHubContentResultJsonUnmarshaller implements Unmarshaller<De
                     context.nextToken();
                     describeHubContentResult.setHubContentDocument(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SageMakerPublicHubContentArn", targetDepth)) {
+                    context.nextToken();
+                    describeHubContentResult.setSageMakerPublicHubContentArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ReferenceMinVersion", targetDepth)) {
+                    context.nextToken();
+                    describeHubContentResult.setReferenceMinVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SupportStatus", targetDepth)) {
+                    context.nextToken();
+                    describeHubContentResult.setSupportStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("HubContentSearchKeywords", targetDepth)) {
                     context.nextToken();
                     describeHubContentResult.setHubContentSearchKeywords(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

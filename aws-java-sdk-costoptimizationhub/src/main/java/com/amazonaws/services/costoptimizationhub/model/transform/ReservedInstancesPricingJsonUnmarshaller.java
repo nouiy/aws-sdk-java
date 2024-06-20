@@ -48,10 +48,6 @@ public class ReservedInstancesPricingJsonUnmarshaller implements Unmarshaller<Re
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("estimatedMonthlyAmortizedReservationCost", targetDepth)) {
-                    context.nextToken();
-                    reservedInstancesPricing.setEstimatedMonthlyAmortizedReservationCost(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
                 if (context.testExpression("estimatedOnDemandCost", targetDepth)) {
                     context.nextToken();
                     reservedInstancesPricing.setEstimatedOnDemandCost(context.getUnmarshaller(Double.class).unmarshall(context));
@@ -63,6 +59,10 @@ public class ReservedInstancesPricingJsonUnmarshaller implements Unmarshaller<Re
                 if (context.testExpression("savingsPercentage", targetDepth)) {
                     context.nextToken();
                     reservedInstancesPricing.setSavingsPercentage(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("estimatedMonthlyAmortizedReservationCost", targetDepth)) {
+                    context.nextToken();
+                    reservedInstancesPricing.setEstimatedMonthlyAmortizedReservationCost(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

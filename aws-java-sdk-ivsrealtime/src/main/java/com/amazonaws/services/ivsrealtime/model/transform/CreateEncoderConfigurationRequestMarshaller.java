@@ -31,10 +31,10 @@ public class CreateEncoderConfigurationRequestMarshaller {
 
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> VIDEO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("video").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateEncoderConfigurationRequestMarshaller instance = new CreateEncoderConfigurationRequestMarshaller();
 
@@ -53,8 +53,8 @@ public class CreateEncoderConfigurationRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createEncoderConfigurationRequest.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(createEncoderConfigurationRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createEncoderConfigurationRequest.getVideo(), VIDEO_BINDING);
+            protocolMarshaller.marshall(createEncoderConfigurationRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

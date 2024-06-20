@@ -28,12 +28,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class S3DestinationConfigurationMarshaller {
 
+    private static final MarshallingInfo<String> STORAGECONFIGURATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("storageConfigurationArn").build();
     private static final MarshallingInfo<List> ENCODERCONFIGURATIONARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encoderConfigurationArns").build();
     private static final MarshallingInfo<StructuredPojo> RECORDINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingConfiguration").build();
-    private static final MarshallingInfo<String> STORAGECONFIGURATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("storageConfigurationArn").build();
 
     private static final S3DestinationConfigurationMarshaller instance = new S3DestinationConfigurationMarshaller();
 
@@ -51,9 +51,9 @@ public class S3DestinationConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(s3DestinationConfiguration.getStorageConfigurationArn(), STORAGECONFIGURATIONARN_BINDING);
             protocolMarshaller.marshall(s3DestinationConfiguration.getEncoderConfigurationArns(), ENCODERCONFIGURATIONARNS_BINDING);
             protocolMarshaller.marshall(s3DestinationConfiguration.getRecordingConfiguration(), RECORDINGCONFIGURATION_BINDING);
-            protocolMarshaller.marshall(s3DestinationConfiguration.getStorageConfigurationArn(), STORAGECONFIGURATIONARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

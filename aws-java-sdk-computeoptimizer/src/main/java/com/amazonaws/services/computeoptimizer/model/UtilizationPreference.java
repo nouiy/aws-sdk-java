@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The preference to control the resource’s CPU utilization thresholds - threshold and headroom.
+ * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory utilization
+ * headroom.
  * </p>
  * <note>
  * <p>

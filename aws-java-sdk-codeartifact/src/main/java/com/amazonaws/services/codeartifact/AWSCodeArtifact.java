@@ -70,8 +70,8 @@ import com.amazonaws.services.codeartifact.model.*;
  * <li>
  * <p>
  * <b>Package</b>: A <i>package</i> is a bundle of software and the metadata required to resolve dependencies and
- * install the software. CodeArtifact supports npm, PyPI, Maven, NuGet, Swift, Ruby, and generic package formats. For
- * more information about the supported package formats and how to use CodeArtifact with them, see the <a
+ * install the software. CodeArtifact supports npm, PyPI, Maven, NuGet, Swift, Ruby, Cargo, and generic package formats.
+ * For more information about the supported package formats and how to use CodeArtifact with them, see the <a
  * href="https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html">CodeArtifact User Guide</a>.
  * </p>
  * <p>
@@ -276,6 +276,11 @@ import com.amazonaws.services.codeartifact.model.*;
  * has one endpoint for each package format:
  * </p>
  * <ul>
+ * <li>
+ * <p>
+ * <code>cargo</code>
+ * </p>
+ * </li>
  * <li>
  * <p>
  * <code>generic</code>
@@ -1137,6 +1142,11 @@ public interface AWSCodeArtifact {
      * package format:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>cargo</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>generic</code>

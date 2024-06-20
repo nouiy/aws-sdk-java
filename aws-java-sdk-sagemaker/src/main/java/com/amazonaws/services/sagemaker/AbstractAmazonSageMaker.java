@@ -164,6 +164,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public CreateHubContentReferenceResult createHubContentReference(CreateHubContentReferenceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateHumanTaskUiResult createHumanTaskUi(CreateHumanTaskUiRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -445,6 +450,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public DeleteHubContentResult deleteHubContent(DeleteHubContentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteHubContentReferenceResult deleteHubContentReference(DeleteHubContentReferenceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

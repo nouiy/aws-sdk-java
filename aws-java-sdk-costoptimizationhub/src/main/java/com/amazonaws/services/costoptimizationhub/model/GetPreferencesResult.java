@@ -25,75 +25,16 @@ public class GetPreferencesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Retrieves the status of the "member account discount visibility" preference.
-     * </p>
-     */
-    private String memberAccountDiscountVisibility;
-    /**
-     * <p>
      * Retrieves the status of the "savings estimation mode" preference.
      * </p>
      */
     private String savingsEstimationMode;
-
     /**
      * <p>
      * Retrieves the status of the "member account discount visibility" preference.
      * </p>
-     * 
-     * @param memberAccountDiscountVisibility
-     *        Retrieves the status of the "member account discount visibility" preference.
-     * @see MemberAccountDiscountVisibility
      */
-
-    public void setMemberAccountDiscountVisibility(String memberAccountDiscountVisibility) {
-        this.memberAccountDiscountVisibility = memberAccountDiscountVisibility;
-    }
-
-    /**
-     * <p>
-     * Retrieves the status of the "member account discount visibility" preference.
-     * </p>
-     * 
-     * @return Retrieves the status of the "member account discount visibility" preference.
-     * @see MemberAccountDiscountVisibility
-     */
-
-    public String getMemberAccountDiscountVisibility() {
-        return this.memberAccountDiscountVisibility;
-    }
-
-    /**
-     * <p>
-     * Retrieves the status of the "member account discount visibility" preference.
-     * </p>
-     * 
-     * @param memberAccountDiscountVisibility
-     *        Retrieves the status of the "member account discount visibility" preference.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see MemberAccountDiscountVisibility
-     */
-
-    public GetPreferencesResult withMemberAccountDiscountVisibility(String memberAccountDiscountVisibility) {
-        setMemberAccountDiscountVisibility(memberAccountDiscountVisibility);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Retrieves the status of the "member account discount visibility" preference.
-     * </p>
-     * 
-     * @param memberAccountDiscountVisibility
-     *        Retrieves the status of the "member account discount visibility" preference.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see MemberAccountDiscountVisibility
-     */
-
-    public GetPreferencesResult withMemberAccountDiscountVisibility(MemberAccountDiscountVisibility memberAccountDiscountVisibility) {
-        this.memberAccountDiscountVisibility = memberAccountDiscountVisibility.toString();
-        return this;
-    }
+    private String memberAccountDiscountVisibility;
 
     /**
      * <p>
@@ -155,6 +96,65 @@ public class GetPreferencesResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * Retrieves the status of the "member account discount visibility" preference.
+     * </p>
+     * 
+     * @param memberAccountDiscountVisibility
+     *        Retrieves the status of the "member account discount visibility" preference.
+     * @see MemberAccountDiscountVisibility
+     */
+
+    public void setMemberAccountDiscountVisibility(String memberAccountDiscountVisibility) {
+        this.memberAccountDiscountVisibility = memberAccountDiscountVisibility;
+    }
+
+    /**
+     * <p>
+     * Retrieves the status of the "member account discount visibility" preference.
+     * </p>
+     * 
+     * @return Retrieves the status of the "member account discount visibility" preference.
+     * @see MemberAccountDiscountVisibility
+     */
+
+    public String getMemberAccountDiscountVisibility() {
+        return this.memberAccountDiscountVisibility;
+    }
+
+    /**
+     * <p>
+     * Retrieves the status of the "member account discount visibility" preference.
+     * </p>
+     * 
+     * @param memberAccountDiscountVisibility
+     *        Retrieves the status of the "member account discount visibility" preference.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MemberAccountDiscountVisibility
+     */
+
+    public GetPreferencesResult withMemberAccountDiscountVisibility(String memberAccountDiscountVisibility) {
+        setMemberAccountDiscountVisibility(memberAccountDiscountVisibility);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Retrieves the status of the "member account discount visibility" preference.
+     * </p>
+     * 
+     * @param memberAccountDiscountVisibility
+     *        Retrieves the status of the "member account discount visibility" preference.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MemberAccountDiscountVisibility
+     */
+
+    public GetPreferencesResult withMemberAccountDiscountVisibility(MemberAccountDiscountVisibility memberAccountDiscountVisibility) {
+        this.memberAccountDiscountVisibility = memberAccountDiscountVisibility.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -166,10 +166,10 @@ public class GetPreferencesResult extends com.amazonaws.AmazonWebServiceResult<c
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMemberAccountDiscountVisibility() != null)
-            sb.append("MemberAccountDiscountVisibility: ").append(getMemberAccountDiscountVisibility()).append(",");
         if (getSavingsEstimationMode() != null)
-            sb.append("SavingsEstimationMode: ").append(getSavingsEstimationMode());
+            sb.append("SavingsEstimationMode: ").append(getSavingsEstimationMode()).append(",");
+        if (getMemberAccountDiscountVisibility() != null)
+            sb.append("MemberAccountDiscountVisibility: ").append(getMemberAccountDiscountVisibility());
         sb.append("}");
         return sb.toString();
     }
@@ -184,14 +184,14 @@ public class GetPreferencesResult extends com.amazonaws.AmazonWebServiceResult<c
         if (obj instanceof GetPreferencesResult == false)
             return false;
         GetPreferencesResult other = (GetPreferencesResult) obj;
+        if (other.getSavingsEstimationMode() == null ^ this.getSavingsEstimationMode() == null)
+            return false;
+        if (other.getSavingsEstimationMode() != null && other.getSavingsEstimationMode().equals(this.getSavingsEstimationMode()) == false)
+            return false;
         if (other.getMemberAccountDiscountVisibility() == null ^ this.getMemberAccountDiscountVisibility() == null)
             return false;
         if (other.getMemberAccountDiscountVisibility() != null
                 && other.getMemberAccountDiscountVisibility().equals(this.getMemberAccountDiscountVisibility()) == false)
-            return false;
-        if (other.getSavingsEstimationMode() == null ^ this.getSavingsEstimationMode() == null)
-            return false;
-        if (other.getSavingsEstimationMode() != null && other.getSavingsEstimationMode().equals(this.getSavingsEstimationMode()) == false)
             return false;
         return true;
     }
@@ -201,8 +201,8 @@ public class GetPreferencesResult extends com.amazonaws.AmazonWebServiceResult<c
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMemberAccountDiscountVisibility() == null) ? 0 : getMemberAccountDiscountVisibility().hashCode());
         hashCode = prime * hashCode + ((getSavingsEstimationMode() == null) ? 0 : getSavingsEstimationMode().hashCode());
+        hashCode = prime * hashCode + ((getMemberAccountDiscountVisibility() == null) ? 0 : getMemberAccountDiscountVisibility().hashCode());
         return hashCode;
     }
 

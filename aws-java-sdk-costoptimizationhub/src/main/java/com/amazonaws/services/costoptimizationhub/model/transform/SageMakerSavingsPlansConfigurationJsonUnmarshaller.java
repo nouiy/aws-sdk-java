@@ -52,17 +52,17 @@ public class SageMakerSavingsPlansConfigurationJsonUnmarshaller implements Unmar
                     context.nextToken();
                     sageMakerSavingsPlansConfiguration.setAccountScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("hourlyCommitment", targetDepth)) {
+                if (context.testExpression("term", targetDepth)) {
                     context.nextToken();
-                    sageMakerSavingsPlansConfiguration.setHourlyCommitment(context.getUnmarshaller(String.class).unmarshall(context));
+                    sageMakerSavingsPlansConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("paymentOption", targetDepth)) {
                     context.nextToken();
                     sageMakerSavingsPlansConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("term", targetDepth)) {
+                if (context.testExpression("hourlyCommitment", targetDepth)) {
                     context.nextToken();
-                    sageMakerSavingsPlansConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                    sageMakerSavingsPlansConfiguration.setHourlyCommitment(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -48,6 +48,12 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
     private ImageBlock image;
     /**
      * <p>
+     * A document to include in the message.
+     * </p>
+     */
+    private DocumentBlock document;
+    /**
+     * <p>
      * The result for a tool request that a model makes.
      * </p>
      */
@@ -167,6 +173,46 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
 
     public ContentBlock withImage(ImageBlock image) {
         setImage(image);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A document to include in the message.
+     * </p>
+     * 
+     * @param document
+     *        A document to include in the message.
+     */
+
+    public void setDocument(DocumentBlock document) {
+        this.document = document;
+    }
+
+    /**
+     * <p>
+     * A document to include in the message.
+     * </p>
+     * 
+     * @return A document to include in the message.
+     */
+
+    public DocumentBlock getDocument() {
+        return this.document;
+    }
+
+    /**
+     * <p>
+     * A document to include in the message.
+     * </p>
+     * 
+     * @param document
+     *        A document to include in the message.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContentBlock withDocument(DocumentBlock document) {
+        setDocument(document);
         return this;
     }
 
@@ -309,6 +355,8 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
             sb.append("Text: ").append(getText()).append(",");
         if (getImage() != null)
             sb.append("Image: ").append(getImage()).append(",");
+        if (getDocument() != null)
+            sb.append("Document: ").append(getDocument()).append(",");
         if (getToolResult() != null)
             sb.append("ToolResult: ").append(getToolResult()).append(",");
         if (getGuardContent() != null)
@@ -335,6 +383,10 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getImage() != null && other.getImage().equals(this.getImage()) == false)
             return false;
+        if (other.getDocument() == null ^ this.getDocument() == null)
+            return false;
+        if (other.getDocument() != null && other.getDocument().equals(this.getDocument()) == false)
+            return false;
         if (other.getToolResult() == null ^ this.getToolResult() == null)
             return false;
         if (other.getToolResult() != null && other.getToolResult().equals(this.getToolResult()) == false)
@@ -353,6 +405,7 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getText() == null) ? 0 : getText().hashCode());
         hashCode = prime * hashCode + ((getImage() == null) ? 0 : getImage().hashCode());
+        hashCode = prime * hashCode + ((getDocument() == null) ? 0 : getDocument().hashCode());
         hashCode = prime * hashCode + ((getToolResult() == null) ? 0 : getToolResult().hashCode());
         hashCode = prime * hashCode + ((getGuardContent() == null) ? 0 : getGuardContent().hashCode());
         return hashCode;

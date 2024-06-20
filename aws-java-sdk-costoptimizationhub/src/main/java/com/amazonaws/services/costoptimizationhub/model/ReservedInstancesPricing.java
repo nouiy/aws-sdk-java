@@ -30,12 +30,6 @@ public class ReservedInstancesPricing implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
-     * </p>
-     */
-    private Double estimatedMonthlyAmortizedReservationCost;
-    /**
-     * <p>
      * The remaining On-Demand cost estimated to not be covered by the recommended reserved instance, over the length of
      * the lookback period.
      * </p>
@@ -53,46 +47,12 @@ public class ReservedInstancesPricing implements Serializable, Cloneable, Struct
      * </p>
      */
     private Double savingsPercentage;
-
     /**
      * <p>
      * The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
      * </p>
-     * 
-     * @param estimatedMonthlyAmortizedReservationCost
-     *        The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
      */
-
-    public void setEstimatedMonthlyAmortizedReservationCost(Double estimatedMonthlyAmortizedReservationCost) {
-        this.estimatedMonthlyAmortizedReservationCost = estimatedMonthlyAmortizedReservationCost;
-    }
-
-    /**
-     * <p>
-     * The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
-     * </p>
-     * 
-     * @return The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
-     */
-
-    public Double getEstimatedMonthlyAmortizedReservationCost() {
-        return this.estimatedMonthlyAmortizedReservationCost;
-    }
-
-    /**
-     * <p>
-     * The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
-     * </p>
-     * 
-     * @param estimatedMonthlyAmortizedReservationCost
-     *        The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReservedInstancesPricing withEstimatedMonthlyAmortizedReservationCost(Double estimatedMonthlyAmortizedReservationCost) {
-        setEstimatedMonthlyAmortizedReservationCost(estimatedMonthlyAmortizedReservationCost);
-        return this;
-    }
+    private Double estimatedMonthlyAmortizedReservationCost;
 
     /**
      * <p>
@@ -221,6 +181,46 @@ public class ReservedInstancesPricing implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
+     * </p>
+     * 
+     * @param estimatedMonthlyAmortizedReservationCost
+     *        The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
+     */
+
+    public void setEstimatedMonthlyAmortizedReservationCost(Double estimatedMonthlyAmortizedReservationCost) {
+        this.estimatedMonthlyAmortizedReservationCost = estimatedMonthlyAmortizedReservationCost;
+    }
+
+    /**
+     * <p>
+     * The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
+     * </p>
+     * 
+     * @return The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
+     */
+
+    public Double getEstimatedMonthlyAmortizedReservationCost() {
+        return this.estimatedMonthlyAmortizedReservationCost;
+    }
+
+    /**
+     * <p>
+     * The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
+     * </p>
+     * 
+     * @param estimatedMonthlyAmortizedReservationCost
+     *        The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReservedInstancesPricing withEstimatedMonthlyAmortizedReservationCost(Double estimatedMonthlyAmortizedReservationCost) {
+        setEstimatedMonthlyAmortizedReservationCost(estimatedMonthlyAmortizedReservationCost);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,14 +232,14 @@ public class ReservedInstancesPricing implements Serializable, Cloneable, Struct
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEstimatedMonthlyAmortizedReservationCost() != null)
-            sb.append("EstimatedMonthlyAmortizedReservationCost: ").append(getEstimatedMonthlyAmortizedReservationCost()).append(",");
         if (getEstimatedOnDemandCost() != null)
             sb.append("EstimatedOnDemandCost: ").append(getEstimatedOnDemandCost()).append(",");
         if (getMonthlyReservationEligibleCost() != null)
             sb.append("MonthlyReservationEligibleCost: ").append(getMonthlyReservationEligibleCost()).append(",");
         if (getSavingsPercentage() != null)
-            sb.append("SavingsPercentage: ").append(getSavingsPercentage());
+            sb.append("SavingsPercentage: ").append(getSavingsPercentage()).append(",");
+        if (getEstimatedMonthlyAmortizedReservationCost() != null)
+            sb.append("EstimatedMonthlyAmortizedReservationCost: ").append(getEstimatedMonthlyAmortizedReservationCost());
         sb.append("}");
         return sb.toString();
     }
@@ -254,11 +254,6 @@ public class ReservedInstancesPricing implements Serializable, Cloneable, Struct
         if (obj instanceof ReservedInstancesPricing == false)
             return false;
         ReservedInstancesPricing other = (ReservedInstancesPricing) obj;
-        if (other.getEstimatedMonthlyAmortizedReservationCost() == null ^ this.getEstimatedMonthlyAmortizedReservationCost() == null)
-            return false;
-        if (other.getEstimatedMonthlyAmortizedReservationCost() != null
-                && other.getEstimatedMonthlyAmortizedReservationCost().equals(this.getEstimatedMonthlyAmortizedReservationCost()) == false)
-            return false;
         if (other.getEstimatedOnDemandCost() == null ^ this.getEstimatedOnDemandCost() == null)
             return false;
         if (other.getEstimatedOnDemandCost() != null && other.getEstimatedOnDemandCost().equals(this.getEstimatedOnDemandCost()) == false)
@@ -272,6 +267,11 @@ public class ReservedInstancesPricing implements Serializable, Cloneable, Struct
             return false;
         if (other.getSavingsPercentage() != null && other.getSavingsPercentage().equals(this.getSavingsPercentage()) == false)
             return false;
+        if (other.getEstimatedMonthlyAmortizedReservationCost() == null ^ this.getEstimatedMonthlyAmortizedReservationCost() == null)
+            return false;
+        if (other.getEstimatedMonthlyAmortizedReservationCost() != null
+                && other.getEstimatedMonthlyAmortizedReservationCost().equals(this.getEstimatedMonthlyAmortizedReservationCost()) == false)
+            return false;
         return true;
     }
 
@@ -280,10 +280,10 @@ public class ReservedInstancesPricing implements Serializable, Cloneable, Struct
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEstimatedMonthlyAmortizedReservationCost() == null) ? 0 : getEstimatedMonthlyAmortizedReservationCost().hashCode());
         hashCode = prime * hashCode + ((getEstimatedOnDemandCost() == null) ? 0 : getEstimatedOnDemandCost().hashCode());
         hashCode = prime * hashCode + ((getMonthlyReservationEligibleCost() == null) ? 0 : getMonthlyReservationEligibleCost().hashCode());
         hashCode = prime * hashCode + ((getSavingsPercentage() == null) ? 0 : getSavingsPercentage().hashCode());
+        hashCode = prime * hashCode + ((getEstimatedMonthlyAmortizedReservationCost() == null) ? 0 : getEstimatedMonthlyAmortizedReservationCost().hashCode());
         return hashCode;
     }
 

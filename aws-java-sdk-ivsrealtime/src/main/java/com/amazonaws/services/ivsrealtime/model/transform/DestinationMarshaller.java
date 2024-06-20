@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DestinationMarshaller {
 
+    private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("id").build();
+    private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("state").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<StructuredPojo> CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuration").build();
     private static final MarshallingInfo<StructuredPojo> DETAIL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("detail").build();
-    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("id").build();
-    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("state").build();
 
     private static final DestinationMarshaller instance = new DestinationMarshaller();
 
@@ -56,12 +56,12 @@ public class DestinationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(destination.getId(), ID_BINDING);
+            protocolMarshaller.marshall(destination.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(destination.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(destination.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(destination.getConfiguration(), CONFIGURATION_BINDING);
             protocolMarshaller.marshall(destination.getDetail(), DETAIL_BINDING);
-            protocolMarshaller.marshall(destination.getEndTime(), ENDTIME_BINDING);
-            protocolMarshaller.marshall(destination.getId(), ID_BINDING);
-            protocolMarshaller.marshall(destination.getStartTime(), STARTTIME_BINDING);
-            protocolMarshaller.marshall(destination.getState(), STATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

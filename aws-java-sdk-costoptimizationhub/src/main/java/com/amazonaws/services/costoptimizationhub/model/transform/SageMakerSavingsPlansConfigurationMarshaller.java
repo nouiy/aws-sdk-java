@@ -29,12 +29,12 @@ public class SageMakerSavingsPlansConfigurationMarshaller {
 
     private static final MarshallingInfo<String> ACCOUNTSCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accountScope").build();
-    private static final MarshallingInfo<String> HOURLYCOMMITMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hourlyCommitment").build();
-    private static final MarshallingInfo<String> PAYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentOption").build();
     private static final MarshallingInfo<String> TERM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("term").build();
+    private static final MarshallingInfo<String> PAYMENTOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentOption").build();
+    private static final MarshallingInfo<String> HOURLYCOMMITMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hourlyCommitment").build();
 
     private static final SageMakerSavingsPlansConfigurationMarshaller instance = new SageMakerSavingsPlansConfigurationMarshaller();
 
@@ -53,9 +53,9 @@ public class SageMakerSavingsPlansConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(sageMakerSavingsPlansConfiguration.getAccountScope(), ACCOUNTSCOPE_BINDING);
-            protocolMarshaller.marshall(sageMakerSavingsPlansConfiguration.getHourlyCommitment(), HOURLYCOMMITMENT_BINDING);
-            protocolMarshaller.marshall(sageMakerSavingsPlansConfiguration.getPaymentOption(), PAYMENTOPTION_BINDING);
             protocolMarshaller.marshall(sageMakerSavingsPlansConfiguration.getTerm(), TERM_BINDING);
+            protocolMarshaller.marshall(sageMakerSavingsPlansConfiguration.getPaymentOption(), PAYMENTOPTION_BINDING);
+            protocolMarshaller.marshall(sageMakerSavingsPlansConfiguration.getHourlyCommitment(), HOURLYCOMMITMENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

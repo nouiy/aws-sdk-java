@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SavingsPlansPricingMarshaller {
 
-    private static final MarshallingInfo<Double> ESTIMATEDMONTHLYCOMMITMENT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedMonthlyCommitment").build();
-    private static final MarshallingInfo<Double> ESTIMATEDONDEMANDCOST_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedOnDemandCost").build();
     private static final MarshallingInfo<Double> MONTHLYSAVINGSPLANSELIGIBLECOST_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("monthlySavingsPlansEligibleCost").build();
+    private static final MarshallingInfo<Double> ESTIMATEDMONTHLYCOMMITMENT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedMonthlyCommitment").build();
     private static final MarshallingInfo<Double> SAVINGSPERCENTAGE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsPercentage").build();
+    private static final MarshallingInfo<Double> ESTIMATEDONDEMANDCOST_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedOnDemandCost").build();
 
     private static final SavingsPlansPricingMarshaller instance = new SavingsPlansPricingMarshaller();
 
@@ -52,10 +52,10 @@ public class SavingsPlansPricingMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(savingsPlansPricing.getEstimatedMonthlyCommitment(), ESTIMATEDMONTHLYCOMMITMENT_BINDING);
-            protocolMarshaller.marshall(savingsPlansPricing.getEstimatedOnDemandCost(), ESTIMATEDONDEMANDCOST_BINDING);
             protocolMarshaller.marshall(savingsPlansPricing.getMonthlySavingsPlansEligibleCost(), MONTHLYSAVINGSPLANSELIGIBLECOST_BINDING);
+            protocolMarshaller.marshall(savingsPlansPricing.getEstimatedMonthlyCommitment(), ESTIMATEDMONTHLYCOMMITMENT_BINDING);
             protocolMarshaller.marshall(savingsPlansPricing.getSavingsPercentage(), SAVINGSPERCENTAGE_BINDING);
+            protocolMarshaller.marshall(savingsPlansPricing.getEstimatedOnDemandCost(), ESTIMATEDONDEMANDCOST_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -34,11 +34,6 @@ public class DeleteRecommendationPreferencesRequest extends com.amazonaws.Amazon
      * groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an Auto Scaling
      * group.
      * </p>
-     * <note>
-     * <p>
-     * The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     * </p>
-     * </note>
      */
     private String resourceType;
     /**
@@ -69,11 +64,6 @@ public class DeleteRecommendationPreferencesRequest extends com.amazonaws.Amazon
      * groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an Auto Scaling
      * group.
      * </p>
-     * <note>
-     * <p>
-     * The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     * </p>
-     * </note>
      * 
      * @param resourceType
      *        The target resource type of the recommendation preference to delete.</p>
@@ -81,11 +71,6 @@ public class DeleteRecommendationPreferencesRequest extends com.amazonaws.Amazon
      *        The <code>Ec2Instance</code> option encompasses standalone instances and instances that are part of Auto
      *        Scaling groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an
      *        Auto Scaling group.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     *        </p>
      * @see ResourceType
      */
 
@@ -102,22 +87,12 @@ public class DeleteRecommendationPreferencesRequest extends com.amazonaws.Amazon
      * groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an Auto Scaling
      * group.
      * </p>
-     * <note>
-     * <p>
-     * The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     * </p>
-     * </note>
      * 
      * @return The target resource type of the recommendation preference to delete.</p>
      *         <p>
      *         The <code>Ec2Instance</code> option encompasses standalone instances and instances that are part of Auto
      *         Scaling groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an
      *         Auto Scaling group.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     *         </p>
      * @see ResourceType
      */
 
@@ -134,11 +109,6 @@ public class DeleteRecommendationPreferencesRequest extends com.amazonaws.Amazon
      * groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an Auto Scaling
      * group.
      * </p>
-     * <note>
-     * <p>
-     * The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     * </p>
-     * </note>
      * 
      * @param resourceType
      *        The target resource type of the recommendation preference to delete.</p>
@@ -146,11 +116,6 @@ public class DeleteRecommendationPreferencesRequest extends com.amazonaws.Amazon
      *        The <code>Ec2Instance</code> option encompasses standalone instances and instances that are part of Auto
      *        Scaling groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an
      *        Auto Scaling group.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -169,11 +134,6 @@ public class DeleteRecommendationPreferencesRequest extends com.amazonaws.Amazon
      * groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an Auto Scaling
      * group.
      * </p>
-     * <note>
-     * <p>
-     * The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     * </p>
-     * </note>
      * 
      * @param resourceType
      *        The target resource type of the recommendation preference to delete.</p>
@@ -181,11 +141,6 @@ public class DeleteRecommendationPreferencesRequest extends com.amazonaws.Amazon
      *        The <code>Ec2Instance</code> option encompasses standalone instances and instances that are part of Auto
      *        Scaling groups. The <code>AutoScalingGroup</code> option encompasses only instances that are part of an
      *        Auto Scaling group.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        The valid values for this parameter are <code>Ec2Instance</code> and <code>AutoScalingGroup</code>.
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

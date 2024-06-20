@@ -42,6 +42,12 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
     private String hubContentArn;
     /**
      * <p>
+     * The ARN of the public hub content.
+     * </p>
+     */
+    private String sageMakerPublicHubContentArn;
+    /**
+     * <p>
      * The version of the hub content.
      * </p>
      */
@@ -72,6 +78,12 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
     private String hubContentDescription;
     /**
      * <p>
+     * The support status of the hub content.
+     * </p>
+     */
+    private String supportStatus;
+    /**
+     * <p>
      * The searchable keywords for the hub content.
      * </p>
      */
@@ -88,6 +100,12 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date creationTime;
+    /**
+     * <p>
+     * The date and time when the hub content was originally created, before any updates or revisions.
+     * </p>
+     */
+    private java.util.Date originalCreationTime;
 
     /**
      * <p>
@@ -166,6 +184,46 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
 
     public HubContentInfo withHubContentArn(String hubContentArn) {
         setHubContentArn(hubContentArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public hub content.
+     * </p>
+     * 
+     * @param sageMakerPublicHubContentArn
+     *        The ARN of the public hub content.
+     */
+
+    public void setSageMakerPublicHubContentArn(String sageMakerPublicHubContentArn) {
+        this.sageMakerPublicHubContentArn = sageMakerPublicHubContentArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public hub content.
+     * </p>
+     * 
+     * @return The ARN of the public hub content.
+     */
+
+    public String getSageMakerPublicHubContentArn() {
+        return this.sageMakerPublicHubContentArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public hub content.
+     * </p>
+     * 
+     * @param sageMakerPublicHubContentArn
+     *        The ARN of the public hub content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HubContentInfo withSageMakerPublicHubContentArn(String sageMakerPublicHubContentArn) {
+        setSageMakerPublicHubContentArn(sageMakerPublicHubContentArn);
         return this;
     }
 
@@ -390,6 +448,65 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The support status of the hub content.
+     * </p>
+     * 
+     * @param supportStatus
+     *        The support status of the hub content.
+     * @see HubContentSupportStatus
+     */
+
+    public void setSupportStatus(String supportStatus) {
+        this.supportStatus = supportStatus;
+    }
+
+    /**
+     * <p>
+     * The support status of the hub content.
+     * </p>
+     * 
+     * @return The support status of the hub content.
+     * @see HubContentSupportStatus
+     */
+
+    public String getSupportStatus() {
+        return this.supportStatus;
+    }
+
+    /**
+     * <p>
+     * The support status of the hub content.
+     * </p>
+     * 
+     * @param supportStatus
+     *        The support status of the hub content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HubContentSupportStatus
+     */
+
+    public HubContentInfo withSupportStatus(String supportStatus) {
+        setSupportStatus(supportStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The support status of the hub content.
+     * </p>
+     * 
+     * @param supportStatus
+     *        The support status of the hub content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HubContentSupportStatus
+     */
+
+    public HubContentInfo withSupportStatus(HubContentSupportStatus supportStatus) {
+        this.supportStatus = supportStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The searchable keywords for the hub content.
      * </p>
      * 
@@ -558,6 +675,46 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The date and time when the hub content was originally created, before any updates or revisions.
+     * </p>
+     * 
+     * @param originalCreationTime
+     *        The date and time when the hub content was originally created, before any updates or revisions.
+     */
+
+    public void setOriginalCreationTime(java.util.Date originalCreationTime) {
+        this.originalCreationTime = originalCreationTime;
+    }
+
+    /**
+     * <p>
+     * The date and time when the hub content was originally created, before any updates or revisions.
+     * </p>
+     * 
+     * @return The date and time when the hub content was originally created, before any updates or revisions.
+     */
+
+    public java.util.Date getOriginalCreationTime() {
+        return this.originalCreationTime;
+    }
+
+    /**
+     * <p>
+     * The date and time when the hub content was originally created, before any updates or revisions.
+     * </p>
+     * 
+     * @param originalCreationTime
+     *        The date and time when the hub content was originally created, before any updates or revisions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HubContentInfo withOriginalCreationTime(java.util.Date originalCreationTime) {
+        setOriginalCreationTime(originalCreationTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -573,6 +730,8 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
             sb.append("HubContentName: ").append(getHubContentName()).append(",");
         if (getHubContentArn() != null)
             sb.append("HubContentArn: ").append(getHubContentArn()).append(",");
+        if (getSageMakerPublicHubContentArn() != null)
+            sb.append("SageMakerPublicHubContentArn: ").append(getSageMakerPublicHubContentArn()).append(",");
         if (getHubContentVersion() != null)
             sb.append("HubContentVersion: ").append(getHubContentVersion()).append(",");
         if (getHubContentType() != null)
@@ -583,12 +742,16 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
             sb.append("HubContentDisplayName: ").append(getHubContentDisplayName()).append(",");
         if (getHubContentDescription() != null)
             sb.append("HubContentDescription: ").append(getHubContentDescription()).append(",");
+        if (getSupportStatus() != null)
+            sb.append("SupportStatus: ").append(getSupportStatus()).append(",");
         if (getHubContentSearchKeywords() != null)
             sb.append("HubContentSearchKeywords: ").append(getHubContentSearchKeywords()).append(",");
         if (getHubContentStatus() != null)
             sb.append("HubContentStatus: ").append(getHubContentStatus()).append(",");
         if (getCreationTime() != null)
-            sb.append("CreationTime: ").append(getCreationTime());
+            sb.append("CreationTime: ").append(getCreationTime()).append(",");
+        if (getOriginalCreationTime() != null)
+            sb.append("OriginalCreationTime: ").append(getOriginalCreationTime());
         sb.append("}");
         return sb.toString();
     }
@@ -611,6 +774,10 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHubContentArn() != null && other.getHubContentArn().equals(this.getHubContentArn()) == false)
             return false;
+        if (other.getSageMakerPublicHubContentArn() == null ^ this.getSageMakerPublicHubContentArn() == null)
+            return false;
+        if (other.getSageMakerPublicHubContentArn() != null && other.getSageMakerPublicHubContentArn().equals(this.getSageMakerPublicHubContentArn()) == false)
+            return false;
         if (other.getHubContentVersion() == null ^ this.getHubContentVersion() == null)
             return false;
         if (other.getHubContentVersion() != null && other.getHubContentVersion().equals(this.getHubContentVersion()) == false)
@@ -631,6 +798,10 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHubContentDescription() != null && other.getHubContentDescription().equals(this.getHubContentDescription()) == false)
             return false;
+        if (other.getSupportStatus() == null ^ this.getSupportStatus() == null)
+            return false;
+        if (other.getSupportStatus() != null && other.getSupportStatus().equals(this.getSupportStatus()) == false)
+            return false;
         if (other.getHubContentSearchKeywords() == null ^ this.getHubContentSearchKeywords() == null)
             return false;
         if (other.getHubContentSearchKeywords() != null && other.getHubContentSearchKeywords().equals(this.getHubContentSearchKeywords()) == false)
@@ -643,6 +814,10 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
             return false;
+        if (other.getOriginalCreationTime() == null ^ this.getOriginalCreationTime() == null)
+            return false;
+        if (other.getOriginalCreationTime() != null && other.getOriginalCreationTime().equals(this.getOriginalCreationTime()) == false)
+            return false;
         return true;
     }
 
@@ -653,14 +828,17 @@ public class HubContentInfo implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getHubContentName() == null) ? 0 : getHubContentName().hashCode());
         hashCode = prime * hashCode + ((getHubContentArn() == null) ? 0 : getHubContentArn().hashCode());
+        hashCode = prime * hashCode + ((getSageMakerPublicHubContentArn() == null) ? 0 : getSageMakerPublicHubContentArn().hashCode());
         hashCode = prime * hashCode + ((getHubContentVersion() == null) ? 0 : getHubContentVersion().hashCode());
         hashCode = prime * hashCode + ((getHubContentType() == null) ? 0 : getHubContentType().hashCode());
         hashCode = prime * hashCode + ((getDocumentSchemaVersion() == null) ? 0 : getDocumentSchemaVersion().hashCode());
         hashCode = prime * hashCode + ((getHubContentDisplayName() == null) ? 0 : getHubContentDisplayName().hashCode());
         hashCode = prime * hashCode + ((getHubContentDescription() == null) ? 0 : getHubContentDescription().hashCode());
+        hashCode = prime * hashCode + ((getSupportStatus() == null) ? 0 : getSupportStatus().hashCode());
         hashCode = prime * hashCode + ((getHubContentSearchKeywords() == null) ? 0 : getHubContentSearchKeywords().hashCode());
         hashCode = prime * hashCode + ((getHubContentStatus() == null) ? 0 : getHubContentStatus().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getOriginalCreationTime() == null) ? 0 : getOriginalCreationTime().hashCode());
         return hashCode;
     }
 

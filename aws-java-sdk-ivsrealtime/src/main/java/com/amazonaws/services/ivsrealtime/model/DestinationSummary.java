@@ -30,16 +30,16 @@ public class DestinationSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     */
-    private java.util.Date endTime;
-    /**
-     * <p>
      * Unique identifier for this destination, assigned by IVS.
      * </p>
      */
     private String id;
+    /**
+     * <p>
+     * State of the Composition Destination.
+     * </p>
+     */
+    private String state;
     /**
      * <p>
      * UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
@@ -48,53 +48,10 @@ public class DestinationSummary implements Serializable, Cloneable, StructuredPo
     private java.util.Date startTime;
     /**
      * <p>
-     * State of the Composition Destination.
-     * </p>
-     */
-    private String state;
-
-    /**
-     * <p>
      * UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
      * </p>
-     * 
-     * @param endTime
-     *        UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
      */
-
-    public void setEndTime(java.util.Date endTime) {
-        this.endTime = endTime;
-    }
-
-    /**
-     * <p>
-     * UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @return UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *         string</i>.
-     */
-
-    public java.util.Date getEndTime() {
-        return this.endTime;
-    }
-
-    /**
-     * <p>
-     * UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param endTime
-     *        UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DestinationSummary withEndTime(java.util.Date endTime) {
-        setEndTime(endTime);
-        return this;
-    }
+    private java.util.Date endTime;
 
     /**
      * <p>
@@ -133,49 +90,6 @@ public class DestinationSummary implements Serializable, Cloneable, StructuredPo
 
     public DestinationSummary withId(String id) {
         setId(id);
-        return this;
-    }
-
-    /**
-     * <p>
-     * UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param startTime
-     *        UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
-     */
-
-    public void setStartTime(java.util.Date startTime) {
-        this.startTime = startTime;
-    }
-
-    /**
-     * <p>
-     * UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @return UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *         string</i>.
-     */
-
-    public java.util.Date getStartTime() {
-        return this.startTime;
-    }
-
-    /**
-     * <p>
-     * UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param startTime
-     *        UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DestinationSummary withStartTime(java.util.Date startTime) {
-        setStartTime(startTime);
         return this;
     }
 
@@ -239,6 +153,92 @@ public class DestinationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param startTime
+     *        UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     */
+
+    public void setStartTime(java.util.Date startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * <p>
+     * UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @return UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *         string</i>.
+     */
+
+    public java.util.Date getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * <p>
+     * UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param startTime
+     *        UTC time of the destination start. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationSummary withStartTime(java.util.Date startTime) {
+        setStartTime(startTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param endTime
+     *        UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     */
+
+    public void setEndTime(java.util.Date endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * <p>
+     * UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @return UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *         string</i>.
+     */
+
+    public java.util.Date getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * <p>
+     * UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param endTime
+     *        UTC time of the destination end. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationSummary withEndTime(java.util.Date endTime) {
+        setEndTime(endTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -250,14 +250,14 @@ public class DestinationSummary implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEndTime() != null)
-            sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
+        if (getState() != null)
+            sb.append("State: ").append(getState()).append(",");
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
-        if (getState() != null)
-            sb.append("State: ").append(getState());
+        if (getEndTime() != null)
+            sb.append("EndTime: ").append(getEndTime());
         sb.append("}");
         return sb.toString();
     }
@@ -272,21 +272,21 @@ public class DestinationSummary implements Serializable, Cloneable, StructuredPo
         if (obj instanceof DestinationSummary == false)
             return false;
         DestinationSummary other = (DestinationSummary) obj;
-        if (other.getEndTime() == null ^ this.getEndTime() == null)
-            return false;
-        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
-            return false;
         if (other.getId() == null ^ this.getId() == null)
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
+            return false;
+        if (other.getState() == null ^ this.getState() == null)
+            return false;
+        if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
         if (other.getStartTime() == null ^ this.getStartTime() == null)
             return false;
         if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
             return false;
-        if (other.getState() == null ^ this.getState() == null)
+        if (other.getEndTime() == null ^ this.getEndTime() == null)
             return false;
-        if (other.getState() != null && other.getState().equals(this.getState()) == false)
+        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
             return false;
         return true;
     }
@@ -296,10 +296,10 @@ public class DestinationSummary implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
-        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
+        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         return hashCode;
     }
 

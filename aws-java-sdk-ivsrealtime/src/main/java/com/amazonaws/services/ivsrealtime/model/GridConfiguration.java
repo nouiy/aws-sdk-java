@@ -39,12 +39,6 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
     private String featuredParticipantAttribute;
     /**
      * <p>
-     * Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
-     * </p>
-     */
-    private Integer gridGap;
-    /**
-     * <p>
      * Determines whether to omit participants with stopped video in the composition. Default: <code>false</code>.
      * </p>
      */
@@ -63,6 +57,12 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String videoFillMode;
+    /**
+     * <p>
+     * Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
+     * </p>
+     */
+    private Integer gridGap;
 
     /**
      * <p>
@@ -110,46 +110,6 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     public GridConfiguration withFeaturedParticipantAttribute(String featuredParticipantAttribute) {
         setFeaturedParticipantAttribute(featuredParticipantAttribute);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
-     * </p>
-     * 
-     * @param gridGap
-     *        Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
-     */
-
-    public void setGridGap(Integer gridGap) {
-        this.gridGap = gridGap;
-    }
-
-    /**
-     * <p>
-     * Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
-     * </p>
-     * 
-     * @return Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
-     */
-
-    public Integer getGridGap() {
-        return this.gridGap;
-    }
-
-    /**
-     * <p>
-     * Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
-     * </p>
-     * 
-     * @param gridGap
-     *        Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GridConfiguration withGridGap(Integer gridGap) {
-        setGridGap(gridGap);
         return this;
     }
 
@@ -344,6 +304,46 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
+     * </p>
+     * 
+     * @param gridGap
+     *        Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
+     */
+
+    public void setGridGap(Integer gridGap) {
+        this.gridGap = gridGap;
+    }
+
+    /**
+     * <p>
+     * Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
+     * </p>
+     * 
+     * @return Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
+     */
+
+    public Integer getGridGap() {
+        return this.gridGap;
+    }
+
+    /**
+     * <p>
+     * Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
+     * </p>
+     * 
+     * @param gridGap
+     *        Specifies the spacing between participant tiles in pixels. Default: <code>2</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GridConfiguration withGridGap(Integer gridGap) {
+        setGridGap(gridGap);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -357,14 +357,14 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
         sb.append("{");
         if (getFeaturedParticipantAttribute() != null)
             sb.append("FeaturedParticipantAttribute: ").append(getFeaturedParticipantAttribute()).append(",");
-        if (getGridGap() != null)
-            sb.append("GridGap: ").append(getGridGap()).append(",");
         if (getOmitStoppedVideo() != null)
             sb.append("OmitStoppedVideo: ").append(getOmitStoppedVideo()).append(",");
         if (getVideoAspectRatio() != null)
             sb.append("VideoAspectRatio: ").append(getVideoAspectRatio()).append(",");
         if (getVideoFillMode() != null)
-            sb.append("VideoFillMode: ").append(getVideoFillMode());
+            sb.append("VideoFillMode: ").append(getVideoFillMode()).append(",");
+        if (getGridGap() != null)
+            sb.append("GridGap: ").append(getGridGap());
         sb.append("}");
         return sb.toString();
     }
@@ -383,10 +383,6 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getFeaturedParticipantAttribute() != null && other.getFeaturedParticipantAttribute().equals(this.getFeaturedParticipantAttribute()) == false)
             return false;
-        if (other.getGridGap() == null ^ this.getGridGap() == null)
-            return false;
-        if (other.getGridGap() != null && other.getGridGap().equals(this.getGridGap()) == false)
-            return false;
         if (other.getOmitStoppedVideo() == null ^ this.getOmitStoppedVideo() == null)
             return false;
         if (other.getOmitStoppedVideo() != null && other.getOmitStoppedVideo().equals(this.getOmitStoppedVideo()) == false)
@@ -399,6 +395,10 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getVideoFillMode() != null && other.getVideoFillMode().equals(this.getVideoFillMode()) == false)
             return false;
+        if (other.getGridGap() == null ^ this.getGridGap() == null)
+            return false;
+        if (other.getGridGap() != null && other.getGridGap().equals(this.getGridGap()) == false)
+            return false;
         return true;
     }
 
@@ -408,10 +408,10 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFeaturedParticipantAttribute() == null) ? 0 : getFeaturedParticipantAttribute().hashCode());
-        hashCode = prime * hashCode + ((getGridGap() == null) ? 0 : getGridGap().hashCode());
         hashCode = prime * hashCode + ((getOmitStoppedVideo() == null) ? 0 : getOmitStoppedVideo().hashCode());
         hashCode = prime * hashCode + ((getVideoAspectRatio() == null) ? 0 : getVideoAspectRatio().hashCode());
         hashCode = prime * hashCode + ((getVideoFillMode() == null) ? 0 : getVideoFillMode().hashCode());
+        hashCode = prime * hashCode + ((getGridGap() == null) ? 0 : getGridGap().hashCode());
         return hashCode;
     }
 

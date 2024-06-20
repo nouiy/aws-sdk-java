@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ReservedInstancesPricingMarshaller {
 
-    private static final MarshallingInfo<Double> ESTIMATEDMONTHLYAMORTIZEDRESERVATIONCOST_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedMonthlyAmortizedReservationCost").build();
     private static final MarshallingInfo<Double> ESTIMATEDONDEMANDCOST_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedOnDemandCost").build();
     private static final MarshallingInfo<Double> MONTHLYRESERVATIONELIGIBLECOST_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("monthlyReservationEligibleCost").build();
     private static final MarshallingInfo<Double> SAVINGSPERCENTAGE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsPercentage").build();
+    private static final MarshallingInfo<Double> ESTIMATEDMONTHLYAMORTIZEDRESERVATIONCOST_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedMonthlyAmortizedReservationCost").build();
 
     private static final ReservedInstancesPricingMarshaller instance = new ReservedInstancesPricingMarshaller();
 
@@ -52,11 +52,11 @@ public class ReservedInstancesPricingMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(reservedInstancesPricing.getEstimatedMonthlyAmortizedReservationCost(),
-                    ESTIMATEDMONTHLYAMORTIZEDRESERVATIONCOST_BINDING);
             protocolMarshaller.marshall(reservedInstancesPricing.getEstimatedOnDemandCost(), ESTIMATEDONDEMANDCOST_BINDING);
             protocolMarshaller.marshall(reservedInstancesPricing.getMonthlyReservationEligibleCost(), MONTHLYRESERVATIONELIGIBLECOST_BINDING);
             protocolMarshaller.marshall(reservedInstancesPricing.getSavingsPercentage(), SAVINGSPERCENTAGE_BINDING);
+            protocolMarshaller.marshall(reservedInstancesPricing.getEstimatedMonthlyAmortizedReservationCost(),
+                    ESTIMATEDMONTHLYAMORTIZEDRESERVATIONCOST_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

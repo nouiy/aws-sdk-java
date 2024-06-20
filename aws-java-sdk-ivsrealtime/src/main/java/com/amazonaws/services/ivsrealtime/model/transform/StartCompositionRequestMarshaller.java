@@ -31,15 +31,15 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StartCompositionRequestMarshaller {
 
-    private static final MarshallingInfo<List> DESTINATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("destinations").build();
+    private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("stageArn").build();
     private static final MarshallingInfo<String> IDEMPOTENCYTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idempotencyToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<StructuredPojo> LAYOUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("layout").build();
-    private static final MarshallingInfo<String> STAGEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("stageArn").build();
+    private static final MarshallingInfo<List> DESTINATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("destinations").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -59,10 +59,10 @@ public class StartCompositionRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(startCompositionRequest.getDestinations(), DESTINATIONS_BINDING);
+            protocolMarshaller.marshall(startCompositionRequest.getStageArn(), STAGEARN_BINDING);
             protocolMarshaller.marshall(startCompositionRequest.getIdempotencyToken(), IDEMPOTENCYTOKEN_BINDING);
             protocolMarshaller.marshall(startCompositionRequest.getLayout(), LAYOUT_BINDING);
-            protocolMarshaller.marshall(startCompositionRequest.getStageArn(), STAGEARN_BINDING);
+            protocolMarshaller.marshall(startCompositionRequest.getDestinations(), DESTINATIONS_BINDING);
             protocolMarshaller.marshall(startCompositionRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

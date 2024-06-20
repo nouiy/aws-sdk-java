@@ -30,6 +30,8 @@ public class AutoScalingGroupRecommendationOptionMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuration").build();
+    private static final MarshallingInfo<StructuredPojo> INSTANCEGPUINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceGpuInfo").build();
     private static final MarshallingInfo<List> PROJECTEDUTILIZATIONMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("projectedUtilizationMetrics").build();
     private static final MarshallingInfo<Double> PERFORMANCERISK_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
@@ -38,12 +40,10 @@ public class AutoScalingGroupRecommendationOptionMarshaller {
             .marshallLocationName("rank").build();
     private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunity").build();
-    private static final MarshallingInfo<String> MIGRATIONEFFORT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("migrationEffort").build();
-    private static final MarshallingInfo<StructuredPojo> INSTANCEGPUINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceGpuInfo").build();
     private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITYAFTERDISCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunityAfterDiscounts").build();
+    private static final MarshallingInfo<String> MIGRATIONEFFORT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("migrationEffort").build();
 
     private static final AutoScalingGroupRecommendationOptionMarshaller instance = new AutoScalingGroupRecommendationOptionMarshaller();
 
@@ -62,13 +62,13 @@ public class AutoScalingGroupRecommendationOptionMarshaller {
 
         try {
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getConfiguration(), CONFIGURATION_BINDING);
+            protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getInstanceGpuInfo(), INSTANCEGPUINFO_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getProjectedUtilizationMetrics(), PROJECTEDUTILIZATIONMETRICS_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getPerformanceRisk(), PERFORMANCERISK_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getRank(), RANK_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getSavingsOpportunity(), SAVINGSOPPORTUNITY_BINDING);
-            protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getMigrationEffort(), MIGRATIONEFFORT_BINDING);
-            protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getInstanceGpuInfo(), INSTANCEGPUINFO_BINDING);
             protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getSavingsOpportunityAfterDiscounts(), SAVINGSOPPORTUNITYAFTERDISCOUNTS_BINDING);
+            protocolMarshaller.marshall(autoScalingGroupRecommendationOption.getMigrationEffort(), MIGRATIONEFFORT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EbsVolumeConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> ATTACHMENTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attachmentState").build();
-    private static final MarshallingInfo<StructuredPojo> PERFORMANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("performance").build();
     private static final MarshallingInfo<StructuredPojo> STORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("storage").build();
+    private static final MarshallingInfo<StructuredPojo> PERFORMANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("performance").build();
+    private static final MarshallingInfo<String> ATTACHMENTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attachmentState").build();
 
     private static final EbsVolumeConfigurationMarshaller instance = new EbsVolumeConfigurationMarshaller();
 
@@ -50,9 +50,9 @@ public class EbsVolumeConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(ebsVolumeConfiguration.getAttachmentState(), ATTACHMENTSTATE_BINDING);
-            protocolMarshaller.marshall(ebsVolumeConfiguration.getPerformance(), PERFORMANCE_BINDING);
             protocolMarshaller.marshall(ebsVolumeConfiguration.getStorage(), STORAGE_BINDING);
+            protocolMarshaller.marshall(ebsVolumeConfiguration.getPerformance(), PERFORMANCE_BINDING);
+            protocolMarshaller.marshall(ebsVolumeConfiguration.getAttachmentState(), ATTACHMENTSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -48,25 +48,6 @@ public class ParticipantTokenJsonUnmarshaller implements Unmarshaller<Participan
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("attributes", targetDepth)) {
-                    context.nextToken();
-                    participantToken.setAttributes(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
-                            .getUnmarshaller(String.class)).unmarshall(context));
-                }
-                if (context.testExpression("capabilities", targetDepth)) {
-                    context.nextToken();
-                    participantToken.setCapabilities(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
-                if (context.testExpression("duration", targetDepth)) {
-                    context.nextToken();
-                    participantToken.setDuration(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("expirationTime", targetDepth)) {
-                    context.nextToken();
-                    participantToken.setExpirationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("participantId", targetDepth)) {
                     context.nextToken();
                     participantToken.setParticipantId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -78,6 +59,25 @@ public class ParticipantTokenJsonUnmarshaller implements Unmarshaller<Participan
                 if (context.testExpression("userId", targetDepth)) {
                     context.nextToken();
                     participantToken.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("attributes", targetDepth)) {
+                    context.nextToken();
+                    participantToken.setAttributes(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
+                if (context.testExpression("duration", targetDepth)) {
+                    context.nextToken();
+                    participantToken.setDuration(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("capabilities", targetDepth)) {
+                    context.nextToken();
+                    participantToken.setCapabilities(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("expirationTime", targetDepth)) {
+                    context.nextToken();
+                    participantToken.setExpirationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

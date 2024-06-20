@@ -53,9 +53,25 @@ public class ElastiCacheReservedInstancesConfigurationJsonUnmarshaller implement
                     context.nextToken();
                     elastiCacheReservedInstancesConfiguration.setAccountScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("currentGeneration", targetDepth)) {
+                if (context.testExpression("service", targetDepth)) {
                     context.nextToken();
-                    elastiCacheReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
+                    elastiCacheReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("normalizedUnitsToPurchase", targetDepth)) {
+                    context.nextToken();
+                    elastiCacheReservedInstancesConfiguration.setNormalizedUnitsToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("term", targetDepth)) {
+                    context.nextToken();
+                    elastiCacheReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("paymentOption", targetDepth)) {
+                    context.nextToken();
+                    elastiCacheReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
+                    context.nextToken();
+                    elastiCacheReservedInstancesConfiguration.setNumberOfInstancesToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("instanceFamily", targetDepth)) {
                     context.nextToken();
@@ -65,41 +81,25 @@ public class ElastiCacheReservedInstancesConfigurationJsonUnmarshaller implement
                     context.nextToken();
                     elastiCacheReservedInstancesConfiguration.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
-                    context.nextToken();
-                    elastiCacheReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("normalizedUnitsToPurchase", targetDepth)) {
-                    context.nextToken();
-                    elastiCacheReservedInstancesConfiguration.setNormalizedUnitsToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("numberOfInstancesToPurchase", targetDepth)) {
-                    context.nextToken();
-                    elastiCacheReservedInstancesConfiguration.setNumberOfInstancesToPurchase(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("paymentOption", targetDepth)) {
-                    context.nextToken();
-                    elastiCacheReservedInstancesConfiguration.setPaymentOption(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("reservedInstancesRegion", targetDepth)) {
                     context.nextToken();
                     elastiCacheReservedInstancesConfiguration.setReservedInstancesRegion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("service", targetDepth)) {
+                if (context.testExpression("currentGeneration", targetDepth)) {
                     context.nextToken();
-                    elastiCacheReservedInstancesConfiguration.setService(context.getUnmarshaller(String.class).unmarshall(context));
+                    elastiCacheReservedInstancesConfiguration.setCurrentGeneration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("sizeFlexEligible", targetDepth)) {
                     context.nextToken();
                     elastiCacheReservedInstancesConfiguration.setSizeFlexEligible(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("term", targetDepth)) {
-                    context.nextToken();
-                    elastiCacheReservedInstancesConfiguration.setTerm(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("upfrontCost", targetDepth)) {
                     context.nextToken();
                     elastiCacheReservedInstancesConfiguration.setUpfrontCost(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("monthlyRecurringCost", targetDepth)) {
+                    context.nextToken();
+                    elastiCacheReservedInstancesConfiguration.setMonthlyRecurringCost(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

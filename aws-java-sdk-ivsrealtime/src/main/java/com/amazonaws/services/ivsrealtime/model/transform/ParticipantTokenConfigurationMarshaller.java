@@ -29,14 +29,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ParticipantTokenConfigurationMarshaller {
 
-    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("attributes").build();
-    private static final MarshallingInfo<List> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("capabilities").build();
     private static final MarshallingInfo<Integer> DURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("duration").build();
     private static final MarshallingInfo<String> USERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("userId").build();
+    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("attributes").build();
+    private static final MarshallingInfo<List> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("capabilities").build();
 
     private static final ParticipantTokenConfigurationMarshaller instance = new ParticipantTokenConfigurationMarshaller();
 
@@ -54,10 +54,10 @@ public class ParticipantTokenConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(participantTokenConfiguration.getAttributes(), ATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(participantTokenConfiguration.getCapabilities(), CAPABILITIES_BINDING);
             protocolMarshaller.marshall(participantTokenConfiguration.getDuration(), DURATION_BINDING);
             protocolMarshaller.marshall(participantTokenConfiguration.getUserId(), USERID_BINDING);
+            protocolMarshaller.marshall(participantTokenConfiguration.getAttributes(), ATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(participantTokenConfiguration.getCapabilities(), CAPABILITIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

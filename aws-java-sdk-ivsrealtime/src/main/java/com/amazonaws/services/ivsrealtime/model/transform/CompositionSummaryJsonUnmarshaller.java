@@ -52,23 +52,15 @@ public class CompositionSummaryJsonUnmarshaller implements Unmarshaller<Composit
                     context.nextToken();
                     compositionSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("stageArn", targetDepth)) {
+                    context.nextToken();
+                    compositionSummary.setStageArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("destinations", targetDepth)) {
                     context.nextToken();
                     compositionSummary.setDestinations(new ListUnmarshaller<DestinationSummary>(DestinationSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("endTime", targetDepth)) {
-                    context.nextToken();
-                    compositionSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("stageArn", targetDepth)) {
-                    context.nextToken();
-                    compositionSummary.setStageArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("startTime", targetDepth)) {
-                    context.nextToken();
-                    compositionSummary.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();
@@ -79,6 +71,14 @@ public class CompositionSummaryJsonUnmarshaller implements Unmarshaller<Composit
                     compositionSummary
                             .setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                                     .unmarshall(context));
+                }
+                if (context.testExpression("startTime", targetDepth)) {
+                    context.nextToken();
+                    compositionSummary.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("endTime", targetDepth)) {
+                    context.nextToken();
+                    compositionSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

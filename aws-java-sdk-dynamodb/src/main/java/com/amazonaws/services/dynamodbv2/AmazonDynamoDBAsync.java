@@ -680,13 +680,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -774,13 +779,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -1442,13 +1452,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -1467,13 +1482,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -1497,13 +1517,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -1523,13 +1548,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -2534,13 +2564,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -2559,13 +2594,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -4008,13 +4048,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important> <note>
@@ -4068,13 +4113,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important> <note>
@@ -4131,13 +4181,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>
@@ -4157,13 +4212,18 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <important>
      * <p>
-     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
-     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
-     * determine which version you are using, see <a
+     * This documentation is for version 2017.11.29 (Legacy) of global tables, which should be avoided for new global
+     * tables. Customers should use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Global Tables version
+     * 2019.11.21 (Current)</a> when possible, because it provides greater flexibility, higher efficiency, and consumes
+     * less write capacity than 2017.11.29 (Legacy).
+     * </p>
+     * <p>
+     * To determine which version you're using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
-     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
-     * 2019.11.21 (Current), see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * >Determining the global table version you are using</a>. To update existing global tables from version 2017.11.29
+     * (Legacy) to version 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html">Upgrading
      * global tables</a>.
      * </p>
      * </important>

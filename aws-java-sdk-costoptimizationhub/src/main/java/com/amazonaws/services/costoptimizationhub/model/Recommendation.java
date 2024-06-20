@@ -30,28 +30,34 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The ID for the recommendation.
+     * </p>
+     */
+    private String recommendationId;
+    /**
+     * <p>
      * The account that the recommendation is for.
      * </p>
      */
     private String accountId;
     /**
      * <p>
-     * The type of tasks that can be carried out by this action.
+     * The Amazon Web Services Region of the resource.
      * </p>
      */
-    private String actionType;
+    private String region;
     /**
      * <p>
-     * The currency code used for the recommendation.
+     * The resource ID for the recommendation.
      * </p>
      */
-    private String currencyCode;
+    private String resourceId;
     /**
      * <p>
-     * Describes the current resource.
+     * The Amazon Resource Name (ARN) for the recommendation.
      * </p>
      */
-    private String currentResourceSummary;
+    private String resourceArn;
     /**
      * <p>
      * The current resource type.
@@ -60,10 +66,10 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
     private String currentResourceType;
     /**
      * <p>
-     * The estimated monthly cost for the recommendation.
+     * The recommended resource type.
      * </p>
      */
-    private Double estimatedMonthlyCost;
+    private String recommendedResourceType;
     /**
      * <p>
      * The estimated monthly savings amount for the recommendation.
@@ -78,58 +84,23 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
     private Double estimatedSavingsPercentage;
     /**
      * <p>
+     * The estimated monthly cost of the current resource. For Reserved Instances and Savings Plans, it refers to the
+     * cost for eligible usage.
+     * </p>
+     */
+    private Double estimatedMonthlyCost;
+    /**
+     * <p>
+     * The currency code used for the recommendation.
+     * </p>
+     */
+    private String currencyCode;
+    /**
+     * <p>
      * The effort required to implement the recommendation.
      * </p>
      */
     private String implementationEffort;
-    /**
-     * <p>
-     * The time when the recommendation was last generated.
-     * </p>
-     */
-    private java.util.Date lastRefreshTimestamp;
-    /**
-     * <p>
-     * The ID for the recommendation.
-     * </p>
-     */
-    private String recommendationId;
-    /**
-     * <p>
-     * The lookback period that's used to generate the recommendation.
-     * </p>
-     */
-    private Integer recommendationLookbackPeriodInDays;
-    /**
-     * <p>
-     * Describes the recommended resource.
-     * </p>
-     */
-    private String recommendedResourceSummary;
-    /**
-     * <p>
-     * The recommended resource type.
-     * </p>
-     */
-    private String recommendedResourceType;
-    /**
-     * <p>
-     * The Amazon Web Services Region of the resource.
-     * </p>
-     */
-    private String region;
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) for the recommendation.
-     * </p>
-     */
-    private String resourceArn;
-    /**
-     * <p>
-     * The resource ID for the recommendation.
-     * </p>
-     */
-    private String resourceId;
     /**
      * <p>
      * Whether or not implementing the recommendation requires a restart.
@@ -138,10 +109,40 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
     private Boolean restartNeeded;
     /**
      * <p>
+     * The type of tasks that can be carried out by this action.
+     * </p>
+     */
+    private String actionType;
+    /**
+     * <p>
      * Whether or not implementing the recommendation can be rolled back.
      * </p>
      */
     private Boolean rollbackPossible;
+    /**
+     * <p>
+     * Describes the current resource.
+     * </p>
+     */
+    private String currentResourceSummary;
+    /**
+     * <p>
+     * Describes the recommended resource.
+     * </p>
+     */
+    private String recommendedResourceSummary;
+    /**
+     * <p>
+     * The time when the recommendation was last generated.
+     * </p>
+     */
+    private java.util.Date lastRefreshTimestamp;
+    /**
+     * <p>
+     * The lookback period that's used to generate the recommendation.
+     * </p>
+     */
+    private Integer recommendationLookbackPeriodInDays;
     /**
      * <p>
      * The source of the recommendation.
@@ -154,6 +155,46 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<Tag> tags;
+
+    /**
+     * <p>
+     * The ID for the recommendation.
+     * </p>
+     * 
+     * @param recommendationId
+     *        The ID for the recommendation.
+     */
+
+    public void setRecommendationId(String recommendationId) {
+        this.recommendationId = recommendationId;
+    }
+
+    /**
+     * <p>
+     * The ID for the recommendation.
+     * </p>
+     * 
+     * @return The ID for the recommendation.
+     */
+
+    public String getRecommendationId() {
+        return this.recommendationId;
+    }
+
+    /**
+     * <p>
+     * The ID for the recommendation.
+     * </p>
+     * 
+     * @param recommendationId
+     *        The ID for the recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withRecommendationId(String recommendationId) {
+        setRecommendationId(recommendationId);
+        return this;
+    }
 
     /**
      * <p>
@@ -197,121 +238,121 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of tasks that can be carried out by this action.
+     * The Amazon Web Services Region of the resource.
      * </p>
      * 
-     * @param actionType
-     *        The type of tasks that can be carried out by this action.
+     * @param region
+     *        The Amazon Web Services Region of the resource.
      */
 
-    public void setActionType(String actionType) {
-        this.actionType = actionType;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     /**
      * <p>
-     * The type of tasks that can be carried out by this action.
+     * The Amazon Web Services Region of the resource.
      * </p>
      * 
-     * @return The type of tasks that can be carried out by this action.
+     * @return The Amazon Web Services Region of the resource.
      */
 
-    public String getActionType() {
-        return this.actionType;
+    public String getRegion() {
+        return this.region;
     }
 
     /**
      * <p>
-     * The type of tasks that can be carried out by this action.
+     * The Amazon Web Services Region of the resource.
      * </p>
      * 
-     * @param actionType
-     *        The type of tasks that can be carried out by this action.
+     * @param region
+     *        The Amazon Web Services Region of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Recommendation withActionType(String actionType) {
-        setActionType(actionType);
+    public Recommendation withRegion(String region) {
+        setRegion(region);
         return this;
     }
 
     /**
      * <p>
-     * The currency code used for the recommendation.
+     * The resource ID for the recommendation.
      * </p>
      * 
-     * @param currencyCode
-     *        The currency code used for the recommendation.
+     * @param resourceId
+     *        The resource ID for the recommendation.
      */
 
-    public void setCurrencyCode(String currencyCode) {
-        this.currencyCode = currencyCode;
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 
     /**
      * <p>
-     * The currency code used for the recommendation.
+     * The resource ID for the recommendation.
      * </p>
      * 
-     * @return The currency code used for the recommendation.
+     * @return The resource ID for the recommendation.
      */
 
-    public String getCurrencyCode() {
-        return this.currencyCode;
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     /**
      * <p>
-     * The currency code used for the recommendation.
+     * The resource ID for the recommendation.
      * </p>
      * 
-     * @param currencyCode
-     *        The currency code used for the recommendation.
+     * @param resourceId
+     *        The resource ID for the recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Recommendation withCurrencyCode(String currencyCode) {
-        setCurrencyCode(currencyCode);
+    public Recommendation withResourceId(String resourceId) {
+        setResourceId(resourceId);
         return this;
     }
 
     /**
      * <p>
-     * Describes the current resource.
+     * The Amazon Resource Name (ARN) for the recommendation.
      * </p>
      * 
-     * @param currentResourceSummary
-     *        Describes the current resource.
+     * @param resourceArn
+     *        The Amazon Resource Name (ARN) for the recommendation.
      */
 
-    public void setCurrentResourceSummary(String currentResourceSummary) {
-        this.currentResourceSummary = currentResourceSummary;
+    public void setResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
     }
 
     /**
      * <p>
-     * Describes the current resource.
+     * The Amazon Resource Name (ARN) for the recommendation.
      * </p>
      * 
-     * @return Describes the current resource.
+     * @return The Amazon Resource Name (ARN) for the recommendation.
      */
 
-    public String getCurrentResourceSummary() {
-        return this.currentResourceSummary;
+    public String getResourceArn() {
+        return this.resourceArn;
     }
 
     /**
      * <p>
-     * Describes the current resource.
+     * The Amazon Resource Name (ARN) for the recommendation.
      * </p>
      * 
-     * @param currentResourceSummary
-     *        Describes the current resource.
+     * @param resourceArn
+     *        The Amazon Resource Name (ARN) for the recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Recommendation withCurrentResourceSummary(String currentResourceSummary) {
-        setCurrentResourceSummary(currentResourceSummary);
+    public Recommendation withResourceArn(String resourceArn) {
+        setResourceArn(resourceArn);
         return this;
     }
 
@@ -357,41 +398,41 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The estimated monthly cost for the recommendation.
+     * The recommended resource type.
      * </p>
      * 
-     * @param estimatedMonthlyCost
-     *        The estimated monthly cost for the recommendation.
+     * @param recommendedResourceType
+     *        The recommended resource type.
      */
 
-    public void setEstimatedMonthlyCost(Double estimatedMonthlyCost) {
-        this.estimatedMonthlyCost = estimatedMonthlyCost;
+    public void setRecommendedResourceType(String recommendedResourceType) {
+        this.recommendedResourceType = recommendedResourceType;
     }
 
     /**
      * <p>
-     * The estimated monthly cost for the recommendation.
+     * The recommended resource type.
      * </p>
      * 
-     * @return The estimated monthly cost for the recommendation.
+     * @return The recommended resource type.
      */
 
-    public Double getEstimatedMonthlyCost() {
-        return this.estimatedMonthlyCost;
+    public String getRecommendedResourceType() {
+        return this.recommendedResourceType;
     }
 
     /**
      * <p>
-     * The estimated monthly cost for the recommendation.
+     * The recommended resource type.
      * </p>
      * 
-     * @param estimatedMonthlyCost
-     *        The estimated monthly cost for the recommendation.
+     * @param recommendedResourceType
+     *        The recommended resource type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Recommendation withEstimatedMonthlyCost(Double estimatedMonthlyCost) {
-        setEstimatedMonthlyCost(estimatedMonthlyCost);
+    public Recommendation withRecommendedResourceType(String recommendedResourceType) {
+        setRecommendedResourceType(recommendedResourceType);
         return this;
     }
 
@@ -477,6 +518,92 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The estimated monthly cost of the current resource. For Reserved Instances and Savings Plans, it refers to the
+     * cost for eligible usage.
+     * </p>
+     * 
+     * @param estimatedMonthlyCost
+     *        The estimated monthly cost of the current resource. For Reserved Instances and Savings Plans, it refers to
+     *        the cost for eligible usage.
+     */
+
+    public void setEstimatedMonthlyCost(Double estimatedMonthlyCost) {
+        this.estimatedMonthlyCost = estimatedMonthlyCost;
+    }
+
+    /**
+     * <p>
+     * The estimated monthly cost of the current resource. For Reserved Instances and Savings Plans, it refers to the
+     * cost for eligible usage.
+     * </p>
+     * 
+     * @return The estimated monthly cost of the current resource. For Reserved Instances and Savings Plans, it refers
+     *         to the cost for eligible usage.
+     */
+
+    public Double getEstimatedMonthlyCost() {
+        return this.estimatedMonthlyCost;
+    }
+
+    /**
+     * <p>
+     * The estimated monthly cost of the current resource. For Reserved Instances and Savings Plans, it refers to the
+     * cost for eligible usage.
+     * </p>
+     * 
+     * @param estimatedMonthlyCost
+     *        The estimated monthly cost of the current resource. For Reserved Instances and Savings Plans, it refers to
+     *        the cost for eligible usage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withEstimatedMonthlyCost(Double estimatedMonthlyCost) {
+        setEstimatedMonthlyCost(estimatedMonthlyCost);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The currency code used for the recommendation.
+     * </p>
+     * 
+     * @param currencyCode
+     *        The currency code used for the recommendation.
+     */
+
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+    }
+
+    /**
+     * <p>
+     * The currency code used for the recommendation.
+     * </p>
+     * 
+     * @return The currency code used for the recommendation.
+     */
+
+    public String getCurrencyCode() {
+        return this.currencyCode;
+    }
+
+    /**
+     * <p>
+     * The currency code used for the recommendation.
+     * </p>
+     * 
+     * @param currencyCode
+     *        The currency code used for the recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withCurrencyCode(String currencyCode) {
+        setCurrencyCode(currencyCode);
+        return this;
+    }
+
+    /**
+     * <p>
      * The effort required to implement the recommendation.
      * </p>
      * 
@@ -512,326 +639,6 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
 
     public Recommendation withImplementationEffort(String implementationEffort) {
         setImplementationEffort(implementationEffort);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The time when the recommendation was last generated.
-     * </p>
-     * 
-     * @param lastRefreshTimestamp
-     *        The time when the recommendation was last generated.
-     */
-
-    public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
-        this.lastRefreshTimestamp = lastRefreshTimestamp;
-    }
-
-    /**
-     * <p>
-     * The time when the recommendation was last generated.
-     * </p>
-     * 
-     * @return The time when the recommendation was last generated.
-     */
-
-    public java.util.Date getLastRefreshTimestamp() {
-        return this.lastRefreshTimestamp;
-    }
-
-    /**
-     * <p>
-     * The time when the recommendation was last generated.
-     * </p>
-     * 
-     * @param lastRefreshTimestamp
-     *        The time when the recommendation was last generated.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Recommendation withLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
-        setLastRefreshTimestamp(lastRefreshTimestamp);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The ID for the recommendation.
-     * </p>
-     * 
-     * @param recommendationId
-     *        The ID for the recommendation.
-     */
-
-    public void setRecommendationId(String recommendationId) {
-        this.recommendationId = recommendationId;
-    }
-
-    /**
-     * <p>
-     * The ID for the recommendation.
-     * </p>
-     * 
-     * @return The ID for the recommendation.
-     */
-
-    public String getRecommendationId() {
-        return this.recommendationId;
-    }
-
-    /**
-     * <p>
-     * The ID for the recommendation.
-     * </p>
-     * 
-     * @param recommendationId
-     *        The ID for the recommendation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Recommendation withRecommendationId(String recommendationId) {
-        setRecommendationId(recommendationId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The lookback period that's used to generate the recommendation.
-     * </p>
-     * 
-     * @param recommendationLookbackPeriodInDays
-     *        The lookback period that's used to generate the recommendation.
-     */
-
-    public void setRecommendationLookbackPeriodInDays(Integer recommendationLookbackPeriodInDays) {
-        this.recommendationLookbackPeriodInDays = recommendationLookbackPeriodInDays;
-    }
-
-    /**
-     * <p>
-     * The lookback period that's used to generate the recommendation.
-     * </p>
-     * 
-     * @return The lookback period that's used to generate the recommendation.
-     */
-
-    public Integer getRecommendationLookbackPeriodInDays() {
-        return this.recommendationLookbackPeriodInDays;
-    }
-
-    /**
-     * <p>
-     * The lookback period that's used to generate the recommendation.
-     * </p>
-     * 
-     * @param recommendationLookbackPeriodInDays
-     *        The lookback period that's used to generate the recommendation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Recommendation withRecommendationLookbackPeriodInDays(Integer recommendationLookbackPeriodInDays) {
-        setRecommendationLookbackPeriodInDays(recommendationLookbackPeriodInDays);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Describes the recommended resource.
-     * </p>
-     * 
-     * @param recommendedResourceSummary
-     *        Describes the recommended resource.
-     */
-
-    public void setRecommendedResourceSummary(String recommendedResourceSummary) {
-        this.recommendedResourceSummary = recommendedResourceSummary;
-    }
-
-    /**
-     * <p>
-     * Describes the recommended resource.
-     * </p>
-     * 
-     * @return Describes the recommended resource.
-     */
-
-    public String getRecommendedResourceSummary() {
-        return this.recommendedResourceSummary;
-    }
-
-    /**
-     * <p>
-     * Describes the recommended resource.
-     * </p>
-     * 
-     * @param recommendedResourceSummary
-     *        Describes the recommended resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Recommendation withRecommendedResourceSummary(String recommendedResourceSummary) {
-        setRecommendedResourceSummary(recommendedResourceSummary);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The recommended resource type.
-     * </p>
-     * 
-     * @param recommendedResourceType
-     *        The recommended resource type.
-     */
-
-    public void setRecommendedResourceType(String recommendedResourceType) {
-        this.recommendedResourceType = recommendedResourceType;
-    }
-
-    /**
-     * <p>
-     * The recommended resource type.
-     * </p>
-     * 
-     * @return The recommended resource type.
-     */
-
-    public String getRecommendedResourceType() {
-        return this.recommendedResourceType;
-    }
-
-    /**
-     * <p>
-     * The recommended resource type.
-     * </p>
-     * 
-     * @param recommendedResourceType
-     *        The recommended resource type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Recommendation withRecommendedResourceType(String recommendedResourceType) {
-        setRecommendedResourceType(recommendedResourceType);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon Web Services Region of the resource.
-     * </p>
-     * 
-     * @param region
-     *        The Amazon Web Services Region of the resource.
-     */
-
-    public void setRegion(String region) {
-        this.region = region;
-    }
-
-    /**
-     * <p>
-     * The Amazon Web Services Region of the resource.
-     * </p>
-     * 
-     * @return The Amazon Web Services Region of the resource.
-     */
-
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
-     * <p>
-     * The Amazon Web Services Region of the resource.
-     * </p>
-     * 
-     * @param region
-     *        The Amazon Web Services Region of the resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Recommendation withRegion(String region) {
-        setRegion(region);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) for the recommendation.
-     * </p>
-     * 
-     * @param resourceArn
-     *        The Amazon Resource Name (ARN) for the recommendation.
-     */
-
-    public void setResourceArn(String resourceArn) {
-        this.resourceArn = resourceArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) for the recommendation.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) for the recommendation.
-     */
-
-    public String getResourceArn() {
-        return this.resourceArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) for the recommendation.
-     * </p>
-     * 
-     * @param resourceArn
-     *        The Amazon Resource Name (ARN) for the recommendation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Recommendation withResourceArn(String resourceArn) {
-        setResourceArn(resourceArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The resource ID for the recommendation.
-     * </p>
-     * 
-     * @param resourceId
-     *        The resource ID for the recommendation.
-     */
-
-    public void setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-    }
-
-    /**
-     * <p>
-     * The resource ID for the recommendation.
-     * </p>
-     * 
-     * @return The resource ID for the recommendation.
-     */
-
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
-    /**
-     * <p>
-     * The resource ID for the recommendation.
-     * </p>
-     * 
-     * @param resourceId
-     *        The resource ID for the recommendation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Recommendation withResourceId(String resourceId) {
-        setResourceId(resourceId);
         return this;
     }
 
@@ -889,6 +696,46 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The type of tasks that can be carried out by this action.
+     * </p>
+     * 
+     * @param actionType
+     *        The type of tasks that can be carried out by this action.
+     */
+
+    public void setActionType(String actionType) {
+        this.actionType = actionType;
+    }
+
+    /**
+     * <p>
+     * The type of tasks that can be carried out by this action.
+     * </p>
+     * 
+     * @return The type of tasks that can be carried out by this action.
+     */
+
+    public String getActionType() {
+        return this.actionType;
+    }
+
+    /**
+     * <p>
+     * The type of tasks that can be carried out by this action.
+     * </p>
+     * 
+     * @param actionType
+     *        The type of tasks that can be carried out by this action.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withActionType(String actionType) {
+        setActionType(actionType);
+        return this;
+    }
+
+    /**
+     * <p>
      * Whether or not implementing the recommendation can be rolled back.
      * </p>
      * 
@@ -937,6 +784,166 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
 
     public Boolean isRollbackPossible() {
         return this.rollbackPossible;
+    }
+
+    /**
+     * <p>
+     * Describes the current resource.
+     * </p>
+     * 
+     * @param currentResourceSummary
+     *        Describes the current resource.
+     */
+
+    public void setCurrentResourceSummary(String currentResourceSummary) {
+        this.currentResourceSummary = currentResourceSummary;
+    }
+
+    /**
+     * <p>
+     * Describes the current resource.
+     * </p>
+     * 
+     * @return Describes the current resource.
+     */
+
+    public String getCurrentResourceSummary() {
+        return this.currentResourceSummary;
+    }
+
+    /**
+     * <p>
+     * Describes the current resource.
+     * </p>
+     * 
+     * @param currentResourceSummary
+     *        Describes the current resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withCurrentResourceSummary(String currentResourceSummary) {
+        setCurrentResourceSummary(currentResourceSummary);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the recommended resource.
+     * </p>
+     * 
+     * @param recommendedResourceSummary
+     *        Describes the recommended resource.
+     */
+
+    public void setRecommendedResourceSummary(String recommendedResourceSummary) {
+        this.recommendedResourceSummary = recommendedResourceSummary;
+    }
+
+    /**
+     * <p>
+     * Describes the recommended resource.
+     * </p>
+     * 
+     * @return Describes the recommended resource.
+     */
+
+    public String getRecommendedResourceSummary() {
+        return this.recommendedResourceSummary;
+    }
+
+    /**
+     * <p>
+     * Describes the recommended resource.
+     * </p>
+     * 
+     * @param recommendedResourceSummary
+     *        Describes the recommended resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withRecommendedResourceSummary(String recommendedResourceSummary) {
+        setRecommendedResourceSummary(recommendedResourceSummary);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time when the recommendation was last generated.
+     * </p>
+     * 
+     * @param lastRefreshTimestamp
+     *        The time when the recommendation was last generated.
+     */
+
+    public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
+        this.lastRefreshTimestamp = lastRefreshTimestamp;
+    }
+
+    /**
+     * <p>
+     * The time when the recommendation was last generated.
+     * </p>
+     * 
+     * @return The time when the recommendation was last generated.
+     */
+
+    public java.util.Date getLastRefreshTimestamp() {
+        return this.lastRefreshTimestamp;
+    }
+
+    /**
+     * <p>
+     * The time when the recommendation was last generated.
+     * </p>
+     * 
+     * @param lastRefreshTimestamp
+     *        The time when the recommendation was last generated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
+        setLastRefreshTimestamp(lastRefreshTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The lookback period that's used to generate the recommendation.
+     * </p>
+     * 
+     * @param recommendationLookbackPeriodInDays
+     *        The lookback period that's used to generate the recommendation.
+     */
+
+    public void setRecommendationLookbackPeriodInDays(Integer recommendationLookbackPeriodInDays) {
+        this.recommendationLookbackPeriodInDays = recommendationLookbackPeriodInDays;
+    }
+
+    /**
+     * <p>
+     * The lookback period that's used to generate the recommendation.
+     * </p>
+     * 
+     * @return The lookback period that's used to generate the recommendation.
+     */
+
+    public Integer getRecommendationLookbackPeriodInDays() {
+        return this.recommendationLookbackPeriodInDays;
+    }
+
+    /**
+     * <p>
+     * The lookback period that's used to generate the recommendation.
+     * </p>
+     * 
+     * @param recommendationLookbackPeriodInDays
+     *        The lookback period that's used to generate the recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withRecommendationLookbackPeriodInDays(Integer recommendationLookbackPeriodInDays) {
+        setRecommendationLookbackPeriodInDays(recommendationLookbackPeriodInDays);
+        return this;
     }
 
     /**
@@ -1080,44 +1087,44 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getRecommendationId() != null)
+            sb.append("RecommendationId: ").append(getRecommendationId()).append(",");
         if (getAccountId() != null)
             sb.append("AccountId: ").append(getAccountId()).append(",");
-        if (getActionType() != null)
-            sb.append("ActionType: ").append(getActionType()).append(",");
-        if (getCurrencyCode() != null)
-            sb.append("CurrencyCode: ").append(getCurrencyCode()).append(",");
-        if (getCurrentResourceSummary() != null)
-            sb.append("CurrentResourceSummary: ").append(getCurrentResourceSummary()).append(",");
+        if (getRegion() != null)
+            sb.append("Region: ").append(getRegion()).append(",");
+        if (getResourceId() != null)
+            sb.append("ResourceId: ").append(getResourceId()).append(",");
+        if (getResourceArn() != null)
+            sb.append("ResourceArn: ").append(getResourceArn()).append(",");
         if (getCurrentResourceType() != null)
             sb.append("CurrentResourceType: ").append(getCurrentResourceType()).append(",");
-        if (getEstimatedMonthlyCost() != null)
-            sb.append("EstimatedMonthlyCost: ").append(getEstimatedMonthlyCost()).append(",");
+        if (getRecommendedResourceType() != null)
+            sb.append("RecommendedResourceType: ").append(getRecommendedResourceType()).append(",");
         if (getEstimatedMonthlySavings() != null)
             sb.append("EstimatedMonthlySavings: ").append(getEstimatedMonthlySavings()).append(",");
         if (getEstimatedSavingsPercentage() != null)
             sb.append("EstimatedSavingsPercentage: ").append(getEstimatedSavingsPercentage()).append(",");
+        if (getEstimatedMonthlyCost() != null)
+            sb.append("EstimatedMonthlyCost: ").append(getEstimatedMonthlyCost()).append(",");
+        if (getCurrencyCode() != null)
+            sb.append("CurrencyCode: ").append(getCurrencyCode()).append(",");
         if (getImplementationEffort() != null)
             sb.append("ImplementationEffort: ").append(getImplementationEffort()).append(",");
-        if (getLastRefreshTimestamp() != null)
-            sb.append("LastRefreshTimestamp: ").append(getLastRefreshTimestamp()).append(",");
-        if (getRecommendationId() != null)
-            sb.append("RecommendationId: ").append(getRecommendationId()).append(",");
-        if (getRecommendationLookbackPeriodInDays() != null)
-            sb.append("RecommendationLookbackPeriodInDays: ").append(getRecommendationLookbackPeriodInDays()).append(",");
-        if (getRecommendedResourceSummary() != null)
-            sb.append("RecommendedResourceSummary: ").append(getRecommendedResourceSummary()).append(",");
-        if (getRecommendedResourceType() != null)
-            sb.append("RecommendedResourceType: ").append(getRecommendedResourceType()).append(",");
-        if (getRegion() != null)
-            sb.append("Region: ").append(getRegion()).append(",");
-        if (getResourceArn() != null)
-            sb.append("ResourceArn: ").append(getResourceArn()).append(",");
-        if (getResourceId() != null)
-            sb.append("ResourceId: ").append(getResourceId()).append(",");
         if (getRestartNeeded() != null)
             sb.append("RestartNeeded: ").append(getRestartNeeded()).append(",");
+        if (getActionType() != null)
+            sb.append("ActionType: ").append(getActionType()).append(",");
         if (getRollbackPossible() != null)
             sb.append("RollbackPossible: ").append(getRollbackPossible()).append(",");
+        if (getCurrentResourceSummary() != null)
+            sb.append("CurrentResourceSummary: ").append(getCurrentResourceSummary()).append(",");
+        if (getRecommendedResourceSummary() != null)
+            sb.append("RecommendedResourceSummary: ").append(getRecommendedResourceSummary()).append(",");
+        if (getLastRefreshTimestamp() != null)
+            sb.append("LastRefreshTimestamp: ").append(getLastRefreshTimestamp()).append(",");
+        if (getRecommendationLookbackPeriodInDays() != null)
+            sb.append("RecommendationLookbackPeriodInDays: ").append(getRecommendationLookbackPeriodInDays()).append(",");
         if (getSource() != null)
             sb.append("Source: ").append(getSource()).append(",");
         if (getTags() != null)
@@ -1136,29 +1143,33 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Recommendation == false)
             return false;
         Recommendation other = (Recommendation) obj;
+        if (other.getRecommendationId() == null ^ this.getRecommendationId() == null)
+            return false;
+        if (other.getRecommendationId() != null && other.getRecommendationId().equals(this.getRecommendationId()) == false)
+            return false;
         if (other.getAccountId() == null ^ this.getAccountId() == null)
             return false;
         if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
             return false;
-        if (other.getActionType() == null ^ this.getActionType() == null)
+        if (other.getRegion() == null ^ this.getRegion() == null)
             return false;
-        if (other.getActionType() != null && other.getActionType().equals(this.getActionType()) == false)
+        if (other.getRegion() != null && other.getRegion().equals(this.getRegion()) == false)
             return false;
-        if (other.getCurrencyCode() == null ^ this.getCurrencyCode() == null)
+        if (other.getResourceId() == null ^ this.getResourceId() == null)
             return false;
-        if (other.getCurrencyCode() != null && other.getCurrencyCode().equals(this.getCurrencyCode()) == false)
+        if (other.getResourceId() != null && other.getResourceId().equals(this.getResourceId()) == false)
             return false;
-        if (other.getCurrentResourceSummary() == null ^ this.getCurrentResourceSummary() == null)
+        if (other.getResourceArn() == null ^ this.getResourceArn() == null)
             return false;
-        if (other.getCurrentResourceSummary() != null && other.getCurrentResourceSummary().equals(this.getCurrentResourceSummary()) == false)
+        if (other.getResourceArn() != null && other.getResourceArn().equals(this.getResourceArn()) == false)
             return false;
         if (other.getCurrentResourceType() == null ^ this.getCurrentResourceType() == null)
             return false;
         if (other.getCurrentResourceType() != null && other.getCurrentResourceType().equals(this.getCurrentResourceType()) == false)
             return false;
-        if (other.getEstimatedMonthlyCost() == null ^ this.getEstimatedMonthlyCost() == null)
+        if (other.getRecommendedResourceType() == null ^ this.getRecommendedResourceType() == null)
             return false;
-        if (other.getEstimatedMonthlyCost() != null && other.getEstimatedMonthlyCost().equals(this.getEstimatedMonthlyCost()) == false)
+        if (other.getRecommendedResourceType() != null && other.getRecommendedResourceType().equals(this.getRecommendedResourceType()) == false)
             return false;
         if (other.getEstimatedMonthlySavings() == null ^ this.getEstimatedMonthlySavings() == null)
             return false;
@@ -1168,50 +1179,46 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEstimatedSavingsPercentage() != null && other.getEstimatedSavingsPercentage().equals(this.getEstimatedSavingsPercentage()) == false)
             return false;
+        if (other.getEstimatedMonthlyCost() == null ^ this.getEstimatedMonthlyCost() == null)
+            return false;
+        if (other.getEstimatedMonthlyCost() != null && other.getEstimatedMonthlyCost().equals(this.getEstimatedMonthlyCost()) == false)
+            return false;
+        if (other.getCurrencyCode() == null ^ this.getCurrencyCode() == null)
+            return false;
+        if (other.getCurrencyCode() != null && other.getCurrencyCode().equals(this.getCurrencyCode()) == false)
+            return false;
         if (other.getImplementationEffort() == null ^ this.getImplementationEffort() == null)
             return false;
         if (other.getImplementationEffort() != null && other.getImplementationEffort().equals(this.getImplementationEffort()) == false)
-            return false;
-        if (other.getLastRefreshTimestamp() == null ^ this.getLastRefreshTimestamp() == null)
-            return false;
-        if (other.getLastRefreshTimestamp() != null && other.getLastRefreshTimestamp().equals(this.getLastRefreshTimestamp()) == false)
-            return false;
-        if (other.getRecommendationId() == null ^ this.getRecommendationId() == null)
-            return false;
-        if (other.getRecommendationId() != null && other.getRecommendationId().equals(this.getRecommendationId()) == false)
-            return false;
-        if (other.getRecommendationLookbackPeriodInDays() == null ^ this.getRecommendationLookbackPeriodInDays() == null)
-            return false;
-        if (other.getRecommendationLookbackPeriodInDays() != null
-                && other.getRecommendationLookbackPeriodInDays().equals(this.getRecommendationLookbackPeriodInDays()) == false)
-            return false;
-        if (other.getRecommendedResourceSummary() == null ^ this.getRecommendedResourceSummary() == null)
-            return false;
-        if (other.getRecommendedResourceSummary() != null && other.getRecommendedResourceSummary().equals(this.getRecommendedResourceSummary()) == false)
-            return false;
-        if (other.getRecommendedResourceType() == null ^ this.getRecommendedResourceType() == null)
-            return false;
-        if (other.getRecommendedResourceType() != null && other.getRecommendedResourceType().equals(this.getRecommendedResourceType()) == false)
-            return false;
-        if (other.getRegion() == null ^ this.getRegion() == null)
-            return false;
-        if (other.getRegion() != null && other.getRegion().equals(this.getRegion()) == false)
-            return false;
-        if (other.getResourceArn() == null ^ this.getResourceArn() == null)
-            return false;
-        if (other.getResourceArn() != null && other.getResourceArn().equals(this.getResourceArn()) == false)
-            return false;
-        if (other.getResourceId() == null ^ this.getResourceId() == null)
-            return false;
-        if (other.getResourceId() != null && other.getResourceId().equals(this.getResourceId()) == false)
             return false;
         if (other.getRestartNeeded() == null ^ this.getRestartNeeded() == null)
             return false;
         if (other.getRestartNeeded() != null && other.getRestartNeeded().equals(this.getRestartNeeded()) == false)
             return false;
+        if (other.getActionType() == null ^ this.getActionType() == null)
+            return false;
+        if (other.getActionType() != null && other.getActionType().equals(this.getActionType()) == false)
+            return false;
         if (other.getRollbackPossible() == null ^ this.getRollbackPossible() == null)
             return false;
         if (other.getRollbackPossible() != null && other.getRollbackPossible().equals(this.getRollbackPossible()) == false)
+            return false;
+        if (other.getCurrentResourceSummary() == null ^ this.getCurrentResourceSummary() == null)
+            return false;
+        if (other.getCurrentResourceSummary() != null && other.getCurrentResourceSummary().equals(this.getCurrentResourceSummary()) == false)
+            return false;
+        if (other.getRecommendedResourceSummary() == null ^ this.getRecommendedResourceSummary() == null)
+            return false;
+        if (other.getRecommendedResourceSummary() != null && other.getRecommendedResourceSummary().equals(this.getRecommendedResourceSummary()) == false)
+            return false;
+        if (other.getLastRefreshTimestamp() == null ^ this.getLastRefreshTimestamp() == null)
+            return false;
+        if (other.getLastRefreshTimestamp() != null && other.getLastRefreshTimestamp().equals(this.getLastRefreshTimestamp()) == false)
+            return false;
+        if (other.getRecommendationLookbackPeriodInDays() == null ^ this.getRecommendationLookbackPeriodInDays() == null)
+            return false;
+        if (other.getRecommendationLookbackPeriodInDays() != null
+                && other.getRecommendationLookbackPeriodInDays().equals(this.getRecommendationLookbackPeriodInDays()) == false)
             return false;
         if (other.getSource() == null ^ this.getSource() == null)
             return false;
@@ -1229,25 +1236,25 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getRecommendationId() == null) ? 0 : getRecommendationId().hashCode());
         hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
-        hashCode = prime * hashCode + ((getActionType() == null) ? 0 : getActionType().hashCode());
-        hashCode = prime * hashCode + ((getCurrencyCode() == null) ? 0 : getCurrencyCode().hashCode());
-        hashCode = prime * hashCode + ((getCurrentResourceSummary() == null) ? 0 : getCurrentResourceSummary().hashCode());
+        hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
+        hashCode = prime * hashCode + ((getResourceId() == null) ? 0 : getResourceId().hashCode());
+        hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         hashCode = prime * hashCode + ((getCurrentResourceType() == null) ? 0 : getCurrentResourceType().hashCode());
-        hashCode = prime * hashCode + ((getEstimatedMonthlyCost() == null) ? 0 : getEstimatedMonthlyCost().hashCode());
+        hashCode = prime * hashCode + ((getRecommendedResourceType() == null) ? 0 : getRecommendedResourceType().hashCode());
         hashCode = prime * hashCode + ((getEstimatedMonthlySavings() == null) ? 0 : getEstimatedMonthlySavings().hashCode());
         hashCode = prime * hashCode + ((getEstimatedSavingsPercentage() == null) ? 0 : getEstimatedSavingsPercentage().hashCode());
+        hashCode = prime * hashCode + ((getEstimatedMonthlyCost() == null) ? 0 : getEstimatedMonthlyCost().hashCode());
+        hashCode = prime * hashCode + ((getCurrencyCode() == null) ? 0 : getCurrencyCode().hashCode());
         hashCode = prime * hashCode + ((getImplementationEffort() == null) ? 0 : getImplementationEffort().hashCode());
-        hashCode = prime * hashCode + ((getLastRefreshTimestamp() == null) ? 0 : getLastRefreshTimestamp().hashCode());
-        hashCode = prime * hashCode + ((getRecommendationId() == null) ? 0 : getRecommendationId().hashCode());
-        hashCode = prime * hashCode + ((getRecommendationLookbackPeriodInDays() == null) ? 0 : getRecommendationLookbackPeriodInDays().hashCode());
-        hashCode = prime * hashCode + ((getRecommendedResourceSummary() == null) ? 0 : getRecommendedResourceSummary().hashCode());
-        hashCode = prime * hashCode + ((getRecommendedResourceType() == null) ? 0 : getRecommendedResourceType().hashCode());
-        hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
-        hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
-        hashCode = prime * hashCode + ((getResourceId() == null) ? 0 : getResourceId().hashCode());
         hashCode = prime * hashCode + ((getRestartNeeded() == null) ? 0 : getRestartNeeded().hashCode());
+        hashCode = prime * hashCode + ((getActionType() == null) ? 0 : getActionType().hashCode());
         hashCode = prime * hashCode + ((getRollbackPossible() == null) ? 0 : getRollbackPossible().hashCode());
+        hashCode = prime * hashCode + ((getCurrentResourceSummary() == null) ? 0 : getCurrentResourceSummary().hashCode());
+        hashCode = prime * hashCode + ((getRecommendedResourceSummary() == null) ? 0 : getRecommendedResourceSummary().hashCode());
+        hashCode = prime * hashCode + ((getLastRefreshTimestamp() == null) ? 0 : getLastRefreshTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getRecommendationLookbackPeriodInDays() == null) ? 0 : getRecommendationLookbackPeriodInDays().hashCode());
         hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

@@ -39,16 +39,29 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     private String featuredParticipantAttribute;
     /**
      * <p>
+     * Determines whether to omit participants with stopped video in the composition. Default: <code>false</code>.
+     * </p>
+     */
+    private Boolean omitStoppedVideo;
+    /**
+     * <p>
+     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * </p>
+     */
+    private String videoFillMode;
+    /**
+     * <p>
      * Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
      * </p>
      */
     private Integer gridGap;
     /**
      * <p>
-     * Determines whether to omit participants with stopped video in the composition. Default: <code>false</code>.
+     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
+     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
      * </p>
      */
-    private Boolean omitStoppedVideo;
+    private String pipParticipantAttribute;
     /**
      * <p>
      * Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
@@ -57,25 +70,11 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     private String pipBehavior;
     /**
      * <p>
-     * Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>’s value
-     * will be based on the size of the composition and the aspect ratio of the participant’s video.
-     * </p>
-     */
-    private Integer pipHeight;
-    /**
-     * <p>
      * Sets the PiP window’s offset position in pixels from the closest edges determined by <code>PipPosition</code>.
      * Default: <code>0</code>.
      * </p>
      */
     private Integer pipOffset;
-    /**
-     * <p>
-     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
-     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
-     * </p>
-     */
-    private String pipParticipantAttribute;
     /**
      * <p>
      * Determines the corner position of the PiP window. Default: <code>BOTTOM_RIGHT</code>.
@@ -91,10 +90,11 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     private Integer pipWidth;
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>’s value
+     * will be based on the size of the composition and the aspect ratio of the participant’s video.
      * </p>
      */
-    private String videoFillMode;
+    private Integer pipHeight;
 
     /**
      * <p>
@@ -142,46 +142,6 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     public PipConfiguration withFeaturedParticipantAttribute(String featuredParticipantAttribute) {
         setFeaturedParticipantAttribute(featuredParticipantAttribute);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
-     * </p>
-     * 
-     * @param gridGap
-     *        Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
-     */
-
-    public void setGridGap(Integer gridGap) {
-        this.gridGap = gridGap;
-    }
-
-    /**
-     * <p>
-     * Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
-     * </p>
-     * 
-     * @return Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
-     */
-
-    public Integer getGridGap() {
-        return this.gridGap;
-    }
-
-    /**
-     * <p>
-     * Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
-     * </p>
-     * 
-     * @param gridGap
-     *        Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipConfiguration withGridGap(Integer gridGap) {
-        setGridGap(gridGap);
         return this;
     }
 
@@ -239,6 +199,151 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     public Boolean isOmitStoppedVideo() {
         return this.omitStoppedVideo;
+    }
+
+    /**
+     * <p>
+     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * </p>
+     * 
+     * @param videoFillMode
+     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * @see VideoFillMode
+     */
+
+    public void setVideoFillMode(String videoFillMode) {
+        this.videoFillMode = videoFillMode;
+    }
+
+    /**
+     * <p>
+     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * </p>
+     * 
+     * @return Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * @see VideoFillMode
+     */
+
+    public String getVideoFillMode() {
+        return this.videoFillMode;
+    }
+
+    /**
+     * <p>
+     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * </p>
+     * 
+     * @param videoFillMode
+     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VideoFillMode
+     */
+
+    public PipConfiguration withVideoFillMode(String videoFillMode) {
+        setVideoFillMode(videoFillMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * </p>
+     * 
+     * @param videoFillMode
+     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VideoFillMode
+     */
+
+    public PipConfiguration withVideoFillMode(VideoFillMode videoFillMode) {
+        this.videoFillMode = videoFillMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
+     * </p>
+     * 
+     * @param gridGap
+     *        Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
+     */
+
+    public void setGridGap(Integer gridGap) {
+        this.gridGap = gridGap;
+    }
+
+    /**
+     * <p>
+     * Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
+     * </p>
+     * 
+     * @return Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
+     */
+
+    public Integer getGridGap() {
+        return this.gridGap;
+    }
+
+    /**
+     * <p>
+     * Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
+     * </p>
+     * 
+     * @param gridGap
+     *        Specifies the spacing between participant tiles in pixels. Default: <code>0</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipConfiguration withGridGap(Integer gridGap) {
+        setGridGap(gridGap);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
+     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * </p>
+     * 
+     * @param pipParticipantAttribute
+     *        Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
+     *        in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     */
+
+    public void setPipParticipantAttribute(String pipParticipantAttribute) {
+        this.pipParticipantAttribute = pipParticipantAttribute;
+    }
+
+    /**
+     * <p>
+     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
+     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * </p>
+     * 
+     * @return Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
+     *         in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     */
+
+    public String getPipParticipantAttribute() {
+        return this.pipParticipantAttribute;
+    }
+
+    /**
+     * <p>
+     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
+     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * </p>
+     * 
+     * @param pipParticipantAttribute
+     *        Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
+     *        in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipConfiguration withPipParticipantAttribute(String pipParticipantAttribute) {
+        setPipParticipantAttribute(pipParticipantAttribute);
+        return this;
     }
 
     /**
@@ -302,52 +407,6 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>’s value
-     * will be based on the size of the composition and the aspect ratio of the participant’s video.
-     * </p>
-     * 
-     * @param pipHeight
-     *        Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>
-     *        ’s value will be based on the size of the composition and the aspect ratio of the participant’s video.
-     */
-
-    public void setPipHeight(Integer pipHeight) {
-        this.pipHeight = pipHeight;
-    }
-
-    /**
-     * <p>
-     * Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>’s value
-     * will be based on the size of the composition and the aspect ratio of the participant’s video.
-     * </p>
-     * 
-     * @return Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>
-     *         ’s value will be based on the size of the composition and the aspect ratio of the participant’s video.
-     */
-
-    public Integer getPipHeight() {
-        return this.pipHeight;
-    }
-
-    /**
-     * <p>
-     * Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>’s value
-     * will be based on the size of the composition and the aspect ratio of the participant’s video.
-     * </p>
-     * 
-     * @param pipHeight
-     *        Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>
-     *        ’s value will be based on the size of the composition and the aspect ratio of the participant’s video.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipConfiguration withPipHeight(Integer pipHeight) {
-        setPipHeight(pipHeight);
-        return this;
-    }
-
-    /**
-     * <p>
      * Sets the PiP window’s offset position in pixels from the closest edges determined by <code>PipPosition</code>.
      * Default: <code>0</code>.
      * </p>
@@ -389,52 +448,6 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     public PipConfiguration withPipOffset(Integer pipOffset) {
         setPipOffset(pipOffset);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
-     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
-     * </p>
-     * 
-     * @param pipParticipantAttribute
-     *        Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
-     *        in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
-     */
-
-    public void setPipParticipantAttribute(String pipParticipantAttribute) {
-        this.pipParticipantAttribute = pipParticipantAttribute;
-    }
-
-    /**
-     * <p>
-     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
-     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
-     * </p>
-     * 
-     * @return Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
-     *         in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
-     */
-
-    public String getPipParticipantAttribute() {
-        return this.pipParticipantAttribute;
-    }
-
-    /**
-     * <p>
-     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
-     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
-     * </p>
-     * 
-     * @param pipParticipantAttribute
-     *        Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
-     *        in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipConfiguration withPipParticipantAttribute(String pipParticipantAttribute) {
-        setPipParticipantAttribute(pipParticipantAttribute);
         return this;
     }
 
@@ -545,60 +558,47 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>’s value
+     * will be based on the size of the composition and the aspect ratio of the participant’s video.
      * </p>
      * 
-     * @param videoFillMode
-     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
-     * @see VideoFillMode
+     * @param pipHeight
+     *        Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>
+     *        ’s value will be based on the size of the composition and the aspect ratio of the participant’s video.
      */
 
-    public void setVideoFillMode(String videoFillMode) {
-        this.videoFillMode = videoFillMode;
+    public void setPipHeight(Integer pipHeight) {
+        this.pipHeight = pipHeight;
     }
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>’s value
+     * will be based on the size of the composition and the aspect ratio of the participant’s video.
      * </p>
      * 
-     * @return Defines how video fits within the participant tile. Default: <code>COVER</code>.
-     * @see VideoFillMode
+     * @return Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>
+     *         ’s value will be based on the size of the composition and the aspect ratio of the participant’s video.
      */
 
-    public String getVideoFillMode() {
-        return this.videoFillMode;
+    public Integer getPipHeight() {
+        return this.pipHeight;
     }
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>’s value
+     * will be based on the size of the composition and the aspect ratio of the participant’s video.
      * </p>
      * 
-     * @param videoFillMode
-     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * @param pipHeight
+     *        Specifies the height of the PiP window in pixels. When this is not set explicitly, <code>pipHeight</code>
+     *        ’s value will be based on the size of the composition and the aspect ratio of the participant’s video.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see VideoFillMode
      */
 
-    public PipConfiguration withVideoFillMode(String videoFillMode) {
-        setVideoFillMode(videoFillMode);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
-     * </p>
-     * 
-     * @param videoFillMode
-     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see VideoFillMode
-     */
-
-    public PipConfiguration withVideoFillMode(VideoFillMode videoFillMode) {
-        this.videoFillMode = videoFillMode.toString();
+    public PipConfiguration withPipHeight(Integer pipHeight) {
+        setPipHeight(pipHeight);
         return this;
     }
 
@@ -616,24 +616,24 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
         sb.append("{");
         if (getFeaturedParticipantAttribute() != null)
             sb.append("FeaturedParticipantAttribute: ").append(getFeaturedParticipantAttribute()).append(",");
-        if (getGridGap() != null)
-            sb.append("GridGap: ").append(getGridGap()).append(",");
         if (getOmitStoppedVideo() != null)
             sb.append("OmitStoppedVideo: ").append(getOmitStoppedVideo()).append(",");
-        if (getPipBehavior() != null)
-            sb.append("PipBehavior: ").append(getPipBehavior()).append(",");
-        if (getPipHeight() != null)
-            sb.append("PipHeight: ").append(getPipHeight()).append(",");
-        if (getPipOffset() != null)
-            sb.append("PipOffset: ").append(getPipOffset()).append(",");
+        if (getVideoFillMode() != null)
+            sb.append("VideoFillMode: ").append(getVideoFillMode()).append(",");
+        if (getGridGap() != null)
+            sb.append("GridGap: ").append(getGridGap()).append(",");
         if (getPipParticipantAttribute() != null)
             sb.append("PipParticipantAttribute: ").append(getPipParticipantAttribute()).append(",");
+        if (getPipBehavior() != null)
+            sb.append("PipBehavior: ").append(getPipBehavior()).append(",");
+        if (getPipOffset() != null)
+            sb.append("PipOffset: ").append(getPipOffset()).append(",");
         if (getPipPosition() != null)
             sb.append("PipPosition: ").append(getPipPosition()).append(",");
         if (getPipWidth() != null)
             sb.append("PipWidth: ").append(getPipWidth()).append(",");
-        if (getVideoFillMode() != null)
-            sb.append("VideoFillMode: ").append(getVideoFillMode());
+        if (getPipHeight() != null)
+            sb.append("PipHeight: ").append(getPipHeight());
         sb.append("}");
         return sb.toString();
     }
@@ -652,29 +652,29 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getFeaturedParticipantAttribute() != null && other.getFeaturedParticipantAttribute().equals(this.getFeaturedParticipantAttribute()) == false)
             return false;
+        if (other.getOmitStoppedVideo() == null ^ this.getOmitStoppedVideo() == null)
+            return false;
+        if (other.getOmitStoppedVideo() != null && other.getOmitStoppedVideo().equals(this.getOmitStoppedVideo()) == false)
+            return false;
+        if (other.getVideoFillMode() == null ^ this.getVideoFillMode() == null)
+            return false;
+        if (other.getVideoFillMode() != null && other.getVideoFillMode().equals(this.getVideoFillMode()) == false)
+            return false;
         if (other.getGridGap() == null ^ this.getGridGap() == null)
             return false;
         if (other.getGridGap() != null && other.getGridGap().equals(this.getGridGap()) == false)
             return false;
-        if (other.getOmitStoppedVideo() == null ^ this.getOmitStoppedVideo() == null)
+        if (other.getPipParticipantAttribute() == null ^ this.getPipParticipantAttribute() == null)
             return false;
-        if (other.getOmitStoppedVideo() != null && other.getOmitStoppedVideo().equals(this.getOmitStoppedVideo()) == false)
+        if (other.getPipParticipantAttribute() != null && other.getPipParticipantAttribute().equals(this.getPipParticipantAttribute()) == false)
             return false;
         if (other.getPipBehavior() == null ^ this.getPipBehavior() == null)
             return false;
         if (other.getPipBehavior() != null && other.getPipBehavior().equals(this.getPipBehavior()) == false)
             return false;
-        if (other.getPipHeight() == null ^ this.getPipHeight() == null)
-            return false;
-        if (other.getPipHeight() != null && other.getPipHeight().equals(this.getPipHeight()) == false)
-            return false;
         if (other.getPipOffset() == null ^ this.getPipOffset() == null)
             return false;
         if (other.getPipOffset() != null && other.getPipOffset().equals(this.getPipOffset()) == false)
-            return false;
-        if (other.getPipParticipantAttribute() == null ^ this.getPipParticipantAttribute() == null)
-            return false;
-        if (other.getPipParticipantAttribute() != null && other.getPipParticipantAttribute().equals(this.getPipParticipantAttribute()) == false)
             return false;
         if (other.getPipPosition() == null ^ this.getPipPosition() == null)
             return false;
@@ -684,9 +684,9 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getPipWidth() != null && other.getPipWidth().equals(this.getPipWidth()) == false)
             return false;
-        if (other.getVideoFillMode() == null ^ this.getVideoFillMode() == null)
+        if (other.getPipHeight() == null ^ this.getPipHeight() == null)
             return false;
-        if (other.getVideoFillMode() != null && other.getVideoFillMode().equals(this.getVideoFillMode()) == false)
+        if (other.getPipHeight() != null && other.getPipHeight().equals(this.getPipHeight()) == false)
             return false;
         return true;
     }
@@ -697,15 +697,15 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFeaturedParticipantAttribute() == null) ? 0 : getFeaturedParticipantAttribute().hashCode());
-        hashCode = prime * hashCode + ((getGridGap() == null) ? 0 : getGridGap().hashCode());
         hashCode = prime * hashCode + ((getOmitStoppedVideo() == null) ? 0 : getOmitStoppedVideo().hashCode());
-        hashCode = prime * hashCode + ((getPipBehavior() == null) ? 0 : getPipBehavior().hashCode());
-        hashCode = prime * hashCode + ((getPipHeight() == null) ? 0 : getPipHeight().hashCode());
-        hashCode = prime * hashCode + ((getPipOffset() == null) ? 0 : getPipOffset().hashCode());
+        hashCode = prime * hashCode + ((getVideoFillMode() == null) ? 0 : getVideoFillMode().hashCode());
+        hashCode = prime * hashCode + ((getGridGap() == null) ? 0 : getGridGap().hashCode());
         hashCode = prime * hashCode + ((getPipParticipantAttribute() == null) ? 0 : getPipParticipantAttribute().hashCode());
+        hashCode = prime * hashCode + ((getPipBehavior() == null) ? 0 : getPipBehavior().hashCode());
+        hashCode = prime * hashCode + ((getPipOffset() == null) ? 0 : getPipOffset().hashCode());
         hashCode = prime * hashCode + ((getPipPosition() == null) ? 0 : getPipPosition().hashCode());
         hashCode = prime * hashCode + ((getPipWidth() == null) ? 0 : getPipWidth().hashCode());
-        hashCode = prime * hashCode + ((getVideoFillMode() == null) ? 0 : getVideoFillMode().hashCode());
+        hashCode = prime * hashCode + ((getPipHeight() == null) ? 0 : getPipHeight().hashCode());
         return hashCode;
     }
 

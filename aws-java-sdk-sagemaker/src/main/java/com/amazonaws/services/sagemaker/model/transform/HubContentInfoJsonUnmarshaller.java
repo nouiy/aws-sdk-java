@@ -56,6 +56,10 @@ public class HubContentInfoJsonUnmarshaller implements Unmarshaller<HubContentIn
                     context.nextToken();
                     hubContentInfo.setHubContentArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SageMakerPublicHubContentArn", targetDepth)) {
+                    context.nextToken();
+                    hubContentInfo.setSageMakerPublicHubContentArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("HubContentVersion", targetDepth)) {
                     context.nextToken();
                     hubContentInfo.setHubContentVersion(context.getUnmarshaller(String.class).unmarshall(context));
@@ -76,6 +80,10 @@ public class HubContentInfoJsonUnmarshaller implements Unmarshaller<HubContentIn
                     context.nextToken();
                     hubContentInfo.setHubContentDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SupportStatus", targetDepth)) {
+                    context.nextToken();
+                    hubContentInfo.setSupportStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("HubContentSearchKeywords", targetDepth)) {
                     context.nextToken();
                     hubContentInfo.setHubContentSearchKeywords(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
@@ -89,6 +97,10 @@ public class HubContentInfoJsonUnmarshaller implements Unmarshaller<HubContentIn
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
                     hubContentInfo.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("OriginalCreationTime", targetDepth)) {
+                    context.nextToken();
+                    hubContentInfo.setOriginalCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

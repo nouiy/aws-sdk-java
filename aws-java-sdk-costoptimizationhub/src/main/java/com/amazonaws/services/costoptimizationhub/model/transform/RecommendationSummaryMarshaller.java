@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RecommendationSummaryMarshaller {
 
-    private static final MarshallingInfo<Double> ESTIMATEDMONTHLYSAVINGS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedMonthlySavings").build();
     private static final MarshallingInfo<String> GROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("group").build();
+    private static final MarshallingInfo<Double> ESTIMATEDMONTHLYSAVINGS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("estimatedMonthlySavings").build();
     private static final MarshallingInfo<Integer> RECOMMENDATIONCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationCount").build();
 
@@ -50,8 +50,8 @@ public class RecommendationSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(recommendationSummary.getEstimatedMonthlySavings(), ESTIMATEDMONTHLYSAVINGS_BINDING);
             protocolMarshaller.marshall(recommendationSummary.getGroup(), GROUP_BINDING);
+            protocolMarshaller.marshall(recommendationSummary.getEstimatedMonthlySavings(), ESTIMATEDMONTHLYSAVINGS_BINDING);
             protocolMarshaller.marshall(recommendationSummary.getRecommendationCount(), RECOMMENDATIONCOUNT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
