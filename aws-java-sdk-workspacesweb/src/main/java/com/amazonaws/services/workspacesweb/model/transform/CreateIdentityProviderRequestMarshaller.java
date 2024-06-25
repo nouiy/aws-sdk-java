@@ -13,7 +13,7 @@
 package com.amazonaws.services.workspacesweb.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -42,6 +42,8 @@ public class CreateIdentityProviderRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("identityProviderType").build();
     private static final MarshallingInfo<String> PORTALARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("portalArn").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateIdentityProviderRequestMarshaller instance = new CreateIdentityProviderRequestMarshaller();
 
@@ -64,6 +66,7 @@ public class CreateIdentityProviderRequestMarshaller {
             protocolMarshaller.marshall(createIdentityProviderRequest.getIdentityProviderName(), IDENTITYPROVIDERNAME_BINDING);
             protocolMarshaller.marshall(createIdentityProviderRequest.getIdentityProviderType(), IDENTITYPROVIDERTYPE_BINDING);
             protocolMarshaller.marshall(createIdentityProviderRequest.getPortalArn(), PORTALARN_BINDING);
+            protocolMarshaller.marshall(createIdentityProviderRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

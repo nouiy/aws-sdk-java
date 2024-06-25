@@ -43,6 +43,12 @@ public class UserSettingsSummary implements Serializable, Cloneable, StructuredP
     private String copyAllowed;
     /**
      * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     */
+    private String deepLinkAllowed;
+    /**
+     * <p>
      * The amount of time that a streaming session remains active after users disconnect.
      * </p>
      */
@@ -187,6 +193,65 @@ public class UserSettingsSummary implements Serializable, Cloneable, StructuredP
 
     public UserSettingsSummary withCopyAllowed(EnabledType copyAllowed) {
         this.copyAllowed = copyAllowed.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     * 
+     * @param deepLinkAllowed
+     *        Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * @see EnabledType
+     */
+
+    public void setDeepLinkAllowed(String deepLinkAllowed) {
+        this.deepLinkAllowed = deepLinkAllowed;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     * 
+     * @return Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * @see EnabledType
+     */
+
+    public String getDeepLinkAllowed() {
+        return this.deepLinkAllowed;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     * 
+     * @param deepLinkAllowed
+     *        Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EnabledType
+     */
+
+    public UserSettingsSummary withDeepLinkAllowed(String deepLinkAllowed) {
+        setDeepLinkAllowed(deepLinkAllowed);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     * 
+     * @param deepLinkAllowed
+     *        Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EnabledType
+     */
+
+    public UserSettingsSummary withDeepLinkAllowed(EnabledType deepLinkAllowed) {
+        this.deepLinkAllowed = deepLinkAllowed.toString();
         return this;
     }
 
@@ -568,6 +633,8 @@ public class UserSettingsSummary implements Serializable, Cloneable, StructuredP
             sb.append("CookieSynchronizationConfiguration: ").append("***Sensitive Data Redacted***").append(",");
         if (getCopyAllowed() != null)
             sb.append("CopyAllowed: ").append(getCopyAllowed()).append(",");
+        if (getDeepLinkAllowed() != null)
+            sb.append("DeepLinkAllowed: ").append(getDeepLinkAllowed()).append(",");
         if (getDisconnectTimeoutInMinutes() != null)
             sb.append("DisconnectTimeoutInMinutes: ").append(getDisconnectTimeoutInMinutes()).append(",");
         if (getDownloadAllowed() != null)
@@ -604,6 +671,10 @@ public class UserSettingsSummary implements Serializable, Cloneable, StructuredP
         if (other.getCopyAllowed() == null ^ this.getCopyAllowed() == null)
             return false;
         if (other.getCopyAllowed() != null && other.getCopyAllowed().equals(this.getCopyAllowed()) == false)
+            return false;
+        if (other.getDeepLinkAllowed() == null ^ this.getDeepLinkAllowed() == null)
+            return false;
+        if (other.getDeepLinkAllowed() != null && other.getDeepLinkAllowed().equals(this.getDeepLinkAllowed()) == false)
             return false;
         if (other.getDisconnectTimeoutInMinutes() == null ^ this.getDisconnectTimeoutInMinutes() == null)
             return false;
@@ -644,6 +715,7 @@ public class UserSettingsSummary implements Serializable, Cloneable, StructuredP
 
         hashCode = prime * hashCode + ((getCookieSynchronizationConfiguration() == null) ? 0 : getCookieSynchronizationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCopyAllowed() == null) ? 0 : getCopyAllowed().hashCode());
+        hashCode = prime * hashCode + ((getDeepLinkAllowed() == null) ? 0 : getDeepLinkAllowed().hashCode());
         hashCode = prime * hashCode + ((getDisconnectTimeoutInMinutes() == null) ? 0 : getDisconnectTimeoutInMinutes().hashCode());
         hashCode = prime * hashCode + ((getDownloadAllowed() == null) ? 0 : getDownloadAllowed().hashCode());
         hashCode = prime * hashCode + ((getIdleDisconnectTimeoutInMinutes() == null) ? 0 : getIdleDisconnectTimeoutInMinutes().hashCode());

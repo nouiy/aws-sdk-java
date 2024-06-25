@@ -69,7 +69,7 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private String conversationId;
     /**
      * <p>
-     * The identifier of the previous end user text input message in a conversation.
+     * The identifier of the previous system message in a conversation.
      * </p>
      */
     private String parentMessageId;
@@ -468,11 +468,11 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the previous end user text input message in a conversation.
+     * The identifier of the previous system message in a conversation.
      * </p>
      * 
      * @param parentMessageId
-     *        The identifier of the previous end user text input message in a conversation.
+     *        The identifier of the previous system message in a conversation.
      */
 
     public void setParentMessageId(String parentMessageId) {
@@ -481,10 +481,10 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the previous end user text input message in a conversation.
+     * The identifier of the previous system message in a conversation.
      * </p>
      * 
-     * @return The identifier of the previous end user text input message in a conversation.
+     * @return The identifier of the previous system message in a conversation.
      */
 
     public String getParentMessageId() {
@@ -493,11 +493,11 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the previous end user text input message in a conversation.
+     * The identifier of the previous system message in a conversation.
      * </p>
      * 
      * @param parentMessageId
-     *        The identifier of the previous end user text input message in a conversation.
+     *        The identifier of the previous system message in a conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

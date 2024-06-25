@@ -69,8 +69,7 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
      * Returns <code>true</code> when a document contains any of the specified document attributes or metadata fields.
      * Supported for the following <a
      * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
-     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
-     * <code>stringValue</code>.
+     * attribute value types</a>: <code>stringListValue</code>.
      * </p>
      */
     private DocumentAttribute containsAny;
@@ -410,16 +409,14 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
      * Returns <code>true</code> when a document contains any of the specified document attributes or metadata fields.
      * Supported for the following <a
      * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
-     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
-     * <code>stringValue</code>.
+     * attribute value types</a>: <code>stringListValue</code>.
      * </p>
      * 
      * @param containsAny
      *        Returns <code>true</code> when a document contains any of the specified document attributes or metadata
      *        fields. Supported for the following <a
      *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
-     *        attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code>
-     *        and <code>stringValue</code>.
+     *        attribute value types</a>: <code>stringListValue</code>.
      */
 
     public void setContainsAny(DocumentAttribute containsAny) {
@@ -431,15 +428,13 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
      * Returns <code>true</code> when a document contains any of the specified document attributes or metadata fields.
      * Supported for the following <a
      * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
-     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
-     * <code>stringValue</code>.
+     * attribute value types</a>: <code>stringListValue</code>.
      * </p>
      * 
      * @return Returns <code>true</code> when a document contains any of the specified document attributes or metadata
      *         fields. Supported for the following <a
      *         href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
-     *         attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code>
-     *         and <code>stringValue</code>.
+     *         attribute value types</a>: <code>stringListValue</code>.
      */
 
     public DocumentAttribute getContainsAny() {
@@ -451,16 +446,14 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
      * Returns <code>true</code> when a document contains any of the specified document attributes or metadata fields.
      * Supported for the following <a
      * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
-     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
-     * <code>stringValue</code>.
+     * attribute value types</a>: <code>stringListValue</code>.
      * </p>
      * 
      * @param containsAny
      *        Returns <code>true</code> when a document contains any of the specified document attributes or metadata
      *        fields. Supported for the following <a
      *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
-     *        attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code>
-     *        and <code>stringValue</code>.
+     *        attribute value types</a>: <code>stringListValue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -64,6 +64,14 @@ public class ListProfileObjectTypeItemJsonUnmarshaller implements Unmarshaller<L
                     context.nextToken();
                     listProfileObjectTypeItem.setLastUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("MaxProfileObjectCount", targetDepth)) {
+                    context.nextToken();
+                    listProfileObjectTypeItem.setMaxProfileObjectCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("MaxAvailableProfileObjectCount", targetDepth)) {
+                    context.nextToken();
+                    listProfileObjectTypeItem.setMaxAvailableProfileObjectCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     listProfileObjectTypeItem.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

@@ -98,6 +98,12 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private AppliedAttachmentsConfiguration attachmentsConfiguration;
+    /**
+     * <p>
+     * Settings for whether end users can create and use Amazon Q Apps in the web experience.
+     * </p>
+     */
+    private QAppsConfiguration qAppsConfiguration;
 
     /**
      * <p>
@@ -617,6 +623,46 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * Settings for whether end users can create and use Amazon Q Apps in the web experience.
+     * </p>
+     * 
+     * @param qAppsConfiguration
+     *        Settings for whether end users can create and use Amazon Q Apps in the web experience.
+     */
+
+    public void setQAppsConfiguration(QAppsConfiguration qAppsConfiguration) {
+        this.qAppsConfiguration = qAppsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for whether end users can create and use Amazon Q Apps in the web experience.
+     * </p>
+     * 
+     * @return Settings for whether end users can create and use Amazon Q Apps in the web experience.
+     */
+
+    public QAppsConfiguration getQAppsConfiguration() {
+        return this.qAppsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for whether end users can create and use Amazon Q Apps in the web experience.
+     * </p>
+     * 
+     * @param qAppsConfiguration
+     *        Settings for whether end users can create and use Amazon Q Apps in the web experience.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetApplicationResult withQAppsConfiguration(QAppsConfiguration qAppsConfiguration) {
+        setQAppsConfiguration(qAppsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -651,7 +697,9 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
         if (getError() != null)
             sb.append("Error: ").append(getError()).append(",");
         if (getAttachmentsConfiguration() != null)
-            sb.append("AttachmentsConfiguration: ").append(getAttachmentsConfiguration());
+            sb.append("AttachmentsConfiguration: ").append(getAttachmentsConfiguration()).append(",");
+        if (getQAppsConfiguration() != null)
+            sb.append("QAppsConfiguration: ").append(getQAppsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -714,6 +762,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getAttachmentsConfiguration() != null && other.getAttachmentsConfiguration().equals(this.getAttachmentsConfiguration()) == false)
             return false;
+        if (other.getQAppsConfiguration() == null ^ this.getQAppsConfiguration() == null)
+            return false;
+        if (other.getQAppsConfiguration() != null && other.getQAppsConfiguration().equals(this.getQAppsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -734,6 +786,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
         hashCode = prime * hashCode + ((getAttachmentsConfiguration() == null) ? 0 : getAttachmentsConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getQAppsConfiguration() == null) ? 0 : getQAppsConfiguration().hashCode());
         return hashCode;
     }
 

@@ -251,8 +251,9 @@ public interface AWSQBusiness {
      * <p>
      * There are new tiers for Amazon Q Business. Not all features in Amazon Q Business Pro are also available in Amazon
      * Q Business Lite. For information on what's included in Amazon Q Business Lite and what's included in Amazon Q
-     * Business Pro, see <a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html#tiers">Amazon Q
-     * Business tiers</a>. You must use the Amazon Q Business console to assign subscription tiers to users.
+     * Business Pro, see <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/tiers.html#user-sub-tiers">Amazon Q Business
+     * tiers</a>. You must use the Amazon Q Business console to assign subscription tiers to users.
      * </p>
      * </note>
      * 

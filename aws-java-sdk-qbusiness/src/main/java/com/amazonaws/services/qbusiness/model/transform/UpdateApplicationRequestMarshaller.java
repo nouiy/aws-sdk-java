@@ -39,6 +39,8 @@ public class UpdateApplicationRequestMarshaller {
             .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<StructuredPojo> ATTACHMENTSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attachmentsConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> QAPPSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("qAppsConfiguration").build();
 
     private static final UpdateApplicationRequestMarshaller instance = new UpdateApplicationRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class UpdateApplicationRequestMarshaller {
             protocolMarshaller.marshall(updateApplicationRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateApplicationRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(updateApplicationRequest.getAttachmentsConfiguration(), ATTACHMENTSCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(updateApplicationRequest.getQAppsConfiguration(), QAPPSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

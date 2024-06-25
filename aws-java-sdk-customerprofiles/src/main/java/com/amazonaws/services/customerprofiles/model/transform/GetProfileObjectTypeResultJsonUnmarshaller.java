@@ -76,6 +76,14 @@ public class GetProfileObjectTypeResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     getProfileObjectTypeResult.setSourceLastUpdatedTimestampFormat(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("MaxAvailableProfileObjectCount", targetDepth)) {
+                    context.nextToken();
+                    getProfileObjectTypeResult.setMaxAvailableProfileObjectCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("MaxProfileObjectCount", targetDepth)) {
+                    context.nextToken();
+                    getProfileObjectTypeResult.setMaxProfileObjectCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("Fields", targetDepth)) {
                     context.nextToken();
                     getProfileObjectTypeResult.setFields(new MapUnmarshaller<String, ObjectTypeField>(context.getUnmarshaller(String.class),

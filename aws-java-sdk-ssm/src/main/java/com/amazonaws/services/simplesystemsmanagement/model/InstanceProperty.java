@@ -1319,7 +1319,7 @@ public class InstanceProperty implements Serializable, Cloneable, StructuredPojo
         if (getArchitecture() != null)
             sb.append("Architecture: ").append(getArchitecture()).append(",");
         if (getIPAddress() != null)
-            sb.append("IPAddress: ").append(getIPAddress()).append(",");
+            sb.append("IPAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getLaunchTime() != null)
             sb.append("LaunchTime: ").append(getLaunchTime()).append(",");
         if (getPingStatus() != null)

@@ -45,7 +45,7 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String additionalInformation;
     /**
      * <p>
-     * A unique account number that you have given to the customer.
+     * An account number that you have given to the customer.
      * </p>
      */
     private String accountNumber;
@@ -298,11 +298,11 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A unique account number that you have given to the customer.
+     * An account number that you have given to the customer.
      * </p>
      * 
      * @param accountNumber
-     *        A unique account number that you have given to the customer.
+     *        An account number that you have given to the customer.
      */
 
     public void setAccountNumber(String accountNumber) {
@@ -311,10 +311,10 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A unique account number that you have given to the customer.
+     * An account number that you have given to the customer.
      * </p>
      * 
-     * @return A unique account number that you have given to the customer.
+     * @return An account number that you have given to the customer.
      */
 
     public String getAccountNumber() {
@@ -323,11 +323,11 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A unique account number that you have given to the customer.
+     * An account number that you have given to the customer.
      * </p>
      * 
      * @param accountNumber
-     *        A unique account number that you have given to the customer.
+     *        An account number that you have given to the customer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

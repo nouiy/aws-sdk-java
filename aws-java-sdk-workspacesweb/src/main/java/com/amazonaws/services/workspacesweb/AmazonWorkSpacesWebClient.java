@@ -52,11 +52,11 @@ import com.amazonaws.services.workspacesweb.model.transform.*;
  * return until the service call completes.
  * <p>
  * <p>
- * WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads.
- * WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and
- * SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web
- * provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management,
- * scaling, and maintaining browser images.
+ * Amazon WorkSpaces Secure Browser is a low cost, fully managed WorkSpace built specifically to facilitate secure,
+ * web-based workloads. WorkSpaces Secure Browser makes it easy for customers to safely provide their employees with
+ * access to internal websites and SaaS web applications without the administrative burden of appliances or specialized
+ * client software. WorkSpaces Secure Browser provides simple policy tools tailored for user interactions, while
+ * offloading common tasks like capacity management, scaling, and maintaining browser images.
  * </p>
  */
 @ThreadSafe
@@ -378,6 +378,8 @@ public class AmazonWorkSpacesWebClient extends AmazonWebServiceClient implements
      *         There is a throttling error.
      * @throws ValidationException
      *         There is a validation error.
+     * @throws ConflictException
+     *         There is a conflict.
      * @sample AmazonWorkSpacesWeb.AssociateTrustStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-web-2020-07-08/AssociateTrustStore"
      *      target="_top">AWS API Documentation</a>
@@ -1664,6 +1666,8 @@ public class AmazonWorkSpacesWebClient extends AmazonWebServiceClient implements
      *         There is a throttling error.
      * @throws ValidationException
      *         There is a validation error.
+     * @throws ConflictException
+     *         There is a conflict.
      * @sample AmazonWorkSpacesWeb.DisassociateBrowserSettings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-web-2020-07-08/DisassociateBrowserSettings"
      *      target="_top">AWS API Documentation</a>
@@ -1731,6 +1735,8 @@ public class AmazonWorkSpacesWebClient extends AmazonWebServiceClient implements
      *         There is a throttling error.
      * @throws ValidationException
      *         There is a validation error.
+     * @throws ConflictException
+     *         There is a conflict.
      * @sample AmazonWorkSpacesWeb.DisassociateIpAccessSettings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-web-2020-07-08/DisassociateIpAccessSettings"
      *      target="_top">AWS API Documentation</a>
@@ -1798,6 +1804,8 @@ public class AmazonWorkSpacesWebClient extends AmazonWebServiceClient implements
      *         There is a throttling error.
      * @throws ValidationException
      *         There is a validation error.
+     * @throws ConflictException
+     *         There is a conflict.
      * @sample AmazonWorkSpacesWeb.DisassociateNetworkSettings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-web-2020-07-08/DisassociateNetworkSettings"
      *      target="_top">AWS API Documentation</a>
@@ -1865,6 +1873,8 @@ public class AmazonWorkSpacesWebClient extends AmazonWebServiceClient implements
      *         There is a throttling error.
      * @throws ValidationException
      *         There is a validation error.
+     * @throws ConflictException
+     *         There is a conflict.
      * @sample AmazonWorkSpacesWeb.DisassociateTrustStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-web-2020-07-08/DisassociateTrustStore"
      *      target="_top">AWS API Documentation</a>
@@ -1931,6 +1941,8 @@ public class AmazonWorkSpacesWebClient extends AmazonWebServiceClient implements
      *         There is a throttling error.
      * @throws ValidationException
      *         There is a validation error.
+     * @throws ConflictException
+     *         There is a conflict.
      * @sample AmazonWorkSpacesWeb.DisassociateUserAccessLoggingSettings
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-web-2020-07-08/DisassociateUserAccessLoggingSettings"
@@ -2000,6 +2012,8 @@ public class AmazonWorkSpacesWebClient extends AmazonWebServiceClient implements
      *         There is a throttling error.
      * @throws ValidationException
      *         There is a validation error.
+     * @throws ConflictException
+     *         There is a conflict.
      * @sample AmazonWorkSpacesWeb.DisassociateUserSettings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-web-2020-07-08/DisassociateUserSettings"
      *      target="_top">AWS API Documentation</a>

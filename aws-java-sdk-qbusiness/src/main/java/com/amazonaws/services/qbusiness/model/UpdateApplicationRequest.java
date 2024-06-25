@@ -63,6 +63,12 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private AttachmentsConfiguration attachmentsConfiguration;
+    /**
+     * <p>
+     * An option to allow end users to create and use Amazon Q Apps in the web experience.
+     * </p>
+     */
+    private QAppsConfiguration qAppsConfiguration;
 
     /**
      * <p>
@@ -317,6 +323,46 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * An option to allow end users to create and use Amazon Q Apps in the web experience.
+     * </p>
+     * 
+     * @param qAppsConfiguration
+     *        An option to allow end users to create and use Amazon Q Apps in the web experience.
+     */
+
+    public void setQAppsConfiguration(QAppsConfiguration qAppsConfiguration) {
+        this.qAppsConfiguration = qAppsConfiguration;
+    }
+
+    /**
+     * <p>
+     * An option to allow end users to create and use Amazon Q Apps in the web experience.
+     * </p>
+     * 
+     * @return An option to allow end users to create and use Amazon Q Apps in the web experience.
+     */
+
+    public QAppsConfiguration getQAppsConfiguration() {
+        return this.qAppsConfiguration;
+    }
+
+    /**
+     * <p>
+     * An option to allow end users to create and use Amazon Q Apps in the web experience.
+     * </p>
+     * 
+     * @param qAppsConfiguration
+     *        An option to allow end users to create and use Amazon Q Apps in the web experience.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateApplicationRequest withQAppsConfiguration(QAppsConfiguration qAppsConfiguration) {
+        setQAppsConfiguration(qAppsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -339,7 +385,9 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getAttachmentsConfiguration() != null)
-            sb.append("AttachmentsConfiguration: ").append(getAttachmentsConfiguration());
+            sb.append("AttachmentsConfiguration: ").append(getAttachmentsConfiguration()).append(",");
+        if (getQAppsConfiguration() != null)
+            sb.append("QAppsConfiguration: ").append(getQAppsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -378,6 +426,10 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getAttachmentsConfiguration() != null && other.getAttachmentsConfiguration().equals(this.getAttachmentsConfiguration()) == false)
             return false;
+        if (other.getQAppsConfiguration() == null ^ this.getQAppsConfiguration() == null)
+            return false;
+        if (other.getQAppsConfiguration() != null && other.getQAppsConfiguration().equals(this.getQAppsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -392,6 +444,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getAttachmentsConfiguration() == null) ? 0 : getAttachmentsConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getQAppsConfiguration() == null) ? 0 : getQAppsConfiguration().hashCode());
         return hashCode;
     }
 

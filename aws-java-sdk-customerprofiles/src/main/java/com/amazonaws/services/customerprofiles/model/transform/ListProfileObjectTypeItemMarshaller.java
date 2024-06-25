@@ -37,6 +37,10 @@ public class ListProfileObjectTypeItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<Integer> MAXPROFILEOBJECTCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxProfileObjectCount").build();
+    private static final MarshallingInfo<Integer> MAXAVAILABLEPROFILEOBJECTCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxAvailableProfileObjectCount").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -60,6 +64,8 @@ public class ListProfileObjectTypeItemMarshaller {
             protocolMarshaller.marshall(listProfileObjectTypeItem.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(listProfileObjectTypeItem.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(listProfileObjectTypeItem.getLastUpdatedAt(), LASTUPDATEDAT_BINDING);
+            protocolMarshaller.marshall(listProfileObjectTypeItem.getMaxProfileObjectCount(), MAXPROFILEOBJECTCOUNT_BINDING);
+            protocolMarshaller.marshall(listProfileObjectTypeItem.getMaxAvailableProfileObjectCount(), MAXAVAILABLEPROFILEOBJECTCOUNT_BINDING);
             protocolMarshaller.marshall(listProfileObjectTypeItem.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

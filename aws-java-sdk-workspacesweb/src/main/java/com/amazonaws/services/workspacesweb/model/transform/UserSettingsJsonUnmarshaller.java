@@ -71,6 +71,10 @@ public class UserSettingsJsonUnmarshaller implements Unmarshaller<UserSettings, 
                     context.nextToken();
                     userSettings.setCustomerManagedKey(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("deepLinkAllowed", targetDepth)) {
+                    context.nextToken();
+                    userSettings.setDeepLinkAllowed(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("disconnectTimeoutInMinutes", targetDepth)) {
                     context.nextToken();
                     userSettings.setDisconnectTimeoutInMinutes(context.getUnmarshaller(Integer.class).unmarshall(context));

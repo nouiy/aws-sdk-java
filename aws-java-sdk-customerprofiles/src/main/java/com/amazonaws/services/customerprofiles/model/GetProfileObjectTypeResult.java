@@ -70,6 +70,18 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
     private String sourceLastUpdatedTimestampFormat;
     /**
      * <p>
+     * The amount of provisioned profile object max count available.
+     * </p>
+     */
+    private Integer maxAvailableProfileObjectCount;
+    /**
+     * <p>
+     * The amount of profile object max count assigned to the object type.
+     * </p>
+     */
+    private Integer maxProfileObjectCount;
+    /**
+     * <p>
      * A map of the name and ObjectType field.
      * </p>
      */
@@ -421,6 +433,86 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
+     * The amount of provisioned profile object max count available.
+     * </p>
+     * 
+     * @param maxAvailableProfileObjectCount
+     *        The amount of provisioned profile object max count available.
+     */
+
+    public void setMaxAvailableProfileObjectCount(Integer maxAvailableProfileObjectCount) {
+        this.maxAvailableProfileObjectCount = maxAvailableProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of provisioned profile object max count available.
+     * </p>
+     * 
+     * @return The amount of provisioned profile object max count available.
+     */
+
+    public Integer getMaxAvailableProfileObjectCount() {
+        return this.maxAvailableProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of provisioned profile object max count available.
+     * </p>
+     * 
+     * @param maxAvailableProfileObjectCount
+     *        The amount of provisioned profile object max count available.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetProfileObjectTypeResult withMaxAvailableProfileObjectCount(Integer maxAvailableProfileObjectCount) {
+        setMaxAvailableProfileObjectCount(maxAvailableProfileObjectCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The amount of profile object max count assigned to the object type.
+     * </p>
+     * 
+     * @param maxProfileObjectCount
+     *        The amount of profile object max count assigned to the object type.
+     */
+
+    public void setMaxProfileObjectCount(Integer maxProfileObjectCount) {
+        this.maxProfileObjectCount = maxProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of profile object max count assigned to the object type.
+     * </p>
+     * 
+     * @return The amount of profile object max count assigned to the object type.
+     */
+
+    public Integer getMaxProfileObjectCount() {
+        return this.maxProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of profile object max count assigned to the object type.
+     * </p>
+     * 
+     * @param maxProfileObjectCount
+     *        The amount of profile object max count assigned to the object type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetProfileObjectTypeResult withMaxProfileObjectCount(Integer maxProfileObjectCount) {
+        setMaxProfileObjectCount(maxProfileObjectCount);
+        return this;
+    }
+
+    /**
+     * <p>
      * A map of the name and ObjectType field.
      * </p>
      * 
@@ -729,6 +821,10 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
             sb.append("AllowProfileCreation: ").append(getAllowProfileCreation()).append(",");
         if (getSourceLastUpdatedTimestampFormat() != null)
             sb.append("SourceLastUpdatedTimestampFormat: ").append(getSourceLastUpdatedTimestampFormat()).append(",");
+        if (getMaxAvailableProfileObjectCount() != null)
+            sb.append("MaxAvailableProfileObjectCount: ").append(getMaxAvailableProfileObjectCount()).append(",");
+        if (getMaxProfileObjectCount() != null)
+            sb.append("MaxProfileObjectCount: ").append(getMaxProfileObjectCount()).append(",");
         if (getFields() != null)
             sb.append("Fields: ").append("***Sensitive Data Redacted***").append(",");
         if (getKeys() != null)
@@ -782,6 +878,15 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
         if (other.getSourceLastUpdatedTimestampFormat() != null
                 && other.getSourceLastUpdatedTimestampFormat().equals(this.getSourceLastUpdatedTimestampFormat()) == false)
             return false;
+        if (other.getMaxAvailableProfileObjectCount() == null ^ this.getMaxAvailableProfileObjectCount() == null)
+            return false;
+        if (other.getMaxAvailableProfileObjectCount() != null
+                && other.getMaxAvailableProfileObjectCount().equals(this.getMaxAvailableProfileObjectCount()) == false)
+            return false;
+        if (other.getMaxProfileObjectCount() == null ^ this.getMaxProfileObjectCount() == null)
+            return false;
+        if (other.getMaxProfileObjectCount() != null && other.getMaxProfileObjectCount().equals(this.getMaxProfileObjectCount()) == false)
+            return false;
         if (other.getFields() == null ^ this.getFields() == null)
             return false;
         if (other.getFields() != null && other.getFields().equals(this.getFields()) == false)
@@ -817,6 +922,8 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getEncryptionKey() == null) ? 0 : getEncryptionKey().hashCode());
         hashCode = prime * hashCode + ((getAllowProfileCreation() == null) ? 0 : getAllowProfileCreation().hashCode());
         hashCode = prime * hashCode + ((getSourceLastUpdatedTimestampFormat() == null) ? 0 : getSourceLastUpdatedTimestampFormat().hashCode());
+        hashCode = prime * hashCode + ((getMaxAvailableProfileObjectCount() == null) ? 0 : getMaxAvailableProfileObjectCount().hashCode());
+        hashCode = prime * hashCode + ((getMaxProfileObjectCount() == null) ? 0 : getMaxProfileObjectCount().hashCode());
         hashCode = prime * hashCode + ((getFields() == null) ? 0 : getFields().hashCode());
         hashCode = prime * hashCode + ((getKeys() == null) ? 0 : getKeys().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());

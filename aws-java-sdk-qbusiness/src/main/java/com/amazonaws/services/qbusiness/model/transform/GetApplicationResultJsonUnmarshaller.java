@@ -96,6 +96,10 @@ public class GetApplicationResultJsonUnmarshaller implements Unmarshaller<GetApp
                     context.nextToken();
                     getApplicationResult.setAttachmentsConfiguration(AppliedAttachmentsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("qAppsConfiguration", targetDepth)) {
+                    context.nextToken();
+                    getApplicationResult.setQAppsConfiguration(QAppsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

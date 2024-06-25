@@ -42,6 +42,8 @@ public class CreateUserSettingsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("copyAllowed").build();
     private static final MarshallingInfo<String> CUSTOMERMANAGEDKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customerManagedKey").build();
+    private static final MarshallingInfo<String> DEEPLINKALLOWED_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deepLinkAllowed").build();
     private static final MarshallingInfo<Integer> DISCONNECTTIMEOUTINMINUTES_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("disconnectTimeoutInMinutes").build();
     private static final MarshallingInfo<String> DOWNLOADALLOWED_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -78,6 +80,7 @@ public class CreateUserSettingsRequestMarshaller {
             protocolMarshaller.marshall(createUserSettingsRequest.getCookieSynchronizationConfiguration(), COOKIESYNCHRONIZATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createUserSettingsRequest.getCopyAllowed(), COPYALLOWED_BINDING);
             protocolMarshaller.marshall(createUserSettingsRequest.getCustomerManagedKey(), CUSTOMERMANAGEDKEY_BINDING);
+            protocolMarshaller.marshall(createUserSettingsRequest.getDeepLinkAllowed(), DEEPLINKALLOWED_BINDING);
             protocolMarshaller.marshall(createUserSettingsRequest.getDisconnectTimeoutInMinutes(), DISCONNECTTIMEOUTINMINUTES_BINDING);
             protocolMarshaller.marshall(createUserSettingsRequest.getDownloadAllowed(), DOWNLOADALLOWED_BINDING);
             protocolMarshaller.marshall(createUserSettingsRequest.getIdleDisconnectTimeoutInMinutes(), IDLEDISCONNECTTIMEOUTINMINUTES_BINDING);

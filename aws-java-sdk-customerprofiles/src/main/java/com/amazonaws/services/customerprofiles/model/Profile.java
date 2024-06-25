@@ -36,7 +36,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
     private String profileId;
     /**
      * <p>
-     * A unique account number that you have given to the customer.
+     * An account number that you have given to the customer.
      * </p>
      */
     private String accountNumber;
@@ -250,11 +250,11 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A unique account number that you have given to the customer.
+     * An account number that you have given to the customer.
      * </p>
      * 
      * @param accountNumber
-     *        A unique account number that you have given to the customer.
+     *        An account number that you have given to the customer.
      */
 
     public void setAccountNumber(String accountNumber) {
@@ -263,10 +263,10 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A unique account number that you have given to the customer.
+     * An account number that you have given to the customer.
      * </p>
      * 
-     * @return A unique account number that you have given to the customer.
+     * @return An account number that you have given to the customer.
      */
 
     public String getAccountNumber() {
@@ -275,11 +275,11 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A unique account number that you have given to the customer.
+     * An account number that you have given to the customer.
      * </p>
      * 
      * @param accountNumber
-     *        A unique account number that you have given to the customer.
+     *        An account number that you have given to the customer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

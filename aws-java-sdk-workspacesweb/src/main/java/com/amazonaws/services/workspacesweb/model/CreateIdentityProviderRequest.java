@@ -229,6 +229,12 @@ public class CreateIdentityProviderRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String portalArn;
+    /**
+     * <p>
+     * The tags to add to the identity provider resource. A tag is a key-value pair.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -1526,6 +1532,76 @@ public class CreateIdentityProviderRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The tags to add to the identity provider resource. A tag is a key-value pair.
+     * </p>
+     * 
+     * @return The tags to add to the identity provider resource. A tag is a key-value pair.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * The tags to add to the identity provider resource. A tag is a key-value pair.
+     * </p>
+     * 
+     * @param tags
+     *        The tags to add to the identity provider resource. A tag is a key-value pair.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * The tags to add to the identity provider resource. A tag is a key-value pair.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        The tags to add to the identity provider resource. A tag is a key-value pair.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateIdentityProviderRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The tags to add to the identity provider resource. A tag is a key-value pair.
+     * </p>
+     * 
+     * @param tags
+     *        The tags to add to the identity provider resource. A tag is a key-value pair.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateIdentityProviderRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1546,7 +1622,9 @@ public class CreateIdentityProviderRequest extends com.amazonaws.AmazonWebServic
         if (getIdentityProviderType() != null)
             sb.append("IdentityProviderType: ").append(getIdentityProviderType()).append(",");
         if (getPortalArn() != null)
-            sb.append("PortalArn: ").append(getPortalArn());
+            sb.append("PortalArn: ").append(getPortalArn()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -1581,6 +1659,10 @@ public class CreateIdentityProviderRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getPortalArn() != null && other.getPortalArn().equals(this.getPortalArn()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -1594,6 +1676,7 @@ public class CreateIdentityProviderRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getIdentityProviderName() == null) ? 0 : getIdentityProviderName().hashCode());
         hashCode = prime * hashCode + ((getIdentityProviderType() == null) ? 0 : getIdentityProviderType().hashCode());
         hashCode = prime * hashCode + ((getPortalArn() == null) ? 0 : getPortalArn().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

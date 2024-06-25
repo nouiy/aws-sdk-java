@@ -64,6 +64,12 @@ public class CreateUserSettingsRequest extends com.amazonaws.AmazonWebServiceReq
     private String customerManagedKey;
     /**
      * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     */
+    private String deepLinkAllowed;
+    /**
+     * <p>
      * The amount of time that a streaming session remains active after users disconnect.
      * </p>
      */
@@ -389,6 +395,65 @@ public class CreateUserSettingsRequest extends com.amazonaws.AmazonWebServiceReq
 
     public CreateUserSettingsRequest withCustomerManagedKey(String customerManagedKey) {
         setCustomerManagedKey(customerManagedKey);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     * 
+     * @param deepLinkAllowed
+     *        Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * @see EnabledType
+     */
+
+    public void setDeepLinkAllowed(String deepLinkAllowed) {
+        this.deepLinkAllowed = deepLinkAllowed;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     * 
+     * @return Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * @see EnabledType
+     */
+
+    public String getDeepLinkAllowed() {
+        return this.deepLinkAllowed;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     * 
+     * @param deepLinkAllowed
+     *        Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EnabledType
+     */
+
+    public CreateUserSettingsRequest withDeepLinkAllowed(String deepLinkAllowed) {
+        setDeepLinkAllowed(deepLinkAllowed);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * </p>
+     * 
+     * @param deepLinkAllowed
+     *        Specifies whether the user can use deep links that open automatically when connecting to a session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EnabledType
+     */
+
+    public CreateUserSettingsRequest withDeepLinkAllowed(EnabledType deepLinkAllowed) {
+        this.deepLinkAllowed = deepLinkAllowed.toString();
         return this;
     }
 
@@ -806,6 +871,8 @@ public class CreateUserSettingsRequest extends com.amazonaws.AmazonWebServiceReq
             sb.append("CopyAllowed: ").append(getCopyAllowed()).append(",");
         if (getCustomerManagedKey() != null)
             sb.append("CustomerManagedKey: ").append(getCustomerManagedKey()).append(",");
+        if (getDeepLinkAllowed() != null)
+            sb.append("DeepLinkAllowed: ").append(getDeepLinkAllowed()).append(",");
         if (getDisconnectTimeoutInMinutes() != null)
             sb.append("DisconnectTimeoutInMinutes: ").append(getDisconnectTimeoutInMinutes()).append(",");
         if (getDownloadAllowed() != null)
@@ -855,6 +922,10 @@ public class CreateUserSettingsRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getCustomerManagedKey() != null && other.getCustomerManagedKey().equals(this.getCustomerManagedKey()) == false)
             return false;
+        if (other.getDeepLinkAllowed() == null ^ this.getDeepLinkAllowed() == null)
+            return false;
+        if (other.getDeepLinkAllowed() != null && other.getDeepLinkAllowed().equals(this.getDeepLinkAllowed()) == false)
+            return false;
         if (other.getDisconnectTimeoutInMinutes() == null ^ this.getDisconnectTimeoutInMinutes() == null)
             return false;
         if (other.getDisconnectTimeoutInMinutes() != null && other.getDisconnectTimeoutInMinutes().equals(this.getDisconnectTimeoutInMinutes()) == false)
@@ -897,6 +968,7 @@ public class CreateUserSettingsRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getCookieSynchronizationConfiguration() == null) ? 0 : getCookieSynchronizationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCopyAllowed() == null) ? 0 : getCopyAllowed().hashCode());
         hashCode = prime * hashCode + ((getCustomerManagedKey() == null) ? 0 : getCustomerManagedKey().hashCode());
+        hashCode = prime * hashCode + ((getDeepLinkAllowed() == null) ? 0 : getDeepLinkAllowed().hashCode());
         hashCode = prime * hashCode + ((getDisconnectTimeoutInMinutes() == null) ? 0 : getDisconnectTimeoutInMinutes().hashCode());
         hashCode = prime * hashCode + ((getDownloadAllowed() == null) ? 0 : getDownloadAllowed().hashCode());
         hashCode = prime * hashCode + ((getIdleDisconnectTimeoutInMinutes() == null) ? 0 : getIdleDisconnectTimeoutInMinutes().hashCode());

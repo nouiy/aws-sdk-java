@@ -1391,7 +1391,7 @@ public class InstanceInformation implements Serializable, Cloneable, StructuredP
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getIPAddress() != null)
-            sb.append("IPAddress: ").append(getIPAddress()).append(",");
+            sb.append("IPAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getComputerName() != null)
             sb.append("ComputerName: ").append(getComputerName()).append(",");
         if (getAssociationStatus() != null)

@@ -69,7 +69,7 @@ public class CreateIpAccessSettingsRequest extends com.amazonaws.AmazonWebServic
     private java.util.List<IpRule> ipRules;
     /**
      * <p>
-     * The tags to add to the browser settings resource. A tag is a key-value pair.
+     * The tags to add to the IP access settings resource. A tag is a key-value pair.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -407,10 +407,10 @@ public class CreateIpAccessSettingsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The tags to add to the browser settings resource. A tag is a key-value pair.
+     * The tags to add to the IP access settings resource. A tag is a key-value pair.
      * </p>
      * 
-     * @return The tags to add to the browser settings resource. A tag is a key-value pair.
+     * @return The tags to add to the IP access settings resource. A tag is a key-value pair.
      */
 
     public java.util.List<Tag> getTags() {
@@ -419,11 +419,11 @@ public class CreateIpAccessSettingsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The tags to add to the browser settings resource. A tag is a key-value pair.
+     * The tags to add to the IP access settings resource. A tag is a key-value pair.
      * </p>
      * 
      * @param tags
-     *        The tags to add to the browser settings resource. A tag is a key-value pair.
+     *        The tags to add to the IP access settings resource. A tag is a key-value pair.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -437,7 +437,7 @@ public class CreateIpAccessSettingsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The tags to add to the browser settings resource. A tag is a key-value pair.
+     * The tags to add to the IP access settings resource. A tag is a key-value pair.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -446,7 +446,7 @@ public class CreateIpAccessSettingsRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param tags
-     *        The tags to add to the browser settings resource. A tag is a key-value pair.
+     *        The tags to add to the IP access settings resource. A tag is a key-value pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -462,11 +462,11 @@ public class CreateIpAccessSettingsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The tags to add to the browser settings resource. A tag is a key-value pair.
+     * The tags to add to the IP access settings resource. A tag is a key-value pair.
      * </p>
      * 
      * @param tags
-     *        The tags to add to the browser settings resource. A tag is a key-value pair.
+     *        The tags to add to the IP access settings resource. A tag is a key-value pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -82,6 +82,12 @@ public class PutProfileObjectTypeRequest extends com.amazonaws.AmazonWebServiceR
     private String sourceLastUpdatedTimestampFormat;
     /**
      * <p>
+     * The amount of profile object max count assigned to the object type
+     * </p>
+     */
+    private Integer maxProfileObjectCount;
+    /**
+     * <p>
      * A map of the name and ObjectType field.
      * </p>
      */
@@ -488,6 +494,46 @@ public class PutProfileObjectTypeRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * The amount of profile object max count assigned to the object type
+     * </p>
+     * 
+     * @param maxProfileObjectCount
+     *        The amount of profile object max count assigned to the object type
+     */
+
+    public void setMaxProfileObjectCount(Integer maxProfileObjectCount) {
+        this.maxProfileObjectCount = maxProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of profile object max count assigned to the object type
+     * </p>
+     * 
+     * @return The amount of profile object max count assigned to the object type
+     */
+
+    public Integer getMaxProfileObjectCount() {
+        return this.maxProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of profile object max count assigned to the object type
+     * </p>
+     * 
+     * @param maxProfileObjectCount
+     *        The amount of profile object max count assigned to the object type
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutProfileObjectTypeRequest withMaxProfileObjectCount(Integer maxProfileObjectCount) {
+        setMaxProfileObjectCount(maxProfileObjectCount);
+        return this;
+    }
+
+    /**
+     * <p>
      * A map of the name and ObjectType field.
      * </p>
      * 
@@ -718,6 +764,8 @@ public class PutProfileObjectTypeRequest extends com.amazonaws.AmazonWebServiceR
             sb.append("AllowProfileCreation: ").append(getAllowProfileCreation()).append(",");
         if (getSourceLastUpdatedTimestampFormat() != null)
             sb.append("SourceLastUpdatedTimestampFormat: ").append(getSourceLastUpdatedTimestampFormat()).append(",");
+        if (getMaxProfileObjectCount() != null)
+            sb.append("MaxProfileObjectCount: ").append(getMaxProfileObjectCount()).append(",");
         if (getFields() != null)
             sb.append("Fields: ").append("***Sensitive Data Redacted***").append(",");
         if (getKeys() != null)
@@ -771,6 +819,10 @@ public class PutProfileObjectTypeRequest extends com.amazonaws.AmazonWebServiceR
         if (other.getSourceLastUpdatedTimestampFormat() != null
                 && other.getSourceLastUpdatedTimestampFormat().equals(this.getSourceLastUpdatedTimestampFormat()) == false)
             return false;
+        if (other.getMaxProfileObjectCount() == null ^ this.getMaxProfileObjectCount() == null)
+            return false;
+        if (other.getMaxProfileObjectCount() != null && other.getMaxProfileObjectCount().equals(this.getMaxProfileObjectCount()) == false)
+            return false;
         if (other.getFields() == null ^ this.getFields() == null)
             return false;
         if (other.getFields() != null && other.getFields().equals(this.getFields()) == false)
@@ -799,6 +851,7 @@ public class PutProfileObjectTypeRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getEncryptionKey() == null) ? 0 : getEncryptionKey().hashCode());
         hashCode = prime * hashCode + ((getAllowProfileCreation() == null) ? 0 : getAllowProfileCreation().hashCode());
         hashCode = prime * hashCode + ((getSourceLastUpdatedTimestampFormat() == null) ? 0 : getSourceLastUpdatedTimestampFormat().hashCode());
+        hashCode = prime * hashCode + ((getMaxProfileObjectCount() == null) ? 0 : getMaxProfileObjectCount().hashCode());
         hashCode = prime * hashCode + ((getFields() == null) ? 0 : getFields().hashCode());
         hashCode = prime * hashCode + ((getKeys() == null) ? 0 : getKeys().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

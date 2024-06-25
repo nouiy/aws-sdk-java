@@ -54,6 +54,18 @@ public class ListProfileObjectTypeItem implements Serializable, Cloneable, Struc
     private java.util.Date lastUpdatedAt;
     /**
      * <p>
+     * The amount of profile object max count assigned to the object type.
+     * </p>
+     */
+    private Integer maxProfileObjectCount;
+    /**
+     * <p>
+     * The amount of provisioned profile object max count available.
+     * </p>
+     */
+    private Integer maxAvailableProfileObjectCount;
+    /**
+     * <p>
      * The tags used to organize, track, or control access for this resource.
      * </p>
      */
@@ -221,6 +233,86 @@ public class ListProfileObjectTypeItem implements Serializable, Cloneable, Struc
 
     /**
      * <p>
+     * The amount of profile object max count assigned to the object type.
+     * </p>
+     * 
+     * @param maxProfileObjectCount
+     *        The amount of profile object max count assigned to the object type.
+     */
+
+    public void setMaxProfileObjectCount(Integer maxProfileObjectCount) {
+        this.maxProfileObjectCount = maxProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of profile object max count assigned to the object type.
+     * </p>
+     * 
+     * @return The amount of profile object max count assigned to the object type.
+     */
+
+    public Integer getMaxProfileObjectCount() {
+        return this.maxProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of profile object max count assigned to the object type.
+     * </p>
+     * 
+     * @param maxProfileObjectCount
+     *        The amount of profile object max count assigned to the object type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListProfileObjectTypeItem withMaxProfileObjectCount(Integer maxProfileObjectCount) {
+        setMaxProfileObjectCount(maxProfileObjectCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The amount of provisioned profile object max count available.
+     * </p>
+     * 
+     * @param maxAvailableProfileObjectCount
+     *        The amount of provisioned profile object max count available.
+     */
+
+    public void setMaxAvailableProfileObjectCount(Integer maxAvailableProfileObjectCount) {
+        this.maxAvailableProfileObjectCount = maxAvailableProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of provisioned profile object max count available.
+     * </p>
+     * 
+     * @return The amount of provisioned profile object max count available.
+     */
+
+    public Integer getMaxAvailableProfileObjectCount() {
+        return this.maxAvailableProfileObjectCount;
+    }
+
+    /**
+     * <p>
+     * The amount of provisioned profile object max count available.
+     * </p>
+     * 
+     * @param maxAvailableProfileObjectCount
+     *        The amount of provisioned profile object max count available.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListProfileObjectTypeItem withMaxAvailableProfileObjectCount(Integer maxAvailableProfileObjectCount) {
+        setMaxAvailableProfileObjectCount(maxAvailableProfileObjectCount);
+        return this;
+    }
+
+    /**
+     * <p>
      * The tags used to organize, track, or control access for this resource.
      * </p>
      * 
@@ -307,6 +399,10 @@ public class ListProfileObjectTypeItem implements Serializable, Cloneable, Struc
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
+        if (getMaxProfileObjectCount() != null)
+            sb.append("MaxProfileObjectCount: ").append(getMaxProfileObjectCount()).append(",");
+        if (getMaxAvailableProfileObjectCount() != null)
+            sb.append("MaxAvailableProfileObjectCount: ").append(getMaxAvailableProfileObjectCount()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -339,6 +435,15 @@ public class ListProfileObjectTypeItem implements Serializable, Cloneable, Struc
             return false;
         if (other.getLastUpdatedAt() != null && other.getLastUpdatedAt().equals(this.getLastUpdatedAt()) == false)
             return false;
+        if (other.getMaxProfileObjectCount() == null ^ this.getMaxProfileObjectCount() == null)
+            return false;
+        if (other.getMaxProfileObjectCount() != null && other.getMaxProfileObjectCount().equals(this.getMaxProfileObjectCount()) == false)
+            return false;
+        if (other.getMaxAvailableProfileObjectCount() == null ^ this.getMaxAvailableProfileObjectCount() == null)
+            return false;
+        if (other.getMaxAvailableProfileObjectCount() != null
+                && other.getMaxAvailableProfileObjectCount().equals(this.getMaxAvailableProfileObjectCount()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -355,6 +460,8 @@ public class ListProfileObjectTypeItem implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getMaxProfileObjectCount() == null) ? 0 : getMaxProfileObjectCount().hashCode());
+        hashCode = prime * hashCode + ((getMaxAvailableProfileObjectCount() == null) ? 0 : getMaxAvailableProfileObjectCount().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

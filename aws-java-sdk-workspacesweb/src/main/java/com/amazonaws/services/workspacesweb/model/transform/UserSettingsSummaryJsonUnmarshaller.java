@@ -57,6 +57,10 @@ public class UserSettingsSummaryJsonUnmarshaller implements Unmarshaller<UserSet
                     context.nextToken();
                     userSettingsSummary.setCopyAllowed(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("deepLinkAllowed", targetDepth)) {
+                    context.nextToken();
+                    userSettingsSummary.setDeepLinkAllowed(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("disconnectTimeoutInMinutes", targetDepth)) {
                     context.nextToken();
                     userSettingsSummary.setDisconnectTimeoutInMinutes(context.getUnmarshaller(Integer.class).unmarshall(context));
