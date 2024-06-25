@@ -133,9 +133,9 @@ public class EnabledMetric implements Serializable, Cloneable {
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private String metric;
@@ -253,9 +253,9 @@ public class EnabledMetric implements Serializable, Cloneable {
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param metric
@@ -363,9 +363,9 @@ public class EnabledMetric implements Serializable, Cloneable {
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     *        >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon
+     *        CloudWatch metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setMetric(String metric) {
@@ -479,9 +479,9 @@ public class EnabledMetric implements Serializable, Cloneable {
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return One of the following metrics:</p>
@@ -588,9 +588,9 @@ public class EnabledMetric implements Serializable, Cloneable {
      *         </li>
      *         </ul>
      *         <p>
-     *         For more information, see <a href=
-     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     *         >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon
+     *         CloudWatch metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public String getMetric() {
@@ -704,9 +704,9 @@ public class EnabledMetric implements Serializable, Cloneable {
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param metric
@@ -814,9 +814,9 @@ public class EnabledMetric implements Serializable, Cloneable {
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     *        >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon
+     *        CloudWatch metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

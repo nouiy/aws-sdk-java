@@ -124,6 +124,12 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date updatedAt;
+    /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     */
+    private java.util.List<AttachmentError> lastModificationErrors;
 
     /**
      * <p>
@@ -834,6 +840,76 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     * 
+     * @return Describes the error associated with the attachment request.
+     */
+
+    public java.util.List<AttachmentError> getLastModificationErrors() {
+        return lastModificationErrors;
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the attachment request.
+     */
+
+    public void setLastModificationErrors(java.util.Collection<AttachmentError> lastModificationErrors) {
+        if (lastModificationErrors == null) {
+            this.lastModificationErrors = null;
+            return;
+        }
+
+        this.lastModificationErrors = new java.util.ArrayList<AttachmentError>(lastModificationErrors);
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLastModificationErrors(java.util.Collection)} or
+     * {@link #withLastModificationErrors(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the attachment request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Attachment withLastModificationErrors(AttachmentError... lastModificationErrors) {
+        if (this.lastModificationErrors == null) {
+            setLastModificationErrors(new java.util.ArrayList<AttachmentError>(lastModificationErrors.length));
+        }
+        for (AttachmentError ele : lastModificationErrors) {
+            this.lastModificationErrors.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the attachment request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Attachment withLastModificationErrors(java.util.Collection<AttachmentError> lastModificationErrors) {
+        setLastModificationErrors(lastModificationErrors);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -876,7 +952,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getUpdatedAt() != null)
-            sb.append("UpdatedAt: ").append(getUpdatedAt());
+            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
+        if (getLastModificationErrors() != null)
+            sb.append("LastModificationErrors: ").append(getLastModificationErrors());
         sb.append("}");
         return sb.toString();
     }
@@ -956,6 +1034,10 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
             return false;
+        if (other.getLastModificationErrors() == null ^ this.getLastModificationErrors() == null)
+            return false;
+        if (other.getLastModificationErrors() != null && other.getLastModificationErrors().equals(this.getLastModificationErrors()) == false)
+            return false;
         return true;
     }
 
@@ -980,6 +1062,7 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getProposedNetworkFunctionGroupChange() == null) ? 0 : getProposedNetworkFunctionGroupChange().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getLastModificationErrors() == null) ? 0 : getLastModificationErrors().hashCode());
         return hashCode;
     }
 

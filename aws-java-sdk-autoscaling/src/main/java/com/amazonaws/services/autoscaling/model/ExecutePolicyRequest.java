@@ -43,8 +43,8 @@ public class ExecutePolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private Boolean honorCooldown;
@@ -160,8 +160,8 @@ public class ExecutePolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param honorCooldown
@@ -169,8 +169,8 @@ public class ExecutePolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        policy.</p>
      *        <p>
      *        Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
-     *        EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html"
+     *        >Scaling cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setHonorCooldown(Boolean honorCooldown) {
@@ -183,16 +183,16 @@ public class ExecutePolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Indicates whether Amazon EC2 Auto Scaling waits for the cooldown period to complete before executing the
      *         policy.</p>
      *         <p>
      *         Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
-     *         EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html"
+     *         >Scaling cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean getHonorCooldown() {
@@ -205,8 +205,8 @@ public class ExecutePolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param honorCooldown
@@ -214,8 +214,8 @@ public class ExecutePolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        policy.</p>
      *        <p>
      *        Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
-     *        EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html"
+     *        >Scaling cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,16 +230,16 @@ public class ExecutePolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Indicates whether Amazon EC2 Auto Scaling waits for the cooldown period to complete before executing the
      *         policy.</p>
      *         <p>
      *         Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
-     *         EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html"
+     *         >Scaling cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean isHonorCooldown() {

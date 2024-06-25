@@ -52,10 +52,9 @@ public class AutoScalingInstanceDetails implements Serializable, Cloneable {
     private String availabilityZone;
     /**
      * <p>
-     * The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information about
-     * lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For more information, see
+     * <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> |
@@ -267,10 +266,9 @@ public class AutoScalingInstanceDetails implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information about
-     * lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For more information, see
+     * <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> |
@@ -283,10 +281,10 @@ public class AutoScalingInstanceDetails implements Serializable, Cloneable {
      * </p>
      * 
      * @param lifecycleState
-     *        The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information
-     *        about lifecycle states, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     *        lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
+     *        The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2
+     *        Auto Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
      *        <p>
      *        Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> |
      *        <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> |
@@ -304,10 +302,9 @@ public class AutoScalingInstanceDetails implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information about
-     * lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For more information, see
+     * <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> |
@@ -319,10 +316,10 @@ public class AutoScalingInstanceDetails implements Serializable, Cloneable {
      * <code>Warmed:Stopped</code> | <code>Warmed:Running</code>
      * </p>
      * 
-     * @return The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information
-     *         about lifecycle states, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     *         lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
+     * @return The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2
+     *         Auto Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
      *         <p>
      *         Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> |
      *         <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> |
@@ -340,10 +337,9 @@ public class AutoScalingInstanceDetails implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information about
-     * lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For more information, see
+     * <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> |
@@ -356,10 +352,10 @@ public class AutoScalingInstanceDetails implements Serializable, Cloneable {
      * </p>
      * 
      * @param lifecycleState
-     *        The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information
-     *        about lifecycle states, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     *        lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
+     *        The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2
+     *        Auto Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
      *        <p>
      *        Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> |
      *        <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> |

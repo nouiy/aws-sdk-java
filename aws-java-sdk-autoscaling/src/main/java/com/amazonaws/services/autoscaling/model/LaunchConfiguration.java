@@ -52,16 +52,16 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon
-     * EC2 Key Pairs</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EC2 key pairs and Amazon EC2 instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      */
     private String keyName;
     /**
      * <p>
      * A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your
-     * VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control
+     * traffic to your Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud
+     * User Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> securityGroups;
@@ -112,8 +112,8 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The block device mapping entries that define the block devices to attach to the instances at launch. By default,
      * the block devices specified in the block device mapping for the AMI are used. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device
-     * Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block device
+     * mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<BlockDeviceMapping> blockDeviceMappings;
@@ -125,7 +125,7 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html">Configure
-     * Monitoring for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * monitoring for Auto Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private InstanceMonitoring instanceMonitoring;
@@ -133,8 +133,8 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are
      * launched when the price you specify exceeds the current Spot price. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Requesting Spot
-     * Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-template-spot-instances.html">Requesting Spot
+     * Instances for fault-tolerant and flexible applications</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private String spotPrice;
@@ -157,7 +157,7 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      * <code>false</code>). For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized Instances</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized instances</a>
      * in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      */
@@ -168,8 +168,9 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public
      * IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a
      * public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more
-     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto
-     * Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network
+     * connectivity for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      */
     private Boolean associatePublicIpAddress;
@@ -178,18 +179,13 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * The tenancy of the instance, either <code>default</code> or <code>dedicated</code>. An instance with
      * <code>dedicated</code> tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC.
      * </p>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html">Configuring
-     * instance tenancy with Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     * </p>
      */
     private String placementTenancy;
     /**
      * <p>
      * The metadata options for the instances. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds"
-     * >Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * >Configure the instance metadata options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private InstanceMetadataOptions metadataOptions;
@@ -332,15 +328,15 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon
-     * EC2 Key Pairs</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EC2 key pairs and Amazon EC2 instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param keyName
      *        The name of the key pair.</p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 Key Pairs</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pairs and
+     *        Amazon EC2 instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public void setKeyName(String keyName) {
@@ -353,14 +349,14 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon
-     * EC2 Key Pairs</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EC2 key pairs and Amazon EC2 instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @return The name of the key pair.</p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 Key Pairs</a> in
-     *         the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pairs and
+     *         Amazon EC2 instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public String getKeyName() {
@@ -373,15 +369,15 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon
-     * EC2 Key Pairs</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * EC2 key pairs and Amazon EC2 instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param keyName
      *        The name of the key pair.</p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 Key Pairs</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pairs and
+     *        Amazon EC2 instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -393,15 +389,16 @@ public class LaunchConfiguration implements Serializable, Cloneable {
     /**
      * <p>
      * A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your
-     * VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control
+     * traffic to your Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud
+     * User Guide</i>.
      * </p>
      * 
      * @return A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for
-     *         Your VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control traffic to your
+     *         Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud User
+     *         Guide</i>.
      */
 
     public java.util.List<String> getSecurityGroups() {
@@ -414,16 +411,17 @@ public class LaunchConfiguration implements Serializable, Cloneable {
     /**
      * <p>
      * A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your
-     * VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control
+     * traffic to your Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud
+     * User Guide</i>.
      * </p>
      * 
      * @param securityGroups
      *        A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for
-     *        Your VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control traffic to your
+     *        Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud User
+     *        Guide</i>.
      */
 
     public void setSecurityGroups(java.util.Collection<String> securityGroups) {
@@ -438,9 +436,9 @@ public class LaunchConfiguration implements Serializable, Cloneable {
     /**
      * <p>
      * A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your
-     * VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control
+     * traffic to your Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud
+     * User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -451,8 +449,9 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * @param securityGroups
      *        A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for
-     *        Your VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control traffic to your
+     *        Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud User
+     *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -469,16 +468,17 @@ public class LaunchConfiguration implements Serializable, Cloneable {
     /**
      * <p>
      * A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your
-     * VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control
+     * traffic to your Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud
+     * User Guide</i>.
      * </p>
      * 
      * @param securityGroups
      *        A list that contains the security groups to assign to the instances in the Auto Scaling group. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for
-     *        Your VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">Control traffic to your
+     *        Amazon Web Services resources using security groups</a> in the <i>Amazon Virtual Private Cloud User
+     *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -809,15 +809,15 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The block device mapping entries that define the block devices to attach to the instances at launch. By default,
      * the block devices specified in the block device mapping for the AMI are used. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device
-     * Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block device
+     * mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @return The block device mapping entries that define the block devices to attach to the instances at launch. By
      *         default, the block devices specified in the block device mapping for the AMI are used. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block
-     *         Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         device mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public java.util.List<BlockDeviceMapping> getBlockDeviceMappings() {
@@ -831,16 +831,16 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The block device mapping entries that define the block devices to attach to the instances at launch. By default,
      * the block devices specified in the block device mapping for the AMI are used. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device
-     * Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block device
+     * mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param blockDeviceMappings
      *        The block device mapping entries that define the block devices to attach to the instances at launch. By
      *        default, the block devices specified in the block device mapping for the AMI are used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device
-     *        Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block device
+     *        mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public void setBlockDeviceMappings(java.util.Collection<BlockDeviceMapping> blockDeviceMappings) {
@@ -856,8 +856,8 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The block device mapping entries that define the block devices to attach to the instances at launch. By default,
      * the block devices specified in the block device mapping for the AMI are used. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device
-     * Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block device
+     * mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -869,8 +869,8 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      *        The block device mapping entries that define the block devices to attach to the instances at launch. By
      *        default, the block devices specified in the block device mapping for the AMI are used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device
-     *        Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block device
+     *        mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -888,16 +888,16 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The block device mapping entries that define the block devices to attach to the instances at launch. By default,
      * the block devices specified in the block device mapping for the AMI are used. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device
-     * Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block device
+     * mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param blockDeviceMappings
      *        The block device mapping entries that define the block devices to attach to the instances at launch. By
      *        default, the block devices specified in the block device mapping for the AMI are used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device
-     *        Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block device
+     *        mappings</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -914,7 +914,7 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html">Configure
-     * Monitoring for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * monitoring for Auto Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param instanceMonitoring
@@ -923,7 +923,7 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html">Configure
-     *        Monitoring for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        monitoring for Auto Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setInstanceMonitoring(InstanceMonitoring instanceMonitoring) {
@@ -938,7 +938,7 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html">Configure
-     * Monitoring for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * monitoring for Auto Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Controls whether instances in this group are launched with detailed (<code>true</code>) or basic (
@@ -946,7 +946,7 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html">Configure
-     *         Monitoring for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         monitoring for Auto Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public InstanceMonitoring getInstanceMonitoring() {
@@ -961,7 +961,7 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html">Configure
-     * Monitoring for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * monitoring for Auto Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param instanceMonitoring
@@ -970,7 +970,7 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html">Configure
-     *        Monitoring for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        monitoring for Auto Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -983,15 +983,16 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are
      * launched when the price you specify exceeds the current Spot price. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Requesting Spot
-     * Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-template-spot-instances.html">Requesting Spot
+     * Instances for fault-tolerant and flexible applications</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param spotPrice
      *        The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances
      *        are launched when the price you specify exceeds the current Spot price. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Requesting
-     *        Spot Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-template-spot-instances.html"
+     *        >Requesting Spot Instances for fault-tolerant and flexible applications</a> in the <i>Amazon EC2 Auto
+     *        Scaling User Guide</i>.
      */
 
     public void setSpotPrice(String spotPrice) {
@@ -1002,14 +1003,16 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are
      * launched when the price you specify exceeds the current Spot price. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Requesting Spot
-     * Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-template-spot-instances.html">Requesting Spot
+     * Instances for fault-tolerant and flexible applications</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances
      *         are launched when the price you specify exceeds the current Spot price. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Requesting
-     *         Spot Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href=
+     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-template-spot-instances.html">Requesting
+     *         Spot Instances for fault-tolerant and flexible applications</a> in the <i>Amazon EC2 Auto Scaling User
+     *         Guide</i>.
      */
 
     public String getSpotPrice() {
@@ -1020,15 +1023,16 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are
      * launched when the price you specify exceeds the current Spot price. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Requesting Spot
-     * Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-template-spot-instances.html">Requesting Spot
+     * Instances for fault-tolerant and flexible applications</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param spotPrice
      *        The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances
      *        are launched when the price you specify exceeds the current Spot price. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Requesting
-     *        Spot Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-template-spot-instances.html"
+     *        >Requesting Spot Instances for fault-tolerant and flexible applications</a> in the <i>Amazon EC2 Auto
+     *        Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1139,15 +1143,15 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      * <code>false</code>). For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized Instances</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized instances</a>
      * in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param ebsOptimized
      *        Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      *        <code>false</code>). For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized
-     *        Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized
+     *        instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public void setEbsOptimized(Boolean ebsOptimized) {
@@ -1158,14 +1162,14 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      * <code>false</code>). For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized Instances</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized instances</a>
      * in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @return Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      *         <code>false</code>). For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized
-     *         Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized
+     *         instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public Boolean getEbsOptimized() {
@@ -1176,15 +1180,15 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      * <code>false</code>). For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized Instances</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized instances</a>
      * in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param ebsOptimized
      *        Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      *        <code>false</code>). For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized
-     *        Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized
+     *        instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1197,14 +1201,14 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      * <code>false</code>). For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized Instances</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized instances</a>
      * in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @return Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (
      *         <code>false</code>). For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized
-     *         Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS-optimized
+     *         instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public Boolean isEbsOptimized() {
@@ -1217,8 +1221,9 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public
      * IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a
      * public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more
-     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto
-     * Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network
+     * connectivity for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      * 
      * @param associatePublicIpAddress
@@ -1227,8 +1232,8 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      *        assign a public IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the
      *        default is not to assign a public IPv4 address, unless you enabled the option to assign a public IPv4
      *        address on the subnet. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling
-     *        instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network connectivity
+     *        for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
@@ -1241,8 +1246,9 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public
      * IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a
      * public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more
-     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto
-     * Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network
+     * connectivity for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      * 
      * @return Specifies whether to assign a public IPv4 address to the group's instances. If the instance is launched
@@ -1250,8 +1256,8 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      *         assign a public IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the
      *         default is not to assign a public IPv4 address, unless you enabled the option to assign a public IPv4
      *         address on the subnet. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling
-     *         instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network connectivity
+     *         for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean getAssociatePublicIpAddress() {
@@ -1264,8 +1270,9 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public
      * IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a
      * public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more
-     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto
-     * Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network
+     * connectivity for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      * 
      * @param associatePublicIpAddress
@@ -1274,8 +1281,8 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      *        assign a public IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the
      *        default is not to assign a public IPv4 address, unless you enabled the option to assign a public IPv4
      *        address on the subnet. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling
-     *        instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network connectivity
+     *        for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1290,8 +1297,9 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public
      * IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a
      * public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more
-     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto
-     * Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network
+     * connectivity for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
      * </p>
      * 
      * @return Specifies whether to assign a public IPv4 address to the group's instances. If the instance is launched
@@ -1299,8 +1307,8 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      *         assign a public IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the
      *         default is not to assign a public IPv4 address, unless you enabled the option to assign a public IPv4
      *         address on the subnet. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling
-     *         instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Provide network connectivity
+     *         for your Auto Scaling instances using Amazon VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean isAssociatePublicIpAddress() {
@@ -1312,21 +1320,11 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * The tenancy of the instance, either <code>default</code> or <code>dedicated</code>. An instance with
      * <code>dedicated</code> tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC.
      * </p>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html">Configuring
-     * instance tenancy with Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     * </p>
      * 
      * @param placementTenancy
      *        The tenancy of the instance, either <code>default</code> or <code>dedicated</code>. An instance with
      *        <code>dedicated</code> tenancy runs on isolated, single-tenant hardware and can only be launched into a
-     *        VPC.</p>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html"
-     *        >Configuring instance tenancy with Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
-     *        Guide</i>.
+     *        VPC.
      */
 
     public void setPlacementTenancy(String placementTenancy) {
@@ -1338,20 +1336,10 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * The tenancy of the instance, either <code>default</code> or <code>dedicated</code>. An instance with
      * <code>dedicated</code> tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC.
      * </p>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html">Configuring
-     * instance tenancy with Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     * </p>
      * 
      * @return The tenancy of the instance, either <code>default</code> or <code>dedicated</code>. An instance with
      *         <code>dedicated</code> tenancy runs on isolated, single-tenant hardware and can only be launched into a
-     *         VPC.</p>
-     *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html"
-     *         >Configuring instance tenancy with Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
-     *         Guide</i>.
+     *         VPC.
      */
 
     public String getPlacementTenancy() {
@@ -1363,21 +1351,11 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * The tenancy of the instance, either <code>default</code> or <code>dedicated</code>. An instance with
      * <code>dedicated</code> tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC.
      * </p>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html">Configuring
-     * instance tenancy with Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     * </p>
      * 
      * @param placementTenancy
      *        The tenancy of the instance, either <code>default</code> or <code>dedicated</code>. An instance with
      *        <code>dedicated</code> tenancy runs on isolated, single-tenant hardware and can only be launched into a
-     *        VPC.</p>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html"
-     *        >Configuring instance tenancy with Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
-     *        Guide</i>.
+     *        VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1390,13 +1368,13 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instances. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds"
-     * >Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * >Configure the instance metadata options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param metadataOptions
      *        The metadata options for the instances. For more information, see <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds"
-     *        >Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        >Configure the instance metadata options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setMetadataOptions(InstanceMetadataOptions metadataOptions) {
@@ -1407,12 +1385,12 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instances. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds"
-     * >Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * >Configure the instance metadata options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return The metadata options for the instances. For more information, see <a href=
      *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds"
-     *         >Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         >Configure the instance metadata options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public InstanceMetadataOptions getMetadataOptions() {
@@ -1423,13 +1401,13 @@ public class LaunchConfiguration implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instances. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds"
-     * >Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * >Configure the instance metadata options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param metadataOptions
      *        The metadata options for the instances. For more information, see <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds"
-     *        >Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        >Configure the instance metadata options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

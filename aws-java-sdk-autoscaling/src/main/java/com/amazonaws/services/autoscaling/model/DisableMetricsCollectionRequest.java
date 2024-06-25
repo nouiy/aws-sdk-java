@@ -144,9 +144,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      * If you omit this property, all metrics are disabled.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> metrics;
@@ -304,9 +304,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      * If you omit this property, all metrics are disabled.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Identifies the metrics to disable.</p>
@@ -419,9 +419,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      *         If you omit this property, all metrics are disabled.
      *         </p>
      *         <p>
-     *         For more information, see <a href=
-     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     *         >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon
+     *         CloudWatch metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public java.util.List<String> getMetrics() {
@@ -544,9 +544,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      * If you omit this property, all metrics are disabled.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param metrics
@@ -660,9 +660,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      *        If you omit this property, all metrics are disabled.
      *        </p>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     *        >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon
+     *        CloudWatch metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setMetrics(java.util.Collection<String> metrics) {
@@ -787,9 +787,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      * If you omit this property, all metrics are disabled.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -908,9 +908,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      *        If you omit this property, all metrics are disabled.
      *        </p>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     *        >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon
+     *        CloudWatch metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1037,9 +1037,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      * If you omit this property, all metrics are disabled.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     * >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon CloudWatch
+     * metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param metrics
@@ -1153,9 +1153,9 @@ public class DisableMetricsCollectionRequest extends com.amazonaws.AmazonWebServ
      *        If you omit this property, all metrics are disabled.
      *        </p>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics"
-     *        >Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html">Amazon
+     *        CloudWatch metrics for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

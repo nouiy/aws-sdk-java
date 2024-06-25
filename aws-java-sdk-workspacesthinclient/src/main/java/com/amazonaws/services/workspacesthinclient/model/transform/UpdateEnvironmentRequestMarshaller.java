@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.workspacesthinclient.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -43,6 +45,8 @@ public class UpdateEnvironmentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("softwareSetUpdateMode").build();
     private static final MarshallingInfo<String> DESIREDSOFTWARESETID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("desiredSoftwareSetId").build();
+    private static final MarshallingInfo<Map> DEVICECREATIONTAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deviceCreationTags").build();
 
     private static final UpdateEnvironmentRequestMarshaller instance = new UpdateEnvironmentRequestMarshaller();
 
@@ -68,6 +72,7 @@ public class UpdateEnvironmentRequestMarshaller {
             protocolMarshaller.marshall(updateEnvironmentRequest.getMaintenanceWindow(), MAINTENANCEWINDOW_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getSoftwareSetUpdateMode(), SOFTWARESETUPDATEMODE_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getDesiredSoftwareSetId(), DESIREDSOFTWARESETID_BINDING);
+            protocolMarshaller.marshall(updateEnvironmentRequest.getDeviceCreationTags(), DEVICECREATIONTAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

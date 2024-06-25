@@ -1,3 +1,20 @@
+# __1.12.750__ __2024-06-25__
+## __AWS Network Manager__
+  - ### Features
+    - This is model changes & documentation update for the Asynchronous Error Reporting feature for AWS Cloud WAN. This feature allows customers to view errors that occur while their resources are being provisioned, enabling customers to fix their resources without needing external support.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release is for the launch of the new u7ib-12tb.224xlarge, R8g, c7gn.metal and mac2-m1ultra.metal instance types
+
+## __Amazon WorkSpaces Thin Client__
+  - ### Features
+    - This release adds the deviceCreationTags field to CreateEnvironment API input, UpdateEnvironment API input and GetEnvironment API output.
+
+## __Auto Scaling__
+  - ### Features
+    - Doc only update for Auto Scaling's TargetTrackingMetricDataQuery
+
 # __1.12.749__ __2024-06-24__
 ## __Amazon Bedrock Runtime__
   - ### Features

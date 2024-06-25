@@ -71,8 +71,8 @@ public class Ebs implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> |
@@ -111,8 +111,8 @@ public class Ebs implements Serializable, Cloneable {
      * </ul>
      * <p>
      * For <code>io1</code> volumes, we guarantee 64,000 IOPS only for <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on the
+     * Amazon Web Services Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
      * </p>
      * <p>
      * <code>Iops</code> is supported when the volume type is <code>gp3</code> or <code>io1</code> and required only
@@ -125,9 +125,9 @@ public class Ebs implements Serializable, Cloneable {
      * <p>
      * Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that
      * support Amazon EBS encryption. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     * >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported
-     * instance types.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you can also only
+     * launch it on supported instance types.
      * </p>
      * <note>
      * <p>
@@ -411,8 +411,8 @@ public class Ebs implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> |
@@ -421,8 +421,8 @@ public class Ebs implements Serializable, Cloneable {
      * 
      * @param volumeType
      *        The volume type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.</p>
      *        <p>
      *        Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> |
      *        <code>sc1</code> | <code>gp3</code>
@@ -435,8 +435,8 @@ public class Ebs implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> |
@@ -444,8 +444,8 @@ public class Ebs implements Serializable, Cloneable {
      * </p>
      * 
      * @return The volume type. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume
-     *         types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *         in the <i>Amazon EBS User Guide</i>.</p>
      *         <p>
      *         Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> |
      *         <code>sc1</code> | <code>gp3</code>
@@ -458,8 +458,8 @@ public class Ebs implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> |
@@ -468,8 +468,8 @@ public class Ebs implements Serializable, Cloneable {
      * 
      * @param volumeType
      *        The volume type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.</p>
      *        <p>
      *        Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> |
      *        <code>sc1</code> | <code>gp3</code>
@@ -565,8 +565,8 @@ public class Ebs implements Serializable, Cloneable {
      * </ul>
      * <p>
      * For <code>io1</code> volumes, we guarantee 64,000 IOPS only for <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on the
+     * Amazon Web Services Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
      * </p>
      * <p>
      * <code>Iops</code> is supported when the volume type is <code>gp3</code> or <code>io1</code> and required only
@@ -596,8 +596,8 @@ public class Ebs implements Serializable, Cloneable {
      *        </ul>
      *        <p>
      *        For <code>io1</code> volumes, we guarantee 64,000 IOPS only for <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >Instances built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     *        the Amazon Web Services Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
      *        </p>
      *        <p>
      *        <code>Iops</code> is supported when the volume type is <code>gp3</code> or <code>io1</code> and required
@@ -633,8 +633,8 @@ public class Ebs implements Serializable, Cloneable {
      * </ul>
      * <p>
      * For <code>io1</code> volumes, we guarantee 64,000 IOPS only for <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on the
+     * Amazon Web Services Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
      * </p>
      * <p>
      * <code>Iops</code> is supported when the volume type is <code>gp3</code> or <code>io1</code> and required only
@@ -663,8 +663,8 @@ public class Ebs implements Serializable, Cloneable {
      *         </ul>
      *         <p>
      *         For <code>io1</code> volumes, we guarantee 64,000 IOPS only for <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *         >Instances built on the Nitro System</a>. Other instance families guarantee performance up to 32,000
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     *         the Amazon Web Services Nitro System</a>. Other instance families guarantee performance up to 32,000
      *         IOPS.
      *         </p>
      *         <p>
@@ -701,8 +701,8 @@ public class Ebs implements Serializable, Cloneable {
      * </ul>
      * <p>
      * For <code>io1</code> volumes, we guarantee 64,000 IOPS only for <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on the
+     * Amazon Web Services Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
      * </p>
      * <p>
      * <code>Iops</code> is supported when the volume type is <code>gp3</code> or <code>io1</code> and required only
@@ -732,8 +732,8 @@ public class Ebs implements Serializable, Cloneable {
      *        </ul>
      *        <p>
      *        For <code>io1</code> volumes, we guarantee 64,000 IOPS only for <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >Instances built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     *        the Amazon Web Services Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
      *        </p>
      *        <p>
      *        <code>Iops</code> is supported when the volume type is <code>gp3</code> or <code>io1</code> and required
@@ -751,9 +751,9 @@ public class Ebs implements Serializable, Cloneable {
      * <p>
      * Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that
      * support Amazon EBS encryption. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     * >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported
-     * instance types.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you can also only
+     * launch it on supported instance types.
      * </p>
      * <note>
      * <p>
@@ -774,10 +774,10 @@ public class Ebs implements Serializable, Cloneable {
      * 
      * @param encrypted
      *        Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances
-     *        that support Amazon EBS encryption. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     *        >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on
-     *        supported instance types.</p> <note>
+     *        that support Amazon EBS encryption. For more information, see <a
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for
+     *        Amazon EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you can
+     *        also only launch it on supported instance types.</p> <note>
      *        <p>
      *        If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted
      *        snapshot. Also, you cannot specify a KMS key ID when using a launch configuration.
@@ -803,9 +803,9 @@ public class Ebs implements Serializable, Cloneable {
      * <p>
      * Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that
      * support Amazon EBS encryption. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     * >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported
-     * instance types.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you can also only
+     * launch it on supported instance types.
      * </p>
      * <note>
      * <p>
@@ -825,10 +825,10 @@ public class Ebs implements Serializable, Cloneable {
      * </note>
      * 
      * @return Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances
-     *         that support Amazon EBS encryption. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     *         >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on
-     *         supported instance types.</p> <note>
+     *         that support Amazon EBS encryption. For more information, see <a
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for
+     *         Amazon EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you
+     *         can also only launch it on supported instance types.</p> <note>
      *         <p>
      *         If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted
      *         snapshot. Also, you cannot specify a KMS key ID when using a launch configuration.
@@ -854,9 +854,9 @@ public class Ebs implements Serializable, Cloneable {
      * <p>
      * Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that
      * support Amazon EBS encryption. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     * >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported
-     * instance types.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you can also only
+     * launch it on supported instance types.
      * </p>
      * <note>
      * <p>
@@ -877,10 +877,10 @@ public class Ebs implements Serializable, Cloneable {
      * 
      * @param encrypted
      *        Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances
-     *        that support Amazon EBS encryption. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     *        >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on
-     *        supported instance types.</p> <note>
+     *        that support Amazon EBS encryption. For more information, see <a
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for
+     *        Amazon EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you can
+     *        also only launch it on supported instance types.</p> <note>
      *        <p>
      *        If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted
      *        snapshot. Also, you cannot specify a KMS key ID when using a launch configuration.
@@ -908,9 +908,9 @@ public class Ebs implements Serializable, Cloneable {
      * <p>
      * Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that
      * support Amazon EBS encryption. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     * >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported
-     * instance types.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you can also only
+     * launch it on supported instance types.
      * </p>
      * <note>
      * <p>
@@ -930,10 +930,10 @@ public class Ebs implements Serializable, Cloneable {
      * </note>
      * 
      * @return Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances
-     *         that support Amazon EBS encryption. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
-     *         >Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on
-     *         supported instance types.</p> <note>
+     *         that support Amazon EBS encryption. For more information, see <a
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html">Requirements for
+     *         Amazon EBS encryption</a> in the <i>Amazon EBS User Guide</i>. If your AMI uses encrypted volumes, you
+     *         can also only launch it on supported instance types.</p> <note>
      *         <p>
      *         If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted
      *         snapshot. Also, you cannot specify a KMS key ID when using a launch configuration.

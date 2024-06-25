@@ -67,6 +67,8 @@ public class EnvironmentMarshaller {
             .marshallLocationName("kmsKeyArn").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<Map> DEVICECREATIONTAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deviceCreationTags").build();
 
     private static final EnvironmentMarshaller instance = new EnvironmentMarshaller();
 
@@ -103,6 +105,7 @@ public class EnvironmentMarshaller {
             protocolMarshaller.marshall(environment.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(environment.getKmsKeyArn(), KMSKEYARN_BINDING);
             protocolMarshaller.marshall(environment.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(environment.getDeviceCreationTags(), DEVICECREATIONTAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

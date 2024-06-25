@@ -55,7 +55,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * The instance type, such as <code>m3.xlarge</code>. You must specify an instance type that is supported in your
      * requested Region and Availability Zones. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * You can specify up to 40 instance types per Auto Scaling group.
@@ -72,7 +72,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * Auto Scaling can only launch an instance with a <code>WeightedCapacity</code> of five units, the instance is
      * launched, and the desired capacity is exceeded by three units. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     * >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * >Configure an Auto Scaling group to use instance weights</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * Value must be in the range of 1–999.
      * </p>
      * <p>
@@ -129,7 +129,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * The instance type, such as <code>m3.xlarge</code>. You must specify an instance type that is supported in your
      * requested Region and Availability Zones. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * You can specify up to 40 instance types per Auto Scaling group.
@@ -139,7 +139,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      *        The instance type, such as <code>m3.xlarge</code>. You must specify an instance type that is supported in
      *        your requested Region and Availability Zones. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
      *        <p>
      *        You can specify up to 40 instance types per Auto Scaling group.
      */
@@ -153,7 +153,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * The instance type, such as <code>m3.xlarge</code>. You must specify an instance type that is supported in your
      * requested Region and Availability Zones. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * You can specify up to 40 instance types per Auto Scaling group.
@@ -162,7 +162,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * @return The instance type, such as <code>m3.xlarge</code>. You must specify an instance type that is supported in
      *         your requested Region and Availability Zones. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *         <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *         <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
      *         <p>
      *         You can specify up to 40 instance types per Auto Scaling group.
      */
@@ -176,7 +176,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * The instance type, such as <code>m3.xlarge</code>. You must specify an instance type that is supported in your
      * requested Region and Availability Zones. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * You can specify up to 40 instance types per Auto Scaling group.
@@ -186,7 +186,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      *        The instance type, such as <code>m3.xlarge</code>. You must specify an instance type that is supported in
      *        your requested Region and Availability Zones. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
      *        <p>
      *        You can specify up to 40 instance types per Auto Scaling group.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -207,7 +207,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * Auto Scaling can only launch an instance with a <code>WeightedCapacity</code> of five units, the instance is
      * launched, and the desired capacity is exceeded by three units. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     * >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * >Configure an Auto Scaling group to use instance weights</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * Value must be in the range of 1–999.
      * </p>
      * <p>
@@ -233,7 +233,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      *        the instance is launched, and the desired capacity is exceeded by three units. For more information, see
      *        <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     *        >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+     *        >Configure an Auto Scaling group to use instance weights</a> in the <i>Amazon EC2 Auto Scaling User
      *        Guide</i>. Value must be in the range of 1–999.</p>
      *        <p>
      *        If you specify a value for <code>WeightedCapacity</code> for one instance type, you must specify a value
@@ -262,7 +262,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * Auto Scaling can only launch an instance with a <code>WeightedCapacity</code> of five units, the instance is
      * launched, and the desired capacity is exceeded by three units. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     * >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * >Configure an Auto Scaling group to use instance weights</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * Value must be in the range of 1–999.
      * </p>
      * <p>
@@ -287,7 +287,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      *         five units, the instance is launched, and the desired capacity is exceeded by three units. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     *         >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+     *         >Configure an Auto Scaling group to use instance weights</a> in the <i>Amazon EC2 Auto Scaling User
      *         Guide</i>. Value must be in the range of 1–999.</p>
      *         <p>
      *         If you specify a value for <code>WeightedCapacity</code> for one instance type, you must specify a value
@@ -316,7 +316,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * Auto Scaling can only launch an instance with a <code>WeightedCapacity</code> of five units, the instance is
      * launched, and the desired capacity is exceeded by three units. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     * >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * >Configure an Auto Scaling group to use instance weights</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * Value must be in the range of 1–999.
      * </p>
      * <p>
@@ -342,7 +342,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      *        the instance is launched, and the desired capacity is exceeded by three units. For more information, see
      *        <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     *        >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+     *        >Configure an Auto Scaling group to use instance weights</a> in the <i>Amazon EC2 Auto Scaling User
      *        Guide</i>. Value must be in the range of 1–999.</p>
      *        <p>
      *        If you specify a value for <code>WeightedCapacity</code> for one instance type, you must specify a value

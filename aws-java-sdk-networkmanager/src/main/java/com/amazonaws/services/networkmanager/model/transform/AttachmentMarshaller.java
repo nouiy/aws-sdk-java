@@ -60,6 +60,8 @@ public class AttachmentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<List> LASTMODIFICATIONERRORS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModificationErrors").build();
 
     private static final AttachmentMarshaller instance = new AttachmentMarshaller();
 
@@ -93,6 +95,7 @@ public class AttachmentMarshaller {
             protocolMarshaller.marshall(attachment.getProposedNetworkFunctionGroupChange(), PROPOSEDNETWORKFUNCTIONGROUPCHANGE_BINDING);
             protocolMarshaller.marshall(attachment.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(attachment.getUpdatedAt(), UPDATEDAT_BINDING);
+            protocolMarshaller.marshall(attachment.getLastModificationErrors(), LASTMODIFICATIONERRORS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

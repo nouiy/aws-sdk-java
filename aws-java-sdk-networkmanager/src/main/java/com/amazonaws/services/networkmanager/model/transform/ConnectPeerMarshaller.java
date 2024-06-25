@@ -46,6 +46,8 @@ public class ConnectPeerMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<String> SUBNETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SubnetArn").build();
+    private static final MarshallingInfo<List> LASTMODIFICATIONERRORS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModificationErrors").build();
 
     private static final ConnectPeerMarshaller instance = new ConnectPeerMarshaller();
 
@@ -72,6 +74,7 @@ public class ConnectPeerMarshaller {
             protocolMarshaller.marshall(connectPeer.getConfiguration(), CONFIGURATION_BINDING);
             protocolMarshaller.marshall(connectPeer.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(connectPeer.getSubnetArn(), SUBNETARN_BINDING);
+            protocolMarshaller.marshall(connectPeer.getLastModificationErrors(), LASTMODIFICATIONERRORS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -824,7 +824,22 @@ public enum InstanceType {
     U7i12tb224xlarge("u7i-12tb.224xlarge"),
     U7in16tb224xlarge("u7in-16tb.224xlarge"),
     U7in24tb224xlarge("u7in-24tb.224xlarge"),
-    U7in32tb224xlarge("u7in-32tb.224xlarge");
+    U7in32tb224xlarge("u7in-32tb.224xlarge"),
+    U7ib12tb224xlarge("u7ib-12tb.224xlarge"),
+    C7gnMetal("c7gn.metal"),
+    R8gMedium("r8g.medium"),
+    R8gLarge("r8g.large"),
+    R8gXlarge("r8g.xlarge"),
+    R8g2xlarge("r8g.2xlarge"),
+    R8g4xlarge("r8g.4xlarge"),
+    R8g8xlarge("r8g.8xlarge"),
+    R8g12xlarge("r8g.12xlarge"),
+    R8g16xlarge("r8g.16xlarge"),
+    R8g24xlarge("r8g.24xlarge"),
+    R8g48xlarge("r8g.48xlarge"),
+    R8gMetal24xl("r8g.metal-24xl"),
+    R8gMetal48xl("r8g.metal-48xl"),
+    Mac2M1ultraMetal("mac2-m1ultra.metal");
 
     private String value;
 

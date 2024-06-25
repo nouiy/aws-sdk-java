@@ -96,6 +96,12 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A map of the key-value pairs of the tag or tags to assign to the newly created devices for this environment.
+     * </p>
+     */
+    private java.util.Map<String, String> deviceCreationTags;
 
     /**
      * <p>
@@ -630,6 +636,77 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * A map of the key-value pairs of the tag or tags to assign to the newly created devices for this environment.
+     * </p>
+     * 
+     * @return A map of the key-value pairs of the tag or tags to assign to the newly created devices for this
+     *         environment.
+     */
+
+    public java.util.Map<String, String> getDeviceCreationTags() {
+        return deviceCreationTags;
+    }
+
+    /**
+     * <p>
+     * A map of the key-value pairs of the tag or tags to assign to the newly created devices for this environment.
+     * </p>
+     * 
+     * @param deviceCreationTags
+     *        A map of the key-value pairs of the tag or tags to assign to the newly created devices for this
+     *        environment.
+     */
+
+    public void setDeviceCreationTags(java.util.Map<String, String> deviceCreationTags) {
+        this.deviceCreationTags = deviceCreationTags;
+    }
+
+    /**
+     * <p>
+     * A map of the key-value pairs of the tag or tags to assign to the newly created devices for this environment.
+     * </p>
+     * 
+     * @param deviceCreationTags
+     *        A map of the key-value pairs of the tag or tags to assign to the newly created devices for this
+     *        environment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest withDeviceCreationTags(java.util.Map<String, String> deviceCreationTags) {
+        setDeviceCreationTags(deviceCreationTags);
+        return this;
+    }
+
+    /**
+     * Add a single DeviceCreationTags entry
+     *
+     * @see CreateEnvironmentRequest#withDeviceCreationTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest addDeviceCreationTagsEntry(String key, String value) {
+        if (null == this.deviceCreationTags) {
+            this.deviceCreationTags = new java.util.HashMap<String, String>();
+        }
+        if (this.deviceCreationTags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.deviceCreationTags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into DeviceCreationTags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest clearDeviceCreationTagsEntries() {
+        this.deviceCreationTags = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -660,7 +737,9 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append("***Sensitive Data Redacted***");
+            sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
+        if (getDeviceCreationTags() != null)
+            sb.append("DeviceCreationTags: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -715,6 +794,10 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getDeviceCreationTags() == null ^ this.getDeviceCreationTags() == null)
+            return false;
+        if (other.getDeviceCreationTags() != null && other.getDeviceCreationTags().equals(this.getDeviceCreationTags()) == false)
+            return false;
         return true;
     }
 
@@ -733,6 +816,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDeviceCreationTags() == null) ? 0 : getDeviceCreationTags().hashCode());
         return hashCode;
     }
 

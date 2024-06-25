@@ -82,6 +82,12 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String subnetArn;
+    /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     */
+    private java.util.List<ConnectPeerError> lastModificationErrors;
 
     /**
      * <p>
@@ -493,6 +499,76 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     * 
+     * @return Describes the error associated with the attachment request.
+     */
+
+    public java.util.List<ConnectPeerError> getLastModificationErrors() {
+        return lastModificationErrors;
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the attachment request.
+     */
+
+    public void setLastModificationErrors(java.util.Collection<ConnectPeerError> lastModificationErrors) {
+        if (lastModificationErrors == null) {
+            this.lastModificationErrors = null;
+            return;
+        }
+
+        this.lastModificationErrors = new java.util.ArrayList<ConnectPeerError>(lastModificationErrors);
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLastModificationErrors(java.util.Collection)} or
+     * {@link #withLastModificationErrors(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the attachment request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectPeer withLastModificationErrors(ConnectPeerError... lastModificationErrors) {
+        if (this.lastModificationErrors == null) {
+            setLastModificationErrors(new java.util.ArrayList<ConnectPeerError>(lastModificationErrors.length));
+        }
+        for (ConnectPeerError ele : lastModificationErrors) {
+            this.lastModificationErrors.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the attachment request.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the attachment request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectPeer withLastModificationErrors(java.util.Collection<ConnectPeerError> lastModificationErrors) {
+        setLastModificationErrors(lastModificationErrors);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -521,7 +597,9 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getSubnetArn() != null)
-            sb.append("SubnetArn: ").append(getSubnetArn());
+            sb.append("SubnetArn: ").append(getSubnetArn()).append(",");
+        if (getLastModificationErrors() != null)
+            sb.append("LastModificationErrors: ").append(getLastModificationErrors());
         sb.append("}");
         return sb.toString();
     }
@@ -572,6 +650,10 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSubnetArn() != null && other.getSubnetArn().equals(this.getSubnetArn()) == false)
             return false;
+        if (other.getLastModificationErrors() == null ^ this.getLastModificationErrors() == null)
+            return false;
+        if (other.getLastModificationErrors() != null && other.getLastModificationErrors().equals(this.getLastModificationErrors()) == false)
+            return false;
         return true;
     }
 
@@ -589,6 +671,7 @@ public class ConnectPeer implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getSubnetArn() == null) ? 0 : getSubnetArn().hashCode());
+        hashCode = prime * hashCode + ((getLastModificationErrors() == null) ? 0 : getLastModificationErrors().hashCode());
         return hashCode;
     }
 

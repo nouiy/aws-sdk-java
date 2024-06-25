@@ -124,8 +124,8 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Default: None
@@ -217,7 +217,7 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disabling a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disable a
      * scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
@@ -819,8 +819,8 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Default: None
@@ -831,8 +831,8 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      *        specified here, it overrides the default cooldown.</p>
      *        <p>
      *        Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
-     *        EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html"
+     *        >Scaling cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      *        </p>
      *        <p>
      *        Default: None
@@ -849,8 +849,8 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Default: None
@@ -860,8 +860,8 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      *         is specified here, it overrides the default cooldown.</p>
      *         <p>
      *         Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
-     *         EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html"
+     *         >Scaling cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      *         </p>
      *         <p>
      *         Default: None
@@ -878,8 +878,8 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
-     * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html">Scaling
+     * cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Default: None
@@ -890,8 +890,8 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      *        specified here, it overrides the default cooldown.</p>
      *        <p>
      *        Valid only if the policy type is <code>SimpleScaling</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
-     *        EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html"
+     *        >Scaling cooldowns for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      *        </p>
      *        <p>
      *        Default: None
@@ -1444,14 +1444,14 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disabling a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disable a
      * scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param enabled
      *        Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more information,
      *        see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">
-     *        Disabling a scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        Disable a scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setEnabled(Boolean enabled) {
@@ -1461,15 +1461,14 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disabling a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disable a
      * scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html"
-     *         >Disabling a scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
-     *         Guide</i>.
+     *         >Disable a scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean getEnabled() {
@@ -1479,14 +1478,14 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disabling a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disable a
      * scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param enabled
      *        Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more information,
      *        see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">
-     *        Disabling a scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        Disable a scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1498,15 +1497,14 @@ public class PutScalingPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disabling a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html">Disable a
      * scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Indicates whether the scaling policy is enabled or disabled. The default is enabled. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enable-disable-scaling-policy.html"
-     *         >Disabling a scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
-     *         Guide</i>.
+     *         >Disable a scaling policy for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Boolean isEnabled() {

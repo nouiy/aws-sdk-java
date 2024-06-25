@@ -48,6 +48,8 @@ public class PeeringMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<List> LASTMODIFICATIONERRORS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModificationErrors").build();
 
     private static final PeeringMarshaller instance = new PeeringMarshaller();
 
@@ -75,6 +77,7 @@ public class PeeringMarshaller {
             protocolMarshaller.marshall(peering.getResourceArn(), RESOURCEARN_BINDING);
             protocolMarshaller.marshall(peering.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(peering.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(peering.getLastModificationErrors(), LASTMODIFICATIONERRORS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

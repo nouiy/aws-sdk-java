@@ -86,6 +86,12 @@ public class ConnectPeerJsonUnmarshaller implements Unmarshaller<ConnectPeer, Js
                     context.nextToken();
                     connectPeer.setSubnetArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LastModificationErrors", targetDepth)) {
+                    context.nextToken();
+                    connectPeer.setLastModificationErrors(new ListUnmarshaller<ConnectPeerError>(ConnectPeerErrorJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -88,6 +88,12 @@ public class Peering implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date createdAt;
+    /**
+     * <p>
+     * Describes the error associated with the Connect peer request.
+     * </p>
+     */
+    private java.util.List<PeeringError> lastModificationErrors;
 
     /**
      * <p>
@@ -558,6 +564,76 @@ public class Peering implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Describes the error associated with the Connect peer request.
+     * </p>
+     * 
+     * @return Describes the error associated with the Connect peer request.
+     */
+
+    public java.util.List<PeeringError> getLastModificationErrors() {
+        return lastModificationErrors;
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the Connect peer request.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the Connect peer request.
+     */
+
+    public void setLastModificationErrors(java.util.Collection<PeeringError> lastModificationErrors) {
+        if (lastModificationErrors == null) {
+            this.lastModificationErrors = null;
+            return;
+        }
+
+        this.lastModificationErrors = new java.util.ArrayList<PeeringError>(lastModificationErrors);
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the Connect peer request.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLastModificationErrors(java.util.Collection)} or
+     * {@link #withLastModificationErrors(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the Connect peer request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Peering withLastModificationErrors(PeeringError... lastModificationErrors) {
+        if (this.lastModificationErrors == null) {
+            setLastModificationErrors(new java.util.ArrayList<PeeringError>(lastModificationErrors.length));
+        }
+        for (PeeringError ele : lastModificationErrors) {
+            this.lastModificationErrors.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the error associated with the Connect peer request.
+     * </p>
+     * 
+     * @param lastModificationErrors
+     *        Describes the error associated with the Connect peer request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Peering withLastModificationErrors(java.util.Collection<PeeringError> lastModificationErrors) {
+        setLastModificationErrors(lastModificationErrors);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -588,7 +664,9 @@ public class Peering implements Serializable, Cloneable, StructuredPojo {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getCreatedAt() != null)
-            sb.append("CreatedAt: ").append(getCreatedAt());
+            sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getLastModificationErrors() != null)
+            sb.append("LastModificationErrors: ").append(getLastModificationErrors());
         sb.append("}");
         return sb.toString();
     }
@@ -643,6 +721,10 @@ public class Peering implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
             return false;
+        if (other.getLastModificationErrors() == null ^ this.getLastModificationErrors() == null)
+            return false;
+        if (other.getLastModificationErrors() != null && other.getLastModificationErrors().equals(this.getLastModificationErrors()) == false)
+            return false;
         return true;
     }
 
@@ -661,6 +743,7 @@ public class Peering implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getLastModificationErrors() == null) ? 0 : getLastModificationErrors().hashCode());
         return hashCode;
     }
 

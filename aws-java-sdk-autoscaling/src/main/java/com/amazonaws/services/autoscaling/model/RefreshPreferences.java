@@ -62,7 +62,7 @@ public class RefreshPreferences implements Serializable, Cloneable {
      * </p>
      * <p>
      * For usage examples, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Adding
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
      * checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
@@ -397,7 +397,7 @@ public class RefreshPreferences implements Serializable, Cloneable {
      * </p>
      * <p>
      * For usage examples, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Adding
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
      * checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
@@ -406,8 +406,8 @@ public class RefreshPreferences implements Serializable, Cloneable {
      *         .</p>
      *         <p>
      *         For usage examples, see <a href=
-     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html"
-     *         >Adding checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
+     *         checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public java.util.List<Integer> getCheckpointPercentages() {
@@ -424,7 +424,7 @@ public class RefreshPreferences implements Serializable, Cloneable {
      * </p>
      * <p>
      * For usage examples, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Adding
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
      * checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
@@ -433,8 +433,8 @@ public class RefreshPreferences implements Serializable, Cloneable {
      *        all instances in the Auto Scaling group, the last number in the array must be <code>100</code>.</p>
      *        <p>
      *        For usage examples, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html"
-     *        >Adding checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
+     *        checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setCheckpointPercentages(java.util.Collection<Integer> checkpointPercentages) {
@@ -453,7 +453,7 @@ public class RefreshPreferences implements Serializable, Cloneable {
      * </p>
      * <p>
      * For usage examples, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Adding
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
      * checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
@@ -467,8 +467,8 @@ public class RefreshPreferences implements Serializable, Cloneable {
      *        all instances in the Auto Scaling group, the last number in the array must be <code>100</code>.</p>
      *        <p>
      *        For usage examples, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html"
-     *        >Adding checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
+     *        checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -489,7 +489,7 @@ public class RefreshPreferences implements Serializable, Cloneable {
      * </p>
      * <p>
      * For usage examples, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Adding
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
      * checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
@@ -498,8 +498,8 @@ public class RefreshPreferences implements Serializable, Cloneable {
      *        all instances in the Auto Scaling group, the last number in the array must be <code>100</code>.</p>
      *        <p>
      *        For usage examples, see <a href=
-     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html"
-     *        >Adding checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Add
+     *        checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

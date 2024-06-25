@@ -34,7 +34,7 @@ public class DesiredConfiguration implements Serializable, Cloneable {
      * <p>
      * Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to launch
      * Amazon EC2 instances. For more information about launch templates, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html">Launch templates</a> in the
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html">Launch templates</a> in the
      * <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
@@ -58,14 +58,14 @@ public class DesiredConfiguration implements Serializable, Cloneable {
      * <p>
      * Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to launch
      * Amazon EC2 instances. For more information about launch templates, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html">Launch templates</a> in the
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html">Launch templates</a> in the
      * <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param launchTemplate
      *        Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to
      *        launch Amazon EC2 instances. For more information about launch templates, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html">Launch templates</a> in
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html">Launch templates</a> in
      *        the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
@@ -77,14 +77,14 @@ public class DesiredConfiguration implements Serializable, Cloneable {
      * <p>
      * Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to launch
      * Amazon EC2 instances. For more information about launch templates, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html">Launch templates</a> in the
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html">Launch templates</a> in the
      * <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to
      *         launch Amazon EC2 instances. For more information about launch templates, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html">Launch templates</a> in
-     *         the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html">Launch templates</a>
+     *         in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public LaunchTemplateSpecification getLaunchTemplate() {
@@ -95,14 +95,14 @@ public class DesiredConfiguration implements Serializable, Cloneable {
      * <p>
      * Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to launch
      * Amazon EC2 instances. For more information about launch templates, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html">Launch templates</a> in the
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html">Launch templates</a> in the
      * <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param launchTemplate
      *        Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to
      *        launch Amazon EC2 instances. For more information about launch templates, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html">Launch templates</a> in
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html">Launch templates</a> in
      *        the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

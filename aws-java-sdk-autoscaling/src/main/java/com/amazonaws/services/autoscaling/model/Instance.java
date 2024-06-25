@@ -46,10 +46,10 @@ public class Instance implements Serializable, Cloneable {
     private String availabilityZone;
     /**
      * <p>
-     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For information
-     * about lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private String lifecycleState;
@@ -211,17 +211,17 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For information
-     * about lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param lifecycleState
-     *        A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For
-     *        information about lifecycle states, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     *        lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2
+     *        Auto Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @see LifecycleState
      */
 
@@ -231,16 +231,16 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For information
-     * about lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
-     * @return A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For
-     *         information about lifecycle states, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     *         lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * @return A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2
+     *         Auto Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @see LifecycleState
      */
 
@@ -250,17 +250,17 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For information
-     * about lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param lifecycleState
-     *        A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For
-     *        information about lifecycle states, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     *        lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2
+     *        Auto Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LifecycleState
      */
@@ -272,17 +272,17 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For information
-     * about lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param lifecycleState
-     *        A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For
-     *        information about lifecycle states, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     *        lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2
+     *        Auto Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @see LifecycleState
      */
 
@@ -292,17 +292,17 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For information
-     * about lifecycle states, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     * lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2 Auto
+     * Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param lifecycleState
-     *        A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For
-     *        information about lifecycle states, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance
-     *        lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-lifecycle.html">Amazon EC2
+     *        Auto Scaling instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LifecycleState
      */

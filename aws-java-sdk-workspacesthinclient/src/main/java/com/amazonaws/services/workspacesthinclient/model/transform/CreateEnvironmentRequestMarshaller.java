@@ -52,6 +52,8 @@ public class CreateEnvironmentRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<Map> DEVICECREATIONTAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deviceCreationTags").build();
 
     private static final CreateEnvironmentRequestMarshaller instance = new CreateEnvironmentRequestMarshaller();
 
@@ -79,6 +81,7 @@ public class CreateEnvironmentRequestMarshaller {
             protocolMarshaller.marshall(createEnvironmentRequest.getKmsKeyArn(), KMSKEYARN_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createEnvironmentRequest.getDeviceCreationTags(), DEVICECREATIONTAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

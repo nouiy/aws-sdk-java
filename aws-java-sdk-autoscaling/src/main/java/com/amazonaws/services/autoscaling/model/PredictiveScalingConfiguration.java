@@ -67,18 +67,26 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     * capacity. The maximum capacity is enforced as a hard limit.
+     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group when the
+     * forecast capacity is close to or exceeds the maximum capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     * capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
-     * the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group when
+     * the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by the
+     * forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Use caution when allowing the maximum capacity to be automatically increased. This can lead to more instances
+     * being launched than intended if the increased maximum capacity is not monitored and managed. The increased
+     * maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group until you manually
+     * update it. The maximum capacity does not automatically decrease back to the original maximum.
+     * </p>
+     * </important>
      */
     private String maxCapacityBreachBehavior;
     /**
@@ -358,18 +366,26 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     * capacity. The maximum capacity is enforced as a hard limit.
+     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group when the
+     * forecast capacity is close to or exceeds the maximum capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     * capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
-     * the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group when
+     * the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by the
+     * forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Use caution when allowing the maximum capacity to be automatically increased. This can lead to more instances
+     * being launched than intended if the increased maximum capacity is not monitored and managed. The increased
+     * maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group until you manually
+     * update it. The maximum capacity does not automatically decrease back to the original maximum.
+     * </p>
+     * </important>
      * 
      * @param maxCapacityBreachBehavior
      *        Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum
@@ -380,17 +396,25 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     *        capacity. The maximum capacity is enforced as a hard limit.
+     *        <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group
+     *        when the forecast capacity is close to or exceeds the maximum capacity.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     *        capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is
-     *        determined by the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     *        <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group
+     *        when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
+     *        the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <important>
+     *        <p>
+     *        Use caution when allowing the maximum capacity to be automatically increased. This can lead to more
+     *        instances being launched than intended if the increased maximum capacity is not monitored and managed. The
+     *        increased maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group until
+     *        you manually update it. The maximum capacity does not automatically decrease back to the original maximum.
+     *        </p>
      * @see PredictiveScalingMaxCapacityBreachBehavior
      */
 
@@ -409,18 +433,26 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     * capacity. The maximum capacity is enforced as a hard limit.
+     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group when the
+     * forecast capacity is close to or exceeds the maximum capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     * capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
-     * the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group when
+     * the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by the
+     * forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Use caution when allowing the maximum capacity to be automatically increased. This can lead to more instances
+     * being launched than intended if the increased maximum capacity is not monitored and managed. The increased
+     * maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group until you manually
+     * update it. The maximum capacity does not automatically decrease back to the original maximum.
+     * </p>
+     * </important>
      * 
      * @return Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum
      *         capacity of the Auto Scaling group. Defaults to <code>HonorMaxCapacity</code> if not specified.</p>
@@ -430,17 +462,26 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     *         capacity. The maximum capacity is enforced as a hard limit.
+     *         <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group
+     *         when the forecast capacity is close to or exceeds the maximum capacity.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     *         capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is
-     *         determined by the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     *         <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group
+     *         when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
+     *         the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <important>
+     *         <p>
+     *         Use caution when allowing the maximum capacity to be automatically increased. This can lead to more
+     *         instances being launched than intended if the increased maximum capacity is not monitored and managed.
+     *         The increased maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group
+     *         until you manually update it. The maximum capacity does not automatically decrease back to the original
+     *         maximum.
+     *         </p>
      * @see PredictiveScalingMaxCapacityBreachBehavior
      */
 
@@ -459,18 +500,26 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     * capacity. The maximum capacity is enforced as a hard limit.
+     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group when the
+     * forecast capacity is close to or exceeds the maximum capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     * capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
-     * the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group when
+     * the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by the
+     * forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Use caution when allowing the maximum capacity to be automatically increased. This can lead to more instances
+     * being launched than intended if the increased maximum capacity is not monitored and managed. The increased
+     * maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group until you manually
+     * update it. The maximum capacity does not automatically decrease back to the original maximum.
+     * </p>
+     * </important>
      * 
      * @param maxCapacityBreachBehavior
      *        Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum
@@ -481,17 +530,25 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     *        capacity. The maximum capacity is enforced as a hard limit.
+     *        <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group
+     *        when the forecast capacity is close to or exceeds the maximum capacity.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     *        capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is
-     *        determined by the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     *        <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group
+     *        when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
+     *        the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <important>
+     *        <p>
+     *        Use caution when allowing the maximum capacity to be automatically increased. This can lead to more
+     *        instances being launched than intended if the increased maximum capacity is not monitored and managed. The
+     *        increased maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group until
+     *        you manually update it. The maximum capacity does not automatically decrease back to the original maximum.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PredictiveScalingMaxCapacityBreachBehavior
      */
@@ -512,18 +569,26 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     * capacity. The maximum capacity is enforced as a hard limit.
+     * <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group when the
+     * forecast capacity is close to or exceeds the maximum capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     * capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
-     * the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     * <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group when
+     * the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by the
+     * forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Use caution when allowing the maximum capacity to be automatically increased. This can lead to more instances
+     * being launched than intended if the increased maximum capacity is not monitored and managed. The increased
+     * maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group until you manually
+     * update it. The maximum capacity does not automatically decrease back to the original maximum.
+     * </p>
+     * </important>
      * 
      * @param maxCapacityBreachBehavior
      *        Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum
@@ -534,17 +599,25 @@ public class PredictiveScalingConfiguration implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum
-     *        capacity. The maximum capacity is enforced as a hard limit.
+     *        <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling can't increase the maximum capacity of the group
+     *        when the forecast capacity is close to or exceeds the maximum capacity.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum
-     *        capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is
-     *        determined by the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
+     *        <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can increase the maximum capacity of the group
+     *        when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by
+     *        the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <important>
+     *        <p>
+     *        Use caution when allowing the maximum capacity to be automatically increased. This can lead to more
+     *        instances being launched than intended if the increased maximum capacity is not monitored and managed. The
+     *        increased maximum capacity then becomes the new normal maximum capacity for the Auto Scaling group until
+     *        you manually update it. The maximum capacity does not automatically decrease back to the original maximum.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PredictiveScalingMaxCapacityBreachBehavior
      */
