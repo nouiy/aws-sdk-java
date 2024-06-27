@@ -126,6 +126,34 @@ public class WorkspaceDirectoryJsonUnmarshaller implements Unmarshaller<Workspac
                     context.nextToken();
                     workspaceDirectory.setCertificateBasedAuthProperties(CertificateBasedAuthPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("WorkspaceDirectoryName", targetDepth)) {
+                    context.nextToken();
+                    workspaceDirectory.setWorkspaceDirectoryName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("WorkspaceDirectoryDescription", targetDepth)) {
+                    context.nextToken();
+                    workspaceDirectory.setWorkspaceDirectoryDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("UserIdentityType", targetDepth)) {
+                    context.nextToken();
+                    workspaceDirectory.setUserIdentityType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("WorkspaceType", targetDepth)) {
+                    context.nextToken();
+                    workspaceDirectory.setWorkspaceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ActiveDirectoryConfig", targetDepth)) {
+                    context.nextToken();
+                    workspaceDirectory.setActiveDirectoryConfig(ActiveDirectoryConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("StreamingProperties", targetDepth)) {
+                    context.nextToken();
+                    workspaceDirectory.setStreamingProperties(StreamingPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ErrorMessage", targetDepth)) {
+                    context.nextToken();
+                    workspaceDirectory.setErrorMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

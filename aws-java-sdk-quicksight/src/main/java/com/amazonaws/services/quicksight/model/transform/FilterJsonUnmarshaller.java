@@ -76,6 +76,10 @@ public class FilterJsonUnmarshaller implements Unmarshaller<Filter, JsonUnmarsha
                     context.nextToken();
                     filter.setTopBottomFilter(TopBottomFilterJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("NestedFilter", targetDepth)) {
+                    context.nextToken();
+                    filter.setNestedFilter(NestedFilterJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

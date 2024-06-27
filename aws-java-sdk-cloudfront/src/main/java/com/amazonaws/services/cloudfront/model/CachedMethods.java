@@ -53,7 +53,9 @@ public class CachedMethods implements Serializable, Cloneable {
     private Integer quantity;
     /**
      * <p>
-     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values for
+     * <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>, depending on
+     * which caching option you choose. For more information, see the preceding section.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> items;
@@ -115,10 +117,15 @@ public class CachedMethods implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values for
+     * <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>, depending on
+     * which caching option you choose. For more information, see the preceding section.
      * </p>
      * 
-     * @return A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     * @return A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid
+     *         values for <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and
+     *         <code>OPTIONS</code>, depending on which caching option you choose. For more information, see the
+     *         preceding section.
      * @see Method
      */
 
@@ -131,11 +138,15 @@ public class CachedMethods implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values for
+     * <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>, depending on
+     * which caching option you choose. For more information, see the preceding section.
      * </p>
      * 
      * @param items
-     *        A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     *        A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values
+     *        for <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>,
+     *        depending on which caching option you choose. For more information, see the preceding section.
      * @see Method
      */
 
@@ -150,7 +161,9 @@ public class CachedMethods implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values for
+     * <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>, depending on
+     * which caching option you choose. For more information, see the preceding section.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -159,7 +172,9 @@ public class CachedMethods implements Serializable, Cloneable {
      * </p>
      * 
      * @param items
-     *        A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     *        A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values
+     *        for <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>,
+     *        depending on which caching option you choose. For more information, see the preceding section.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Method
      */
@@ -176,11 +191,15 @@ public class CachedMethods implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values for
+     * <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>, depending on
+     * which caching option you choose. For more information, see the preceding section.
      * </p>
      * 
      * @param items
-     *        A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     *        A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values
+     *        for <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>,
+     *        depending on which caching option you choose. For more information, see the preceding section.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Method
      */
@@ -192,11 +211,15 @@ public class CachedMethods implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     * A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values for
+     * <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>, depending on
+     * which caching option you choose. For more information, see the preceding section.
      * </p>
      * 
      * @param items
-     *        A complex type that contains the HTTP methods that you want CloudFront to cache responses to.
+     *        A complex type that contains the HTTP methods that you want CloudFront to cache responses to. Valid values
+     *        for <code>CachedMethods</code> include <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code>,
+     *        depending on which caching option you choose. For more information, see the preceding section.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Method
      */

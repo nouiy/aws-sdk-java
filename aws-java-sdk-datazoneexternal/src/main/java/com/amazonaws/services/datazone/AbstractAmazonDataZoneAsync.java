@@ -786,6 +786,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetLineageNodeResult> getLineageNodeAsync(GetLineageNodeRequest request) {
+
+        return getLineageNodeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLineageNodeResult> getLineageNodeAsync(GetLineageNodeRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLineageNodeRequest, GetLineageNodeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetListingResult> getListingAsync(GetListingRequest request) {
 
         return getListingAsync(request, null);
@@ -1035,6 +1048,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListLineageNodeHistoryResult> listLineageNodeHistoryAsync(ListLineageNodeHistoryRequest request) {
+
+        return listLineageNodeHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLineageNodeHistoryResult> listLineageNodeHistoryAsync(ListLineageNodeHistoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLineageNodeHistoryRequest, ListLineageNodeHistoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListMetadataGenerationRunsResult> listMetadataGenerationRunsAsync(ListMetadataGenerationRunsRequest request) {
 
         return listMetadataGenerationRunsAsync(request, null);
@@ -1160,6 +1186,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<ListTimeSeriesDataPointsResult> listTimeSeriesDataPointsAsync(ListTimeSeriesDataPointsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTimeSeriesDataPointsRequest, ListTimeSeriesDataPointsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PostLineageEventResult> postLineageEventAsync(PostLineageEventRequest request) {
+
+        return postLineageEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PostLineageEventResult> postLineageEventAsync(PostLineageEventRequest request,
+            com.amazonaws.handlers.AsyncHandler<PostLineageEventRequest, PostLineageEventResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

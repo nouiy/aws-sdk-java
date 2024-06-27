@@ -1859,6 +1859,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Gets the data lineage node.
+     * </p>
+     * 
+     * @param getLineageNodeRequest
+     * @return A Java Future containing the result of the GetLineageNode operation returned by the service.
+     * @sample AmazonDataZoneAsync.GetLineageNode
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetLineageNode" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetLineageNodeResult> getLineageNodeAsync(GetLineageNodeRequest getLineageNodeRequest);
+
+    /**
+     * <p>
+     * Gets the data lineage node.
+     * </p>
+     * 
+     * @param getLineageNodeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetLineageNode operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.GetLineageNode
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetLineageNode" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetLineageNodeResult> getLineageNodeAsync(GetLineageNodeRequest getLineageNodeRequest,
+            com.amazonaws.handlers.AsyncHandler<GetLineageNodeRequest, GetLineageNodeResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a listing (a record of an asset at a given time).
      * </p>
      * 
@@ -2460,6 +2491,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Lists the history of the specified data lineage node.
+     * </p>
+     * 
+     * @param listLineageNodeHistoryRequest
+     * @return A Java Future containing the result of the ListLineageNodeHistory operation returned by the service.
+     * @sample AmazonDataZoneAsync.ListLineageNodeHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListLineageNodeHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLineageNodeHistoryResult> listLineageNodeHistoryAsync(ListLineageNodeHistoryRequest listLineageNodeHistoryRequest);
+
+    /**
+     * <p>
+     * Lists the history of the specified data lineage node.
+     * </p>
+     * 
+     * @param listLineageNodeHistoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListLineageNodeHistory operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.ListLineageNodeHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListLineageNodeHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLineageNodeHistoryResult> listLineageNodeHistoryAsync(ListLineageNodeHistoryRequest listLineageNodeHistoryRequest,
+            com.amazonaws.handlers.AsyncHandler<ListLineageNodeHistoryRequest, ListLineageNodeHistoryResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all metadata generation runs.
      * </p>
      * 
@@ -2769,6 +2831,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<ListTimeSeriesDataPointsResult> listTimeSeriesDataPointsAsync(ListTimeSeriesDataPointsRequest listTimeSeriesDataPointsRequest,
             com.amazonaws.handlers.AsyncHandler<ListTimeSeriesDataPointsRequest, ListTimeSeriesDataPointsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Posts a data lineage event.
+     * </p>
+     * 
+     * @param postLineageEventRequest
+     * @return A Java Future containing the result of the PostLineageEvent operation returned by the service.
+     * @sample AmazonDataZoneAsync.PostLineageEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/PostLineageEvent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PostLineageEventResult> postLineageEventAsync(PostLineageEventRequest postLineageEventRequest);
+
+    /**
+     * <p>
+     * Posts a data lineage event.
+     * </p>
+     * 
+     * @param postLineageEventRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PostLineageEvent operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.PostLineageEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/PostLineageEvent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PostLineageEventResult> postLineageEventAsync(PostLineageEventRequest postLineageEventRequest,
+            com.amazonaws.handlers.AsyncHandler<PostLineageEventRequest, PostLineageEventResult> asyncHandler);
 
     /**
      * <p>

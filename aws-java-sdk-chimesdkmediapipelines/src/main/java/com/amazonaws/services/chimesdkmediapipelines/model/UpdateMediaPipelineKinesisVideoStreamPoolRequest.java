@@ -28,7 +28,8 @@ public class UpdateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The ID of the video stream pool.
+     * The unique identifier of the requested resource. Valid values include the name and ARN of the media pipeline
+     * Kinesis Video Stream pool.
      * </p>
      */
     private String identifier;
@@ -41,11 +42,13 @@ public class UpdateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The ID of the video stream pool.
+     * The unique identifier of the requested resource. Valid values include the name and ARN of the media pipeline
+     * Kinesis Video Stream pool.
      * </p>
      * 
      * @param identifier
-     *        The ID of the video stream pool.
+     *        The unique identifier of the requested resource. Valid values include the name and ARN of the media
+     *        pipeline Kinesis Video Stream pool.
      */
 
     public void setIdentifier(String identifier) {
@@ -54,10 +57,12 @@ public class UpdateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The ID of the video stream pool.
+     * The unique identifier of the requested resource. Valid values include the name and ARN of the media pipeline
+     * Kinesis Video Stream pool.
      * </p>
      * 
-     * @return The ID of the video stream pool.
+     * @return The unique identifier of the requested resource. Valid values include the name and ARN of the media
+     *         pipeline Kinesis Video Stream pool.
      */
 
     public String getIdentifier() {
@@ -66,11 +71,13 @@ public class UpdateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The ID of the video stream pool.
+     * The unique identifier of the requested resource. Valid values include the name and ARN of the media pipeline
+     * Kinesis Video Stream pool.
      * </p>
      * 
      * @param identifier
-     *        The ID of the video stream pool.
+     *        The unique identifier of the requested resource. Valid values include the name and ARN of the media
+     *        pipeline Kinesis Video Stream pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

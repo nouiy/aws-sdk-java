@@ -1995,6 +1995,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetLineageNodeResult> getLineageNodeAsync(GetLineageNodeRequest request) {
+
+        return getLineageNodeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLineageNodeResult> getLineageNodeAsync(final GetLineageNodeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetLineageNodeRequest, GetLineageNodeResult> asyncHandler) {
+        final GetLineageNodeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetLineageNodeResult>() {
+            @Override
+            public GetLineageNodeResult call() throws Exception {
+                GetLineageNodeResult result = null;
+
+                try {
+                    result = executeGetLineageNode(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetListingResult> getListingAsync(GetListingRequest request) {
 
         return getListingAsync(request, null);
@@ -2625,6 +2658,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ListLineageNodeHistoryResult> listLineageNodeHistoryAsync(ListLineageNodeHistoryRequest request) {
+
+        return listLineageNodeHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLineageNodeHistoryResult> listLineageNodeHistoryAsync(final ListLineageNodeHistoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListLineageNodeHistoryRequest, ListLineageNodeHistoryResult> asyncHandler) {
+        final ListLineageNodeHistoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListLineageNodeHistoryResult>() {
+            @Override
+            public ListLineageNodeHistoryResult call() throws Exception {
+                ListLineageNodeHistoryResult result = null;
+
+                try {
+                    result = executeListLineageNodeHistory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListMetadataGenerationRunsResult> listMetadataGenerationRunsAsync(ListMetadataGenerationRunsRequest request) {
 
         return listMetadataGenerationRunsAsync(request, null);
@@ -2939,6 +3005,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeListTimeSeriesDataPoints(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PostLineageEventResult> postLineageEventAsync(PostLineageEventRequest request) {
+
+        return postLineageEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PostLineageEventResult> postLineageEventAsync(final PostLineageEventRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PostLineageEventRequest, PostLineageEventResult> asyncHandler) {
+        final PostLineageEventRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PostLineageEventResult>() {
+            @Override
+            public PostLineageEventResult call() throws Exception {
+                PostLineageEventResult result = null;
+
+                try {
+                    result = executePostLineageEvent(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

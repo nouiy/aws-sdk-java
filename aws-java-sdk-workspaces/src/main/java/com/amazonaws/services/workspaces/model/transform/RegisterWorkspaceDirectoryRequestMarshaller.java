@@ -40,6 +40,16 @@ public class RegisterWorkspaceDirectoryRequestMarshaller {
             .marshallLocationName("Tenancy").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> WORKSPACEDIRECTORYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceDirectoryName").build();
+    private static final MarshallingInfo<String> WORKSPACEDIRECTORYDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceDirectoryDescription").build();
+    private static final MarshallingInfo<String> USERIDENTITYTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserIdentityType").build();
+    private static final MarshallingInfo<String> WORKSPACETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceType").build();
+    private static final MarshallingInfo<StructuredPojo> ACTIVEDIRECTORYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ActiveDirectoryConfig").build();
 
     private static final RegisterWorkspaceDirectoryRequestMarshaller instance = new RegisterWorkspaceDirectoryRequestMarshaller();
 
@@ -63,6 +73,11 @@ public class RegisterWorkspaceDirectoryRequestMarshaller {
             protocolMarshaller.marshall(registerWorkspaceDirectoryRequest.getEnableSelfService(), ENABLESELFSERVICE_BINDING);
             protocolMarshaller.marshall(registerWorkspaceDirectoryRequest.getTenancy(), TENANCY_BINDING);
             protocolMarshaller.marshall(registerWorkspaceDirectoryRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(registerWorkspaceDirectoryRequest.getWorkspaceDirectoryName(), WORKSPACEDIRECTORYNAME_BINDING);
+            protocolMarshaller.marshall(registerWorkspaceDirectoryRequest.getWorkspaceDirectoryDescription(), WORKSPACEDIRECTORYDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(registerWorkspaceDirectoryRequest.getUserIdentityType(), USERIDENTITYTYPE_BINDING);
+            protocolMarshaller.marshall(registerWorkspaceDirectoryRequest.getWorkspaceType(), WORKSPACETYPE_BINDING);
+            protocolMarshaller.marshall(registerWorkspaceDirectoryRequest.getActiveDirectoryConfig(), ACTIVEDIRECTORYCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

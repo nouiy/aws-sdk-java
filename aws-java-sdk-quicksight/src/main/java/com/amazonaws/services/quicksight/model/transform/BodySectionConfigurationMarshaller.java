@@ -35,6 +35,8 @@ public class BodySectionConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Style").build();
     private static final MarshallingInfo<StructuredPojo> PAGEBREAKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PageBreakConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> REPEATCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RepeatConfiguration").build();
 
     private static final BodySectionConfigurationMarshaller instance = new BodySectionConfigurationMarshaller();
 
@@ -56,6 +58,7 @@ public class BodySectionConfigurationMarshaller {
             protocolMarshaller.marshall(bodySectionConfiguration.getContent(), CONTENT_BINDING);
             protocolMarshaller.marshall(bodySectionConfiguration.getStyle(), STYLE_BINDING);
             protocolMarshaller.marshall(bodySectionConfiguration.getPageBreakConfiguration(), PAGEBREAKCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(bodySectionConfiguration.getRepeatConfiguration(), REPEATCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -31,6 +31,8 @@ public class SearchTypesResultItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("assetTypeItem").build();
     private static final MarshallingInfo<StructuredPojo> FORMTYPEITEM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("formTypeItem").build();
+    private static final MarshallingInfo<StructuredPojo> LINEAGENODETYPEITEM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lineageNodeTypeItem").build();
 
     private static final SearchTypesResultItemMarshaller instance = new SearchTypesResultItemMarshaller();
 
@@ -50,6 +52,7 @@ public class SearchTypesResultItemMarshaller {
         try {
             protocolMarshaller.marshall(searchTypesResultItem.getAssetTypeItem(), ASSETTYPEITEM_BINDING);
             protocolMarshaller.marshall(searchTypesResultItem.getFormTypeItem(), FORMTYPEITEM_BINDING);
+            protocolMarshaller.marshall(searchTypesResultItem.getLineageNodeTypeItem(), LINEAGENODETYPEITEM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

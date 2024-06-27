@@ -41,7 +41,8 @@ public enum ScalableDimension {
     ElasticacheReplicationGroupReplicas("elasticache:replication-group:Replicas"),
     NeptuneClusterReadReplicaCount("neptune:cluster:ReadReplicaCount"),
     SagemakerVariantDesiredProvisionedConcurrency("sagemaker:variant:DesiredProvisionedConcurrency"),
-    SagemakerInferenceComponentDesiredCopyCount("sagemaker:inference-component:DesiredCopyCount");
+    SagemakerInferenceComponentDesiredCopyCount("sagemaker:inference-component:DesiredCopyCount"),
+    WorkspacesWorkspacespoolDesiredUserSessions("workspaces:workspacespool:DesiredUserSessions");
 
     private String value;
 

@@ -64,6 +64,20 @@ public class WorkspaceDirectoryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SamlProperties").build();
     private static final MarshallingInfo<StructuredPojo> CERTIFICATEBASEDAUTHPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CertificateBasedAuthProperties").build();
+    private static final MarshallingInfo<String> WORKSPACEDIRECTORYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceDirectoryName").build();
+    private static final MarshallingInfo<String> WORKSPACEDIRECTORYDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceDirectoryDescription").build();
+    private static final MarshallingInfo<String> USERIDENTITYTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserIdentityType").build();
+    private static final MarshallingInfo<String> WORKSPACETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceType").build();
+    private static final MarshallingInfo<StructuredPojo> ACTIVEDIRECTORYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ActiveDirectoryConfig").build();
+    private static final MarshallingInfo<StructuredPojo> STREAMINGPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StreamingProperties").build();
+    private static final MarshallingInfo<String> ERRORMESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ErrorMessage").build();
 
     private static final WorkspaceDirectoryMarshaller instance = new WorkspaceDirectoryMarshaller();
 
@@ -99,6 +113,13 @@ public class WorkspaceDirectoryMarshaller {
             protocolMarshaller.marshall(workspaceDirectory.getSelfservicePermissions(), SELFSERVICEPERMISSIONS_BINDING);
             protocolMarshaller.marshall(workspaceDirectory.getSamlProperties(), SAMLPROPERTIES_BINDING);
             protocolMarshaller.marshall(workspaceDirectory.getCertificateBasedAuthProperties(), CERTIFICATEBASEDAUTHPROPERTIES_BINDING);
+            protocolMarshaller.marshall(workspaceDirectory.getWorkspaceDirectoryName(), WORKSPACEDIRECTORYNAME_BINDING);
+            protocolMarshaller.marshall(workspaceDirectory.getWorkspaceDirectoryDescription(), WORKSPACEDIRECTORYDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(workspaceDirectory.getUserIdentityType(), USERIDENTITYTYPE_BINDING);
+            protocolMarshaller.marshall(workspaceDirectory.getWorkspaceType(), WORKSPACETYPE_BINDING);
+            protocolMarshaller.marshall(workspaceDirectory.getActiveDirectoryConfig(), ACTIVEDIRECTORYCONFIG_BINDING);
+            protocolMarshaller.marshall(workspaceDirectory.getStreamingProperties(), STREAMINGPROPERTIES_BINDING);
+            protocolMarshaller.marshall(workspaceDirectory.getErrorMessage(), ERRORMESSAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

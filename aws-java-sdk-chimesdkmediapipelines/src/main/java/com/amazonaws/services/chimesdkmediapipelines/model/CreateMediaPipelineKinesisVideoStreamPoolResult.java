@@ -27,18 +27,27 @@ public class CreateMediaPipelineKinesisVideoStreamPoolResult extends com.amazona
 
     /**
      * <p>
-     * The configuration for the Kinesis video stream pool.
+     * The configuration for applying the streams to the pool.
      * </p>
+     * <note>
+     * <p/>
+     * </note>
      */
     private KinesisVideoStreamPoolConfiguration kinesisVideoStreamPoolConfiguration;
 
     /**
      * <p>
-     * The configuration for the Kinesis video stream pool.
+     * The configuration for applying the streams to the pool.
      * </p>
+     * <note>
+     * <p/>
+     * </note>
      * 
      * @param kinesisVideoStreamPoolConfiguration
-     *        The configuration for the Kinesis video stream pool.
+     *        The configuration for applying the streams to the pool.
+     *        </p>
+     *        <note>
+     *        <p/>
      */
 
     public void setKinesisVideoStreamPoolConfiguration(KinesisVideoStreamPoolConfiguration kinesisVideoStreamPoolConfiguration) {
@@ -47,10 +56,16 @@ public class CreateMediaPipelineKinesisVideoStreamPoolResult extends com.amazona
 
     /**
      * <p>
-     * The configuration for the Kinesis video stream pool.
+     * The configuration for applying the streams to the pool.
      * </p>
+     * <note>
+     * <p/>
+     * </note>
      * 
-     * @return The configuration for the Kinesis video stream pool.
+     * @return The configuration for applying the streams to the pool.
+     *         </p>
+     *         <note>
+     *         <p/>
      */
 
     public KinesisVideoStreamPoolConfiguration getKinesisVideoStreamPoolConfiguration() {
@@ -59,11 +74,17 @@ public class CreateMediaPipelineKinesisVideoStreamPoolResult extends com.amazona
 
     /**
      * <p>
-     * The configuration for the Kinesis video stream pool.
+     * The configuration for applying the streams to the pool.
      * </p>
+     * <note>
+     * <p/>
+     * </note>
      * 
      * @param kinesisVideoStreamPoolConfiguration
-     *        The configuration for the Kinesis video stream pool.
+     *        The configuration for applying the streams to the pool.
+     *        </p>
+     *        <note>
+     *        <p/>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

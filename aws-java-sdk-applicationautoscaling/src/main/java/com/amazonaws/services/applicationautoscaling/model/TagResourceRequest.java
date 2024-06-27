@@ -53,7 +53,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For information about the rules that apply to tag keys and tag values, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-defined
-     * tag restrictions</a> in the <i>Amazon Web Services Billing and Cost Management User Guide</i>.
+     * tag restrictions</a> in the <i>Amazon Web Services Billing User Guide</i>.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -152,7 +152,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For information about the rules that apply to tag keys and tag values, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-defined
-     * tag restrictions</a> in the <i>Amazon Web Services Billing and Cost Management User Guide</i>.
+     * tag restrictions</a> in the <i>Amazon Web Services Billing User Guide</i>.
      * </p>
      * 
      * @return The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services
@@ -168,8 +168,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <p>
      *         For information about the rules that apply to tag keys and tag values, see <a
      *         href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html"
-     *         >User-defined tag restrictions</a> in the <i>Amazon Web Services Billing and Cost Management User
-     *         Guide</i>.
+     *         >User-defined tag restrictions</a> in the <i>Amazon Web Services Billing User Guide</i>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -191,7 +190,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For information about the rules that apply to tag keys and tag values, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-defined
-     * tag restrictions</a> in the <i>Amazon Web Services Billing and Cost Management User Guide</i>.
+     * tag restrictions</a> in the <i>Amazon Web Services Billing User Guide</i>.
      * </p>
      * 
      * @param tags
@@ -208,8 +207,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For information about the rules that apply to tag keys and tag values, see <a
      *        href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html"
-     *        >User-defined tag restrictions</a> in the <i>Amazon Web Services Billing and Cost Management User
-     *        Guide</i>.
+     *        >User-defined tag restrictions</a> in the <i>Amazon Web Services Billing User Guide</i>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -231,7 +229,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For information about the rules that apply to tag keys and tag values, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-defined
-     * tag restrictions</a> in the <i>Amazon Web Services Billing and Cost Management User Guide</i>.
+     * tag restrictions</a> in the <i>Amazon Web Services Billing User Guide</i>.
      * </p>
      * 
      * @param tags
@@ -248,8 +246,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For information about the rules that apply to tag keys and tag values, see <a
      *        href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html"
-     *        >User-defined tag restrictions</a> in the <i>Amazon Web Services Billing and Cost Management User
-     *        Guide</i>.
+     *        >User-defined tag restrictions</a> in the <i>Amazon Web Services Billing User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

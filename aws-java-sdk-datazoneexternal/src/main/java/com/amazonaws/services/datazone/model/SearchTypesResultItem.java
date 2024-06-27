@@ -40,6 +40,12 @@ public class SearchTypesResultItem implements Serializable, Cloneable, Structure
      * </p>
      */
     private FormTypeData formTypeItem;
+    /**
+     * <p>
+     * The details of a data lineage node type.
+     * </p>
+     */
+    private LineageNodeTypeItem lineageNodeTypeItem;
 
     /**
      * <p>
@@ -122,6 +128,46 @@ public class SearchTypesResultItem implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The details of a data lineage node type.
+     * </p>
+     * 
+     * @param lineageNodeTypeItem
+     *        The details of a data lineage node type.
+     */
+
+    public void setLineageNodeTypeItem(LineageNodeTypeItem lineageNodeTypeItem) {
+        this.lineageNodeTypeItem = lineageNodeTypeItem;
+    }
+
+    /**
+     * <p>
+     * The details of a data lineage node type.
+     * </p>
+     * 
+     * @return The details of a data lineage node type.
+     */
+
+    public LineageNodeTypeItem getLineageNodeTypeItem() {
+        return this.lineageNodeTypeItem;
+    }
+
+    /**
+     * <p>
+     * The details of a data lineage node type.
+     * </p>
+     * 
+     * @param lineageNodeTypeItem
+     *        The details of a data lineage node type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchTypesResultItem withLineageNodeTypeItem(LineageNodeTypeItem lineageNodeTypeItem) {
+        setLineageNodeTypeItem(lineageNodeTypeItem);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +182,9 @@ public class SearchTypesResultItem implements Serializable, Cloneable, Structure
         if (getAssetTypeItem() != null)
             sb.append("AssetTypeItem: ").append(getAssetTypeItem()).append(",");
         if (getFormTypeItem() != null)
-            sb.append("FormTypeItem: ").append(getFormTypeItem());
+            sb.append("FormTypeItem: ").append(getFormTypeItem()).append(",");
+        if (getLineageNodeTypeItem() != null)
+            sb.append("LineageNodeTypeItem: ").append(getLineageNodeTypeItem());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +207,10 @@ public class SearchTypesResultItem implements Serializable, Cloneable, Structure
             return false;
         if (other.getFormTypeItem() != null && other.getFormTypeItem().equals(this.getFormTypeItem()) == false)
             return false;
+        if (other.getLineageNodeTypeItem() == null ^ this.getLineageNodeTypeItem() == null)
+            return false;
+        if (other.getLineageNodeTypeItem() != null && other.getLineageNodeTypeItem().equals(this.getLineageNodeTypeItem()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +221,7 @@ public class SearchTypesResultItem implements Serializable, Cloneable, Structure
 
         hashCode = prime * hashCode + ((getAssetTypeItem() == null) ? 0 : getAssetTypeItem().hashCode());
         hashCode = prime * hashCode + ((getFormTypeItem() == null) ? 0 : getFormTypeItem().hashCode());
+        hashCode = prime * hashCode + ((getLineageNodeTypeItem() == null) ? 0 : getLineageNodeTypeItem().hashCode());
         return hashCode;
     }
 

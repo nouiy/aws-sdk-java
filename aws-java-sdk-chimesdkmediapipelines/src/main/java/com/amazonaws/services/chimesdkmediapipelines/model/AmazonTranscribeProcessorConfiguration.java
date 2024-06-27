@@ -21,6 +21,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * A structure that contains the configuration settings for an Amazon Transcribe processor.
  * </p>
+ * <note>
+ * <p>
+ * Calls to this API must include a <code>LanguageCode</code>, <code>IdentifyLanguage</code>, or
+ * <code>IdentifyMultipleLanguages</code> parameter. If you include more than one of those parameters, your
+ * transcription job fails.
+ * </p>
+ * </note>
  * 
  * @see <a
  *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/AmazonTranscribeProcessorConfiguration"
@@ -192,6 +199,12 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
      * </p>
      */
     private Boolean identifyLanguage;
+    /**
+     * <p>
+     * Turns language identification on or off for multiple languages.
+     * </p>
+     */
+    private Boolean identifyMultipleLanguages;
     /**
      * <p>
      * The language options for the transcription, such as automatic language detection.
@@ -1480,6 +1493,58 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
 
     /**
      * <p>
+     * Turns language identification on or off for multiple languages.
+     * </p>
+     * 
+     * @param identifyMultipleLanguages
+     *        Turns language identification on or off for multiple languages.
+     */
+
+    public void setIdentifyMultipleLanguages(Boolean identifyMultipleLanguages) {
+        this.identifyMultipleLanguages = identifyMultipleLanguages;
+    }
+
+    /**
+     * <p>
+     * Turns language identification on or off for multiple languages.
+     * </p>
+     * 
+     * @return Turns language identification on or off for multiple languages.
+     */
+
+    public Boolean getIdentifyMultipleLanguages() {
+        return this.identifyMultipleLanguages;
+    }
+
+    /**
+     * <p>
+     * Turns language identification on or off for multiple languages.
+     * </p>
+     * 
+     * @param identifyMultipleLanguages
+     *        Turns language identification on or off for multiple languages.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AmazonTranscribeProcessorConfiguration withIdentifyMultipleLanguages(Boolean identifyMultipleLanguages) {
+        setIdentifyMultipleLanguages(identifyMultipleLanguages);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Turns language identification on or off for multiple languages.
+     * </p>
+     * 
+     * @return Turns language identification on or off for multiple languages.
+     */
+
+    public Boolean isIdentifyMultipleLanguages() {
+        return this.identifyMultipleLanguages;
+    }
+
+    /**
+     * <p>
      * The language options for the transcription, such as automatic language detection.
      * </p>
      * 
@@ -1695,6 +1760,8 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
             sb.append("FilterPartialResults: ").append(getFilterPartialResults()).append(",");
         if (getIdentifyLanguage() != null)
             sb.append("IdentifyLanguage: ").append(getIdentifyLanguage()).append(",");
+        if (getIdentifyMultipleLanguages() != null)
+            sb.append("IdentifyMultipleLanguages: ").append(getIdentifyMultipleLanguages()).append(",");
         if (getLanguageOptions() != null)
             sb.append("LanguageOptions: ").append(getLanguageOptions()).append(",");
         if (getPreferredLanguage() != null)
@@ -1770,6 +1837,10 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
             return false;
         if (other.getIdentifyLanguage() != null && other.getIdentifyLanguage().equals(this.getIdentifyLanguage()) == false)
             return false;
+        if (other.getIdentifyMultipleLanguages() == null ^ this.getIdentifyMultipleLanguages() == null)
+            return false;
+        if (other.getIdentifyMultipleLanguages() != null && other.getIdentifyMultipleLanguages().equals(this.getIdentifyMultipleLanguages()) == false)
+            return false;
         if (other.getLanguageOptions() == null ^ this.getLanguageOptions() == null)
             return false;
         if (other.getLanguageOptions() != null && other.getLanguageOptions().equals(this.getLanguageOptions()) == false)
@@ -1807,6 +1878,7 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
         hashCode = prime * hashCode + ((getLanguageModelName() == null) ? 0 : getLanguageModelName().hashCode());
         hashCode = prime * hashCode + ((getFilterPartialResults() == null) ? 0 : getFilterPartialResults().hashCode());
         hashCode = prime * hashCode + ((getIdentifyLanguage() == null) ? 0 : getIdentifyLanguage().hashCode());
+        hashCode = prime * hashCode + ((getIdentifyMultipleLanguages() == null) ? 0 : getIdentifyMultipleLanguages().hashCode());
         hashCode = prime * hashCode + ((getLanguageOptions() == null) ? 0 : getLanguageOptions().hashCode());
         hashCode = prime * hashCode + ((getPreferredLanguage() == null) ? 0 : getPreferredLanguage().hashCode());
         hashCode = prime * hashCode + ((getVocabularyNames() == null) ? 0 : getVocabularyNames().hashCode());

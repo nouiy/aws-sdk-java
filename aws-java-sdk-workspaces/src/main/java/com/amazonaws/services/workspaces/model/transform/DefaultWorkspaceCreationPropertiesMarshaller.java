@@ -39,6 +39,8 @@ public class DefaultWorkspaceCreationPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserEnabledAsLocalAdministrator").build();
     private static final MarshallingInfo<Boolean> ENABLEMAINTENANCEMODE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableMaintenanceMode").build();
+    private static final MarshallingInfo<String> INSTANCEIAMROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceIamRoleArn").build();
 
     private static final DefaultWorkspaceCreationPropertiesMarshaller instance = new DefaultWorkspaceCreationPropertiesMarshaller();
 
@@ -62,6 +64,7 @@ public class DefaultWorkspaceCreationPropertiesMarshaller {
             protocolMarshaller.marshall(defaultWorkspaceCreationProperties.getCustomSecurityGroupId(), CUSTOMSECURITYGROUPID_BINDING);
             protocolMarshaller.marshall(defaultWorkspaceCreationProperties.getUserEnabledAsLocalAdministrator(), USERENABLEDASLOCALADMINISTRATOR_BINDING);
             protocolMarshaller.marshall(defaultWorkspaceCreationProperties.getEnableMaintenanceMode(), ENABLEMAINTENANCEMODE_BINDING);
+            protocolMarshaller.marshall(defaultWorkspaceCreationProperties.getInstanceIamRoleArn(), INSTANCEIAMROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

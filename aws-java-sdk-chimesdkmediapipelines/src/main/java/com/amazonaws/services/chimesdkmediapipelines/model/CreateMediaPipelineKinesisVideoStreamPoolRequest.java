@@ -28,13 +28,13 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The configuration settings for the video stream.
+     * The configuration settings for the stream.
      * </p>
      */
     private KinesisVideoStreamConfiguration streamConfiguration;
     /**
      * <p>
-     * The name of the video stream pool.
+     * The name of the pool.
      * </p>
      */
     private String poolName;
@@ -46,18 +46,18 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
     private String clientRequestToken;
     /**
      * <p>
-     * The tags assigned to the video stream pool.
+     * The tags assigned to the stream pool.
      * </p>
      */
     private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * The configuration settings for the video stream.
+     * The configuration settings for the stream.
      * </p>
      * 
      * @param streamConfiguration
-     *        The configuration settings for the video stream.
+     *        The configuration settings for the stream.
      */
 
     public void setStreamConfiguration(KinesisVideoStreamConfiguration streamConfiguration) {
@@ -66,10 +66,10 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The configuration settings for the video stream.
+     * The configuration settings for the stream.
      * </p>
      * 
-     * @return The configuration settings for the video stream.
+     * @return The configuration settings for the stream.
      */
 
     public KinesisVideoStreamConfiguration getStreamConfiguration() {
@@ -78,11 +78,11 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The configuration settings for the video stream.
+     * The configuration settings for the stream.
      * </p>
      * 
      * @param streamConfiguration
-     *        The configuration settings for the video stream.
+     *        The configuration settings for the stream.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The name of the video stream pool.
+     * The name of the pool.
      * </p>
      * 
      * @param poolName
-     *        The name of the video stream pool.
+     *        The name of the pool.
      */
 
     public void setPoolName(String poolName) {
@@ -106,10 +106,10 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The name of the video stream pool.
+     * The name of the pool.
      * </p>
      * 
-     * @return The name of the video stream pool.
+     * @return The name of the pool.
      */
 
     public String getPoolName() {
@@ -118,11 +118,11 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The name of the video stream pool.
+     * The name of the pool.
      * </p>
      * 
      * @param poolName
-     *        The name of the video stream pool.
+     *        The name of the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,10 +173,10 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The tags assigned to the video stream pool.
+     * The tags assigned to the stream pool.
      * </p>
      * 
-     * @return The tags assigned to the video stream pool.
+     * @return The tags assigned to the stream pool.
      */
 
     public java.util.List<Tag> getTags() {
@@ -185,11 +185,11 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The tags assigned to the video stream pool.
+     * The tags assigned to the stream pool.
      * </p>
      * 
      * @param tags
-     *        The tags assigned to the video stream pool.
+     *        The tags assigned to the stream pool.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -203,7 +203,7 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The tags assigned to the video stream pool.
+     * The tags assigned to the stream pool.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -212,7 +212,7 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
      * </p>
      * 
      * @param tags
-     *        The tags assigned to the video stream pool.
+     *        The tags assigned to the stream pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,11 +228,11 @@ public class CreateMediaPipelineKinesisVideoStreamPoolRequest extends com.amazon
 
     /**
      * <p>
-     * The tags assigned to the video stream pool.
+     * The tags assigned to the stream pool.
      * </p>
      * 
      * @param tags
-     *        The tags assigned to the video stream pool.
+     *        The tags assigned to the stream pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

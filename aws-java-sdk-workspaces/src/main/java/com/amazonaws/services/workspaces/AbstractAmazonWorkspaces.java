@@ -118,6 +118,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public CreateWorkspacesPoolResult createWorkspacesPool(CreateWorkspacesPoolRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAccountLinkInvitationResult deleteAccountLinkInvitation(DeleteAccountLinkInvitationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -288,6 +293,16 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public DescribeWorkspacesPoolSessionsResult describeWorkspacesPoolSessions(DescribeWorkspacesPoolSessionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeWorkspacesPoolsResult describeWorkspacesPools(DescribeWorkspacesPoolsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociateConnectionAliasResult disassociateConnectionAlias(DisassociateConnectionAliasRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -358,6 +373,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public ModifyStreamingPropertiesResult modifyStreamingProperties(ModifyStreamingPropertiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ModifyWorkspaceAccessPropertiesResult modifyWorkspaceAccessProperties(ModifyWorkspaceAccessPropertiesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -413,12 +433,32 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public StartWorkspacesPoolResult startWorkspacesPool(StartWorkspacesPoolRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StopWorkspacesResult stopWorkspaces(StopWorkspacesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public StopWorkspacesPoolResult stopWorkspacesPool(StopWorkspacesPoolRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public TerminateWorkspacesResult terminateWorkspaces(TerminateWorkspacesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TerminateWorkspacesPoolResult terminateWorkspacesPool(TerminateWorkspacesPoolRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TerminateWorkspacesPoolSessionResult terminateWorkspacesPoolSession(TerminateWorkspacesPoolSessionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -444,6 +484,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public UpdateWorkspaceImagePermissionResult updateWorkspaceImagePermission(UpdateWorkspaceImagePermissionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateWorkspacesPoolResult updateWorkspacesPool(UpdateWorkspacesPoolRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

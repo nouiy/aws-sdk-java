@@ -74,6 +74,36 @@ public class RegisterWorkspaceDirectoryRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * The name of the directory to register.
+     * </p>
+     */
+    private String workspaceDirectoryName;
+    /**
+     * <p>
+     * Description of the directory to register.
+     * </p>
+     */
+    private String workspaceDirectoryDescription;
+    /**
+     * <p>
+     * The type of identity management the user is using.
+     * </p>
+     */
+    private String userIdentityType;
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     */
+    private String workspaceType;
+    /**
+     * <p>
+     * The active directory config of the directory.
+     * </p>
+     */
+    private ActiveDirectoryConfig activeDirectoryConfig;
 
     /**
      * <p>
@@ -521,6 +551,244 @@ public class RegisterWorkspaceDirectoryRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The name of the directory to register.
+     * </p>
+     * 
+     * @param workspaceDirectoryName
+     *        The name of the directory to register.
+     */
+
+    public void setWorkspaceDirectoryName(String workspaceDirectoryName) {
+        this.workspaceDirectoryName = workspaceDirectoryName;
+    }
+
+    /**
+     * <p>
+     * The name of the directory to register.
+     * </p>
+     * 
+     * @return The name of the directory to register.
+     */
+
+    public String getWorkspaceDirectoryName() {
+        return this.workspaceDirectoryName;
+    }
+
+    /**
+     * <p>
+     * The name of the directory to register.
+     * </p>
+     * 
+     * @param workspaceDirectoryName
+     *        The name of the directory to register.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterWorkspaceDirectoryRequest withWorkspaceDirectoryName(String workspaceDirectoryName) {
+        setWorkspaceDirectoryName(workspaceDirectoryName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Description of the directory to register.
+     * </p>
+     * 
+     * @param workspaceDirectoryDescription
+     *        Description of the directory to register.
+     */
+
+    public void setWorkspaceDirectoryDescription(String workspaceDirectoryDescription) {
+        this.workspaceDirectoryDescription = workspaceDirectoryDescription;
+    }
+
+    /**
+     * <p>
+     * Description of the directory to register.
+     * </p>
+     * 
+     * @return Description of the directory to register.
+     */
+
+    public String getWorkspaceDirectoryDescription() {
+        return this.workspaceDirectoryDescription;
+    }
+
+    /**
+     * <p>
+     * Description of the directory to register.
+     * </p>
+     * 
+     * @param workspaceDirectoryDescription
+     *        Description of the directory to register.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterWorkspaceDirectoryRequest withWorkspaceDirectoryDescription(String workspaceDirectoryDescription) {
+        setWorkspaceDirectoryDescription(workspaceDirectoryDescription);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of identity management the user is using.
+     * </p>
+     * 
+     * @param userIdentityType
+     *        The type of identity management the user is using.
+     * @see UserIdentityType
+     */
+
+    public void setUserIdentityType(String userIdentityType) {
+        this.userIdentityType = userIdentityType;
+    }
+
+    /**
+     * <p>
+     * The type of identity management the user is using.
+     * </p>
+     * 
+     * @return The type of identity management the user is using.
+     * @see UserIdentityType
+     */
+
+    public String getUserIdentityType() {
+        return this.userIdentityType;
+    }
+
+    /**
+     * <p>
+     * The type of identity management the user is using.
+     * </p>
+     * 
+     * @param userIdentityType
+     *        The type of identity management the user is using.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UserIdentityType
+     */
+
+    public RegisterWorkspaceDirectoryRequest withUserIdentityType(String userIdentityType) {
+        setUserIdentityType(userIdentityType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of identity management the user is using.
+     * </p>
+     * 
+     * @param userIdentityType
+     *        The type of identity management the user is using.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UserIdentityType
+     */
+
+    public RegisterWorkspaceDirectoryRequest withUserIdentityType(UserIdentityType userIdentityType) {
+        this.userIdentityType = userIdentityType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @param workspaceType
+     *        Indicates whether the directory's WorkSpace type is personal or pools.
+     * @see WorkspaceType
+     */
+
+    public void setWorkspaceType(String workspaceType) {
+        this.workspaceType = workspaceType;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @return Indicates whether the directory's WorkSpace type is personal or pools.
+     * @see WorkspaceType
+     */
+
+    public String getWorkspaceType() {
+        return this.workspaceType;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @param workspaceType
+     *        Indicates whether the directory's WorkSpace type is personal or pools.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WorkspaceType
+     */
+
+    public RegisterWorkspaceDirectoryRequest withWorkspaceType(String workspaceType) {
+        setWorkspaceType(workspaceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @param workspaceType
+     *        Indicates whether the directory's WorkSpace type is personal or pools.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WorkspaceType
+     */
+
+    public RegisterWorkspaceDirectoryRequest withWorkspaceType(WorkspaceType workspaceType) {
+        this.workspaceType = workspaceType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The active directory config of the directory.
+     * </p>
+     * 
+     * @param activeDirectoryConfig
+     *        The active directory config of the directory.
+     */
+
+    public void setActiveDirectoryConfig(ActiveDirectoryConfig activeDirectoryConfig) {
+        this.activeDirectoryConfig = activeDirectoryConfig;
+    }
+
+    /**
+     * <p>
+     * The active directory config of the directory.
+     * </p>
+     * 
+     * @return The active directory config of the directory.
+     */
+
+    public ActiveDirectoryConfig getActiveDirectoryConfig() {
+        return this.activeDirectoryConfig;
+    }
+
+    /**
+     * <p>
+     * The active directory config of the directory.
+     * </p>
+     * 
+     * @param activeDirectoryConfig
+     *        The active directory config of the directory.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterWorkspaceDirectoryRequest withActiveDirectoryConfig(ActiveDirectoryConfig activeDirectoryConfig) {
+        setActiveDirectoryConfig(activeDirectoryConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -543,7 +811,17 @@ public class RegisterWorkspaceDirectoryRequest extends com.amazonaws.AmazonWebSe
         if (getTenancy() != null)
             sb.append("Tenancy: ").append(getTenancy()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getWorkspaceDirectoryName() != null)
+            sb.append("WorkspaceDirectoryName: ").append(getWorkspaceDirectoryName()).append(",");
+        if (getWorkspaceDirectoryDescription() != null)
+            sb.append("WorkspaceDirectoryDescription: ").append(getWorkspaceDirectoryDescription()).append(",");
+        if (getUserIdentityType() != null)
+            sb.append("UserIdentityType: ").append(getUserIdentityType()).append(",");
+        if (getWorkspaceType() != null)
+            sb.append("WorkspaceType: ").append(getWorkspaceType()).append(",");
+        if (getActiveDirectoryConfig() != null)
+            sb.append("ActiveDirectoryConfig: ").append(getActiveDirectoryConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -582,6 +860,27 @@ public class RegisterWorkspaceDirectoryRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getWorkspaceDirectoryName() == null ^ this.getWorkspaceDirectoryName() == null)
+            return false;
+        if (other.getWorkspaceDirectoryName() != null && other.getWorkspaceDirectoryName().equals(this.getWorkspaceDirectoryName()) == false)
+            return false;
+        if (other.getWorkspaceDirectoryDescription() == null ^ this.getWorkspaceDirectoryDescription() == null)
+            return false;
+        if (other.getWorkspaceDirectoryDescription() != null
+                && other.getWorkspaceDirectoryDescription().equals(this.getWorkspaceDirectoryDescription()) == false)
+            return false;
+        if (other.getUserIdentityType() == null ^ this.getUserIdentityType() == null)
+            return false;
+        if (other.getUserIdentityType() != null && other.getUserIdentityType().equals(this.getUserIdentityType()) == false)
+            return false;
+        if (other.getWorkspaceType() == null ^ this.getWorkspaceType() == null)
+            return false;
+        if (other.getWorkspaceType() != null && other.getWorkspaceType().equals(this.getWorkspaceType()) == false)
+            return false;
+        if (other.getActiveDirectoryConfig() == null ^ this.getActiveDirectoryConfig() == null)
+            return false;
+        if (other.getActiveDirectoryConfig() != null && other.getActiveDirectoryConfig().equals(this.getActiveDirectoryConfig()) == false)
+            return false;
         return true;
     }
 
@@ -596,6 +895,11 @@ public class RegisterWorkspaceDirectoryRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getEnableSelfService() == null) ? 0 : getEnableSelfService().hashCode());
         hashCode = prime * hashCode + ((getTenancy() == null) ? 0 : getTenancy().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceDirectoryName() == null) ? 0 : getWorkspaceDirectoryName().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceDirectoryDescription() == null) ? 0 : getWorkspaceDirectoryDescription().hashCode());
+        hashCode = prime * hashCode + ((getUserIdentityType() == null) ? 0 : getUserIdentityType().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceType() == null) ? 0 : getWorkspaceType().hashCode());
+        hashCode = prime * hashCode + ((getActiveDirectoryConfig() == null) ? 0 : getActiveDirectoryConfig().hashCode());
         return hashCode;
     }
 

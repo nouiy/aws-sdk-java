@@ -318,6 +318,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public GetLineageNodeResult getLineageNode(GetLineageNodeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetListingResult getListing(GetListingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -413,6 +418,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public ListLineageNodeHistoryResult listLineageNodeHistory(ListLineageNodeHistoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListMetadataGenerationRunsResult listMetadataGenerationRuns(ListMetadataGenerationRunsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -459,6 +469,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public ListTimeSeriesDataPointsResult listTimeSeriesDataPoints(ListTimeSeriesDataPointsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PostLineageEventResult postLineageEvent(PostLineageEventRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

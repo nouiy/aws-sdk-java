@@ -56,6 +56,10 @@ public class SearchTypesResultItemJsonUnmarshaller implements Unmarshaller<Searc
                     context.nextToken();
                     searchTypesResultItem.setFormTypeItem(FormTypeDataJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("lineageNodeTypeItem", targetDepth)) {
+                    context.nextToken();
+                    searchTypesResultItem.setLineageNodeTypeItem(LineageNodeTypeItemJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

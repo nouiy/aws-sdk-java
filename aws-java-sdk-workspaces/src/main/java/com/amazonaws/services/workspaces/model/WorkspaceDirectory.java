@@ -148,6 +148,48 @@ public class WorkspaceDirectory implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private CertificateBasedAuthProperties certificateBasedAuthProperties;
+    /**
+     * <p>
+     * The name fo the WorkSpace directory.
+     * </p>
+     */
+    private String workspaceDirectoryName;
+    /**
+     * <p>
+     * The description of the WorkSpace directory
+     * </p>
+     */
+    private String workspaceDirectoryDescription;
+    /**
+     * <p>
+     * Indicates the identity type of the specifired user.
+     * </p>
+     */
+    private String userIdentityType;
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     */
+    private String workspaceType;
+    /**
+     * <p>
+     * Information about the Active Directory config.
+     * </p>
+     */
+    private ActiveDirectoryConfig activeDirectoryConfig;
+    /**
+     * <p>
+     * The streaming properties to configure.
+     * </p>
+     */
+    private StreamingProperties streamingProperties;
+    /**
+     * <p>
+     * The error message returned.
+     * </p>
+     */
+    private String errorMessage;
 
     /**
      * <p>
@@ -1172,6 +1214,352 @@ public class WorkspaceDirectory implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The name fo the WorkSpace directory.
+     * </p>
+     * 
+     * @param workspaceDirectoryName
+     *        The name fo the WorkSpace directory.
+     */
+
+    public void setWorkspaceDirectoryName(String workspaceDirectoryName) {
+        this.workspaceDirectoryName = workspaceDirectoryName;
+    }
+
+    /**
+     * <p>
+     * The name fo the WorkSpace directory.
+     * </p>
+     * 
+     * @return The name fo the WorkSpace directory.
+     */
+
+    public String getWorkspaceDirectoryName() {
+        return this.workspaceDirectoryName;
+    }
+
+    /**
+     * <p>
+     * The name fo the WorkSpace directory.
+     * </p>
+     * 
+     * @param workspaceDirectoryName
+     *        The name fo the WorkSpace directory.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDirectory withWorkspaceDirectoryName(String workspaceDirectoryName) {
+        setWorkspaceDirectoryName(workspaceDirectoryName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The description of the WorkSpace directory
+     * </p>
+     * 
+     * @param workspaceDirectoryDescription
+     *        The description of the WorkSpace directory
+     */
+
+    public void setWorkspaceDirectoryDescription(String workspaceDirectoryDescription) {
+        this.workspaceDirectoryDescription = workspaceDirectoryDescription;
+    }
+
+    /**
+     * <p>
+     * The description of the WorkSpace directory
+     * </p>
+     * 
+     * @return The description of the WorkSpace directory
+     */
+
+    public String getWorkspaceDirectoryDescription() {
+        return this.workspaceDirectoryDescription;
+    }
+
+    /**
+     * <p>
+     * The description of the WorkSpace directory
+     * </p>
+     * 
+     * @param workspaceDirectoryDescription
+     *        The description of the WorkSpace directory
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDirectory withWorkspaceDirectoryDescription(String workspaceDirectoryDescription) {
+        setWorkspaceDirectoryDescription(workspaceDirectoryDescription);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the identity type of the specifired user.
+     * </p>
+     * 
+     * @param userIdentityType
+     *        Indicates the identity type of the specifired user.
+     * @see UserIdentityType
+     */
+
+    public void setUserIdentityType(String userIdentityType) {
+        this.userIdentityType = userIdentityType;
+    }
+
+    /**
+     * <p>
+     * Indicates the identity type of the specifired user.
+     * </p>
+     * 
+     * @return Indicates the identity type of the specifired user.
+     * @see UserIdentityType
+     */
+
+    public String getUserIdentityType() {
+        return this.userIdentityType;
+    }
+
+    /**
+     * <p>
+     * Indicates the identity type of the specifired user.
+     * </p>
+     * 
+     * @param userIdentityType
+     *        Indicates the identity type of the specifired user.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UserIdentityType
+     */
+
+    public WorkspaceDirectory withUserIdentityType(String userIdentityType) {
+        setUserIdentityType(userIdentityType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the identity type of the specifired user.
+     * </p>
+     * 
+     * @param userIdentityType
+     *        Indicates the identity type of the specifired user.
+     * @see UserIdentityType
+     */
+
+    public void setUserIdentityType(UserIdentityType userIdentityType) {
+        withUserIdentityType(userIdentityType);
+    }
+
+    /**
+     * <p>
+     * Indicates the identity type of the specifired user.
+     * </p>
+     * 
+     * @param userIdentityType
+     *        Indicates the identity type of the specifired user.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UserIdentityType
+     */
+
+    public WorkspaceDirectory withUserIdentityType(UserIdentityType userIdentityType) {
+        this.userIdentityType = userIdentityType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @param workspaceType
+     *        Indicates whether the directory's WorkSpace type is personal or pools.
+     * @see WorkspaceType
+     */
+
+    public void setWorkspaceType(String workspaceType) {
+        this.workspaceType = workspaceType;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @return Indicates whether the directory's WorkSpace type is personal or pools.
+     * @see WorkspaceType
+     */
+
+    public String getWorkspaceType() {
+        return this.workspaceType;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @param workspaceType
+     *        Indicates whether the directory's WorkSpace type is personal or pools.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WorkspaceType
+     */
+
+    public WorkspaceDirectory withWorkspaceType(String workspaceType) {
+        setWorkspaceType(workspaceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @param workspaceType
+     *        Indicates whether the directory's WorkSpace type is personal or pools.
+     * @see WorkspaceType
+     */
+
+    public void setWorkspaceType(WorkspaceType workspaceType) {
+        withWorkspaceType(workspaceType);
+    }
+
+    /**
+     * <p>
+     * Indicates whether the directory's WorkSpace type is personal or pools.
+     * </p>
+     * 
+     * @param workspaceType
+     *        Indicates whether the directory's WorkSpace type is personal or pools.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WorkspaceType
+     */
+
+    public WorkspaceDirectory withWorkspaceType(WorkspaceType workspaceType) {
+        this.workspaceType = workspaceType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the Active Directory config.
+     * </p>
+     * 
+     * @param activeDirectoryConfig
+     *        Information about the Active Directory config.
+     */
+
+    public void setActiveDirectoryConfig(ActiveDirectoryConfig activeDirectoryConfig) {
+        this.activeDirectoryConfig = activeDirectoryConfig;
+    }
+
+    /**
+     * <p>
+     * Information about the Active Directory config.
+     * </p>
+     * 
+     * @return Information about the Active Directory config.
+     */
+
+    public ActiveDirectoryConfig getActiveDirectoryConfig() {
+        return this.activeDirectoryConfig;
+    }
+
+    /**
+     * <p>
+     * Information about the Active Directory config.
+     * </p>
+     * 
+     * @param activeDirectoryConfig
+     *        Information about the Active Directory config.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDirectory withActiveDirectoryConfig(ActiveDirectoryConfig activeDirectoryConfig) {
+        setActiveDirectoryConfig(activeDirectoryConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The streaming properties to configure.
+     * </p>
+     * 
+     * @param streamingProperties
+     *        The streaming properties to configure.
+     */
+
+    public void setStreamingProperties(StreamingProperties streamingProperties) {
+        this.streamingProperties = streamingProperties;
+    }
+
+    /**
+     * <p>
+     * The streaming properties to configure.
+     * </p>
+     * 
+     * @return The streaming properties to configure.
+     */
+
+    public StreamingProperties getStreamingProperties() {
+        return this.streamingProperties;
+    }
+
+    /**
+     * <p>
+     * The streaming properties to configure.
+     * </p>
+     * 
+     * @param streamingProperties
+     *        The streaming properties to configure.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDirectory withStreamingProperties(StreamingProperties streamingProperties) {
+        setStreamingProperties(streamingProperties);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The error message returned.
+     * </p>
+     * 
+     * @param errorMessage
+     *        The error message returned.
+     */
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    /**
+     * <p>
+     * The error message returned.
+     * </p>
+     * 
+     * @return The error message returned.
+     */
+
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    /**
+     * <p>
+     * The error message returned.
+     * </p>
+     * 
+     * @param errorMessage
+     *        The error message returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDirectory withErrorMessage(String errorMessage) {
+        setErrorMessage(errorMessage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1218,7 +1606,21 @@ public class WorkspaceDirectory implements Serializable, Cloneable, StructuredPo
         if (getSamlProperties() != null)
             sb.append("SamlProperties: ").append(getSamlProperties()).append(",");
         if (getCertificateBasedAuthProperties() != null)
-            sb.append("CertificateBasedAuthProperties: ").append(getCertificateBasedAuthProperties());
+            sb.append("CertificateBasedAuthProperties: ").append(getCertificateBasedAuthProperties()).append(",");
+        if (getWorkspaceDirectoryName() != null)
+            sb.append("WorkspaceDirectoryName: ").append(getWorkspaceDirectoryName()).append(",");
+        if (getWorkspaceDirectoryDescription() != null)
+            sb.append("WorkspaceDirectoryDescription: ").append(getWorkspaceDirectoryDescription()).append(",");
+        if (getUserIdentityType() != null)
+            sb.append("UserIdentityType: ").append(getUserIdentityType()).append(",");
+        if (getWorkspaceType() != null)
+            sb.append("WorkspaceType: ").append(getWorkspaceType()).append(",");
+        if (getActiveDirectoryConfig() != null)
+            sb.append("ActiveDirectoryConfig: ").append(getActiveDirectoryConfig()).append(",");
+        if (getStreamingProperties() != null)
+            sb.append("StreamingProperties: ").append(getStreamingProperties()).append(",");
+        if (getErrorMessage() != null)
+            sb.append("ErrorMessage: ").append(getErrorMessage());
         sb.append("}");
         return sb.toString();
     }
@@ -1306,6 +1708,35 @@ public class WorkspaceDirectory implements Serializable, Cloneable, StructuredPo
         if (other.getCertificateBasedAuthProperties() != null
                 && other.getCertificateBasedAuthProperties().equals(this.getCertificateBasedAuthProperties()) == false)
             return false;
+        if (other.getWorkspaceDirectoryName() == null ^ this.getWorkspaceDirectoryName() == null)
+            return false;
+        if (other.getWorkspaceDirectoryName() != null && other.getWorkspaceDirectoryName().equals(this.getWorkspaceDirectoryName()) == false)
+            return false;
+        if (other.getWorkspaceDirectoryDescription() == null ^ this.getWorkspaceDirectoryDescription() == null)
+            return false;
+        if (other.getWorkspaceDirectoryDescription() != null
+                && other.getWorkspaceDirectoryDescription().equals(this.getWorkspaceDirectoryDescription()) == false)
+            return false;
+        if (other.getUserIdentityType() == null ^ this.getUserIdentityType() == null)
+            return false;
+        if (other.getUserIdentityType() != null && other.getUserIdentityType().equals(this.getUserIdentityType()) == false)
+            return false;
+        if (other.getWorkspaceType() == null ^ this.getWorkspaceType() == null)
+            return false;
+        if (other.getWorkspaceType() != null && other.getWorkspaceType().equals(this.getWorkspaceType()) == false)
+            return false;
+        if (other.getActiveDirectoryConfig() == null ^ this.getActiveDirectoryConfig() == null)
+            return false;
+        if (other.getActiveDirectoryConfig() != null && other.getActiveDirectoryConfig().equals(this.getActiveDirectoryConfig()) == false)
+            return false;
+        if (other.getStreamingProperties() == null ^ this.getStreamingProperties() == null)
+            return false;
+        if (other.getStreamingProperties() != null && other.getStreamingProperties().equals(this.getStreamingProperties()) == false)
+            return false;
+        if (other.getErrorMessage() == null ^ this.getErrorMessage() == null)
+            return false;
+        if (other.getErrorMessage() != null && other.getErrorMessage().equals(this.getErrorMessage()) == false)
+            return false;
         return true;
     }
 
@@ -1332,6 +1763,13 @@ public class WorkspaceDirectory implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getSelfservicePermissions() == null) ? 0 : getSelfservicePermissions().hashCode());
         hashCode = prime * hashCode + ((getSamlProperties() == null) ? 0 : getSamlProperties().hashCode());
         hashCode = prime * hashCode + ((getCertificateBasedAuthProperties() == null) ? 0 : getCertificateBasedAuthProperties().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceDirectoryName() == null) ? 0 : getWorkspaceDirectoryName().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceDirectoryDescription() == null) ? 0 : getWorkspaceDirectoryDescription().hashCode());
+        hashCode = prime * hashCode + ((getUserIdentityType() == null) ? 0 : getUserIdentityType().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceType() == null) ? 0 : getWorkspaceType().hashCode());
+        hashCode = prime * hashCode + ((getActiveDirectoryConfig() == null) ? 0 : getActiveDirectoryConfig().hashCode());
+        hashCode = prime * hashCode + ((getStreamingProperties() == null) ? 0 : getStreamingProperties().hashCode());
+        hashCode = prime * hashCode + ((getErrorMessage() == null) ? 0 : getErrorMessage().hashCode());
         return hashCode;
     }
 

@@ -30,7 +30,7 @@ public class MediaStreamSink implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the media stream sink.
+     * The ARN of the Kinesis Video Stream pool returned by the <a>CreateMediaPipelineKinesisVideoStreamPool</a> API.
      * </p>
      */
     private String sinkArn;
@@ -55,11 +55,12 @@ public class MediaStreamSink implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the media stream sink.
+     * The ARN of the Kinesis Video Stream pool returned by the <a>CreateMediaPipelineKinesisVideoStreamPool</a> API.
      * </p>
      * 
      * @param sinkArn
-     *        The ARN of the media stream sink.
+     *        The ARN of the Kinesis Video Stream pool returned by the <a>CreateMediaPipelineKinesisVideoStreamPool</a>
+     *        API.
      */
 
     public void setSinkArn(String sinkArn) {
@@ -68,10 +69,11 @@ public class MediaStreamSink implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the media stream sink.
+     * The ARN of the Kinesis Video Stream pool returned by the <a>CreateMediaPipelineKinesisVideoStreamPool</a> API.
      * </p>
      * 
-     * @return The ARN of the media stream sink.
+     * @return The ARN of the Kinesis Video Stream pool returned by the <a>CreateMediaPipelineKinesisVideoStreamPool</a>
+     *         API.
      */
 
     public String getSinkArn() {
@@ -80,11 +82,12 @@ public class MediaStreamSink implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the media stream sink.
+     * The ARN of the Kinesis Video Stream pool returned by the <a>CreateMediaPipelineKinesisVideoStreamPool</a> API.
      * </p>
      * 
      * @param sinkArn
-     *        The ARN of the media stream sink.
+     *        The ARN of the Kinesis Video Stream pool returned by the <a>CreateMediaPipelineKinesisVideoStreamPool</a>
+     *        API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

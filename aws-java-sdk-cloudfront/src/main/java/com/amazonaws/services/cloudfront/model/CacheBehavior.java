@@ -31,10 +31,9 @@ import javax.annotation.Generated;
  * the <i>Amazon CloudFront Developer Guide</i>.
  * </p>
  * <p>
- * If you don't want to specify any cache behaviors, include only an empty <code>CacheBehaviors</code> element. For more
- * information, see <a
- * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehaviors.html">CacheBehaviors</a>. Don't
- * include an empty <code>CacheBehavior</code> element because this is invalid.
+ * If you don't want to specify any cache behaviors, include only an empty <code>CacheBehaviors</code> element. Don't
+ * specify an empty individual <code>CacheBehavior</code> element, because this is invalid. For more information, see <a
+ * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehaviors.html">CacheBehaviors</a>.
  * </p>
  * <p>
  * To delete all cache behaviors in an existing distribution, update the distribution configuration and include only an

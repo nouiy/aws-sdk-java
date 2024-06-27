@@ -4254,7 +4254,9 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * List tags for a CloudFront resource.
+     * List tags for a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -4268,7 +4270,9 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * List tags for a CloudFront resource.
+     * List tags for a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -4338,7 +4342,9 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * Add tags to a CloudFront resource.
+     * Add tags to a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -4352,7 +4358,9 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * Add tags to a CloudFront resource.
+     * Add tags to a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -4430,7 +4438,9 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * Remove tags from a CloudFront resource.
+     * Remove tags from a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param untagResourceRequest
@@ -4444,7 +4454,9 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * Remove tags from a CloudFront resource.
+     * Remove tags from a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param untagResourceRequest

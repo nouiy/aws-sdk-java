@@ -36,10 +36,14 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String authenticationStrategy;
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
+     * <note>
+     * <p>
+     * Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and above.
+     * </p>
+     * </note>
      */
     private Boolean autoMinorVersionUpgrade;
     /**
@@ -56,9 +60,18 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
     private ConfigurationId configuration;
     /**
      * <p>
-     * The broker engine version. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
+     * <note>
+     * <p>
+     * When upgrading to ActiveMQ version 5.18 and above or RabbitMQ version 3.13 and above, you must have
+     * autoMinorVersionUpgrade set to true for the broker.
+     * </p>
+     * </note>
      */
     private String engineVersion;
     /**
@@ -162,15 +175,23 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
+     * <note>
+     * <p>
+     * Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and above.
+     * </p>
+     * </note>
      * 
      * @param autoMinorVersionUpgrade
-     *        Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported
-     *        by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a
-     *        manual broker reboot.
+     *        Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by
+     *        Amazon MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker
+     *        reboot.</p> <note>
+     *        <p>
+     *        Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and
+     *        above.
+     *        </p>
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -179,14 +200,22 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
+     * <note>
+     * <p>
+     * Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and above.
+     * </p>
+     * </note>
      * 
-     * @return Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported
-     *         by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a
-     *         manual broker reboot.
+     * @return Enables automatic upgrades to new patch versions for brokers as new versions are released and supported
+     *         by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker
+     *         reboot.</p> <note>
+     *         <p>
+     *         Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and
+     *         above.
+     *         </p>
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -195,15 +224,23 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
+     * <note>
+     * <p>
+     * Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and above.
+     * </p>
+     * </note>
      * 
      * @param autoMinorVersionUpgrade
-     *        Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported
-     *        by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a
-     *        manual broker reboot.
+     *        Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by
+     *        Amazon MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker
+     *        reboot.</p> <note>
+     *        <p>
+     *        Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and
+     *        above.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,14 +251,22 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
+     * <note>
+     * <p>
+     * Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and above.
+     * </p>
+     * </note>
      * 
-     * @return Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported
-     *         by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a
-     *         manual broker reboot.
+     * @return Enables automatic upgrades to new patch versions for brokers as new versions are released and supported
+     *         by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker
+     *         reboot.</p> <note>
+     *         <p>
+     *         Must be set to true for ActiveMQ brokers version 5.18 and above and for RabbitMQ brokers version 3.13 and
+     *         above.
+     *         </p>
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -310,14 +355,29 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The broker engine version. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
+     * <note>
+     * <p>
+     * When upgrading to ActiveMQ version 5.18 and above or RabbitMQ version 3.13 and above, you must have
+     * autoMinorVersionUpgrade set to true for the broker.
+     * </p>
+     * </note>
      * 
      * @param engineVersion
-     *        The broker engine version. For a list of supported engine versions, see <a
-     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *        engines</a>.
+     *        The broker engine version. For more information, see the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *        >ActiveMQ version management</a> and the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *        >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.</p> <note>
+     *        <p>
+     *        When upgrading to ActiveMQ version 5.18 and above or RabbitMQ version 3.13 and above, you must have
+     *        autoMinorVersionUpgrade set to true for the broker.
+     *        </p>
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -326,13 +386,28 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The broker engine version. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
+     * <note>
+     * <p>
+     * When upgrading to ActiveMQ version 5.18 and above or RabbitMQ version 3.13 and above, you must have
+     * autoMinorVersionUpgrade set to true for the broker.
+     * </p>
+     * </note>
      * 
-     * @return The broker engine version. For a list of supported engine versions, see <a
-     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *         engines</a>.
+     * @return The broker engine version. For more information, see the <a
+     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *         >ActiveMQ version management</a> and the <a
+     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *         >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.</p> <note>
+     *         <p>
+     *         When upgrading to ActiveMQ version 5.18 and above or RabbitMQ version 3.13 and above, you must have
+     *         autoMinorVersionUpgrade set to true for the broker.
+     *         </p>
      */
 
     public String getEngineVersion() {
@@ -341,14 +416,29 @@ public class UpdateBrokerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The broker engine version. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
+     * <note>
+     * <p>
+     * When upgrading to ActiveMQ version 5.18 and above or RabbitMQ version 3.13 and above, you must have
+     * autoMinorVersionUpgrade set to true for the broker.
+     * </p>
+     * </note>
      * 
      * @param engineVersion
-     *        The broker engine version. For a list of supported engine versions, see <a
-     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *        engines</a>.
+     *        The broker engine version. For more information, see the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *        >ActiveMQ version management</a> and the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *        >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.</p> <note>
+     *        <p>
+     *        When upgrading to ActiveMQ version 5.18 and above or RabbitMQ version 3.13 and above, you must have
+     *        autoMinorVersionUpgrade set to true for the broker.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

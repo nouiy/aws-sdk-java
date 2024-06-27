@@ -158,6 +158,13 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<CustomFileSystemConfig> customFileSystemConfigs;
+    /**
+     * <p>
+     * Studio settings. If these settings are applied on a user level, they take priority over the settings applied on a
+     * domain level.
+     * </p>
+     */
+    private StudioWebPortalSettings studioWebPortalSettings;
 
     /**
      * <p>
@@ -1066,6 +1073,52 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Studio settings. If these settings are applied on a user level, they take priority over the settings applied on a
+     * domain level.
+     * </p>
+     * 
+     * @param studioWebPortalSettings
+     *        Studio settings. If these settings are applied on a user level, they take priority over the settings
+     *        applied on a domain level.
+     */
+
+    public void setStudioWebPortalSettings(StudioWebPortalSettings studioWebPortalSettings) {
+        this.studioWebPortalSettings = studioWebPortalSettings;
+    }
+
+    /**
+     * <p>
+     * Studio settings. If these settings are applied on a user level, they take priority over the settings applied on a
+     * domain level.
+     * </p>
+     * 
+     * @return Studio settings. If these settings are applied on a user level, they take priority over the settings
+     *         applied on a domain level.
+     */
+
+    public StudioWebPortalSettings getStudioWebPortalSettings() {
+        return this.studioWebPortalSettings;
+    }
+
+    /**
+     * <p>
+     * Studio settings. If these settings are applied on a user level, they take priority over the settings applied on a
+     * domain level.
+     * </p>
+     * 
+     * @param studioWebPortalSettings
+     *        Studio settings. If these settings are applied on a user level, they take priority over the settings
+     *        applied on a domain level.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withStudioWebPortalSettings(StudioWebPortalSettings studioWebPortalSettings) {
+        setStudioWebPortalSettings(studioWebPortalSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1108,7 +1161,9 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
         if (getCustomPosixUserConfig() != null)
             sb.append("CustomPosixUserConfig: ").append(getCustomPosixUserConfig()).append(",");
         if (getCustomFileSystemConfigs() != null)
-            sb.append("CustomFileSystemConfigs: ").append(getCustomFileSystemConfigs());
+            sb.append("CustomFileSystemConfigs: ").append(getCustomFileSystemConfigs()).append(",");
+        if (getStudioWebPortalSettings() != null)
+            sb.append("StudioWebPortalSettings: ").append(getStudioWebPortalSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -1187,6 +1242,10 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCustomFileSystemConfigs() != null && other.getCustomFileSystemConfigs().equals(this.getCustomFileSystemConfigs()) == false)
             return false;
+        if (other.getStudioWebPortalSettings() == null ^ this.getStudioWebPortalSettings() == null)
+            return false;
+        if (other.getStudioWebPortalSettings() != null && other.getStudioWebPortalSettings().equals(this.getStudioWebPortalSettings()) == false)
+            return false;
         return true;
     }
 
@@ -1211,6 +1270,7 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStudioWebPortal() == null) ? 0 : getStudioWebPortal().hashCode());
         hashCode = prime * hashCode + ((getCustomPosixUserConfig() == null) ? 0 : getCustomPosixUserConfig().hashCode());
         hashCode = prime * hashCode + ((getCustomFileSystemConfigs() == null) ? 0 : getCustomFileSystemConfigs().hashCode());
+        hashCode = prime * hashCode + ((getStudioWebPortalSettings() == null) ? 0 : getStudioWebPortalSettings().hashCode());
         return hashCode;
     }
 

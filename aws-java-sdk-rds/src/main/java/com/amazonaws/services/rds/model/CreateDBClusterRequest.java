@@ -172,11 +172,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Must match the name of an existing DB subnet group.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Must not be <code>default</code>.
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * Example: <code>mydbsubnetgroup</code>
@@ -2178,11 +2173,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Must match the name of an existing DB subnet group.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Must not be <code>default</code>.
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * Example: <code>mydbsubnetgroup</code>
@@ -2203,11 +2193,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <li>
      *        <p>
      *        Must match the name of an existing DB subnet group.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Must not be <code>default</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -2238,11 +2223,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Must match the name of an existing DB subnet group.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Must not be <code>default</code>.
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * Example: <code>mydbsubnetgroup</code>
@@ -2262,11 +2242,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <li>
      *         <p>
      *         Must match the name of an existing DB subnet group.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Must not be <code>default</code>.
      *         </p>
      *         </li>
      *         </ul>
@@ -2297,11 +2272,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Must match the name of an existing DB subnet group.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Must not be <code>default</code>.
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * Example: <code>mydbsubnetgroup</code>
@@ -2322,11 +2292,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <li>
      *        <p>
      *        Must match the name of an existing DB subnet group.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Must not be <code>default</code>.
      *        </p>
      *        </li>
      *        </ul>

@@ -43,7 +43,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * ECS service - The resource type is <code>service</code> and the unique identifier is the cluster name and service
-     * name. Example: <code>service/default/sample-webapp</code>.
+     * name. Example: <code>service/my-cluster/my-service</code>.
      * </p>
      * </li>
      * <li>
@@ -142,7 +142,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * SageMaker Serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
+     * SageMaker serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
      * resource ID. Example: <code>endpoint/my-end-point/variant/KMeansClustering</code>.
      * </p>
      * </li>
@@ -150,6 +150,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * SageMaker inference component - The resource type is <code>inference-component</code> and the unique identifier
      * is the resource ID. Example: <code>inference-component/my-inference-component</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
+     * Example: <code>workspacespool/wspool-123456</code>.
      * </p>
      * </li>
      * </ul>
@@ -163,7 +169,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     * <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      * </p>
      * </li>
      * <li>
@@ -178,7 +184,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     * <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      * </p>
      * </li>
      * <li>
@@ -274,13 +280,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     * Serverless endpoint.
+     * serverless endpoint.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for a
      * SageMaker inference component.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      * </p>
      * </li>
      * </ul>
@@ -410,7 +421,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * ECS service - The resource type is <code>service</code> and the unique identifier is the cluster name and service
-     * name. Example: <code>service/default/sample-webapp</code>.
+     * name. Example: <code>service/my-cluster/my-service</code>.
      * </p>
      * </li>
      * <li>
@@ -509,7 +520,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * SageMaker Serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
+     * SageMaker serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
      * resource ID. Example: <code>endpoint/my-end-point/variant/KMeansClustering</code>.
      * </p>
      * </li>
@@ -517,6 +528,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * SageMaker inference component - The resource type is <code>inference-component</code> and the unique identifier
      * is the resource ID. Example: <code>inference-component/my-inference-component</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
+     * Example: <code>workspacespool/wspool-123456</code>.
      * </p>
      * </li>
      * </ul>
@@ -528,7 +545,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        ECS service - The resource type is <code>service</code> and the unique identifier is the cluster name and
-     *        service name. Example: <code>service/default/sample-webapp</code>.
+     *        service name. Example: <code>service/my-cluster/my-service</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -629,7 +646,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        SageMaker Serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
+     *        SageMaker serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
      *        resource ID. Example: <code>endpoint/my-end-point/variant/KMeansClustering</code>.
      *        </p>
      *        </li>
@@ -637,6 +654,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        SageMaker inference component - The resource type is <code>inference-component</code> and the unique
      *        identifier is the resource ID. Example: <code>inference-component/my-inference-component</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool
+     *        ID. Example: <code>workspacespool/wspool-123456</code>.
      *        </p>
      *        </li>
      */
@@ -654,7 +677,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * ECS service - The resource type is <code>service</code> and the unique identifier is the cluster name and service
-     * name. Example: <code>service/default/sample-webapp</code>.
+     * name. Example: <code>service/my-cluster/my-service</code>.
      * </p>
      * </li>
      * <li>
@@ -753,7 +776,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * SageMaker Serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
+     * SageMaker serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
      * resource ID. Example: <code>endpoint/my-end-point/variant/KMeansClustering</code>.
      * </p>
      * </li>
@@ -761,6 +784,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * SageMaker inference component - The resource type is <code>inference-component</code> and the unique identifier
      * is the resource ID. Example: <code>inference-component/my-inference-component</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
+     * Example: <code>workspacespool/wspool-123456</code>.
      * </p>
      * </li>
      * </ul>
@@ -771,7 +800,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         ECS service - The resource type is <code>service</code> and the unique identifier is the cluster name and
-     *         service name. Example: <code>service/default/sample-webapp</code>.
+     *         service name. Example: <code>service/my-cluster/my-service</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -873,7 +902,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         SageMaker Serverless endpoint - The resource type is <code>variant</code> and the unique identifier is
+     *         SageMaker serverless endpoint - The resource type is <code>variant</code> and the unique identifier is
      *         the resource ID. Example: <code>endpoint/my-end-point/variant/KMeansClustering</code>.
      *         </p>
      *         </li>
@@ -881,6 +910,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         SageMaker inference component - The resource type is <code>inference-component</code> and the unique
      *         identifier is the resource ID. Example: <code>inference-component/my-inference-component</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the
+     *         pool ID. Example: <code>workspacespool/wspool-123456</code>.
      *         </p>
      *         </li>
      */
@@ -898,7 +933,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * ECS service - The resource type is <code>service</code> and the unique identifier is the cluster name and service
-     * name. Example: <code>service/default/sample-webapp</code>.
+     * name. Example: <code>service/my-cluster/my-service</code>.
      * </p>
      * </li>
      * <li>
@@ -997,7 +1032,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * SageMaker Serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
+     * SageMaker serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
      * resource ID. Example: <code>endpoint/my-end-point/variant/KMeansClustering</code>.
      * </p>
      * </li>
@@ -1005,6 +1040,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * SageMaker inference component - The resource type is <code>inference-component</code> and the unique identifier
      * is the resource ID. Example: <code>inference-component/my-inference-component</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
+     * Example: <code>workspacespool/wspool-123456</code>.
      * </p>
      * </li>
      * </ul>
@@ -1016,7 +1057,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        ECS service - The resource type is <code>service</code> and the unique identifier is the cluster name and
-     *        service name. Example: <code>service/default/sample-webapp</code>.
+     *        service name. Example: <code>service/my-cluster/my-service</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1117,7 +1158,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        SageMaker Serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
+     *        SageMaker serverless endpoint - The resource type is <code>variant</code> and the unique identifier is the
      *        resource ID. Example: <code>endpoint/my-end-point/variant/KMeansClustering</code>.
      *        </p>
      *        </li>
@@ -1125,6 +1166,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        SageMaker inference component - The resource type is <code>inference-component</code> and the unique
      *        identifier is the resource ID. Example: <code>inference-component/my-inference-component</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool
+     *        ID. Example: <code>workspacespool/wspool-123456</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1143,7 +1190,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     * <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      * </p>
      * </li>
      * <li>
@@ -1158,7 +1205,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     * <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      * </p>
      * </li>
      * <li>
@@ -1254,13 +1301,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     * Serverless endpoint.
+     * serverless endpoint.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for a
      * SageMaker inference component.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      * </p>
      * </li>
      * </ul>
@@ -1271,7 +1323,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     *        <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      *        </p>
      *        </li>
      *        <li>
@@ -1286,7 +1338,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     *        <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      *        </p>
      *        </li>
      *        <li>
@@ -1385,13 +1437,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     *        Serverless endpoint.
+     *        serverless endpoint.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for
      *        a SageMaker inference component.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      *        </p>
      *        </li>
      * @see ScalableDimension
@@ -1409,7 +1466,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     * <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      * </p>
      * </li>
      * <li>
@@ -1424,7 +1481,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     * <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      * </p>
      * </li>
      * <li>
@@ -1520,13 +1577,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     * Serverless endpoint.
+     * serverless endpoint.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for a
      * SageMaker inference component.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      * </p>
      * </li>
      * </ul>
@@ -1536,7 +1598,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     *         <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      *         </p>
      *         </li>
      *         <li>
@@ -1551,7 +1613,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     *         <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      *         </p>
      *         </li>
      *         <li>
@@ -1650,13 +1712,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a
-     *         SageMaker Serverless endpoint.
+     *         SageMaker serverless endpoint.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for
      *         a SageMaker inference component.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      *         </p>
      *         </li>
      * @see ScalableDimension
@@ -1674,7 +1741,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     * <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      * </p>
      * </li>
      * <li>
@@ -1689,7 +1756,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     * <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      * </p>
      * </li>
      * <li>
@@ -1785,13 +1852,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     * Serverless endpoint.
+     * serverless endpoint.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for a
      * SageMaker inference component.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      * </p>
      * </li>
      * </ul>
@@ -1802,7 +1874,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     *        <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      *        </p>
      *        </li>
      *        <li>
@@ -1817,7 +1889,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     *        <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      *        </p>
      *        </li>
      *        <li>
@@ -1916,13 +1988,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     *        Serverless endpoint.
+     *        serverless endpoint.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for
      *        a SageMaker inference component.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1942,7 +2019,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     * <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      * </p>
      * </li>
      * <li>
@@ -1957,7 +2034,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     * <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      * </p>
      * </li>
      * <li>
@@ -2053,13 +2130,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     * Serverless endpoint.
+     * serverless endpoint.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for a
      * SageMaker inference component.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      * </p>
      * </li>
      * </ul>
@@ -2070,7 +2152,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     *        <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      *        </p>
      *        </li>
      *        <li>
@@ -2085,7 +2167,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     *        <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      *        </p>
      *        </li>
      *        <li>
@@ -2184,13 +2266,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     *        Serverless endpoint.
+     *        serverless endpoint.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for
      *        a SageMaker inference component.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      *        </p>
      *        </li>
      * @see ScalableDimension
@@ -2208,7 +2295,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     * <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      * </p>
      * </li>
      * <li>
@@ -2223,7 +2310,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     * <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      * </p>
      * </li>
      * <li>
@@ -2319,13 +2406,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     * Serverless endpoint.
+     * serverless endpoint.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for a
      * SageMaker inference component.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      * </p>
      * </li>
      * </ul>
@@ -2336,7 +2428,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ecs:service:DesiredCount</code> - The desired task count of an ECS service.
+     *        <code>ecs:service:DesiredCount</code> - The task count of an ECS service.
      *        </p>
      *        </li>
      *        <li>
@@ -2351,7 +2443,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>appstream:fleet:DesiredCapacity</code> - The desired capacity of an AppStream 2.0 fleet.
+     *        <code>appstream:fleet:DesiredCapacity</code> - The capacity of an AppStream 2.0 fleet.
      *        </p>
      *        </li>
      *        <li>
@@ -2450,13 +2542,18 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>sagemaker:variant:DesiredProvisionedConcurrency</code> - The provisioned concurrency for a SageMaker
-     *        Serverless endpoint.
+     *        serverless endpoint.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>sagemaker:inference-component:DesiredCopyCount</code> - The number of copies across an endpoint for
      *        a SageMaker inference component.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

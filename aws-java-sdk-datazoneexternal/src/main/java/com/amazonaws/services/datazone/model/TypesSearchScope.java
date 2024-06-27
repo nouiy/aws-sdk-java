@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum TypesSearchScope {
 
     ASSET_TYPE("ASSET_TYPE"),
-    FORM_TYPE("FORM_TYPE");
+    FORM_TYPE("FORM_TYPE"),
+    LINEAGE_NODE_TYPE("LINEAGE_NODE_TYPE");
 
     private String value;
 

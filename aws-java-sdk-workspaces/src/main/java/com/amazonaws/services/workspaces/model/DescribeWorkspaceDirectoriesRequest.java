@@ -33,6 +33,12 @@ public class DescribeWorkspaceDirectoriesRequest extends com.amazonaws.AmazonWeb
     private com.amazonaws.internal.SdkInternalList<String> directoryIds;
     /**
      * <p>
+     * The names of the WorkSpace directories.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> workspaceDirectoryNames;
+    /**
+     * <p>
      * The maximum number of directories to return.
      * </p>
      */
@@ -115,6 +121,79 @@ public class DescribeWorkspaceDirectoriesRequest extends com.amazonaws.AmazonWeb
 
     public DescribeWorkspaceDirectoriesRequest withDirectoryIds(java.util.Collection<String> directoryIds) {
         setDirectoryIds(directoryIds);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The names of the WorkSpace directories.
+     * </p>
+     * 
+     * @return The names of the WorkSpace directories.
+     */
+
+    public java.util.List<String> getWorkspaceDirectoryNames() {
+        if (workspaceDirectoryNames == null) {
+            workspaceDirectoryNames = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return workspaceDirectoryNames;
+    }
+
+    /**
+     * <p>
+     * The names of the WorkSpace directories.
+     * </p>
+     * 
+     * @param workspaceDirectoryNames
+     *        The names of the WorkSpace directories.
+     */
+
+    public void setWorkspaceDirectoryNames(java.util.Collection<String> workspaceDirectoryNames) {
+        if (workspaceDirectoryNames == null) {
+            this.workspaceDirectoryNames = null;
+            return;
+        }
+
+        this.workspaceDirectoryNames = new com.amazonaws.internal.SdkInternalList<String>(workspaceDirectoryNames);
+    }
+
+    /**
+     * <p>
+     * The names of the WorkSpace directories.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setWorkspaceDirectoryNames(java.util.Collection)} or
+     * {@link #withWorkspaceDirectoryNames(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param workspaceDirectoryNames
+     *        The names of the WorkSpace directories.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeWorkspaceDirectoriesRequest withWorkspaceDirectoryNames(String... workspaceDirectoryNames) {
+        if (this.workspaceDirectoryNames == null) {
+            setWorkspaceDirectoryNames(new com.amazonaws.internal.SdkInternalList<String>(workspaceDirectoryNames.length));
+        }
+        for (String ele : workspaceDirectoryNames) {
+            this.workspaceDirectoryNames.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The names of the WorkSpace directories.
+     * </p>
+     * 
+     * @param workspaceDirectoryNames
+     *        The names of the WorkSpace directories.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeWorkspaceDirectoriesRequest withWorkspaceDirectoryNames(java.util.Collection<String> workspaceDirectoryNames) {
+        setWorkspaceDirectoryNames(workspaceDirectoryNames);
         return this;
     }
 
@@ -218,6 +297,8 @@ public class DescribeWorkspaceDirectoriesRequest extends com.amazonaws.AmazonWeb
         sb.append("{");
         if (getDirectoryIds() != null)
             sb.append("DirectoryIds: ").append(getDirectoryIds()).append(",");
+        if (getWorkspaceDirectoryNames() != null)
+            sb.append("WorkspaceDirectoryNames: ").append(getWorkspaceDirectoryNames()).append(",");
         if (getLimit() != null)
             sb.append("Limit: ").append(getLimit()).append(",");
         if (getNextToken() != null)
@@ -240,6 +321,10 @@ public class DescribeWorkspaceDirectoriesRequest extends com.amazonaws.AmazonWeb
             return false;
         if (other.getDirectoryIds() != null && other.getDirectoryIds().equals(this.getDirectoryIds()) == false)
             return false;
+        if (other.getWorkspaceDirectoryNames() == null ^ this.getWorkspaceDirectoryNames() == null)
+            return false;
+        if (other.getWorkspaceDirectoryNames() != null && other.getWorkspaceDirectoryNames().equals(this.getWorkspaceDirectoryNames()) == false)
+            return false;
         if (other.getLimit() == null ^ this.getLimit() == null)
             return false;
         if (other.getLimit() != null && other.getLimit().equals(this.getLimit()) == false)
@@ -257,6 +342,7 @@ public class DescribeWorkspaceDirectoriesRequest extends com.amazonaws.AmazonWeb
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDirectoryIds() == null) ? 0 : getDirectoryIds().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceDirectoryNames() == null) ? 0 : getWorkspaceDirectoryNames().hashCode());
         hashCode = prime * hashCode + ((getLimit() == null) ? 0 : getLimit().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;

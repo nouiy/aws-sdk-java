@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum WorkspaceDirectoryType {
 
     SIMPLE_AD("SIMPLE_AD"),
-    AD_CONNECTOR("AD_CONNECTOR");
+    AD_CONNECTOR("AD_CONNECTOR"),
+    CUSTOMER_MANAGED("CUSTOMER_MANAGED");
 
     private String value;
 

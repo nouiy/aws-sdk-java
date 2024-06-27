@@ -20,7 +20,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Defines the configuration for attaching additional storage to the instances in the SageMaker HyperPod cluster
- * instance group.
+ * instance group. To learn more, see <a href=
+ * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-release-notes.html#sagemaker-hyperpod-release-notes-20240620"
+ * >SageMaker HyperPod release notes: June 20, 2024</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ClusterInstanceStorageConfig"

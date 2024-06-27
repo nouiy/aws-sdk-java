@@ -53,6 +53,8 @@ public class AmazonTranscribeProcessorConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterPartialResults").build();
     private static final MarshallingInfo<Boolean> IDENTIFYLANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdentifyLanguage").build();
+    private static final MarshallingInfo<Boolean> IDENTIFYMULTIPLELANGUAGES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdentifyMultipleLanguages").build();
     private static final MarshallingInfo<String> LANGUAGEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageOptions").build();
     private static final MarshallingInfo<String> PREFERREDLANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -92,6 +94,7 @@ public class AmazonTranscribeProcessorConfigurationMarshaller {
             protocolMarshaller.marshall(amazonTranscribeProcessorConfiguration.getLanguageModelName(), LANGUAGEMODELNAME_BINDING);
             protocolMarshaller.marshall(amazonTranscribeProcessorConfiguration.getFilterPartialResults(), FILTERPARTIALRESULTS_BINDING);
             protocolMarshaller.marshall(amazonTranscribeProcessorConfiguration.getIdentifyLanguage(), IDENTIFYLANGUAGE_BINDING);
+            protocolMarshaller.marshall(amazonTranscribeProcessorConfiguration.getIdentifyMultipleLanguages(), IDENTIFYMULTIPLELANGUAGES_BINDING);
             protocolMarshaller.marshall(amazonTranscribeProcessorConfiguration.getLanguageOptions(), LANGUAGEOPTIONS_BINDING);
             protocolMarshaller.marshall(amazonTranscribeProcessorConfiguration.getPreferredLanguage(), PREFERREDLANGUAGE_BINDING);
             protocolMarshaller.marshall(amazonTranscribeProcessorConfiguration.getVocabularyNames(), VOCABULARYNAMES_BINDING);

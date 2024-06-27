@@ -36,7 +36,7 @@ public class MediaStreamSource implements Serializable, Cloneable, StructuredPoj
     private String sourceType;
     /**
      * <p>
-     * The ARN of the media stream source.
+     * The ARN of the meeting.
      * </p>
      */
     private String sourceArn;
@@ -102,11 +102,11 @@ public class MediaStreamSource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ARN of the media stream source.
+     * The ARN of the meeting.
      * </p>
      * 
      * @param sourceArn
-     *        The ARN of the media stream source.
+     *        The ARN of the meeting.
      */
 
     public void setSourceArn(String sourceArn) {
@@ -115,10 +115,10 @@ public class MediaStreamSource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ARN of the media stream source.
+     * The ARN of the meeting.
      * </p>
      * 
-     * @return The ARN of the media stream source.
+     * @return The ARN of the meeting.
      */
 
     public String getSourceArn() {
@@ -127,11 +127,11 @@ public class MediaStreamSource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ARN of the media stream source.
+     * The ARN of the meeting.
      * </p>
      * 
      * @param sourceArn
-     *        The ARN of the media stream source.
+     *        The ARN of the meeting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

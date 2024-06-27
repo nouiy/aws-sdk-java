@@ -104,20 +104,8 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("RequestTimeoutException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.qconnect.model.transform.RequestTimeoutExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.qconnect.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.qconnect.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.qconnect.model.transform.ConflictExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.qconnect.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.qconnect.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
@@ -127,6 +115,21 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("PreconditionFailedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.qconnect.model.transform.PreconditionFailedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("RequestTimeoutException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.qconnect.model.transform.RequestTimeoutExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.qconnect.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.qconnect.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.qconnect.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.qconnect.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.qconnect.model.AmazonQConnectException.class));
 
     public static AmazonQConnectClientBuilder builder() {
@@ -372,6 +375,106 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateContentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateContentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an association between a content resource in a knowledge base and <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/step-by-step-guided-experiences.html">step-by-step
+     * guides</a>. Step-by-step guides offer instructions to agents for resolving common customer issues. You create a
+     * content association to integrate Amazon Q in Connect and step-by-step guides.
+     * </p>
+     * <p>
+     * After you integrate Amazon Q and step-by-step guides, when Amazon Q provides a recommendation to an agent based
+     * on the intent that it's detected, it also provides them with the option to start the step-by-step guide that you
+     * have associated with the content.
+     * </p>
+     * <p>
+     * Note the following limitations:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can create only one content association for each content resource in a knowledge base.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can associate a step-by-step guide with multiple content resources.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createContentAssociationRequest
+     * @return Result of the CreateContentAssociation operation returned by the service.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. For example,
+     *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
+     *         conflicting resource (usually with the same name) is being created or mutated.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws ServiceQuotaExceededException
+     *         You've exceeded your service quota. To perform the requested action, remove some of the relevant
+     *         resources, or use service quotas to request a service quota increase.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonQConnect.CreateContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/CreateContentAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateContentAssociationResult createContentAssociation(CreateContentAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateContentAssociation(request);
+    }
+
+    @SdkInternalApi
+    final CreateContentAssociationResult executeCreateContentAssociation(CreateContentAssociationRequest createContentAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createContentAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateContentAssociationRequest> request = null;
+        Response<CreateContentAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateContentAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createContentAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QConnect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateContentAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateContentAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateContentAssociationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -806,6 +909,74 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Deletes the content association.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param deleteContentAssociationRequest
+     * @return Result of the DeleteContentAssociation operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonQConnect.DeleteContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/DeleteContentAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteContentAssociationResult deleteContentAssociation(DeleteContentAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteContentAssociation(request);
+    }
+
+    @SdkInternalApi
+    final DeleteContentAssociationResult executeDeleteContentAssociation(DeleteContentAssociationRequest deleteContentAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteContentAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteContentAssociationRequest> request = null;
+        Response<DeleteContentAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteContentAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteContentAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QConnect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteContentAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteContentAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteContentAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the quick response import job.
      * </p>
      * 
@@ -1182,6 +1353,73 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<GetContentResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetContentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the content association.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param getContentAssociationRequest
+     * @return Result of the GetContentAssociation operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonQConnect.GetContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/GetContentAssociation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetContentAssociationResult getContentAssociation(GetContentAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetContentAssociation(request);
+    }
+
+    @SdkInternalApi
+    final GetContentAssociationResult executeGetContentAssociation(GetContentAssociationRequest getContentAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getContentAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetContentAssociationRequest> request = null;
+        Response<GetContentAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetContentAssociationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getContentAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QConnect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetContentAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetContentAssociationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetContentAssociationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1685,6 +1923,74 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<ListAssistantsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAssistantsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the content associations.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param listContentAssociationsRequest
+     * @return Result of the ListContentAssociations operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonQConnect.ListContentAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/ListContentAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListContentAssociationsResult listContentAssociations(ListContentAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListContentAssociations(request);
+    }
+
+    @SdkInternalApi
+    final ListContentAssociationsResult executeListContentAssociations(ListContentAssociationsRequest listContentAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listContentAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListContentAssociationsRequest> request = null;
+        Response<ListContentAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListContentAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listContentAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QConnect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListContentAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListContentAssociationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListContentAssociationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

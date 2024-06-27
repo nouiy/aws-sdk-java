@@ -52,6 +52,12 @@ public class BodySectionConfiguration implements Serializable, Cloneable, Struct
      * </p>
      */
     private SectionPageBreakConfiguration pageBreakConfiguration;
+    /**
+     * <p>
+     * Describes the configurations that are required to declare a section as repeating.
+     * </p>
+     */
+    private BodySectionRepeatConfiguration repeatConfiguration;
 
     /**
      * <p>
@@ -214,6 +220,46 @@ public class BodySectionConfiguration implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Describes the configurations that are required to declare a section as repeating.
+     * </p>
+     * 
+     * @param repeatConfiguration
+     *        Describes the configurations that are required to declare a section as repeating.
+     */
+
+    public void setRepeatConfiguration(BodySectionRepeatConfiguration repeatConfiguration) {
+        this.repeatConfiguration = repeatConfiguration;
+    }
+
+    /**
+     * <p>
+     * Describes the configurations that are required to declare a section as repeating.
+     * </p>
+     * 
+     * @return Describes the configurations that are required to declare a section as repeating.
+     */
+
+    public BodySectionRepeatConfiguration getRepeatConfiguration() {
+        return this.repeatConfiguration;
+    }
+
+    /**
+     * <p>
+     * Describes the configurations that are required to declare a section as repeating.
+     * </p>
+     * 
+     * @param repeatConfiguration
+     *        Describes the configurations that are required to declare a section as repeating.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BodySectionConfiguration withRepeatConfiguration(BodySectionRepeatConfiguration repeatConfiguration) {
+        setRepeatConfiguration(repeatConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,7 +278,9 @@ public class BodySectionConfiguration implements Serializable, Cloneable, Struct
         if (getStyle() != null)
             sb.append("Style: ").append(getStyle()).append(",");
         if (getPageBreakConfiguration() != null)
-            sb.append("PageBreakConfiguration: ").append(getPageBreakConfiguration());
+            sb.append("PageBreakConfiguration: ").append(getPageBreakConfiguration()).append(",");
+        if (getRepeatConfiguration() != null)
+            sb.append("RepeatConfiguration: ").append(getRepeatConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -263,6 +311,10 @@ public class BodySectionConfiguration implements Serializable, Cloneable, Struct
             return false;
         if (other.getPageBreakConfiguration() != null && other.getPageBreakConfiguration().equals(this.getPageBreakConfiguration()) == false)
             return false;
+        if (other.getRepeatConfiguration() == null ^ this.getRepeatConfiguration() == null)
+            return false;
+        if (other.getRepeatConfiguration() != null && other.getRepeatConfiguration().equals(this.getRepeatConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -275,6 +327,7 @@ public class BodySectionConfiguration implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getContent() == null) ? 0 : getContent().hashCode());
         hashCode = prime * hashCode + ((getStyle() == null) ? 0 : getStyle().hashCode());
         hashCode = prime * hashCode + ((getPageBreakConfiguration() == null) ? 0 : getPageBreakConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getRepeatConfiguration() == null) ? 0 : getRepeatConfiguration().hashCode());
         return hashCode;
     }
 

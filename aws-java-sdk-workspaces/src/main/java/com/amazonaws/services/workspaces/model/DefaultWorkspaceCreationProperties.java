@@ -77,6 +77,12 @@ public class DefaultWorkspaceCreationProperties implements Serializable, Cloneab
      * </p>
      */
     private Boolean enableMaintenanceMode;
+    /**
+     * <p>
+     * Indicates the IAM role ARN of the instance.
+     * </p>
+     */
+    private String instanceIamRoleArn;
 
     /**
      * <p>
@@ -458,6 +464,46 @@ public class DefaultWorkspaceCreationProperties implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Indicates the IAM role ARN of the instance.
+     * </p>
+     * 
+     * @param instanceIamRoleArn
+     *        Indicates the IAM role ARN of the instance.
+     */
+
+    public void setInstanceIamRoleArn(String instanceIamRoleArn) {
+        this.instanceIamRoleArn = instanceIamRoleArn;
+    }
+
+    /**
+     * <p>
+     * Indicates the IAM role ARN of the instance.
+     * </p>
+     * 
+     * @return Indicates the IAM role ARN of the instance.
+     */
+
+    public String getInstanceIamRoleArn() {
+        return this.instanceIamRoleArn;
+    }
+
+    /**
+     * <p>
+     * Indicates the IAM role ARN of the instance.
+     * </p>
+     * 
+     * @param instanceIamRoleArn
+     *        Indicates the IAM role ARN of the instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DefaultWorkspaceCreationProperties withInstanceIamRoleArn(String instanceIamRoleArn) {
+        setInstanceIamRoleArn(instanceIamRoleArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -480,7 +526,9 @@ public class DefaultWorkspaceCreationProperties implements Serializable, Cloneab
         if (getUserEnabledAsLocalAdministrator() != null)
             sb.append("UserEnabledAsLocalAdministrator: ").append(getUserEnabledAsLocalAdministrator()).append(",");
         if (getEnableMaintenanceMode() != null)
-            sb.append("EnableMaintenanceMode: ").append(getEnableMaintenanceMode());
+            sb.append("EnableMaintenanceMode: ").append(getEnableMaintenanceMode()).append(",");
+        if (getInstanceIamRoleArn() != null)
+            sb.append("InstanceIamRoleArn: ").append(getInstanceIamRoleArn());
         sb.append("}");
         return sb.toString();
     }
@@ -520,6 +568,10 @@ public class DefaultWorkspaceCreationProperties implements Serializable, Cloneab
             return false;
         if (other.getEnableMaintenanceMode() != null && other.getEnableMaintenanceMode().equals(this.getEnableMaintenanceMode()) == false)
             return false;
+        if (other.getInstanceIamRoleArn() == null ^ this.getInstanceIamRoleArn() == null)
+            return false;
+        if (other.getInstanceIamRoleArn() != null && other.getInstanceIamRoleArn().equals(this.getInstanceIamRoleArn()) == false)
+            return false;
         return true;
     }
 
@@ -534,6 +586,7 @@ public class DefaultWorkspaceCreationProperties implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getCustomSecurityGroupId() == null) ? 0 : getCustomSecurityGroupId().hashCode());
         hashCode = prime * hashCode + ((getUserEnabledAsLocalAdministrator() == null) ? 0 : getUserEnabledAsLocalAdministrator().hashCode());
         hashCode = prime * hashCode + ((getEnableMaintenanceMode() == null) ? 0 : getEnableMaintenanceMode().hashCode());
+        hashCode = prime * hashCode + ((getInstanceIamRoleArn() == null) ? 0 : getInstanceIamRoleArn().hashCode());
         return hashCode;
     }
 

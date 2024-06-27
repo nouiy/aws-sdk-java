@@ -200,6 +200,39 @@ public class AmazonQConnectAsyncClient extends AmazonQConnectClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateContentAssociationResult> createContentAssociationAsync(CreateContentAssociationRequest request) {
+
+        return createContentAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateContentAssociationResult> createContentAssociationAsync(final CreateContentAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateContentAssociationRequest, CreateContentAssociationResult> asyncHandler) {
+        final CreateContentAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateContentAssociationResult>() {
+            @Override
+            public CreateContentAssociationResult call() throws Exception {
+                CreateContentAssociationResult result = null;
+
+                try {
+                    result = executeCreateContentAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKnowledgeBaseResult> createKnowledgeBaseAsync(CreateKnowledgeBaseRequest request) {
 
         return createKnowledgeBaseAsync(request, null);
@@ -398,6 +431,39 @@ public class AmazonQConnectAsyncClient extends AmazonQConnectClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteContentAssociationResult> deleteContentAssociationAsync(DeleteContentAssociationRequest request) {
+
+        return deleteContentAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteContentAssociationResult> deleteContentAssociationAsync(final DeleteContentAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteContentAssociationRequest, DeleteContentAssociationResult> asyncHandler) {
+        final DeleteContentAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteContentAssociationResult>() {
+            @Override
+            public DeleteContentAssociationResult call() throws Exception {
+                DeleteContentAssociationResult result = null;
+
+                try {
+                    result = executeDeleteContentAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteImportJobResult> deleteImportJobAsync(DeleteImportJobRequest request) {
 
         return deleteImportJobAsync(request, null);
@@ -580,6 +646,39 @@ public class AmazonQConnectAsyncClient extends AmazonQConnectClient implements A
 
                 try {
                     result = executeGetContent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetContentAssociationResult> getContentAssociationAsync(GetContentAssociationRequest request) {
+
+        return getContentAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetContentAssociationResult> getContentAssociationAsync(final GetContentAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetContentAssociationRequest, GetContentAssociationResult> asyncHandler) {
+        final GetContentAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetContentAssociationResult>() {
+            @Override
+            public GetContentAssociationResult call() throws Exception {
+                GetContentAssociationResult result = null;
+
+                try {
+                    result = executeGetContentAssociation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -846,6 +945,39 @@ public class AmazonQConnectAsyncClient extends AmazonQConnectClient implements A
 
                 try {
                     result = executeListAssistants(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContentAssociationsResult> listContentAssociationsAsync(ListContentAssociationsRequest request) {
+
+        return listContentAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContentAssociationsResult> listContentAssociationsAsync(final ListContentAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListContentAssociationsRequest, ListContentAssociationsResult> asyncHandler) {
+        final ListContentAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListContentAssociationsResult>() {
+            @Override
+            public ListContentAssociationsResult call() throws Exception {
+                ListContentAssociationsResult result = null;
+
+                try {
+                    result = executeListContentAssociations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

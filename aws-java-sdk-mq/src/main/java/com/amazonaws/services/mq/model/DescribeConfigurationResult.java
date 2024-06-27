@@ -55,8 +55,12 @@ public class DescribeConfigurationResult extends com.amazonaws.AmazonWebServiceR
     private String engineType;
     /**
      * <p>
-     * Required. The broker engine's version. For a list of supported engine versions, see, <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. Defaults to the latest available version for the specified broker engine type. For a
+     * list of supported engine versions, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      */
     private String engineVersion;
@@ -326,14 +330,21 @@ public class DescribeConfigurationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Required. The broker engine's version. For a list of supported engine versions, see, <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. Defaults to the latest available version for the specified broker engine type. For a
+     * list of supported engine versions, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
      * @param engineVersion
-     *        Required. The broker engine's version. For a list of supported engine versions, see, <a
-     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *        engines</a>.
+     *        The broker engine version. Defaults to the latest available version for the specified broker engine type.
+     *        For a list of supported engine versions, see the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *        >ActiveMQ version management</a> and the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *        >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -342,13 +353,20 @@ public class DescribeConfigurationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Required. The broker engine's version. For a list of supported engine versions, see, <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. Defaults to the latest available version for the specified broker engine type. For a
+     * list of supported engine versions, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
-     * @return Required. The broker engine's version. For a list of supported engine versions, see, <a
-     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *         engines</a>.
+     * @return The broker engine version. Defaults to the latest available version for the specified broker engine type.
+     *         For a list of supported engine versions, see the <a
+     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *         >ActiveMQ version management</a> and the <a
+     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *         >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      */
 
     public String getEngineVersion() {
@@ -357,14 +375,21 @@ public class DescribeConfigurationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Required. The broker engine's version. For a list of supported engine versions, see, <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. Defaults to the latest available version for the specified broker engine type. For a
+     * list of supported engine versions, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
      * @param engineVersion
-     *        Required. The broker engine's version. For a list of supported engine versions, see, <a
-     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *        engines</a>.
+     *        The broker engine version. Defaults to the latest available version for the specified broker engine type.
+     *        For a list of supported engine versions, see the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *        >ActiveMQ version management</a> and the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *        >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -91,17 +91,22 @@ import com.amazonaws.services.applicationautoscaling.model.*;
  * </li>
  * <li>
  * <p>
- * Amazon SageMaker Serverless endpoint provisioned concurrency
- * </p>
- * </li>
- * <li>
- * <p>
  * Amazon SageMaker inference components
  * </p>
  * </li>
  * <li>
  * <p>
+ * Amazon SageMaker serverless endpoint provisioned concurrency
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * Spot Fleets (Amazon EC2)
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * WorkSpaces pools
  * </p>
  * </li>
  * <li>
@@ -446,9 +451,7 @@ public interface AWSApplicationAutoScalingAsync extends AWSApplicationAutoScalin
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html"
-     * >Scheduled scaling</a> and <a href=
-     * "https://docs.aws.amazon.com/autoscaling/application/userguide/scheduled-scaling-additional-cli-commands.html"
-     * >Managing scheduled scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * >Scheduled scaling</a> in the <i>Application Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param describeScheduledActionsRequest
@@ -470,9 +473,7 @@ public interface AWSApplicationAutoScalingAsync extends AWSApplicationAutoScalin
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html"
-     * >Scheduled scaling</a> and <a href=
-     * "https://docs.aws.amazon.com/autoscaling/application/userguide/scheduled-scaling-additional-cli-commands.html"
-     * >Managing scheduled scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * >Scheduled scaling</a> in the <i>Application Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param describeScheduledActionsRequest
@@ -494,8 +495,8 @@ public interface AWSApplicationAutoScalingAsync extends AWSApplicationAutoScalin
      * </p>
      * <p>
      * For general information about tags, including the format and syntax, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
-     * in the <i>Amazon Web Services General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging your Amazon Web Services
+     * resources</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -512,8 +513,8 @@ public interface AWSApplicationAutoScalingAsync extends AWSApplicationAutoScalin
      * </p>
      * <p>
      * For general information about tags, including the format and syntax, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
-     * in the <i>Amazon Web Services General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging your Amazon Web Services
+     * resources</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -846,8 +847,8 @@ public interface AWSApplicationAutoScalingAsync extends AWSApplicationAutoScalin
      * </p>
      * <p>
      * For general information about tags, including the format and syntax, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
-     * in the <i>Amazon Web Services General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging your Amazon Web Services
+     * resources</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * <p>
      * Use tags to control access to a scalable target. For more information, see <a
@@ -881,8 +882,8 @@ public interface AWSApplicationAutoScalingAsync extends AWSApplicationAutoScalin
      * </p>
      * <p>
      * For general information about tags, including the format and syntax, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
-     * in the <i>Amazon Web Services General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging your Amazon Web Services
+     * resources</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * <p>
      * Use tags to control access to a scalable target. For more information, see <a

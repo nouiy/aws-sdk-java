@@ -615,6 +615,31 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Creates a pool of WorkSpaces.
+     * </p>
+     * 
+     * @param createWorkspacesPoolRequest
+     * @return Result of the CreateWorkspacesPool operation returned by the service.
+     * @throws ResourceLimitExceededException
+     *         Your resource limits have been exceeded.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource already exists.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.CreateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateWorkspacesPoolResult createWorkspacesPool(CreateWorkspacesPoolRequest createWorkspacesPoolRequest);
+
+    /**
+     * <p>
      * Deletes the account link invitation.
      * </p>
      * 
@@ -1298,6 +1323,44 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Retrieves a list that describes the streaming sessions for a specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param describeWorkspacesPoolSessionsRequest
+     * @return Result of the DescribeWorkspacesPoolSessions operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.DescribeWorkspacesPoolSessions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspacesPoolSessions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeWorkspacesPoolSessionsResult describeWorkspacesPoolSessions(DescribeWorkspacesPoolSessionsRequest describeWorkspacesPoolSessionsRequest);
+
+    /**
+     * <p>
+     * Describes the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param describeWorkspacesPoolsRequest
+     * @return Result of the DescribeWorkspacesPools operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.DescribeWorkspacesPools
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspacesPools"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeWorkspacesPoolsResult describeWorkspacesPools(DescribeWorkspacesPoolsRequest describeWorkspacesPoolsRequest);
+
+    /**
+     * <p>
      * Disassociates a connection alias from a directory. Disassociating a connection alias disables cross-Region
      * redirection between two directories in different Regions. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region
@@ -1345,6 +1408,8 @@ public interface AmazonWorkspaces {
      *         The state of the resource is not valid for this operation.
      * @throws AccessDeniedException
      *         The user is not authorized to access a resource.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.DisassociateIpGroups
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DisassociateIpGroups"
      *      target="_top">AWS API Documentation</a>
@@ -1620,6 +1685,8 @@ public interface AmazonWorkspaces {
      *         The resource could not be found.
      * @throws AccessDeniedException
      *         The user is not authorized to access a resource.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.ModifyClientProperties
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyClientProperties"
      *      target="_top">AWS API Documentation</a>
@@ -1663,11 +1730,34 @@ public interface AmazonWorkspaces {
      *         One or more parameter values are not valid.
      * @throws ResourceNotFoundException
      *         The resource could not be found.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.ModifySelfservicePermissions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifySelfservicePermissions"
      *      target="_top">AWS API Documentation</a>
      */
     ModifySelfservicePermissionsResult modifySelfservicePermissions(ModifySelfservicePermissionsRequest modifySelfservicePermissionsRequest);
+
+    /**
+     * <p>
+     * Modifies the specified streaming properties.
+     * </p>
+     * 
+     * @param modifyStreamingPropertiesRequest
+     * @return Result of the ModifyStreamingProperties operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @sample AmazonWorkspaces.ModifyStreamingProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyStreamingProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ModifyStreamingPropertiesResult modifyStreamingProperties(ModifyStreamingPropertiesRequest modifyStreamingPropertiesRequest);
 
     /**
      * <p>
@@ -1859,6 +1949,8 @@ public interface AmazonWorkspaces {
      *         VPC for Amazon WorkSpaces</a>.
      * @throws OperationNotSupportedException
      *         This operation is not supported.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource already exists.
      * @sample AmazonWorkspaces.RegisterWorkspaceDirectory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RegisterWorkspaceDirectory"
      *      target="_top">AWS API Documentation</a>
@@ -1962,6 +2054,37 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Starts the specified WorkSpaces pool.
+     * </p>
+     * <p>
+     * You cannot start a WorkSpace pool unless it has a running mode of <code>AutoStop</code> and a state of
+     * <code>STOPPED</code>.
+     * </p>
+     * 
+     * @param startWorkspacesPoolRequest
+     * @return Result of the StartWorkspacesPool operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws InvalidResourceStateException
+     *         The state of the resource is not valid for this operation.
+     * @throws ResourceLimitExceededException
+     *         Your resource limits have been exceeded.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws OperationInProgressException
+     *         The properties of this WorkSpace are currently being modified. Try again in a moment.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.StartWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StartWorkspacesPool" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartWorkspacesPoolResult startWorkspacesPool(StartWorkspacesPoolRequest startWorkspacesPoolRequest);
+
+    /**
+     * <p>
      * Stops the specified WorkSpaces.
      * </p>
      * <p>
@@ -1976,6 +2099,33 @@ public interface AmazonWorkspaces {
      *      Documentation</a>
      */
     StopWorkspacesResult stopWorkspaces(StopWorkspacesRequest stopWorkspacesRequest);
+
+    /**
+     * <p>
+     * Stops the specifiedWorkSpaces pool.
+     * </p>
+     * <p>
+     * You cannot stop a WorkSpace pool unless it has a running mode of <code>AutoStop</code> and a state of
+     * <code>AVAILABLE</code>, <code>IMPAIRED</code>, <code>UNHEALTHY</code>, or <code>ERROR</code>.
+     * </p>
+     * 
+     * @param stopWorkspacesPoolRequest
+     * @return Result of the StopWorkspacesPool operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws InvalidResourceStateException
+     *         The state of the resource is not valid for this operation.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws OperationInProgressException
+     *         The properties of this WorkSpace are currently being modified. Try again in a moment.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.StopWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StopWorkspacesPool" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StopWorkspacesPoolResult stopWorkspacesPool(StopWorkspacesPoolRequest stopWorkspacesPoolRequest);
 
     /**
      * <p>
@@ -2020,6 +2170,52 @@ public interface AmazonWorkspaces {
      *      API Documentation</a>
      */
     TerminateWorkspacesResult terminateWorkspaces(TerminateWorkspacesRequest terminateWorkspacesRequest);
+
+    /**
+     * <p>
+     * Terminates the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param terminateWorkspacesPoolRequest
+     * @return Result of the TerminateWorkspacesPool operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws InvalidResourceStateException
+     *         The state of the resource is not valid for this operation.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws OperationInProgressException
+     *         The properties of this WorkSpace are currently being modified. Try again in a moment.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.TerminateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/TerminateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    TerminateWorkspacesPoolResult terminateWorkspacesPool(TerminateWorkspacesPoolRequest terminateWorkspacesPoolRequest);
+
+    /**
+     * <p>
+     * Terminates the WorkSpaces pool session.
+     * </p>
+     * 
+     * @param terminateWorkspacesPoolSessionRequest
+     * @return Result of the TerminateWorkspacesPoolSession operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws OperationInProgressException
+     *         The properties of this WorkSpace are currently being modified. Try again in a moment.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.TerminateWorkspacesPoolSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/TerminateWorkspacesPoolSession"
+     *      target="_top">AWS API Documentation</a>
+     */
+    TerminateWorkspacesPoolSessionResult terminateWorkspacesPoolSession(TerminateWorkspacesPoolSessionRequest terminateWorkspacesPoolSessionRequest);
 
     /**
      * <p>
@@ -2203,6 +2399,33 @@ public interface AmazonWorkspaces {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateWorkspaceImagePermissionResult updateWorkspaceImagePermission(UpdateWorkspaceImagePermissionRequest updateWorkspaceImagePermissionRequest);
+
+    /**
+     * <p>
+     * Updates the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param updateWorkspacesPoolRequest
+     * @return Result of the UpdateWorkspacesPool operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws InvalidResourceStateException
+     *         The state of the resource is not valid for this operation.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ResourceLimitExceededException
+     *         Your resource limits have been exceeded.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws OperationInProgressException
+     *         The properties of this WorkSpace are currently being modified. Try again in a moment.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.UpdateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateWorkspacesPoolResult updateWorkspacesPool(UpdateWorkspacesPoolRequest updateWorkspacesPoolRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

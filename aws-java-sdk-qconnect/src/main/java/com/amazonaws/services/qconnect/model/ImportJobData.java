@@ -38,7 +38,7 @@ public class ImportJobData implements Serializable, Cloneable, StructuredPojo {
     private ExternalSourceConfiguration externalSourceConfiguration;
     /**
      * <p>
-     * The link to donwload the information of resource data that failed to be imported.
+     * The link to download the information of resource data that failed to be imported.
      * </p>
      */
     private String failedRecordReport;
@@ -172,11 +172,11 @@ public class ImportJobData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The link to donwload the information of resource data that failed to be imported.
+     * The link to download the information of resource data that failed to be imported.
      * </p>
      * 
      * @param failedRecordReport
-     *        The link to donwload the information of resource data that failed to be imported.
+     *        The link to download the information of resource data that failed to be imported.
      */
 
     public void setFailedRecordReport(String failedRecordReport) {
@@ -185,10 +185,10 @@ public class ImportJobData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The link to donwload the information of resource data that failed to be imported.
+     * The link to download the information of resource data that failed to be imported.
      * </p>
      * 
-     * @return The link to donwload the information of resource data that failed to be imported.
+     * @return The link to download the information of resource data that failed to be imported.
      */
 
     public String getFailedRecordReport() {
@@ -197,11 +197,11 @@ public class ImportJobData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The link to donwload the information of resource data that failed to be imported.
+     * The link to download the information of resource data that failed to be imported.
      * </p>
      * 
      * @param failedRecordReport
-     *        The link to donwload the information of resource data that failed to be imported.
+     *        The link to download the information of resource data that failed to be imported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -7830,7 +7830,9 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * List tags for a CloudFront resource.
+     * List tags for a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -7971,7 +7973,9 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Add tags to a CloudFront resource.
+     * Add tags to a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -8114,7 +8118,9 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Remove tags from a CloudFront resource.
+     * Remove tags from a CloudFront resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/tagging.html">Tagging a distribution</a>
+     * in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param untagResourceRequest

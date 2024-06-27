@@ -147,6 +147,62 @@ public interface AmazonQConnect {
 
     /**
      * <p>
+     * Creates an association between a content resource in a knowledge base and <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/step-by-step-guided-experiences.html">step-by-step
+     * guides</a>. Step-by-step guides offer instructions to agents for resolving common customer issues. You create a
+     * content association to integrate Amazon Q in Connect and step-by-step guides.
+     * </p>
+     * <p>
+     * After you integrate Amazon Q and step-by-step guides, when Amazon Q provides a recommendation to an agent based
+     * on the intent that it's detected, it also provides them with the option to start the step-by-step guide that you
+     * have associated with the content.
+     * </p>
+     * <p>
+     * Note the following limitations:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can create only one content association for each content resource in a knowledge base.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can associate a step-by-step guide with multiple content resources.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createContentAssociationRequest
+     * @return Result of the CreateContentAssociation operation returned by the service.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. For example,
+     *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
+     *         conflicting resource (usually with the same name) is being created or mutated.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws ServiceQuotaExceededException
+     *         You've exceeded your service quota. To perform the requested action, remove some of the relevant
+     *         resources, or use service quotas to request a service quota increase.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonQConnect.CreateContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/CreateContentAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateContentAssociationResult createContentAssociation(CreateContentAssociationRequest createContentAssociationRequest);
+
+    /**
+     * <p>
      * Creates a knowledge base.
      * </p>
      * <note>
@@ -315,6 +371,30 @@ public interface AmazonQConnect {
 
     /**
      * <p>
+     * Deletes the content association.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param deleteContentAssociationRequest
+     * @return Result of the DeleteContentAssociation operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonQConnect.DeleteContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/DeleteContentAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteContentAssociationResult deleteContentAssociation(DeleteContentAssociationRequest deleteContentAssociationRequest);
+
+    /**
+     * <p>
      * Deletes the quick response import job.
      * </p>
      * 
@@ -446,6 +526,30 @@ public interface AmazonQConnect {
      *      Documentation</a>
      */
     GetContentResult getContent(GetContentRequest getContentRequest);
+
+    /**
+     * <p>
+     * Returns the content association.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param getContentAssociationRequest
+     * @return Result of the GetContentAssociation operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonQConnect.GetContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/GetContentAssociation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetContentAssociationResult getContentAssociation(GetContentAssociationRequest getContentAssociationRequest);
 
     /**
      * <p>
@@ -611,6 +715,30 @@ public interface AmazonQConnect {
      *      Documentation</a>
      */
     ListAssistantsResult listAssistants(ListAssistantsRequest listAssistantsRequest);
+
+    /**
+     * <p>
+     * Lists the content associations.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param listContentAssociationsRequest
+     * @return Result of the ListContentAssociations operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonQConnect.ListContentAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/ListContentAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListContentAssociationsResult listContentAssociations(ListContentAssociationsRequest listContentAssociationsRequest);
 
     /**
      * <p>

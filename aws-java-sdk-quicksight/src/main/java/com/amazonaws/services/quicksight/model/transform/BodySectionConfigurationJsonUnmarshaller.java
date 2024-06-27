@@ -64,6 +64,10 @@ public class BodySectionConfigurationJsonUnmarshaller implements Unmarshaller<Bo
                     context.nextToken();
                     bodySectionConfiguration.setPageBreakConfiguration(SectionPageBreakConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RepeatConfiguration", targetDepth)) {
+                    context.nextToken();
+                    bodySectionConfiguration.setRepeatConfiguration(BodySectionRepeatConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

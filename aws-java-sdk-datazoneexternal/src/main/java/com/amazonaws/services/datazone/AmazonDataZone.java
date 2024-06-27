@@ -1594,6 +1594,31 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Gets the data lineage node.
+     * </p>
+     * 
+     * @param getLineageNodeRequest
+     * @return Result of the GetLineageNode operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.GetLineageNode
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetLineageNode" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetLineageNodeResult getLineageNode(GetLineageNodeRequest getLineageNodeRequest);
+
+    /**
+     * <p>
      * Gets a listing (a record of an asset at a given time).
      * </p>
      * 
@@ -2080,6 +2105,31 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Lists the history of the specified data lineage node.
+     * </p>
+     * 
+     * @param listLineageNodeHistoryRequest
+     * @return Result of the ListLineageNodeHistory operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.ListLineageNodeHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListLineageNodeHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListLineageNodeHistoryResult listLineageNodeHistory(ListLineageNodeHistoryRequest listLineageNodeHistoryRequest);
+
+    /**
+     * <p>
      * Lists all metadata generation runs.
      * </p>
      * 
@@ -2325,6 +2375,35 @@ public interface AmazonDataZone {
      *      target="_top">AWS API Documentation</a>
      */
     ListTimeSeriesDataPointsResult listTimeSeriesDataPoints(ListTimeSeriesDataPointsRequest listTimeSeriesDataPointsRequest);
+
+    /**
+     * <p>
+     * Posts a data lineage event.
+     * </p>
+     * 
+     * @param postLineageEventRequest
+     * @return Result of the PostLineageEvent operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The request has exceeded the specified service quota.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.PostLineageEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/PostLineageEvent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PostLineageEventResult postLineageEvent(PostLineageEventRequest postLineageEventRequest);
 
     /**
      * <p>

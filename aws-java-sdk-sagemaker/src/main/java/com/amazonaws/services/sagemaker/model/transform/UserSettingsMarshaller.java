@@ -60,6 +60,8 @@ public class UserSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomPosixUserConfig").build();
     private static final MarshallingInfo<List> CUSTOMFILESYSTEMCONFIGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomFileSystemConfigs").build();
+    private static final MarshallingInfo<StructuredPojo> STUDIOWEBPORTALSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StudioWebPortalSettings").build();
 
     private static final UserSettingsMarshaller instance = new UserSettingsMarshaller();
 
@@ -93,6 +95,7 @@ public class UserSettingsMarshaller {
             protocolMarshaller.marshall(userSettings.getStudioWebPortal(), STUDIOWEBPORTAL_BINDING);
             protocolMarshaller.marshall(userSettings.getCustomPosixUserConfig(), CUSTOMPOSIXUSERCONFIG_BINDING);
             protocolMarshaller.marshall(userSettings.getCustomFileSystemConfigs(), CUSTOMFILESYSTEMCONFIGS_BINDING);
+            protocolMarshaller.marshall(userSettings.getStudioWebPortalSettings(), STUDIOWEBPORTALSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

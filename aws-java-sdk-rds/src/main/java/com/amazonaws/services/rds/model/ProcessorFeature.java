@@ -103,8 +103,8 @@ import javax.annotation.Generated;
  * </ul>
  * <p>
  * For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html#USER_ConfigureProcessor"
- * >Configuring the Processor of the DB Instance Class</a> in the <i>Amazon RDS User Guide. </i>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html#USER_ConfigureProcessor">
+ * Configuring the processor for a DB instance class in RDS for Oracle</a> in the <i>Amazon RDS User Guide. </i>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ProcessorFeature" target="_top">AWS API
@@ -121,7 +121,7 @@ public class ProcessorFeature implements Serializable, Cloneable {
     private String name;
     /**
      * <p>
-     * The value of a processor feature name.
+     * The value of a processor feature.
      * </p>
      */
     private String value;
@@ -169,11 +169,11 @@ public class ProcessorFeature implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value of a processor feature name.
+     * The value of a processor feature.
      * </p>
      * 
      * @param value
-     *        The value of a processor feature name.
+     *        The value of a processor feature.
      */
 
     public void setValue(String value) {
@@ -182,10 +182,10 @@ public class ProcessorFeature implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value of a processor feature name.
+     * The value of a processor feature.
      * </p>
      * 
-     * @return The value of a processor feature name.
+     * @return The value of a processor feature.
      */
 
     public String getValue() {
@@ -194,11 +194,11 @@ public class ProcessorFeature implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value of a processor feature name.
+     * The value of a processor feature.
      * </p>
      * 
      * @param value
-     *        The value of a processor feature name.
+     *        The value of a processor feature.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

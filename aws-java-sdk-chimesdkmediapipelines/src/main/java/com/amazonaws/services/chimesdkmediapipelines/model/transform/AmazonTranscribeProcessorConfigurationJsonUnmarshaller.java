@@ -100,6 +100,10 @@ public class AmazonTranscribeProcessorConfigurationJsonUnmarshaller implements U
                     context.nextToken();
                     amazonTranscribeProcessorConfiguration.setIdentifyLanguage(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("IdentifyMultipleLanguages", targetDepth)) {
+                    context.nextToken();
+                    amazonTranscribeProcessorConfiguration.setIdentifyMultipleLanguages(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("LanguageOptions", targetDepth)) {
                     context.nextToken();
                     amazonTranscribeProcessorConfiguration.setLanguageOptions(context.getUnmarshaller(String.class).unmarshall(context));

@@ -4181,6 +4181,73 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Gets the data lineage node.
+     * </p>
+     * 
+     * @param getLineageNodeRequest
+     * @return Result of the GetLineageNode operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.GetLineageNode
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetLineageNode" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetLineageNodeResult getLineageNode(GetLineageNodeRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetLineageNode(request);
+    }
+
+    @SdkInternalApi
+    final GetLineageNodeResult executeGetLineageNode(GetLineageNodeRequest getLineageNodeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getLineageNodeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetLineageNodeRequest> request = null;
+        Response<GetLineageNodeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetLineageNodeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getLineageNodeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetLineageNode");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetLineageNodeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetLineageNodeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a listing (a record of an asset at a given time).
      * </p>
      * 
@@ -5480,6 +5547,74 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Lists the history of the specified data lineage node.
+     * </p>
+     * 
+     * @param listLineageNodeHistoryRequest
+     * @return Result of the ListLineageNodeHistory operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.ListLineageNodeHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListLineageNodeHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListLineageNodeHistoryResult listLineageNodeHistory(ListLineageNodeHistoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeListLineageNodeHistory(request);
+    }
+
+    @SdkInternalApi
+    final ListLineageNodeHistoryResult executeListLineageNodeHistory(ListLineageNodeHistoryRequest listLineageNodeHistoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listLineageNodeHistoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListLineageNodeHistoryRequest> request = null;
+        Response<ListLineageNodeHistoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListLineageNodeHistoryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listLineageNodeHistoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListLineageNodeHistory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListLineageNodeHistoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListLineageNodeHistoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists all metadata generation runs.
      * </p>
      * 
@@ -6146,6 +6281,77 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
             HttpResponseHandler<AmazonWebServiceResponse<ListTimeSeriesDataPointsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListTimeSeriesDataPointsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Posts a data lineage event.
+     * </p>
+     * 
+     * @param postLineageEventRequest
+     * @return Result of the PostLineageEvent operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The request has exceeded the specified service quota.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.PostLineageEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/PostLineageEvent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public PostLineageEventResult postLineageEvent(PostLineageEventRequest request) {
+        request = beforeClientExecution(request);
+        return executePostLineageEvent(request);
+    }
+
+    @SdkInternalApi
+    final PostLineageEventResult executePostLineageEvent(PostLineageEventRequest postLineageEventRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(postLineageEventRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PostLineageEventRequest> request = null;
+        Response<PostLineageEventResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PostLineageEventRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(postLineageEventRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PostLineageEvent");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PostLineageEventResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PostLineageEventResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

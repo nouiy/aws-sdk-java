@@ -67,6 +67,19 @@ public class AbstractAmazonQConnectAsync extends AbstractAmazonQConnect implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateContentAssociationResult> createContentAssociationAsync(CreateContentAssociationRequest request) {
+
+        return createContentAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateContentAssociationResult> createContentAssociationAsync(CreateContentAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateContentAssociationRequest, CreateContentAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKnowledgeBaseResult> createKnowledgeBaseAsync(CreateKnowledgeBaseRequest request) {
 
         return createKnowledgeBaseAsync(request, null);
@@ -145,6 +158,19 @@ public class AbstractAmazonQConnectAsync extends AbstractAmazonQConnect implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteContentAssociationResult> deleteContentAssociationAsync(DeleteContentAssociationRequest request) {
+
+        return deleteContentAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteContentAssociationResult> deleteContentAssociationAsync(DeleteContentAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteContentAssociationRequest, DeleteContentAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteImportJobResult> deleteImportJobAsync(DeleteImportJobRequest request) {
 
         return deleteImportJobAsync(request, null);
@@ -218,6 +244,19 @@ public class AbstractAmazonQConnectAsync extends AbstractAmazonQConnect implemen
     @Override
     public java.util.concurrent.Future<GetContentResult> getContentAsync(GetContentRequest request,
             com.amazonaws.handlers.AsyncHandler<GetContentRequest, GetContentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetContentAssociationResult> getContentAssociationAsync(GetContentAssociationRequest request) {
+
+        return getContentAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetContentAssociationResult> getContentAssociationAsync(GetContentAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetContentAssociationRequest, GetContentAssociationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -324,6 +363,19 @@ public class AbstractAmazonQConnectAsync extends AbstractAmazonQConnect implemen
     @Override
     public java.util.concurrent.Future<ListAssistantsResult> listAssistantsAsync(ListAssistantsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListAssistantsRequest, ListAssistantsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContentAssociationsResult> listContentAssociationsAsync(ListContentAssociationsRequest request) {
+
+        return listContentAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContentAssociationsResult> listContentAssociationsAsync(ListContentAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListContentAssociationsRequest, ListContentAssociationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

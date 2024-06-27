@@ -43,7 +43,8 @@ public enum MetricType {
     NeptuneReaderAverageCPUUtilization("NeptuneReaderAverageCPUUtilization"),
     SageMakerVariantProvisionedConcurrencyUtilization("SageMakerVariantProvisionedConcurrencyUtilization"),
     ElastiCacheDatabaseCapacityUsageCountedForEvictPercentage("ElastiCacheDatabaseCapacityUsageCountedForEvictPercentage"),
-    SageMakerInferenceComponentInvocationsPerCopy("SageMakerInferenceComponentInvocationsPerCopy");
+    SageMakerInferenceComponentInvocationsPerCopy("SageMakerInferenceComponentInvocationsPerCopy"),
+    WorkSpacesAverageUserSessionsCapacityUtilization("WorkSpacesAverageUserSessionsCapacityUtilization");
 
     private String value;
 

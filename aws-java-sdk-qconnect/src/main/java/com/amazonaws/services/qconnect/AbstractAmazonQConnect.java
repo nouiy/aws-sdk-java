@@ -43,6 +43,11 @@ public class AbstractAmazonQConnect implements AmazonQConnect {
     }
 
     @Override
+    public CreateContentAssociationResult createContentAssociation(CreateContentAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateKnowledgeBaseResult createKnowledgeBase(CreateKnowledgeBaseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -73,6 +78,11 @@ public class AbstractAmazonQConnect implements AmazonQConnect {
     }
 
     @Override
+    public DeleteContentAssociationResult deleteContentAssociation(DeleteContentAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteImportJobResult deleteImportJob(DeleteImportJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +109,11 @@ public class AbstractAmazonQConnect implements AmazonQConnect {
 
     @Override
     public GetContentResult getContent(GetContentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetContentAssociationResult getContentAssociation(GetContentAssociationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -140,6 +155,11 @@ public class AbstractAmazonQConnect implements AmazonQConnect {
 
     @Override
     public ListAssistantsResult listAssistants(ListAssistantsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListContentAssociationsResult listContentAssociations(ListContentAssociationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

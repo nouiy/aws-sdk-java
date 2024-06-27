@@ -783,6 +783,37 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Creates a pool of WorkSpaces.
+     * </p>
+     * 
+     * @param createWorkspacesPoolRequest
+     * @return A Java Future containing the result of the CreateWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsync.CreateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateWorkspacesPoolResult> createWorkspacesPoolAsync(CreateWorkspacesPoolRequest createWorkspacesPoolRequest);
+
+    /**
+     * <p>
+     * Creates a pool of WorkSpaces.
+     * </p>
+     * 
+     * @param createWorkspacesPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.CreateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateWorkspacesPoolResult> createWorkspacesPoolAsync(CreateWorkspacesPoolRequest createWorkspacesPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateWorkspacesPoolRequest, CreateWorkspacesPoolResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the account link invitation.
      * </p>
      * 
@@ -1971,6 +2002,72 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Retrieves a list that describes the streaming sessions for a specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param describeWorkspacesPoolSessionsRequest
+     * @return A Java Future containing the result of the DescribeWorkspacesPoolSessions operation returned by the
+     *         service.
+     * @sample AmazonWorkspacesAsync.DescribeWorkspacesPoolSessions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspacesPoolSessions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeWorkspacesPoolSessionsResult> describeWorkspacesPoolSessionsAsync(
+            DescribeWorkspacesPoolSessionsRequest describeWorkspacesPoolSessionsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list that describes the streaming sessions for a specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param describeWorkspacesPoolSessionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeWorkspacesPoolSessions operation returned by the
+     *         service.
+     * @sample AmazonWorkspacesAsyncHandler.DescribeWorkspacesPoolSessions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspacesPoolSessions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeWorkspacesPoolSessionsResult> describeWorkspacesPoolSessionsAsync(
+            DescribeWorkspacesPoolSessionsRequest describeWorkspacesPoolSessionsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeWorkspacesPoolSessionsRequest, DescribeWorkspacesPoolSessionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param describeWorkspacesPoolsRequest
+     * @return A Java Future containing the result of the DescribeWorkspacesPools operation returned by the service.
+     * @sample AmazonWorkspacesAsync.DescribeWorkspacesPools
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspacesPools"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeWorkspacesPoolsResult> describeWorkspacesPoolsAsync(DescribeWorkspacesPoolsRequest describeWorkspacesPoolsRequest);
+
+    /**
+     * <p>
+     * Describes the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param describeWorkspacesPoolsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeWorkspacesPools operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.DescribeWorkspacesPools
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspacesPools"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeWorkspacesPoolsResult> describeWorkspacesPoolsAsync(DescribeWorkspacesPoolsRequest describeWorkspacesPoolsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeWorkspacesPoolsRequest, DescribeWorkspacesPoolsResult> asyncHandler);
+
+    /**
+     * <p>
      * Disassociates a connection alias from a directory. Disassociating a connection alias disables cross-Region
      * redirection between two directories in different Regions. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region
@@ -2567,6 +2664,39 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Modifies the specified streaming properties.
+     * </p>
+     * 
+     * @param modifyStreamingPropertiesRequest
+     * @return A Java Future containing the result of the ModifyStreamingProperties operation returned by the service.
+     * @sample AmazonWorkspacesAsync.ModifyStreamingProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyStreamingProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyStreamingPropertiesResult> modifyStreamingPropertiesAsync(
+            ModifyStreamingPropertiesRequest modifyStreamingPropertiesRequest);
+
+    /**
+     * <p>
+     * Modifies the specified streaming properties.
+     * </p>
+     * 
+     * @param modifyStreamingPropertiesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyStreamingProperties operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.ModifyStreamingProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyStreamingProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyStreamingPropertiesResult> modifyStreamingPropertiesAsync(
+            ModifyStreamingPropertiesRequest modifyStreamingPropertiesRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyStreamingPropertiesRequest, ModifyStreamingPropertiesResult> asyncHandler);
+
+    /**
+     * <p>
      * Specifies which devices and operating systems users can use to access their WorkSpaces. For more information, see
      * <a href=
      * "https://docs.aws.amazon.com/workspaces/latest/adminguide/update-directory-details.html#control-device-access">
@@ -3038,6 +3168,45 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Starts the specified WorkSpaces pool.
+     * </p>
+     * <p>
+     * You cannot start a WorkSpace pool unless it has a running mode of <code>AutoStop</code> and a state of
+     * <code>STOPPED</code>.
+     * </p>
+     * 
+     * @param startWorkspacesPoolRequest
+     * @return A Java Future containing the result of the StartWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsync.StartWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StartWorkspacesPool" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartWorkspacesPoolResult> startWorkspacesPoolAsync(StartWorkspacesPoolRequest startWorkspacesPoolRequest);
+
+    /**
+     * <p>
+     * Starts the specified WorkSpaces pool.
+     * </p>
+     * <p>
+     * You cannot start a WorkSpace pool unless it has a running mode of <code>AutoStop</code> and a state of
+     * <code>STOPPED</code>.
+     * </p>
+     * 
+     * @param startWorkspacesPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.StartWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StartWorkspacesPool" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartWorkspacesPoolResult> startWorkspacesPoolAsync(StartWorkspacesPoolRequest startWorkspacesPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<StartWorkspacesPoolRequest, StartWorkspacesPoolResult> asyncHandler);
+
+    /**
+     * <p>
      * Stops the specified WorkSpaces.
      * </p>
      * <p>
@@ -3074,6 +3243,45 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<StopWorkspacesResult> stopWorkspacesAsync(StopWorkspacesRequest stopWorkspacesRequest,
             com.amazonaws.handlers.AsyncHandler<StopWorkspacesRequest, StopWorkspacesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops the specifiedWorkSpaces pool.
+     * </p>
+     * <p>
+     * You cannot stop a WorkSpace pool unless it has a running mode of <code>AutoStop</code> and a state of
+     * <code>AVAILABLE</code>, <code>IMPAIRED</code>, <code>UNHEALTHY</code>, or <code>ERROR</code>.
+     * </p>
+     * 
+     * @param stopWorkspacesPoolRequest
+     * @return A Java Future containing the result of the StopWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsync.StopWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StopWorkspacesPool" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StopWorkspacesPoolResult> stopWorkspacesPoolAsync(StopWorkspacesPoolRequest stopWorkspacesPoolRequest);
+
+    /**
+     * <p>
+     * Stops the specifiedWorkSpaces pool.
+     * </p>
+     * <p>
+     * You cannot stop a WorkSpace pool unless it has a running mode of <code>AutoStop</code> and a state of
+     * <code>AVAILABLE</code>, <code>IMPAIRED</code>, <code>UNHEALTHY</code>, or <code>ERROR</code>.
+     * </p>
+     * 
+     * @param stopWorkspacesPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.StopWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StopWorkspacesPool" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StopWorkspacesPoolResult> stopWorkspacesPoolAsync(StopWorkspacesPoolRequest stopWorkspacesPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<StopWorkspacesPoolRequest, StopWorkspacesPoolResult> asyncHandler);
 
     /**
      * <p>
@@ -3167,6 +3375,72 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<TerminateWorkspacesResult> terminateWorkspacesAsync(TerminateWorkspacesRequest terminateWorkspacesRequest,
             com.amazonaws.handlers.AsyncHandler<TerminateWorkspacesRequest, TerminateWorkspacesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Terminates the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param terminateWorkspacesPoolRequest
+     * @return A Java Future containing the result of the TerminateWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsync.TerminateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/TerminateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<TerminateWorkspacesPoolResult> terminateWorkspacesPoolAsync(TerminateWorkspacesPoolRequest terminateWorkspacesPoolRequest);
+
+    /**
+     * <p>
+     * Terminates the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param terminateWorkspacesPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TerminateWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.TerminateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/TerminateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<TerminateWorkspacesPoolResult> terminateWorkspacesPoolAsync(TerminateWorkspacesPoolRequest terminateWorkspacesPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<TerminateWorkspacesPoolRequest, TerminateWorkspacesPoolResult> asyncHandler);
+
+    /**
+     * <p>
+     * Terminates the WorkSpaces pool session.
+     * </p>
+     * 
+     * @param terminateWorkspacesPoolSessionRequest
+     * @return A Java Future containing the result of the TerminateWorkspacesPoolSession operation returned by the
+     *         service.
+     * @sample AmazonWorkspacesAsync.TerminateWorkspacesPoolSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/TerminateWorkspacesPoolSession"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<TerminateWorkspacesPoolSessionResult> terminateWorkspacesPoolSessionAsync(
+            TerminateWorkspacesPoolSessionRequest terminateWorkspacesPoolSessionRequest);
+
+    /**
+     * <p>
+     * Terminates the WorkSpaces pool session.
+     * </p>
+     * 
+     * @param terminateWorkspacesPoolSessionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TerminateWorkspacesPoolSession operation returned by the
+     *         service.
+     * @sample AmazonWorkspacesAsyncHandler.TerminateWorkspacesPoolSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/TerminateWorkspacesPoolSession"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<TerminateWorkspacesPoolSessionResult> terminateWorkspacesPoolSessionAsync(
+            TerminateWorkspacesPoolSessionRequest terminateWorkspacesPoolSessionRequest,
+            com.amazonaws.handlers.AsyncHandler<TerminateWorkspacesPoolSessionRequest, TerminateWorkspacesPoolSessionResult> asyncHandler);
 
     /**
      * <p>
@@ -3466,5 +3740,36 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
     java.util.concurrent.Future<UpdateWorkspaceImagePermissionResult> updateWorkspaceImagePermissionAsync(
             UpdateWorkspaceImagePermissionRequest updateWorkspaceImagePermissionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateWorkspaceImagePermissionRequest, UpdateWorkspaceImagePermissionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param updateWorkspacesPoolRequest
+     * @return A Java Future containing the result of the UpdateWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsync.UpdateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateWorkspacesPoolResult> updateWorkspacesPoolAsync(UpdateWorkspacesPoolRequest updateWorkspacesPoolRequest);
+
+    /**
+     * <p>
+     * Updates the specified WorkSpaces pool.
+     * </p>
+     * 
+     * @param updateWorkspacesPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateWorkspacesPool operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.UpdateWorkspacesPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateWorkspacesPool"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateWorkspacesPoolResult> updateWorkspacesPoolAsync(UpdateWorkspacesPoolRequest updateWorkspacesPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateWorkspacesPoolRequest, UpdateWorkspacesPoolResult> asyncHandler);
 
 }

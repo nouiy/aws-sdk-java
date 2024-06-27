@@ -33,7 +33,8 @@ public class DeleteHubContentReferenceRequest extends com.amazonaws.AmazonWebSer
     private String hubName;
     /**
      * <p>
-     * The type of hub content to delete.
+     * The type of hub content reference to delete. The only supported type of hub content reference to delete is
+     * <code>ModelReference</code>.
      * </p>
      */
     private String hubContentType;
@@ -86,11 +87,13 @@ public class DeleteHubContentReferenceRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The type of hub content to delete.
+     * The type of hub content reference to delete. The only supported type of hub content reference to delete is
+     * <code>ModelReference</code>.
      * </p>
      * 
      * @param hubContentType
-     *        The type of hub content to delete.
+     *        The type of hub content reference to delete. The only supported type of hub content reference to delete is
+     *        <code>ModelReference</code>.
      * @see HubContentType
      */
 
@@ -100,10 +103,12 @@ public class DeleteHubContentReferenceRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The type of hub content to delete.
+     * The type of hub content reference to delete. The only supported type of hub content reference to delete is
+     * <code>ModelReference</code>.
      * </p>
      * 
-     * @return The type of hub content to delete.
+     * @return The type of hub content reference to delete. The only supported type of hub content reference to delete
+     *         is <code>ModelReference</code>.
      * @see HubContentType
      */
 
@@ -113,11 +118,13 @@ public class DeleteHubContentReferenceRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The type of hub content to delete.
+     * The type of hub content reference to delete. The only supported type of hub content reference to delete is
+     * <code>ModelReference</code>.
      * </p>
      * 
      * @param hubContentType
-     *        The type of hub content to delete.
+     *        The type of hub content reference to delete. The only supported type of hub content reference to delete is
+     *        <code>ModelReference</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HubContentType
      */
@@ -129,11 +136,13 @@ public class DeleteHubContentReferenceRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The type of hub content to delete.
+     * The type of hub content reference to delete. The only supported type of hub content reference to delete is
+     * <code>ModelReference</code>.
      * </p>
      * 
      * @param hubContentType
-     *        The type of hub content to delete.
+     *        The type of hub content reference to delete. The only supported type of hub content reference to delete is
+     *        <code>ModelReference</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HubContentType
      */

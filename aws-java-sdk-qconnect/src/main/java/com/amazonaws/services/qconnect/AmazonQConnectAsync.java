@@ -160,6 +160,93 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
 
     /**
      * <p>
+     * Creates an association between a content resource in a knowledge base and <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/step-by-step-guided-experiences.html">step-by-step
+     * guides</a>. Step-by-step guides offer instructions to agents for resolving common customer issues. You create a
+     * content association to integrate Amazon Q in Connect and step-by-step guides.
+     * </p>
+     * <p>
+     * After you integrate Amazon Q and step-by-step guides, when Amazon Q provides a recommendation to an agent based
+     * on the intent that it's detected, it also provides them with the option to start the step-by-step guide that you
+     * have associated with the content.
+     * </p>
+     * <p>
+     * Note the following limitations:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can create only one content association for each content resource in a knowledge base.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can associate a step-by-step guide with multiple content resources.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createContentAssociationRequest
+     * @return A Java Future containing the result of the CreateContentAssociation operation returned by the service.
+     * @sample AmazonQConnectAsync.CreateContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/CreateContentAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateContentAssociationResult> createContentAssociationAsync(CreateContentAssociationRequest createContentAssociationRequest);
+
+    /**
+     * <p>
+     * Creates an association between a content resource in a knowledge base and <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/step-by-step-guided-experiences.html">step-by-step
+     * guides</a>. Step-by-step guides offer instructions to agents for resolving common customer issues. You create a
+     * content association to integrate Amazon Q in Connect and step-by-step guides.
+     * </p>
+     * <p>
+     * After you integrate Amazon Q and step-by-step guides, when Amazon Q provides a recommendation to an agent based
+     * on the intent that it's detected, it also provides them with the option to start the step-by-step guide that you
+     * have associated with the content.
+     * </p>
+     * <p>
+     * Note the following limitations:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can create only one content association for each content resource in a knowledge base.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can associate a step-by-step guide with multiple content resources.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createContentAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateContentAssociation operation returned by the service.
+     * @sample AmazonQConnectAsyncHandler.CreateContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/CreateContentAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateContentAssociationResult> createContentAssociationAsync(CreateContentAssociationRequest createContentAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateContentAssociationRequest, CreateContentAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a knowledge base.
      * </p>
      * <note>
@@ -424,6 +511,47 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
 
     /**
      * <p>
+     * Deletes the content association.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param deleteContentAssociationRequest
+     * @return A Java Future containing the result of the DeleteContentAssociation operation returned by the service.
+     * @sample AmazonQConnectAsync.DeleteContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/DeleteContentAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteContentAssociationResult> deleteContentAssociationAsync(DeleteContentAssociationRequest deleteContentAssociationRequest);
+
+    /**
+     * <p>
+     * Deletes the content association.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param deleteContentAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteContentAssociation operation returned by the service.
+     * @sample AmazonQConnectAsyncHandler.DeleteContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/DeleteContentAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteContentAssociationResult> deleteContentAssociationAsync(DeleteContentAssociationRequest deleteContentAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteContentAssociationRequest, DeleteContentAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the quick response import job.
      * </p>
      * 
@@ -631,6 +759,47 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
      */
     java.util.concurrent.Future<GetContentResult> getContentAsync(GetContentRequest getContentRequest,
             com.amazonaws.handlers.AsyncHandler<GetContentRequest, GetContentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the content association.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param getContentAssociationRequest
+     * @return A Java Future containing the result of the GetContentAssociation operation returned by the service.
+     * @sample AmazonQConnectAsync.GetContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/GetContentAssociation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetContentAssociationResult> getContentAssociationAsync(GetContentAssociationRequest getContentAssociationRequest);
+
+    /**
+     * <p>
+     * Returns the content association.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param getContentAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetContentAssociation operation returned by the service.
+     * @sample AmazonQConnectAsyncHandler.GetContentAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/GetContentAssociation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetContentAssociationResult> getContentAssociationAsync(GetContentAssociationRequest getContentAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetContentAssociationRequest, GetContentAssociationResult> asyncHandler);
 
     /**
      * <p>
@@ -911,6 +1080,47 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
      */
     java.util.concurrent.Future<ListAssistantsResult> listAssistantsAsync(ListAssistantsRequest listAssistantsRequest,
             com.amazonaws.handlers.AsyncHandler<ListAssistantsRequest, ListAssistantsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the content associations.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param listContentAssociationsRequest
+     * @return A Java Future containing the result of the ListContentAssociations operation returned by the service.
+     * @sample AmazonQConnectAsync.ListContentAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/ListContentAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListContentAssociationsResult> listContentAssociationsAsync(ListContentAssociationsRequest listContentAssociationsRequest);
+
+    /**
+     * <p>
+     * Lists the content associations.
+     * </p>
+     * <p>
+     * For more information about content associations--what they are and when they are used--see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/integrate-q-with-guides.html">Integrate Amazon Q in
+     * Connect with step-by-step guides</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param listContentAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListContentAssociations operation returned by the service.
+     * @sample AmazonQConnectAsyncHandler.ListContentAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/ListContentAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListContentAssociationsResult> listContentAssociationsAsync(ListContentAssociationsRequest listContentAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListContentAssociationsRequest, ListContentAssociationsResult> asyncHandler);
 
     /**
      * <p>

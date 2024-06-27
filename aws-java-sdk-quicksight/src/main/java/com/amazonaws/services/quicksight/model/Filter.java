@@ -79,6 +79,12 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private TopBottomFilter topBottomFilter;
+    /**
+     * <p>
+     * A <code>NestedFilter</code> filters data with a subset of data that is defined by the nested inner filter.
+     * </p>
+     */
+    private NestedFilter nestedFilter;
 
     /**
      * <p>
@@ -403,6 +409,47 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A <code>NestedFilter</code> filters data with a subset of data that is defined by the nested inner filter.
+     * </p>
+     * 
+     * @param nestedFilter
+     *        A <code>NestedFilter</code> filters data with a subset of data that is defined by the nested inner filter.
+     */
+
+    public void setNestedFilter(NestedFilter nestedFilter) {
+        this.nestedFilter = nestedFilter;
+    }
+
+    /**
+     * <p>
+     * A <code>NestedFilter</code> filters data with a subset of data that is defined by the nested inner filter.
+     * </p>
+     * 
+     * @return A <code>NestedFilter</code> filters data with a subset of data that is defined by the nested inner
+     *         filter.
+     */
+
+    public NestedFilter getNestedFilter() {
+        return this.nestedFilter;
+    }
+
+    /**
+     * <p>
+     * A <code>NestedFilter</code> filters data with a subset of data that is defined by the nested inner filter.
+     * </p>
+     * 
+     * @param nestedFilter
+     *        A <code>NestedFilter</code> filters data with a subset of data that is defined by the nested inner filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Filter withNestedFilter(NestedFilter nestedFilter) {
+        setNestedFilter(nestedFilter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -427,7 +474,9 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
         if (getRelativeDatesFilter() != null)
             sb.append("RelativeDatesFilter: ").append(getRelativeDatesFilter()).append(",");
         if (getTopBottomFilter() != null)
-            sb.append("TopBottomFilter: ").append(getTopBottomFilter());
+            sb.append("TopBottomFilter: ").append(getTopBottomFilter()).append(",");
+        if (getNestedFilter() != null)
+            sb.append("NestedFilter: ").append(getNestedFilter());
         sb.append("}");
         return sb.toString();
     }
@@ -470,6 +519,10 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTopBottomFilter() != null && other.getTopBottomFilter().equals(this.getTopBottomFilter()) == false)
             return false;
+        if (other.getNestedFilter() == null ^ this.getNestedFilter() == null)
+            return false;
+        if (other.getNestedFilter() != null && other.getNestedFilter().equals(this.getNestedFilter()) == false)
+            return false;
         return true;
     }
 
@@ -485,6 +538,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTimeRangeFilter() == null) ? 0 : getTimeRangeFilter().hashCode());
         hashCode = prime * hashCode + ((getRelativeDatesFilter() == null) ? 0 : getRelativeDatesFilter().hashCode());
         hashCode = prime * hashCode + ((getTopBottomFilter() == null) ? 0 : getTopBottomFilter().hashCode());
+        hashCode = prime * hashCode + ((getNestedFilter() == null) ? 0 : getNestedFilter().hashCode());
         return hashCode;
     }
 

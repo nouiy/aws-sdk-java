@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returns the details of the DB instance’s server certificate.
+ * The details of the DB instance’s server certificate.
  * </p>
  * <p>
  * For more information, see <a

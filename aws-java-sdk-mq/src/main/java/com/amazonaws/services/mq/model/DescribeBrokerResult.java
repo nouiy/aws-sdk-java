@@ -37,9 +37,8 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
     private String authenticationStrategy;
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
      */
     private Boolean autoMinorVersionUpgrade;
@@ -107,8 +106,11 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
     private String engineType;
     /**
      * <p>
-     * The broker engine's version. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      */
     private String engineVersion;
@@ -144,8 +146,11 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
     private String pendingAuthenticationStrategy;
     /**
      * <p>
-     * The broker engine version to upgrade to. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version to upgrade to. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      */
     private String pendingEngineVersion;
@@ -364,15 +369,14 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported
-     *        by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a
-     *        manual broker reboot.
+     *        Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by
+     *        Amazon MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker
+     *        reboot.
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -381,14 +385,13 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
      * 
-     * @return Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported
-     *         by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a
-     *         manual broker reboot.
+     * @return Enables automatic upgrades to new patch versions for brokers as new versions are released and supported
+     *         by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker
+     *         reboot.
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -397,15 +400,14 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported
-     *        by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a
-     *        manual broker reboot.
+     *        Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by
+     *        Amazon MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker
+     *        reboot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -416,14 +418,13 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by
-     * Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual
-     * broker reboot.
+     * Enables automatic upgrades to new patch versions for brokers as new versions are released and supported by Amazon
+     * MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker reboot.
      * </p>
      * 
-     * @return Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported
-     *         by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a
-     *         manual broker reboot.
+     * @return Enables automatic upgrades to new patch versions for brokers as new versions are released and supported
+     *         by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window or after a manual broker
+     *         reboot.
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -931,14 +932,19 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The broker engine's version. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
      * @param engineVersion
-     *        The broker engine's version. For a list of supported engine versions, see <a
-     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *        engines</a>.
+     *        The broker engine version. For more information, see the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *        >ActiveMQ version management</a> and the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *        >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -947,13 +953,18 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The broker engine's version. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
-     * @return The broker engine's version. For a list of supported engine versions, see <a
-     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *         engines</a>.
+     * @return The broker engine version. For more information, see the <a
+     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *         >ActiveMQ version management</a> and the <a
+     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *         >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      */
 
     public String getEngineVersion() {
@@ -962,14 +973,19 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The broker engine's version. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
      * @param engineVersion
-     *        The broker engine's version. For a list of supported engine versions, see <a
-     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *        engines</a>.
+     *        The broker engine version. For more information, see the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *        >ActiveMQ version management</a> and the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *        >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1199,14 +1215,19 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The broker engine version to upgrade to. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version to upgrade to. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
      * @param pendingEngineVersion
-     *        The broker engine version to upgrade to. For a list of supported engine versions, see <a
-     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *        engines</a>.
+     *        The broker engine version to upgrade to. For more information, see the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *        >ActiveMQ version management</a> and the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *        >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      */
 
     public void setPendingEngineVersion(String pendingEngineVersion) {
@@ -1215,13 +1236,18 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The broker engine version to upgrade to. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version to upgrade to. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
-     * @return The broker engine version to upgrade to. For a list of supported engine versions, see <a
-     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *         engines</a>.
+     * @return The broker engine version to upgrade to. For more information, see the <a
+     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *         >ActiveMQ version management</a> and the <a
+     *         href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *         >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      */
 
     public String getPendingEngineVersion() {
@@ -1230,14 +1256,19 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The broker engine version to upgrade to. For a list of supported engine versions, see <a
-     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.
+     * The broker engine version to upgrade to. For more information, see the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html">ActiveMQ
+     * version management</a> and the <a
+     * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html">RabbitMQ
+     * version management</a> sections in the Amazon MQ Developer Guide.
      * </p>
      * 
      * @param pendingEngineVersion
-     *        The broker engine version to upgrade to. For a list of supported engine versions, see <a
-     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported
-     *        engines</a>.
+     *        The broker engine version to upgrade to. For more information, see the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/activemq-version-management.html"
+     *        >ActiveMQ version management</a> and the <a
+     *        href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/rabbitmq-version-management.html"
+     *        >RabbitMQ version management</a> sections in the Amazon MQ Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

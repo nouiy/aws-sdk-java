@@ -41,6 +41,8 @@ public class FilterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelativeDatesFilter").build();
     private static final MarshallingInfo<StructuredPojo> TOPBOTTOMFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TopBottomFilter").build();
+    private static final MarshallingInfo<StructuredPojo> NESTEDFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NestedFilter").build();
 
     private static final FilterMarshaller instance = new FilterMarshaller();
 
@@ -65,6 +67,7 @@ public class FilterMarshaller {
             protocolMarshaller.marshall(filter.getTimeRangeFilter(), TIMERANGEFILTER_BINDING);
             protocolMarshaller.marshall(filter.getRelativeDatesFilter(), RELATIVEDATESFILTER_BINDING);
             protocolMarshaller.marshall(filter.getTopBottomFilter(), TOPBOTTOMFILTER_BINDING);
+            protocolMarshaller.marshall(filter.getNestedFilter(), NESTEDFILTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
