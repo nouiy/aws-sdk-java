@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the capacity status for a WorkSpaces pool
+ * Describes the capacity status for a pool of WorkSpaces.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CapacityStatus" target="_top">AWS API
@@ -43,7 +43,7 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
     private Integer desiredUserSessions;
     /**
      * <p>
-     * The total number of session slots that are available for WorkSpaces pools.
+     * The total number of session slots that are available for a pool of WorkSpaces.
      * </p>
      */
     private Integer actualUserSessions;
@@ -145,11 +145,11 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of session slots that are available for WorkSpaces pools.
+     * The total number of session slots that are available for a pool of WorkSpaces.
      * </p>
      * 
      * @param actualUserSessions
-     *        The total number of session slots that are available for WorkSpaces pools.
+     *        The total number of session slots that are available for a pool of WorkSpaces.
      */
 
     public void setActualUserSessions(Integer actualUserSessions) {
@@ -158,10 +158,10 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of session slots that are available for WorkSpaces pools.
+     * The total number of session slots that are available for a pool of WorkSpaces.
      * </p>
      * 
-     * @return The total number of session slots that are available for WorkSpaces pools.
+     * @return The total number of session slots that are available for a pool of WorkSpaces.
      */
 
     public Integer getActualUserSessions() {
@@ -170,11 +170,11 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of session slots that are available for WorkSpaces pools.
+     * The total number of session slots that are available for a pool of WorkSpaces.
      * </p>
      * 
      * @param actualUserSessions
-     *        The total number of session slots that are available for WorkSpaces pools.
+     *        The total number of session slots that are available for a pool of WorkSpaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

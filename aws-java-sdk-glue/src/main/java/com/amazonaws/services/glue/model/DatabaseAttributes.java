@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.opensearch.model;
+package com.amazonaws.services.glue.model;
 
 import javax.annotation.Generated;
 
@@ -18,19 +18,13 @@ import javax.annotation.Generated;
  * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public enum NaturalLanguageQueryGenerationCurrentState {
+public enum DatabaseAttributes {
 
-    NOT_ENABLED("NOT_ENABLED"),
-    ENABLE_COMPLETE("ENABLE_COMPLETE"),
-    ENABLE_IN_PROGRESS("ENABLE_IN_PROGRESS"),
-    ENABLE_FAILED("ENABLE_FAILED"),
-    DISABLE_COMPLETE("DISABLE_COMPLETE"),
-    DISABLE_IN_PROGRESS("DISABLE_IN_PROGRESS"),
-    DISABLE_FAILED("DISABLE_FAILED");
+    NAME("NAME");
 
     private String value;
 
-    private NaturalLanguageQueryGenerationCurrentState(String value) {
+    private DatabaseAttributes(String value) {
         this.value = value;
     }
 
@@ -44,17 +38,17 @@ public enum NaturalLanguageQueryGenerationCurrentState {
      *
      * @param value
      *        real value
-     * @return NaturalLanguageQueryGenerationCurrentState corresponding to the value
+     * @return DatabaseAttributes corresponding to the value
      *
      * @throws IllegalArgumentException
      *         If the specified value does not map to one of the known values in this enum.
      */
-    public static NaturalLanguageQueryGenerationCurrentState fromValue(String value) {
+    public static DatabaseAttributes fromValue(String value) {
         if (value == null || "".equals(value)) {
             throw new IllegalArgumentException("Value cannot be null or empty!");
         }
 
-        for (NaturalLanguageQueryGenerationCurrentState enumEntry : NaturalLanguageQueryGenerationCurrentState.values()) {
+        for (DatabaseAttributes enumEntry : DatabaseAttributes.values()) {
             if (enumEntry.toString().equals(value)) {
                 return enumEntry;
             }

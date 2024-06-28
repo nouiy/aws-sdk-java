@@ -36,8 +36,10 @@ public class OnDemandProvisioningSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     * <code>lowest-price</code> (the default), which launches the lowest price first.
+     * Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     * <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     * instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should launch the
+     * instances with the highest priority first. The default is <code>lowest-price</code>.
      * </p>
      */
     private String allocationStrategy;
@@ -50,13 +52,17 @@ public class OnDemandProvisioningSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     * <code>lowest-price</code> (the default), which launches the lowest price first.
+     * Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     * <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     * instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should launch the
+     * instances with the highest priority first. The default is <code>lowest-price</code>.
      * </p>
      * 
      * @param allocationStrategy
-     *        Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     *        <code>lowest-price</code> (the default), which launches the lowest price first.
+     *        Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     *        <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     *        instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should
+     *        launch the instances with the highest priority first. The default is <code>lowest-price</code>.
      * @see OnDemandProvisioningAllocationStrategy
      */
 
@@ -66,12 +72,16 @@ public class OnDemandProvisioningSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     * <code>lowest-price</code> (the default), which launches the lowest price first.
+     * Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     * <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     * instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should launch the
+     * instances with the highest priority first. The default is <code>lowest-price</code>.
      * </p>
      * 
-     * @return Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     *         <code>lowest-price</code> (the default), which launches the lowest price first.
+     * @return Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     *         <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     *         instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should
+     *         launch the instances with the highest priority first. The default is <code>lowest-price</code>.
      * @see OnDemandProvisioningAllocationStrategy
      */
 
@@ -81,13 +91,17 @@ public class OnDemandProvisioningSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     * <code>lowest-price</code> (the default), which launches the lowest price first.
+     * Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     * <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     * instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should launch the
+     * instances with the highest priority first. The default is <code>lowest-price</code>.
      * </p>
      * 
      * @param allocationStrategy
-     *        Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     *        <code>lowest-price</code> (the default), which launches the lowest price first.
+     *        Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     *        <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     *        instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should
+     *        launch the instances with the highest priority first. The default is <code>lowest-price</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OnDemandProvisioningAllocationStrategy
      */
@@ -99,13 +113,17 @@ public class OnDemandProvisioningSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     * <code>lowest-price</code> (the default), which launches the lowest price first.
+     * Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     * <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     * instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should launch the
+     * instances with the highest priority first. The default is <code>lowest-price</code>.
      * </p>
      * 
      * @param allocationStrategy
-     *        Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is
-     *        <code>lowest-price</code> (the default), which launches the lowest price first.
+     *        Specifies the strategy to use in launching On-Demand instance fleets. Available options are
+     *        <code>lowest-price</code> and <code>prioritized</code>. <code>lowest-price</code> specifies to launch the
+     *        instances with the lowest price first, and <code>prioritized</code> specifies that Amazon EMR should
+     *        launch the instances with the highest priority first. The default is <code>lowest-price</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OnDemandProvisioningAllocationStrategy
      */

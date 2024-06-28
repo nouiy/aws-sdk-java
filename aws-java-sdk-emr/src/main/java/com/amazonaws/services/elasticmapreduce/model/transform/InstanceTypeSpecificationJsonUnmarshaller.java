@@ -84,6 +84,10 @@ public class InstanceTypeSpecificationJsonUnmarshaller implements Unmarshaller<I
                     context.nextToken();
                     instanceTypeSpecification.setCustomAmiId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Priority", targetDepth)) {
+                    context.nextToken();
+                    instanceTypeSpecification.setPriority(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

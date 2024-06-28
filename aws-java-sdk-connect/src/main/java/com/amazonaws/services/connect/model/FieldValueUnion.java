@@ -36,7 +36,7 @@ public class FieldValueUnion implements Serializable, Cloneable, StructuredPojo 
     private Boolean booleanValue;
     /**
      * <p>
-     * a Double number value type.
+     * A Double number value type.
      * </p>
      */
     private Double doubleValue;
@@ -107,11 +107,11 @@ public class FieldValueUnion implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * a Double number value type.
+     * A Double number value type.
      * </p>
      * 
      * @param doubleValue
-     *        a Double number value type.
+     *        A Double number value type.
      */
 
     public void setDoubleValue(Double doubleValue) {
@@ -120,10 +120,10 @@ public class FieldValueUnion implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * a Double number value type.
+     * A Double number value type.
      * </p>
      * 
-     * @return a Double number value type.
+     * @return A Double number value type.
      */
 
     public Double getDoubleValue() {
@@ -132,11 +132,11 @@ public class FieldValueUnion implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * a Double number value type.
+     * A Double number value type.
      * </p>
      * 
      * @param doubleValue
-     *        a Double number value type.
+     *        A Double number value type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

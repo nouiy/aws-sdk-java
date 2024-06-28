@@ -181,10 +181,6 @@ public class DomainStatusJsonUnmarshaller implements Unmarshaller<DomainStatus, 
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("AIMLOptions", targetDepth)) {
-                    context.nextToken();
-                    domainStatus.setAIMLOptions(AIMLOptionsOutputJsonUnmarshaller.getInstance().unmarshall(context));
-                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -184,6 +184,11 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>db.sql.db_id</code> filter isn't available for RDS for SQL Server DB instances.
+     * </p>
+     * </note>
      */
     private java.util.Map<String, String> filter;
     /**
@@ -1177,6 +1182,11 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>db.sql.db_id</code> filter isn't available for RDS for SQL Server DB instances.
+     * </p>
+     * </note>
      * 
      * @return One or more filters to apply in the request. Restrictions:</p>
      *         <ul>
@@ -1191,6 +1201,11 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      *         A single filter for any other dimension in this dimension group.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         The <code>db.sql.db_id</code> filter isn't available for RDS for SQL Server DB instances.
+     *         </p>
      */
 
     public java.util.Map<String, String> getFilter() {
@@ -1214,6 +1229,11 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>db.sql.db_id</code> filter isn't available for RDS for SQL Server DB instances.
+     * </p>
+     * </note>
      * 
      * @param filter
      *        One or more filters to apply in the request. Restrictions:</p>
@@ -1229,6 +1249,11 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      *        A single filter for any other dimension in this dimension group.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The <code>db.sql.db_id</code> filter isn't available for RDS for SQL Server DB instances.
+     *        </p>
      */
 
     public void setFilter(java.util.Map<String, String> filter) {
@@ -1252,6 +1277,11 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>db.sql.db_id</code> filter isn't available for RDS for SQL Server DB instances.
+     * </p>
+     * </note>
      * 
      * @param filter
      *        One or more filters to apply in the request. Restrictions:</p>
@@ -1267,6 +1297,11 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      *        A single filter for any other dimension in this dimension group.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The <code>db.sql.db_id</code> filter isn't available for RDS for SQL Server DB instances.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure that defineds the field name to sort by and a sort order.
+ * A structure that defines the field name to sort by and a sort order.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/Sort" target="_top">AWS API Documentation</a>

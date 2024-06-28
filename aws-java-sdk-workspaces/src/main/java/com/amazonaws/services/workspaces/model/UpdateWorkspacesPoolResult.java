@@ -25,18 +25,18 @@ public class UpdateWorkspacesPoolResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Describes the specified WorkSpaces pool.
+     * Describes the specified pool.
      * </p>
      */
     private WorkspacesPool workspacesPool;
 
     /**
      * <p>
-     * Describes the specified WorkSpaces pool.
+     * Describes the specified pool.
      * </p>
      * 
      * @param workspacesPool
-     *        Describes the specified WorkSpaces pool.
+     *        Describes the specified pool.
      */
 
     public void setWorkspacesPool(WorkspacesPool workspacesPool) {
@@ -45,10 +45,10 @@ public class UpdateWorkspacesPoolResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Describes the specified WorkSpaces pool.
+     * Describes the specified pool.
      * </p>
      * 
-     * @return Describes the specified WorkSpaces pool.
+     * @return Describes the specified pool.
      */
 
     public WorkspacesPool getWorkspacesPool() {
@@ -57,11 +57,11 @@ public class UpdateWorkspacesPoolResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Describes the specified WorkSpaces pool.
+     * Describes the specified pool.
      * </p>
      * 
      * @param workspacesPool
-     *        Describes the specified WorkSpaces pool.
+     *        Describes the specified pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

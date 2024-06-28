@@ -25,7 +25,7 @@ public class DescribeWorkspacesPoolsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the WorkSpaces pools.
+     * Information about the WorkSpaces Pools.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<WorkspacesPool> workspacesPools;
@@ -39,10 +39,10 @@ public class DescribeWorkspacesPoolsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the WorkSpaces pools.
+     * Information about the WorkSpaces Pools.
      * </p>
      * 
-     * @return Information about the WorkSpaces pools.
+     * @return Information about the WorkSpaces Pools.
      */
 
     public java.util.List<WorkspacesPool> getWorkspacesPools() {
@@ -54,11 +54,11 @@ public class DescribeWorkspacesPoolsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the WorkSpaces pools.
+     * Information about the WorkSpaces Pools.
      * </p>
      * 
      * @param workspacesPools
-     *        Information about the WorkSpaces pools.
+     *        Information about the WorkSpaces Pools.
      */
 
     public void setWorkspacesPools(java.util.Collection<WorkspacesPool> workspacesPools) {
@@ -72,7 +72,7 @@ public class DescribeWorkspacesPoolsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the WorkSpaces pools.
+     * Information about the WorkSpaces Pools.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeWorkspacesPoolsResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param workspacesPools
-     *        Information about the WorkSpaces pools.
+     *        Information about the WorkSpaces Pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeWorkspacesPoolsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the WorkSpaces pools.
+     * Information about the WorkSpaces Pools.
      * </p>
      * 
      * @param workspacesPools
-     *        Information about the WorkSpaces pools.
+     *        Information about the WorkSpaces Pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -3644,7 +3644,7 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Retrieves a list that describes the streaming sessions for a specified WorkSpaces pool.
+     * Retrieves a list that describes the streaming sessions for a specified pool.
      * </p>
      * 
      * @param describeWorkspacesPoolSessionsRequest
@@ -3707,7 +3707,7 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Describes the specified WorkSpaces pool.
+     * Describes the specified WorkSpaces Pools.
      * </p>
      * 
      * @param describeWorkspacesPoolsRequest
@@ -5582,11 +5582,11 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Starts the specified WorkSpaces pool.
+     * Starts the specified pool.
      * </p>
      * <p>
-     * You cannot start a WorkSpace pool unless it has a running mode of <code>AutoStop</code> and a state of
-     * <code>STOPPED</code>.
+     * You cannot start a pool unless it has a running mode of <code>AutoStop</code> and a state of <code>STOPPED</code>
+     * .
      * </p>
      * 
      * @param startWorkspacesPoolRequest
@@ -5714,7 +5714,7 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Stops the specifiedWorkSpaces pool.
+     * Stops the specified pool.
      * </p>
      * <p>
      * You cannot stop a WorkSpace pool unless it has a running mode of <code>AutoStop</code> and a state of
@@ -5869,7 +5869,7 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Terminates the specified WorkSpaces pool.
+     * Terminates the specified pool.
      * </p>
      * 
      * @param terminateWorkspacesPoolRequest
@@ -5936,7 +5936,7 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Terminates the WorkSpaces pool session.
+     * Terminates the pool session.
      * </p>
      * 
      * @param terminateWorkspacesPoolSessionRequest
@@ -6404,7 +6404,7 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Updates the specified WorkSpaces pool.
+     * Updates the specified pool.
      * </p>
      * 
      * @param updateWorkspacesPoolRequest

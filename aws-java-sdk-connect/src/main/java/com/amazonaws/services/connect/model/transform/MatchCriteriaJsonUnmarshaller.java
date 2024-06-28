@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.opensearch.model.transform;
+package com.amazonaws.services.connect.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.opensearch.model.*;
+import com.amazonaws.services.connect.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,14 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * NaturalLanguageQueryGenerationOptionsInput JSON Unmarshaller
+ * MatchCriteria JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class NaturalLanguageQueryGenerationOptionsInputJsonUnmarshaller implements
-        Unmarshaller<NaturalLanguageQueryGenerationOptionsInput, JsonUnmarshallerContext> {
+public class MatchCriteriaJsonUnmarshaller implements Unmarshaller<MatchCriteria, JsonUnmarshallerContext> {
 
-    public NaturalLanguageQueryGenerationOptionsInput unmarshall(JsonUnmarshallerContext context) throws Exception {
-        NaturalLanguageQueryGenerationOptionsInput naturalLanguageQueryGenerationOptionsInput = new NaturalLanguageQueryGenerationOptionsInput();
+    public MatchCriteria unmarshall(JsonUnmarshallerContext context) throws Exception {
+        MatchCriteria matchCriteria = new MatchCriteria();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -49,9 +48,9 @@ public class NaturalLanguageQueryGenerationOptionsInputJsonUnmarshaller implemen
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("DesiredState", targetDepth)) {
+                if (context.testExpression("AgentsCriteria", targetDepth)) {
                     context.nextToken();
-                    naturalLanguageQueryGenerationOptionsInput.setDesiredState(context.getUnmarshaller(String.class).unmarshall(context));
+                    matchCriteria.setAgentsCriteria(AgentsCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -62,14 +61,14 @@ public class NaturalLanguageQueryGenerationOptionsInputJsonUnmarshaller implemen
             token = context.nextToken();
         }
 
-        return naturalLanguageQueryGenerationOptionsInput;
+        return matchCriteria;
     }
 
-    private static NaturalLanguageQueryGenerationOptionsInputJsonUnmarshaller instance;
+    private static MatchCriteriaJsonUnmarshaller instance;
 
-    public static NaturalLanguageQueryGenerationOptionsInputJsonUnmarshaller getInstance() {
+    public static MatchCriteriaJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new NaturalLanguageQueryGenerationOptionsInputJsonUnmarshaller();
+            instance = new MatchCriteriaJsonUnmarshaller();
         return instance;
     }
 }

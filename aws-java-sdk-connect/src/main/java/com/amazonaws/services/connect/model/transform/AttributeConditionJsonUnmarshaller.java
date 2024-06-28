@@ -60,6 +60,10 @@ public class AttributeConditionJsonUnmarshaller implements Unmarshaller<Attribut
                     context.nextToken();
                     attributeCondition.setProficiencyLevel(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
+                if (context.testExpression("MatchCriteria", targetDepth)) {
+                    context.nextToken();
+                    attributeCondition.setMatchCriteria(MatchCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("ComparisonOperator", targetDepth)) {
                     context.nextToken();
                     attributeCondition.setComparisonOperator(context.getUnmarshaller(String.class).unmarshall(context));

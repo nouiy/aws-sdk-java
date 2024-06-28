@@ -86,6 +86,13 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
      * </p>
      */
     private String customAmiId;
+    /**
+     * <p>
+     * The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type. Priority starts at 0,
+     * which is the highest priority. Amazon EMR considers the highest priority first.
+     * </p>
+     */
+    private Double priority;
 
     /**
      * <p>
@@ -523,6 +530,52 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type. Priority starts at 0,
+     * which is the highest priority. Amazon EMR considers the highest priority first.
+     * </p>
+     * 
+     * @param priority
+     *        The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type. Priority
+     *        starts at 0, which is the highest priority. Amazon EMR considers the highest priority first.
+     */
+
+    public void setPriority(Double priority) {
+        this.priority = priority;
+    }
+
+    /**
+     * <p>
+     * The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type. Priority starts at 0,
+     * which is the highest priority. Amazon EMR considers the highest priority first.
+     * </p>
+     * 
+     * @return The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type. Priority
+     *         starts at 0, which is the highest priority. Amazon EMR considers the highest priority first.
+     */
+
+    public Double getPriority() {
+        return this.priority;
+    }
+
+    /**
+     * <p>
+     * The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type. Priority starts at 0,
+     * which is the highest priority. Amazon EMR considers the highest priority first.
+     * </p>
+     * 
+     * @param priority
+     *        The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type. Priority
+     *        starts at 0, which is the highest priority. Amazon EMR considers the highest priority first.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceTypeSpecification withPriority(Double priority) {
+        setPriority(priority);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -549,7 +602,9 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
         if (getEbsOptimized() != null)
             sb.append("EbsOptimized: ").append(getEbsOptimized()).append(",");
         if (getCustomAmiId() != null)
-            sb.append("CustomAmiId: ").append(getCustomAmiId());
+            sb.append("CustomAmiId: ").append(getCustomAmiId()).append(",");
+        if (getPriority() != null)
+            sb.append("Priority: ").append(getPriority());
         sb.append("}");
         return sb.toString();
     }
@@ -597,6 +652,10 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
             return false;
         if (other.getCustomAmiId() != null && other.getCustomAmiId().equals(this.getCustomAmiId()) == false)
             return false;
+        if (other.getPriority() == null ^ this.getPriority() == null)
+            return false;
+        if (other.getPriority() != null && other.getPriority().equals(this.getPriority()) == false)
+            return false;
         return true;
     }
 
@@ -613,6 +672,7 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getEbsBlockDevices() == null) ? 0 : getEbsBlockDevices().hashCode());
         hashCode = prime * hashCode + ((getEbsOptimized() == null) ? 0 : getEbsOptimized().hashCode());
         hashCode = prime * hashCode + ((getCustomAmiId() == null) ? 0 : getCustomAmiId().hashCode());
+        hashCode = prime * hashCode + ((getPriority() == null) ? 0 : getPriority().hashCode());
         return hashCode;
     }
 

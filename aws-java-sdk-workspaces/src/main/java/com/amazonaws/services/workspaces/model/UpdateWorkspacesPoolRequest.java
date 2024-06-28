@@ -27,13 +27,13 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the specified WorkSpaces pool to update.
+     * The identifier of the specified pool to update.
      * </p>
      */
     private String poolId;
     /**
      * <p>
-     * Describes the specified WorkSpaces pool to update.
+     * Describes the specified pool to update.
      * </p>
      */
     private String description;
@@ -51,7 +51,7 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
     private String directoryId;
     /**
      * <p>
-     * The desired capacity for the WorkSpaces pool.
+     * The desired capacity for the pool.
      * </p>
      */
     private Capacity capacity;
@@ -63,18 +63,18 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
     private ApplicationSettingsRequest applicationSettings;
     /**
      * <p>
-     * Indicates the timeout settings of the specified WorkSpaces pool.
+     * Indicates the timeout settings of the specified pool.
      * </p>
      */
     private TimeoutSettings timeoutSettings;
 
     /**
      * <p>
-     * The identifier of the specified WorkSpaces pool to update.
+     * The identifier of the specified pool to update.
      * </p>
      * 
      * @param poolId
-     *        The identifier of the specified WorkSpaces pool to update.
+     *        The identifier of the specified pool to update.
      */
 
     public void setPoolId(String poolId) {
@@ -83,10 +83,10 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the specified WorkSpaces pool to update.
+     * The identifier of the specified pool to update.
      * </p>
      * 
-     * @return The identifier of the specified WorkSpaces pool to update.
+     * @return The identifier of the specified pool to update.
      */
 
     public String getPoolId() {
@@ -95,11 +95,11 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the specified WorkSpaces pool to update.
+     * The identifier of the specified pool to update.
      * </p>
      * 
      * @param poolId
-     *        The identifier of the specified WorkSpaces pool to update.
+     *        The identifier of the specified pool to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,11 +110,11 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Describes the specified WorkSpaces pool to update.
+     * Describes the specified pool to update.
      * </p>
      * 
      * @param description
-     *        Describes the specified WorkSpaces pool to update.
+     *        Describes the specified pool to update.
      */
 
     public void setDescription(String description) {
@@ -123,10 +123,10 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Describes the specified WorkSpaces pool to update.
+     * Describes the specified pool to update.
      * </p>
      * 
-     * @return Describes the specified WorkSpaces pool to update.
+     * @return Describes the specified pool to update.
      */
 
     public String getDescription() {
@@ -135,11 +135,11 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Describes the specified WorkSpaces pool to update.
+     * Describes the specified pool to update.
      * </p>
      * 
      * @param description
-     *        Describes the specified WorkSpaces pool to update.
+     *        Describes the specified pool to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,11 +230,11 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The desired capacity for the WorkSpaces pool.
+     * The desired capacity for the pool.
      * </p>
      * 
      * @param capacity
-     *        The desired capacity for the WorkSpaces pool.
+     *        The desired capacity for the pool.
      */
 
     public void setCapacity(Capacity capacity) {
@@ -243,10 +243,10 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The desired capacity for the WorkSpaces pool.
+     * The desired capacity for the pool.
      * </p>
      * 
-     * @return The desired capacity for the WorkSpaces pool.
+     * @return The desired capacity for the pool.
      */
 
     public Capacity getCapacity() {
@@ -255,11 +255,11 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The desired capacity for the WorkSpaces pool.
+     * The desired capacity for the pool.
      * </p>
      * 
      * @param capacity
-     *        The desired capacity for the WorkSpaces pool.
+     *        The desired capacity for the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -310,11 +310,11 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the timeout settings of the specified WorkSpaces pool.
+     * Indicates the timeout settings of the specified pool.
      * </p>
      * 
      * @param timeoutSettings
-     *        Indicates the timeout settings of the specified WorkSpaces pool.
+     *        Indicates the timeout settings of the specified pool.
      */
 
     public void setTimeoutSettings(TimeoutSettings timeoutSettings) {
@@ -323,10 +323,10 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the timeout settings of the specified WorkSpaces pool.
+     * Indicates the timeout settings of the specified pool.
      * </p>
      * 
-     * @return Indicates the timeout settings of the specified WorkSpaces pool.
+     * @return Indicates the timeout settings of the specified pool.
      */
 
     public TimeoutSettings getTimeoutSettings() {
@@ -335,11 +335,11 @@ public class UpdateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the timeout settings of the specified WorkSpaces pool.
+     * Indicates the timeout settings of the specified pool.
      * </p>
      * 
      * @param timeoutSettings
-     *        Indicates the timeout settings of the specified WorkSpaces pool.
+     *        Indicates the timeout settings of the specified pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

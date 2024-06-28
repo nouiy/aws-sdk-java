@@ -48,6 +48,12 @@ public class AttributeCondition implements Serializable, Cloneable, StructuredPo
     private Float proficiencyLevel;
     /**
      * <p>
+     * An object to define <code>AgentsCriteria</code>.
+     * </p>
+     */
+    private MatchCriteria matchCriteria;
+    /**
+     * <p>
      * The operator of the condition.
      * </p>
      */
@@ -175,6 +181,46 @@ public class AttributeCondition implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * An object to define <code>AgentsCriteria</code>.
+     * </p>
+     * 
+     * @param matchCriteria
+     *        An object to define <code>AgentsCriteria</code>.
+     */
+
+    public void setMatchCriteria(MatchCriteria matchCriteria) {
+        this.matchCriteria = matchCriteria;
+    }
+
+    /**
+     * <p>
+     * An object to define <code>AgentsCriteria</code>.
+     * </p>
+     * 
+     * @return An object to define <code>AgentsCriteria</code>.
+     */
+
+    public MatchCriteria getMatchCriteria() {
+        return this.matchCriteria;
+    }
+
+    /**
+     * <p>
+     * An object to define <code>AgentsCriteria</code>.
+     * </p>
+     * 
+     * @param matchCriteria
+     *        An object to define <code>AgentsCriteria</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AttributeCondition withMatchCriteria(MatchCriteria matchCriteria) {
+        setMatchCriteria(matchCriteria);
+        return this;
+    }
+
+    /**
+     * <p>
      * The operator of the condition.
      * </p>
      * 
@@ -231,6 +277,8 @@ public class AttributeCondition implements Serializable, Cloneable, StructuredPo
             sb.append("Value: ").append(getValue()).append(",");
         if (getProficiencyLevel() != null)
             sb.append("ProficiencyLevel: ").append(getProficiencyLevel()).append(",");
+        if (getMatchCriteria() != null)
+            sb.append("MatchCriteria: ").append(getMatchCriteria()).append(",");
         if (getComparisonOperator() != null)
             sb.append("ComparisonOperator: ").append(getComparisonOperator());
         sb.append("}");
@@ -259,6 +307,10 @@ public class AttributeCondition implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getProficiencyLevel() != null && other.getProficiencyLevel().equals(this.getProficiencyLevel()) == false)
             return false;
+        if (other.getMatchCriteria() == null ^ this.getMatchCriteria() == null)
+            return false;
+        if (other.getMatchCriteria() != null && other.getMatchCriteria().equals(this.getMatchCriteria()) == false)
+            return false;
         if (other.getComparisonOperator() == null ^ this.getComparisonOperator() == null)
             return false;
         if (other.getComparisonOperator() != null && other.getComparisonOperator().equals(this.getComparisonOperator()) == false)
@@ -274,6 +326,7 @@ public class AttributeCondition implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
         hashCode = prime * hashCode + ((getProficiencyLevel() == null) ? 0 : getProficiencyLevel().hashCode());
+        hashCode = prime * hashCode + ((getMatchCriteria() == null) ? 0 : getMatchCriteria().hashCode());
         hashCode = prime * hashCode + ((getComparisonOperator() == null) ? 0 : getComparisonOperator().hashCode());
         return hashCode;
     }

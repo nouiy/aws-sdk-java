@@ -52,6 +52,10 @@ public class BackupJsonUnmarshaller implements Unmarshaller<Backup, JsonUnmarsha
                     context.nextToken();
                     backup.setBackupId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("BackupArn", targetDepth)) {
+                    context.nextToken();
+                    backup.setBackupArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("BackupState", targetDepth)) {
                     context.nextToken();
                     backup.setBackupState(context.getUnmarshaller(String.class).unmarshall(context));

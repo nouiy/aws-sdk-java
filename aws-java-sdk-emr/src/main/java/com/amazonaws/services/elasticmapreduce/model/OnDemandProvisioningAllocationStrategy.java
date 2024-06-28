@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum OnDemandProvisioningAllocationStrategy {
 
-    LowestPrice("lowest-price");
+    LowestPrice("lowest-price"),
+    Prioritized("prioritized");
 
     private String value;
 

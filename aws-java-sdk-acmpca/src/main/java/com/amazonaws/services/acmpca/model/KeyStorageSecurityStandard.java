@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum KeyStorageSecurityStandard {
 
     FIPS_140_2_LEVEL_2_OR_HIGHER("FIPS_140_2_LEVEL_2_OR_HIGHER"),
-    FIPS_140_2_LEVEL_3_OR_HIGHER("FIPS_140_2_LEVEL_3_OR_HIGHER");
+    FIPS_140_2_LEVEL_3_OR_HIGHER("FIPS_140_2_LEVEL_3_OR_HIGHER"),
+    CCPC_LEVEL_1_OR_HIGHER("CCPC_LEVEL_1_OR_HIGHER");
 
     private String value;
 

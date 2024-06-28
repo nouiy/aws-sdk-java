@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because of an AWS CloudHSM internal failure. The request can be retried.
+ * The request was rejected because of an CloudHSM internal failure. The request can be retried.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

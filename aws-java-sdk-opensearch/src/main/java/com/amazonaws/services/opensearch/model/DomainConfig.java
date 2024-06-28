@@ -143,12 +143,6 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<ModifyingProperties> modifyingProperties;
-    /**
-     * <p>
-     * Container for parameters required to enable all machine learning features.
-     * </p>
-     */
-    private AIMLOptionsStatus aIMLOptions;
 
     /**
      * <p>
@@ -965,46 +959,6 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p>
-     * Container for parameters required to enable all machine learning features.
-     * </p>
-     * 
-     * @param aIMLOptions
-     *        Container for parameters required to enable all machine learning features.
-     */
-
-    public void setAIMLOptions(AIMLOptionsStatus aIMLOptions) {
-        this.aIMLOptions = aIMLOptions;
-    }
-
-    /**
-     * <p>
-     * Container for parameters required to enable all machine learning features.
-     * </p>
-     * 
-     * @return Container for parameters required to enable all machine learning features.
-     */
-
-    public AIMLOptionsStatus getAIMLOptions() {
-        return this.aIMLOptions;
-    }
-
-    /**
-     * <p>
-     * Container for parameters required to enable all machine learning features.
-     * </p>
-     * 
-     * @param aIMLOptions
-     *        Container for parameters required to enable all machine learning features.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DomainConfig withAIMLOptions(AIMLOptionsStatus aIMLOptions) {
-        setAIMLOptions(aIMLOptions);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1053,9 +1007,7 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
         if (getSoftwareUpdateOptions() != null)
             sb.append("SoftwareUpdateOptions: ").append(getSoftwareUpdateOptions()).append(",");
         if (getModifyingProperties() != null)
-            sb.append("ModifyingProperties: ").append(getModifyingProperties()).append(",");
-        if (getAIMLOptions() != null)
-            sb.append("AIMLOptions: ").append(getAIMLOptions());
+            sb.append("ModifyingProperties: ").append(getModifyingProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -1146,10 +1098,6 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getModifyingProperties() != null && other.getModifyingProperties().equals(this.getModifyingProperties()) == false)
             return false;
-        if (other.getAIMLOptions() == null ^ this.getAIMLOptions() == null)
-            return false;
-        if (other.getAIMLOptions() != null && other.getAIMLOptions().equals(this.getAIMLOptions()) == false)
-            return false;
         return true;
     }
 
@@ -1177,7 +1125,6 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOffPeakWindowOptions() == null) ? 0 : getOffPeakWindowOptions().hashCode());
         hashCode = prime * hashCode + ((getSoftwareUpdateOptions() == null) ? 0 : getSoftwareUpdateOptions().hashCode());
         hashCode = prime * hashCode + ((getModifyingProperties() == null) ? 0 : getModifyingProperties().hashCode());
-        hashCode = prime * hashCode + ((getAIMLOptions() == null) ? 0 : getAIMLOptions().hashCode());
         return hashCode;
     }
 

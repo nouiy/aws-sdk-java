@@ -68,7 +68,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The search criteria based on user-defined contact attributes that have been configured for contact search. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by custom
      * contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * <important>
@@ -503,7 +503,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The search criteria based on user-defined contact attributes that have been configured for contact search. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by custom
      * contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * <important>
@@ -520,7 +520,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      *        The search criteria based on user-defined contact attributes that have been configured for contact search.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by
-     *        customer contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
+     *        custom contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
      *        <p>
      *        To use <code>SearchableContactAttributes</code> in a search request, the <code>GetContactAttributes</code>
      *        action is required to perform an API request. For more information, see <a href=
@@ -538,7 +538,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The search criteria based on user-defined contact attributes that have been configured for contact search. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by custom
      * contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * <important>
@@ -554,7 +554,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * @return The search criteria based on user-defined contact attributes that have been configured for contact
      *         search. For more information, see <a
      *         href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by
-     *         customer contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
+     *         custom contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
      *         <p>
      *         To use <code>SearchableContactAttributes</code> in a search request, the
      *         <code>GetContactAttributes</code> action is required to perform an API request. For more information, see
@@ -573,7 +573,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The search criteria based on user-defined contact attributes that have been configured for contact search. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by custom
      * contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * <important>
@@ -590,7 +590,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      *        The search criteria based on user-defined contact attributes that have been configured for contact search.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by
-     *        customer contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
+     *        custom contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
      *        <p>
      *        To use <code>SearchableContactAttributes</code> in a search request, the <code>GetContactAttributes</code>
      *        action is required to perform an API request. For more information, see <a href=

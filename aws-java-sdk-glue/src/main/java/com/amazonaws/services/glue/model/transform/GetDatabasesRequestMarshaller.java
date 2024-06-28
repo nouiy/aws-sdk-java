@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.glue.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,6 +36,8 @@ public class GetDatabasesRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> RESOURCESHARETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceShareType").build();
+    private static final MarshallingInfo<List> ATTRIBUTESTOGET_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttributesToGet").build();
 
     private static final GetDatabasesRequestMarshaller instance = new GetDatabasesRequestMarshaller();
 
@@ -56,6 +59,7 @@ public class GetDatabasesRequestMarshaller {
             protocolMarshaller.marshall(getDatabasesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(getDatabasesRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(getDatabasesRequest.getResourceShareType(), RESOURCESHARETYPE_BINDING);
+            protocolMarshaller.marshall(getDatabasesRequest.getAttributesToGet(), ATTRIBUTESTOGET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

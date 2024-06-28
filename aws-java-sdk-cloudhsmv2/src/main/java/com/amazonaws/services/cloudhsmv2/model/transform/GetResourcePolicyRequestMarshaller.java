@@ -10,43 +10,43 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.opensearch.model.transform;
+package com.amazonaws.services.cloudhsmv2.model.transform;
 
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.services.opensearch.model.*;
+import com.amazonaws.services.cloudhsmv2.model.*;
 
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * AIMLOptionsInputMarshaller
+ * GetResourcePolicyRequestMarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class AIMLOptionsInputMarshaller {
+public class GetResourcePolicyRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> NATURALLANGUAGEQUERYGENERATIONOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NaturalLanguageQueryGenerationOptions").build();
+    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceArn").build();
 
-    private static final AIMLOptionsInputMarshaller instance = new AIMLOptionsInputMarshaller();
+    private static final GetResourcePolicyRequestMarshaller instance = new GetResourcePolicyRequestMarshaller();
 
-    public static AIMLOptionsInputMarshaller getInstance() {
+    public static GetResourcePolicyRequestMarshaller getInstance() {
         return instance;
     }
 
     /**
      * Marshall the given parameter object.
      */
-    public void marshall(AIMLOptionsInput aIMLOptionsInput, ProtocolMarshaller protocolMarshaller) {
+    public void marshall(GetResourcePolicyRequest getResourcePolicyRequest, ProtocolMarshaller protocolMarshaller) {
 
-        if (aIMLOptionsInput == null) {
+        if (getResourcePolicyRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            protocolMarshaller.marshall(aIMLOptionsInput.getNaturalLanguageQueryGenerationOptions(), NATURALLANGUAGEQUERYGENERATIONOPTIONS_BINDING);
+            protocolMarshaller.marshall(getResourcePolicyRequest.getResourceArn(), RESOURCEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -23,7 +23,8 @@ public enum SpotProvisioningAllocationStrategy {
     CapacityOptimized("capacity-optimized"),
     PriceCapacityOptimized("price-capacity-optimized"),
     LowestPrice("lowest-price"),
-    Diversified("diversified");
+    Diversified("diversified"),
+    CapacityOptimizedPrioritized("capacity-optimized-prioritized");
 
     private String value;
 

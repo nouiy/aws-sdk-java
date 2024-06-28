@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a WorkSpaces pool.
+ * Describes a pool of WorkSpaces.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/WorkspacesPool" target="_top">AWS API
@@ -30,13 +30,13 @@ public class WorkspacesPool implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of a WorkSpaces pool.
+     * The identifier of a pool.
      * </p>
      */
     private String poolId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the WorkSpaces pool.
+     * The Amazon Resource Name (ARN) for the pool.
      * </p>
      */
     private String poolArn;
@@ -105,11 +105,11 @@ public class WorkspacesPool implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of a WorkSpaces pool.
+     * The identifier of a pool.
      * </p>
      * 
      * @param poolId
-     *        The identifier of a WorkSpaces pool.
+     *        The identifier of a pool.
      */
 
     public void setPoolId(String poolId) {
@@ -118,10 +118,10 @@ public class WorkspacesPool implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of a WorkSpaces pool.
+     * The identifier of a pool.
      * </p>
      * 
-     * @return The identifier of a WorkSpaces pool.
+     * @return The identifier of a pool.
      */
 
     public String getPoolId() {
@@ -130,11 +130,11 @@ public class WorkspacesPool implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of a WorkSpaces pool.
+     * The identifier of a pool.
      * </p>
      * 
      * @param poolId
-     *        The identifier of a WorkSpaces pool.
+     *        The identifier of a pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,11 +145,11 @@ public class WorkspacesPool implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the WorkSpaces pool.
+     * The Amazon Resource Name (ARN) for the pool.
      * </p>
      * 
      * @param poolArn
-     *        The Amazon Resource Name (ARN) for the WorkSpaces pool.
+     *        The Amazon Resource Name (ARN) for the pool.
      */
 
     public void setPoolArn(String poolArn) {
@@ -158,10 +158,10 @@ public class WorkspacesPool implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the WorkSpaces pool.
+     * The Amazon Resource Name (ARN) for the pool.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the WorkSpaces pool.
+     * @return The Amazon Resource Name (ARN) for the pool.
      */
 
     public String getPoolArn() {
@@ -170,11 +170,11 @@ public class WorkspacesPool implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the WorkSpaces pool.
+     * The Amazon Resource Name (ARN) for the pool.
      * </p>
      * 
      * @param poolArn
-     *        The Amazon Resource Name (ARN) for the WorkSpaces pool.
+     *        The Amazon Resource Name (ARN) for the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

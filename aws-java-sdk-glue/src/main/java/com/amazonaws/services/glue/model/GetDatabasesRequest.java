@@ -70,6 +70,13 @@ public class GetDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      */
     private String resourceShareType;
+    /**
+     * <p>
+     * Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t accept an
+     * empty list. The request must include the <code>NAME</code>.
+     * </p>
+     */
+    private java.util.List<String> attributesToGet;
 
     /**
      * <p>
@@ -413,6 +420,114 @@ public class GetDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t accept an
+     * empty list. The request must include the <code>NAME</code>.
+     * </p>
+     * 
+     * @return Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t
+     *         accept an empty list. The request must include the <code>NAME</code>.
+     * @see DatabaseAttributes
+     */
+
+    public java.util.List<String> getAttributesToGet() {
+        return attributesToGet;
+    }
+
+    /**
+     * <p>
+     * Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t accept an
+     * empty list. The request must include the <code>NAME</code>.
+     * </p>
+     * 
+     * @param attributesToGet
+     *        Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t
+     *        accept an empty list. The request must include the <code>NAME</code>.
+     * @see DatabaseAttributes
+     */
+
+    public void setAttributesToGet(java.util.Collection<String> attributesToGet) {
+        if (attributesToGet == null) {
+            this.attributesToGet = null;
+            return;
+        }
+
+        this.attributesToGet = new java.util.ArrayList<String>(attributesToGet);
+    }
+
+    /**
+     * <p>
+     * Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t accept an
+     * empty list. The request must include the <code>NAME</code>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAttributesToGet(java.util.Collection)} or {@link #withAttributesToGet(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param attributesToGet
+     *        Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t
+     *        accept an empty list. The request must include the <code>NAME</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DatabaseAttributes
+     */
+
+    public GetDatabasesRequest withAttributesToGet(String... attributesToGet) {
+        if (this.attributesToGet == null) {
+            setAttributesToGet(new java.util.ArrayList<String>(attributesToGet.length));
+        }
+        for (String ele : attributesToGet) {
+            this.attributesToGet.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t accept an
+     * empty list. The request must include the <code>NAME</code>.
+     * </p>
+     * 
+     * @param attributesToGet
+     *        Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t
+     *        accept an empty list. The request must include the <code>NAME</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DatabaseAttributes
+     */
+
+    public GetDatabasesRequest withAttributesToGet(java.util.Collection<String> attributesToGet) {
+        setAttributesToGet(attributesToGet);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t accept an
+     * empty list. The request must include the <code>NAME</code>.
+     * </p>
+     * 
+     * @param attributesToGet
+     *        Specifies the database fields returned by the <code>GetDatabases</code> call. This parameter doesn’t
+     *        accept an empty list. The request must include the <code>NAME</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DatabaseAttributes
+     */
+
+    public GetDatabasesRequest withAttributesToGet(DatabaseAttributes... attributesToGet) {
+        java.util.ArrayList<String> attributesToGetCopy = new java.util.ArrayList<String>(attributesToGet.length);
+        for (DatabaseAttributes value : attributesToGet) {
+            attributesToGetCopy.add(value.toString());
+        }
+        if (getAttributesToGet() == null) {
+            setAttributesToGet(attributesToGetCopy);
+        } else {
+            getAttributesToGet().addAll(attributesToGetCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -431,7 +546,9 @@ public class GetDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getResourceShareType() != null)
-            sb.append("ResourceShareType: ").append(getResourceShareType());
+            sb.append("ResourceShareType: ").append(getResourceShareType()).append(",");
+        if (getAttributesToGet() != null)
+            sb.append("AttributesToGet: ").append(getAttributesToGet());
         sb.append("}");
         return sb.toString();
     }
@@ -462,6 +579,10 @@ public class GetDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getResourceShareType() != null && other.getResourceShareType().equals(this.getResourceShareType()) == false)
             return false;
+        if (other.getAttributesToGet() == null ^ this.getAttributesToGet() == null)
+            return false;
+        if (other.getAttributesToGet() != null && other.getAttributesToGet().equals(this.getAttributesToGet()) == false)
+            return false;
         return true;
     }
 
@@ -474,6 +595,7 @@ public class GetDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getResourceShareType() == null) ? 0 : getResourceShareType().hashCode());
+        hashCode = prime * hashCode + ((getAttributesToGet() == null) ? 0 : getAttributesToGet().hashCode());
         return hashCode;
     }
 

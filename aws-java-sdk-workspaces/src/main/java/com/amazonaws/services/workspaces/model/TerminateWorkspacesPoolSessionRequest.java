@@ -27,18 +27,18 @@ public class TerminateWorkspacesPoolSessionRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool session.
+     * The identifier of the pool session.
      * </p>
      */
     private String sessionId;
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool session.
+     * The identifier of the pool session.
      * </p>
      * 
      * @param sessionId
-     *        The identifier of the WorkSpaces pool session.
+     *        The identifier of the pool session.
      */
 
     public void setSessionId(String sessionId) {
@@ -47,10 +47,10 @@ public class TerminateWorkspacesPoolSessionRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool session.
+     * The identifier of the pool session.
      * </p>
      * 
-     * @return The identifier of the WorkSpaces pool session.
+     * @return The identifier of the pool session.
      */
 
     public String getSessionId() {
@@ -59,11 +59,11 @@ public class TerminateWorkspacesPoolSessionRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool session.
+     * The identifier of the pool session.
      * </p>
      * 
      * @param sessionId
-     *        The identifier of the WorkSpaces pool session.
+     *        The identifier of the pool session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a WorkSpaces pool session.
+ * Describes a pool session.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/WorkspacesPoolSession" target="_top">AWS
@@ -30,7 +30,7 @@ public class WorkspacesPoolSession implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0 federation
+     * The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0 federation
      * (SAML).
      * </p>
      */
@@ -86,12 +86,12 @@ public class WorkspacesPoolSession implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0 federation
+     * The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0 federation
      * (SAML).
      * </p>
      * 
      * @param authenticationType
-     *        The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0
+     *        The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0
      *        federation (SAML).
      * @see AuthenticationType
      */
@@ -102,11 +102,11 @@ public class WorkspacesPoolSession implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0 federation
+     * The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0 federation
      * (SAML).
      * </p>
      * 
-     * @return The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0
+     * @return The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0
      *         federation (SAML).
      * @see AuthenticationType
      */
@@ -117,12 +117,12 @@ public class WorkspacesPoolSession implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0 federation
+     * The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0 federation
      * (SAML).
      * </p>
      * 
      * @param authenticationType
-     *        The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0
+     *        The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0
      *        federation (SAML).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
@@ -135,12 +135,12 @@ public class WorkspacesPoolSession implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0 federation
+     * The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0 federation
      * (SAML).
      * </p>
      * 
      * @param authenticationType
-     *        The authentication method. The user is authenticated using a WorkSpaces pool URL (API) or SAML 2.0
+     *        The authentication method. The user is authenticated using a WorkSpaces Pools URL (API) or SAML 2.0
      *        federation (SAML).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType

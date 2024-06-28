@@ -26,7 +26,7 @@ public class DescribeWorkspacesPoolSessionsResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Describes the WorkSpaces pool sessions.
+     * Describes the pool sessions.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<WorkspacesPoolSession> sessions;
@@ -40,10 +40,10 @@ public class DescribeWorkspacesPoolSessionsResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Describes the WorkSpaces pool sessions.
+     * Describes the pool sessions.
      * </p>
      * 
-     * @return Describes the WorkSpaces pool sessions.
+     * @return Describes the pool sessions.
      */
 
     public java.util.List<WorkspacesPoolSession> getSessions() {
@@ -55,11 +55,11 @@ public class DescribeWorkspacesPoolSessionsResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Describes the WorkSpaces pool sessions.
+     * Describes the pool sessions.
      * </p>
      * 
      * @param sessions
-     *        Describes the WorkSpaces pool sessions.
+     *        Describes the pool sessions.
      */
 
     public void setSessions(java.util.Collection<WorkspacesPoolSession> sessions) {
@@ -73,7 +73,7 @@ public class DescribeWorkspacesPoolSessionsResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Describes the WorkSpaces pool sessions.
+     * Describes the pool sessions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +82,7 @@ public class DescribeWorkspacesPoolSessionsResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param sessions
-     *        Describes the WorkSpaces pool sessions.
+     *        Describes the pool sessions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class DescribeWorkspacesPoolSessionsResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Describes the WorkSpaces pool sessions.
+     * Describes the pool sessions.
      * </p>
      * 
      * @param sessions
-     *        Describes the WorkSpaces pool sessions.
+     *        Describes the pool sessions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

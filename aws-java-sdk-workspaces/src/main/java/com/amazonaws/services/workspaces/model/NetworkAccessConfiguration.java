@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the network details of a WorkSpaces pool.
+ * Describes the network details of a WorkSpaces Pool.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/NetworkAccessConfiguration"

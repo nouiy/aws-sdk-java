@@ -44,6 +44,8 @@ public class InstanceTypeSpecificationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EbsOptimized").build();
     private static final MarshallingInfo<String> CUSTOMAMIID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomAmiId").build();
+    private static final MarshallingInfo<Double> PRIORITY_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Priority").build();
 
     private static final InstanceTypeSpecificationMarshaller instance = new InstanceTypeSpecificationMarshaller();
 
@@ -69,6 +71,7 @@ public class InstanceTypeSpecificationMarshaller {
             protocolMarshaller.marshall(instanceTypeSpecification.getEbsBlockDevices(), EBSBLOCKDEVICES_BINDING);
             protocolMarshaller.marshall(instanceTypeSpecification.getEbsOptimized(), EBSOPTIMIZED_BINDING);
             protocolMarshaller.marshall(instanceTypeSpecification.getCustomAmiId(), CUSTOMAMIID_BINDING);
+            protocolMarshaller.marshall(instanceTypeSpecification.getPriority(), PRIORITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

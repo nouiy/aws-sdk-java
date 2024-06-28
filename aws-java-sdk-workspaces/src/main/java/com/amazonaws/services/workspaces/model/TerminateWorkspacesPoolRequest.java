@@ -27,18 +27,18 @@ public class TerminateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the pool.
      * </p>
      */
     private String poolId;
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the pool.
      * </p>
      * 
      * @param poolId
-     *        The identifier of the WorkSpaces pool.
+     *        The identifier of the pool.
      */
 
     public void setPoolId(String poolId) {
@@ -47,10 +47,10 @@ public class TerminateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the pool.
      * </p>
      * 
-     * @return The identifier of the WorkSpaces pool.
+     * @return The identifier of the pool.
      */
 
     public String getPoolId() {
@@ -59,11 +59,11 @@ public class TerminateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the pool.
      * </p>
      * 
      * @param poolId
-     *        The identifier of the WorkSpaces pool.
+     *        The identifier of the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

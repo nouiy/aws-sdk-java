@@ -10,43 +10,43 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.opensearch.model.transform;
+package com.amazonaws.services.cloudhsmv2.model.transform;
 
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.services.opensearch.model.*;
+import com.amazonaws.services.cloudhsmv2.model.*;
 
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * NaturalLanguageQueryGenerationOptionsInputMarshaller
+ * DeleteResourcePolicyRequestMarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class NaturalLanguageQueryGenerationOptionsInputMarshaller {
+public class DeleteResourcePolicyRequestMarshaller {
 
-    private static final MarshallingInfo<String> DESIREDSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredState").build();
+    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceArn").build();
 
-    private static final NaturalLanguageQueryGenerationOptionsInputMarshaller instance = new NaturalLanguageQueryGenerationOptionsInputMarshaller();
+    private static final DeleteResourcePolicyRequestMarshaller instance = new DeleteResourcePolicyRequestMarshaller();
 
-    public static NaturalLanguageQueryGenerationOptionsInputMarshaller getInstance() {
+    public static DeleteResourcePolicyRequestMarshaller getInstance() {
         return instance;
     }
 
     /**
      * Marshall the given parameter object.
      */
-    public void marshall(NaturalLanguageQueryGenerationOptionsInput naturalLanguageQueryGenerationOptionsInput, ProtocolMarshaller protocolMarshaller) {
+    public void marshall(DeleteResourcePolicyRequest deleteResourcePolicyRequest, ProtocolMarshaller protocolMarshaller) {
 
-        if (naturalLanguageQueryGenerationOptionsInput == null) {
+        if (deleteResourcePolicyRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            protocolMarshaller.marshall(naturalLanguageQueryGenerationOptionsInput.getDesiredState(), DESIREDSTATE_BINDING);
+            protocolMarshaller.marshall(deleteResourcePolicyRequest.getResourceArn(), RESOURCEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

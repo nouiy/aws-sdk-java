@@ -27,60 +27,60 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name of the WorkSpaces pool.
+     * The name of the pool.
      * </p>
      */
     private String poolName;
     /**
      * <p>
-     * The WorkSpaces pool description.
+     * The pool description.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The identifier of the bundle for the WorkSpaces pool.
+     * The identifier of the bundle for the pool.
      * </p>
      */
     private String bundleId;
     /**
      * <p>
-     * The identifier of the directory for the WorkSpaces pool.
+     * The identifier of the directory for the pool.
      * </p>
      */
     private String directoryId;
     /**
      * <p>
-     * The user capacity of the WorkSpaces pool.
+     * The user capacity of the pool.
      * </p>
      */
     private Capacity capacity;
     /**
      * <p>
-     * The tags for the WorkSpaces pool.
+     * The tags for the pool.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * Indicates the application settings of the WorkSpaces pool.
+     * Indicates the application settings of the pool.
      * </p>
      */
     private ApplicationSettingsRequest applicationSettings;
     /**
      * <p>
-     * Indicates the timeout settings of the WorkSpaces pool.
+     * Indicates the timeout settings of the pool.
      * </p>
      */
     private TimeoutSettings timeoutSettings;
 
     /**
      * <p>
-     * The name of the WorkSpaces pool.
+     * The name of the pool.
      * </p>
      * 
      * @param poolName
-     *        The name of the WorkSpaces pool.
+     *        The name of the pool.
      */
 
     public void setPoolName(String poolName) {
@@ -89,10 +89,10 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name of the WorkSpaces pool.
+     * The name of the pool.
      * </p>
      * 
-     * @return The name of the WorkSpaces pool.
+     * @return The name of the pool.
      */
 
     public String getPoolName() {
@@ -101,11 +101,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name of the WorkSpaces pool.
+     * The name of the pool.
      * </p>
      * 
      * @param poolName
-     *        The name of the WorkSpaces pool.
+     *        The name of the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,11 +116,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The WorkSpaces pool description.
+     * The pool description.
      * </p>
      * 
      * @param description
-     *        The WorkSpaces pool description.
+     *        The pool description.
      */
 
     public void setDescription(String description) {
@@ -129,10 +129,10 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The WorkSpaces pool description.
+     * The pool description.
      * </p>
      * 
-     * @return The WorkSpaces pool description.
+     * @return The pool description.
      */
 
     public String getDescription() {
@@ -141,11 +141,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The WorkSpaces pool description.
+     * The pool description.
      * </p>
      * 
      * @param description
-     *        The WorkSpaces pool description.
+     *        The pool description.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,11 +156,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the bundle for the WorkSpaces pool.
+     * The identifier of the bundle for the pool.
      * </p>
      * 
      * @param bundleId
-     *        The identifier of the bundle for the WorkSpaces pool.
+     *        The identifier of the bundle for the pool.
      */
 
     public void setBundleId(String bundleId) {
@@ -169,10 +169,10 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the bundle for the WorkSpaces pool.
+     * The identifier of the bundle for the pool.
      * </p>
      * 
-     * @return The identifier of the bundle for the WorkSpaces pool.
+     * @return The identifier of the bundle for the pool.
      */
 
     public String getBundleId() {
@@ -181,11 +181,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the bundle for the WorkSpaces pool.
+     * The identifier of the bundle for the pool.
      * </p>
      * 
      * @param bundleId
-     *        The identifier of the bundle for the WorkSpaces pool.
+     *        The identifier of the bundle for the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,11 +196,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the directory for the WorkSpaces pool.
+     * The identifier of the directory for the pool.
      * </p>
      * 
      * @param directoryId
-     *        The identifier of the directory for the WorkSpaces pool.
+     *        The identifier of the directory for the pool.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -209,10 +209,10 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the directory for the WorkSpaces pool.
+     * The identifier of the directory for the pool.
      * </p>
      * 
-     * @return The identifier of the directory for the WorkSpaces pool.
+     * @return The identifier of the directory for the pool.
      */
 
     public String getDirectoryId() {
@@ -221,11 +221,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier of the directory for the WorkSpaces pool.
+     * The identifier of the directory for the pool.
      * </p>
      * 
      * @param directoryId
-     *        The identifier of the directory for the WorkSpaces pool.
+     *        The identifier of the directory for the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,11 +236,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The user capacity of the WorkSpaces pool.
+     * The user capacity of the pool.
      * </p>
      * 
      * @param capacity
-     *        The user capacity of the WorkSpaces pool.
+     *        The user capacity of the pool.
      */
 
     public void setCapacity(Capacity capacity) {
@@ -249,10 +249,10 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The user capacity of the WorkSpaces pool.
+     * The user capacity of the pool.
      * </p>
      * 
-     * @return The user capacity of the WorkSpaces pool.
+     * @return The user capacity of the pool.
      */
 
     public Capacity getCapacity() {
@@ -261,11 +261,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The user capacity of the WorkSpaces pool.
+     * The user capacity of the pool.
      * </p>
      * 
      * @param capacity
-     *        The user capacity of the WorkSpaces pool.
+     *        The user capacity of the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -276,10 +276,10 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The tags for the WorkSpaces pool.
+     * The tags for the pool.
      * </p>
      * 
-     * @return The tags for the WorkSpaces pool.
+     * @return The tags for the pool.
      */
 
     public java.util.List<Tag> getTags() {
@@ -291,11 +291,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The tags for the WorkSpaces pool.
+     * The tags for the pool.
      * </p>
      * 
      * @param tags
-     *        The tags for the WorkSpaces pool.
+     *        The tags for the pool.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -309,7 +309,7 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The tags for the WorkSpaces pool.
+     * The tags for the pool.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -318,7 +318,7 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param tags
-     *        The tags for the WorkSpaces pool.
+     *        The tags for the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -334,11 +334,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The tags for the WorkSpaces pool.
+     * The tags for the pool.
      * </p>
      * 
      * @param tags
-     *        The tags for the WorkSpaces pool.
+     *        The tags for the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -349,11 +349,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the application settings of the WorkSpaces pool.
+     * Indicates the application settings of the pool.
      * </p>
      * 
      * @param applicationSettings
-     *        Indicates the application settings of the WorkSpaces pool.
+     *        Indicates the application settings of the pool.
      */
 
     public void setApplicationSettings(ApplicationSettingsRequest applicationSettings) {
@@ -362,10 +362,10 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the application settings of the WorkSpaces pool.
+     * Indicates the application settings of the pool.
      * </p>
      * 
-     * @return Indicates the application settings of the WorkSpaces pool.
+     * @return Indicates the application settings of the pool.
      */
 
     public ApplicationSettingsRequest getApplicationSettings() {
@@ -374,11 +374,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the application settings of the WorkSpaces pool.
+     * Indicates the application settings of the pool.
      * </p>
      * 
      * @param applicationSettings
-     *        Indicates the application settings of the WorkSpaces pool.
+     *        Indicates the application settings of the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -389,11 +389,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the timeout settings of the WorkSpaces pool.
+     * Indicates the timeout settings of the pool.
      * </p>
      * 
      * @param timeoutSettings
-     *        Indicates the timeout settings of the WorkSpaces pool.
+     *        Indicates the timeout settings of the pool.
      */
 
     public void setTimeoutSettings(TimeoutSettings timeoutSettings) {
@@ -402,10 +402,10 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the timeout settings of the WorkSpaces pool.
+     * Indicates the timeout settings of the pool.
      * </p>
      * 
-     * @return Indicates the timeout settings of the WorkSpaces pool.
+     * @return Indicates the timeout settings of the pool.
      */
 
     public TimeoutSettings getTimeoutSettings() {
@@ -414,11 +414,11 @@ public class CreateWorkspacesPoolRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Indicates the timeout settings of the WorkSpaces pool.
+     * Indicates the timeout settings of the pool.
      * </p>
      * 
      * @param timeoutSettings
-     *        Indicates the timeout settings of the WorkSpaces pool.
+     *        Indicates the timeout settings of the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

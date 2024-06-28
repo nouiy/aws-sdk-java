@@ -29,7 +29,8 @@ public enum RuntimeEnvironment {
     ZEPPELINFLINK2_0("ZEPPELIN-FLINK-2_0"),
     FLINK1_15("FLINK-1_15"),
     ZEPPELINFLINK3_0("ZEPPELIN-FLINK-3_0"),
-    FLINK1_18("FLINK-1_18");
+    FLINK1_18("FLINK-1_18"),
+    FLINK1_19("FLINK-1_19");
 
     private String value;
 

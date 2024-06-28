@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.opensearch.model.transform;
+package com.amazonaws.services.connect.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.opensearch.model.*;
+import com.amazonaws.services.connect.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * AIMLOptionsInput JSON Unmarshaller
+ * AgentsCriteria JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class AIMLOptionsInputJsonUnmarshaller implements Unmarshaller<AIMLOptionsInput, JsonUnmarshallerContext> {
+public class AgentsCriteriaJsonUnmarshaller implements Unmarshaller<AgentsCriteria, JsonUnmarshallerContext> {
 
-    public AIMLOptionsInput unmarshall(JsonUnmarshallerContext context) throws Exception {
-        AIMLOptionsInput aIMLOptionsInput = new AIMLOptionsInput();
+    public AgentsCriteria unmarshall(JsonUnmarshallerContext context) throws Exception {
+        AgentsCriteria agentsCriteria = new AgentsCriteria();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -48,10 +48,11 @@ public class AIMLOptionsInputJsonUnmarshaller implements Unmarshaller<AIMLOption
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("NaturalLanguageQueryGenerationOptions", targetDepth)) {
+                if (context.testExpression("AgentIds", targetDepth)) {
                     context.nextToken();
-                    aIMLOptionsInput.setNaturalLanguageQueryGenerationOptions(NaturalLanguageQueryGenerationOptionsInputJsonUnmarshaller.getInstance()
-                            .unmarshall(context));
+                    agentsCriteria.setAgentIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -62,14 +63,14 @@ public class AIMLOptionsInputJsonUnmarshaller implements Unmarshaller<AIMLOption
             token = context.nextToken();
         }
 
-        return aIMLOptionsInput;
+        return agentsCriteria;
     }
 
-    private static AIMLOptionsInputJsonUnmarshaller instance;
+    private static AgentsCriteriaJsonUnmarshaller instance;
 
-    public static AIMLOptionsInputJsonUnmarshaller getInstance() {
+    public static AgentsCriteriaJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new AIMLOptionsInputJsonUnmarshaller();
+            instance = new AgentsCriteriaJsonUnmarshaller();
         return instance;
     }
 }

@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.opensearch.model.transform;
+package com.amazonaws.services.cloudhsmv2.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.opensearch.model.*;
+import com.amazonaws.services.cloudhsmv2.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * AIMLOptionsStatus JSON Unmarshaller
+ * PutResourcePolicyResult JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class AIMLOptionsStatusJsonUnmarshaller implements Unmarshaller<AIMLOptionsStatus, JsonUnmarshallerContext> {
+public class PutResourcePolicyResultJsonUnmarshaller implements Unmarshaller<PutResourcePolicyResult, JsonUnmarshallerContext> {
 
-    public AIMLOptionsStatus unmarshall(JsonUnmarshallerContext context) throws Exception {
-        AIMLOptionsStatus aIMLOptionsStatus = new AIMLOptionsStatus();
+    public PutResourcePolicyResult unmarshall(JsonUnmarshallerContext context) throws Exception {
+        PutResourcePolicyResult putResourcePolicyResult = new PutResourcePolicyResult();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -40,7 +40,7 @@ public class AIMLOptionsStatusJsonUnmarshaller implements Unmarshaller<AIMLOptio
         if (token == null)
             token = context.nextToken();
         if (token == VALUE_NULL) {
-            return null;
+            return putResourcePolicyResult;
         }
 
         while (true) {
@@ -48,13 +48,13 @@ public class AIMLOptionsStatusJsonUnmarshaller implements Unmarshaller<AIMLOptio
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Options", targetDepth)) {
+                if (context.testExpression("ResourceArn", targetDepth)) {
                     context.nextToken();
-                    aIMLOptionsStatus.setOptions(AIMLOptionsOutputJsonUnmarshaller.getInstance().unmarshall(context));
+                    putResourcePolicyResult.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("Status", targetDepth)) {
+                if (context.testExpression("Policy", targetDepth)) {
                     context.nextToken();
-                    aIMLOptionsStatus.setStatus(OptionStatusJsonUnmarshaller.getInstance().unmarshall(context));
+                    putResourcePolicyResult.setPolicy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -65,14 +65,14 @@ public class AIMLOptionsStatusJsonUnmarshaller implements Unmarshaller<AIMLOptio
             token = context.nextToken();
         }
 
-        return aIMLOptionsStatus;
+        return putResourcePolicyResult;
     }
 
-    private static AIMLOptionsStatusJsonUnmarshaller instance;
+    private static PutResourcePolicyResultJsonUnmarshaller instance;
 
-    public static AIMLOptionsStatusJsonUnmarshaller getInstance() {
+    public static PutResourcePolicyResultJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new AIMLOptionsStatusJsonUnmarshaller();
+            instance = new PutResourcePolicyResultJsonUnmarshaller();
         return instance;
     }
 }

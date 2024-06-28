@@ -25,18 +25,18 @@ public class CreateWorkspacesPoolResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Indicates the WorkSpaces pool to create.
+     * Indicates the pool to create.
      * </p>
      */
     private WorkspacesPool workspacesPool;
 
     /**
      * <p>
-     * Indicates the WorkSpaces pool to create.
+     * Indicates the pool to create.
      * </p>
      * 
      * @param workspacesPool
-     *        Indicates the WorkSpaces pool to create.
+     *        Indicates the pool to create.
      */
 
     public void setWorkspacesPool(WorkspacesPool workspacesPool) {
@@ -45,10 +45,10 @@ public class CreateWorkspacesPoolResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Indicates the WorkSpaces pool to create.
+     * Indicates the pool to create.
      * </p>
      * 
-     * @return Indicates the WorkSpaces pool to create.
+     * @return Indicates the pool to create.
      */
 
     public WorkspacesPool getWorkspacesPool() {
@@ -57,11 +57,11 @@ public class CreateWorkspacesPoolResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Indicates the WorkSpaces pool to create.
+     * Indicates the pool to create.
      * </p>
      * 
      * @param workspacesPool
-     *        Indicates the WorkSpaces pool to create.
+     *        Indicates the pool to create.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,13 +27,13 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the WorkSpaces Pools.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> poolIds;
     /**
      * <p>
-     * The filter conditions for the WorkSpaces pool to return.
+     * The filter conditions for the WorkSpaces Pool to return.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<DescribeWorkspacesPoolsFilter> filters;
@@ -53,10 +53,10 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the WorkSpaces Pools.
      * </p>
      * 
-     * @return The identifier of the WorkSpaces pool.
+     * @return The identifier of the WorkSpaces Pools.
      */
 
     public java.util.List<String> getPoolIds() {
@@ -68,11 +68,11 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the WorkSpaces Pools.
      * </p>
      * 
      * @param poolIds
-     *        The identifier of the WorkSpaces pool.
+     *        The identifier of the WorkSpaces Pools.
      */
 
     public void setPoolIds(java.util.Collection<String> poolIds) {
@@ -86,7 +86,7 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the WorkSpaces Pools.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -95,7 +95,7 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param poolIds
-     *        The identifier of the WorkSpaces pool.
+     *        The identifier of the WorkSpaces Pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,11 +111,11 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the WorkSpaces pool.
+     * The identifier of the WorkSpaces Pools.
      * </p>
      * 
      * @param poolIds
-     *        The identifier of the WorkSpaces pool.
+     *        The identifier of the WorkSpaces Pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,10 +126,10 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The filter conditions for the WorkSpaces pool to return.
+     * The filter conditions for the WorkSpaces Pool to return.
      * </p>
      * 
-     * @return The filter conditions for the WorkSpaces pool to return.
+     * @return The filter conditions for the WorkSpaces Pool to return.
      */
 
     public java.util.List<DescribeWorkspacesPoolsFilter> getFilters() {
@@ -141,11 +141,11 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The filter conditions for the WorkSpaces pool to return.
+     * The filter conditions for the WorkSpaces Pool to return.
      * </p>
      * 
      * @param filters
-     *        The filter conditions for the WorkSpaces pool to return.
+     *        The filter conditions for the WorkSpaces Pool to return.
      */
 
     public void setFilters(java.util.Collection<DescribeWorkspacesPoolsFilter> filters) {
@@ -159,7 +159,7 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The filter conditions for the WorkSpaces pool to return.
+     * The filter conditions for the WorkSpaces Pool to return.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -168,7 +168,7 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param filters
-     *        The filter conditions for the WorkSpaces pool to return.
+     *        The filter conditions for the WorkSpaces Pool to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,11 +184,11 @@ public class DescribeWorkspacesPoolsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The filter conditions for the WorkSpaces pool to return.
+     * The filter conditions for the WorkSpaces Pool to return.
      * </p>
      * 
      * @param filters
-     *        The filter conditions for the WorkSpaces pool to return.
+     *        The filter conditions for the WorkSpaces Pool to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

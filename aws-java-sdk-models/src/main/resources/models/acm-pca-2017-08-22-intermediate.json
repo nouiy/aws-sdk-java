@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -22883,6 +22883,9 @@
       }, {
         "name" : "EC_secp384r1",
         "value" : "EC_secp384r1"
+      }, {
+        "name" : "SM2",
+        "value" : "SM2"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.acmpca.enum.KeyAlgorithm",
@@ -22933,6 +22936,9 @@
       }, {
         "name" : "FIPS_140_2_LEVEL_3_OR_HIGHER",
         "value" : "FIPS_140_2_LEVEL_3_OR_HIGHER"
+      }, {
+        "name" : "CCPC_LEVEL_1_OR_HIGHER",
+        "value" : "CCPC_LEVEL_1_OR_HIGHER"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.acmpca.enum.KeyStorageSecurityStandard",
@@ -31873,6 +31879,9 @@
       }, {
         "name" : "SHA512WITHRSA",
         "value" : "SHA512WITHRSA"
+      }, {
+        "name" : "SM3WITHSM2",
+        "value" : "SM3WITHSM2"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.acmpca.enum.SigningAlgorithm",

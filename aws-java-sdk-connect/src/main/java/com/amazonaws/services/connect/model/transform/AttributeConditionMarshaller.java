@@ -33,6 +33,8 @@ public class AttributeConditionMarshaller {
             .marshallLocationName("Value").build();
     private static final MarshallingInfo<Float> PROFICIENCYLEVEL_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProficiencyLevel").build();
+    private static final MarshallingInfo<StructuredPojo> MATCHCRITERIA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MatchCriteria").build();
     private static final MarshallingInfo<String> COMPARISONOPERATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComparisonOperator").build();
 
@@ -55,6 +57,7 @@ public class AttributeConditionMarshaller {
             protocolMarshaller.marshall(attributeCondition.getName(), NAME_BINDING);
             protocolMarshaller.marshall(attributeCondition.getValue(), VALUE_BINDING);
             protocolMarshaller.marshall(attributeCondition.getProficiencyLevel(), PROFICIENCYLEVEL_BINDING);
+            protocolMarshaller.marshall(attributeCondition.getMatchCriteria(), MATCHCRITERIA_BINDING);
             protocolMarshaller.marshall(attributeCondition.getComparisonOperator(), COMPARISONOPERATOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

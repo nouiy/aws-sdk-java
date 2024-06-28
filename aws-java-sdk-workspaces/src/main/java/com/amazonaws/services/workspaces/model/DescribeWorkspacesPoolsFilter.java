@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the filter conditions for the WorkSpaces pool to return.
+ * Describes the filter conditions for WorkSpaces Pools to return.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspacesPoolsFilter"
@@ -36,13 +36,13 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
     private String name;
     /**
      * <p>
-     * The values for filtering WorkSpaces pools.
+     * The values for filtering WorkSpaces Pools.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> values;
     /**
      * <p>
-     * The operator values for filtering WorkSpaces pools.
+     * The operator values for filtering WorkSpaces Pools.
      * </p>
      */
     private String operator;
@@ -108,10 +108,10 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The values for filtering WorkSpaces pools.
+     * The values for filtering WorkSpaces Pools.
      * </p>
      * 
-     * @return The values for filtering WorkSpaces pools.
+     * @return The values for filtering WorkSpaces Pools.
      */
 
     public java.util.List<String> getValues() {
@@ -123,11 +123,11 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The values for filtering WorkSpaces pools.
+     * The values for filtering WorkSpaces Pools.
      * </p>
      * 
      * @param values
-     *        The values for filtering WorkSpaces pools.
+     *        The values for filtering WorkSpaces Pools.
      */
 
     public void setValues(java.util.Collection<String> values) {
@@ -141,7 +141,7 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The values for filtering WorkSpaces pools.
+     * The values for filtering WorkSpaces Pools.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -150,7 +150,7 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
      * </p>
      * 
      * @param values
-     *        The values for filtering WorkSpaces pools.
+     *        The values for filtering WorkSpaces Pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,11 +166,11 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The values for filtering WorkSpaces pools.
+     * The values for filtering WorkSpaces Pools.
      * </p>
      * 
      * @param values
-     *        The values for filtering WorkSpaces pools.
+     *        The values for filtering WorkSpaces Pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -181,11 +181,11 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The operator values for filtering WorkSpaces pools.
+     * The operator values for filtering WorkSpaces Pools.
      * </p>
      * 
      * @param operator
-     *        The operator values for filtering WorkSpaces pools.
+     *        The operator values for filtering WorkSpaces Pools.
      * @see DescribeWorkspacesPoolsFilterOperator
      */
 
@@ -195,10 +195,10 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The operator values for filtering WorkSpaces pools.
+     * The operator values for filtering WorkSpaces Pools.
      * </p>
      * 
-     * @return The operator values for filtering WorkSpaces pools.
+     * @return The operator values for filtering WorkSpaces Pools.
      * @see DescribeWorkspacesPoolsFilterOperator
      */
 
@@ -208,11 +208,11 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The operator values for filtering WorkSpaces pools.
+     * The operator values for filtering WorkSpaces Pools.
      * </p>
      * 
      * @param operator
-     *        The operator values for filtering WorkSpaces pools.
+     *        The operator values for filtering WorkSpaces Pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DescribeWorkspacesPoolsFilterOperator
      */
@@ -224,11 +224,11 @@ public class DescribeWorkspacesPoolsFilter implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The operator values for filtering WorkSpaces pools.
+     * The operator values for filtering WorkSpaces Pools.
      * </p>
      * 
      * @param operator
-     *        The operator values for filtering WorkSpaces pools.
+     *        The operator values for filtering WorkSpaces Pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DescribeWorkspacesPoolsFilterOperator
      */

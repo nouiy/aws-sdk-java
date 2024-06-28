@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.opensearch.model.transform;
+package com.amazonaws.services.cloudhsmv2.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.opensearch.model.*;
+import com.amazonaws.services.cloudhsmv2.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * AIMLOptionsOutput JSON Unmarshaller
+ * DeleteResourcePolicyResult JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class AIMLOptionsOutputJsonUnmarshaller implements Unmarshaller<AIMLOptionsOutput, JsonUnmarshallerContext> {
+public class DeleteResourcePolicyResultJsonUnmarshaller implements Unmarshaller<DeleteResourcePolicyResult, JsonUnmarshallerContext> {
 
-    public AIMLOptionsOutput unmarshall(JsonUnmarshallerContext context) throws Exception {
-        AIMLOptionsOutput aIMLOptionsOutput = new AIMLOptionsOutput();
+    public DeleteResourcePolicyResult unmarshall(JsonUnmarshallerContext context) throws Exception {
+        DeleteResourcePolicyResult deleteResourcePolicyResult = new DeleteResourcePolicyResult();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -40,7 +40,7 @@ public class AIMLOptionsOutputJsonUnmarshaller implements Unmarshaller<AIMLOptio
         if (token == null)
             token = context.nextToken();
         if (token == VALUE_NULL) {
-            return null;
+            return deleteResourcePolicyResult;
         }
 
         while (true) {
@@ -48,10 +48,13 @@ public class AIMLOptionsOutputJsonUnmarshaller implements Unmarshaller<AIMLOptio
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("NaturalLanguageQueryGenerationOptions", targetDepth)) {
+                if (context.testExpression("ResourceArn", targetDepth)) {
                     context.nextToken();
-                    aIMLOptionsOutput.setNaturalLanguageQueryGenerationOptions(NaturalLanguageQueryGenerationOptionsOutputJsonUnmarshaller.getInstance()
-                            .unmarshall(context));
+                    deleteResourcePolicyResult.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Policy", targetDepth)) {
+                    context.nextToken();
+                    deleteResourcePolicyResult.setPolicy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -62,14 +65,14 @@ public class AIMLOptionsOutputJsonUnmarshaller implements Unmarshaller<AIMLOptio
             token = context.nextToken();
         }
 
-        return aIMLOptionsOutput;
+        return deleteResourcePolicyResult;
     }
 
-    private static AIMLOptionsOutputJsonUnmarshaller instance;
+    private static DeleteResourcePolicyResultJsonUnmarshaller instance;
 
-    public static AIMLOptionsOutputJsonUnmarshaller getInstance() {
+    public static DeleteResourcePolicyResultJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new AIMLOptionsOutputJsonUnmarshaller();
+            instance = new DeleteResourcePolicyResultJsonUnmarshaller();
         return instance;
     }
 }

@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.opensearch.model.transform;
+package com.amazonaws.services.cloudhsmv2.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.opensearch.model.*;
+import com.amazonaws.services.cloudhsmv2.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,14 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * NaturalLanguageQueryGenerationOptionsOutput JSON Unmarshaller
+ * GetResourcePolicyResult JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class NaturalLanguageQueryGenerationOptionsOutputJsonUnmarshaller implements
-        Unmarshaller<NaturalLanguageQueryGenerationOptionsOutput, JsonUnmarshallerContext> {
+public class GetResourcePolicyResultJsonUnmarshaller implements Unmarshaller<GetResourcePolicyResult, JsonUnmarshallerContext> {
 
-    public NaturalLanguageQueryGenerationOptionsOutput unmarshall(JsonUnmarshallerContext context) throws Exception {
-        NaturalLanguageQueryGenerationOptionsOutput naturalLanguageQueryGenerationOptionsOutput = new NaturalLanguageQueryGenerationOptionsOutput();
+    public GetResourcePolicyResult unmarshall(JsonUnmarshallerContext context) throws Exception {
+        GetResourcePolicyResult getResourcePolicyResult = new GetResourcePolicyResult();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -41,7 +40,7 @@ public class NaturalLanguageQueryGenerationOptionsOutputJsonUnmarshaller impleme
         if (token == null)
             token = context.nextToken();
         if (token == VALUE_NULL) {
-            return null;
+            return getResourcePolicyResult;
         }
 
         while (true) {
@@ -49,13 +48,9 @@ public class NaturalLanguageQueryGenerationOptionsOutputJsonUnmarshaller impleme
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("DesiredState", targetDepth)) {
+                if (context.testExpression("Policy", targetDepth)) {
                     context.nextToken();
-                    naturalLanguageQueryGenerationOptionsOutput.setDesiredState(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("CurrentState", targetDepth)) {
-                    context.nextToken();
-                    naturalLanguageQueryGenerationOptionsOutput.setCurrentState(context.getUnmarshaller(String.class).unmarshall(context));
+                    getResourcePolicyResult.setPolicy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -66,14 +61,14 @@ public class NaturalLanguageQueryGenerationOptionsOutputJsonUnmarshaller impleme
             token = context.nextToken();
         }
 
-        return naturalLanguageQueryGenerationOptionsOutput;
+        return getResourcePolicyResult;
     }
 
-    private static NaturalLanguageQueryGenerationOptionsOutputJsonUnmarshaller instance;
+    private static GetResourcePolicyResultJsonUnmarshaller instance;
 
-    public static NaturalLanguageQueryGenerationOptionsOutputJsonUnmarshaller getInstance() {
+    public static GetResourcePolicyResultJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new NaturalLanguageQueryGenerationOptionsOutputJsonUnmarshaller();
+            instance = new GetResourcePolicyResultJsonUnmarshaller();
         return instance;
     }
 }

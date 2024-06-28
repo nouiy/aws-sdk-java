@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about a backup of an AWS CloudHSM cluster. All backup objects contain the <code>BackupId</code>,
+ * Contains information about a backup of an CloudHSM cluster. All backup objects contain the <code>BackupId</code>,
  * <code>BackupState</code>, <code>ClusterId</code>, and <code>CreateTimestamp</code> parameters. Backups that were
  * copied into a destination region additionally contain the <code>CopyTimestamp</code>, <code>SourceBackup</code>,
  * <code>SourceCluster</code>, and <code>SourceRegion</code> parameters. A backup that is pending deletion will include
@@ -38,6 +38,12 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String backupId;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the backup.
+     * </p>
+     */
+    private String backupArn;
     /**
      * <p>
      * The state of the backup.
@@ -102,7 +108,7 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<Tag> tagList;
     /**
      * <p>
-     * The HSM type of the cluster that was backed up.
+     * The HSM type used to create the backup.
      * </p>
      */
     private String hsmType;
@@ -150,6 +156,46 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
 
     public Backup withBackupId(String backupId) {
         setBackupId(backupId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the backup.
+     * </p>
+     * 
+     * @param backupArn
+     *        The Amazon Resource Name (ARN) of the backup.
+     */
+
+    public void setBackupArn(String backupArn) {
+        this.backupArn = backupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the backup.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the backup.
+     */
+
+    public String getBackupArn() {
+        return this.backupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the backup.
+     * </p>
+     * 
+     * @param backupArn
+     *        The Amazon Resource Name (ARN) of the backup.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Backup withBackupArn(String backupArn) {
+        setBackupArn(backupArn);
         return this;
     }
 
@@ -632,11 +678,11 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The HSM type of the cluster that was backed up.
+     * The HSM type used to create the backup.
      * </p>
      * 
      * @param hsmType
-     *        The HSM type of the cluster that was backed up.
+     *        The HSM type used to create the backup.
      */
 
     public void setHsmType(String hsmType) {
@@ -645,10 +691,10 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The HSM type of the cluster that was backed up.
+     * The HSM type used to create the backup.
      * </p>
      * 
-     * @return The HSM type of the cluster that was backed up.
+     * @return The HSM type used to create the backup.
      */
 
     public String getHsmType() {
@@ -657,11 +703,11 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The HSM type of the cluster that was backed up.
+     * The HSM type used to create the backup.
      * </p>
      * 
      * @param hsmType
-     *        The HSM type of the cluster that was backed up.
+     *        The HSM type used to create the backup.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -743,6 +789,8 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getBackupId() != null)
             sb.append("BackupId: ").append(getBackupId()).append(",");
+        if (getBackupArn() != null)
+            sb.append("BackupArn: ").append(getBackupArn()).append(",");
         if (getBackupState() != null)
             sb.append("BackupState: ").append(getBackupState()).append(",");
         if (getClusterId() != null)
@@ -784,6 +832,10 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
         if (other.getBackupId() == null ^ this.getBackupId() == null)
             return false;
         if (other.getBackupId() != null && other.getBackupId().equals(this.getBackupId()) == false)
+            return false;
+        if (other.getBackupArn() == null ^ this.getBackupArn() == null)
+            return false;
+        if (other.getBackupArn() != null && other.getBackupArn().equals(this.getBackupArn()) == false)
             return false;
         if (other.getBackupState() == null ^ this.getBackupState() == null)
             return false;
@@ -842,6 +894,7 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getBackupId() == null) ? 0 : getBackupId().hashCode());
+        hashCode = prime * hashCode + ((getBackupArn() == null) ? 0 : getBackupArn().hashCode());
         hashCode = prime * hashCode + ((getBackupState() == null) ? 0 : getBackupState().hashCode());
         hashCode = prime * hashCode + ((getClusterId() == null) ? 0 : getClusterId().hashCode());
         hashCode = prime * hashCode + ((getCreateTimestamp() == null) ? 0 : getCreateTimestamp().hashCode());

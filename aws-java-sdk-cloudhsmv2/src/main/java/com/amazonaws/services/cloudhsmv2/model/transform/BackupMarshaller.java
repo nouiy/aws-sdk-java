@@ -30,6 +30,8 @@ public class BackupMarshaller {
 
     private static final MarshallingInfo<String> BACKUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("BackupId").build();
+    private static final MarshallingInfo<String> BACKUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("BackupArn").build();
     private static final MarshallingInfo<String> BACKUPSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BackupState").build();
     private static final MarshallingInfo<String> CLUSTERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -72,6 +74,7 @@ public class BackupMarshaller {
 
         try {
             protocolMarshaller.marshall(backup.getBackupId(), BACKUPID_BINDING);
+            protocolMarshaller.marshall(backup.getBackupArn(), BACKUPARN_BINDING);
             protocolMarshaller.marshall(backup.getBackupState(), BACKUPSTATE_BINDING);
             protocolMarshaller.marshall(backup.getClusterId(), CLUSTERID_BINDING);
             protocolMarshaller.marshall(backup.getCreateTimestamp(), CREATETIMESTAMP_BINDING);
