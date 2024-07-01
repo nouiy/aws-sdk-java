@@ -48,14 +48,6 @@ public class SessionKeyDerivationJsonUnmarshaller implements Unmarshaller<Sessio
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Amex", targetDepth)) {
-                    context.nextToken();
-                    sessionKeyDerivation.setAmex(SessionKeyAmexJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("Emv2000", targetDepth)) {
-                    context.nextToken();
-                    sessionKeyDerivation.setEmv2000(SessionKeyEmv2000JsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("EmvCommon", targetDepth)) {
                     context.nextToken();
                     sessionKeyDerivation.setEmvCommon(SessionKeyEmvCommonJsonUnmarshaller.getInstance().unmarshall(context));
@@ -63,6 +55,14 @@ public class SessionKeyDerivationJsonUnmarshaller implements Unmarshaller<Sessio
                 if (context.testExpression("Mastercard", targetDepth)) {
                     context.nextToken();
                     sessionKeyDerivation.setMastercard(SessionKeyMastercardJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Emv2000", targetDepth)) {
+                    context.nextToken();
+                    sessionKeyDerivation.setEmv2000(SessionKeyEmv2000JsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Amex", targetDepth)) {
+                    context.nextToken();
+                    sessionKeyDerivation.setAmex(SessionKeyAmexJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("Visa", targetDepth)) {
                     context.nextToken();

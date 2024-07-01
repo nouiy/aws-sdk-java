@@ -48,10 +48,6 @@ public class DiscoverDynamicCardVerificationCodeJsonUnmarshaller implements Unma
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
-                    context.nextToken();
-                    discoverDynamicCardVerificationCode.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("CardExpiryDate", targetDepth)) {
                     context.nextToken();
                     discoverDynamicCardVerificationCode.setCardExpiryDate(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class DiscoverDynamicCardVerificationCodeJsonUnmarshaller implements Unma
                 if (context.testExpression("UnpredictableNumber", targetDepth)) {
                     context.nextToken();
                     discoverDynamicCardVerificationCode.setUnpredictableNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
+                    context.nextToken();
+                    discoverDynamicCardVerificationCode.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

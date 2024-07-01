@@ -36,17 +36,17 @@ public class MacAlgorithmEmv implements Serializable, Cloneable, StructuredPojo 
     private String majorKeyDerivationMode;
     /**
      * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     */
-    private String panSequenceNumber;
-    /**
-     * <p>
      * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
      * to a specific account holder.
      * </p>
      */
     private String primaryAccountNumber;
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     */
+    private String panSequenceNumber;
     /**
      * <p>
      * The method of deriving a session key for EMV MAC generation or verification.
@@ -121,46 +121,6 @@ public class MacAlgorithmEmv implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     */
-
-    public void setPanSequenceNumber(String panSequenceNumber) {
-        this.panSequenceNumber = panSequenceNumber;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     */
-
-    public String getPanSequenceNumber() {
-        return this.panSequenceNumber;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public MacAlgorithmEmv withPanSequenceNumber(String panSequenceNumber) {
-        setPanSequenceNumber(panSequenceNumber);
-        return this;
-    }
-
-    /**
-     * <p>
      * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
      * to a specific account holder.
      * </p>
@@ -202,6 +162,46 @@ public class MacAlgorithmEmv implements Serializable, Cloneable, StructuredPojo 
 
     public MacAlgorithmEmv withPrimaryAccountNumber(String primaryAccountNumber) {
         setPrimaryAccountNumber(primaryAccountNumber);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     */
+
+    public void setPanSequenceNumber(String panSequenceNumber) {
+        this.panSequenceNumber = panSequenceNumber;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     */
+
+    public String getPanSequenceNumber() {
+        return this.panSequenceNumber;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MacAlgorithmEmv withPanSequenceNumber(String panSequenceNumber) {
+        setPanSequenceNumber(panSequenceNumber);
         return this;
     }
 
@@ -318,10 +318,10 @@ public class MacAlgorithmEmv implements Serializable, Cloneable, StructuredPojo 
         sb.append("{");
         if (getMajorKeyDerivationMode() != null)
             sb.append("MajorKeyDerivationMode: ").append(getMajorKeyDerivationMode()).append(",");
-        if (getPanSequenceNumber() != null)
-            sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
         if (getPrimaryAccountNumber() != null)
             sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPanSequenceNumber() != null)
+            sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
         if (getSessionKeyDerivationMode() != null)
             sb.append("SessionKeyDerivationMode: ").append(getSessionKeyDerivationMode()).append(",");
         if (getSessionKeyDerivationValue() != null)
@@ -344,13 +344,13 @@ public class MacAlgorithmEmv implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getMajorKeyDerivationMode() != null && other.getMajorKeyDerivationMode().equals(this.getMajorKeyDerivationMode()) == false)
             return false;
-        if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
-            return false;
-        if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
-            return false;
         if (other.getPrimaryAccountNumber() == null ^ this.getPrimaryAccountNumber() == null)
             return false;
         if (other.getPrimaryAccountNumber() != null && other.getPrimaryAccountNumber().equals(this.getPrimaryAccountNumber()) == false)
+            return false;
+        if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
+            return false;
+        if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
             return false;
         if (other.getSessionKeyDerivationMode() == null ^ this.getSessionKeyDerivationMode() == null)
             return false;
@@ -369,8 +369,8 @@ public class MacAlgorithmEmv implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getMajorKeyDerivationMode() == null) ? 0 : getMajorKeyDerivationMode().hashCode());
-        hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
         hashCode = prime * hashCode + ((getPrimaryAccountNumber() == null) ? 0 : getPrimaryAccountNumber().hashCode());
+        hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
         hashCode = prime * hashCode + ((getSessionKeyDerivationMode() == null) ? 0 : getSessionKeyDerivationMode().hashCode());
         hashCode = prime * hashCode + ((getSessionKeyDerivationValue() == null) ? 0 : getSessionKeyDerivationValue().hashCode());
         return hashCode;

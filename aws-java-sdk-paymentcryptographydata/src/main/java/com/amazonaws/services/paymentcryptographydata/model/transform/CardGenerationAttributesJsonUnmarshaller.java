@@ -56,10 +56,6 @@ public class CardGenerationAttributesJsonUnmarshaller implements Unmarshaller<Ca
                     context.nextToken();
                     cardGenerationAttributes.setAmexCardSecurityCodeVersion2(AmexCardSecurityCodeVersion2JsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("CardHolderVerificationValue", targetDepth)) {
-                    context.nextToken();
-                    cardGenerationAttributes.setCardHolderVerificationValue(CardHolderVerificationValueJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("CardVerificationValue1", targetDepth)) {
                     context.nextToken();
                     cardGenerationAttributes.setCardVerificationValue1(CardVerificationValue1JsonUnmarshaller.getInstance().unmarshall(context));
@@ -67,6 +63,10 @@ public class CardGenerationAttributesJsonUnmarshaller implements Unmarshaller<Ca
                 if (context.testExpression("CardVerificationValue2", targetDepth)) {
                     context.nextToken();
                     cardGenerationAttributes.setCardVerificationValue2(CardVerificationValue2JsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CardHolderVerificationValue", targetDepth)) {
+                    context.nextToken();
+                    cardGenerationAttributes.setCardHolderVerificationValue(CardHolderVerificationValueJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("DynamicCardVerificationCode", targetDepth)) {
                     context.nextToken();

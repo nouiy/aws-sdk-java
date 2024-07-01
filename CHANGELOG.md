@@ -1,3 +1,44 @@
+# __1.12.754__ __2024-07-01__
+## __AWS Step Functions__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __AWS WAFV2__
+  - ### Features
+    - JSON body inspection: Update documentation to clarify that JSON parsing doesn't include full validation.
+
+## __Amazon API Gateway__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Cognito Identity__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Connect Service__
+  - ### Features
+    - Authentication profiles are Amazon Connect resources (in gated preview) that allow you to configure authentication settings for users in your contact center. This release adds support for new ListAuthenticationProfiles, DescribeAuthenticationProfile and UpdateAuthenticationProfile APIs.
+
+## __Amazon DocumentDB with MongoDB compatibility__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Updates EKS managed node groups to support EC2 Capacity Blocks for ML
+
+## __Amazon Simple Workflow Service__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Payment Cryptography Control Plane__
+  - ### Features
+    - Added further restrictions on logging of potentially sensitive inputs and outputs.
+
+## __Payment Cryptography Data Plane__
+  - ### Features
+    - Adding support for dynamic keys for encrypt, decrypt, re-encrypt and translate pin functions.  With this change, customers can use one-time TR-31 keys directly in dataplane operations without the need to first import them into the service.
+
 # __1.12.753__ __2024-06-28__
 ## __AWS Certificate Manager Private Certificate Authority__
   - ### Features

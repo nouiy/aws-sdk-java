@@ -31,10 +31,10 @@ public class DynamicCardVerificationValue implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The transaction counter value that comes from the terminal.
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
      * </p>
      */
-    private String applicationTransactionCounter;
+    private String panSequenceNumber;
     /**
      * <p>
      * The expiry date of a payment card.
@@ -43,54 +43,54 @@ public class DynamicCardVerificationValue implements Serializable, Cloneable, St
     private String cardExpiryDate;
     /**
      * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     */
-    private String panSequenceNumber;
-    /**
-     * <p>
      * The service code of the payment card. This is different from Card Security Code (CSC).
      * </p>
      */
     private String serviceCode;
-
     /**
      * <p>
      * The transaction counter value that comes from the terminal.
      * </p>
+     */
+    private String applicationTransactionCounter;
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
      * 
-     * @param applicationTransactionCounter
-     *        The transaction counter value that comes from the terminal.
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
      */
 
-    public void setApplicationTransactionCounter(String applicationTransactionCounter) {
-        this.applicationTransactionCounter = applicationTransactionCounter;
+    public void setPanSequenceNumber(String panSequenceNumber) {
+        this.panSequenceNumber = panSequenceNumber;
     }
 
     /**
      * <p>
-     * The transaction counter value that comes from the terminal.
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
      * </p>
      * 
-     * @return The transaction counter value that comes from the terminal.
+     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
      */
 
-    public String getApplicationTransactionCounter() {
-        return this.applicationTransactionCounter;
+    public String getPanSequenceNumber() {
+        return this.panSequenceNumber;
     }
 
     /**
      * <p>
-     * The transaction counter value that comes from the terminal.
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
      * </p>
      * 
-     * @param applicationTransactionCounter
-     *        The transaction counter value that comes from the terminal.
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public DynamicCardVerificationValue withApplicationTransactionCounter(String applicationTransactionCounter) {
-        setApplicationTransactionCounter(applicationTransactionCounter);
+    public DynamicCardVerificationValue withPanSequenceNumber(String panSequenceNumber) {
+        setPanSequenceNumber(panSequenceNumber);
         return this;
     }
 
@@ -136,46 +136,6 @@ public class DynamicCardVerificationValue implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     */
-
-    public void setPanSequenceNumber(String panSequenceNumber) {
-        this.panSequenceNumber = panSequenceNumber;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     */
-
-    public String getPanSequenceNumber() {
-        return this.panSequenceNumber;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DynamicCardVerificationValue withPanSequenceNumber(String panSequenceNumber) {
-        setPanSequenceNumber(panSequenceNumber);
-        return this;
-    }
-
-    /**
-     * <p>
      * The service code of the payment card. This is different from Card Security Code (CSC).
      * </p>
      * 
@@ -215,6 +175,46 @@ public class DynamicCardVerificationValue implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The transaction counter value that comes from the terminal.
+     * </p>
+     * 
+     * @param applicationTransactionCounter
+     *        The transaction counter value that comes from the terminal.
+     */
+
+    public void setApplicationTransactionCounter(String applicationTransactionCounter) {
+        this.applicationTransactionCounter = applicationTransactionCounter;
+    }
+
+    /**
+     * <p>
+     * The transaction counter value that comes from the terminal.
+     * </p>
+     * 
+     * @return The transaction counter value that comes from the terminal.
+     */
+
+    public String getApplicationTransactionCounter() {
+        return this.applicationTransactionCounter;
+    }
+
+    /**
+     * <p>
+     * The transaction counter value that comes from the terminal.
+     * </p>
+     * 
+     * @param applicationTransactionCounter
+     *        The transaction counter value that comes from the terminal.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DynamicCardVerificationValue withApplicationTransactionCounter(String applicationTransactionCounter) {
+        setApplicationTransactionCounter(applicationTransactionCounter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -226,14 +226,14 @@ public class DynamicCardVerificationValue implements Serializable, Cloneable, St
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getApplicationTransactionCounter() != null)
-            sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter()).append(",");
-        if (getCardExpiryDate() != null)
-            sb.append("CardExpiryDate: ").append(getCardExpiryDate()).append(",");
         if (getPanSequenceNumber() != null)
             sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
+        if (getCardExpiryDate() != null)
+            sb.append("CardExpiryDate: ").append(getCardExpiryDate()).append(",");
         if (getServiceCode() != null)
-            sb.append("ServiceCode: ").append(getServiceCode());
+            sb.append("ServiceCode: ").append(getServiceCode()).append(",");
+        if (getApplicationTransactionCounter() != null)
+            sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter());
         sb.append("}");
         return sb.toString();
     }
@@ -248,22 +248,22 @@ public class DynamicCardVerificationValue implements Serializable, Cloneable, St
         if (obj instanceof DynamicCardVerificationValue == false)
             return false;
         DynamicCardVerificationValue other = (DynamicCardVerificationValue) obj;
-        if (other.getApplicationTransactionCounter() == null ^ this.getApplicationTransactionCounter() == null)
+        if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
             return false;
-        if (other.getApplicationTransactionCounter() != null
-                && other.getApplicationTransactionCounter().equals(this.getApplicationTransactionCounter()) == false)
+        if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
             return false;
         if (other.getCardExpiryDate() == null ^ this.getCardExpiryDate() == null)
             return false;
         if (other.getCardExpiryDate() != null && other.getCardExpiryDate().equals(this.getCardExpiryDate()) == false)
             return false;
-        if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
-            return false;
-        if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
-            return false;
         if (other.getServiceCode() == null ^ this.getServiceCode() == null)
             return false;
         if (other.getServiceCode() != null && other.getServiceCode().equals(this.getServiceCode()) == false)
+            return false;
+        if (other.getApplicationTransactionCounter() == null ^ this.getApplicationTransactionCounter() == null)
+            return false;
+        if (other.getApplicationTransactionCounter() != null
+                && other.getApplicationTransactionCounter().equals(this.getApplicationTransactionCounter()) == false)
             return false;
         return true;
     }
@@ -273,10 +273,10 @@ public class DynamicCardVerificationValue implements Serializable, Cloneable, St
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getApplicationTransactionCounter() == null) ? 0 : getApplicationTransactionCounter().hashCode());
-        hashCode = prime * hashCode + ((getCardExpiryDate() == null) ? 0 : getCardExpiryDate().hashCode());
         hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
+        hashCode = prime * hashCode + ((getCardExpiryDate() == null) ? 0 : getCardExpiryDate().hashCode());
         hashCode = prime * hashCode + ((getServiceCode() == null) ? 0 : getServiceCode().hashCode());
+        hashCode = prime * hashCode + ((getApplicationTransactionCounter() == null) ? 0 : getApplicationTransactionCounter().hashCode());
         return hashCode;
     }
 

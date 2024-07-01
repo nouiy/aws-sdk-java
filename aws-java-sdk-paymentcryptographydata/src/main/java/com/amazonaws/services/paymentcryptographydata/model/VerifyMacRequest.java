@@ -34,28 +34,28 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String keyIdentifier;
     /**
      * <p>
-     * The MAC being verified.
-     * </p>
-     */
-    private String mac;
-    /**
-     * <p>
-     * The length of the MAC.
-     * </p>
-     */
-    private Integer macLength;
-    /**
-     * <p>
      * The data on for which MAC is under verification. This value must be hexBinary.
      * </p>
      */
     private String messageData;
     /**
      * <p>
+     * The MAC being verified.
+     * </p>
+     */
+    private String mac;
+    /**
+     * <p>
      * The attributes and data values to use for MAC verification within Amazon Web Services Payment Cryptography.
      * </p>
      */
     private MacAttributes verificationAttributes;
+    /**
+     * <p>
+     * The length of the MAC.
+     * </p>
+     */
+    private Integer macLength;
 
     /**
      * <p>
@@ -105,86 +105,6 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The MAC being verified.
-     * </p>
-     * 
-     * @param mac
-     *        The MAC being verified.
-     */
-
-    public void setMac(String mac) {
-        this.mac = mac;
-    }
-
-    /**
-     * <p>
-     * The MAC being verified.
-     * </p>
-     * 
-     * @return The MAC being verified.
-     */
-
-    public String getMac() {
-        return this.mac;
-    }
-
-    /**
-     * <p>
-     * The MAC being verified.
-     * </p>
-     * 
-     * @param mac
-     *        The MAC being verified.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VerifyMacRequest withMac(String mac) {
-        setMac(mac);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The length of the MAC.
-     * </p>
-     * 
-     * @param macLength
-     *        The length of the MAC.
-     */
-
-    public void setMacLength(Integer macLength) {
-        this.macLength = macLength;
-    }
-
-    /**
-     * <p>
-     * The length of the MAC.
-     * </p>
-     * 
-     * @return The length of the MAC.
-     */
-
-    public Integer getMacLength() {
-        return this.macLength;
-    }
-
-    /**
-     * <p>
-     * The length of the MAC.
-     * </p>
-     * 
-     * @param macLength
-     *        The length of the MAC.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VerifyMacRequest withMacLength(Integer macLength) {
-        setMacLength(macLength);
-        return this;
-    }
-
-    /**
-     * <p>
      * The data on for which MAC is under verification. This value must be hexBinary.
      * </p>
      * 
@@ -220,6 +140,46 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     public VerifyMacRequest withMessageData(String messageData) {
         setMessageData(messageData);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The MAC being verified.
+     * </p>
+     * 
+     * @param mac
+     *        The MAC being verified.
+     */
+
+    public void setMac(String mac) {
+        this.mac = mac;
+    }
+
+    /**
+     * <p>
+     * The MAC being verified.
+     * </p>
+     * 
+     * @return The MAC being verified.
+     */
+
+    public String getMac() {
+        return this.mac;
+    }
+
+    /**
+     * <p>
+     * The MAC being verified.
+     * </p>
+     * 
+     * @param mac
+     *        The MAC being verified.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VerifyMacRequest withMac(String mac) {
+        setMac(mac);
         return this;
     }
 
@@ -267,6 +227,46 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * The length of the MAC.
+     * </p>
+     * 
+     * @param macLength
+     *        The length of the MAC.
+     */
+
+    public void setMacLength(Integer macLength) {
+        this.macLength = macLength;
+    }
+
+    /**
+     * <p>
+     * The length of the MAC.
+     * </p>
+     * 
+     * @return The length of the MAC.
+     */
+
+    public Integer getMacLength() {
+        return this.macLength;
+    }
+
+    /**
+     * <p>
+     * The length of the MAC.
+     * </p>
+     * 
+     * @param macLength
+     *        The length of the MAC.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VerifyMacRequest withMacLength(Integer macLength) {
+        setMacLength(macLength);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -280,14 +280,14 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
         sb.append("{");
         if (getKeyIdentifier() != null)
             sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
-        if (getMac() != null)
-            sb.append("Mac: ").append("***Sensitive Data Redacted***").append(",");
-        if (getMacLength() != null)
-            sb.append("MacLength: ").append(getMacLength()).append(",");
         if (getMessageData() != null)
             sb.append("MessageData: ").append("***Sensitive Data Redacted***").append(",");
+        if (getMac() != null)
+            sb.append("Mac: ").append("***Sensitive Data Redacted***").append(",");
         if (getVerificationAttributes() != null)
-            sb.append("VerificationAttributes: ").append(getVerificationAttributes());
+            sb.append("VerificationAttributes: ").append(getVerificationAttributes()).append(",");
+        if (getMacLength() != null)
+            sb.append("MacLength: ").append(getMacLength());
         sb.append("}");
         return sb.toString();
     }
@@ -306,21 +306,21 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getKeyIdentifier() != null && other.getKeyIdentifier().equals(this.getKeyIdentifier()) == false)
             return false;
-        if (other.getMac() == null ^ this.getMac() == null)
-            return false;
-        if (other.getMac() != null && other.getMac().equals(this.getMac()) == false)
-            return false;
-        if (other.getMacLength() == null ^ this.getMacLength() == null)
-            return false;
-        if (other.getMacLength() != null && other.getMacLength().equals(this.getMacLength()) == false)
-            return false;
         if (other.getMessageData() == null ^ this.getMessageData() == null)
             return false;
         if (other.getMessageData() != null && other.getMessageData().equals(this.getMessageData()) == false)
             return false;
+        if (other.getMac() == null ^ this.getMac() == null)
+            return false;
+        if (other.getMac() != null && other.getMac().equals(this.getMac()) == false)
+            return false;
         if (other.getVerificationAttributes() == null ^ this.getVerificationAttributes() == null)
             return false;
         if (other.getVerificationAttributes() != null && other.getVerificationAttributes().equals(this.getVerificationAttributes()) == false)
+            return false;
+        if (other.getMacLength() == null ^ this.getMacLength() == null)
+            return false;
+        if (other.getMacLength() != null && other.getMacLength().equals(this.getMacLength()) == false)
             return false;
         return true;
     }
@@ -331,10 +331,10 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getKeyIdentifier() == null) ? 0 : getKeyIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getMac() == null) ? 0 : getMac().hashCode());
-        hashCode = prime * hashCode + ((getMacLength() == null) ? 0 : getMacLength().hashCode());
         hashCode = prime * hashCode + ((getMessageData() == null) ? 0 : getMessageData().hashCode());
+        hashCode = prime * hashCode + ((getMac() == null) ? 0 : getMac().hashCode());
         hashCode = prime * hashCode + ((getVerificationAttributes() == null) ? 0 : getVerificationAttributes().hashCode());
+        hashCode = prime * hashCode + ((getMacLength() == null) ? 0 : getMacLength().hashCode());
         return hashCode;
     }
 

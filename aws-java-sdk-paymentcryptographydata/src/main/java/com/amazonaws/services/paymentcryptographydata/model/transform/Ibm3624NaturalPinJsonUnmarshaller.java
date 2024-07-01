@@ -52,13 +52,13 @@ public class Ibm3624NaturalPinJsonUnmarshaller implements Unmarshaller<Ibm3624Na
                     context.nextToken();
                     ibm3624NaturalPin.setDecimalizationTable(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("PinValidationData", targetDepth)) {
-                    context.nextToken();
-                    ibm3624NaturalPin.setPinValidationData(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("PinValidationDataPadCharacter", targetDepth)) {
                     context.nextToken();
                     ibm3624NaturalPin.setPinValidationDataPadCharacter(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PinValidationData", targetDepth)) {
+                    context.nextToken();
+                    ibm3624NaturalPin.setPinValidationData(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

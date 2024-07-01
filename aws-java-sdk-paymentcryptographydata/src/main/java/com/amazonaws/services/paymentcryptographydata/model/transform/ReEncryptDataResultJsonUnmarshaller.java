@@ -48,10 +48,6 @@ public class ReEncryptDataResultJsonUnmarshaller implements Unmarshaller<ReEncry
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CipherText", targetDepth)) {
-                    context.nextToken();
-                    reEncryptDataResult.setCipherText(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("KeyArn", targetDepth)) {
                     context.nextToken();
                     reEncryptDataResult.setKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class ReEncryptDataResultJsonUnmarshaller implements Unmarshaller<ReEncry
                 if (context.testExpression("KeyCheckValue", targetDepth)) {
                     context.nextToken();
                     reEncryptDataResult.setKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CipherText", targetDepth)) {
+                    context.nextToken();
+                    reEncryptDataResult.setCipherText(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

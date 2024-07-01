@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SessionKeyEmvCommonMarshaller {
 
-    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
-    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
     private static final MarshallingInfo<String> PRIMARYACCOUNTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryAccountNumber").build();
+    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
+    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
 
     private static final SessionKeyEmvCommonMarshaller instance = new SessionKeyEmvCommonMarshaller();
 
@@ -50,9 +50,9 @@ public class SessionKeyEmvCommonMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(sessionKeyEmvCommon.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
-            protocolMarshaller.marshall(sessionKeyEmvCommon.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(sessionKeyEmvCommon.getPrimaryAccountNumber(), PRIMARYACCOUNTNUMBER_BINDING);
+            protocolMarshaller.marshall(sessionKeyEmvCommon.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
+            protocolMarshaller.marshall(sessionKeyEmvCommon.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

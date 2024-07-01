@@ -26,6 +26,20 @@ import com.amazonaws.services.connect.model.*;
  * {@link com.amazonaws.services.connect.AbstractAmazonConnect} instead.
  * </p>
  * <p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Connect_Service.html">Amazon
+ * Connect actions</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_Connect_Service.html">Amazon
+ * Connect data types</a>
+ * </p>
+ * </li>
+ * </ul>
  * <p>
  * Amazon Connect is a cloud-based contact center solution that you use to set up and manage a customer contact center
  * and provide reliable customer engagement at any scale.
@@ -2150,6 +2164,33 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Describes the target authentication profile.
+     * </p>
+     * 
+     * @param describeAuthenticationProfileRequest
+     * @return Result of the DescribeAuthenticationProfile operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DescribeAuthenticationProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeAuthenticationProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeAuthenticationProfileResult describeAuthenticationProfile(DescribeAuthenticationProfileRequest describeAuthenticationProfileRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -3550,6 +3591,33 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     ListApprovedOriginsResult listApprovedOrigins(ListApprovedOriginsRequest listApprovedOriginsRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Provides summary information about the authentication profiles in a specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listAuthenticationProfilesRequest
+     * @return Result of the ListAuthenticationProfiles operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListAuthenticationProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListAuthenticationProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAuthenticationProfilesResult listAuthenticationProfiles(ListAuthenticationProfilesRequest listAuthenticationProfilesRequest);
 
     /**
      * <p>
@@ -5234,8 +5302,8 @@ public interface AmazonConnect {
      * </p>
      * <important>
      * <p>
-     * You may only use this API to upload attachments to a <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Connect
+     * You may only use this API to upload attachments to an <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Amazon Connect
      * Case</a>.
      * </p>
      * </important>
@@ -5973,6 +6041,33 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     UpdateAgentStatusResult updateAgentStatus(UpdateAgentStatusRequest updateAgentStatusRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Updates the selected authentication profile.
+     * </p>
+     * 
+     * @param updateAuthenticationProfileRequest
+     * @return Result of the UpdateAuthenticationProfile operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdateAuthenticationProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateAuthenticationProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateAuthenticationProfileResult updateAuthenticationProfile(UpdateAuthenticationProfileRequest updateAuthenticationProfileRequest);
 
     /**
      * <p>

@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SessionKeyDerivationMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> AMEX_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Amex").build();
-    private static final MarshallingInfo<StructuredPojo> EMV2000_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Emv2000").build();
     private static final MarshallingInfo<StructuredPojo> EMVCOMMON_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EmvCommon").build();
     private static final MarshallingInfo<StructuredPojo> MASTERCARD_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Mastercard").build();
+    private static final MarshallingInfo<StructuredPojo> EMV2000_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Emv2000").build();
+    private static final MarshallingInfo<StructuredPojo> AMEX_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Amex").build();
     private static final MarshallingInfo<StructuredPojo> VISA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Visa").build();
 
@@ -54,10 +54,10 @@ public class SessionKeyDerivationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(sessionKeyDerivation.getAmex(), AMEX_BINDING);
-            protocolMarshaller.marshall(sessionKeyDerivation.getEmv2000(), EMV2000_BINDING);
             protocolMarshaller.marshall(sessionKeyDerivation.getEmvCommon(), EMVCOMMON_BINDING);
             protocolMarshaller.marshall(sessionKeyDerivation.getMastercard(), MASTERCARD_BINDING);
+            protocolMarshaller.marshall(sessionKeyDerivation.getEmv2000(), EMV2000_BINDING);
+            protocolMarshaller.marshall(sessionKeyDerivation.getAmex(), AMEX_BINDING);
             protocolMarshaller.marshall(sessionKeyDerivation.getVisa(), VISA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -25,12 +25,6 @@ public class ReEncryptDataResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The encrypted ciphertext.
-     * </p>
-     */
-    private String cipherText;
-    /**
-     * <p>
      * The keyARN (Amazon Resource Name) of the encryption key that Amazon Web Services Payment Cryptography uses for
      * plaintext encryption.
      * </p>
@@ -46,46 +40,12 @@ public class ReEncryptDataResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private String keyCheckValue;
-
     /**
      * <p>
      * The encrypted ciphertext.
      * </p>
-     * 
-     * @param cipherText
-     *        The encrypted ciphertext.
      */
-
-    public void setCipherText(String cipherText) {
-        this.cipherText = cipherText;
-    }
-
-    /**
-     * <p>
-     * The encrypted ciphertext.
-     * </p>
-     * 
-     * @return The encrypted ciphertext.
-     */
-
-    public String getCipherText() {
-        return this.cipherText;
-    }
-
-    /**
-     * <p>
-     * The encrypted ciphertext.
-     * </p>
-     * 
-     * @param cipherText
-     *        The encrypted ciphertext.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReEncryptDataResult withCipherText(String cipherText) {
-        setCipherText(cipherText);
-        return this;
-    }
+    private String cipherText;
 
     /**
      * <p>
@@ -195,6 +155,46 @@ public class ReEncryptDataResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * The encrypted ciphertext.
+     * </p>
+     * 
+     * @param cipherText
+     *        The encrypted ciphertext.
+     */
+
+    public void setCipherText(String cipherText) {
+        this.cipherText = cipherText;
+    }
+
+    /**
+     * <p>
+     * The encrypted ciphertext.
+     * </p>
+     * 
+     * @return The encrypted ciphertext.
+     */
+
+    public String getCipherText() {
+        return this.cipherText;
+    }
+
+    /**
+     * <p>
+     * The encrypted ciphertext.
+     * </p>
+     * 
+     * @param cipherText
+     *        The encrypted ciphertext.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReEncryptDataResult withCipherText(String cipherText) {
+        setCipherText(cipherText);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -206,12 +206,12 @@ public class ReEncryptDataResult extends com.amazonaws.AmazonWebServiceResult<co
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCipherText() != null)
-            sb.append("CipherText: ").append("***Sensitive Data Redacted***").append(",");
         if (getKeyArn() != null)
             sb.append("KeyArn: ").append(getKeyArn()).append(",");
         if (getKeyCheckValue() != null)
-            sb.append("KeyCheckValue: ").append(getKeyCheckValue());
+            sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
+        if (getCipherText() != null)
+            sb.append("CipherText: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -226,10 +226,6 @@ public class ReEncryptDataResult extends com.amazonaws.AmazonWebServiceResult<co
         if (obj instanceof ReEncryptDataResult == false)
             return false;
         ReEncryptDataResult other = (ReEncryptDataResult) obj;
-        if (other.getCipherText() == null ^ this.getCipherText() == null)
-            return false;
-        if (other.getCipherText() != null && other.getCipherText().equals(this.getCipherText()) == false)
-            return false;
         if (other.getKeyArn() == null ^ this.getKeyArn() == null)
             return false;
         if (other.getKeyArn() != null && other.getKeyArn().equals(this.getKeyArn()) == false)
@@ -237,6 +233,10 @@ public class ReEncryptDataResult extends com.amazonaws.AmazonWebServiceResult<co
         if (other.getKeyCheckValue() == null ^ this.getKeyCheckValue() == null)
             return false;
         if (other.getKeyCheckValue() != null && other.getKeyCheckValue().equals(this.getKeyCheckValue()) == false)
+            return false;
+        if (other.getCipherText() == null ^ this.getCipherText() == null)
+            return false;
+        if (other.getCipherText() != null && other.getCipherText().equals(this.getCipherText()) == false)
             return false;
         return true;
     }
@@ -246,9 +246,9 @@ public class ReEncryptDataResult extends com.amazonaws.AmazonWebServiceResult<co
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCipherText() == null) ? 0 : getCipherText().hashCode());
         hashCode = prime * hashCode + ((getKeyArn() == null) ? 0 : getKeyArn().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValue() == null) ? 0 : getKeyCheckValue().hashCode());
+        hashCode = prime * hashCode + ((getCipherText() == null) ? 0 : getCipherText().hashCode());
         return hashCode;
     }
 

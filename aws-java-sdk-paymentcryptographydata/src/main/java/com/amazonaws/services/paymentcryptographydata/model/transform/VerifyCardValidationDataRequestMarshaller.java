@@ -31,10 +31,10 @@ public class VerifyCardValidationDataRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyIdentifier").build();
     private static final MarshallingInfo<String> PRIMARYACCOUNTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryAccountNumber").build();
-    private static final MarshallingInfo<String> VALIDATIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ValidationData").build();
     private static final MarshallingInfo<StructuredPojo> VERIFICATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VerificationAttributes").build();
+    private static final MarshallingInfo<String> VALIDATIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ValidationData").build();
 
     private static final VerifyCardValidationDataRequestMarshaller instance = new VerifyCardValidationDataRequestMarshaller();
 
@@ -54,8 +54,8 @@ public class VerifyCardValidationDataRequestMarshaller {
         try {
             protocolMarshaller.marshall(verifyCardValidationDataRequest.getKeyIdentifier(), KEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(verifyCardValidationDataRequest.getPrimaryAccountNumber(), PRIMARYACCOUNTNUMBER_BINDING);
-            protocolMarshaller.marshall(verifyCardValidationDataRequest.getValidationData(), VALIDATIONDATA_BINDING);
             protocolMarshaller.marshall(verifyCardValidationDataRequest.getVerificationAttributes(), VERIFICATIONATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(verifyCardValidationDataRequest.getValidationData(), VALIDATIONDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

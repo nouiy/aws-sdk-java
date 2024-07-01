@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SessionKeyVisaMarshaller {
 
-    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
     private static final MarshallingInfo<String> PRIMARYACCOUNTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryAccountNumber").build();
+    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
 
     private static final SessionKeyVisaMarshaller instance = new SessionKeyVisaMarshaller();
 
@@ -48,8 +48,8 @@ public class SessionKeyVisaMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(sessionKeyVisa.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(sessionKeyVisa.getPrimaryAccountNumber(), PRIMARYACCOUNTNUMBER_BINDING);
+            protocolMarshaller.marshall(sessionKeyVisa.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

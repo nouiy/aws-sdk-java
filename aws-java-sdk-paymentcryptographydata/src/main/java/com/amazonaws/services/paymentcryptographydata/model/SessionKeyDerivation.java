@@ -30,18 +30,6 @@ public class SessionKeyDerivation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Parameters to derive session key for an Amex payment card for ARQC verification.
-     * </p>
-     */
-    private SessionKeyAmex amex;
-    /**
-     * <p>
-     * Parameters to derive session key for an Emv2000 payment card for ARQC verification.
-     * </p>
-     */
-    private SessionKeyEmv2000 emv2000;
-    /**
-     * <p>
      * Parameters to derive session key for an Emv common payment card for ARQC verification.
      * </p>
      */
@@ -54,90 +42,22 @@ public class SessionKeyDerivation implements Serializable, Cloneable, Structured
     private SessionKeyMastercard mastercard;
     /**
      * <p>
+     * Parameters to derive session key for an Emv2000 payment card for ARQC verification.
+     * </p>
+     */
+    private SessionKeyEmv2000 emv2000;
+    /**
+     * <p>
+     * Parameters to derive session key for an Amex payment card for ARQC verification.
+     * </p>
+     */
+    private SessionKeyAmex amex;
+    /**
+     * <p>
      * Parameters to derive session key for a Visa payment cardfor ARQC verification.
      * </p>
      */
     private SessionKeyVisa visa;
-
-    /**
-     * <p>
-     * Parameters to derive session key for an Amex payment card for ARQC verification.
-     * </p>
-     * 
-     * @param amex
-     *        Parameters to derive session key for an Amex payment card for ARQC verification.
-     */
-
-    public void setAmex(SessionKeyAmex amex) {
-        this.amex = amex;
-    }
-
-    /**
-     * <p>
-     * Parameters to derive session key for an Amex payment card for ARQC verification.
-     * </p>
-     * 
-     * @return Parameters to derive session key for an Amex payment card for ARQC verification.
-     */
-
-    public SessionKeyAmex getAmex() {
-        return this.amex;
-    }
-
-    /**
-     * <p>
-     * Parameters to derive session key for an Amex payment card for ARQC verification.
-     * </p>
-     * 
-     * @param amex
-     *        Parameters to derive session key for an Amex payment card for ARQC verification.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SessionKeyDerivation withAmex(SessionKeyAmex amex) {
-        setAmex(amex);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Parameters to derive session key for an Emv2000 payment card for ARQC verification.
-     * </p>
-     * 
-     * @param emv2000
-     *        Parameters to derive session key for an Emv2000 payment card for ARQC verification.
-     */
-
-    public void setEmv2000(SessionKeyEmv2000 emv2000) {
-        this.emv2000 = emv2000;
-    }
-
-    /**
-     * <p>
-     * Parameters to derive session key for an Emv2000 payment card for ARQC verification.
-     * </p>
-     * 
-     * @return Parameters to derive session key for an Emv2000 payment card for ARQC verification.
-     */
-
-    public SessionKeyEmv2000 getEmv2000() {
-        return this.emv2000;
-    }
-
-    /**
-     * <p>
-     * Parameters to derive session key for an Emv2000 payment card for ARQC verification.
-     * </p>
-     * 
-     * @param emv2000
-     *        Parameters to derive session key for an Emv2000 payment card for ARQC verification.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SessionKeyDerivation withEmv2000(SessionKeyEmv2000 emv2000) {
-        setEmv2000(emv2000);
-        return this;
-    }
 
     /**
      * <p>
@@ -221,6 +141,86 @@ public class SessionKeyDerivation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * Parameters to derive session key for an Emv2000 payment card for ARQC verification.
+     * </p>
+     * 
+     * @param emv2000
+     *        Parameters to derive session key for an Emv2000 payment card for ARQC verification.
+     */
+
+    public void setEmv2000(SessionKeyEmv2000 emv2000) {
+        this.emv2000 = emv2000;
+    }
+
+    /**
+     * <p>
+     * Parameters to derive session key for an Emv2000 payment card for ARQC verification.
+     * </p>
+     * 
+     * @return Parameters to derive session key for an Emv2000 payment card for ARQC verification.
+     */
+
+    public SessionKeyEmv2000 getEmv2000() {
+        return this.emv2000;
+    }
+
+    /**
+     * <p>
+     * Parameters to derive session key for an Emv2000 payment card for ARQC verification.
+     * </p>
+     * 
+     * @param emv2000
+     *        Parameters to derive session key for an Emv2000 payment card for ARQC verification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SessionKeyDerivation withEmv2000(SessionKeyEmv2000 emv2000) {
+        setEmv2000(emv2000);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Parameters to derive session key for an Amex payment card for ARQC verification.
+     * </p>
+     * 
+     * @param amex
+     *        Parameters to derive session key for an Amex payment card for ARQC verification.
+     */
+
+    public void setAmex(SessionKeyAmex amex) {
+        this.amex = amex;
+    }
+
+    /**
+     * <p>
+     * Parameters to derive session key for an Amex payment card for ARQC verification.
+     * </p>
+     * 
+     * @return Parameters to derive session key for an Amex payment card for ARQC verification.
+     */
+
+    public SessionKeyAmex getAmex() {
+        return this.amex;
+    }
+
+    /**
+     * <p>
+     * Parameters to derive session key for an Amex payment card for ARQC verification.
+     * </p>
+     * 
+     * @param amex
+     *        Parameters to derive session key for an Amex payment card for ARQC verification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SessionKeyDerivation withAmex(SessionKeyAmex amex) {
+        setAmex(amex);
+        return this;
+    }
+
+    /**
+     * <p>
      * Parameters to derive session key for a Visa payment cardfor ARQC verification.
      * </p>
      * 
@@ -271,14 +271,14 @@ public class SessionKeyDerivation implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAmex() != null)
-            sb.append("Amex: ").append(getAmex()).append(",");
-        if (getEmv2000() != null)
-            sb.append("Emv2000: ").append(getEmv2000()).append(",");
         if (getEmvCommon() != null)
             sb.append("EmvCommon: ").append(getEmvCommon()).append(",");
         if (getMastercard() != null)
             sb.append("Mastercard: ").append(getMastercard()).append(",");
+        if (getEmv2000() != null)
+            sb.append("Emv2000: ").append(getEmv2000()).append(",");
+        if (getAmex() != null)
+            sb.append("Amex: ").append(getAmex()).append(",");
         if (getVisa() != null)
             sb.append("Visa: ").append(getVisa());
         sb.append("}");
@@ -295,14 +295,6 @@ public class SessionKeyDerivation implements Serializable, Cloneable, Structured
         if (obj instanceof SessionKeyDerivation == false)
             return false;
         SessionKeyDerivation other = (SessionKeyDerivation) obj;
-        if (other.getAmex() == null ^ this.getAmex() == null)
-            return false;
-        if (other.getAmex() != null && other.getAmex().equals(this.getAmex()) == false)
-            return false;
-        if (other.getEmv2000() == null ^ this.getEmv2000() == null)
-            return false;
-        if (other.getEmv2000() != null && other.getEmv2000().equals(this.getEmv2000()) == false)
-            return false;
         if (other.getEmvCommon() == null ^ this.getEmvCommon() == null)
             return false;
         if (other.getEmvCommon() != null && other.getEmvCommon().equals(this.getEmvCommon()) == false)
@@ -310,6 +302,14 @@ public class SessionKeyDerivation implements Serializable, Cloneable, Structured
         if (other.getMastercard() == null ^ this.getMastercard() == null)
             return false;
         if (other.getMastercard() != null && other.getMastercard().equals(this.getMastercard()) == false)
+            return false;
+        if (other.getEmv2000() == null ^ this.getEmv2000() == null)
+            return false;
+        if (other.getEmv2000() != null && other.getEmv2000().equals(this.getEmv2000()) == false)
+            return false;
+        if (other.getAmex() == null ^ this.getAmex() == null)
+            return false;
+        if (other.getAmex() != null && other.getAmex().equals(this.getAmex()) == false)
             return false;
         if (other.getVisa() == null ^ this.getVisa() == null)
             return false;
@@ -323,10 +323,10 @@ public class SessionKeyDerivation implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAmex() == null) ? 0 : getAmex().hashCode());
-        hashCode = prime * hashCode + ((getEmv2000() == null) ? 0 : getEmv2000().hashCode());
         hashCode = prime * hashCode + ((getEmvCommon() == null) ? 0 : getEmvCommon().hashCode());
         hashCode = prime * hashCode + ((getMastercard() == null) ? 0 : getMastercard().hashCode());
+        hashCode = prime * hashCode + ((getEmv2000() == null) ? 0 : getEmv2000().hashCode());
+        hashCode = prime * hashCode + ((getAmex() == null) ? 0 : getAmex().hashCode());
         hashCode = prime * hashCode + ((getVisa() == null) ? 0 : getVisa().hashCode());
         return hashCode;
     }

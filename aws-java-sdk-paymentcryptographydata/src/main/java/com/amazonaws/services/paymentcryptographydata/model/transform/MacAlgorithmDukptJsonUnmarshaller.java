@@ -48,17 +48,17 @@ public class MacAlgorithmDukptJsonUnmarshaller implements Unmarshaller<MacAlgori
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("DukptDerivationType", targetDepth)) {
+                if (context.testExpression("KeySerialNumber", targetDepth)) {
                     context.nextToken();
-                    macAlgorithmDukpt.setDukptDerivationType(context.getUnmarshaller(String.class).unmarshall(context));
+                    macAlgorithmDukpt.setKeySerialNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("DukptKeyVariant", targetDepth)) {
                     context.nextToken();
                     macAlgorithmDukpt.setDukptKeyVariant(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("KeySerialNumber", targetDepth)) {
+                if (context.testExpression("DukptDerivationType", targetDepth)) {
                     context.nextToken();
-                    macAlgorithmDukpt.setKeySerialNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                    macAlgorithmDukpt.setDukptDerivationType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

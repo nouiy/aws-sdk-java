@@ -31,18 +31,18 @@ public class CardVerificationAttributesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmexCardSecurityCodeVersion1").build();
     private static final MarshallingInfo<StructuredPojo> AMEXCARDSECURITYCODEVERSION2_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmexCardSecurityCodeVersion2").build();
-    private static final MarshallingInfo<StructuredPojo> CARDHOLDERVERIFICATIONVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardHolderVerificationValue").build();
     private static final MarshallingInfo<StructuredPojo> CARDVERIFICATIONVALUE1_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardVerificationValue1").build();
     private static final MarshallingInfo<StructuredPojo> CARDVERIFICATIONVALUE2_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardVerificationValue2").build();
-    private static final MarshallingInfo<StructuredPojo> DISCOVERDYNAMICCARDVERIFICATIONCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DiscoverDynamicCardVerificationCode").build();
+    private static final MarshallingInfo<StructuredPojo> CARDHOLDERVERIFICATIONVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardHolderVerificationValue").build();
     private static final MarshallingInfo<StructuredPojo> DYNAMICCARDVERIFICATIONCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DynamicCardVerificationCode").build();
     private static final MarshallingInfo<StructuredPojo> DYNAMICCARDVERIFICATIONVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DynamicCardVerificationValue").build();
+    private static final MarshallingInfo<StructuredPojo> DISCOVERDYNAMICCARDVERIFICATIONCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DiscoverDynamicCardVerificationCode").build();
 
     private static final CardVerificationAttributesMarshaller instance = new CardVerificationAttributesMarshaller();
 
@@ -62,12 +62,12 @@ public class CardVerificationAttributesMarshaller {
         try {
             protocolMarshaller.marshall(cardVerificationAttributes.getAmexCardSecurityCodeVersion1(), AMEXCARDSECURITYCODEVERSION1_BINDING);
             protocolMarshaller.marshall(cardVerificationAttributes.getAmexCardSecurityCodeVersion2(), AMEXCARDSECURITYCODEVERSION2_BINDING);
-            protocolMarshaller.marshall(cardVerificationAttributes.getCardHolderVerificationValue(), CARDHOLDERVERIFICATIONVALUE_BINDING);
             protocolMarshaller.marshall(cardVerificationAttributes.getCardVerificationValue1(), CARDVERIFICATIONVALUE1_BINDING);
             protocolMarshaller.marshall(cardVerificationAttributes.getCardVerificationValue2(), CARDVERIFICATIONVALUE2_BINDING);
-            protocolMarshaller.marshall(cardVerificationAttributes.getDiscoverDynamicCardVerificationCode(), DISCOVERDYNAMICCARDVERIFICATIONCODE_BINDING);
+            protocolMarshaller.marshall(cardVerificationAttributes.getCardHolderVerificationValue(), CARDHOLDERVERIFICATIONVALUE_BINDING);
             protocolMarshaller.marshall(cardVerificationAttributes.getDynamicCardVerificationCode(), DYNAMICCARDVERIFICATIONCODE_BINDING);
             protocolMarshaller.marshall(cardVerificationAttributes.getDynamicCardVerificationValue(), DYNAMICCARDVERIFICATIONVALUE_BINDING);
+            protocolMarshaller.marshall(cardVerificationAttributes.getDiscoverDynamicCardVerificationCode(), DISCOVERDYNAMICCARDVERIFICATIONCODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

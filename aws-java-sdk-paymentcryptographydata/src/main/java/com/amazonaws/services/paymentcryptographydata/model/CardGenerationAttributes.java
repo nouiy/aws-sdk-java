@@ -38,12 +38,6 @@ public class CardGenerationAttributes implements Serializable, Cloneable, Struct
     private AmexCardSecurityCodeVersion2 amexCardSecurityCodeVersion2;
     /**
      * <p>
-     * Card data parameters that are required to generate a cardholder verification value for the payment card.
-     * </p>
-     */
-    private CardHolderVerificationValue cardHolderVerificationValue;
-    /**
-     * <p>
      * Card data parameters that are required to generate Card Verification Value (CVV) for the payment card.
      * </p>
      */
@@ -54,6 +48,12 @@ public class CardGenerationAttributes implements Serializable, Cloneable, Struct
      * </p>
      */
     private CardVerificationValue2 cardVerificationValue2;
+    /**
+     * <p>
+     * Card data parameters that are required to generate a cardholder verification value for the payment card.
+     * </p>
+     */
+    private CardHolderVerificationValue cardHolderVerificationValue;
     /**
      * <p>
      * Card data parameters that are required to generate CDynamic Card Verification Code (dCVC) for the payment card.
@@ -135,46 +135,6 @@ public class CardGenerationAttributes implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Card data parameters that are required to generate a cardholder verification value for the payment card.
-     * </p>
-     * 
-     * @param cardHolderVerificationValue
-     *        Card data parameters that are required to generate a cardholder verification value for the payment card.
-     */
-
-    public void setCardHolderVerificationValue(CardHolderVerificationValue cardHolderVerificationValue) {
-        this.cardHolderVerificationValue = cardHolderVerificationValue;
-    }
-
-    /**
-     * <p>
-     * Card data parameters that are required to generate a cardholder verification value for the payment card.
-     * </p>
-     * 
-     * @return Card data parameters that are required to generate a cardholder verification value for the payment card.
-     */
-
-    public CardHolderVerificationValue getCardHolderVerificationValue() {
-        return this.cardHolderVerificationValue;
-    }
-
-    /**
-     * <p>
-     * Card data parameters that are required to generate a cardholder verification value for the payment card.
-     * </p>
-     * 
-     * @param cardHolderVerificationValue
-     *        Card data parameters that are required to generate a cardholder verification value for the payment card.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CardGenerationAttributes withCardHolderVerificationValue(CardHolderVerificationValue cardHolderVerificationValue) {
-        setCardHolderVerificationValue(cardHolderVerificationValue);
-        return this;
-    }
-
-    /**
-     * <p>
      * Card data parameters that are required to generate Card Verification Value (CVV) for the payment card.
      * </p>
      * 
@@ -250,6 +210,46 @@ public class CardGenerationAttributes implements Serializable, Cloneable, Struct
 
     public CardGenerationAttributes withCardVerificationValue2(CardVerificationValue2 cardVerificationValue2) {
         setCardVerificationValue2(cardVerificationValue2);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Card data parameters that are required to generate a cardholder verification value for the payment card.
+     * </p>
+     * 
+     * @param cardHolderVerificationValue
+     *        Card data parameters that are required to generate a cardholder verification value for the payment card.
+     */
+
+    public void setCardHolderVerificationValue(CardHolderVerificationValue cardHolderVerificationValue) {
+        this.cardHolderVerificationValue = cardHolderVerificationValue;
+    }
+
+    /**
+     * <p>
+     * Card data parameters that are required to generate a cardholder verification value for the payment card.
+     * </p>
+     * 
+     * @return Card data parameters that are required to generate a cardholder verification value for the payment card.
+     */
+
+    public CardHolderVerificationValue getCardHolderVerificationValue() {
+        return this.cardHolderVerificationValue;
+    }
+
+    /**
+     * <p>
+     * Card data parameters that are required to generate a cardholder verification value for the payment card.
+     * </p>
+     * 
+     * @param cardHolderVerificationValue
+     *        Card data parameters that are required to generate a cardholder verification value for the payment card.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CardGenerationAttributes withCardHolderVerificationValue(CardHolderVerificationValue cardHolderVerificationValue) {
+        setCardHolderVerificationValue(cardHolderVerificationValue);
         return this;
     }
 
@@ -355,12 +355,12 @@ public class CardGenerationAttributes implements Serializable, Cloneable, Struct
             sb.append("AmexCardSecurityCodeVersion1: ").append(getAmexCardSecurityCodeVersion1()).append(",");
         if (getAmexCardSecurityCodeVersion2() != null)
             sb.append("AmexCardSecurityCodeVersion2: ").append(getAmexCardSecurityCodeVersion2()).append(",");
-        if (getCardHolderVerificationValue() != null)
-            sb.append("CardHolderVerificationValue: ").append(getCardHolderVerificationValue()).append(",");
         if (getCardVerificationValue1() != null)
             sb.append("CardVerificationValue1: ").append(getCardVerificationValue1()).append(",");
         if (getCardVerificationValue2() != null)
             sb.append("CardVerificationValue2: ").append(getCardVerificationValue2()).append(",");
+        if (getCardHolderVerificationValue() != null)
+            sb.append("CardHolderVerificationValue: ").append(getCardHolderVerificationValue()).append(",");
         if (getDynamicCardVerificationCode() != null)
             sb.append("DynamicCardVerificationCode: ").append(getDynamicCardVerificationCode()).append(",");
         if (getDynamicCardVerificationValue() != null)
@@ -387,10 +387,6 @@ public class CardGenerationAttributes implements Serializable, Cloneable, Struct
             return false;
         if (other.getAmexCardSecurityCodeVersion2() != null && other.getAmexCardSecurityCodeVersion2().equals(this.getAmexCardSecurityCodeVersion2()) == false)
             return false;
-        if (other.getCardHolderVerificationValue() == null ^ this.getCardHolderVerificationValue() == null)
-            return false;
-        if (other.getCardHolderVerificationValue() != null && other.getCardHolderVerificationValue().equals(this.getCardHolderVerificationValue()) == false)
-            return false;
         if (other.getCardVerificationValue1() == null ^ this.getCardVerificationValue1() == null)
             return false;
         if (other.getCardVerificationValue1() != null && other.getCardVerificationValue1().equals(this.getCardVerificationValue1()) == false)
@@ -398,6 +394,10 @@ public class CardGenerationAttributes implements Serializable, Cloneable, Struct
         if (other.getCardVerificationValue2() == null ^ this.getCardVerificationValue2() == null)
             return false;
         if (other.getCardVerificationValue2() != null && other.getCardVerificationValue2().equals(this.getCardVerificationValue2()) == false)
+            return false;
+        if (other.getCardHolderVerificationValue() == null ^ this.getCardHolderVerificationValue() == null)
+            return false;
+        if (other.getCardHolderVerificationValue() != null && other.getCardHolderVerificationValue().equals(this.getCardHolderVerificationValue()) == false)
             return false;
         if (other.getDynamicCardVerificationCode() == null ^ this.getDynamicCardVerificationCode() == null)
             return false;
@@ -417,9 +417,9 @@ public class CardGenerationAttributes implements Serializable, Cloneable, Struct
 
         hashCode = prime * hashCode + ((getAmexCardSecurityCodeVersion1() == null) ? 0 : getAmexCardSecurityCodeVersion1().hashCode());
         hashCode = prime * hashCode + ((getAmexCardSecurityCodeVersion2() == null) ? 0 : getAmexCardSecurityCodeVersion2().hashCode());
-        hashCode = prime * hashCode + ((getCardHolderVerificationValue() == null) ? 0 : getCardHolderVerificationValue().hashCode());
         hashCode = prime * hashCode + ((getCardVerificationValue1() == null) ? 0 : getCardVerificationValue1().hashCode());
         hashCode = prime * hashCode + ((getCardVerificationValue2() == null) ? 0 : getCardVerificationValue2().hashCode());
+        hashCode = prime * hashCode + ((getCardHolderVerificationValue() == null) ? 0 : getCardHolderVerificationValue().hashCode());
         hashCode = prime * hashCode + ((getDynamicCardVerificationCode() == null) ? 0 : getDynamicCardVerificationCode().hashCode());
         hashCode = prime * hashCode + ((getDynamicCardVerificationValue() == null) ? 0 : getDynamicCardVerificationValue().hashCode());
         return hashCode;

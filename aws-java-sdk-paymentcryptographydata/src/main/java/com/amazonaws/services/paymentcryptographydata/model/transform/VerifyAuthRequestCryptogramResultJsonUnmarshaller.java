@@ -48,10 +48,6 @@ public class VerifyAuthRequestCryptogramResultJsonUnmarshaller implements Unmars
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("AuthResponseValue", targetDepth)) {
-                    context.nextToken();
-                    verifyAuthRequestCryptogramResult.setAuthResponseValue(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("KeyArn", targetDepth)) {
                     context.nextToken();
                     verifyAuthRequestCryptogramResult.setKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class VerifyAuthRequestCryptogramResultJsonUnmarshaller implements Unmars
                 if (context.testExpression("KeyCheckValue", targetDepth)) {
                     context.nextToken();
                     verifyAuthRequestCryptogramResult.setKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AuthResponseValue", targetDepth)) {
+                    context.nextToken();
+                    verifyAuthRequestCryptogramResult.setAuthResponseValue(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

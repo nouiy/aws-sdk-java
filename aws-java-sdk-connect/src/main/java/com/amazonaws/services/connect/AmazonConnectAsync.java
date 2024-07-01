@@ -25,6 +25,20 @@ import com.amazonaws.services.connect.model.*;
  * {@link com.amazonaws.services.connect.AbstractAmazonConnectAsync} instead.
  * </p>
  * <p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Connect_Service.html">Amazon
+ * Connect actions</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_Connect_Service.html">Amazon
+ * Connect data types</a>
+ * </p>
+ * </li>
+ * </ul>
  * <p>
  * Amazon Connect is a cloud-based contact center solution that you use to set up and manage a customer contact center
  * and provide reliable customer engagement at any scale.
@@ -2945,6 +2959,49 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Describes the target authentication profile.
+     * </p>
+     * 
+     * @param describeAuthenticationProfileRequest
+     * @return A Java Future containing the result of the DescribeAuthenticationProfile operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.DescribeAuthenticationProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeAuthenticationProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAuthenticationProfileResult> describeAuthenticationProfileAsync(
+            DescribeAuthenticationProfileRequest describeAuthenticationProfileRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Describes the target authentication profile.
+     * </p>
+     * 
+     * @param describeAuthenticationProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAuthenticationProfile operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.DescribeAuthenticationProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeAuthenticationProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAuthenticationProfileResult> describeAuthenticationProfileAsync(
+            DescribeAuthenticationProfileRequest describeAuthenticationProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAuthenticationProfileRequest, DescribeAuthenticationProfileResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -5014,6 +5071,47 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ListApprovedOriginsResult> listApprovedOriginsAsync(ListApprovedOriginsRequest listApprovedOriginsRequest,
             com.amazonaws.handlers.AsyncHandler<ListApprovedOriginsRequest, ListApprovedOriginsResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Provides summary information about the authentication profiles in a specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listAuthenticationProfilesRequest
+     * @return A Java Future containing the result of the ListAuthenticationProfiles operation returned by the service.
+     * @sample AmazonConnectAsync.ListAuthenticationProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListAuthenticationProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAuthenticationProfilesResult> listAuthenticationProfilesAsync(
+            ListAuthenticationProfilesRequest listAuthenticationProfilesRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Provides summary information about the authentication profiles in a specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listAuthenticationProfilesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAuthenticationProfiles operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListAuthenticationProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListAuthenticationProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAuthenticationProfilesResult> listAuthenticationProfilesAsync(
+            ListAuthenticationProfilesRequest listAuthenticationProfilesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAuthenticationProfilesRequest, ListAuthenticationProfilesResult> asyncHandler);
 
     /**
      * <p>
@@ -7432,8 +7530,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <important>
      * <p>
-     * You may only use this API to upload attachments to a <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Connect
+     * You may only use this API to upload attachments to an <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Amazon Connect
      * Case</a>.
      * </p>
      * </important>
@@ -7452,8 +7550,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <important>
      * <p>
-     * You may only use this API to upload attachments to a <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Connect
+     * You may only use this API to upload attachments to an <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Amazon Connect
      * Case</a>.
      * </p>
      * </important>
@@ -8620,6 +8718,47 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(UpdateAgentStatusRequest updateAgentStatusRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateAgentStatusRequest, UpdateAgentStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Updates the selected authentication profile.
+     * </p>
+     * 
+     * @param updateAuthenticationProfileRequest
+     * @return A Java Future containing the result of the UpdateAuthenticationProfile operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateAuthenticationProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateAuthenticationProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAuthenticationProfileResult> updateAuthenticationProfileAsync(
+            UpdateAuthenticationProfileRequest updateAuthenticationProfileRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Updates the selected authentication profile.
+     * </p>
+     * 
+     * @param updateAuthenticationProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAuthenticationProfile operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateAuthenticationProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateAuthenticationProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAuthenticationProfileResult> updateAuthenticationProfileAsync(
+            UpdateAuthenticationProfileRequest updateAuthenticationProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAuthenticationProfileRequest, UpdateAuthenticationProfileResult> asyncHandler);
 
     /**
      * <p>

@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GenerateMacRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> GENERATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GenerationAttributes").build();
     private static final MarshallingInfo<String> KEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyIdentifier").build();
-    private static final MarshallingInfo<Integer> MACLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MacLength").build();
     private static final MarshallingInfo<String> MESSAGEDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageData").build();
+    private static final MarshallingInfo<StructuredPojo> GENERATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GenerationAttributes").build();
+    private static final MarshallingInfo<Integer> MACLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MacLength").build();
 
     private static final GenerateMacRequestMarshaller instance = new GenerateMacRequestMarshaller();
 
@@ -52,10 +52,10 @@ public class GenerateMacRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(generateMacRequest.getGenerationAttributes(), GENERATIONATTRIBUTES_BINDING);
             protocolMarshaller.marshall(generateMacRequest.getKeyIdentifier(), KEYIDENTIFIER_BINDING);
-            protocolMarshaller.marshall(generateMacRequest.getMacLength(), MACLENGTH_BINDING);
             protocolMarshaller.marshall(generateMacRequest.getMessageData(), MESSAGEDATA_BINDING);
+            protocolMarshaller.marshall(generateMacRequest.getGenerationAttributes(), GENERATIONATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(generateMacRequest.getMacLength(), MACLENGTH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

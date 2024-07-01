@@ -26,12 +26,6 @@ public class VerifyAuthRequestCryptogramResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
-     * </p>
-     */
-    private String authResponseValue;
-    /**
-     * <p>
      * The <code>keyARN</code> of the major encryption key that Amazon Web Services Payment Cryptography uses for ARQC
      * verification.
      * </p>
@@ -47,46 +41,12 @@ public class VerifyAuthRequestCryptogramResult extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String keyCheckValue;
-
     /**
      * <p>
      * The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
      * </p>
-     * 
-     * @param authResponseValue
-     *        The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
      */
-
-    public void setAuthResponseValue(String authResponseValue) {
-        this.authResponseValue = authResponseValue;
-    }
-
-    /**
-     * <p>
-     * The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @return The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
-     */
-
-    public String getAuthResponseValue() {
-        return this.authResponseValue;
-    }
-
-    /**
-     * <p>
-     * The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @param authResponseValue
-     *        The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VerifyAuthRequestCryptogramResult withAuthResponseValue(String authResponseValue) {
-        setAuthResponseValue(authResponseValue);
-        return this;
-    }
+    private String authResponseValue;
 
     /**
      * <p>
@@ -196,6 +156,46 @@ public class VerifyAuthRequestCryptogramResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param authResponseValue
+     *        The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
+     */
+
+    public void setAuthResponseValue(String authResponseValue) {
+        this.authResponseValue = authResponseValue;
+    }
+
+    /**
+     * <p>
+     * The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @return The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
+     */
+
+    public String getAuthResponseValue() {
+        return this.authResponseValue;
+    }
+
+    /**
+     * <p>
+     * The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param authResponseValue
+     *        The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VerifyAuthRequestCryptogramResult withAuthResponseValue(String authResponseValue) {
+        setAuthResponseValue(authResponseValue);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -207,12 +207,12 @@ public class VerifyAuthRequestCryptogramResult extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAuthResponseValue() != null)
-            sb.append("AuthResponseValue: ").append(getAuthResponseValue()).append(",");
         if (getKeyArn() != null)
             sb.append("KeyArn: ").append(getKeyArn()).append(",");
         if (getKeyCheckValue() != null)
-            sb.append("KeyCheckValue: ").append(getKeyCheckValue());
+            sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
+        if (getAuthResponseValue() != null)
+            sb.append("AuthResponseValue: ").append(getAuthResponseValue());
         sb.append("}");
         return sb.toString();
     }
@@ -227,10 +227,6 @@ public class VerifyAuthRequestCryptogramResult extends com.amazonaws.AmazonWebSe
         if (obj instanceof VerifyAuthRequestCryptogramResult == false)
             return false;
         VerifyAuthRequestCryptogramResult other = (VerifyAuthRequestCryptogramResult) obj;
-        if (other.getAuthResponseValue() == null ^ this.getAuthResponseValue() == null)
-            return false;
-        if (other.getAuthResponseValue() != null && other.getAuthResponseValue().equals(this.getAuthResponseValue()) == false)
-            return false;
         if (other.getKeyArn() == null ^ this.getKeyArn() == null)
             return false;
         if (other.getKeyArn() != null && other.getKeyArn().equals(this.getKeyArn()) == false)
@@ -238,6 +234,10 @@ public class VerifyAuthRequestCryptogramResult extends com.amazonaws.AmazonWebSe
         if (other.getKeyCheckValue() == null ^ this.getKeyCheckValue() == null)
             return false;
         if (other.getKeyCheckValue() != null && other.getKeyCheckValue().equals(this.getKeyCheckValue()) == false)
+            return false;
+        if (other.getAuthResponseValue() == null ^ this.getAuthResponseValue() == null)
+            return false;
+        if (other.getAuthResponseValue() != null && other.getAuthResponseValue().equals(this.getAuthResponseValue()) == false)
             return false;
         return true;
     }
@@ -247,9 +247,9 @@ public class VerifyAuthRequestCryptogramResult extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAuthResponseValue() == null) ? 0 : getAuthResponseValue().hashCode());
         hashCode = prime * hashCode + ((getKeyArn() == null) ? 0 : getKeyArn().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValue() == null) ? 0 : getKeyCheckValue().hashCode());
+        hashCode = prime * hashCode + ((getAuthResponseValue() == null) ? 0 : getAuthResponseValue().hashCode());
         return hashCode;
     }
 

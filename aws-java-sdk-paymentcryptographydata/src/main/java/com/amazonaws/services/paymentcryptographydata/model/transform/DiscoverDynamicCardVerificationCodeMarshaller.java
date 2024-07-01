@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DiscoverDynamicCardVerificationCodeMarshaller {
 
-    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
     private static final MarshallingInfo<String> CARDEXPIRYDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardExpiryDate").build();
     private static final MarshallingInfo<String> UNPREDICTABLENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UnpredictableNumber").build();
+    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
 
     private static final DiscoverDynamicCardVerificationCodeMarshaller instance = new DiscoverDynamicCardVerificationCodeMarshaller();
 
@@ -50,9 +50,9 @@ public class DiscoverDynamicCardVerificationCodeMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(discoverDynamicCardVerificationCode.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
             protocolMarshaller.marshall(discoverDynamicCardVerificationCode.getCardExpiryDate(), CARDEXPIRYDATE_BINDING);
             protocolMarshaller.marshall(discoverDynamicCardVerificationCode.getUnpredictableNumber(), UNPREDICTABLENUMBER_BINDING);
+            protocolMarshaller.marshall(discoverDynamicCardVerificationCode.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

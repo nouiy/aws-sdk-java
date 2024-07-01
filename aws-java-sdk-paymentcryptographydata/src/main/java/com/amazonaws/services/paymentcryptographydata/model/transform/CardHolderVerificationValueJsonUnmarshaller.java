@@ -48,17 +48,17 @@ public class CardHolderVerificationValueJsonUnmarshaller implements Unmarshaller
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
+                if (context.testExpression("UnpredictableNumber", targetDepth)) {
                     context.nextToken();
-                    cardHolderVerificationValue.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
+                    cardHolderVerificationValue.setUnpredictableNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PanSequenceNumber", targetDepth)) {
                     context.nextToken();
                     cardHolderVerificationValue.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("UnpredictableNumber", targetDepth)) {
+                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
                     context.nextToken();
-                    cardHolderVerificationValue.setUnpredictableNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                    cardHolderVerificationValue.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -48,29 +48,29 @@ public class EmvEncryptionAttributesJsonUnmarshaller implements Unmarshaller<Emv
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("InitializationVector", targetDepth)) {
-                    context.nextToken();
-                    emvEncryptionAttributes.setInitializationVector(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("MajorKeyDerivationMode", targetDepth)) {
                     context.nextToken();
                     emvEncryptionAttributes.setMajorKeyDerivationMode(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Mode", targetDepth)) {
-                    context.nextToken();
-                    emvEncryptionAttributes.setMode(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("PanSequenceNumber", targetDepth)) {
-                    context.nextToken();
-                    emvEncryptionAttributes.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PrimaryAccountNumber", targetDepth)) {
                     context.nextToken();
                     emvEncryptionAttributes.setPrimaryAccountNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("PanSequenceNumber", targetDepth)) {
+                    context.nextToken();
+                    emvEncryptionAttributes.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("SessionDerivationData", targetDepth)) {
                     context.nextToken();
                     emvEncryptionAttributes.setSessionDerivationData(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Mode", targetDepth)) {
+                    context.nextToken();
+                    emvEncryptionAttributes.setMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("InitializationVector", targetDepth)) {
+                    context.nextToken();
+                    emvEncryptionAttributes.setInitializationVector(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

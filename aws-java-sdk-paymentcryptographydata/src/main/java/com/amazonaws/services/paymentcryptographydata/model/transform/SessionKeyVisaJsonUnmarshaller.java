@@ -48,13 +48,13 @@ public class SessionKeyVisaJsonUnmarshaller implements Unmarshaller<SessionKeyVi
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("PanSequenceNumber", targetDepth)) {
-                    context.nextToken();
-                    sessionKeyVisa.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("PrimaryAccountNumber", targetDepth)) {
                     context.nextToken();
                     sessionKeyVisa.setPrimaryAccountNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PanSequenceNumber", targetDepth)) {
+                    context.nextToken();
+                    sessionKeyVisa.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -29,10 +29,10 @@ public class Ibm3624NaturalPinMarshaller {
 
     private static final MarshallingInfo<String> DECIMALIZATIONTABLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DecimalizationTable").build();
-    private static final MarshallingInfo<String> PINVALIDATIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinValidationData").build();
     private static final MarshallingInfo<String> PINVALIDATIONDATAPADCHARACTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinValidationDataPadCharacter").build();
+    private static final MarshallingInfo<String> PINVALIDATIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinValidationData").build();
 
     private static final Ibm3624NaturalPinMarshaller instance = new Ibm3624NaturalPinMarshaller();
 
@@ -51,8 +51,8 @@ public class Ibm3624NaturalPinMarshaller {
 
         try {
             protocolMarshaller.marshall(ibm3624NaturalPin.getDecimalizationTable(), DECIMALIZATIONTABLE_BINDING);
-            protocolMarshaller.marshall(ibm3624NaturalPin.getPinValidationData(), PINVALIDATIONDATA_BINDING);
             protocolMarshaller.marshall(ibm3624NaturalPin.getPinValidationDataPadCharacter(), PINVALIDATIONDATAPADCHARACTER_BINDING);
+            protocolMarshaller.marshall(ibm3624NaturalPin.getPinValidationData(), PINVALIDATIONDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

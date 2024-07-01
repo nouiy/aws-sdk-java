@@ -48,13 +48,13 @@ public class SymmetricEncryptionAttributesJsonUnmarshaller implements Unmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("InitializationVector", targetDepth)) {
-                    context.nextToken();
-                    symmetricEncryptionAttributes.setInitializationVector(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("Mode", targetDepth)) {
                     context.nextToken();
                     symmetricEncryptionAttributes.setMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("InitializationVector", targetDepth)) {
+                    context.nextToken();
+                    symmetricEncryptionAttributes.setInitializationVector(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PaddingType", targetDepth)) {
                     context.nextToken();

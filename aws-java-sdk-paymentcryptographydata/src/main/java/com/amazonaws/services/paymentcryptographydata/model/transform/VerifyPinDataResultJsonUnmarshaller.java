@@ -48,14 +48,6 @@ public class VerifyPinDataResultJsonUnmarshaller implements Unmarshaller<VerifyP
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("EncryptionKeyArn", targetDepth)) {
-                    context.nextToken();
-                    verifyPinDataResult.setEncryptionKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("EncryptionKeyCheckValue", targetDepth)) {
-                    context.nextToken();
-                    verifyPinDataResult.setEncryptionKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("VerificationKeyArn", targetDepth)) {
                     context.nextToken();
                     verifyPinDataResult.setVerificationKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -63,6 +55,14 @@ public class VerifyPinDataResultJsonUnmarshaller implements Unmarshaller<VerifyP
                 if (context.testExpression("VerificationKeyCheckValue", targetDepth)) {
                     context.nextToken();
                     verifyPinDataResult.setVerificationKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("EncryptionKeyArn", targetDepth)) {
+                    context.nextToken();
+                    verifyPinDataResult.setEncryptionKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("EncryptionKeyCheckValue", targetDepth)) {
+                    context.nextToken();
+                    verifyPinDataResult.setEncryptionKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

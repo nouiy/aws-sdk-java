@@ -29,14 +29,14 @@ public class VerifyMacRequestMarshaller {
 
     private static final MarshallingInfo<String> KEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyIdentifier").build();
-    private static final MarshallingInfo<String> MAC_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Mac").build();
-    private static final MarshallingInfo<Integer> MACLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MacLength").build();
     private static final MarshallingInfo<String> MESSAGEDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageData").build();
+    private static final MarshallingInfo<String> MAC_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Mac").build();
     private static final MarshallingInfo<StructuredPojo> VERIFICATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VerificationAttributes").build();
+    private static final MarshallingInfo<Integer> MACLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MacLength").build();
 
     private static final VerifyMacRequestMarshaller instance = new VerifyMacRequestMarshaller();
 
@@ -55,10 +55,10 @@ public class VerifyMacRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(verifyMacRequest.getKeyIdentifier(), KEYIDENTIFIER_BINDING);
-            protocolMarshaller.marshall(verifyMacRequest.getMac(), MAC_BINDING);
-            protocolMarshaller.marshall(verifyMacRequest.getMacLength(), MACLENGTH_BINDING);
             protocolMarshaller.marshall(verifyMacRequest.getMessageData(), MESSAGEDATA_BINDING);
+            protocolMarshaller.marshall(verifyMacRequest.getMac(), MAC_BINDING);
             protocolMarshaller.marshall(verifyMacRequest.getVerificationAttributes(), VERIFICATIONATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(verifyMacRequest.getMacLength(), MACLENGTH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

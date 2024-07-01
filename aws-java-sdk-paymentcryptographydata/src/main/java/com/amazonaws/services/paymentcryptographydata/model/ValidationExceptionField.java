@@ -33,53 +33,13 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
      * The request was denied due to an invalid request error.
      * </p>
      */
-    private String message;
-    /**
-     * <p>
-     * The request was denied due to an invalid request error.
-     * </p>
-     */
     private String path;
-
     /**
      * <p>
      * The request was denied due to an invalid request error.
      * </p>
-     * 
-     * @param message
-     *        The request was denied due to an invalid request error.
      */
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    /**
-     * <p>
-     * The request was denied due to an invalid request error.
-     * </p>
-     * 
-     * @return The request was denied due to an invalid request error.
-     */
-
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
-     * <p>
-     * The request was denied due to an invalid request error.
-     * </p>
-     * 
-     * @param message
-     *        The request was denied due to an invalid request error.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ValidationExceptionField withMessage(String message) {
-        setMessage(message);
-        return this;
-    }
+    private String message;
 
     /**
      * <p>
@@ -122,6 +82,46 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The request was denied due to an invalid request error.
+     * </p>
+     * 
+     * @param message
+     *        The request was denied due to an invalid request error.
+     */
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    /**
+     * <p>
+     * The request was denied due to an invalid request error.
+     * </p>
+     * 
+     * @return The request was denied due to an invalid request error.
+     */
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * <p>
+     * The request was denied due to an invalid request error.
+     * </p>
+     * 
+     * @param message
+     *        The request was denied due to an invalid request error.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ValidationExceptionField withMessage(String message) {
+        setMessage(message);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,10 +133,10 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMessage() != null)
-            sb.append("Message: ").append(getMessage()).append(",");
         if (getPath() != null)
-            sb.append("Path: ").append(getPath());
+            sb.append("Path: ").append(getPath()).append(",");
+        if (getMessage() != null)
+            sb.append("Message: ").append(getMessage());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
         if (obj instanceof ValidationExceptionField == false)
             return false;
         ValidationExceptionField other = (ValidationExceptionField) obj;
-        if (other.getMessage() == null ^ this.getMessage() == null)
-            return false;
-        if (other.getMessage() != null && other.getMessage().equals(this.getMessage()) == false)
-            return false;
         if (other.getPath() == null ^ this.getPath() == null)
             return false;
         if (other.getPath() != null && other.getPath().equals(this.getPath()) == false)
+            return false;
+        if (other.getMessage() == null ^ this.getMessage() == null)
+            return false;
+        if (other.getMessage() != null && other.getMessage().equals(this.getMessage()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         hashCode = prime * hashCode + ((getPath() == null) ? 0 : getPath().hashCode());
+        hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         return hashCode;
     }
 

@@ -31,12 +31,6 @@ public class DiscoverDynamicCardVerificationCode implements Serializable, Clonea
 
     /**
      * <p>
-     * The transaction counter value that comes from the terminal.
-     * </p>
-     */
-    private String applicationTransactionCounter;
-    /**
-     * <p>
      * The expiry date of a payment card.
      * </p>
      */
@@ -47,46 +41,12 @@ public class DiscoverDynamicCardVerificationCode implements Serializable, Clonea
      * </p>
      */
     private String unpredictableNumber;
-
     /**
      * <p>
      * The transaction counter value that comes from the terminal.
      * </p>
-     * 
-     * @param applicationTransactionCounter
-     *        The transaction counter value that comes from the terminal.
      */
-
-    public void setApplicationTransactionCounter(String applicationTransactionCounter) {
-        this.applicationTransactionCounter = applicationTransactionCounter;
-    }
-
-    /**
-     * <p>
-     * The transaction counter value that comes from the terminal.
-     * </p>
-     * 
-     * @return The transaction counter value that comes from the terminal.
-     */
-
-    public String getApplicationTransactionCounter() {
-        return this.applicationTransactionCounter;
-    }
-
-    /**
-     * <p>
-     * The transaction counter value that comes from the terminal.
-     * </p>
-     * 
-     * @param applicationTransactionCounter
-     *        The transaction counter value that comes from the terminal.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DiscoverDynamicCardVerificationCode withApplicationTransactionCounter(String applicationTransactionCounter) {
-        setApplicationTransactionCounter(applicationTransactionCounter);
-        return this;
-    }
+    private String applicationTransactionCounter;
 
     /**
      * <p>
@@ -169,6 +129,46 @@ public class DiscoverDynamicCardVerificationCode implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * The transaction counter value that comes from the terminal.
+     * </p>
+     * 
+     * @param applicationTransactionCounter
+     *        The transaction counter value that comes from the terminal.
+     */
+
+    public void setApplicationTransactionCounter(String applicationTransactionCounter) {
+        this.applicationTransactionCounter = applicationTransactionCounter;
+    }
+
+    /**
+     * <p>
+     * The transaction counter value that comes from the terminal.
+     * </p>
+     * 
+     * @return The transaction counter value that comes from the terminal.
+     */
+
+    public String getApplicationTransactionCounter() {
+        return this.applicationTransactionCounter;
+    }
+
+    /**
+     * <p>
+     * The transaction counter value that comes from the terminal.
+     * </p>
+     * 
+     * @param applicationTransactionCounter
+     *        The transaction counter value that comes from the terminal.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DiscoverDynamicCardVerificationCode withApplicationTransactionCounter(String applicationTransactionCounter) {
+        setApplicationTransactionCounter(applicationTransactionCounter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -180,12 +180,12 @@ public class DiscoverDynamicCardVerificationCode implements Serializable, Clonea
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getApplicationTransactionCounter() != null)
-            sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter()).append(",");
         if (getCardExpiryDate() != null)
             sb.append("CardExpiryDate: ").append(getCardExpiryDate()).append(",");
         if (getUnpredictableNumber() != null)
-            sb.append("UnpredictableNumber: ").append(getUnpredictableNumber());
+            sb.append("UnpredictableNumber: ").append(getUnpredictableNumber()).append(",");
+        if (getApplicationTransactionCounter() != null)
+            sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter());
         sb.append("}");
         return sb.toString();
     }
@@ -200,11 +200,6 @@ public class DiscoverDynamicCardVerificationCode implements Serializable, Clonea
         if (obj instanceof DiscoverDynamicCardVerificationCode == false)
             return false;
         DiscoverDynamicCardVerificationCode other = (DiscoverDynamicCardVerificationCode) obj;
-        if (other.getApplicationTransactionCounter() == null ^ this.getApplicationTransactionCounter() == null)
-            return false;
-        if (other.getApplicationTransactionCounter() != null
-                && other.getApplicationTransactionCounter().equals(this.getApplicationTransactionCounter()) == false)
-            return false;
         if (other.getCardExpiryDate() == null ^ this.getCardExpiryDate() == null)
             return false;
         if (other.getCardExpiryDate() != null && other.getCardExpiryDate().equals(this.getCardExpiryDate()) == false)
@@ -212,6 +207,11 @@ public class DiscoverDynamicCardVerificationCode implements Serializable, Clonea
         if (other.getUnpredictableNumber() == null ^ this.getUnpredictableNumber() == null)
             return false;
         if (other.getUnpredictableNumber() != null && other.getUnpredictableNumber().equals(this.getUnpredictableNumber()) == false)
+            return false;
+        if (other.getApplicationTransactionCounter() == null ^ this.getApplicationTransactionCounter() == null)
+            return false;
+        if (other.getApplicationTransactionCounter() != null
+                && other.getApplicationTransactionCounter().equals(this.getApplicationTransactionCounter()) == false)
             return false;
         return true;
     }
@@ -221,9 +221,9 @@ public class DiscoverDynamicCardVerificationCode implements Serializable, Clonea
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getApplicationTransactionCounter() == null) ? 0 : getApplicationTransactionCounter().hashCode());
         hashCode = prime * hashCode + ((getCardExpiryDate() == null) ? 0 : getCardExpiryDate().hashCode());
         hashCode = prime * hashCode + ((getUnpredictableNumber() == null) ? 0 : getUnpredictableNumber().hashCode());
+        hashCode = prime * hashCode + ((getApplicationTransactionCounter() == null) ? 0 : getApplicationTransactionCounter().hashCode());
         return hashCode;
     }
 

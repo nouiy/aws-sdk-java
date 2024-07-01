@@ -48,6 +48,10 @@ public class DukptDerivationAttributesJsonUnmarshaller implements Unmarshaller<D
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("KeySerialNumber", targetDepth)) {
+                    context.nextToken();
+                    dukptDerivationAttributes.setKeySerialNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("DukptKeyDerivationType", targetDepth)) {
                     context.nextToken();
                     dukptDerivationAttributes.setDukptKeyDerivationType(context.getUnmarshaller(String.class).unmarshall(context));
@@ -55,10 +59,6 @@ public class DukptDerivationAttributesJsonUnmarshaller implements Unmarshaller<D
                 if (context.testExpression("DukptKeyVariant", targetDepth)) {
                     context.nextToken();
                     dukptDerivationAttributes.setDukptKeyVariant(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("KeySerialNumber", targetDepth)) {
-                    context.nextToken();
-                    dukptDerivationAttributes.setKeySerialNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

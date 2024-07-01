@@ -30,10 +30,11 @@ public class SessionKeyEmvCommon implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The transaction counter that is provided by the terminal during transaction processing.
+     * The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit
+     * card and associates the card to a specific account holder.
      * </p>
      */
-    private String applicationTransactionCounter;
+    private String primaryAccountNumber;
     /**
      * <p>
      * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
@@ -42,91 +43,10 @@ public class SessionKeyEmvCommon implements Serializable, Cloneable, StructuredP
     private String panSequenceNumber;
     /**
      * <p>
-     * The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit
-     * card and associates the card to a specific account holder.
-     * </p>
-     */
-    private String primaryAccountNumber;
-
-    /**
-     * <p>
      * The transaction counter that is provided by the terminal during transaction processing.
      * </p>
-     * 
-     * @param applicationTransactionCounter
-     *        The transaction counter that is provided by the terminal during transaction processing.
      */
-
-    public void setApplicationTransactionCounter(String applicationTransactionCounter) {
-        this.applicationTransactionCounter = applicationTransactionCounter;
-    }
-
-    /**
-     * <p>
-     * The transaction counter that is provided by the terminal during transaction processing.
-     * </p>
-     * 
-     * @return The transaction counter that is provided by the terminal during transaction processing.
-     */
-
-    public String getApplicationTransactionCounter() {
-        return this.applicationTransactionCounter;
-    }
-
-    /**
-     * <p>
-     * The transaction counter that is provided by the terminal during transaction processing.
-     * </p>
-     * 
-     * @param applicationTransactionCounter
-     *        The transaction counter that is provided by the terminal during transaction processing.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SessionKeyEmvCommon withApplicationTransactionCounter(String applicationTransactionCounter) {
-        setApplicationTransactionCounter(applicationTransactionCounter);
-        return this;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     */
-
-    public void setPanSequenceNumber(String panSequenceNumber) {
-        this.panSequenceNumber = panSequenceNumber;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     */
-
-    public String getPanSequenceNumber() {
-        return this.panSequenceNumber;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SessionKeyEmvCommon withPanSequenceNumber(String panSequenceNumber) {
-        setPanSequenceNumber(panSequenceNumber);
-        return this;
-    }
+    private String applicationTransactionCounter;
 
     /**
      * <p>
@@ -175,6 +95,86 @@ public class SessionKeyEmvCommon implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     */
+
+    public void setPanSequenceNumber(String panSequenceNumber) {
+        this.panSequenceNumber = panSequenceNumber;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     */
+
+    public String getPanSequenceNumber() {
+        return this.panSequenceNumber;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SessionKeyEmvCommon withPanSequenceNumber(String panSequenceNumber) {
+        setPanSequenceNumber(panSequenceNumber);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The transaction counter that is provided by the terminal during transaction processing.
+     * </p>
+     * 
+     * @param applicationTransactionCounter
+     *        The transaction counter that is provided by the terminal during transaction processing.
+     */
+
+    public void setApplicationTransactionCounter(String applicationTransactionCounter) {
+        this.applicationTransactionCounter = applicationTransactionCounter;
+    }
+
+    /**
+     * <p>
+     * The transaction counter that is provided by the terminal during transaction processing.
+     * </p>
+     * 
+     * @return The transaction counter that is provided by the terminal during transaction processing.
+     */
+
+    public String getApplicationTransactionCounter() {
+        return this.applicationTransactionCounter;
+    }
+
+    /**
+     * <p>
+     * The transaction counter that is provided by the terminal during transaction processing.
+     * </p>
+     * 
+     * @param applicationTransactionCounter
+     *        The transaction counter that is provided by the terminal during transaction processing.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SessionKeyEmvCommon withApplicationTransactionCounter(String applicationTransactionCounter) {
+        setApplicationTransactionCounter(applicationTransactionCounter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -186,12 +186,12 @@ public class SessionKeyEmvCommon implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getApplicationTransactionCounter() != null)
-            sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter()).append(",");
+        if (getPrimaryAccountNumber() != null)
+            sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***").append(",");
         if (getPanSequenceNumber() != null)
             sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
-        if (getPrimaryAccountNumber() != null)
-            sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***");
+        if (getApplicationTransactionCounter() != null)
+            sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter());
         sb.append("}");
         return sb.toString();
     }
@@ -206,18 +206,18 @@ public class SessionKeyEmvCommon implements Serializable, Cloneable, StructuredP
         if (obj instanceof SessionKeyEmvCommon == false)
             return false;
         SessionKeyEmvCommon other = (SessionKeyEmvCommon) obj;
-        if (other.getApplicationTransactionCounter() == null ^ this.getApplicationTransactionCounter() == null)
+        if (other.getPrimaryAccountNumber() == null ^ this.getPrimaryAccountNumber() == null)
             return false;
-        if (other.getApplicationTransactionCounter() != null
-                && other.getApplicationTransactionCounter().equals(this.getApplicationTransactionCounter()) == false)
+        if (other.getPrimaryAccountNumber() != null && other.getPrimaryAccountNumber().equals(this.getPrimaryAccountNumber()) == false)
             return false;
         if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
             return false;
         if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
             return false;
-        if (other.getPrimaryAccountNumber() == null ^ this.getPrimaryAccountNumber() == null)
+        if (other.getApplicationTransactionCounter() == null ^ this.getApplicationTransactionCounter() == null)
             return false;
-        if (other.getPrimaryAccountNumber() != null && other.getPrimaryAccountNumber().equals(this.getPrimaryAccountNumber()) == false)
+        if (other.getApplicationTransactionCounter() != null
+                && other.getApplicationTransactionCounter().equals(this.getApplicationTransactionCounter()) == false)
             return false;
         return true;
     }
@@ -227,9 +227,9 @@ public class SessionKeyEmvCommon implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getApplicationTransactionCounter() == null) ? 0 : getApplicationTransactionCounter().hashCode());
-        hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
         hashCode = prime * hashCode + ((getPrimaryAccountNumber() == null) ? 0 : getPrimaryAccountNumber().hashCode());
+        hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
+        hashCode = prime * hashCode + ((getApplicationTransactionCounter() == null) ? 0 : getApplicationTransactionCounter().hashCode());
         return hashCode;
     }
 

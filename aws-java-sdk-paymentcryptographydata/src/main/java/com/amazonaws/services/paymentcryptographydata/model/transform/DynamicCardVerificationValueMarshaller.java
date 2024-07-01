@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DynamicCardVerificationValueMarshaller {
 
-    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
-    private static final MarshallingInfo<String> CARDEXPIRYDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardExpiryDate").build();
     private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
+    private static final MarshallingInfo<String> CARDEXPIRYDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardExpiryDate").build();
     private static final MarshallingInfo<String> SERVICECODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServiceCode").build();
+    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
 
     private static final DynamicCardVerificationValueMarshaller instance = new DynamicCardVerificationValueMarshaller();
 
@@ -52,10 +52,10 @@ public class DynamicCardVerificationValueMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(dynamicCardVerificationValue.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
-            protocolMarshaller.marshall(dynamicCardVerificationValue.getCardExpiryDate(), CARDEXPIRYDATE_BINDING);
             protocolMarshaller.marshall(dynamicCardVerificationValue.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
+            protocolMarshaller.marshall(dynamicCardVerificationValue.getCardExpiryDate(), CARDEXPIRYDATE_BINDING);
             protocolMarshaller.marshall(dynamicCardVerificationValue.getServiceCode(), SERVICECODE_BINDING);
+            protocolMarshaller.marshall(dynamicCardVerificationValue.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

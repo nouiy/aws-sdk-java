@@ -48,13 +48,13 @@ public class PinVerificationAttributesJsonUnmarshaller implements Unmarshaller<P
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Ibm3624Pin", targetDepth)) {
-                    context.nextToken();
-                    pinVerificationAttributes.setIbm3624Pin(Ibm3624PinVerificationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("VisaPin", targetDepth)) {
                     context.nextToken();
                     pinVerificationAttributes.setVisaPin(VisaPinVerificationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Ibm3624Pin", targetDepth)) {
+                    context.nextToken();
+                    pinVerificationAttributes.setIbm3624Pin(Ibm3624PinVerificationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

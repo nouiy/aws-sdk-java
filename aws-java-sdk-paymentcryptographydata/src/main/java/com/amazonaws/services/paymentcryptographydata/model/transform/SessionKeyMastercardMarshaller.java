@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SessionKeyMastercardMarshaller {
 
-    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
-    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
     private static final MarshallingInfo<String> PRIMARYACCOUNTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryAccountNumber").build();
+    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
+    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
     private static final MarshallingInfo<String> UNPREDICTABLENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UnpredictableNumber").build();
 
@@ -52,9 +52,9 @@ public class SessionKeyMastercardMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(sessionKeyMastercard.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
-            protocolMarshaller.marshall(sessionKeyMastercard.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(sessionKeyMastercard.getPrimaryAccountNumber(), PRIMARYACCOUNTNUMBER_BINDING);
+            protocolMarshaller.marshall(sessionKeyMastercard.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
+            protocolMarshaller.marshall(sessionKeyMastercard.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
             protocolMarshaller.marshall(sessionKeyMastercard.getUnpredictableNumber(), UNPREDICTABLENUMBER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

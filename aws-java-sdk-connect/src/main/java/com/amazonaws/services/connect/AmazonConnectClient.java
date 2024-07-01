@@ -51,6 +51,20 @@ import com.amazonaws.services.connect.model.transform.*;
  * Client for accessing Amazon Connect. All service calls made using this client are blocking, and will not return until
  * the service call completes.
  * <p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Connect_Service.html">Amazon
+ * Connect actions</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_Connect_Service.html">Amazon
+ * Connect data types</a>
+ * </p>
+ * </li>
+ * </ul>
  * <p>
  * Amazon Connect is a cloud-based contact center solution that you use to set up and manage a customer contact center
  * and provide reliable customer engagement at any scale.
@@ -5355,6 +5369,77 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Describes the target authentication profile.
+     * </p>
+     * 
+     * @param describeAuthenticationProfileRequest
+     * @return Result of the DescribeAuthenticationProfile operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DescribeAuthenticationProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeAuthenticationProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeAuthenticationProfileResult describeAuthenticationProfile(DescribeAuthenticationProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeAuthenticationProfile(request);
+    }
+
+    @SdkInternalApi
+    final DescribeAuthenticationProfileResult executeDescribeAuthenticationProfile(DescribeAuthenticationProfileRequest describeAuthenticationProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeAuthenticationProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeAuthenticationProfileRequest> request = null;
+        Response<DescribeAuthenticationProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeAuthenticationProfileRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeAuthenticationProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeAuthenticationProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAuthenticationProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeAuthenticationProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -8978,6 +9063,77 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<ListApprovedOriginsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListApprovedOriginsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Provides summary information about the authentication profiles in a specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listAuthenticationProfilesRequest
+     * @return Result of the ListAuthenticationProfiles operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListAuthenticationProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListAuthenticationProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAuthenticationProfilesResult listAuthenticationProfiles(ListAuthenticationProfilesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAuthenticationProfiles(request);
+    }
+
+    @SdkInternalApi
+    final ListAuthenticationProfilesResult executeListAuthenticationProfiles(ListAuthenticationProfilesRequest listAuthenticationProfilesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAuthenticationProfilesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAuthenticationProfilesRequest> request = null;
+        Response<ListAuthenticationProfilesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAuthenticationProfilesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAuthenticationProfilesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAuthenticationProfiles");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAuthenticationProfilesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAuthenticationProfilesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -13363,8 +13519,8 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * </p>
      * <important>
      * <p>
-     * You may only use this API to upload attachments to a <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Connect
+     * You may only use this API to upload attachments to an <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Amazon Connect
      * Case</a>.
      * </p>
      * </important>
@@ -14902,6 +15058,77 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateAgentStatusResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateAgentStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change. To request access to this API,
+     * contact Amazon Web Services Support.
+     * </p>
+     * <p>
+     * Updates the selected authentication profile.
+     * </p>
+     * 
+     * @param updateAuthenticationProfileRequest
+     * @return Result of the UpdateAuthenticationProfile operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdateAuthenticationProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateAuthenticationProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateAuthenticationProfileResult updateAuthenticationProfile(UpdateAuthenticationProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateAuthenticationProfile(request);
+    }
+
+    @SdkInternalApi
+    final UpdateAuthenticationProfileResult executeUpdateAuthenticationProfile(UpdateAuthenticationProfileRequest updateAuthenticationProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateAuthenticationProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateAuthenticationProfileRequest> request = null;
+        Response<UpdateAuthenticationProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateAuthenticationProfileRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateAuthenticationProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateAuthenticationProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateAuthenticationProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateAuthenticationProfileResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

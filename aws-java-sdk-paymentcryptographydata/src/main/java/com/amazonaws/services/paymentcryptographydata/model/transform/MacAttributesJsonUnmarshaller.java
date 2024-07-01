@@ -52,9 +52,9 @@ public class MacAttributesJsonUnmarshaller implements Unmarshaller<MacAttributes
                     context.nextToken();
                     macAttributes.setAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("DukptCmac", targetDepth)) {
+                if (context.testExpression("EmvMac", targetDepth)) {
                     context.nextToken();
-                    macAttributes.setDukptCmac(MacAlgorithmDukptJsonUnmarshaller.getInstance().unmarshall(context));
+                    macAttributes.setEmvMac(MacAlgorithmEmvJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("DukptIso9797Algorithm1", targetDepth)) {
                     context.nextToken();
@@ -64,9 +64,9 @@ public class MacAttributesJsonUnmarshaller implements Unmarshaller<MacAttributes
                     context.nextToken();
                     macAttributes.setDukptIso9797Algorithm3(MacAlgorithmDukptJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("EmvMac", targetDepth)) {
+                if (context.testExpression("DukptCmac", targetDepth)) {
                     context.nextToken();
-                    macAttributes.setEmvMac(MacAlgorithmEmvJsonUnmarshaller.getInstance().unmarshall(context));
+                    macAttributes.setDukptCmac(MacAlgorithmDukptJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

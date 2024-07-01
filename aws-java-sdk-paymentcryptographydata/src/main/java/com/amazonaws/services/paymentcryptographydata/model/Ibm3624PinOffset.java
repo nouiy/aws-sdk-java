@@ -30,13 +30,6 @@ public class Ibm3624PinOffset implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
-     * intermediate result from hexadecimal characters to decimal.
-     * </p>
-     */
-    private String decimalizationTable;
-    /**
-     * <p>
      * The encrypted PIN block data. According to ISO 9564 standard, a PIN Block is an encoded representation of a
      * payment card Personal Account Number (PAN) and the cardholder Personal Identification Number (PIN).
      * </p>
@@ -44,62 +37,23 @@ public class Ibm3624PinOffset implements Serializable, Cloneable, StructuredPojo
     private String encryptedPinBlock;
     /**
      * <p>
-     * The unique data for cardholder identification.
+     * The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
+     * intermediate result from hexadecimal characters to decimal.
      * </p>
      */
-    private String pinValidationData;
+    private String decimalizationTable;
     /**
      * <p>
      * The padding character for validation data.
      * </p>
      */
     private String pinValidationDataPadCharacter;
-
     /**
      * <p>
-     * The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
-     * intermediate result from hexadecimal characters to decimal.
+     * The unique data for cardholder identification.
      * </p>
-     * 
-     * @param decimalizationTable
-     *        The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
-     *        intermediate result from hexadecimal characters to decimal.
      */
-
-    public void setDecimalizationTable(String decimalizationTable) {
-        this.decimalizationTable = decimalizationTable;
-    }
-
-    /**
-     * <p>
-     * The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
-     * intermediate result from hexadecimal characters to decimal.
-     * </p>
-     * 
-     * @return The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
-     *         intermediate result from hexadecimal characters to decimal.
-     */
-
-    public String getDecimalizationTable() {
-        return this.decimalizationTable;
-    }
-
-    /**
-     * <p>
-     * The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
-     * intermediate result from hexadecimal characters to decimal.
-     * </p>
-     * 
-     * @param decimalizationTable
-     *        The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
-     *        intermediate result from hexadecimal characters to decimal.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Ibm3624PinOffset withDecimalizationTable(String decimalizationTable) {
-        setDecimalizationTable(decimalizationTable);
-        return this;
-    }
+    private String pinValidationData;
 
     /**
      * <p>
@@ -149,41 +103,47 @@ public class Ibm3624PinOffset implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The unique data for cardholder identification.
+     * The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
+     * intermediate result from hexadecimal characters to decimal.
      * </p>
      * 
-     * @param pinValidationData
-     *        The unique data for cardholder identification.
+     * @param decimalizationTable
+     *        The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
+     *        intermediate result from hexadecimal characters to decimal.
      */
 
-    public void setPinValidationData(String pinValidationData) {
-        this.pinValidationData = pinValidationData;
+    public void setDecimalizationTable(String decimalizationTable) {
+        this.decimalizationTable = decimalizationTable;
     }
 
     /**
      * <p>
-     * The unique data for cardholder identification.
+     * The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
+     * intermediate result from hexadecimal characters to decimal.
      * </p>
      * 
-     * @return The unique data for cardholder identification.
+     * @return The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
+     *         intermediate result from hexadecimal characters to decimal.
      */
 
-    public String getPinValidationData() {
-        return this.pinValidationData;
+    public String getDecimalizationTable() {
+        return this.decimalizationTable;
     }
 
     /**
      * <p>
-     * The unique data for cardholder identification.
+     * The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
+     * intermediate result from hexadecimal characters to decimal.
      * </p>
      * 
-     * @param pinValidationData
-     *        The unique data for cardholder identification.
+     * @param decimalizationTable
+     *        The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm
+     *        intermediate result from hexadecimal characters to decimal.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Ibm3624PinOffset withPinValidationData(String pinValidationData) {
-        setPinValidationData(pinValidationData);
+    public Ibm3624PinOffset withDecimalizationTable(String decimalizationTable) {
+        setDecimalizationTable(decimalizationTable);
         return this;
     }
 
@@ -228,6 +188,46 @@ public class Ibm3624PinOffset implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The unique data for cardholder identification.
+     * </p>
+     * 
+     * @param pinValidationData
+     *        The unique data for cardholder identification.
+     */
+
+    public void setPinValidationData(String pinValidationData) {
+        this.pinValidationData = pinValidationData;
+    }
+
+    /**
+     * <p>
+     * The unique data for cardholder identification.
+     * </p>
+     * 
+     * @return The unique data for cardholder identification.
+     */
+
+    public String getPinValidationData() {
+        return this.pinValidationData;
+    }
+
+    /**
+     * <p>
+     * The unique data for cardholder identification.
+     * </p>
+     * 
+     * @param pinValidationData
+     *        The unique data for cardholder identification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Ibm3624PinOffset withPinValidationData(String pinValidationData) {
+        setPinValidationData(pinValidationData);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -239,14 +239,14 @@ public class Ibm3624PinOffset implements Serializable, Cloneable, StructuredPojo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDecimalizationTable() != null)
-            sb.append("DecimalizationTable: ").append(getDecimalizationTable()).append(",");
         if (getEncryptedPinBlock() != null)
             sb.append("EncryptedPinBlock: ").append(getEncryptedPinBlock()).append(",");
-        if (getPinValidationData() != null)
-            sb.append("PinValidationData: ").append(getPinValidationData()).append(",");
+        if (getDecimalizationTable() != null)
+            sb.append("DecimalizationTable: ").append(getDecimalizationTable()).append(",");
         if (getPinValidationDataPadCharacter() != null)
-            sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter());
+            sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter()).append(",");
+        if (getPinValidationData() != null)
+            sb.append("PinValidationData: ").append(getPinValidationData());
         sb.append("}");
         return sb.toString();
     }
@@ -261,22 +261,22 @@ public class Ibm3624PinOffset implements Serializable, Cloneable, StructuredPojo
         if (obj instanceof Ibm3624PinOffset == false)
             return false;
         Ibm3624PinOffset other = (Ibm3624PinOffset) obj;
-        if (other.getDecimalizationTable() == null ^ this.getDecimalizationTable() == null)
-            return false;
-        if (other.getDecimalizationTable() != null && other.getDecimalizationTable().equals(this.getDecimalizationTable()) == false)
-            return false;
         if (other.getEncryptedPinBlock() == null ^ this.getEncryptedPinBlock() == null)
             return false;
         if (other.getEncryptedPinBlock() != null && other.getEncryptedPinBlock().equals(this.getEncryptedPinBlock()) == false)
             return false;
-        if (other.getPinValidationData() == null ^ this.getPinValidationData() == null)
+        if (other.getDecimalizationTable() == null ^ this.getDecimalizationTable() == null)
             return false;
-        if (other.getPinValidationData() != null && other.getPinValidationData().equals(this.getPinValidationData()) == false)
+        if (other.getDecimalizationTable() != null && other.getDecimalizationTable().equals(this.getDecimalizationTable()) == false)
             return false;
         if (other.getPinValidationDataPadCharacter() == null ^ this.getPinValidationDataPadCharacter() == null)
             return false;
         if (other.getPinValidationDataPadCharacter() != null
                 && other.getPinValidationDataPadCharacter().equals(this.getPinValidationDataPadCharacter()) == false)
+            return false;
+        if (other.getPinValidationData() == null ^ this.getPinValidationData() == null)
+            return false;
+        if (other.getPinValidationData() != null && other.getPinValidationData().equals(this.getPinValidationData()) == false)
             return false;
         return true;
     }
@@ -286,10 +286,10 @@ public class Ibm3624PinOffset implements Serializable, Cloneable, StructuredPojo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDecimalizationTable() == null) ? 0 : getDecimalizationTable().hashCode());
         hashCode = prime * hashCode + ((getEncryptedPinBlock() == null) ? 0 : getEncryptedPinBlock().hashCode());
-        hashCode = prime * hashCode + ((getPinValidationData() == null) ? 0 : getPinValidationData().hashCode());
+        hashCode = prime * hashCode + ((getDecimalizationTable() == null) ? 0 : getDecimalizationTable().hashCode());
         hashCode = prime * hashCode + ((getPinValidationDataPadCharacter() == null) ? 0 : getPinValidationDataPadCharacter().hashCode());
+        hashCode = prime * hashCode + ((getPinValidationData() == null) ? 0 : getPinValidationData().hashCode());
         return hashCode;
     }
 

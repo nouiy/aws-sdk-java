@@ -27,6 +27,23 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * The <code>keyARN</code> of the encryption key of incoming ciphertext data.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
+     */
+    private String incomingKeyIdentifier;
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web Services
+     * Payment Cryptography.
+     * </p>
+     */
+    private String outgoingKeyIdentifier;
+    /**
+     * <p>
      * Ciphertext to be encrypted. The minimum allowed length is 16 bytes and maximum allowed length is 4096 bytes.
      * </p>
      */
@@ -39,12 +56,6 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
     private ReEncryptionAttributes incomingEncryptionAttributes;
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key of incoming ciphertext data.
-     * </p>
-     */
-    private String incomingKeyIdentifier;
-    /**
-     * <p>
      * The attributes and values for outgoing ciphertext data after encryption by Amazon Web Services Payment
      * Cryptography.
      * </p>
@@ -52,11 +63,124 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
     private ReEncryptionAttributes outgoingEncryptionAttributes;
     /**
      * <p>
+     * The WrappedKeyBlock containing the encryption key of incoming ciphertext data.
+     * </p>
+     */
+    private WrappedKey incomingWrappedKey;
+    /**
+     * <p>
+     * The WrappedKeyBlock containing the encryption key of outgoing ciphertext data after encryption by Amazon Web
+     * Services Payment Cryptography.
+     * </p>
+     */
+    private WrappedKey outgoingWrappedKey;
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key of incoming ciphertext data.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @param incomingKeyIdentifier
+     *        The <code>keyARN</code> of the encryption key of incoming ciphertext data.</p>
+     *        <p>
+     *        When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *        it is the key identifier used to perform the operation.
+     */
+
+    public void setIncomingKeyIdentifier(String incomingKeyIdentifier) {
+        this.incomingKeyIdentifier = incomingKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key of incoming ciphertext data.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @return The <code>keyARN</code> of the encryption key of incoming ciphertext data.</p>
+     *         <p>
+     *         When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *         it is the key identifier used to perform the operation.
+     */
+
+    public String getIncomingKeyIdentifier() {
+        return this.incomingKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key of incoming ciphertext data.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @param incomingKeyIdentifier
+     *        The <code>keyARN</code> of the encryption key of incoming ciphertext data.</p>
+     *        <p>
+     *        When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *        it is the key identifier used to perform the operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReEncryptDataRequest withIncomingKeyIdentifier(String incomingKeyIdentifier) {
+        setIncomingKeyIdentifier(incomingKeyIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
      * The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web Services
      * Payment Cryptography.
      * </p>
+     * 
+     * @param outgoingKeyIdentifier
+     *        The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web
+     *        Services Payment Cryptography.
      */
-    private String outgoingKeyIdentifier;
+
+    public void setOutgoingKeyIdentifier(String outgoingKeyIdentifier) {
+        this.outgoingKeyIdentifier = outgoingKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web Services
+     * Payment Cryptography.
+     * </p>
+     * 
+     * @return The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web
+     *         Services Payment Cryptography.
+     */
+
+    public String getOutgoingKeyIdentifier() {
+        return this.outgoingKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web Services
+     * Payment Cryptography.
+     * </p>
+     * 
+     * @param outgoingKeyIdentifier
+     *        The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web
+     *        Services Payment Cryptography.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReEncryptDataRequest withOutgoingKeyIdentifier(String outgoingKeyIdentifier) {
+        setOutgoingKeyIdentifier(outgoingKeyIdentifier);
+        return this;
+    }
 
     /**
      * <p>
@@ -143,46 +267,6 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key of incoming ciphertext data.
-     * </p>
-     * 
-     * @param incomingKeyIdentifier
-     *        The <code>keyARN</code> of the encryption key of incoming ciphertext data.
-     */
-
-    public void setIncomingKeyIdentifier(String incomingKeyIdentifier) {
-        this.incomingKeyIdentifier = incomingKeyIdentifier;
-    }
-
-    /**
-     * <p>
-     * The <code>keyARN</code> of the encryption key of incoming ciphertext data.
-     * </p>
-     * 
-     * @return The <code>keyARN</code> of the encryption key of incoming ciphertext data.
-     */
-
-    public String getIncomingKeyIdentifier() {
-        return this.incomingKeyIdentifier;
-    }
-
-    /**
-     * <p>
-     * The <code>keyARN</code> of the encryption key of incoming ciphertext data.
-     * </p>
-     * 
-     * @param incomingKeyIdentifier
-     *        The <code>keyARN</code> of the encryption key of incoming ciphertext data.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReEncryptDataRequest withIncomingKeyIdentifier(String incomingKeyIdentifier) {
-        setIncomingKeyIdentifier(incomingKeyIdentifier);
-        return this;
-    }
-
-    /**
-     * <p>
      * The attributes and values for outgoing ciphertext data after encryption by Amazon Web Services Payment
      * Cryptography.
      * </p>
@@ -229,47 +313,87 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web Services
-     * Payment Cryptography.
+     * The WrappedKeyBlock containing the encryption key of incoming ciphertext data.
      * </p>
      * 
-     * @param outgoingKeyIdentifier
-     *        The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web
-     *        Services Payment Cryptography.
+     * @param incomingWrappedKey
+     *        The WrappedKeyBlock containing the encryption key of incoming ciphertext data.
      */
 
-    public void setOutgoingKeyIdentifier(String outgoingKeyIdentifier) {
-        this.outgoingKeyIdentifier = outgoingKeyIdentifier;
+    public void setIncomingWrappedKey(WrappedKey incomingWrappedKey) {
+        this.incomingWrappedKey = incomingWrappedKey;
     }
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web Services
-     * Payment Cryptography.
+     * The WrappedKeyBlock containing the encryption key of incoming ciphertext data.
      * </p>
      * 
-     * @return The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web
-     *         Services Payment Cryptography.
+     * @return The WrappedKeyBlock containing the encryption key of incoming ciphertext data.
      */
 
-    public String getOutgoingKeyIdentifier() {
-        return this.outgoingKeyIdentifier;
+    public WrappedKey getIncomingWrappedKey() {
+        return this.incomingWrappedKey;
     }
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web Services
-     * Payment Cryptography.
+     * The WrappedKeyBlock containing the encryption key of incoming ciphertext data.
      * </p>
      * 
-     * @param outgoingKeyIdentifier
-     *        The <code>keyARN</code> of the encryption key of outgoing ciphertext data after encryption by Amazon Web
-     *        Services Payment Cryptography.
+     * @param incomingWrappedKey
+     *        The WrappedKeyBlock containing the encryption key of incoming ciphertext data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ReEncryptDataRequest withOutgoingKeyIdentifier(String outgoingKeyIdentifier) {
-        setOutgoingKeyIdentifier(outgoingKeyIdentifier);
+    public ReEncryptDataRequest withIncomingWrappedKey(WrappedKey incomingWrappedKey) {
+        setIncomingWrappedKey(incomingWrappedKey);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The WrappedKeyBlock containing the encryption key of outgoing ciphertext data after encryption by Amazon Web
+     * Services Payment Cryptography.
+     * </p>
+     * 
+     * @param outgoingWrappedKey
+     *        The WrappedKeyBlock containing the encryption key of outgoing ciphertext data after encryption by Amazon
+     *        Web Services Payment Cryptography.
+     */
+
+    public void setOutgoingWrappedKey(WrappedKey outgoingWrappedKey) {
+        this.outgoingWrappedKey = outgoingWrappedKey;
+    }
+
+    /**
+     * <p>
+     * The WrappedKeyBlock containing the encryption key of outgoing ciphertext data after encryption by Amazon Web
+     * Services Payment Cryptography.
+     * </p>
+     * 
+     * @return The WrappedKeyBlock containing the encryption key of outgoing ciphertext data after encryption by Amazon
+     *         Web Services Payment Cryptography.
+     */
+
+    public WrappedKey getOutgoingWrappedKey() {
+        return this.outgoingWrappedKey;
+    }
+
+    /**
+     * <p>
+     * The WrappedKeyBlock containing the encryption key of outgoing ciphertext data after encryption by Amazon Web
+     * Services Payment Cryptography.
+     * </p>
+     * 
+     * @param outgoingWrappedKey
+     *        The WrappedKeyBlock containing the encryption key of outgoing ciphertext data after encryption by Amazon
+     *        Web Services Payment Cryptography.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReEncryptDataRequest withOutgoingWrappedKey(WrappedKey outgoingWrappedKey) {
+        setOutgoingWrappedKey(outgoingWrappedKey);
         return this;
     }
 
@@ -285,16 +409,20 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getIncomingKeyIdentifier() != null)
+            sb.append("IncomingKeyIdentifier: ").append(getIncomingKeyIdentifier()).append(",");
+        if (getOutgoingKeyIdentifier() != null)
+            sb.append("OutgoingKeyIdentifier: ").append(getOutgoingKeyIdentifier()).append(",");
         if (getCipherText() != null)
             sb.append("CipherText: ").append("***Sensitive Data Redacted***").append(",");
         if (getIncomingEncryptionAttributes() != null)
             sb.append("IncomingEncryptionAttributes: ").append(getIncomingEncryptionAttributes()).append(",");
-        if (getIncomingKeyIdentifier() != null)
-            sb.append("IncomingKeyIdentifier: ").append(getIncomingKeyIdentifier()).append(",");
         if (getOutgoingEncryptionAttributes() != null)
             sb.append("OutgoingEncryptionAttributes: ").append(getOutgoingEncryptionAttributes()).append(",");
-        if (getOutgoingKeyIdentifier() != null)
-            sb.append("OutgoingKeyIdentifier: ").append(getOutgoingKeyIdentifier());
+        if (getIncomingWrappedKey() != null)
+            sb.append("IncomingWrappedKey: ").append(getIncomingWrappedKey()).append(",");
+        if (getOutgoingWrappedKey() != null)
+            sb.append("OutgoingWrappedKey: ").append(getOutgoingWrappedKey());
         sb.append("}");
         return sb.toString();
     }
@@ -309,6 +437,14 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (obj instanceof ReEncryptDataRequest == false)
             return false;
         ReEncryptDataRequest other = (ReEncryptDataRequest) obj;
+        if (other.getIncomingKeyIdentifier() == null ^ this.getIncomingKeyIdentifier() == null)
+            return false;
+        if (other.getIncomingKeyIdentifier() != null && other.getIncomingKeyIdentifier().equals(this.getIncomingKeyIdentifier()) == false)
+            return false;
+        if (other.getOutgoingKeyIdentifier() == null ^ this.getOutgoingKeyIdentifier() == null)
+            return false;
+        if (other.getOutgoingKeyIdentifier() != null && other.getOutgoingKeyIdentifier().equals(this.getOutgoingKeyIdentifier()) == false)
+            return false;
         if (other.getCipherText() == null ^ this.getCipherText() == null)
             return false;
         if (other.getCipherText() != null && other.getCipherText().equals(this.getCipherText()) == false)
@@ -317,17 +453,17 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getIncomingEncryptionAttributes() != null && other.getIncomingEncryptionAttributes().equals(this.getIncomingEncryptionAttributes()) == false)
             return false;
-        if (other.getIncomingKeyIdentifier() == null ^ this.getIncomingKeyIdentifier() == null)
-            return false;
-        if (other.getIncomingKeyIdentifier() != null && other.getIncomingKeyIdentifier().equals(this.getIncomingKeyIdentifier()) == false)
-            return false;
         if (other.getOutgoingEncryptionAttributes() == null ^ this.getOutgoingEncryptionAttributes() == null)
             return false;
         if (other.getOutgoingEncryptionAttributes() != null && other.getOutgoingEncryptionAttributes().equals(this.getOutgoingEncryptionAttributes()) == false)
             return false;
-        if (other.getOutgoingKeyIdentifier() == null ^ this.getOutgoingKeyIdentifier() == null)
+        if (other.getIncomingWrappedKey() == null ^ this.getIncomingWrappedKey() == null)
             return false;
-        if (other.getOutgoingKeyIdentifier() != null && other.getOutgoingKeyIdentifier().equals(this.getOutgoingKeyIdentifier()) == false)
+        if (other.getIncomingWrappedKey() != null && other.getIncomingWrappedKey().equals(this.getIncomingWrappedKey()) == false)
+            return false;
+        if (other.getOutgoingWrappedKey() == null ^ this.getOutgoingWrappedKey() == null)
+            return false;
+        if (other.getOutgoingWrappedKey() != null && other.getOutgoingWrappedKey().equals(this.getOutgoingWrappedKey()) == false)
             return false;
         return true;
     }
@@ -337,11 +473,13 @@ public class ReEncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest 
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getIncomingKeyIdentifier() == null) ? 0 : getIncomingKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getOutgoingKeyIdentifier() == null) ? 0 : getOutgoingKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getCipherText() == null) ? 0 : getCipherText().hashCode());
         hashCode = prime * hashCode + ((getIncomingEncryptionAttributes() == null) ? 0 : getIncomingEncryptionAttributes().hashCode());
-        hashCode = prime * hashCode + ((getIncomingKeyIdentifier() == null) ? 0 : getIncomingKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getOutgoingEncryptionAttributes() == null) ? 0 : getOutgoingEncryptionAttributes().hashCode());
-        hashCode = prime * hashCode + ((getOutgoingKeyIdentifier() == null) ? 0 : getOutgoingKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getIncomingWrappedKey() == null) ? 0 : getIncomingWrappedKey().hashCode());
+        hashCode = prime * hashCode + ((getOutgoingWrappedKey() == null) ? 0 : getOutgoingWrappedKey().hashCode());
         return hashCode;
     }
 

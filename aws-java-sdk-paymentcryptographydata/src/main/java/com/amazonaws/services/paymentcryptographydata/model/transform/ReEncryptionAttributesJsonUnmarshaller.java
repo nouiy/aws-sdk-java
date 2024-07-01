@@ -48,13 +48,13 @@ public class ReEncryptionAttributesJsonUnmarshaller implements Unmarshaller<ReEn
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Dukpt", targetDepth)) {
-                    context.nextToken();
-                    reEncryptionAttributes.setDukpt(DukptEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("Symmetric", targetDepth)) {
                     context.nextToken();
                     reEncryptionAttributes.setSymmetric(SymmetricEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Dukpt", targetDepth)) {
+                    context.nextToken();
+                    reEncryptionAttributes.setDukpt(DukptEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

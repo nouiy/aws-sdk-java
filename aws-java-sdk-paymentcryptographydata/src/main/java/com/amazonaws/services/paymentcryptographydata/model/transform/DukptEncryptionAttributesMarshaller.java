@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DukptEncryptionAttributesMarshaller {
 
+    private static final MarshallingInfo<String> KEYSERIALNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeySerialNumber").build();
+    private static final MarshallingInfo<String> MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Mode").build();
     private static final MarshallingInfo<String> DUKPTKEYDERIVATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptKeyDerivationType").build();
     private static final MarshallingInfo<String> DUKPTKEYVARIANT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptKeyVariant").build();
     private static final MarshallingInfo<String> INITIALIZATIONVECTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InitializationVector").build();
-    private static final MarshallingInfo<String> KEYSERIALNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeySerialNumber").build();
-    private static final MarshallingInfo<String> MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Mode").build();
 
     private static final DukptEncryptionAttributesMarshaller instance = new DukptEncryptionAttributesMarshaller();
 
@@ -54,11 +54,11 @@ public class DukptEncryptionAttributesMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(dukptEncryptionAttributes.getKeySerialNumber(), KEYSERIALNUMBER_BINDING);
+            protocolMarshaller.marshall(dukptEncryptionAttributes.getMode(), MODE_BINDING);
             protocolMarshaller.marshall(dukptEncryptionAttributes.getDukptKeyDerivationType(), DUKPTKEYDERIVATIONTYPE_BINDING);
             protocolMarshaller.marshall(dukptEncryptionAttributes.getDukptKeyVariant(), DUKPTKEYVARIANT_BINDING);
             protocolMarshaller.marshall(dukptEncryptionAttributes.getInitializationVector(), INITIALIZATIONVECTOR_BINDING);
-            protocolMarshaller.marshall(dukptEncryptionAttributes.getKeySerialNumber(), KEYSERIALNUMBER_BINDING);
-            protocolMarshaller.marshall(dukptEncryptionAttributes.getMode(), MODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

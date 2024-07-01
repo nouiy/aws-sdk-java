@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GeneratePinDataRequestMarshaller {
 
+    private static final MarshallingInfo<String> GENERATIONKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GenerationKeyIdentifier").build();
     private static final MarshallingInfo<String> ENCRYPTIONKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionKeyIdentifier").build();
     private static final MarshallingInfo<StructuredPojo> GENERATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GenerationAttributes").build();
-    private static final MarshallingInfo<String> GENERATIONKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GenerationKeyIdentifier").build();
-    private static final MarshallingInfo<String> PINBLOCKFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinBlockFormat").build();
     private static final MarshallingInfo<Integer> PINDATALENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinDataLength").build();
     private static final MarshallingInfo<String> PRIMARYACCOUNTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryAccountNumber").build();
+    private static final MarshallingInfo<String> PINBLOCKFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinBlockFormat").build();
 
     private static final GeneratePinDataRequestMarshaller instance = new GeneratePinDataRequestMarshaller();
 
@@ -56,12 +56,12 @@ public class GeneratePinDataRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(generatePinDataRequest.getGenerationKeyIdentifier(), GENERATIONKEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(generatePinDataRequest.getEncryptionKeyIdentifier(), ENCRYPTIONKEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(generatePinDataRequest.getGenerationAttributes(), GENERATIONATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(generatePinDataRequest.getGenerationKeyIdentifier(), GENERATIONKEYIDENTIFIER_BINDING);
-            protocolMarshaller.marshall(generatePinDataRequest.getPinBlockFormat(), PINBLOCKFORMAT_BINDING);
             protocolMarshaller.marshall(generatePinDataRequest.getPinDataLength(), PINDATALENGTH_BINDING);
             protocolMarshaller.marshall(generatePinDataRequest.getPrimaryAccountNumber(), PRIMARYACCOUNTNUMBER_BINDING);
+            protocolMarshaller.marshall(generatePinDataRequest.getPinBlockFormat(), PINBLOCKFORMAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

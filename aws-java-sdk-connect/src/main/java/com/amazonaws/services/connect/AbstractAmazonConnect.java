@@ -383,6 +383,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public DescribeAuthenticationProfileResult describeAuthenticationProfile(DescribeAuthenticationProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeContactResult describeContact(DescribeContactRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -639,6 +644,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ListApprovedOriginsResult listApprovedOrigins(ListApprovedOriginsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAuthenticationProfilesResult listAuthenticationProfiles(ListAuthenticationProfilesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1049,6 +1059,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public UpdateAgentStatusResult updateAgentStatus(UpdateAgentStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAuthenticationProfileResult updateAuthenticationProfile(UpdateAuthenticationProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

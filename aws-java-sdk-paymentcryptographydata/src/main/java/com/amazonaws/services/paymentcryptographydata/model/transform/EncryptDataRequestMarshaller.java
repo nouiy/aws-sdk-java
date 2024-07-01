@@ -27,12 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EncryptDataRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAttributes").build();
     private static final MarshallingInfo<String> KEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("KeyIdentifier").build();
     private static final MarshallingInfo<String> PLAINTEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("PlainText").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAttributes").build();
+    private static final MarshallingInfo<StructuredPojo> WRAPPEDKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappedKey").build();
 
     private static final EncryptDataRequestMarshaller instance = new EncryptDataRequestMarshaller();
 
@@ -50,9 +52,10 @@ public class EncryptDataRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(encryptDataRequest.getEncryptionAttributes(), ENCRYPTIONATTRIBUTES_BINDING);
             protocolMarshaller.marshall(encryptDataRequest.getKeyIdentifier(), KEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(encryptDataRequest.getPlainText(), PLAINTEXT_BINDING);
+            protocolMarshaller.marshall(encryptDataRequest.getEncryptionAttributes(), ENCRYPTIONATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(encryptDataRequest.getWrappedKey(), WRAPPEDKEY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

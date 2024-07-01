@@ -31,6 +31,12 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
+     * The block cipher method to use for encryption.
+     * </p>
+     */
+    private String mode;
+    /**
+     * <p>
      * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
      * defaults it to zero.
      * </p>
@@ -38,62 +44,10 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
     private String initializationVector;
     /**
      * <p>
-     * The block cipher method to use for encryption.
-     * </p>
-     */
-    private String mode;
-    /**
-     * <p>
      * The padding to be included with the data.
      * </p>
      */
     private String paddingType;
-
-    /**
-     * <p>
-     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
-     * defaults it to zero.
-     * </p>
-     * 
-     * @param initializationVector
-     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
-     *        Cryptography defaults it to zero.
-     */
-
-    public void setInitializationVector(String initializationVector) {
-        this.initializationVector = initializationVector;
-    }
-
-    /**
-     * <p>
-     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
-     * defaults it to zero.
-     * </p>
-     * 
-     * @return An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
-     *         Cryptography defaults it to zero.
-     */
-
-    public String getInitializationVector() {
-        return this.initializationVector;
-    }
-
-    /**
-     * <p>
-     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
-     * defaults it to zero.
-     * </p>
-     * 
-     * @param initializationVector
-     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
-     *        Cryptography defaults it to zero.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SymmetricEncryptionAttributes withInitializationVector(String initializationVector) {
-        setInitializationVector(initializationVector);
-        return this;
-    }
 
     /**
      * <p>
@@ -151,6 +105,52 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     public SymmetricEncryptionAttributes withMode(EncryptionMode mode) {
         this.mode = mode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
+     * </p>
+     * 
+     * @param initializationVector
+     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *        Cryptography defaults it to zero.
+     */
+
+    public void setInitializationVector(String initializationVector) {
+        this.initializationVector = initializationVector;
+    }
+
+    /**
+     * <p>
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
+     * </p>
+     * 
+     * @return An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *         Cryptography defaults it to zero.
+     */
+
+    public String getInitializationVector() {
+        return this.initializationVector;
+    }
+
+    /**
+     * <p>
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
+     * </p>
+     * 
+     * @param initializationVector
+     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *        Cryptography defaults it to zero.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SymmetricEncryptionAttributes withInitializationVector(String initializationVector) {
+        setInitializationVector(initializationVector);
         return this;
     }
 
@@ -225,10 +225,10 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getInitializationVector() != null)
-            sb.append("InitializationVector: ").append("***Sensitive Data Redacted***").append(",");
         if (getMode() != null)
             sb.append("Mode: ").append(getMode()).append(",");
+        if (getInitializationVector() != null)
+            sb.append("InitializationVector: ").append("***Sensitive Data Redacted***").append(",");
         if (getPaddingType() != null)
             sb.append("PaddingType: ").append(getPaddingType());
         sb.append("}");
@@ -245,13 +245,13 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
         if (obj instanceof SymmetricEncryptionAttributes == false)
             return false;
         SymmetricEncryptionAttributes other = (SymmetricEncryptionAttributes) obj;
-        if (other.getInitializationVector() == null ^ this.getInitializationVector() == null)
-            return false;
-        if (other.getInitializationVector() != null && other.getInitializationVector().equals(this.getInitializationVector()) == false)
-            return false;
         if (other.getMode() == null ^ this.getMode() == null)
             return false;
         if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
+        if (other.getInitializationVector() == null ^ this.getInitializationVector() == null)
+            return false;
+        if (other.getInitializationVector() != null && other.getInitializationVector().equals(this.getInitializationVector()) == false)
             return false;
         if (other.getPaddingType() == null ^ this.getPaddingType() == null)
             return false;
@@ -265,8 +265,8 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getInitializationVector() == null) ? 0 : getInitializationVector().hashCode());
         hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
+        hashCode = prime * hashCode + ((getInitializationVector() == null) ? 0 : getInitializationVector().hashCode());
         hashCode = prime * hashCode + ((getPaddingType() == null) ? 0 : getPaddingType().hashCode());
         return hashCode;
     }

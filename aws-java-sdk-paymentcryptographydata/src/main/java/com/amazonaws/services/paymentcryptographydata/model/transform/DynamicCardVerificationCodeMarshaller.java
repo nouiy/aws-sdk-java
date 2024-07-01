@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DynamicCardVerificationCodeMarshaller {
 
-    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
-    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
-    private static final MarshallingInfo<String> TRACKDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("TrackData").build();
     private static final MarshallingInfo<String> UNPREDICTABLENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UnpredictableNumber").build();
+    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
+    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
+    private static final MarshallingInfo<String> TRACKDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("TrackData").build();
 
     private static final DynamicCardVerificationCodeMarshaller instance = new DynamicCardVerificationCodeMarshaller();
 
@@ -52,10 +52,10 @@ public class DynamicCardVerificationCodeMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(dynamicCardVerificationCode.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
-            protocolMarshaller.marshall(dynamicCardVerificationCode.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
-            protocolMarshaller.marshall(dynamicCardVerificationCode.getTrackData(), TRACKDATA_BINDING);
             protocolMarshaller.marshall(dynamicCardVerificationCode.getUnpredictableNumber(), UNPREDICTABLENUMBER_BINDING);
+            protocolMarshaller.marshall(dynamicCardVerificationCode.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
+            protocolMarshaller.marshall(dynamicCardVerificationCode.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
+            protocolMarshaller.marshall(dynamicCardVerificationCode.getTrackData(), TRACKDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

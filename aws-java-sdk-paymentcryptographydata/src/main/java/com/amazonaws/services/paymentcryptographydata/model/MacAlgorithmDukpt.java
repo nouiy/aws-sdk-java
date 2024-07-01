@@ -30,12 +30,12 @@ public class MacAlgorithmDukpt implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The key type derived using DUKPT from a Base Derivation Key (BDK) and Key Serial Number (KSN). This must be less
-     * than or equal to the strength of the BDK. For example, you can't use <code>AES_128</code> as a derivation type
-     * for a BDK of <code>AES_128</code> or <code>TDES_2KEY</code>.
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
      * </p>
      */
-    private String dukptDerivationType;
+    private String keySerialNumber;
     /**
      * <p>
      * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
@@ -44,12 +44,123 @@ public class MacAlgorithmDukpt implements Serializable, Cloneable, StructuredPoj
     private String dukptKeyVariant;
     /**
      * <p>
+     * The key type derived using DUKPT from a Base Derivation Key (BDK) and Key Serial Number (KSN). This must be less
+     * than or equal to the strength of the BDK. For example, you can't use <code>AES_128</code> as a derivation type
+     * for a BDK of <code>AES_128</code> or <code>TDES_2KEY</code>.
+     * </p>
+     */
+    private String dukptDerivationType;
+
+    /**
+     * <p>
      * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
      * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
      * counter.
      * </p>
+     * 
+     * @param keySerialNumber
+     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *        transaction counter.
      */
-    private String keySerialNumber;
+
+    public void setKeySerialNumber(String keySerialNumber) {
+        this.keySerialNumber = keySerialNumber;
+    }
+
+    /**
+     * <p>
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
+     * </p>
+     * 
+     * @return The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *         encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *         transaction counter.
+     */
+
+    public String getKeySerialNumber() {
+        return this.keySerialNumber;
+    }
+
+    /**
+     * <p>
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
+     * </p>
+     * 
+     * @param keySerialNumber
+     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *        transaction counter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MacAlgorithmDukpt withKeySerialNumber(String keySerialNumber) {
+        setKeySerialNumber(keySerialNumber);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
+     * </p>
+     * 
+     * @param dukptKeyVariant
+     *        The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
+     * @see DukptKeyVariant
+     */
+
+    public void setDukptKeyVariant(String dukptKeyVariant) {
+        this.dukptKeyVariant = dukptKeyVariant;
+    }
+
+    /**
+     * <p>
+     * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
+     * </p>
+     * 
+     * @return The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
+     * @see DukptKeyVariant
+     */
+
+    public String getDukptKeyVariant() {
+        return this.dukptKeyVariant;
+    }
+
+    /**
+     * <p>
+     * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
+     * </p>
+     * 
+     * @param dukptKeyVariant
+     *        The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DukptKeyVariant
+     */
+
+    public MacAlgorithmDukpt withDukptKeyVariant(String dukptKeyVariant) {
+        setDukptKeyVariant(dukptKeyVariant);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
+     * </p>
+     * 
+     * @param dukptKeyVariant
+     *        The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DukptKeyVariant
+     */
+
+    public MacAlgorithmDukpt withDukptKeyVariant(DukptKeyVariant dukptKeyVariant) {
+        this.dukptKeyVariant = dukptKeyVariant.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -127,117 +238,6 @@ public class MacAlgorithmDukpt implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p>
-     * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
-     * </p>
-     * 
-     * @param dukptKeyVariant
-     *        The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
-     * @see DukptKeyVariant
-     */
-
-    public void setDukptKeyVariant(String dukptKeyVariant) {
-        this.dukptKeyVariant = dukptKeyVariant;
-    }
-
-    /**
-     * <p>
-     * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
-     * </p>
-     * 
-     * @return The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
-     * @see DukptKeyVariant
-     */
-
-    public String getDukptKeyVariant() {
-        return this.dukptKeyVariant;
-    }
-
-    /**
-     * <p>
-     * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
-     * </p>
-     * 
-     * @param dukptKeyVariant
-     *        The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see DukptKeyVariant
-     */
-
-    public MacAlgorithmDukpt withDukptKeyVariant(String dukptKeyVariant) {
-        setDukptKeyVariant(dukptKeyVariant);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
-     * </p>
-     * 
-     * @param dukptKeyVariant
-     *        The type of use of DUKPT, which can be MAC generation, MAC verification, or both.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see DukptKeyVariant
-     */
-
-    public MacAlgorithmDukpt withDukptKeyVariant(DukptKeyVariant dukptKeyVariant) {
-        this.dukptKeyVariant = dukptKeyVariant.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @param keySerialNumber
-     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *        transaction counter.
-     */
-
-    public void setKeySerialNumber(String keySerialNumber) {
-        this.keySerialNumber = keySerialNumber;
-    }
-
-    /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @return The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *         encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *         transaction counter.
-     */
-
-    public String getKeySerialNumber() {
-        return this.keySerialNumber;
-    }
-
-    /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @param keySerialNumber
-     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *        transaction counter.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public MacAlgorithmDukpt withKeySerialNumber(String keySerialNumber) {
-        setKeySerialNumber(keySerialNumber);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -249,12 +249,12 @@ public class MacAlgorithmDukpt implements Serializable, Cloneable, StructuredPoj
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDukptDerivationType() != null)
-            sb.append("DukptDerivationType: ").append(getDukptDerivationType()).append(",");
+        if (getKeySerialNumber() != null)
+            sb.append("KeySerialNumber: ").append(getKeySerialNumber()).append(",");
         if (getDukptKeyVariant() != null)
             sb.append("DukptKeyVariant: ").append(getDukptKeyVariant()).append(",");
-        if (getKeySerialNumber() != null)
-            sb.append("KeySerialNumber: ").append(getKeySerialNumber());
+        if (getDukptDerivationType() != null)
+            sb.append("DukptDerivationType: ").append(getDukptDerivationType());
         sb.append("}");
         return sb.toString();
     }
@@ -269,17 +269,17 @@ public class MacAlgorithmDukpt implements Serializable, Cloneable, StructuredPoj
         if (obj instanceof MacAlgorithmDukpt == false)
             return false;
         MacAlgorithmDukpt other = (MacAlgorithmDukpt) obj;
-        if (other.getDukptDerivationType() == null ^ this.getDukptDerivationType() == null)
+        if (other.getKeySerialNumber() == null ^ this.getKeySerialNumber() == null)
             return false;
-        if (other.getDukptDerivationType() != null && other.getDukptDerivationType().equals(this.getDukptDerivationType()) == false)
+        if (other.getKeySerialNumber() != null && other.getKeySerialNumber().equals(this.getKeySerialNumber()) == false)
             return false;
         if (other.getDukptKeyVariant() == null ^ this.getDukptKeyVariant() == null)
             return false;
         if (other.getDukptKeyVariant() != null && other.getDukptKeyVariant().equals(this.getDukptKeyVariant()) == false)
             return false;
-        if (other.getKeySerialNumber() == null ^ this.getKeySerialNumber() == null)
+        if (other.getDukptDerivationType() == null ^ this.getDukptDerivationType() == null)
             return false;
-        if (other.getKeySerialNumber() != null && other.getKeySerialNumber().equals(this.getKeySerialNumber()) == false)
+        if (other.getDukptDerivationType() != null && other.getDukptDerivationType().equals(this.getDukptDerivationType()) == false)
             return false;
         return true;
     }
@@ -289,9 +289,9 @@ public class MacAlgorithmDukpt implements Serializable, Cloneable, StructuredPoj
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDukptDerivationType() == null) ? 0 : getDukptDerivationType().hashCode());
-        hashCode = prime * hashCode + ((getDukptKeyVariant() == null) ? 0 : getDukptKeyVariant().hashCode());
         hashCode = prime * hashCode + ((getKeySerialNumber() == null) ? 0 : getKeySerialNumber().hashCode());
+        hashCode = prime * hashCode + ((getDukptKeyVariant() == null) ? 0 : getDukptKeyVariant().hashCode());
+        hashCode = prime * hashCode + ((getDukptDerivationType() == null) ? 0 : getDukptDerivationType().hashCode());
         return hashCode;
     }
 

@@ -31,6 +31,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Example JSON: <code>"JsonBody": { "MatchPattern": { "All": {} }, "MatchScope": "ALL" }</code>
  * </p>
+ * <p>
+ * For additional information about this request component option, see <a href=
+ * "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+ * >JSON body</a> in the <i>WAF Developer Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/JsonBody" target="_top">AWS API
  *      Documentation</a>
@@ -85,30 +90,14 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing failure that
      * it encounters.
      * </p>
+     * <note>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON. When
+     * parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     * "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     * >JSON body</a> in the <i>WAF Developer Guide</i>.
      * </p>
-     * <p>
-     * WAF parses the JSON in the following examples as two valid key, value pairs:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      */
     private String invalidFallbackBehavior;
     /**
@@ -349,30 +338,14 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing failure that
      * it encounters.
      * </p>
+     * <note>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON. When
+     * parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     * "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     * >JSON body</a> in the <i>WAF Developer Guide</i>.
      * </p>
-     * <p>
-     * WAF parses the JSON in the following examples as two valid key, value pairs:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      * 
      * @param invalidFallbackBehavior
      *        What WAF should do if it fails to completely parse the JSON body. The options are the following:</p>
@@ -399,29 +372,13 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      *        If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing
      *        failure that it encounters.
      *        </p>
+     *        <note>
      *        <p>
-     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     *        characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     *        WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON.
+     *        When parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     *        >JSON body</a> in the <i>WAF Developer Guide</i>.
      *        </p>
-     *        <p>
-     *        WAF parses the JSON in the following examples as two valid key, value pairs:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     *        </p>
-     *        </li>
      * @see BodyParsingFallbackBehavior
      */
 
@@ -456,30 +413,14 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing failure that
      * it encounters.
      * </p>
+     * <note>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON. When
+     * parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     * "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     * >JSON body</a> in the <i>WAF Developer Guide</i>.
      * </p>
-     * <p>
-     * WAF parses the JSON in the following examples as two valid key, value pairs:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      * 
      * @return What WAF should do if it fails to completely parse the JSON body. The options are the following:</p>
      *         <ul>
@@ -505,29 +446,13 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      *         If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing
      *         failure that it encounters.
      *         </p>
+     *         <note>
      *         <p>
-     *         WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     *         characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     *         WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON.
+     *         When parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     *         >JSON body</a> in the <i>WAF Developer Guide</i>.
      *         </p>
-     *         <p>
-     *         WAF parses the JSON in the following examples as two valid key, value pairs:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     *         </p>
-     *         </li>
      * @see BodyParsingFallbackBehavior
      */
 
@@ -562,30 +487,14 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing failure that
      * it encounters.
      * </p>
+     * <note>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON. When
+     * parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     * "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     * >JSON body</a> in the <i>WAF Developer Guide</i>.
      * </p>
-     * <p>
-     * WAF parses the JSON in the following examples as two valid key, value pairs:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      * 
      * @param invalidFallbackBehavior
      *        What WAF should do if it fails to completely parse the JSON body. The options are the following:</p>
@@ -612,29 +521,13 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      *        If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing
      *        failure that it encounters.
      *        </p>
+     *        <note>
      *        <p>
-     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     *        characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     *        WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON.
+     *        When parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     *        >JSON body</a> in the <i>WAF Developer Guide</i>.
      *        </p>
-     *        <p>
-     *        WAF parses the JSON in the following examples as two valid key, value pairs:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     *        </p>
-     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BodyParsingFallbackBehavior
      */
@@ -671,30 +564,14 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing failure that
      * it encounters.
      * </p>
+     * <note>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON. When
+     * parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     * "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     * >JSON body</a> in the <i>WAF Developer Guide</i>.
      * </p>
-     * <p>
-     * WAF parses the JSON in the following examples as two valid key, value pairs:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      * 
      * @param invalidFallbackBehavior
      *        What WAF should do if it fails to completely parse the JSON body. The options are the following:</p>
@@ -721,29 +598,13 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      *        If you don't provide this setting, WAF parses and evaluates the content only up to the first parsing
      *        failure that it encounters.
      *        </p>
+     *        <note>
      *        <p>
-     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
-     *        characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     *        WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for invalid JSON.
+     *        When parsing succeeds, WAF doesn't apply the fallback behavior. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body"
+     *        >JSON body</a> in the <i>WAF Developer Guide</i>.
      *        </p>
-     *        <p>
-     *        WAF parses the JSON in the following examples as two valid key, value pairs:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Missing comma: <code>{"key1":"value1""key2":"value2"}</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Missing colon: <code>{"key1":"value1","key2""value2"}</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Extra colons: <code>{"key1"::"value1","key2""value2"}</code>
-     *        </p>
-     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BodyParsingFallbackBehavior
      */

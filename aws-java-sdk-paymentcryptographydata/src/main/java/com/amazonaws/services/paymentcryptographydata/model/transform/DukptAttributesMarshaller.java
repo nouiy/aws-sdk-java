@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DukptAttributesMarshaller {
 
-    private static final MarshallingInfo<String> DUKPTDERIVATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptDerivationType").build();
     private static final MarshallingInfo<String> KEYSERIALNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeySerialNumber").build();
+    private static final MarshallingInfo<String> DUKPTDERIVATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptDerivationType").build();
 
     private static final DukptAttributesMarshaller instance = new DukptAttributesMarshaller();
 
@@ -48,8 +48,8 @@ public class DukptAttributesMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(dukptAttributes.getDukptDerivationType(), DUKPTDERIVATIONTYPE_BINDING);
             protocolMarshaller.marshall(dukptAttributes.getKeySerialNumber(), KEYSERIALNUMBER_BINDING);
+            protocolMarshaller.marshall(dukptAttributes.getDukptDerivationType(), DUKPTDERIVATIONTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

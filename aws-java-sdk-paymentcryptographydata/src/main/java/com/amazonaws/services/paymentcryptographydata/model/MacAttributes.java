@@ -36,10 +36,10 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
     private String algorithm;
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
+     * Parameters that are required for MAC generation or verification using EMV MAC algorithm.
      * </p>
      */
-    private MacAlgorithmDukpt dukptCmac;
+    private MacAlgorithmEmv emvMac;
     /**
      * <p>
      * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm1.
@@ -54,10 +54,10 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
     private MacAlgorithmDukpt dukptIso9797Algorithm3;
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using EMV MAC algorithm.
+     * Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
      * </p>
      */
-    private MacAlgorithmEmv emvMac;
+    private MacAlgorithmDukpt dukptCmac;
 
     /**
      * <p>
@@ -120,41 +120,41 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
+     * Parameters that are required for MAC generation or verification using EMV MAC algorithm.
      * </p>
      * 
-     * @param dukptCmac
-     *        Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
+     * @param emvMac
+     *        Parameters that are required for MAC generation or verification using EMV MAC algorithm.
      */
 
-    public void setDukptCmac(MacAlgorithmDukpt dukptCmac) {
-        this.dukptCmac = dukptCmac;
+    public void setEmvMac(MacAlgorithmEmv emvMac) {
+        this.emvMac = emvMac;
     }
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
+     * Parameters that are required for MAC generation or verification using EMV MAC algorithm.
      * </p>
      * 
-     * @return Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
+     * @return Parameters that are required for MAC generation or verification using EMV MAC algorithm.
      */
 
-    public MacAlgorithmDukpt getDukptCmac() {
-        return this.dukptCmac;
+    public MacAlgorithmEmv getEmvMac() {
+        return this.emvMac;
     }
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
+     * Parameters that are required for MAC generation or verification using EMV MAC algorithm.
      * </p>
      * 
-     * @param dukptCmac
-     *        Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
+     * @param emvMac
+     *        Parameters that are required for MAC generation or verification using EMV MAC algorithm.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public MacAttributes withDukptCmac(MacAlgorithmDukpt dukptCmac) {
-        setDukptCmac(dukptCmac);
+    public MacAttributes withEmvMac(MacAlgorithmEmv emvMac) {
+        setEmvMac(emvMac);
         return this;
     }
 
@@ -240,41 +240,41 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using EMV MAC algorithm.
+     * Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
      * </p>
      * 
-     * @param emvMac
-     *        Parameters that are required for MAC generation or verification using EMV MAC algorithm.
+     * @param dukptCmac
+     *        Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
      */
 
-    public void setEmvMac(MacAlgorithmEmv emvMac) {
-        this.emvMac = emvMac;
+    public void setDukptCmac(MacAlgorithmDukpt dukptCmac) {
+        this.dukptCmac = dukptCmac;
     }
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using EMV MAC algorithm.
+     * Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
      * </p>
      * 
-     * @return Parameters that are required for MAC generation or verification using EMV MAC algorithm.
+     * @return Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
      */
 
-    public MacAlgorithmEmv getEmvMac() {
-        return this.emvMac;
+    public MacAlgorithmDukpt getDukptCmac() {
+        return this.dukptCmac;
     }
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using EMV MAC algorithm.
+     * Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
      * </p>
      * 
-     * @param emvMac
-     *        Parameters that are required for MAC generation or verification using EMV MAC algorithm.
+     * @param dukptCmac
+     *        Parameters that are required for MAC generation or verification using DUKPT CMAC algorithm.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public MacAttributes withEmvMac(MacAlgorithmEmv emvMac) {
-        setEmvMac(emvMac);
+    public MacAttributes withDukptCmac(MacAlgorithmDukpt dukptCmac) {
+        setDukptCmac(dukptCmac);
         return this;
     }
 
@@ -292,14 +292,14 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getAlgorithm() != null)
             sb.append("Algorithm: ").append(getAlgorithm()).append(",");
-        if (getDukptCmac() != null)
-            sb.append("DukptCmac: ").append(getDukptCmac()).append(",");
+        if (getEmvMac() != null)
+            sb.append("EmvMac: ").append(getEmvMac()).append(",");
         if (getDukptIso9797Algorithm1() != null)
             sb.append("DukptIso9797Algorithm1: ").append(getDukptIso9797Algorithm1()).append(",");
         if (getDukptIso9797Algorithm3() != null)
             sb.append("DukptIso9797Algorithm3: ").append(getDukptIso9797Algorithm3()).append(",");
-        if (getEmvMac() != null)
-            sb.append("EmvMac: ").append(getEmvMac());
+        if (getDukptCmac() != null)
+            sb.append("DukptCmac: ").append(getDukptCmac());
         sb.append("}");
         return sb.toString();
     }
@@ -318,9 +318,9 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAlgorithm() != null && other.getAlgorithm().equals(this.getAlgorithm()) == false)
             return false;
-        if (other.getDukptCmac() == null ^ this.getDukptCmac() == null)
+        if (other.getEmvMac() == null ^ this.getEmvMac() == null)
             return false;
-        if (other.getDukptCmac() != null && other.getDukptCmac().equals(this.getDukptCmac()) == false)
+        if (other.getEmvMac() != null && other.getEmvMac().equals(this.getEmvMac()) == false)
             return false;
         if (other.getDukptIso9797Algorithm1() == null ^ this.getDukptIso9797Algorithm1() == null)
             return false;
@@ -330,9 +330,9 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDukptIso9797Algorithm3() != null && other.getDukptIso9797Algorithm3().equals(this.getDukptIso9797Algorithm3()) == false)
             return false;
-        if (other.getEmvMac() == null ^ this.getEmvMac() == null)
+        if (other.getDukptCmac() == null ^ this.getDukptCmac() == null)
             return false;
-        if (other.getEmvMac() != null && other.getEmvMac().equals(this.getEmvMac()) == false)
+        if (other.getDukptCmac() != null && other.getDukptCmac().equals(this.getDukptCmac()) == false)
             return false;
         return true;
     }
@@ -343,10 +343,10 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAlgorithm() == null) ? 0 : getAlgorithm().hashCode());
-        hashCode = prime * hashCode + ((getDukptCmac() == null) ? 0 : getDukptCmac().hashCode());
+        hashCode = prime * hashCode + ((getEmvMac() == null) ? 0 : getEmvMac().hashCode());
         hashCode = prime * hashCode + ((getDukptIso9797Algorithm1() == null) ? 0 : getDukptIso9797Algorithm1().hashCode());
         hashCode = prime * hashCode + ((getDukptIso9797Algorithm3() == null) ? 0 : getDukptIso9797Algorithm3().hashCode());
-        hashCode = prime * hashCode + ((getEmvMac() == null) ? 0 : getEmvMac().hashCode());
+        hashCode = prime * hashCode + ((getDukptCmac() == null) ? 0 : getDukptCmac().hashCode());
         return hashCode;
     }
 

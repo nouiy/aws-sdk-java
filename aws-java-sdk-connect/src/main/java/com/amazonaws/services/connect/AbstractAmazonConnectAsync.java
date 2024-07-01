@@ -959,6 +959,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAuthenticationProfileResult> describeAuthenticationProfileAsync(DescribeAuthenticationProfileRequest request) {
+
+        return describeAuthenticationProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAuthenticationProfileResult> describeAuthenticationProfileAsync(DescribeAuthenticationProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAuthenticationProfileRequest, DescribeAuthenticationProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeContactResult> describeContactAsync(DescribeContactRequest request) {
 
         return describeContactAsync(request, null);
@@ -1640,6 +1653,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<ListApprovedOriginsResult> listApprovedOriginsAsync(ListApprovedOriginsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListApprovedOriginsRequest, ListApprovedOriginsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAuthenticationProfilesResult> listAuthenticationProfilesAsync(ListAuthenticationProfilesRequest request) {
+
+        return listAuthenticationProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAuthenticationProfilesResult> listAuthenticationProfilesAsync(ListAuthenticationProfilesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAuthenticationProfilesRequest, ListAuthenticationProfilesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2712,6 +2738,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(UpdateAgentStatusRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateAgentStatusRequest, UpdateAgentStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAuthenticationProfileResult> updateAuthenticationProfileAsync(UpdateAuthenticationProfileRequest request) {
+
+        return updateAuthenticationProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAuthenticationProfileResult> updateAuthenticationProfileAsync(UpdateAuthenticationProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAuthenticationProfileRequest, UpdateAuthenticationProfileResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

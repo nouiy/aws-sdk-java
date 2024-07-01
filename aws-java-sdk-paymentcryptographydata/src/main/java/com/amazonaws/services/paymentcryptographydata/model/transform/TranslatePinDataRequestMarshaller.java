@@ -27,20 +27,24 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class TranslatePinDataRequestMarshaller {
 
+    private static final MarshallingInfo<String> INCOMINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncomingKeyIdentifier").build();
+    private static final MarshallingInfo<String> OUTGOINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingKeyIdentifier").build();
+    private static final MarshallingInfo<StructuredPojo> INCOMINGTRANSLATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncomingTranslationAttributes").build();
+    private static final MarshallingInfo<StructuredPojo> OUTGOINGTRANSLATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingTranslationAttributes").build();
     private static final MarshallingInfo<String> ENCRYPTEDPINBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptedPinBlock").build();
     private static final MarshallingInfo<StructuredPojo> INCOMINGDUKPTATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncomingDukptAttributes").build();
-    private static final MarshallingInfo<String> INCOMINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncomingKeyIdentifier").build();
-    private static final MarshallingInfo<StructuredPojo> INCOMINGTRANSLATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncomingTranslationAttributes").build();
     private static final MarshallingInfo<StructuredPojo> OUTGOINGDUKPTATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingDukptAttributes").build();
-    private static final MarshallingInfo<String> OUTGOINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingKeyIdentifier").build();
-    private static final MarshallingInfo<StructuredPojo> OUTGOINGTRANSLATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingTranslationAttributes").build();
+    private static final MarshallingInfo<StructuredPojo> INCOMINGWRAPPEDKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncomingWrappedKey").build();
+    private static final MarshallingInfo<StructuredPojo> OUTGOINGWRAPPEDKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingWrappedKey").build();
 
     private static final TranslatePinDataRequestMarshaller instance = new TranslatePinDataRequestMarshaller();
 
@@ -58,13 +62,15 @@ public class TranslatePinDataRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(translatePinDataRequest.getIncomingKeyIdentifier(), INCOMINGKEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(translatePinDataRequest.getOutgoingKeyIdentifier(), OUTGOINGKEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(translatePinDataRequest.getIncomingTranslationAttributes(), INCOMINGTRANSLATIONATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(translatePinDataRequest.getOutgoingTranslationAttributes(), OUTGOINGTRANSLATIONATTRIBUTES_BINDING);
             protocolMarshaller.marshall(translatePinDataRequest.getEncryptedPinBlock(), ENCRYPTEDPINBLOCK_BINDING);
             protocolMarshaller.marshall(translatePinDataRequest.getIncomingDukptAttributes(), INCOMINGDUKPTATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(translatePinDataRequest.getIncomingKeyIdentifier(), INCOMINGKEYIDENTIFIER_BINDING);
-            protocolMarshaller.marshall(translatePinDataRequest.getIncomingTranslationAttributes(), INCOMINGTRANSLATIONATTRIBUTES_BINDING);
             protocolMarshaller.marshall(translatePinDataRequest.getOutgoingDukptAttributes(), OUTGOINGDUKPTATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(translatePinDataRequest.getOutgoingKeyIdentifier(), OUTGOINGKEYIDENTIFIER_BINDING);
-            protocolMarshaller.marshall(translatePinDataRequest.getOutgoingTranslationAttributes(), OUTGOINGTRANSLATIONATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(translatePinDataRequest.getIncomingWrappedKey(), INCOMINGWRAPPEDKEY_BINDING);
+            protocolMarshaller.marshall(translatePinDataRequest.getOutgoingWrappedKey(), OUTGOINGWRAPPEDKEY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

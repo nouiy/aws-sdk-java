@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ReEncryptionAttributesMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> DUKPT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Dukpt").build();
     private static final MarshallingInfo<StructuredPojo> SYMMETRIC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Symmetric").build();
+    private static final MarshallingInfo<StructuredPojo> DUKPT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Dukpt").build();
 
     private static final ReEncryptionAttributesMarshaller instance = new ReEncryptionAttributesMarshaller();
 
@@ -48,8 +48,8 @@ public class ReEncryptionAttributesMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(reEncryptionAttributes.getDukpt(), DUKPT_BINDING);
             protocolMarshaller.marshall(reEncryptionAttributes.getSymmetric(), SYMMETRIC_BINDING);
+            protocolMarshaller.marshall(reEncryptionAttributes.getDukpt(), DUKPT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

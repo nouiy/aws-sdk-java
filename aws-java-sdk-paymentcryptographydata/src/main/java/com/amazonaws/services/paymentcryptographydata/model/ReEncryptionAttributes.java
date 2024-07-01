@@ -28,7 +28,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ReEncryptionAttributes implements Serializable, Cloneable, StructuredPojo {
 
-    private DukptEncryptionAttributes dukpt;
     /**
      * <p>
      * Parameters that are required to encrypt data using symmetric keys.
@@ -36,31 +35,7 @@ public class ReEncryptionAttributes implements Serializable, Cloneable, Structur
      */
     private SymmetricEncryptionAttributes symmetric;
 
-    /**
-     * @param dukpt
-     */
-
-    public void setDukpt(DukptEncryptionAttributes dukpt) {
-        this.dukpt = dukpt;
-    }
-
-    /**
-     * @return
-     */
-
-    public DukptEncryptionAttributes getDukpt() {
-        return this.dukpt;
-    }
-
-    /**
-     * @param dukpt
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ReEncryptionAttributes withDukpt(DukptEncryptionAttributes dukpt) {
-        setDukpt(dukpt);
-        return this;
-    }
+    private DukptEncryptionAttributes dukpt;
 
     /**
      * <p>
@@ -103,6 +78,32 @@ public class ReEncryptionAttributes implements Serializable, Cloneable, Structur
     }
 
     /**
+     * @param dukpt
+     */
+
+    public void setDukpt(DukptEncryptionAttributes dukpt) {
+        this.dukpt = dukpt;
+    }
+
+    /**
+     * @return
+     */
+
+    public DukptEncryptionAttributes getDukpt() {
+        return this.dukpt;
+    }
+
+    /**
+     * @param dukpt
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReEncryptionAttributes withDukpt(DukptEncryptionAttributes dukpt) {
+        setDukpt(dukpt);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -114,10 +115,10 @@ public class ReEncryptionAttributes implements Serializable, Cloneable, Structur
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDukpt() != null)
-            sb.append("Dukpt: ").append(getDukpt()).append(",");
         if (getSymmetric() != null)
-            sb.append("Symmetric: ").append(getSymmetric());
+            sb.append("Symmetric: ").append(getSymmetric()).append(",");
+        if (getDukpt() != null)
+            sb.append("Dukpt: ").append(getDukpt());
         sb.append("}");
         return sb.toString();
     }
@@ -132,13 +133,13 @@ public class ReEncryptionAttributes implements Serializable, Cloneable, Structur
         if (obj instanceof ReEncryptionAttributes == false)
             return false;
         ReEncryptionAttributes other = (ReEncryptionAttributes) obj;
-        if (other.getDukpt() == null ^ this.getDukpt() == null)
-            return false;
-        if (other.getDukpt() != null && other.getDukpt().equals(this.getDukpt()) == false)
-            return false;
         if (other.getSymmetric() == null ^ this.getSymmetric() == null)
             return false;
         if (other.getSymmetric() != null && other.getSymmetric().equals(this.getSymmetric()) == false)
+            return false;
+        if (other.getDukpt() == null ^ this.getDukpt() == null)
+            return false;
+        if (other.getDukpt() != null && other.getDukpt().equals(this.getDukpt()) == false)
             return false;
         return true;
     }
@@ -148,8 +149,8 @@ public class ReEncryptionAttributes implements Serializable, Cloneable, Structur
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDukpt() == null) ? 0 : getDukpt().hashCode());
         hashCode = prime * hashCode + ((getSymmetric() == null) ? 0 : getSymmetric().hashCode());
+        hashCode = prime * hashCode + ((getDukpt() == null) ? 0 : getDukpt().hashCode());
         return hashCode;
     }
 

@@ -25,6 +25,12 @@ public class TranslatePinDataResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
+     * The outgoing encrypted PIN block data after translation.
+     * </p>
+     */
+    private String pinBlock;
+    /**
+     * <p>
      * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses to encrypt
      * outgoing PIN block data after translation.
      * </p>
@@ -40,12 +46,46 @@ public class TranslatePinDataResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      */
     private String keyCheckValue;
+
     /**
      * <p>
      * The outgoing encrypted PIN block data after translation.
      * </p>
+     * 
+     * @param pinBlock
+     *        The outgoing encrypted PIN block data after translation.
      */
-    private String pinBlock;
+
+    public void setPinBlock(String pinBlock) {
+        this.pinBlock = pinBlock;
+    }
+
+    /**
+     * <p>
+     * The outgoing encrypted PIN block data after translation.
+     * </p>
+     * 
+     * @return The outgoing encrypted PIN block data after translation.
+     */
+
+    public String getPinBlock() {
+        return this.pinBlock;
+    }
+
+    /**
+     * <p>
+     * The outgoing encrypted PIN block data after translation.
+     * </p>
+     * 
+     * @param pinBlock
+     *        The outgoing encrypted PIN block data after translation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranslatePinDataResult withPinBlock(String pinBlock) {
+        setPinBlock(pinBlock);
+        return this;
+    }
 
     /**
      * <p>
@@ -155,46 +195,6 @@ public class TranslatePinDataResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * <p>
-     * The outgoing encrypted PIN block data after translation.
-     * </p>
-     * 
-     * @param pinBlock
-     *        The outgoing encrypted PIN block data after translation.
-     */
-
-    public void setPinBlock(String pinBlock) {
-        this.pinBlock = pinBlock;
-    }
-
-    /**
-     * <p>
-     * The outgoing encrypted PIN block data after translation.
-     * </p>
-     * 
-     * @return The outgoing encrypted PIN block data after translation.
-     */
-
-    public String getPinBlock() {
-        return this.pinBlock;
-    }
-
-    /**
-     * <p>
-     * The outgoing encrypted PIN block data after translation.
-     * </p>
-     * 
-     * @param pinBlock
-     *        The outgoing encrypted PIN block data after translation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public TranslatePinDataResult withPinBlock(String pinBlock) {
-        setPinBlock(pinBlock);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -206,12 +206,12 @@ public class TranslatePinDataResult extends com.amazonaws.AmazonWebServiceResult
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getPinBlock() != null)
+            sb.append("PinBlock: ").append(getPinBlock()).append(",");
         if (getKeyArn() != null)
             sb.append("KeyArn: ").append(getKeyArn()).append(",");
         if (getKeyCheckValue() != null)
-            sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
-        if (getPinBlock() != null)
-            sb.append("PinBlock: ").append(getPinBlock());
+            sb.append("KeyCheckValue: ").append(getKeyCheckValue());
         sb.append("}");
         return sb.toString();
     }
@@ -226,6 +226,10 @@ public class TranslatePinDataResult extends com.amazonaws.AmazonWebServiceResult
         if (obj instanceof TranslatePinDataResult == false)
             return false;
         TranslatePinDataResult other = (TranslatePinDataResult) obj;
+        if (other.getPinBlock() == null ^ this.getPinBlock() == null)
+            return false;
+        if (other.getPinBlock() != null && other.getPinBlock().equals(this.getPinBlock()) == false)
+            return false;
         if (other.getKeyArn() == null ^ this.getKeyArn() == null)
             return false;
         if (other.getKeyArn() != null && other.getKeyArn().equals(this.getKeyArn()) == false)
@@ -233,10 +237,6 @@ public class TranslatePinDataResult extends com.amazonaws.AmazonWebServiceResult
         if (other.getKeyCheckValue() == null ^ this.getKeyCheckValue() == null)
             return false;
         if (other.getKeyCheckValue() != null && other.getKeyCheckValue().equals(this.getKeyCheckValue()) == false)
-            return false;
-        if (other.getPinBlock() == null ^ this.getPinBlock() == null)
-            return false;
-        if (other.getPinBlock() != null && other.getPinBlock().equals(this.getPinBlock()) == false)
             return false;
         return true;
     }
@@ -246,9 +246,9 @@ public class TranslatePinDataResult extends com.amazonaws.AmazonWebServiceResult
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getPinBlock() == null) ? 0 : getPinBlock().hashCode());
         hashCode = prime * hashCode + ((getKeyArn() == null) ? 0 : getKeyArn().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValue() == null) ? 0 : getKeyCheckValue().hashCode());
-        hashCode = prime * hashCode + ((getPinBlock() == null) ? 0 : getPinBlock().hashCode());
         return hashCode;
     }
 

@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CardHolderVerificationValueMarshaller {
 
-    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
-    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
     private static final MarshallingInfo<String> UNPREDICTABLENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UnpredictableNumber").build();
+    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
+    private static final MarshallingInfo<String> APPLICATIONTRANSACTIONCOUNTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationTransactionCounter").build();
 
     private static final CardHolderVerificationValueMarshaller instance = new CardHolderVerificationValueMarshaller();
 
@@ -50,9 +50,9 @@ public class CardHolderVerificationValueMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(cardHolderVerificationValue.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
-            protocolMarshaller.marshall(cardHolderVerificationValue.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(cardHolderVerificationValue.getUnpredictableNumber(), UNPREDICTABLENUMBER_BINDING);
+            protocolMarshaller.marshall(cardHolderVerificationValue.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
+            protocolMarshaller.marshall(cardHolderVerificationValue.getApplicationTransactionCounter(), APPLICATIONTRANSACTIONCOUNTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

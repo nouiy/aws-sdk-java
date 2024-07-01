@@ -37,10 +37,10 @@ public class Ibm3624PinVerification implements Serializable, Cloneable, Structur
     private String decimalizationTable;
     /**
      * <p>
-     * The PIN offset value.
+     * The padding character for validation data.
      * </p>
      */
-    private String pinOffset;
+    private String pinValidationDataPadCharacter;
     /**
      * <p>
      * The unique data for cardholder identification.
@@ -49,10 +49,10 @@ public class Ibm3624PinVerification implements Serializable, Cloneable, Structur
     private String pinValidationData;
     /**
      * <p>
-     * The padding character for validation data.
+     * The PIN offset value.
      * </p>
      */
-    private String pinValidationDataPadCharacter;
+    private String pinOffset;
 
     /**
      * <p>
@@ -102,41 +102,41 @@ public class Ibm3624PinVerification implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The PIN offset value.
+     * The padding character for validation data.
      * </p>
      * 
-     * @param pinOffset
-     *        The PIN offset value.
+     * @param pinValidationDataPadCharacter
+     *        The padding character for validation data.
      */
 
-    public void setPinOffset(String pinOffset) {
-        this.pinOffset = pinOffset;
+    public void setPinValidationDataPadCharacter(String pinValidationDataPadCharacter) {
+        this.pinValidationDataPadCharacter = pinValidationDataPadCharacter;
     }
 
     /**
      * <p>
-     * The PIN offset value.
+     * The padding character for validation data.
      * </p>
      * 
-     * @return The PIN offset value.
+     * @return The padding character for validation data.
      */
 
-    public String getPinOffset() {
-        return this.pinOffset;
+    public String getPinValidationDataPadCharacter() {
+        return this.pinValidationDataPadCharacter;
     }
 
     /**
      * <p>
-     * The PIN offset value.
+     * The padding character for validation data.
      * </p>
      * 
-     * @param pinOffset
-     *        The PIN offset value.
+     * @param pinValidationDataPadCharacter
+     *        The padding character for validation data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Ibm3624PinVerification withPinOffset(String pinOffset) {
-        setPinOffset(pinOffset);
+    public Ibm3624PinVerification withPinValidationDataPadCharacter(String pinValidationDataPadCharacter) {
+        setPinValidationDataPadCharacter(pinValidationDataPadCharacter);
         return this;
     }
 
@@ -182,41 +182,41 @@ public class Ibm3624PinVerification implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The padding character for validation data.
+     * The PIN offset value.
      * </p>
      * 
-     * @param pinValidationDataPadCharacter
-     *        The padding character for validation data.
+     * @param pinOffset
+     *        The PIN offset value.
      */
 
-    public void setPinValidationDataPadCharacter(String pinValidationDataPadCharacter) {
-        this.pinValidationDataPadCharacter = pinValidationDataPadCharacter;
+    public void setPinOffset(String pinOffset) {
+        this.pinOffset = pinOffset;
     }
 
     /**
      * <p>
-     * The padding character for validation data.
+     * The PIN offset value.
      * </p>
      * 
-     * @return The padding character for validation data.
+     * @return The PIN offset value.
      */
 
-    public String getPinValidationDataPadCharacter() {
-        return this.pinValidationDataPadCharacter;
+    public String getPinOffset() {
+        return this.pinOffset;
     }
 
     /**
      * <p>
-     * The padding character for validation data.
+     * The PIN offset value.
      * </p>
      * 
-     * @param pinValidationDataPadCharacter
-     *        The padding character for validation data.
+     * @param pinOffset
+     *        The PIN offset value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Ibm3624PinVerification withPinValidationDataPadCharacter(String pinValidationDataPadCharacter) {
-        setPinValidationDataPadCharacter(pinValidationDataPadCharacter);
+    public Ibm3624PinVerification withPinOffset(String pinOffset) {
+        setPinOffset(pinOffset);
         return this;
     }
 
@@ -234,12 +234,12 @@ public class Ibm3624PinVerification implements Serializable, Cloneable, Structur
         sb.append("{");
         if (getDecimalizationTable() != null)
             sb.append("DecimalizationTable: ").append(getDecimalizationTable()).append(",");
-        if (getPinOffset() != null)
-            sb.append("PinOffset: ").append(getPinOffset()).append(",");
+        if (getPinValidationDataPadCharacter() != null)
+            sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter()).append(",");
         if (getPinValidationData() != null)
             sb.append("PinValidationData: ").append(getPinValidationData()).append(",");
-        if (getPinValidationDataPadCharacter() != null)
-            sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter());
+        if (getPinOffset() != null)
+            sb.append("PinOffset: ").append(getPinOffset());
         sb.append("}");
         return sb.toString();
     }
@@ -258,18 +258,18 @@ public class Ibm3624PinVerification implements Serializable, Cloneable, Structur
             return false;
         if (other.getDecimalizationTable() != null && other.getDecimalizationTable().equals(this.getDecimalizationTable()) == false)
             return false;
-        if (other.getPinOffset() == null ^ this.getPinOffset() == null)
+        if (other.getPinValidationDataPadCharacter() == null ^ this.getPinValidationDataPadCharacter() == null)
             return false;
-        if (other.getPinOffset() != null && other.getPinOffset().equals(this.getPinOffset()) == false)
+        if (other.getPinValidationDataPadCharacter() != null
+                && other.getPinValidationDataPadCharacter().equals(this.getPinValidationDataPadCharacter()) == false)
             return false;
         if (other.getPinValidationData() == null ^ this.getPinValidationData() == null)
             return false;
         if (other.getPinValidationData() != null && other.getPinValidationData().equals(this.getPinValidationData()) == false)
             return false;
-        if (other.getPinValidationDataPadCharacter() == null ^ this.getPinValidationDataPadCharacter() == null)
+        if (other.getPinOffset() == null ^ this.getPinOffset() == null)
             return false;
-        if (other.getPinValidationDataPadCharacter() != null
-                && other.getPinValidationDataPadCharacter().equals(this.getPinValidationDataPadCharacter()) == false)
+        if (other.getPinOffset() != null && other.getPinOffset().equals(this.getPinOffset()) == false)
             return false;
         return true;
     }
@@ -280,9 +280,9 @@ public class Ibm3624PinVerification implements Serializable, Cloneable, Structur
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDecimalizationTable() == null) ? 0 : getDecimalizationTable().hashCode());
-        hashCode = prime * hashCode + ((getPinOffset() == null) ? 0 : getPinOffset().hashCode());
-        hashCode = prime * hashCode + ((getPinValidationData() == null) ? 0 : getPinValidationData().hashCode());
         hashCode = prime * hashCode + ((getPinValidationDataPadCharacter() == null) ? 0 : getPinValidationDataPadCharacter().hashCode());
+        hashCode = prime * hashCode + ((getPinValidationData() == null) ? 0 : getPinValidationData().hashCode());
+        hashCode = prime * hashCode + ((getPinOffset() == null) ? 0 : getPinOffset().hashCode());
         return hashCode;
     }
 

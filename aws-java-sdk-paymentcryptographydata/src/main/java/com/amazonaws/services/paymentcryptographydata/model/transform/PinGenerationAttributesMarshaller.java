@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PinGenerationAttributesMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> IBM3624NATURALPIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624NaturalPin").build();
-    private static final MarshallingInfo<StructuredPojo> IBM3624PINFROMOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624PinFromOffset").build();
-    private static final MarshallingInfo<StructuredPojo> IBM3624PINOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624PinOffset").build();
-    private static final MarshallingInfo<StructuredPojo> IBM3624RANDOMPIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624RandomPin").build();
     private static final MarshallingInfo<StructuredPojo> VISAPIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisaPin").build();
     private static final MarshallingInfo<StructuredPojo> VISAPINVERIFICATIONVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisaPinVerificationValue").build();
+    private static final MarshallingInfo<StructuredPojo> IBM3624PINOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624PinOffset").build();
+    private static final MarshallingInfo<StructuredPojo> IBM3624NATURALPIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624NaturalPin").build();
+    private static final MarshallingInfo<StructuredPojo> IBM3624RANDOMPIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624RandomPin").build();
+    private static final MarshallingInfo<StructuredPojo> IBM3624PINFROMOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624PinFromOffset").build();
 
     private static final PinGenerationAttributesMarshaller instance = new PinGenerationAttributesMarshaller();
 
@@ -56,12 +56,12 @@ public class PinGenerationAttributesMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pinGenerationAttributes.getIbm3624NaturalPin(), IBM3624NATURALPIN_BINDING);
-            protocolMarshaller.marshall(pinGenerationAttributes.getIbm3624PinFromOffset(), IBM3624PINFROMOFFSET_BINDING);
-            protocolMarshaller.marshall(pinGenerationAttributes.getIbm3624PinOffset(), IBM3624PINOFFSET_BINDING);
-            protocolMarshaller.marshall(pinGenerationAttributes.getIbm3624RandomPin(), IBM3624RANDOMPIN_BINDING);
             protocolMarshaller.marshall(pinGenerationAttributes.getVisaPin(), VISAPIN_BINDING);
             protocolMarshaller.marshall(pinGenerationAttributes.getVisaPinVerificationValue(), VISAPINVERIFICATIONVALUE_BINDING);
+            protocolMarshaller.marshall(pinGenerationAttributes.getIbm3624PinOffset(), IBM3624PINOFFSET_BINDING);
+            protocolMarshaller.marshall(pinGenerationAttributes.getIbm3624NaturalPin(), IBM3624NATURALPIN_BINDING);
+            protocolMarshaller.marshall(pinGenerationAttributes.getIbm3624RandomPin(), IBM3624RANDOMPIN_BINDING);
+            protocolMarshaller.marshall(pinGenerationAttributes.getIbm3624PinFromOffset(), IBM3624PINFROMOFFSET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

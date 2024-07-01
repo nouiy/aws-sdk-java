@@ -52,17 +52,17 @@ public class Ibm3624PinFromOffsetJsonUnmarshaller implements Unmarshaller<Ibm362
                     context.nextToken();
                     ibm3624PinFromOffset.setDecimalizationTable(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("PinOffset", targetDepth)) {
+                if (context.testExpression("PinValidationDataPadCharacter", targetDepth)) {
                     context.nextToken();
-                    ibm3624PinFromOffset.setPinOffset(context.getUnmarshaller(String.class).unmarshall(context));
+                    ibm3624PinFromOffset.setPinValidationDataPadCharacter(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PinValidationData", targetDepth)) {
                     context.nextToken();
                     ibm3624PinFromOffset.setPinValidationData(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("PinValidationDataPadCharacter", targetDepth)) {
+                if (context.testExpression("PinOffset", targetDepth)) {
                     context.nextToken();
-                    ibm3624PinFromOffset.setPinValidationDataPadCharacter(context.getUnmarshaller(String.class).unmarshall(context));
+                    ibm3624PinFromOffset.setPinOffset(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

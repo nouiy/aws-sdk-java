@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum CapacityTypes {
 
     ON_DEMAND("ON_DEMAND"),
-    SPOT("SPOT");
+    SPOT("SPOT"),
+    CAPACITY_BLOCK("CAPACITY_BLOCK");
 
     private String value;
 

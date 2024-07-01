@@ -41,16 +41,16 @@ public class VerifyCardValidationDataRequest extends com.amazonaws.AmazonWebServ
     private String primaryAccountNumber;
     /**
      * <p>
-     * The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
-     * </p>
-     */
-    private String validationData;
-    /**
-     * <p>
      * The algorithm to use for verification of card data within Amazon Web Services Payment Cryptography.
      * </p>
      */
     private CardVerificationAttributes verificationAttributes;
+    /**
+     * <p>
+     * The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
+     * </p>
+     */
+    private String validationData;
 
     /**
      * <p>
@@ -146,46 +146,6 @@ public class VerifyCardValidationDataRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @param validationData
-     *        The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
-     */
-
-    public void setValidationData(String validationData) {
-        this.validationData = validationData;
-    }
-
-    /**
-     * <p>
-     * The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @return The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
-     */
-
-    public String getValidationData() {
-        return this.validationData;
-    }
-
-    /**
-     * <p>
-     * The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @param validationData
-     *        The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VerifyCardValidationDataRequest withValidationData(String validationData) {
-        setValidationData(validationData);
-        return this;
-    }
-
-    /**
-     * <p>
      * The algorithm to use for verification of card data within Amazon Web Services Payment Cryptography.
      * </p>
      * 
@@ -225,6 +185,46 @@ public class VerifyCardValidationDataRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param validationData
+     *        The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
+     */
+
+    public void setValidationData(String validationData) {
+        this.validationData = validationData;
+    }
+
+    /**
+     * <p>
+     * The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @return The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
+     */
+
+    public String getValidationData() {
+        return this.validationData;
+    }
+
+    /**
+     * <p>
+     * The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param validationData
+     *        The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VerifyCardValidationDataRequest withValidationData(String validationData) {
+        setValidationData(validationData);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -240,10 +240,10 @@ public class VerifyCardValidationDataRequest extends com.amazonaws.AmazonWebServ
             sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
         if (getPrimaryAccountNumber() != null)
             sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***").append(",");
-        if (getValidationData() != null)
-            sb.append("ValidationData: ").append(getValidationData()).append(",");
         if (getVerificationAttributes() != null)
-            sb.append("VerificationAttributes: ").append(getVerificationAttributes());
+            sb.append("VerificationAttributes: ").append(getVerificationAttributes()).append(",");
+        if (getValidationData() != null)
+            sb.append("ValidationData: ").append(getValidationData());
         sb.append("}");
         return sb.toString();
     }
@@ -266,13 +266,13 @@ public class VerifyCardValidationDataRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getPrimaryAccountNumber() != null && other.getPrimaryAccountNumber().equals(this.getPrimaryAccountNumber()) == false)
             return false;
-        if (other.getValidationData() == null ^ this.getValidationData() == null)
-            return false;
-        if (other.getValidationData() != null && other.getValidationData().equals(this.getValidationData()) == false)
-            return false;
         if (other.getVerificationAttributes() == null ^ this.getVerificationAttributes() == null)
             return false;
         if (other.getVerificationAttributes() != null && other.getVerificationAttributes().equals(this.getVerificationAttributes()) == false)
+            return false;
+        if (other.getValidationData() == null ^ this.getValidationData() == null)
+            return false;
+        if (other.getValidationData() != null && other.getValidationData().equals(this.getValidationData()) == false)
             return false;
         return true;
     }
@@ -284,8 +284,8 @@ public class VerifyCardValidationDataRequest extends com.amazonaws.AmazonWebServ
 
         hashCode = prime * hashCode + ((getKeyIdentifier() == null) ? 0 : getKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getPrimaryAccountNumber() == null) ? 0 : getPrimaryAccountNumber().hashCode());
-        hashCode = prime * hashCode + ((getValidationData() == null) ? 0 : getValidationData().hashCode());
         hashCode = prime * hashCode + ((getVerificationAttributes() == null) ? 0 : getVerificationAttributes().hashCode());
+        hashCode = prime * hashCode + ((getValidationData() == null) ? 0 : getValidationData().hashCode());
         return hashCode;
     }
 

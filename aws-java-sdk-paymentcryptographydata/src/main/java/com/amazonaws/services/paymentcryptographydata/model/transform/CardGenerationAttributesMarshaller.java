@@ -31,12 +31,12 @@ public class CardGenerationAttributesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmexCardSecurityCodeVersion1").build();
     private static final MarshallingInfo<StructuredPojo> AMEXCARDSECURITYCODEVERSION2_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmexCardSecurityCodeVersion2").build();
-    private static final MarshallingInfo<StructuredPojo> CARDHOLDERVERIFICATIONVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardHolderVerificationValue").build();
     private static final MarshallingInfo<StructuredPojo> CARDVERIFICATIONVALUE1_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardVerificationValue1").build();
     private static final MarshallingInfo<StructuredPojo> CARDVERIFICATIONVALUE2_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardVerificationValue2").build();
+    private static final MarshallingInfo<StructuredPojo> CARDHOLDERVERIFICATIONVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CardHolderVerificationValue").build();
     private static final MarshallingInfo<StructuredPojo> DYNAMICCARDVERIFICATIONCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DynamicCardVerificationCode").build();
     private static final MarshallingInfo<StructuredPojo> DYNAMICCARDVERIFICATIONVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -60,9 +60,9 @@ public class CardGenerationAttributesMarshaller {
         try {
             protocolMarshaller.marshall(cardGenerationAttributes.getAmexCardSecurityCodeVersion1(), AMEXCARDSECURITYCODEVERSION1_BINDING);
             protocolMarshaller.marshall(cardGenerationAttributes.getAmexCardSecurityCodeVersion2(), AMEXCARDSECURITYCODEVERSION2_BINDING);
-            protocolMarshaller.marshall(cardGenerationAttributes.getCardHolderVerificationValue(), CARDHOLDERVERIFICATIONVALUE_BINDING);
             protocolMarshaller.marshall(cardGenerationAttributes.getCardVerificationValue1(), CARDVERIFICATIONVALUE1_BINDING);
             protocolMarshaller.marshall(cardGenerationAttributes.getCardVerificationValue2(), CARDVERIFICATIONVALUE2_BINDING);
+            protocolMarshaller.marshall(cardGenerationAttributes.getCardHolderVerificationValue(), CARDHOLDERVERIFICATIONVALUE_BINDING);
             protocolMarshaller.marshall(cardGenerationAttributes.getDynamicCardVerificationCode(), DYNAMICCARDVERIFICATIONCODE_BINDING);
             protocolMarshaller.marshall(cardGenerationAttributes.getDynamicCardVerificationValue(), DYNAMICCARDVERIFICATIONVALUE_BINDING);
         } catch (Exception e) {

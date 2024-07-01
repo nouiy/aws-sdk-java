@@ -29,10 +29,10 @@ public class MacAlgorithmEmvMarshaller {
 
     private static final MarshallingInfo<String> MAJORKEYDERIVATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MajorKeyDerivationMode").build();
-    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
     private static final MarshallingInfo<String> PRIMARYACCOUNTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryAccountNumber").build();
+    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
     private static final MarshallingInfo<String> SESSIONKEYDERIVATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SessionKeyDerivationMode").build();
     private static final MarshallingInfo<StructuredPojo> SESSIONKEYDERIVATIONVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -55,8 +55,8 @@ public class MacAlgorithmEmvMarshaller {
 
         try {
             protocolMarshaller.marshall(macAlgorithmEmv.getMajorKeyDerivationMode(), MAJORKEYDERIVATIONMODE_BINDING);
-            protocolMarshaller.marshall(macAlgorithmEmv.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(macAlgorithmEmv.getPrimaryAccountNumber(), PRIMARYACCOUNTNUMBER_BINDING);
+            protocolMarshaller.marshall(macAlgorithmEmv.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(macAlgorithmEmv.getSessionKeyDerivationMode(), SESSIONKEYDERIVATIONMODE_BINDING);
             protocolMarshaller.marshall(macAlgorithmEmv.getSessionKeyDerivationValue(), SESSIONKEYDERIVATIONVALUE_BINDING);
         } catch (Exception e) {

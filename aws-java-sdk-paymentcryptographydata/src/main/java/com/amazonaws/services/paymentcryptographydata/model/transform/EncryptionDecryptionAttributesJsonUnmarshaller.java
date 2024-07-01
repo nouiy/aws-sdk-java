@@ -48,6 +48,10 @@ public class EncryptionDecryptionAttributesJsonUnmarshaller implements Unmarshal
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Symmetric", targetDepth)) {
+                    context.nextToken();
+                    encryptionDecryptionAttributes.setSymmetric(SymmetricEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Asymmetric", targetDepth)) {
                     context.nextToken();
                     encryptionDecryptionAttributes.setAsymmetric(AsymmetricEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
@@ -59,10 +63,6 @@ public class EncryptionDecryptionAttributesJsonUnmarshaller implements Unmarshal
                 if (context.testExpression("Emv", targetDepth)) {
                     context.nextToken();
                     encryptionDecryptionAttributes.setEmv(EmvEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("Symmetric", targetDepth)) {
-                    context.nextToken();
-                    encryptionDecryptionAttributes.setSymmetric(SymmetricEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

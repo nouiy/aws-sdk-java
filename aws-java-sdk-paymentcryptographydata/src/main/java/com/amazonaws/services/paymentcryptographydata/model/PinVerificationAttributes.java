@@ -30,56 +30,16 @@ public class PinVerificationAttributes implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Parameters that are required to generate or verify Ibm3624 PIN.
-     * </p>
-     */
-    private Ibm3624PinVerification ibm3624Pin;
-    /**
-     * <p>
      * Parameters that are required to generate or verify Visa PIN.
      * </p>
      */
     private VisaPinVerification visaPin;
-
     /**
      * <p>
      * Parameters that are required to generate or verify Ibm3624 PIN.
      * </p>
-     * 
-     * @param ibm3624Pin
-     *        Parameters that are required to generate or verify Ibm3624 PIN.
      */
-
-    public void setIbm3624Pin(Ibm3624PinVerification ibm3624Pin) {
-        this.ibm3624Pin = ibm3624Pin;
-    }
-
-    /**
-     * <p>
-     * Parameters that are required to generate or verify Ibm3624 PIN.
-     * </p>
-     * 
-     * @return Parameters that are required to generate or verify Ibm3624 PIN.
-     */
-
-    public Ibm3624PinVerification getIbm3624Pin() {
-        return this.ibm3624Pin;
-    }
-
-    /**
-     * <p>
-     * Parameters that are required to generate or verify Ibm3624 PIN.
-     * </p>
-     * 
-     * @param ibm3624Pin
-     *        Parameters that are required to generate or verify Ibm3624 PIN.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PinVerificationAttributes withIbm3624Pin(Ibm3624PinVerification ibm3624Pin) {
-        setIbm3624Pin(ibm3624Pin);
-        return this;
-    }
+    private Ibm3624PinVerification ibm3624Pin;
 
     /**
      * <p>
@@ -122,6 +82,46 @@ public class PinVerificationAttributes implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Parameters that are required to generate or verify Ibm3624 PIN.
+     * </p>
+     * 
+     * @param ibm3624Pin
+     *        Parameters that are required to generate or verify Ibm3624 PIN.
+     */
+
+    public void setIbm3624Pin(Ibm3624PinVerification ibm3624Pin) {
+        this.ibm3624Pin = ibm3624Pin;
+    }
+
+    /**
+     * <p>
+     * Parameters that are required to generate or verify Ibm3624 PIN.
+     * </p>
+     * 
+     * @return Parameters that are required to generate or verify Ibm3624 PIN.
+     */
+
+    public Ibm3624PinVerification getIbm3624Pin() {
+        return this.ibm3624Pin;
+    }
+
+    /**
+     * <p>
+     * Parameters that are required to generate or verify Ibm3624 PIN.
+     * </p>
+     * 
+     * @param ibm3624Pin
+     *        Parameters that are required to generate or verify Ibm3624 PIN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PinVerificationAttributes withIbm3624Pin(Ibm3624PinVerification ibm3624Pin) {
+        setIbm3624Pin(ibm3624Pin);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,10 +133,10 @@ public class PinVerificationAttributes implements Serializable, Cloneable, Struc
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getIbm3624Pin() != null)
-            sb.append("Ibm3624Pin: ").append(getIbm3624Pin()).append(",");
         if (getVisaPin() != null)
-            sb.append("VisaPin: ").append(getVisaPin());
+            sb.append("VisaPin: ").append(getVisaPin()).append(",");
+        if (getIbm3624Pin() != null)
+            sb.append("Ibm3624Pin: ").append(getIbm3624Pin());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class PinVerificationAttributes implements Serializable, Cloneable, Struc
         if (obj instanceof PinVerificationAttributes == false)
             return false;
         PinVerificationAttributes other = (PinVerificationAttributes) obj;
-        if (other.getIbm3624Pin() == null ^ this.getIbm3624Pin() == null)
-            return false;
-        if (other.getIbm3624Pin() != null && other.getIbm3624Pin().equals(this.getIbm3624Pin()) == false)
-            return false;
         if (other.getVisaPin() == null ^ this.getVisaPin() == null)
             return false;
         if (other.getVisaPin() != null && other.getVisaPin().equals(this.getVisaPin()) == false)
+            return false;
+        if (other.getIbm3624Pin() == null ^ this.getIbm3624Pin() == null)
+            return false;
+        if (other.getIbm3624Pin() != null && other.getIbm3624Pin().equals(this.getIbm3624Pin()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class PinVerificationAttributes implements Serializable, Cloneable, Struc
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getIbm3624Pin() == null) ? 0 : getIbm3624Pin().hashCode());
         hashCode = prime * hashCode + ((getVisaPin() == null) ? 0 : getVisaPin().hashCode());
+        hashCode = prime * hashCode + ((getIbm3624Pin() == null) ? 0 : getIbm3624Pin().hashCode());
         return hashCode;
     }
 

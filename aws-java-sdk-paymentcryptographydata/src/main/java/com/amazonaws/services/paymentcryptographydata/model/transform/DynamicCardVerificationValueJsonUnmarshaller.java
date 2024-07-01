@@ -48,21 +48,21 @@ public class DynamicCardVerificationValueJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
+                if (context.testExpression("PanSequenceNumber", targetDepth)) {
                     context.nextToken();
-                    dynamicCardVerificationValue.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
+                    dynamicCardVerificationValue.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("CardExpiryDate", targetDepth)) {
                     context.nextToken();
                     dynamicCardVerificationValue.setCardExpiryDate(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("PanSequenceNumber", targetDepth)) {
-                    context.nextToken();
-                    dynamicCardVerificationValue.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("ServiceCode", targetDepth)) {
                     context.nextToken();
                     dynamicCardVerificationValue.setServiceCode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
+                    context.nextToken();
+                    dynamicCardVerificationValue.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

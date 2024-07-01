@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EmvEncryptionAttributesMarshaller {
 
-    private static final MarshallingInfo<String> INITIALIZATIONVECTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InitializationVector").build();
     private static final MarshallingInfo<String> MAJORKEYDERIVATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MajorKeyDerivationMode").build();
-    private static final MarshallingInfo<String> MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Mode").build();
-    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
     private static final MarshallingInfo<String> PRIMARYACCOUNTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryAccountNumber").build();
+    private static final MarshallingInfo<String> PANSEQUENCENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PanSequenceNumber").build();
     private static final MarshallingInfo<String> SESSIONDERIVATIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SessionDerivationData").build();
+    private static final MarshallingInfo<String> MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Mode").build();
+    private static final MarshallingInfo<String> INITIALIZATIONVECTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InitializationVector").build();
 
     private static final EmvEncryptionAttributesMarshaller instance = new EmvEncryptionAttributesMarshaller();
 
@@ -56,12 +56,12 @@ public class EmvEncryptionAttributesMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(emvEncryptionAttributes.getInitializationVector(), INITIALIZATIONVECTOR_BINDING);
             protocolMarshaller.marshall(emvEncryptionAttributes.getMajorKeyDerivationMode(), MAJORKEYDERIVATIONMODE_BINDING);
-            protocolMarshaller.marshall(emvEncryptionAttributes.getMode(), MODE_BINDING);
-            protocolMarshaller.marshall(emvEncryptionAttributes.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(emvEncryptionAttributes.getPrimaryAccountNumber(), PRIMARYACCOUNTNUMBER_BINDING);
+            protocolMarshaller.marshall(emvEncryptionAttributes.getPanSequenceNumber(), PANSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(emvEncryptionAttributes.getSessionDerivationData(), SESSIONDERIVATIONDATA_BINDING);
+            protocolMarshaller.marshall(emvEncryptionAttributes.getMode(), MODE_BINDING);
+            protocolMarshaller.marshall(emvEncryptionAttributes.getInitializationVector(), INITIALIZATIONVECTOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -29,6 +29,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class EncryptionDecryptionAttributes implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Parameters that are required to perform encryption and decryption using symmetric keys.
+     * </p>
+     */
+    private SymmetricEncryptionAttributes symmetric;
+
     private AsymmetricEncryptionAttributes asymmetric;
 
     private DukptEncryptionAttributes dukpt;
@@ -38,12 +45,46 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
      * </p>
      */
     private EmvEncryptionAttributes emv;
+
     /**
      * <p>
      * Parameters that are required to perform encryption and decryption using symmetric keys.
      * </p>
+     * 
+     * @param symmetric
+     *        Parameters that are required to perform encryption and decryption using symmetric keys.
      */
-    private SymmetricEncryptionAttributes symmetric;
+
+    public void setSymmetric(SymmetricEncryptionAttributes symmetric) {
+        this.symmetric = symmetric;
+    }
+
+    /**
+     * <p>
+     * Parameters that are required to perform encryption and decryption using symmetric keys.
+     * </p>
+     * 
+     * @return Parameters that are required to perform encryption and decryption using symmetric keys.
+     */
+
+    public SymmetricEncryptionAttributes getSymmetric() {
+        return this.symmetric;
+    }
+
+    /**
+     * <p>
+     * Parameters that are required to perform encryption and decryption using symmetric keys.
+     * </p>
+     * 
+     * @param symmetric
+     *        Parameters that are required to perform encryption and decryption using symmetric keys.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EncryptionDecryptionAttributes withSymmetric(SymmetricEncryptionAttributes symmetric) {
+        setSymmetric(symmetric);
+        return this;
+    }
 
     /**
      * @param asymmetric
@@ -138,46 +179,6 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
     }
 
     /**
-     * <p>
-     * Parameters that are required to perform encryption and decryption using symmetric keys.
-     * </p>
-     * 
-     * @param symmetric
-     *        Parameters that are required to perform encryption and decryption using symmetric keys.
-     */
-
-    public void setSymmetric(SymmetricEncryptionAttributes symmetric) {
-        this.symmetric = symmetric;
-    }
-
-    /**
-     * <p>
-     * Parameters that are required to perform encryption and decryption using symmetric keys.
-     * </p>
-     * 
-     * @return Parameters that are required to perform encryption and decryption using symmetric keys.
-     */
-
-    public SymmetricEncryptionAttributes getSymmetric() {
-        return this.symmetric;
-    }
-
-    /**
-     * <p>
-     * Parameters that are required to perform encryption and decryption using symmetric keys.
-     * </p>
-     * 
-     * @param symmetric
-     *        Parameters that are required to perform encryption and decryption using symmetric keys.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EncryptionDecryptionAttributes withSymmetric(SymmetricEncryptionAttributes symmetric) {
-        setSymmetric(symmetric);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -189,14 +190,14 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getSymmetric() != null)
+            sb.append("Symmetric: ").append(getSymmetric()).append(",");
         if (getAsymmetric() != null)
             sb.append("Asymmetric: ").append(getAsymmetric()).append(",");
         if (getDukpt() != null)
             sb.append("Dukpt: ").append(getDukpt()).append(",");
         if (getEmv() != null)
-            sb.append("Emv: ").append(getEmv()).append(",");
-        if (getSymmetric() != null)
-            sb.append("Symmetric: ").append(getSymmetric());
+            sb.append("Emv: ").append(getEmv());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +212,10 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
         if (obj instanceof EncryptionDecryptionAttributes == false)
             return false;
         EncryptionDecryptionAttributes other = (EncryptionDecryptionAttributes) obj;
+        if (other.getSymmetric() == null ^ this.getSymmetric() == null)
+            return false;
+        if (other.getSymmetric() != null && other.getSymmetric().equals(this.getSymmetric()) == false)
+            return false;
         if (other.getAsymmetric() == null ^ this.getAsymmetric() == null)
             return false;
         if (other.getAsymmetric() != null && other.getAsymmetric().equals(this.getAsymmetric()) == false)
@@ -223,10 +228,6 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
             return false;
         if (other.getEmv() != null && other.getEmv().equals(this.getEmv()) == false)
             return false;
-        if (other.getSymmetric() == null ^ this.getSymmetric() == null)
-            return false;
-        if (other.getSymmetric() != null && other.getSymmetric().equals(this.getSymmetric()) == false)
-            return false;
         return true;
     }
 
@@ -235,10 +236,10 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getSymmetric() == null) ? 0 : getSymmetric().hashCode());
         hashCode = prime * hashCode + ((getAsymmetric() == null) ? 0 : getAsymmetric().hashCode());
         hashCode = prime * hashCode + ((getDukpt() == null) ? 0 : getDukpt().hashCode());
         hashCode = prime * hashCode + ((getEmv() == null) ? 0 : getEmv().hashCode());
-        hashCode = prime * hashCode + ((getSymmetric() == null) ? 0 : getSymmetric().hashCode());
         return hashCode;
     }
 

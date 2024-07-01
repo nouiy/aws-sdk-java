@@ -48,9 +48,13 @@ public class GeneratePinDataResultJsonUnmarshaller implements Unmarshaller<Gener
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("EncryptedPinBlock", targetDepth)) {
+                if (context.testExpression("GenerationKeyArn", targetDepth)) {
                     context.nextToken();
-                    generatePinDataResult.setEncryptedPinBlock(context.getUnmarshaller(String.class).unmarshall(context));
+                    generatePinDataResult.setGenerationKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("GenerationKeyCheckValue", targetDepth)) {
+                    context.nextToken();
+                    generatePinDataResult.setGenerationKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("EncryptionKeyArn", targetDepth)) {
                     context.nextToken();
@@ -60,13 +64,9 @@ public class GeneratePinDataResultJsonUnmarshaller implements Unmarshaller<Gener
                     context.nextToken();
                     generatePinDataResult.setEncryptionKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("GenerationKeyArn", targetDepth)) {
+                if (context.testExpression("EncryptedPinBlock", targetDepth)) {
                     context.nextToken();
-                    generatePinDataResult.setGenerationKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("GenerationKeyCheckValue", targetDepth)) {
-                    context.nextToken();
-                    generatePinDataResult.setGenerationKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
+                    generatePinDataResult.setEncryptedPinBlock(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PinData", targetDepth)) {
                     context.nextToken();

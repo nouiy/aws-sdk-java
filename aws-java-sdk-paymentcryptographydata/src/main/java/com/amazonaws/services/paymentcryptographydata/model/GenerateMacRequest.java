@@ -27,68 +27,28 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
-     * </p>
-     */
-    private MacAttributes generationAttributes;
-    /**
-     * <p>
      * The <code>keyARN</code> of the MAC generation encryption key.
      * </p>
      */
     private String keyIdentifier;
     /**
      * <p>
-     * The length of a MAC under generation.
-     * </p>
-     */
-    private Integer macLength;
-    /**
-     * <p>
      * The data for which a MAC is under generation. This value must be hexBinary.
      * </p>
      */
     private String messageData;
-
     /**
      * <p>
      * The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
      * </p>
-     * 
-     * @param generationAttributes
-     *        The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
      */
-
-    public void setGenerationAttributes(MacAttributes generationAttributes) {
-        this.generationAttributes = generationAttributes;
-    }
-
+    private MacAttributes generationAttributes;
     /**
      * <p>
-     * The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
+     * The length of a MAC under generation.
      * </p>
-     * 
-     * @return The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
      */
-
-    public MacAttributes getGenerationAttributes() {
-        return this.generationAttributes;
-    }
-
-    /**
-     * <p>
-     * The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @param generationAttributes
-     *        The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GenerateMacRequest withGenerationAttributes(MacAttributes generationAttributes) {
-        setGenerationAttributes(generationAttributes);
-        return this;
-    }
+    private Integer macLength;
 
     /**
      * <p>
@@ -127,46 +87,6 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     public GenerateMacRequest withKeyIdentifier(String keyIdentifier) {
         setKeyIdentifier(keyIdentifier);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The length of a MAC under generation.
-     * </p>
-     * 
-     * @param macLength
-     *        The length of a MAC under generation.
-     */
-
-    public void setMacLength(Integer macLength) {
-        this.macLength = macLength;
-    }
-
-    /**
-     * <p>
-     * The length of a MAC under generation.
-     * </p>
-     * 
-     * @return The length of a MAC under generation.
-     */
-
-    public Integer getMacLength() {
-        return this.macLength;
-    }
-
-    /**
-     * <p>
-     * The length of a MAC under generation.
-     * </p>
-     * 
-     * @param macLength
-     *        The length of a MAC under generation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GenerateMacRequest withMacLength(Integer macLength) {
-        setMacLength(macLength);
         return this;
     }
 
@@ -211,6 +131,86 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param generationAttributes
+     *        The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
+     */
+
+    public void setGenerationAttributes(MacAttributes generationAttributes) {
+        this.generationAttributes = generationAttributes;
+    }
+
+    /**
+     * <p>
+     * The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @return The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
+     */
+
+    public MacAttributes getGenerationAttributes() {
+        return this.generationAttributes;
+    }
+
+    /**
+     * <p>
+     * The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param generationAttributes
+     *        The attributes and data values to use for MAC generation within Amazon Web Services Payment Cryptography.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GenerateMacRequest withGenerationAttributes(MacAttributes generationAttributes) {
+        setGenerationAttributes(generationAttributes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The length of a MAC under generation.
+     * </p>
+     * 
+     * @param macLength
+     *        The length of a MAC under generation.
+     */
+
+    public void setMacLength(Integer macLength) {
+        this.macLength = macLength;
+    }
+
+    /**
+     * <p>
+     * The length of a MAC under generation.
+     * </p>
+     * 
+     * @return The length of a MAC under generation.
+     */
+
+    public Integer getMacLength() {
+        return this.macLength;
+    }
+
+    /**
+     * <p>
+     * The length of a MAC under generation.
+     * </p>
+     * 
+     * @param macLength
+     *        The length of a MAC under generation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GenerateMacRequest withMacLength(Integer macLength) {
+        setMacLength(macLength);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -222,14 +222,14 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getGenerationAttributes() != null)
-            sb.append("GenerationAttributes: ").append(getGenerationAttributes()).append(",");
         if (getKeyIdentifier() != null)
             sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
-        if (getMacLength() != null)
-            sb.append("MacLength: ").append(getMacLength()).append(",");
         if (getMessageData() != null)
-            sb.append("MessageData: ").append("***Sensitive Data Redacted***");
+            sb.append("MessageData: ").append("***Sensitive Data Redacted***").append(",");
+        if (getGenerationAttributes() != null)
+            sb.append("GenerationAttributes: ").append(getGenerationAttributes()).append(",");
+        if (getMacLength() != null)
+            sb.append("MacLength: ").append(getMacLength());
         sb.append("}");
         return sb.toString();
     }
@@ -244,21 +244,21 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (obj instanceof GenerateMacRequest == false)
             return false;
         GenerateMacRequest other = (GenerateMacRequest) obj;
-        if (other.getGenerationAttributes() == null ^ this.getGenerationAttributes() == null)
-            return false;
-        if (other.getGenerationAttributes() != null && other.getGenerationAttributes().equals(this.getGenerationAttributes()) == false)
-            return false;
         if (other.getKeyIdentifier() == null ^ this.getKeyIdentifier() == null)
             return false;
         if (other.getKeyIdentifier() != null && other.getKeyIdentifier().equals(this.getKeyIdentifier()) == false)
             return false;
-        if (other.getMacLength() == null ^ this.getMacLength() == null)
-            return false;
-        if (other.getMacLength() != null && other.getMacLength().equals(this.getMacLength()) == false)
-            return false;
         if (other.getMessageData() == null ^ this.getMessageData() == null)
             return false;
         if (other.getMessageData() != null && other.getMessageData().equals(this.getMessageData()) == false)
+            return false;
+        if (other.getGenerationAttributes() == null ^ this.getGenerationAttributes() == null)
+            return false;
+        if (other.getGenerationAttributes() != null && other.getGenerationAttributes().equals(this.getGenerationAttributes()) == false)
+            return false;
+        if (other.getMacLength() == null ^ this.getMacLength() == null)
+            return false;
+        if (other.getMacLength() != null && other.getMacLength().equals(this.getMacLength()) == false)
             return false;
         return true;
     }
@@ -268,10 +268,10 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getGenerationAttributes() == null) ? 0 : getGenerationAttributes().hashCode());
         hashCode = prime * hashCode + ((getKeyIdentifier() == null) ? 0 : getKeyIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getMacLength() == null) ? 0 : getMacLength().hashCode());
         hashCode = prime * hashCode + ((getMessageData() == null) ? 0 : getMessageData().hashCode());
+        hashCode = prime * hashCode + ((getGenerationAttributes() == null) ? 0 : getGenerationAttributes().hashCode());
+        hashCode = prime * hashCode + ((getMacLength() == null) ? 0 : getMacLength().hashCode());
         return hashCode;
     }
 

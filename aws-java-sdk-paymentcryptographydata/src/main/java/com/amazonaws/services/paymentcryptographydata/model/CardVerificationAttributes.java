@@ -38,12 +38,6 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
     private AmexCardSecurityCodeVersion2 amexCardSecurityCodeVersion2;
     /**
      * <p>
-     * Card data parameters that are required to verify a cardholder verification value for the payment card.
-     * </p>
-     */
-    private CardHolderVerificationValue cardHolderVerificationValue;
-    /**
-     * <p>
      * Card data parameters that are required to verify Card Verification Value (CVV) for the payment card.
      * </p>
      */
@@ -56,10 +50,10 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
     private CardVerificationValue2 cardVerificationValue2;
     /**
      * <p>
-     * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
+     * Card data parameters that are required to verify a cardholder verification value for the payment card.
      * </p>
      */
-    private DiscoverDynamicCardVerificationCode discoverDynamicCardVerificationCode;
+    private CardHolderVerificationValue cardHolderVerificationValue;
     /**
      * <p>
      * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
@@ -72,6 +66,12 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
      * </p>
      */
     private DynamicCardVerificationValue dynamicCardVerificationValue;
+    /**
+     * <p>
+     * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
+     * </p>
+     */
+    private DiscoverDynamicCardVerificationCode discoverDynamicCardVerificationCode;
 
     /**
      * @param amexCardSecurityCodeVersion1
@@ -136,46 +136,6 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
 
     public CardVerificationAttributes withAmexCardSecurityCodeVersion2(AmexCardSecurityCodeVersion2 amexCardSecurityCodeVersion2) {
         setAmexCardSecurityCodeVersion2(amexCardSecurityCodeVersion2);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Card data parameters that are required to verify a cardholder verification value for the payment card.
-     * </p>
-     * 
-     * @param cardHolderVerificationValue
-     *        Card data parameters that are required to verify a cardholder verification value for the payment card.
-     */
-
-    public void setCardHolderVerificationValue(CardHolderVerificationValue cardHolderVerificationValue) {
-        this.cardHolderVerificationValue = cardHolderVerificationValue;
-    }
-
-    /**
-     * <p>
-     * Card data parameters that are required to verify a cardholder verification value for the payment card.
-     * </p>
-     * 
-     * @return Card data parameters that are required to verify a cardholder verification value for the payment card.
-     */
-
-    public CardHolderVerificationValue getCardHolderVerificationValue() {
-        return this.cardHolderVerificationValue;
-    }
-
-    /**
-     * <p>
-     * Card data parameters that are required to verify a cardholder verification value for the payment card.
-     * </p>
-     * 
-     * @param cardHolderVerificationValue
-     *        Card data parameters that are required to verify a cardholder verification value for the payment card.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CardVerificationAttributes withCardHolderVerificationValue(CardHolderVerificationValue cardHolderVerificationValue) {
-        setCardHolderVerificationValue(cardHolderVerificationValue);
         return this;
     }
 
@@ -261,44 +221,41 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
+     * Card data parameters that are required to verify a cardholder verification value for the payment card.
      * </p>
      * 
-     * @param discoverDynamicCardVerificationCode
-     *        Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment
-     *        card.
+     * @param cardHolderVerificationValue
+     *        Card data parameters that are required to verify a cardholder verification value for the payment card.
      */
 
-    public void setDiscoverDynamicCardVerificationCode(DiscoverDynamicCardVerificationCode discoverDynamicCardVerificationCode) {
-        this.discoverDynamicCardVerificationCode = discoverDynamicCardVerificationCode;
+    public void setCardHolderVerificationValue(CardHolderVerificationValue cardHolderVerificationValue) {
+        this.cardHolderVerificationValue = cardHolderVerificationValue;
     }
 
     /**
      * <p>
-     * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
+     * Card data parameters that are required to verify a cardholder verification value for the payment card.
      * </p>
      * 
-     * @return Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment
-     *         card.
+     * @return Card data parameters that are required to verify a cardholder verification value for the payment card.
      */
 
-    public DiscoverDynamicCardVerificationCode getDiscoverDynamicCardVerificationCode() {
-        return this.discoverDynamicCardVerificationCode;
+    public CardHolderVerificationValue getCardHolderVerificationValue() {
+        return this.cardHolderVerificationValue;
     }
 
     /**
      * <p>
-     * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
+     * Card data parameters that are required to verify a cardholder verification value for the payment card.
      * </p>
      * 
-     * @param discoverDynamicCardVerificationCode
-     *        Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment
-     *        card.
+     * @param cardHolderVerificationValue
+     *        Card data parameters that are required to verify a cardholder verification value for the payment card.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CardVerificationAttributes withDiscoverDynamicCardVerificationCode(DiscoverDynamicCardVerificationCode discoverDynamicCardVerificationCode) {
-        setDiscoverDynamicCardVerificationCode(discoverDynamicCardVerificationCode);
+    public CardVerificationAttributes withCardHolderVerificationValue(CardHolderVerificationValue cardHolderVerificationValue) {
+        setCardHolderVerificationValue(cardHolderVerificationValue);
         return this;
     }
 
@@ -389,6 +346,49 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
+     * </p>
+     * 
+     * @param discoverDynamicCardVerificationCode
+     *        Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment
+     *        card.
+     */
+
+    public void setDiscoverDynamicCardVerificationCode(DiscoverDynamicCardVerificationCode discoverDynamicCardVerificationCode) {
+        this.discoverDynamicCardVerificationCode = discoverDynamicCardVerificationCode;
+    }
+
+    /**
+     * <p>
+     * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
+     * </p>
+     * 
+     * @return Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment
+     *         card.
+     */
+
+    public DiscoverDynamicCardVerificationCode getDiscoverDynamicCardVerificationCode() {
+        return this.discoverDynamicCardVerificationCode;
+    }
+
+    /**
+     * <p>
+     * Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment card.
+     * </p>
+     * 
+     * @param discoverDynamicCardVerificationCode
+     *        Card data parameters that are required to verify CDynamic Card Verification Code (dCVC) for the payment
+     *        card.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CardVerificationAttributes withDiscoverDynamicCardVerificationCode(DiscoverDynamicCardVerificationCode discoverDynamicCardVerificationCode) {
+        setDiscoverDynamicCardVerificationCode(discoverDynamicCardVerificationCode);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -404,18 +404,18 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
             sb.append("AmexCardSecurityCodeVersion1: ").append(getAmexCardSecurityCodeVersion1()).append(",");
         if (getAmexCardSecurityCodeVersion2() != null)
             sb.append("AmexCardSecurityCodeVersion2: ").append(getAmexCardSecurityCodeVersion2()).append(",");
-        if (getCardHolderVerificationValue() != null)
-            sb.append("CardHolderVerificationValue: ").append(getCardHolderVerificationValue()).append(",");
         if (getCardVerificationValue1() != null)
             sb.append("CardVerificationValue1: ").append(getCardVerificationValue1()).append(",");
         if (getCardVerificationValue2() != null)
             sb.append("CardVerificationValue2: ").append(getCardVerificationValue2()).append(",");
-        if (getDiscoverDynamicCardVerificationCode() != null)
-            sb.append("DiscoverDynamicCardVerificationCode: ").append(getDiscoverDynamicCardVerificationCode()).append(",");
+        if (getCardHolderVerificationValue() != null)
+            sb.append("CardHolderVerificationValue: ").append(getCardHolderVerificationValue()).append(",");
         if (getDynamicCardVerificationCode() != null)
             sb.append("DynamicCardVerificationCode: ").append(getDynamicCardVerificationCode()).append(",");
         if (getDynamicCardVerificationValue() != null)
-            sb.append("DynamicCardVerificationValue: ").append(getDynamicCardVerificationValue());
+            sb.append("DynamicCardVerificationValue: ").append(getDynamicCardVerificationValue()).append(",");
+        if (getDiscoverDynamicCardVerificationCode() != null)
+            sb.append("DiscoverDynamicCardVerificationCode: ").append(getDiscoverDynamicCardVerificationCode());
         sb.append("}");
         return sb.toString();
     }
@@ -438,10 +438,6 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
             return false;
         if (other.getAmexCardSecurityCodeVersion2() != null && other.getAmexCardSecurityCodeVersion2().equals(this.getAmexCardSecurityCodeVersion2()) == false)
             return false;
-        if (other.getCardHolderVerificationValue() == null ^ this.getCardHolderVerificationValue() == null)
-            return false;
-        if (other.getCardHolderVerificationValue() != null && other.getCardHolderVerificationValue().equals(this.getCardHolderVerificationValue()) == false)
-            return false;
         if (other.getCardVerificationValue1() == null ^ this.getCardVerificationValue1() == null)
             return false;
         if (other.getCardVerificationValue1() != null && other.getCardVerificationValue1().equals(this.getCardVerificationValue1()) == false)
@@ -450,10 +446,9 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
             return false;
         if (other.getCardVerificationValue2() != null && other.getCardVerificationValue2().equals(this.getCardVerificationValue2()) == false)
             return false;
-        if (other.getDiscoverDynamicCardVerificationCode() == null ^ this.getDiscoverDynamicCardVerificationCode() == null)
+        if (other.getCardHolderVerificationValue() == null ^ this.getCardHolderVerificationValue() == null)
             return false;
-        if (other.getDiscoverDynamicCardVerificationCode() != null
-                && other.getDiscoverDynamicCardVerificationCode().equals(this.getDiscoverDynamicCardVerificationCode()) == false)
+        if (other.getCardHolderVerificationValue() != null && other.getCardHolderVerificationValue().equals(this.getCardHolderVerificationValue()) == false)
             return false;
         if (other.getDynamicCardVerificationCode() == null ^ this.getDynamicCardVerificationCode() == null)
             return false;
@@ -462,6 +457,11 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
         if (other.getDynamicCardVerificationValue() == null ^ this.getDynamicCardVerificationValue() == null)
             return false;
         if (other.getDynamicCardVerificationValue() != null && other.getDynamicCardVerificationValue().equals(this.getDynamicCardVerificationValue()) == false)
+            return false;
+        if (other.getDiscoverDynamicCardVerificationCode() == null ^ this.getDiscoverDynamicCardVerificationCode() == null)
+            return false;
+        if (other.getDiscoverDynamicCardVerificationCode() != null
+                && other.getDiscoverDynamicCardVerificationCode().equals(this.getDiscoverDynamicCardVerificationCode()) == false)
             return false;
         return true;
     }
@@ -473,12 +473,12 @@ public class CardVerificationAttributes implements Serializable, Cloneable, Stru
 
         hashCode = prime * hashCode + ((getAmexCardSecurityCodeVersion1() == null) ? 0 : getAmexCardSecurityCodeVersion1().hashCode());
         hashCode = prime * hashCode + ((getAmexCardSecurityCodeVersion2() == null) ? 0 : getAmexCardSecurityCodeVersion2().hashCode());
-        hashCode = prime * hashCode + ((getCardHolderVerificationValue() == null) ? 0 : getCardHolderVerificationValue().hashCode());
         hashCode = prime * hashCode + ((getCardVerificationValue1() == null) ? 0 : getCardVerificationValue1().hashCode());
         hashCode = prime * hashCode + ((getCardVerificationValue2() == null) ? 0 : getCardVerificationValue2().hashCode());
-        hashCode = prime * hashCode + ((getDiscoverDynamicCardVerificationCode() == null) ? 0 : getDiscoverDynamicCardVerificationCode().hashCode());
+        hashCode = prime * hashCode + ((getCardHolderVerificationValue() == null) ? 0 : getCardHolderVerificationValue().hashCode());
         hashCode = prime * hashCode + ((getDynamicCardVerificationCode() == null) ? 0 : getDynamicCardVerificationCode().hashCode());
         hashCode = prime * hashCode + ((getDynamicCardVerificationValue() == null) ? 0 : getDynamicCardVerificationValue().hashCode());
+        hashCode = prime * hashCode + ((getDiscoverDynamicCardVerificationCode() == null) ? 0 : getDiscoverDynamicCardVerificationCode().hashCode());
         return hashCode;
     }
 

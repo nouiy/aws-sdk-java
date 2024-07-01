@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PinVerificationAttributesMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> IBM3624PIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624Pin").build();
     private static final MarshallingInfo<StructuredPojo> VISAPIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisaPin").build();
+    private static final MarshallingInfo<StructuredPojo> IBM3624PIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ibm3624Pin").build();
 
     private static final PinVerificationAttributesMarshaller instance = new PinVerificationAttributesMarshaller();
 
@@ -48,8 +48,8 @@ public class PinVerificationAttributesMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pinVerificationAttributes.getIbm3624Pin(), IBM3624PIN_BINDING);
             protocolMarshaller.marshall(pinVerificationAttributes.getVisaPin(), VISAPIN_BINDING);
+            protocolMarshaller.marshall(pinVerificationAttributes.getIbm3624Pin(), IBM3624PIN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

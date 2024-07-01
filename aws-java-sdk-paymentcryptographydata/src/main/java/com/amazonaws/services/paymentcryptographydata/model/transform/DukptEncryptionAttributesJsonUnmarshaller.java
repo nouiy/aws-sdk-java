@@ -48,6 +48,14 @@ public class DukptEncryptionAttributesJsonUnmarshaller implements Unmarshaller<D
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("KeySerialNumber", targetDepth)) {
+                    context.nextToken();
+                    dukptEncryptionAttributes.setKeySerialNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Mode", targetDepth)) {
+                    context.nextToken();
+                    dukptEncryptionAttributes.setMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("DukptKeyDerivationType", targetDepth)) {
                     context.nextToken();
                     dukptEncryptionAttributes.setDukptKeyDerivationType(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,14 +67,6 @@ public class DukptEncryptionAttributesJsonUnmarshaller implements Unmarshaller<D
                 if (context.testExpression("InitializationVector", targetDepth)) {
                     context.nextToken();
                     dukptEncryptionAttributes.setInitializationVector(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("KeySerialNumber", targetDepth)) {
-                    context.nextToken();
-                    dukptEncryptionAttributes.setKeySerialNumber(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Mode", targetDepth)) {
-                    context.nextToken();
-                    dukptEncryptionAttributes.setMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -27,6 +27,12 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data generation.
+     * </p>
+     */
+    private String generationKeyIdentifier;
+    /**
+     * <p>
      * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses to encrypt the PIN Block.
      * </p>
      */
@@ -39,10 +45,17 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
     private PinGenerationAttributes generationAttributes;
     /**
      * <p>
-     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data generation.
+     * The length of PIN under generation.
      * </p>
      */
-    private String generationKeyIdentifier;
+    private Integer pinDataLength;
+    /**
+     * <p>
+     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card
+     * with a specific account holder.
+     * </p>
+     */
+    private String primaryAccountNumber;
     /**
      * <p>
      * The PIN encoding format for pin data generation as specified in ISO 9564. Amazon Web Services Payment
@@ -58,19 +71,49 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String pinBlockFormat;
+
     /**
      * <p>
-     * The length of PIN under generation.
+     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data generation.
      * </p>
+     * 
+     * @param generationKeyIdentifier
+     *        The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data
+     *        generation.
      */
-    private Integer pinDataLength;
+
+    public void setGenerationKeyIdentifier(String generationKeyIdentifier) {
+        this.generationKeyIdentifier = generationKeyIdentifier;
+    }
+
     /**
      * <p>
-     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card
-     * with a specific account holder.
+     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data generation.
      * </p>
+     * 
+     * @return The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data
+     *         generation.
      */
-    private String primaryAccountNumber;
+
+    public String getGenerationKeyIdentifier() {
+        return this.generationKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data generation.
+     * </p>
+     * 
+     * @param generationKeyIdentifier
+     *        The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data
+     *        generation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GeneratePinDataRequest withGenerationKeyIdentifier(String generationKeyIdentifier) {
+        setGenerationKeyIdentifier(generationKeyIdentifier);
+        return this;
+    }
 
     /**
      * <p>
@@ -157,44 +200,87 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data generation.
+     * The length of PIN under generation.
      * </p>
      * 
-     * @param generationKeyIdentifier
-     *        The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data
-     *        generation.
+     * @param pinDataLength
+     *        The length of PIN under generation.
      */
 
-    public void setGenerationKeyIdentifier(String generationKeyIdentifier) {
-        this.generationKeyIdentifier = generationKeyIdentifier;
+    public void setPinDataLength(Integer pinDataLength) {
+        this.pinDataLength = pinDataLength;
     }
 
     /**
      * <p>
-     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data generation.
+     * The length of PIN under generation.
      * </p>
      * 
-     * @return The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data
-     *         generation.
+     * @return The length of PIN under generation.
      */
 
-    public String getGenerationKeyIdentifier() {
-        return this.generationKeyIdentifier;
+    public Integer getPinDataLength() {
+        return this.pinDataLength;
     }
 
     /**
      * <p>
-     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data generation.
+     * The length of PIN under generation.
      * </p>
      * 
-     * @param generationKeyIdentifier
-     *        The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for pin data
-     *        generation.
+     * @param pinDataLength
+     *        The length of PIN under generation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GeneratePinDataRequest withGenerationKeyIdentifier(String generationKeyIdentifier) {
-        setGenerationKeyIdentifier(generationKeyIdentifier);
+    public GeneratePinDataRequest withPinDataLength(Integer pinDataLength) {
+        setPinDataLength(pinDataLength);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card
+     * with a specific account holder.
+     * </p>
+     * 
+     * @param primaryAccountNumber
+     *        The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates
+     *        the card with a specific account holder.
+     */
+
+    public void setPrimaryAccountNumber(String primaryAccountNumber) {
+        this.primaryAccountNumber = primaryAccountNumber;
+    }
+
+    /**
+     * <p>
+     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card
+     * with a specific account holder.
+     * </p>
+     * 
+     * @return The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates
+     *         the card with a specific account holder.
+     */
+
+    public String getPrimaryAccountNumber() {
+        return this.primaryAccountNumber;
+    }
+
+    /**
+     * <p>
+     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card
+     * with a specific account holder.
+     * </p>
+     * 
+     * @param primaryAccountNumber
+     *        The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates
+     *        the card with a specific account holder.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GeneratePinDataRequest withPrimaryAccountNumber(String primaryAccountNumber) {
+        setPrimaryAccountNumber(primaryAccountNumber);
         return this;
     }
 
@@ -327,92 +413,6 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
-     * <p>
-     * The length of PIN under generation.
-     * </p>
-     * 
-     * @param pinDataLength
-     *        The length of PIN under generation.
-     */
-
-    public void setPinDataLength(Integer pinDataLength) {
-        this.pinDataLength = pinDataLength;
-    }
-
-    /**
-     * <p>
-     * The length of PIN under generation.
-     * </p>
-     * 
-     * @return The length of PIN under generation.
-     */
-
-    public Integer getPinDataLength() {
-        return this.pinDataLength;
-    }
-
-    /**
-     * <p>
-     * The length of PIN under generation.
-     * </p>
-     * 
-     * @param pinDataLength
-     *        The length of PIN under generation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GeneratePinDataRequest withPinDataLength(Integer pinDataLength) {
-        setPinDataLength(pinDataLength);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card
-     * with a specific account holder.
-     * </p>
-     * 
-     * @param primaryAccountNumber
-     *        The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates
-     *        the card with a specific account holder.
-     */
-
-    public void setPrimaryAccountNumber(String primaryAccountNumber) {
-        this.primaryAccountNumber = primaryAccountNumber;
-    }
-
-    /**
-     * <p>
-     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card
-     * with a specific account holder.
-     * </p>
-     * 
-     * @return The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates
-     *         the card with a specific account holder.
-     */
-
-    public String getPrimaryAccountNumber() {
-        return this.primaryAccountNumber;
-    }
-
-    /**
-     * <p>
-     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card
-     * with a specific account holder.
-     * </p>
-     * 
-     * @param primaryAccountNumber
-     *        The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates
-     *        the card with a specific account holder.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GeneratePinDataRequest withPrimaryAccountNumber(String primaryAccountNumber) {
-        setPrimaryAccountNumber(primaryAccountNumber);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -424,18 +424,18 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getGenerationKeyIdentifier() != null)
+            sb.append("GenerationKeyIdentifier: ").append(getGenerationKeyIdentifier()).append(",");
         if (getEncryptionKeyIdentifier() != null)
             sb.append("EncryptionKeyIdentifier: ").append(getEncryptionKeyIdentifier()).append(",");
         if (getGenerationAttributes() != null)
             sb.append("GenerationAttributes: ").append(getGenerationAttributes()).append(",");
-        if (getGenerationKeyIdentifier() != null)
-            sb.append("GenerationKeyIdentifier: ").append(getGenerationKeyIdentifier()).append(",");
-        if (getPinBlockFormat() != null)
-            sb.append("PinBlockFormat: ").append(getPinBlockFormat()).append(",");
         if (getPinDataLength() != null)
             sb.append("PinDataLength: ").append(getPinDataLength()).append(",");
         if (getPrimaryAccountNumber() != null)
-            sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***");
+            sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPinBlockFormat() != null)
+            sb.append("PinBlockFormat: ").append(getPinBlockFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -450,6 +450,10 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
         if (obj instanceof GeneratePinDataRequest == false)
             return false;
         GeneratePinDataRequest other = (GeneratePinDataRequest) obj;
+        if (other.getGenerationKeyIdentifier() == null ^ this.getGenerationKeyIdentifier() == null)
+            return false;
+        if (other.getGenerationKeyIdentifier() != null && other.getGenerationKeyIdentifier().equals(this.getGenerationKeyIdentifier()) == false)
+            return false;
         if (other.getEncryptionKeyIdentifier() == null ^ this.getEncryptionKeyIdentifier() == null)
             return false;
         if (other.getEncryptionKeyIdentifier() != null && other.getEncryptionKeyIdentifier().equals(this.getEncryptionKeyIdentifier()) == false)
@@ -457,14 +461,6 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
         if (other.getGenerationAttributes() == null ^ this.getGenerationAttributes() == null)
             return false;
         if (other.getGenerationAttributes() != null && other.getGenerationAttributes().equals(this.getGenerationAttributes()) == false)
-            return false;
-        if (other.getGenerationKeyIdentifier() == null ^ this.getGenerationKeyIdentifier() == null)
-            return false;
-        if (other.getGenerationKeyIdentifier() != null && other.getGenerationKeyIdentifier().equals(this.getGenerationKeyIdentifier()) == false)
-            return false;
-        if (other.getPinBlockFormat() == null ^ this.getPinBlockFormat() == null)
-            return false;
-        if (other.getPinBlockFormat() != null && other.getPinBlockFormat().equals(this.getPinBlockFormat()) == false)
             return false;
         if (other.getPinDataLength() == null ^ this.getPinDataLength() == null)
             return false;
@@ -474,6 +470,10 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getPrimaryAccountNumber() != null && other.getPrimaryAccountNumber().equals(this.getPrimaryAccountNumber()) == false)
             return false;
+        if (other.getPinBlockFormat() == null ^ this.getPinBlockFormat() == null)
+            return false;
+        if (other.getPinBlockFormat() != null && other.getPinBlockFormat().equals(this.getPinBlockFormat()) == false)
+            return false;
         return true;
     }
 
@@ -482,12 +482,12 @@ public class GeneratePinDataRequest extends com.amazonaws.AmazonWebServiceReques
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getGenerationKeyIdentifier() == null) ? 0 : getGenerationKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getEncryptionKeyIdentifier() == null) ? 0 : getEncryptionKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getGenerationAttributes() == null) ? 0 : getGenerationAttributes().hashCode());
-        hashCode = prime * hashCode + ((getGenerationKeyIdentifier() == null) ? 0 : getGenerationKeyIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getPinBlockFormat() == null) ? 0 : getPinBlockFormat().hashCode());
         hashCode = prime * hashCode + ((getPinDataLength() == null) ? 0 : getPinDataLength().hashCode());
         hashCode = prime * hashCode + ((getPrimaryAccountNumber() == null) ? 0 : getPrimaryAccountNumber().hashCode());
+        hashCode = prime * hashCode + ((getPinBlockFormat() == null) ? 0 : getPinBlockFormat().hashCode());
         return hashCode;
     }
 

@@ -27,16 +27,20 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ReEncryptDataRequestMarshaller {
 
+    private static final MarshallingInfo<String> INCOMINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("IncomingKeyIdentifier").build();
+    private static final MarshallingInfo<String> OUTGOINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingKeyIdentifier").build();
     private static final MarshallingInfo<String> CIPHERTEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CipherText").build();
     private static final MarshallingInfo<StructuredPojo> INCOMINGENCRYPTIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncomingEncryptionAttributes").build();
-    private static final MarshallingInfo<String> INCOMINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("IncomingKeyIdentifier").build();
     private static final MarshallingInfo<StructuredPojo> OUTGOINGENCRYPTIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingEncryptionAttributes").build();
-    private static final MarshallingInfo<String> OUTGOINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingKeyIdentifier").build();
+    private static final MarshallingInfo<StructuredPojo> INCOMINGWRAPPEDKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncomingWrappedKey").build();
+    private static final MarshallingInfo<StructuredPojo> OUTGOINGWRAPPEDKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutgoingWrappedKey").build();
 
     private static final ReEncryptDataRequestMarshaller instance = new ReEncryptDataRequestMarshaller();
 
@@ -54,11 +58,13 @@ public class ReEncryptDataRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(reEncryptDataRequest.getIncomingKeyIdentifier(), INCOMINGKEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(reEncryptDataRequest.getOutgoingKeyIdentifier(), OUTGOINGKEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(reEncryptDataRequest.getCipherText(), CIPHERTEXT_BINDING);
             protocolMarshaller.marshall(reEncryptDataRequest.getIncomingEncryptionAttributes(), INCOMINGENCRYPTIONATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(reEncryptDataRequest.getIncomingKeyIdentifier(), INCOMINGKEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(reEncryptDataRequest.getOutgoingEncryptionAttributes(), OUTGOINGENCRYPTIONATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(reEncryptDataRequest.getOutgoingKeyIdentifier(), OUTGOINGKEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(reEncryptDataRequest.getIncomingWrappedKey(), INCOMINGWRAPPEDKEY_BINDING);
+            protocolMarshaller.marshall(reEncryptDataRequest.getOutgoingWrappedKey(), OUTGOINGWRAPPEDKEY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

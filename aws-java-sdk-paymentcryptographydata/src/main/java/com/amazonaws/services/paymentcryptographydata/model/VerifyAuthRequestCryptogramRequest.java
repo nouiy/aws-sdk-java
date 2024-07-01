@@ -28,25 +28,25 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a
-     * major encryption key and transaction data.
-     * </p>
-     */
-    private String authRequestCryptogram;
-    /**
-     * <p>
-     * The attributes and values for auth request cryptogram verification. These parameters are required in case using
-     * ARPC Method 1 or Method 2 for ARQC verification.
-     * </p>
-     */
-    private CryptogramAuthResponse authResponseAttributes;
-    /**
-     * <p>
      * The <code>keyARN</code> of the major encryption key that Amazon Web Services Payment Cryptography uses for ARQC
      * verification.
      * </p>
      */
     private String keyIdentifier;
+    /**
+     * <p>
+     * The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
+     * transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * </p>
+     */
+    private String transactionData;
+    /**
+     * <p>
+     * The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a
+     * major encryption key and transaction data.
+     * </p>
+     */
+    private String authRequestCryptogram;
     /**
      * <p>
      * The method to use when deriving the major encryption key for ARQC verification within Amazon Web Services Payment
@@ -65,103 +65,11 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
     private SessionKeyDerivation sessionKeyDerivationAttributes;
     /**
      * <p>
-     * The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
-     * transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
-     * </p>
-     */
-    private String transactionData;
-
-    /**
-     * <p>
-     * The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a
-     * major encryption key and transaction data.
-     * </p>
-     * 
-     * @param authRequestCryptogram
-     *        The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification
-     *        using a major encryption key and transaction data.
-     */
-
-    public void setAuthRequestCryptogram(String authRequestCryptogram) {
-        this.authRequestCryptogram = authRequestCryptogram;
-    }
-
-    /**
-     * <p>
-     * The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a
-     * major encryption key and transaction data.
-     * </p>
-     * 
-     * @return The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification
-     *         using a major encryption key and transaction data.
-     */
-
-    public String getAuthRequestCryptogram() {
-        return this.authRequestCryptogram;
-    }
-
-    /**
-     * <p>
-     * The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a
-     * major encryption key and transaction data.
-     * </p>
-     * 
-     * @param authRequestCryptogram
-     *        The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification
-     *        using a major encryption key and transaction data.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VerifyAuthRequestCryptogramRequest withAuthRequestCryptogram(String authRequestCryptogram) {
-        setAuthRequestCryptogram(authRequestCryptogram);
-        return this;
-    }
-
-    /**
-     * <p>
      * The attributes and values for auth request cryptogram verification. These parameters are required in case using
      * ARPC Method 1 or Method 2 for ARQC verification.
      * </p>
-     * 
-     * @param authResponseAttributes
-     *        The attributes and values for auth request cryptogram verification. These parameters are required in case
-     *        using ARPC Method 1 or Method 2 for ARQC verification.
      */
-
-    public void setAuthResponseAttributes(CryptogramAuthResponse authResponseAttributes) {
-        this.authResponseAttributes = authResponseAttributes;
-    }
-
-    /**
-     * <p>
-     * The attributes and values for auth request cryptogram verification. These parameters are required in case using
-     * ARPC Method 1 or Method 2 for ARQC verification.
-     * </p>
-     * 
-     * @return The attributes and values for auth request cryptogram verification. These parameters are required in case
-     *         using ARPC Method 1 or Method 2 for ARQC verification.
-     */
-
-    public CryptogramAuthResponse getAuthResponseAttributes() {
-        return this.authResponseAttributes;
-    }
-
-    /**
-     * <p>
-     * The attributes and values for auth request cryptogram verification. These parameters are required in case using
-     * ARPC Method 1 or Method 2 for ARQC verification.
-     * </p>
-     * 
-     * @param authResponseAttributes
-     *        The attributes and values for auth request cryptogram verification. These parameters are required in case
-     *        using ARPC Method 1 or Method 2 for ARQC verification.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VerifyAuthRequestCryptogramRequest withAuthResponseAttributes(CryptogramAuthResponse authResponseAttributes) {
-        setAuthResponseAttributes(authResponseAttributes);
-        return this;
-    }
+    private CryptogramAuthResponse authResponseAttributes;
 
     /**
      * <p>
@@ -206,6 +114,98 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
 
     public VerifyAuthRequestCryptogramRequest withKeyIdentifier(String keyIdentifier) {
         setKeyIdentifier(keyIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
+     * transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param transactionData
+     *        The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
+     *        transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     */
+
+    public void setTransactionData(String transactionData) {
+        this.transactionData = transactionData;
+    }
+
+    /**
+     * <p>
+     * The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
+     * transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @return The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
+     *         transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     */
+
+    public String getTransactionData() {
+        return this.transactionData;
+    }
+
+    /**
+     * <p>
+     * The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
+     * transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param transactionData
+     *        The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
+     *        transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VerifyAuthRequestCryptogramRequest withTransactionData(String transactionData) {
+        setTransactionData(transactionData);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a
+     * major encryption key and transaction data.
+     * </p>
+     * 
+     * @param authRequestCryptogram
+     *        The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification
+     *        using a major encryption key and transaction data.
+     */
+
+    public void setAuthRequestCryptogram(String authRequestCryptogram) {
+        this.authRequestCryptogram = authRequestCryptogram;
+    }
+
+    /**
+     * <p>
+     * The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a
+     * major encryption key and transaction data.
+     * </p>
+     * 
+     * @return The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification
+     *         using a major encryption key and transaction data.
+     */
+
+    public String getAuthRequestCryptogram() {
+        return this.authRequestCryptogram;
+    }
+
+    /**
+     * <p>
+     * The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a
+     * major encryption key and transaction data.
+     * </p>
+     * 
+     * @param authRequestCryptogram
+     *        The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification
+     *        using a major encryption key and transaction data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VerifyAuthRequestCryptogramRequest withAuthRequestCryptogram(String authRequestCryptogram) {
+        setAuthRequestCryptogram(authRequestCryptogram);
         return this;
     }
 
@@ -338,47 +338,47 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
-     * transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * The attributes and values for auth request cryptogram verification. These parameters are required in case using
+     * ARPC Method 1 or Method 2 for ARQC verification.
      * </p>
      * 
-     * @param transactionData
-     *        The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
-     *        transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * @param authResponseAttributes
+     *        The attributes and values for auth request cryptogram verification. These parameters are required in case
+     *        using ARPC Method 1 or Method 2 for ARQC verification.
      */
 
-    public void setTransactionData(String transactionData) {
-        this.transactionData = transactionData;
+    public void setAuthResponseAttributes(CryptogramAuthResponse authResponseAttributes) {
+        this.authResponseAttributes = authResponseAttributes;
     }
 
     /**
      * <p>
-     * The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
-     * transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * The attributes and values for auth request cryptogram verification. These parameters are required in case using
+     * ARPC Method 1 or Method 2 for ARQC verification.
      * </p>
      * 
-     * @return The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
-     *         transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * @return The attributes and values for auth request cryptogram verification. These parameters are required in case
+     *         using ARPC Method 1 or Method 2 for ARQC verification.
      */
 
-    public String getTransactionData() {
-        return this.transactionData;
+    public CryptogramAuthResponse getAuthResponseAttributes() {
+        return this.authResponseAttributes;
     }
 
     /**
      * <p>
-     * The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
-     * transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * The attributes and values for auth request cryptogram verification. These parameters are required in case using
+     * ARPC Method 1 or Method 2 for ARQC verification.
      * </p>
      * 
-     * @param transactionData
-     *        The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same
-     *        transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.
+     * @param authResponseAttributes
+     *        The attributes and values for auth request cryptogram verification. These parameters are required in case
+     *        using ARPC Method 1 or Method 2 for ARQC verification.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public VerifyAuthRequestCryptogramRequest withTransactionData(String transactionData) {
-        setTransactionData(transactionData);
+    public VerifyAuthRequestCryptogramRequest withAuthResponseAttributes(CryptogramAuthResponse authResponseAttributes) {
+        setAuthResponseAttributes(authResponseAttributes);
         return this;
     }
 
@@ -394,18 +394,18 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAuthRequestCryptogram() != null)
-            sb.append("AuthRequestCryptogram: ").append(getAuthRequestCryptogram()).append(",");
-        if (getAuthResponseAttributes() != null)
-            sb.append("AuthResponseAttributes: ").append(getAuthResponseAttributes()).append(",");
         if (getKeyIdentifier() != null)
             sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
+        if (getTransactionData() != null)
+            sb.append("TransactionData: ").append(getTransactionData()).append(",");
+        if (getAuthRequestCryptogram() != null)
+            sb.append("AuthRequestCryptogram: ").append(getAuthRequestCryptogram()).append(",");
         if (getMajorKeyDerivationMode() != null)
             sb.append("MajorKeyDerivationMode: ").append(getMajorKeyDerivationMode()).append(",");
         if (getSessionKeyDerivationAttributes() != null)
             sb.append("SessionKeyDerivationAttributes: ").append(getSessionKeyDerivationAttributes()).append(",");
-        if (getTransactionData() != null)
-            sb.append("TransactionData: ").append(getTransactionData());
+        if (getAuthResponseAttributes() != null)
+            sb.append("AuthResponseAttributes: ").append(getAuthResponseAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -420,17 +420,17 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
         if (obj instanceof VerifyAuthRequestCryptogramRequest == false)
             return false;
         VerifyAuthRequestCryptogramRequest other = (VerifyAuthRequestCryptogramRequest) obj;
-        if (other.getAuthRequestCryptogram() == null ^ this.getAuthRequestCryptogram() == null)
-            return false;
-        if (other.getAuthRequestCryptogram() != null && other.getAuthRequestCryptogram().equals(this.getAuthRequestCryptogram()) == false)
-            return false;
-        if (other.getAuthResponseAttributes() == null ^ this.getAuthResponseAttributes() == null)
-            return false;
-        if (other.getAuthResponseAttributes() != null && other.getAuthResponseAttributes().equals(this.getAuthResponseAttributes()) == false)
-            return false;
         if (other.getKeyIdentifier() == null ^ this.getKeyIdentifier() == null)
             return false;
         if (other.getKeyIdentifier() != null && other.getKeyIdentifier().equals(this.getKeyIdentifier()) == false)
+            return false;
+        if (other.getTransactionData() == null ^ this.getTransactionData() == null)
+            return false;
+        if (other.getTransactionData() != null && other.getTransactionData().equals(this.getTransactionData()) == false)
+            return false;
+        if (other.getAuthRequestCryptogram() == null ^ this.getAuthRequestCryptogram() == null)
+            return false;
+        if (other.getAuthRequestCryptogram() != null && other.getAuthRequestCryptogram().equals(this.getAuthRequestCryptogram()) == false)
             return false;
         if (other.getMajorKeyDerivationMode() == null ^ this.getMajorKeyDerivationMode() == null)
             return false;
@@ -441,9 +441,9 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
         if (other.getSessionKeyDerivationAttributes() != null
                 && other.getSessionKeyDerivationAttributes().equals(this.getSessionKeyDerivationAttributes()) == false)
             return false;
-        if (other.getTransactionData() == null ^ this.getTransactionData() == null)
+        if (other.getAuthResponseAttributes() == null ^ this.getAuthResponseAttributes() == null)
             return false;
-        if (other.getTransactionData() != null && other.getTransactionData().equals(this.getTransactionData()) == false)
+        if (other.getAuthResponseAttributes() != null && other.getAuthResponseAttributes().equals(this.getAuthResponseAttributes()) == false)
             return false;
         return true;
     }
@@ -453,12 +453,12 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAuthRequestCryptogram() == null) ? 0 : getAuthRequestCryptogram().hashCode());
-        hashCode = prime * hashCode + ((getAuthResponseAttributes() == null) ? 0 : getAuthResponseAttributes().hashCode());
         hashCode = prime * hashCode + ((getKeyIdentifier() == null) ? 0 : getKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getTransactionData() == null) ? 0 : getTransactionData().hashCode());
+        hashCode = prime * hashCode + ((getAuthRequestCryptogram() == null) ? 0 : getAuthRequestCryptogram().hashCode());
         hashCode = prime * hashCode + ((getMajorKeyDerivationMode() == null) ? 0 : getMajorKeyDerivationMode().hashCode());
         hashCode = prime * hashCode + ((getSessionKeyDerivationAttributes() == null) ? 0 : getSessionKeyDerivationAttributes().hashCode());
-        hashCode = prime * hashCode + ((getTransactionData() == null) ? 0 : getTransactionData().hashCode());
+        hashCode = prime * hashCode + ((getAuthResponseAttributes() == null) ? 0 : getAuthResponseAttributes().hashCode());
         return hashCode;
     }
 

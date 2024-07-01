@@ -136,7 +136,7 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
         if (getWrappingKeyIdentifier() != null)
             sb.append("WrappingKeyIdentifier: ").append(getWrappingKeyIdentifier()).append(",");
         if (getWrappedKeyBlock() != null)
-            sb.append("WrappedKeyBlock: ").append(getWrappedKeyBlock());
+            sb.append("WrappedKeyBlock: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

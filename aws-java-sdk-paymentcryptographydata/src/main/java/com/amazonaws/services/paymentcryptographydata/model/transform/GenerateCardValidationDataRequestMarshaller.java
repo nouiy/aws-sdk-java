@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GenerateCardValidationDataRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> GENERATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GenerationAttributes").build();
     private static final MarshallingInfo<String> KEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyIdentifier").build();
     private static final MarshallingInfo<String> PRIMARYACCOUNTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryAccountNumber").build();
+    private static final MarshallingInfo<StructuredPojo> GENERATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GenerationAttributes").build();
     private static final MarshallingInfo<Integer> VALIDATIONDATALENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ValidationDataLength").build();
 
@@ -52,9 +52,9 @@ public class GenerateCardValidationDataRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(generateCardValidationDataRequest.getGenerationAttributes(), GENERATIONATTRIBUTES_BINDING);
             protocolMarshaller.marshall(generateCardValidationDataRequest.getKeyIdentifier(), KEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(generateCardValidationDataRequest.getPrimaryAccountNumber(), PRIMARYACCOUNTNUMBER_BINDING);
+            protocolMarshaller.marshall(generateCardValidationDataRequest.getGenerationAttributes(), GENERATIONATTRIBUTES_BINDING);
             protocolMarshaller.marshall(generateCardValidationDataRequest.getValidationDataLength(), VALIDATIONDATALENGTH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

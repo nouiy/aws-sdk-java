@@ -48,6 +48,10 @@ public class TranslatePinDataResultJsonUnmarshaller implements Unmarshaller<Tran
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("PinBlock", targetDepth)) {
+                    context.nextToken();
+                    translatePinDataResult.setPinBlock(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("KeyArn", targetDepth)) {
                     context.nextToken();
                     translatePinDataResult.setKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -55,10 +59,6 @@ public class TranslatePinDataResultJsonUnmarshaller implements Unmarshaller<Tran
                 if (context.testExpression("KeyCheckValue", targetDepth)) {
                     context.nextToken();
                     translatePinDataResult.setKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("PinBlock", targetDepth)) {
-                    context.nextToken();
-                    translatePinDataResult.setPinBlock(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

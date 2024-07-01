@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class Ibm3624PinOffsetMarshaller {
 
-    private static final MarshallingInfo<String> DECIMALIZATIONTABLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DecimalizationTable").build();
     private static final MarshallingInfo<String> ENCRYPTEDPINBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptedPinBlock").build();
-    private static final MarshallingInfo<String> PINVALIDATIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinValidationData").build();
+    private static final MarshallingInfo<String> DECIMALIZATIONTABLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DecimalizationTable").build();
     private static final MarshallingInfo<String> PINVALIDATIONDATAPADCHARACTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinValidationDataPadCharacter").build();
+    private static final MarshallingInfo<String> PINVALIDATIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PinValidationData").build();
 
     private static final Ibm3624PinOffsetMarshaller instance = new Ibm3624PinOffsetMarshaller();
 
@@ -52,10 +52,10 @@ public class Ibm3624PinOffsetMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(ibm3624PinOffset.getDecimalizationTable(), DECIMALIZATIONTABLE_BINDING);
             protocolMarshaller.marshall(ibm3624PinOffset.getEncryptedPinBlock(), ENCRYPTEDPINBLOCK_BINDING);
-            protocolMarshaller.marshall(ibm3624PinOffset.getPinValidationData(), PINVALIDATIONDATA_BINDING);
+            protocolMarshaller.marshall(ibm3624PinOffset.getDecimalizationTable(), DECIMALIZATIONTABLE_BINDING);
             protocolMarshaller.marshall(ibm3624PinOffset.getPinValidationDataPadCharacter(), PINVALIDATIONDATAPADCHARACTER_BINDING);
+            protocolMarshaller.marshall(ibm3624PinOffset.getPinValidationData(), PINVALIDATIONDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

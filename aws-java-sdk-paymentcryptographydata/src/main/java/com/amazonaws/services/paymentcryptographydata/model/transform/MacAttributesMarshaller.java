@@ -29,14 +29,14 @@ public class MacAttributesMarshaller {
 
     private static final MarshallingInfo<String> ALGORITHM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Algorithm").build();
-    private static final MarshallingInfo<StructuredPojo> DUKPTCMAC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptCmac").build();
+    private static final MarshallingInfo<StructuredPojo> EMVMAC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EmvMac").build();
     private static final MarshallingInfo<StructuredPojo> DUKPTISO9797ALGORITHM1_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptIso9797Algorithm1").build();
     private static final MarshallingInfo<StructuredPojo> DUKPTISO9797ALGORITHM3_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptIso9797Algorithm3").build();
-    private static final MarshallingInfo<StructuredPojo> EMVMAC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EmvMac").build();
+    private static final MarshallingInfo<StructuredPojo> DUKPTCMAC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptCmac").build();
 
     private static final MacAttributesMarshaller instance = new MacAttributesMarshaller();
 
@@ -55,10 +55,10 @@ public class MacAttributesMarshaller {
 
         try {
             protocolMarshaller.marshall(macAttributes.getAlgorithm(), ALGORITHM_BINDING);
-            protocolMarshaller.marshall(macAttributes.getDukptCmac(), DUKPTCMAC_BINDING);
+            protocolMarshaller.marshall(macAttributes.getEmvMac(), EMVMAC_BINDING);
             protocolMarshaller.marshall(macAttributes.getDukptIso9797Algorithm1(), DUKPTISO9797ALGORITHM1_BINDING);
             protocolMarshaller.marshall(macAttributes.getDukptIso9797Algorithm3(), DUKPTISO9797ALGORITHM3_BINDING);
-            protocolMarshaller.marshall(macAttributes.getEmvMac(), EMVMAC_BINDING);
+            protocolMarshaller.marshall(macAttributes.getDukptCmac(), DUKPTCMAC_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

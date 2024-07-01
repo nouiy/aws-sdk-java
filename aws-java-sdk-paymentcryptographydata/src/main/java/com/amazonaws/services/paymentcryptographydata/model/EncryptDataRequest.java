@@ -27,14 +27,12 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The encryption key type and attributes for plaintext encryption.
-     * </p>
-     */
-    private EncryptionDecryptionAttributes encryptionAttributes;
-    /**
-     * <p>
      * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for plaintext
      * encryption.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
      * </p>
      */
     private String keyIdentifier;
@@ -53,56 +51,35 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </note>
      */
     private String plainText;
-
     /**
      * <p>
      * The encryption key type and attributes for plaintext encryption.
      * </p>
-     * 
-     * @param encryptionAttributes
-     *        The encryption key type and attributes for plaintext encryption.
      */
-
-    public void setEncryptionAttributes(EncryptionDecryptionAttributes encryptionAttributes) {
-        this.encryptionAttributes = encryptionAttributes;
-    }
-
+    private EncryptionDecryptionAttributes encryptionAttributes;
     /**
      * <p>
-     * The encryption key type and attributes for plaintext encryption.
+     * The WrappedKeyBlock containing the encryption key for plaintext encryption.
      * </p>
-     * 
-     * @return The encryption key type and attributes for plaintext encryption.
      */
-
-    public EncryptionDecryptionAttributes getEncryptionAttributes() {
-        return this.encryptionAttributes;
-    }
-
-    /**
-     * <p>
-     * The encryption key type and attributes for plaintext encryption.
-     * </p>
-     * 
-     * @param encryptionAttributes
-     *        The encryption key type and attributes for plaintext encryption.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EncryptDataRequest withEncryptionAttributes(EncryptionDecryptionAttributes encryptionAttributes) {
-        setEncryptionAttributes(encryptionAttributes);
-        return this;
-    }
+    private WrappedKey wrappedKey;
 
     /**
      * <p>
      * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for plaintext
      * encryption.
      * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
      * 
      * @param keyIdentifier
      *        The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
-     *        plaintext encryption.
+     *        plaintext encryption.</p>
+     *        <p>
+     *        When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *        it is the key identifier used to perform the operation.
      */
 
     public void setKeyIdentifier(String keyIdentifier) {
@@ -114,9 +91,16 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
      * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for plaintext
      * encryption.
      * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
      * 
      * @return The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
-     *         plaintext encryption.
+     *         plaintext encryption.</p>
+     *         <p>
+     *         When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *         it is the key identifier used to perform the operation.
      */
 
     public String getKeyIdentifier() {
@@ -128,10 +112,17 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
      * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for plaintext
      * encryption.
      * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
      * 
      * @param keyIdentifier
      *        The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
-     *        plaintext encryption.
+     *        plaintext encryption.</p>
+     *        <p>
+     *        When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *        it is the key identifier used to perform the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,6 +220,86 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The encryption key type and attributes for plaintext encryption.
+     * </p>
+     * 
+     * @param encryptionAttributes
+     *        The encryption key type and attributes for plaintext encryption.
+     */
+
+    public void setEncryptionAttributes(EncryptionDecryptionAttributes encryptionAttributes) {
+        this.encryptionAttributes = encryptionAttributes;
+    }
+
+    /**
+     * <p>
+     * The encryption key type and attributes for plaintext encryption.
+     * </p>
+     * 
+     * @return The encryption key type and attributes for plaintext encryption.
+     */
+
+    public EncryptionDecryptionAttributes getEncryptionAttributes() {
+        return this.encryptionAttributes;
+    }
+
+    /**
+     * <p>
+     * The encryption key type and attributes for plaintext encryption.
+     * </p>
+     * 
+     * @param encryptionAttributes
+     *        The encryption key type and attributes for plaintext encryption.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EncryptDataRequest withEncryptionAttributes(EncryptionDecryptionAttributes encryptionAttributes) {
+        setEncryptionAttributes(encryptionAttributes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The WrappedKeyBlock containing the encryption key for plaintext encryption.
+     * </p>
+     * 
+     * @param wrappedKey
+     *        The WrappedKeyBlock containing the encryption key for plaintext encryption.
+     */
+
+    public void setWrappedKey(WrappedKey wrappedKey) {
+        this.wrappedKey = wrappedKey;
+    }
+
+    /**
+     * <p>
+     * The WrappedKeyBlock containing the encryption key for plaintext encryption.
+     * </p>
+     * 
+     * @return The WrappedKeyBlock containing the encryption key for plaintext encryption.
+     */
+
+    public WrappedKey getWrappedKey() {
+        return this.wrappedKey;
+    }
+
+    /**
+     * <p>
+     * The WrappedKeyBlock containing the encryption key for plaintext encryption.
+     * </p>
+     * 
+     * @param wrappedKey
+     *        The WrappedKeyBlock containing the encryption key for plaintext encryption.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EncryptDataRequest withWrappedKey(WrappedKey wrappedKey) {
+        setWrappedKey(wrappedKey);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -240,12 +311,14 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEncryptionAttributes() != null)
-            sb.append("EncryptionAttributes: ").append(getEncryptionAttributes()).append(",");
         if (getKeyIdentifier() != null)
             sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
         if (getPlainText() != null)
-            sb.append("PlainText: ").append("***Sensitive Data Redacted***");
+            sb.append("PlainText: ").append("***Sensitive Data Redacted***").append(",");
+        if (getEncryptionAttributes() != null)
+            sb.append("EncryptionAttributes: ").append(getEncryptionAttributes()).append(",");
+        if (getWrappedKey() != null)
+            sb.append("WrappedKey: ").append(getWrappedKey());
         sb.append("}");
         return sb.toString();
     }
@@ -260,10 +333,6 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (obj instanceof EncryptDataRequest == false)
             return false;
         EncryptDataRequest other = (EncryptDataRequest) obj;
-        if (other.getEncryptionAttributes() == null ^ this.getEncryptionAttributes() == null)
-            return false;
-        if (other.getEncryptionAttributes() != null && other.getEncryptionAttributes().equals(this.getEncryptionAttributes()) == false)
-            return false;
         if (other.getKeyIdentifier() == null ^ this.getKeyIdentifier() == null)
             return false;
         if (other.getKeyIdentifier() != null && other.getKeyIdentifier().equals(this.getKeyIdentifier()) == false)
@@ -271,6 +340,14 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (other.getPlainText() == null ^ this.getPlainText() == null)
             return false;
         if (other.getPlainText() != null && other.getPlainText().equals(this.getPlainText()) == false)
+            return false;
+        if (other.getEncryptionAttributes() == null ^ this.getEncryptionAttributes() == null)
+            return false;
+        if (other.getEncryptionAttributes() != null && other.getEncryptionAttributes().equals(this.getEncryptionAttributes()) == false)
+            return false;
+        if (other.getWrappedKey() == null ^ this.getWrappedKey() == null)
+            return false;
+        if (other.getWrappedKey() != null && other.getWrappedKey().equals(this.getWrappedKey()) == false)
             return false;
         return true;
     }
@@ -280,9 +357,10 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEncryptionAttributes() == null) ? 0 : getEncryptionAttributes().hashCode());
         hashCode = prime * hashCode + ((getKeyIdentifier() == null) ? 0 : getKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getPlainText() == null) ? 0 : getPlainText().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionAttributes() == null) ? 0 : getEncryptionAttributes().hashCode());
+        hashCode = prime * hashCode + ((getWrappedKey() == null) ? 0 : getWrappedKey().hashCode());
         return hashCode;
     }
 

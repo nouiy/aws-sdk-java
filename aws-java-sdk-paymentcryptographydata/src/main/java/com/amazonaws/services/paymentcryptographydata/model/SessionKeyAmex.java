@@ -30,57 +30,17 @@ public class SessionKeyAmex implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     */
-    private String panSequenceNumber;
-    /**
-     * <p>
      * The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit
      * card and associates the card to a specific account holder.
      * </p>
      */
     private String primaryAccountNumber;
-
     /**
      * <p>
      * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
      * </p>
-     * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
      */
-
-    public void setPanSequenceNumber(String panSequenceNumber) {
-        this.panSequenceNumber = panSequenceNumber;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     */
-
-    public String getPanSequenceNumber() {
-        return this.panSequenceNumber;
-    }
-
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SessionKeyAmex withPanSequenceNumber(String panSequenceNumber) {
-        setPanSequenceNumber(panSequenceNumber);
-        return this;
-    }
+    private String panSequenceNumber;
 
     /**
      * <p>
@@ -129,6 +89,46 @@ public class SessionKeyAmex implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     */
+
+    public void setPanSequenceNumber(String panSequenceNumber) {
+        this.panSequenceNumber = panSequenceNumber;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     */
+
+    public String getPanSequenceNumber() {
+        return this.panSequenceNumber;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SessionKeyAmex withPanSequenceNumber(String panSequenceNumber) {
+        setPanSequenceNumber(panSequenceNumber);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -140,10 +140,10 @@ public class SessionKeyAmex implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getPanSequenceNumber() != null)
-            sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
         if (getPrimaryAccountNumber() != null)
-            sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***");
+            sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPanSequenceNumber() != null)
+            sb.append("PanSequenceNumber: ").append(getPanSequenceNumber());
         sb.append("}");
         return sb.toString();
     }
@@ -158,13 +158,13 @@ public class SessionKeyAmex implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof SessionKeyAmex == false)
             return false;
         SessionKeyAmex other = (SessionKeyAmex) obj;
-        if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
-            return false;
-        if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
-            return false;
         if (other.getPrimaryAccountNumber() == null ^ this.getPrimaryAccountNumber() == null)
             return false;
         if (other.getPrimaryAccountNumber() != null && other.getPrimaryAccountNumber().equals(this.getPrimaryAccountNumber()) == false)
+            return false;
+        if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
+            return false;
+        if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
             return false;
         return true;
     }
@@ -174,8 +174,8 @@ public class SessionKeyAmex implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
         hashCode = prime * hashCode + ((getPrimaryAccountNumber() == null) ? 0 : getPrimaryAccountNumber().hashCode());
+        hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
         return hashCode;
     }
 

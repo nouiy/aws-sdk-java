@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SymmetricEncryptionAttributesMarshaller {
 
-    private static final MarshallingInfo<String> INITIALIZATIONVECTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InitializationVector").build();
     private static final MarshallingInfo<String> MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Mode").build();
+    private static final MarshallingInfo<String> INITIALIZATIONVECTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InitializationVector").build();
     private static final MarshallingInfo<String> PADDINGTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PaddingType").build();
 
@@ -50,8 +50,8 @@ public class SymmetricEncryptionAttributesMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(symmetricEncryptionAttributes.getInitializationVector(), INITIALIZATIONVECTOR_BINDING);
             protocolMarshaller.marshall(symmetricEncryptionAttributes.getMode(), MODE_BINDING);
+            protocolMarshaller.marshall(symmetricEncryptionAttributes.getInitializationVector(), INITIALIZATIONVECTOR_BINDING);
             protocolMarshaller.marshall(symmetricEncryptionAttributes.getPaddingType(), PADDINGTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

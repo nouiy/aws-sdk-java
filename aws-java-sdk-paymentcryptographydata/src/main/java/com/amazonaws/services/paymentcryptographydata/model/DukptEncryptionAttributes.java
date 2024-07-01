@@ -30,6 +30,23 @@ public class DukptEncryptionAttributes implements Serializable, Cloneable, Struc
 
     /**
      * <p>
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
+     * </p>
+     */
+    private String keySerialNumber;
+    /**
+     * <p>
+     * The block cipher method to use for encryption.
+     * </p>
+     * <p>
+     * The default is CBC.
+     * </p>
+     */
+    private String mode;
+    /**
+     * <p>
      * The key type encrypted using DUKPT from a Base Derivation Key (BDK) and Key Serial Number (KSN). This must be
      * less than or equal to the strength of the BDK. For example, you can't use <code>AES_128</code> as a derivation
      * type for a BDK of <code>AES_128</code> or <code>TDES_2KEY</code>
@@ -49,14 +66,59 @@ public class DukptEncryptionAttributes implements Serializable, Cloneable, Struc
      * </p>
      */
     private String initializationVector;
+
     /**
      * <p>
      * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
      * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
      * counter.
      * </p>
+     * 
+     * @param keySerialNumber
+     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *        transaction counter.
      */
-    private String keySerialNumber;
+
+    public void setKeySerialNumber(String keySerialNumber) {
+        this.keySerialNumber = keySerialNumber;
+    }
+
+    /**
+     * <p>
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
+     * </p>
+     * 
+     * @return The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *         encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *         transaction counter.
+     */
+
+    public String getKeySerialNumber() {
+        return this.keySerialNumber;
+    }
+
+    /**
+     * <p>
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
+     * </p>
+     * 
+     * @param keySerialNumber
+     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *        transaction counter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DukptEncryptionAttributes withKeySerialNumber(String keySerialNumber) {
+        setKeySerialNumber(keySerialNumber);
+        return this;
+    }
+
     /**
      * <p>
      * The block cipher method to use for encryption.
@@ -64,8 +126,77 @@ public class DukptEncryptionAttributes implements Serializable, Cloneable, Struc
      * <p>
      * The default is CBC.
      * </p>
+     * 
+     * @param mode
+     *        The block cipher method to use for encryption.</p>
+     *        <p>
+     *        The default is CBC.
+     * @see DukptEncryptionMode
      */
-    private String mode;
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * <p>
+     * The block cipher method to use for encryption.
+     * </p>
+     * <p>
+     * The default is CBC.
+     * </p>
+     * 
+     * @return The block cipher method to use for encryption.</p>
+     *         <p>
+     *         The default is CBC.
+     * @see DukptEncryptionMode
+     */
+
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
+     * <p>
+     * The block cipher method to use for encryption.
+     * </p>
+     * <p>
+     * The default is CBC.
+     * </p>
+     * 
+     * @param mode
+     *        The block cipher method to use for encryption.</p>
+     *        <p>
+     *        The default is CBC.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DukptEncryptionMode
+     */
+
+    public DukptEncryptionAttributes withMode(String mode) {
+        setMode(mode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The block cipher method to use for encryption.
+     * </p>
+     * <p>
+     * The default is CBC.
+     * </p>
+     * 
+     * @param mode
+     *        The block cipher method to use for encryption.</p>
+     *        <p>
+     *        The default is CBC.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DukptEncryptionMode
+     */
+
+    public DukptEncryptionAttributes withMode(DukptEncryptionMode mode) {
+        this.mode = mode.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -248,137 +379,6 @@ public class DukptEncryptionAttributes implements Serializable, Cloneable, Struc
     }
 
     /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @param keySerialNumber
-     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *        transaction counter.
-     */
-
-    public void setKeySerialNumber(String keySerialNumber) {
-        this.keySerialNumber = keySerialNumber;
-    }
-
-    /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @return The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *         encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *         transaction counter.
-     */
-
-    public String getKeySerialNumber() {
-        return this.keySerialNumber;
-    }
-
-    /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @param keySerialNumber
-     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *        transaction counter.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DukptEncryptionAttributes withKeySerialNumber(String keySerialNumber) {
-        setKeySerialNumber(keySerialNumber);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The block cipher method to use for encryption.
-     * </p>
-     * <p>
-     * The default is CBC.
-     * </p>
-     * 
-     * @param mode
-     *        The block cipher method to use for encryption.</p>
-     *        <p>
-     *        The default is CBC.
-     * @see DukptEncryptionMode
-     */
-
-    public void setMode(String mode) {
-        this.mode = mode;
-    }
-
-    /**
-     * <p>
-     * The block cipher method to use for encryption.
-     * </p>
-     * <p>
-     * The default is CBC.
-     * </p>
-     * 
-     * @return The block cipher method to use for encryption.</p>
-     *         <p>
-     *         The default is CBC.
-     * @see DukptEncryptionMode
-     */
-
-    public String getMode() {
-        return this.mode;
-    }
-
-    /**
-     * <p>
-     * The block cipher method to use for encryption.
-     * </p>
-     * <p>
-     * The default is CBC.
-     * </p>
-     * 
-     * @param mode
-     *        The block cipher method to use for encryption.</p>
-     *        <p>
-     *        The default is CBC.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see DukptEncryptionMode
-     */
-
-    public DukptEncryptionAttributes withMode(String mode) {
-        setMode(mode);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The block cipher method to use for encryption.
-     * </p>
-     * <p>
-     * The default is CBC.
-     * </p>
-     * 
-     * @param mode
-     *        The block cipher method to use for encryption.</p>
-     *        <p>
-     *        The default is CBC.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see DukptEncryptionMode
-     */
-
-    public DukptEncryptionAttributes withMode(DukptEncryptionMode mode) {
-        this.mode = mode.toString();
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -390,16 +390,16 @@ public class DukptEncryptionAttributes implements Serializable, Cloneable, Struc
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getKeySerialNumber() != null)
+            sb.append("KeySerialNumber: ").append(getKeySerialNumber()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode()).append(",");
         if (getDukptKeyDerivationType() != null)
             sb.append("DukptKeyDerivationType: ").append(getDukptKeyDerivationType()).append(",");
         if (getDukptKeyVariant() != null)
             sb.append("DukptKeyVariant: ").append(getDukptKeyVariant()).append(",");
         if (getInitializationVector() != null)
-            sb.append("InitializationVector: ").append("***Sensitive Data Redacted***").append(",");
-        if (getKeySerialNumber() != null)
-            sb.append("KeySerialNumber: ").append(getKeySerialNumber()).append(",");
-        if (getMode() != null)
-            sb.append("Mode: ").append(getMode());
+            sb.append("InitializationVector: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -414,6 +414,14 @@ public class DukptEncryptionAttributes implements Serializable, Cloneable, Struc
         if (obj instanceof DukptEncryptionAttributes == false)
             return false;
         DukptEncryptionAttributes other = (DukptEncryptionAttributes) obj;
+        if (other.getKeySerialNumber() == null ^ this.getKeySerialNumber() == null)
+            return false;
+        if (other.getKeySerialNumber() != null && other.getKeySerialNumber().equals(this.getKeySerialNumber()) == false)
+            return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
         if (other.getDukptKeyDerivationType() == null ^ this.getDukptKeyDerivationType() == null)
             return false;
         if (other.getDukptKeyDerivationType() != null && other.getDukptKeyDerivationType().equals(this.getDukptKeyDerivationType()) == false)
@@ -426,14 +434,6 @@ public class DukptEncryptionAttributes implements Serializable, Cloneable, Struc
             return false;
         if (other.getInitializationVector() != null && other.getInitializationVector().equals(this.getInitializationVector()) == false)
             return false;
-        if (other.getKeySerialNumber() == null ^ this.getKeySerialNumber() == null)
-            return false;
-        if (other.getKeySerialNumber() != null && other.getKeySerialNumber().equals(this.getKeySerialNumber()) == false)
-            return false;
-        if (other.getMode() == null ^ this.getMode() == null)
-            return false;
-        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
-            return false;
         return true;
     }
 
@@ -442,11 +442,11 @@ public class DukptEncryptionAttributes implements Serializable, Cloneable, Struc
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getKeySerialNumber() == null) ? 0 : getKeySerialNumber().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         hashCode = prime * hashCode + ((getDukptKeyDerivationType() == null) ? 0 : getDukptKeyDerivationType().hashCode());
         hashCode = prime * hashCode + ((getDukptKeyVariant() == null) ? 0 : getDukptKeyVariant().hashCode());
         hashCode = prime * hashCode + ((getInitializationVector() == null) ? 0 : getInitializationVector().hashCode());
-        hashCode = prime * hashCode + ((getKeySerialNumber() == null) ? 0 : getKeySerialNumber().hashCode());
-        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         return hashCode;
     }
 

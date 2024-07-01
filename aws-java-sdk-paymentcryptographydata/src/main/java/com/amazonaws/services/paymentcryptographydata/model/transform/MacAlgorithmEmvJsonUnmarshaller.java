@@ -52,13 +52,13 @@ public class MacAlgorithmEmvJsonUnmarshaller implements Unmarshaller<MacAlgorith
                     context.nextToken();
                     macAlgorithmEmv.setMajorKeyDerivationMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("PanSequenceNumber", targetDepth)) {
-                    context.nextToken();
-                    macAlgorithmEmv.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("PrimaryAccountNumber", targetDepth)) {
                     context.nextToken();
                     macAlgorithmEmv.setPrimaryAccountNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PanSequenceNumber", targetDepth)) {
+                    context.nextToken();
+                    macAlgorithmEmv.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("SessionKeyDerivationMode", targetDepth)) {
                     context.nextToken();

@@ -48,17 +48,17 @@ public class SessionKeyEmvCommonJsonUnmarshaller implements Unmarshaller<Session
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
+                if (context.testExpression("PrimaryAccountNumber", targetDepth)) {
                     context.nextToken();
-                    sessionKeyEmvCommon.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
+                    sessionKeyEmvCommon.setPrimaryAccountNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PanSequenceNumber", targetDepth)) {
                     context.nextToken();
                     sessionKeyEmvCommon.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("PrimaryAccountNumber", targetDepth)) {
+                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
                     context.nextToken();
-                    sessionKeyEmvCommon.setPrimaryAccountNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                    sessionKeyEmvCommon.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -37,16 +37,16 @@ public class Ibm3624NaturalPin implements Serializable, Cloneable, StructuredPoj
     private String decimalizationTable;
     /**
      * <p>
-     * The unique data for cardholder identification.
-     * </p>
-     */
-    private String pinValidationData;
-    /**
-     * <p>
      * The padding character for validation data.
      * </p>
      */
     private String pinValidationDataPadCharacter;
+    /**
+     * <p>
+     * The unique data for cardholder identification.
+     * </p>
+     */
+    private String pinValidationData;
 
     /**
      * <p>
@@ -96,46 +96,6 @@ public class Ibm3624NaturalPin implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The unique data for cardholder identification.
-     * </p>
-     * 
-     * @param pinValidationData
-     *        The unique data for cardholder identification.
-     */
-
-    public void setPinValidationData(String pinValidationData) {
-        this.pinValidationData = pinValidationData;
-    }
-
-    /**
-     * <p>
-     * The unique data for cardholder identification.
-     * </p>
-     * 
-     * @return The unique data for cardholder identification.
-     */
-
-    public String getPinValidationData() {
-        return this.pinValidationData;
-    }
-
-    /**
-     * <p>
-     * The unique data for cardholder identification.
-     * </p>
-     * 
-     * @param pinValidationData
-     *        The unique data for cardholder identification.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Ibm3624NaturalPin withPinValidationData(String pinValidationData) {
-        setPinValidationData(pinValidationData);
-        return this;
-    }
-
-    /**
-     * <p>
      * The padding character for validation data.
      * </p>
      * 
@@ -175,6 +135,46 @@ public class Ibm3624NaturalPin implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The unique data for cardholder identification.
+     * </p>
+     * 
+     * @param pinValidationData
+     *        The unique data for cardholder identification.
+     */
+
+    public void setPinValidationData(String pinValidationData) {
+        this.pinValidationData = pinValidationData;
+    }
+
+    /**
+     * <p>
+     * The unique data for cardholder identification.
+     * </p>
+     * 
+     * @return The unique data for cardholder identification.
+     */
+
+    public String getPinValidationData() {
+        return this.pinValidationData;
+    }
+
+    /**
+     * <p>
+     * The unique data for cardholder identification.
+     * </p>
+     * 
+     * @param pinValidationData
+     *        The unique data for cardholder identification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Ibm3624NaturalPin withPinValidationData(String pinValidationData) {
+        setPinValidationData(pinValidationData);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -188,10 +188,10 @@ public class Ibm3624NaturalPin implements Serializable, Cloneable, StructuredPoj
         sb.append("{");
         if (getDecimalizationTable() != null)
             sb.append("DecimalizationTable: ").append(getDecimalizationTable()).append(",");
-        if (getPinValidationData() != null)
-            sb.append("PinValidationData: ").append(getPinValidationData()).append(",");
         if (getPinValidationDataPadCharacter() != null)
-            sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter());
+            sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter()).append(",");
+        if (getPinValidationData() != null)
+            sb.append("PinValidationData: ").append(getPinValidationData());
         sb.append("}");
         return sb.toString();
     }
@@ -210,14 +210,14 @@ public class Ibm3624NaturalPin implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getDecimalizationTable() != null && other.getDecimalizationTable().equals(this.getDecimalizationTable()) == false)
             return false;
-        if (other.getPinValidationData() == null ^ this.getPinValidationData() == null)
-            return false;
-        if (other.getPinValidationData() != null && other.getPinValidationData().equals(this.getPinValidationData()) == false)
-            return false;
         if (other.getPinValidationDataPadCharacter() == null ^ this.getPinValidationDataPadCharacter() == null)
             return false;
         if (other.getPinValidationDataPadCharacter() != null
                 && other.getPinValidationDataPadCharacter().equals(this.getPinValidationDataPadCharacter()) == false)
+            return false;
+        if (other.getPinValidationData() == null ^ this.getPinValidationData() == null)
+            return false;
+        if (other.getPinValidationData() != null && other.getPinValidationData().equals(this.getPinValidationData()) == false)
             return false;
         return true;
     }
@@ -228,8 +228,8 @@ public class Ibm3624NaturalPin implements Serializable, Cloneable, StructuredPoj
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDecimalizationTable() == null) ? 0 : getDecimalizationTable().hashCode());
-        hashCode = prime * hashCode + ((getPinValidationData() == null) ? 0 : getPinValidationData().hashCode());
         hashCode = prime * hashCode + ((getPinValidationDataPadCharacter() == null) ? 0 : getPinValidationDataPadCharacter().hashCode());
+        hashCode = prime * hashCode + ((getPinValidationData() == null) ? 0 : getPinValidationData().hashCode());
         return hashCode;
     }
 

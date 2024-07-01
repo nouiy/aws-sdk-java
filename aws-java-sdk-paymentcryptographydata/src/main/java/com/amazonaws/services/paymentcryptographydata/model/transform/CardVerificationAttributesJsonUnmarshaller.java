@@ -56,10 +56,6 @@ public class CardVerificationAttributesJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     cardVerificationAttributes.setAmexCardSecurityCodeVersion2(AmexCardSecurityCodeVersion2JsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("CardHolderVerificationValue", targetDepth)) {
-                    context.nextToken();
-                    cardVerificationAttributes.setCardHolderVerificationValue(CardHolderVerificationValueJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("CardVerificationValue1", targetDepth)) {
                     context.nextToken();
                     cardVerificationAttributes.setCardVerificationValue1(CardVerificationValue1JsonUnmarshaller.getInstance().unmarshall(context));
@@ -68,10 +64,9 @@ public class CardVerificationAttributesJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     cardVerificationAttributes.setCardVerificationValue2(CardVerificationValue2JsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("DiscoverDynamicCardVerificationCode", targetDepth)) {
+                if (context.testExpression("CardHolderVerificationValue", targetDepth)) {
                     context.nextToken();
-                    cardVerificationAttributes.setDiscoverDynamicCardVerificationCode(DiscoverDynamicCardVerificationCodeJsonUnmarshaller.getInstance()
-                            .unmarshall(context));
+                    cardVerificationAttributes.setCardHolderVerificationValue(CardHolderVerificationValueJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("DynamicCardVerificationCode", targetDepth)) {
                     context.nextToken();
@@ -80,6 +75,11 @@ public class CardVerificationAttributesJsonUnmarshaller implements Unmarshaller<
                 if (context.testExpression("DynamicCardVerificationValue", targetDepth)) {
                     context.nextToken();
                     cardVerificationAttributes.setDynamicCardVerificationValue(DynamicCardVerificationValueJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("DiscoverDynamicCardVerificationCode", targetDepth)) {
+                    context.nextToken();
+                    cardVerificationAttributes.setDiscoverDynamicCardVerificationCode(DiscoverDynamicCardVerificationCodeJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

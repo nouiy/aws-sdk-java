@@ -28,7 +28,7 @@ public class CompleteAttachedFileUploadRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The unique identifier of the Connect instance.
+     * The unique identifier of the Amazon Connect instance.
      * </p>
      */
     private String instanceId;
@@ -54,11 +54,11 @@ public class CompleteAttachedFileUploadRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The unique identifier of the Connect instance.
+     * The unique identifier of the Amazon Connect instance.
      * </p>
      * 
      * @param instanceId
-     *        The unique identifier of the Connect instance.
+     *        The unique identifier of the Amazon Connect instance.
      */
 
     public void setInstanceId(String instanceId) {
@@ -67,10 +67,10 @@ public class CompleteAttachedFileUploadRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The unique identifier of the Connect instance.
+     * The unique identifier of the Amazon Connect instance.
      * </p>
      * 
-     * @return The unique identifier of the Connect instance.
+     * @return The unique identifier of the Amazon Connect instance.
      */
 
     public String getInstanceId() {
@@ -79,11 +79,11 @@ public class CompleteAttachedFileUploadRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The unique identifier of the Connect instance.
+     * The unique identifier of the Amazon Connect instance.
      * </p>
      * 
      * @param instanceId
-     *        The unique identifier of the Connect instance.
+     *        The unique identifier of the Amazon Connect instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

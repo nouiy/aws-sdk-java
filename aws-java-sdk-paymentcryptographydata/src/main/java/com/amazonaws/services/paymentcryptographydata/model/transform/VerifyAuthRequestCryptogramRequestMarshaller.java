@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class VerifyAuthRequestCryptogramRequestMarshaller {
 
-    private static final MarshallingInfo<String> AUTHREQUESTCRYPTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthRequestCryptogram").build();
-    private static final MarshallingInfo<StructuredPojo> AUTHRESPONSEATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthResponseAttributes").build();
     private static final MarshallingInfo<String> KEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyIdentifier").build();
+    private static final MarshallingInfo<String> TRANSACTIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransactionData").build();
+    private static final MarshallingInfo<String> AUTHREQUESTCRYPTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthRequestCryptogram").build();
     private static final MarshallingInfo<String> MAJORKEYDERIVATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MajorKeyDerivationMode").build();
     private static final MarshallingInfo<StructuredPojo> SESSIONKEYDERIVATIONATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SessionKeyDerivationAttributes").build();
-    private static final MarshallingInfo<String> TRANSACTIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransactionData").build();
+    private static final MarshallingInfo<StructuredPojo> AUTHRESPONSEATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthResponseAttributes").build();
 
     private static final VerifyAuthRequestCryptogramRequestMarshaller instance = new VerifyAuthRequestCryptogramRequestMarshaller();
 
@@ -56,12 +56,12 @@ public class VerifyAuthRequestCryptogramRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getAuthRequestCryptogram(), AUTHREQUESTCRYPTOGRAM_BINDING);
-            protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getAuthResponseAttributes(), AUTHRESPONSEATTRIBUTES_BINDING);
             protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getKeyIdentifier(), KEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getTransactionData(), TRANSACTIONDATA_BINDING);
+            protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getAuthRequestCryptogram(), AUTHREQUESTCRYPTOGRAM_BINDING);
             protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getMajorKeyDerivationMode(), MAJORKEYDERIVATIONMODE_BINDING);
             protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getSessionKeyDerivationAttributes(), SESSIONKEYDERIVATIONATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getTransactionData(), TRANSACTIONDATA_BINDING);
+            protocolMarshaller.marshall(verifyAuthRequestCryptogramRequest.getAuthResponseAttributes(), AUTHRESPONSEATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

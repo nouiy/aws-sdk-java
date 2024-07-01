@@ -27,6 +27,36 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can
+     * be PEK or BDK.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key for PIN block.
+     * Otherwise, it is the key identifier used to perform the operation.
+     * </p>
+     */
+    private String incomingKeyIdentifier;
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or
+     * BDK.
+     * </p>
+     */
+    private String outgoingKeyIdentifier;
+    /**
+     * <p>
+     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
+     * </p>
+     */
+    private TranslationIsoFormats incomingTranslationAttributes;
+    /**
+     * <p>
+     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * </p>
+     */
+    private TranslationIsoFormats outgoingTranslationAttributes;
+    /**
+     * <p>
      * The encrypted PIN block data that Amazon Web Services Payment Cryptography translates.
      * </p>
      */
@@ -39,36 +69,216 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
     private DukptDerivationAttributes incomingDukptAttributes;
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can
-     * be PEK or BDK.
-     * </p>
-     */
-    private String incomingKeyIdentifier;
-    /**
-     * <p>
-     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
-     * </p>
-     */
-    private TranslationIsoFormats incomingTranslationAttributes;
-    /**
-     * <p>
      * The attributes and values to use for outgoing DUKPT encryption key after PIN block translation.
      * </p>
      */
     private DukptDerivationAttributes outgoingDukptAttributes;
     /**
      * <p>
+     * The WrappedKeyBlock containing the encryption key under which incoming PIN block data is encrypted.
+     * </p>
+     */
+    private WrappedKey incomingWrappedKey;
+    /**
+     * <p>
+     * The WrappedKeyBlock containing the encryption key for encrypting outgoing PIN block data.
+     * </p>
+     */
+    private WrappedKey outgoingWrappedKey;
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can
+     * be PEK or BDK.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key for PIN block.
+     * Otherwise, it is the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @param incomingKeyIdentifier
+     *        The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key
+     *        type can be PEK or BDK.</p>
+     *        <p>
+     *        When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key for PIN
+     *        block. Otherwise, it is the key identifier used to perform the operation.
+     */
+
+    public void setIncomingKeyIdentifier(String incomingKeyIdentifier) {
+        this.incomingKeyIdentifier = incomingKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can
+     * be PEK or BDK.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key for PIN block.
+     * Otherwise, it is the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @return The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key
+     *         type can be PEK or BDK.</p>
+     *         <p>
+     *         When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key for PIN
+     *         block. Otherwise, it is the key identifier used to perform the operation.
+     */
+
+    public String getIncomingKeyIdentifier() {
+        return this.incomingKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can
+     * be PEK or BDK.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key for PIN block.
+     * Otherwise, it is the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @param incomingKeyIdentifier
+     *        The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key
+     *        type can be PEK or BDK.</p>
+     *        <p>
+     *        When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key for PIN
+     *        block. Otherwise, it is the key identifier used to perform the operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranslatePinDataRequest withIncomingKeyIdentifier(String incomingKeyIdentifier) {
+        setIncomingKeyIdentifier(incomingKeyIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
      * The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or
      * BDK.
      * </p>
+     * 
+     * @param outgoingKeyIdentifier
+     *        The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be
+     *        PEK or BDK.
      */
-    private String outgoingKeyIdentifier;
+
+    public void setOutgoingKeyIdentifier(String outgoingKeyIdentifier) {
+        this.outgoingKeyIdentifier = outgoingKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or
+     * BDK.
+     * </p>
+     * 
+     * @return The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can
+     *         be PEK or BDK.
+     */
+
+    public String getOutgoingKeyIdentifier() {
+        return this.outgoingKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or
+     * BDK.
+     * </p>
+     * 
+     * @param outgoingKeyIdentifier
+     *        The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be
+     *        PEK or BDK.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranslatePinDataRequest withOutgoingKeyIdentifier(String outgoingKeyIdentifier) {
+        setOutgoingKeyIdentifier(outgoingKeyIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param incomingTranslationAttributes
+     *        The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
+     */
+
+    public void setIncomingTranslationAttributes(TranslationIsoFormats incomingTranslationAttributes) {
+        this.incomingTranslationAttributes = incomingTranslationAttributes;
+    }
+
+    /**
+     * <p>
+     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @return The format of the incoming PIN block data for translation within Amazon Web Services Payment
+     *         Cryptography.
+     */
+
+    public TranslationIsoFormats getIncomingTranslationAttributes() {
+        return this.incomingTranslationAttributes;
+    }
+
+    /**
+     * <p>
+     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param incomingTranslationAttributes
+     *        The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranslatePinDataRequest withIncomingTranslationAttributes(TranslationIsoFormats incomingTranslationAttributes) {
+        setIncomingTranslationAttributes(incomingTranslationAttributes);
+        return this;
+    }
+
     /**
      * <p>
      * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      * </p>
+     * 
+     * @param outgoingTranslationAttributes
+     *        The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      */
-    private TranslationIsoFormats outgoingTranslationAttributes;
+
+    public void setOutgoingTranslationAttributes(TranslationIsoFormats outgoingTranslationAttributes) {
+        this.outgoingTranslationAttributes = outgoingTranslationAttributes;
+    }
+
+    /**
+     * <p>
+     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @return The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     */
+
+    public TranslationIsoFormats getOutgoingTranslationAttributes() {
+        return this.outgoingTranslationAttributes;
+    }
+
+    /**
+     * <p>
+     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * </p>
+     * 
+     * @param outgoingTranslationAttributes
+     *        The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranslatePinDataRequest withOutgoingTranslationAttributes(TranslationIsoFormats outgoingTranslationAttributes) {
+        setOutgoingTranslationAttributes(outgoingTranslationAttributes);
+        return this;
+    }
 
     /**
      * <p>
@@ -152,93 +362,6 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can
-     * be PEK or BDK.
-     * </p>
-     * 
-     * @param incomingKeyIdentifier
-     *        The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key
-     *        type can be PEK or BDK.
-     */
-
-    public void setIncomingKeyIdentifier(String incomingKeyIdentifier) {
-        this.incomingKeyIdentifier = incomingKeyIdentifier;
-    }
-
-    /**
-     * <p>
-     * The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can
-     * be PEK or BDK.
-     * </p>
-     * 
-     * @return The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key
-     *         type can be PEK or BDK.
-     */
-
-    public String getIncomingKeyIdentifier() {
-        return this.incomingKeyIdentifier;
-    }
-
-    /**
-     * <p>
-     * The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can
-     * be PEK or BDK.
-     * </p>
-     * 
-     * @param incomingKeyIdentifier
-     *        The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key
-     *        type can be PEK or BDK.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public TranslatePinDataRequest withIncomingKeyIdentifier(String incomingKeyIdentifier) {
-        setIncomingKeyIdentifier(incomingKeyIdentifier);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @param incomingTranslationAttributes
-     *        The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
-     */
-
-    public void setIncomingTranslationAttributes(TranslationIsoFormats incomingTranslationAttributes) {
-        this.incomingTranslationAttributes = incomingTranslationAttributes;
-    }
-
-    /**
-     * <p>
-     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @return The format of the incoming PIN block data for translation within Amazon Web Services Payment
-     *         Cryptography.
-     */
-
-    public TranslationIsoFormats getIncomingTranslationAttributes() {
-        return this.incomingTranslationAttributes;
-    }
-
-    /**
-     * <p>
-     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
-     * </p>
-     * 
-     * @param incomingTranslationAttributes
-     *        The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public TranslatePinDataRequest withIncomingTranslationAttributes(TranslationIsoFormats incomingTranslationAttributes) {
-        setIncomingTranslationAttributes(incomingTranslationAttributes);
-        return this;
-    }
-
-    /**
-     * <p>
      * The attributes and values to use for outgoing DUKPT encryption key after PIN block translation.
      * </p>
      * 
@@ -279,87 +402,81 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or
-     * BDK.
+     * The WrappedKeyBlock containing the encryption key under which incoming PIN block data is encrypted.
      * </p>
      * 
-     * @param outgoingKeyIdentifier
-     *        The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be
-     *        PEK or BDK.
+     * @param incomingWrappedKey
+     *        The WrappedKeyBlock containing the encryption key under which incoming PIN block data is encrypted.
      */
 
-    public void setOutgoingKeyIdentifier(String outgoingKeyIdentifier) {
-        this.outgoingKeyIdentifier = outgoingKeyIdentifier;
+    public void setIncomingWrappedKey(WrappedKey incomingWrappedKey) {
+        this.incomingWrappedKey = incomingWrappedKey;
     }
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or
-     * BDK.
+     * The WrappedKeyBlock containing the encryption key under which incoming PIN block data is encrypted.
      * </p>
      * 
-     * @return The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can
-     *         be PEK or BDK.
+     * @return The WrappedKeyBlock containing the encryption key under which incoming PIN block data is encrypted.
      */
 
-    public String getOutgoingKeyIdentifier() {
-        return this.outgoingKeyIdentifier;
+    public WrappedKey getIncomingWrappedKey() {
+        return this.incomingWrappedKey;
     }
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or
-     * BDK.
+     * The WrappedKeyBlock containing the encryption key under which incoming PIN block data is encrypted.
      * </p>
      * 
-     * @param outgoingKeyIdentifier
-     *        The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be
-     *        PEK or BDK.
+     * @param incomingWrappedKey
+     *        The WrappedKeyBlock containing the encryption key under which incoming PIN block data is encrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public TranslatePinDataRequest withOutgoingKeyIdentifier(String outgoingKeyIdentifier) {
-        setOutgoingKeyIdentifier(outgoingKeyIdentifier);
+    public TranslatePinDataRequest withIncomingWrappedKey(WrappedKey incomingWrappedKey) {
+        setIncomingWrappedKey(incomingWrappedKey);
         return this;
     }
 
     /**
      * <p>
-     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * The WrappedKeyBlock containing the encryption key for encrypting outgoing PIN block data.
      * </p>
      * 
-     * @param outgoingTranslationAttributes
-     *        The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * @param outgoingWrappedKey
+     *        The WrappedKeyBlock containing the encryption key for encrypting outgoing PIN block data.
      */
 
-    public void setOutgoingTranslationAttributes(TranslationIsoFormats outgoingTranslationAttributes) {
-        this.outgoingTranslationAttributes = outgoingTranslationAttributes;
+    public void setOutgoingWrappedKey(WrappedKey outgoingWrappedKey) {
+        this.outgoingWrappedKey = outgoingWrappedKey;
     }
 
     /**
      * <p>
-     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * The WrappedKeyBlock containing the encryption key for encrypting outgoing PIN block data.
      * </p>
      * 
-     * @return The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * @return The WrappedKeyBlock containing the encryption key for encrypting outgoing PIN block data.
      */
 
-    public TranslationIsoFormats getOutgoingTranslationAttributes() {
-        return this.outgoingTranslationAttributes;
+    public WrappedKey getOutgoingWrappedKey() {
+        return this.outgoingWrappedKey;
     }
 
     /**
      * <p>
-     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * The WrappedKeyBlock containing the encryption key for encrypting outgoing PIN block data.
      * </p>
      * 
-     * @param outgoingTranslationAttributes
-     *        The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
+     * @param outgoingWrappedKey
+     *        The WrappedKeyBlock containing the encryption key for encrypting outgoing PIN block data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public TranslatePinDataRequest withOutgoingTranslationAttributes(TranslationIsoFormats outgoingTranslationAttributes) {
-        setOutgoingTranslationAttributes(outgoingTranslationAttributes);
+    public TranslatePinDataRequest withOutgoingWrappedKey(WrappedKey outgoingWrappedKey) {
+        setOutgoingWrappedKey(outgoingWrappedKey);
         return this;
     }
 
@@ -375,20 +492,24 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getIncomingKeyIdentifier() != null)
+            sb.append("IncomingKeyIdentifier: ").append(getIncomingKeyIdentifier()).append(",");
+        if (getOutgoingKeyIdentifier() != null)
+            sb.append("OutgoingKeyIdentifier: ").append(getOutgoingKeyIdentifier()).append(",");
+        if (getIncomingTranslationAttributes() != null)
+            sb.append("IncomingTranslationAttributes: ").append(getIncomingTranslationAttributes()).append(",");
+        if (getOutgoingTranslationAttributes() != null)
+            sb.append("OutgoingTranslationAttributes: ").append(getOutgoingTranslationAttributes()).append(",");
         if (getEncryptedPinBlock() != null)
             sb.append("EncryptedPinBlock: ").append("***Sensitive Data Redacted***").append(",");
         if (getIncomingDukptAttributes() != null)
             sb.append("IncomingDukptAttributes: ").append(getIncomingDukptAttributes()).append(",");
-        if (getIncomingKeyIdentifier() != null)
-            sb.append("IncomingKeyIdentifier: ").append(getIncomingKeyIdentifier()).append(",");
-        if (getIncomingTranslationAttributes() != null)
-            sb.append("IncomingTranslationAttributes: ").append(getIncomingTranslationAttributes()).append(",");
         if (getOutgoingDukptAttributes() != null)
             sb.append("OutgoingDukptAttributes: ").append(getOutgoingDukptAttributes()).append(",");
-        if (getOutgoingKeyIdentifier() != null)
-            sb.append("OutgoingKeyIdentifier: ").append(getOutgoingKeyIdentifier()).append(",");
-        if (getOutgoingTranslationAttributes() != null)
-            sb.append("OutgoingTranslationAttributes: ").append(getOutgoingTranslationAttributes());
+        if (getIncomingWrappedKey() != null)
+            sb.append("IncomingWrappedKey: ").append(getIncomingWrappedKey()).append(",");
+        if (getOutgoingWrappedKey() != null)
+            sb.append("OutgoingWrappedKey: ").append(getOutgoingWrappedKey());
         sb.append("}");
         return sb.toString();
     }
@@ -403,6 +524,24 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof TranslatePinDataRequest == false)
             return false;
         TranslatePinDataRequest other = (TranslatePinDataRequest) obj;
+        if (other.getIncomingKeyIdentifier() == null ^ this.getIncomingKeyIdentifier() == null)
+            return false;
+        if (other.getIncomingKeyIdentifier() != null && other.getIncomingKeyIdentifier().equals(this.getIncomingKeyIdentifier()) == false)
+            return false;
+        if (other.getOutgoingKeyIdentifier() == null ^ this.getOutgoingKeyIdentifier() == null)
+            return false;
+        if (other.getOutgoingKeyIdentifier() != null && other.getOutgoingKeyIdentifier().equals(this.getOutgoingKeyIdentifier()) == false)
+            return false;
+        if (other.getIncomingTranslationAttributes() == null ^ this.getIncomingTranslationAttributes() == null)
+            return false;
+        if (other.getIncomingTranslationAttributes() != null
+                && other.getIncomingTranslationAttributes().equals(this.getIncomingTranslationAttributes()) == false)
+            return false;
+        if (other.getOutgoingTranslationAttributes() == null ^ this.getOutgoingTranslationAttributes() == null)
+            return false;
+        if (other.getOutgoingTranslationAttributes() != null
+                && other.getOutgoingTranslationAttributes().equals(this.getOutgoingTranslationAttributes()) == false)
+            return false;
         if (other.getEncryptedPinBlock() == null ^ this.getEncryptedPinBlock() == null)
             return false;
         if (other.getEncryptedPinBlock() != null && other.getEncryptedPinBlock().equals(this.getEncryptedPinBlock()) == false)
@@ -411,27 +550,17 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getIncomingDukptAttributes() != null && other.getIncomingDukptAttributes().equals(this.getIncomingDukptAttributes()) == false)
             return false;
-        if (other.getIncomingKeyIdentifier() == null ^ this.getIncomingKeyIdentifier() == null)
-            return false;
-        if (other.getIncomingKeyIdentifier() != null && other.getIncomingKeyIdentifier().equals(this.getIncomingKeyIdentifier()) == false)
-            return false;
-        if (other.getIncomingTranslationAttributes() == null ^ this.getIncomingTranslationAttributes() == null)
-            return false;
-        if (other.getIncomingTranslationAttributes() != null
-                && other.getIncomingTranslationAttributes().equals(this.getIncomingTranslationAttributes()) == false)
-            return false;
         if (other.getOutgoingDukptAttributes() == null ^ this.getOutgoingDukptAttributes() == null)
             return false;
         if (other.getOutgoingDukptAttributes() != null && other.getOutgoingDukptAttributes().equals(this.getOutgoingDukptAttributes()) == false)
             return false;
-        if (other.getOutgoingKeyIdentifier() == null ^ this.getOutgoingKeyIdentifier() == null)
+        if (other.getIncomingWrappedKey() == null ^ this.getIncomingWrappedKey() == null)
             return false;
-        if (other.getOutgoingKeyIdentifier() != null && other.getOutgoingKeyIdentifier().equals(this.getOutgoingKeyIdentifier()) == false)
+        if (other.getIncomingWrappedKey() != null && other.getIncomingWrappedKey().equals(this.getIncomingWrappedKey()) == false)
             return false;
-        if (other.getOutgoingTranslationAttributes() == null ^ this.getOutgoingTranslationAttributes() == null)
+        if (other.getOutgoingWrappedKey() == null ^ this.getOutgoingWrappedKey() == null)
             return false;
-        if (other.getOutgoingTranslationAttributes() != null
-                && other.getOutgoingTranslationAttributes().equals(this.getOutgoingTranslationAttributes()) == false)
+        if (other.getOutgoingWrappedKey() != null && other.getOutgoingWrappedKey().equals(this.getOutgoingWrappedKey()) == false)
             return false;
         return true;
     }
@@ -441,13 +570,15 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getIncomingKeyIdentifier() == null) ? 0 : getIncomingKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getOutgoingKeyIdentifier() == null) ? 0 : getOutgoingKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getIncomingTranslationAttributes() == null) ? 0 : getIncomingTranslationAttributes().hashCode());
+        hashCode = prime * hashCode + ((getOutgoingTranslationAttributes() == null) ? 0 : getOutgoingTranslationAttributes().hashCode());
         hashCode = prime * hashCode + ((getEncryptedPinBlock() == null) ? 0 : getEncryptedPinBlock().hashCode());
         hashCode = prime * hashCode + ((getIncomingDukptAttributes() == null) ? 0 : getIncomingDukptAttributes().hashCode());
-        hashCode = prime * hashCode + ((getIncomingKeyIdentifier() == null) ? 0 : getIncomingKeyIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getIncomingTranslationAttributes() == null) ? 0 : getIncomingTranslationAttributes().hashCode());
         hashCode = prime * hashCode + ((getOutgoingDukptAttributes() == null) ? 0 : getOutgoingDukptAttributes().hashCode());
-        hashCode = prime * hashCode + ((getOutgoingKeyIdentifier() == null) ? 0 : getOutgoingKeyIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getOutgoingTranslationAttributes() == null) ? 0 : getOutgoingTranslationAttributes().hashCode());
+        hashCode = prime * hashCode + ((getIncomingWrappedKey() == null) ? 0 : getIncomingWrappedKey().hashCode());
+        hashCode = prime * hashCode + ((getOutgoingWrappedKey() == null) ? 0 : getOutgoingWrappedKey().hashCode());
         return hashCode;
     }
 

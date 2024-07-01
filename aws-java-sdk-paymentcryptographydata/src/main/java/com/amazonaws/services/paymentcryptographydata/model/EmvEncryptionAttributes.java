@@ -30,29 +30,10 @@ public class EmvEncryptionAttributes implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
-     * defaults it to zero.
-     * </p>
-     */
-    private String initializationVector;
-    /**
-     * <p>
      * The EMV derivation mode to use for ICC master key derivation as per EMV version 4.3 book 2.
      * </p>
      */
     private String majorKeyDerivationMode;
-    /**
-     * <p>
-     * The block cipher method to use for encryption.
-     * </p>
-     */
-    private String mode;
-    /**
-     * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
-     * </p>
-     */
-    private String panSequenceNumber;
     /**
      * <p>
      * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
@@ -62,57 +43,30 @@ public class EmvEncryptionAttributes implements Serializable, Cloneable, Structu
     private String primaryAccountNumber;
     /**
      * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     */
+    private String panSequenceNumber;
+    /**
+     * <p>
      * The derivation value used to derive the ICC session key. It is typically the application transaction counter
      * value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
      * </p>
      */
     private String sessionDerivationData;
-
+    /**
+     * <p>
+     * The block cipher method to use for encryption.
+     * </p>
+     */
+    private String mode;
     /**
      * <p>
      * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
      * defaults it to zero.
      * </p>
-     * 
-     * @param initializationVector
-     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
-     *        Cryptography defaults it to zero.
      */
-
-    public void setInitializationVector(String initializationVector) {
-        this.initializationVector = initializationVector;
-    }
-
-    /**
-     * <p>
-     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
-     * defaults it to zero.
-     * </p>
-     * 
-     * @return An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
-     *         Cryptography defaults it to zero.
-     */
-
-    public String getInitializationVector() {
-        return this.initializationVector;
-    }
-
-    /**
-     * <p>
-     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
-     * defaults it to zero.
-     * </p>
-     * 
-     * @param initializationVector
-     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
-     *        Cryptography defaults it to zero.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EmvEncryptionAttributes withInitializationVector(String initializationVector) {
-        setInitializationVector(initializationVector);
-        return this;
-    }
+    private String initializationVector;
 
     /**
      * <p>
@@ -170,6 +124,138 @@ public class EmvEncryptionAttributes implements Serializable, Cloneable, Structu
 
     public EmvEncryptionAttributes withMajorKeyDerivationMode(EmvMajorKeyDerivationMode majorKeyDerivationMode) {
         this.majorKeyDerivationMode = majorKeyDerivationMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
+     * to a specific account holder.
+     * </p>
+     * 
+     * @param primaryAccountNumber
+     *        The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates
+     *        the card to a specific account holder.
+     */
+
+    public void setPrimaryAccountNumber(String primaryAccountNumber) {
+        this.primaryAccountNumber = primaryAccountNumber;
+    }
+
+    /**
+     * <p>
+     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
+     * to a specific account holder.
+     * </p>
+     * 
+     * @return The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates
+     *         the card to a specific account holder.
+     */
+
+    public String getPrimaryAccountNumber() {
+        return this.primaryAccountNumber;
+    }
+
+    /**
+     * <p>
+     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
+     * to a specific account holder.
+     * </p>
+     * 
+     * @param primaryAccountNumber
+     *        The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates
+     *        the card to a specific account holder.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EmvEncryptionAttributes withPrimaryAccountNumber(String primaryAccountNumber) {
+        setPrimaryAccountNumber(primaryAccountNumber);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     */
+
+    public void setPanSequenceNumber(String panSequenceNumber) {
+        this.panSequenceNumber = panSequenceNumber;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     */
+
+    public String getPanSequenceNumber() {
+        return this.panSequenceNumber;
+    }
+
+    /**
+     * <p>
+     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * </p>
+     * 
+     * @param panSequenceNumber
+     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EmvEncryptionAttributes withPanSequenceNumber(String panSequenceNumber) {
+        setPanSequenceNumber(panSequenceNumber);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The derivation value used to derive the ICC session key. It is typically the application transaction counter
+     * value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
+     * </p>
+     * 
+     * @param sessionDerivationData
+     *        The derivation value used to derive the ICC session key. It is typically the application transaction
+     *        counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
+     */
+
+    public void setSessionDerivationData(String sessionDerivationData) {
+        this.sessionDerivationData = sessionDerivationData;
+    }
+
+    /**
+     * <p>
+     * The derivation value used to derive the ICC session key. It is typically the application transaction counter
+     * value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
+     * </p>
+     * 
+     * @return The derivation value used to derive the ICC session key. It is typically the application transaction
+     *         counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
+     */
+
+    public String getSessionDerivationData() {
+        return this.sessionDerivationData;
+    }
+
+    /**
+     * <p>
+     * The derivation value used to derive the ICC session key. It is typically the application transaction counter
+     * value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
+     * </p>
+     * 
+     * @param sessionDerivationData
+     *        The derivation value used to derive the ICC session key. It is typically the application transaction
+     *        counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EmvEncryptionAttributes withSessionDerivationData(String sessionDerivationData) {
+        setSessionDerivationData(sessionDerivationData);
         return this;
     }
 
@@ -234,133 +320,47 @@ public class EmvEncryptionAttributes implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
      * </p>
      * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * @param initializationVector
+     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *        Cryptography defaults it to zero.
      */
 
-    public void setPanSequenceNumber(String panSequenceNumber) {
-        this.panSequenceNumber = panSequenceNumber;
+    public void setInitializationVector(String initializationVector) {
+        this.initializationVector = initializationVector;
     }
 
     /**
      * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
      * </p>
      * 
-     * @return A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * @return An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *         Cryptography defaults it to zero.
      */
 
-    public String getPanSequenceNumber() {
-        return this.panSequenceNumber;
+    public String getInitializationVector() {
+        return this.initializationVector;
     }
 
     /**
      * <p>
-     * A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
      * </p>
      * 
-     * @param panSequenceNumber
-     *        A number that identifies and differentiates payment cards with the same Primary Account Number (PAN).
+     * @param initializationVector
+     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *        Cryptography defaults it to zero.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public EmvEncryptionAttributes withPanSequenceNumber(String panSequenceNumber) {
-        setPanSequenceNumber(panSequenceNumber);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
-     * to a specific account holder.
-     * </p>
-     * 
-     * @param primaryAccountNumber
-     *        The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates
-     *        the card to a specific account holder.
-     */
-
-    public void setPrimaryAccountNumber(String primaryAccountNumber) {
-        this.primaryAccountNumber = primaryAccountNumber;
-    }
-
-    /**
-     * <p>
-     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
-     * to a specific account holder.
-     * </p>
-     * 
-     * @return The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates
-     *         the card to a specific account holder.
-     */
-
-    public String getPrimaryAccountNumber() {
-        return this.primaryAccountNumber;
-    }
-
-    /**
-     * <p>
-     * The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card
-     * to a specific account holder.
-     * </p>
-     * 
-     * @param primaryAccountNumber
-     *        The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates
-     *        the card to a specific account holder.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EmvEncryptionAttributes withPrimaryAccountNumber(String primaryAccountNumber) {
-        setPrimaryAccountNumber(primaryAccountNumber);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The derivation value used to derive the ICC session key. It is typically the application transaction counter
-     * value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
-     * </p>
-     * 
-     * @param sessionDerivationData
-     *        The derivation value used to derive the ICC session key. It is typically the application transaction
-     *        counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
-     */
-
-    public void setSessionDerivationData(String sessionDerivationData) {
-        this.sessionDerivationData = sessionDerivationData;
-    }
-
-    /**
-     * <p>
-     * The derivation value used to derive the ICC session key. It is typically the application transaction counter
-     * value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
-     * </p>
-     * 
-     * @return The derivation value used to derive the ICC session key. It is typically the application transaction
-     *         counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
-     */
-
-    public String getSessionDerivationData() {
-        return this.sessionDerivationData;
-    }
-
-    /**
-     * <p>
-     * The derivation value used to derive the ICC session key. It is typically the application transaction counter
-     * value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
-     * </p>
-     * 
-     * @param sessionDerivationData
-     *        The derivation value used to derive the ICC session key. It is typically the application transaction
-     *        counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EmvEncryptionAttributes withSessionDerivationData(String sessionDerivationData) {
-        setSessionDerivationData(sessionDerivationData);
+    public EmvEncryptionAttributes withInitializationVector(String initializationVector) {
+        setInitializationVector(initializationVector);
         return this;
     }
 
@@ -376,18 +376,18 @@ public class EmvEncryptionAttributes implements Serializable, Cloneable, Structu
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getInitializationVector() != null)
-            sb.append("InitializationVector: ").append("***Sensitive Data Redacted***").append(",");
         if (getMajorKeyDerivationMode() != null)
             sb.append("MajorKeyDerivationMode: ").append(getMajorKeyDerivationMode()).append(",");
-        if (getMode() != null)
-            sb.append("Mode: ").append(getMode()).append(",");
-        if (getPanSequenceNumber() != null)
-            sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
         if (getPrimaryAccountNumber() != null)
             sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPanSequenceNumber() != null)
+            sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
         if (getSessionDerivationData() != null)
-            sb.append("SessionDerivationData: ").append(getSessionDerivationData());
+            sb.append("SessionDerivationData: ").append(getSessionDerivationData()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode()).append(",");
+        if (getInitializationVector() != null)
+            sb.append("InitializationVector: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -402,29 +402,29 @@ public class EmvEncryptionAttributes implements Serializable, Cloneable, Structu
         if (obj instanceof EmvEncryptionAttributes == false)
             return false;
         EmvEncryptionAttributes other = (EmvEncryptionAttributes) obj;
-        if (other.getInitializationVector() == null ^ this.getInitializationVector() == null)
-            return false;
-        if (other.getInitializationVector() != null && other.getInitializationVector().equals(this.getInitializationVector()) == false)
-            return false;
         if (other.getMajorKeyDerivationMode() == null ^ this.getMajorKeyDerivationMode() == null)
             return false;
         if (other.getMajorKeyDerivationMode() != null && other.getMajorKeyDerivationMode().equals(this.getMajorKeyDerivationMode()) == false)
-            return false;
-        if (other.getMode() == null ^ this.getMode() == null)
-            return false;
-        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
-            return false;
-        if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
-            return false;
-        if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
             return false;
         if (other.getPrimaryAccountNumber() == null ^ this.getPrimaryAccountNumber() == null)
             return false;
         if (other.getPrimaryAccountNumber() != null && other.getPrimaryAccountNumber().equals(this.getPrimaryAccountNumber()) == false)
             return false;
+        if (other.getPanSequenceNumber() == null ^ this.getPanSequenceNumber() == null)
+            return false;
+        if (other.getPanSequenceNumber() != null && other.getPanSequenceNumber().equals(this.getPanSequenceNumber()) == false)
+            return false;
         if (other.getSessionDerivationData() == null ^ this.getSessionDerivationData() == null)
             return false;
         if (other.getSessionDerivationData() != null && other.getSessionDerivationData().equals(this.getSessionDerivationData()) == false)
+            return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
+        if (other.getInitializationVector() == null ^ this.getInitializationVector() == null)
+            return false;
+        if (other.getInitializationVector() != null && other.getInitializationVector().equals(this.getInitializationVector()) == false)
             return false;
         return true;
     }
@@ -434,12 +434,12 @@ public class EmvEncryptionAttributes implements Serializable, Cloneable, Structu
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getInitializationVector() == null) ? 0 : getInitializationVector().hashCode());
         hashCode = prime * hashCode + ((getMajorKeyDerivationMode() == null) ? 0 : getMajorKeyDerivationMode().hashCode());
-        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
-        hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
         hashCode = prime * hashCode + ((getPrimaryAccountNumber() == null) ? 0 : getPrimaryAccountNumber().hashCode());
+        hashCode = prime * hashCode + ((getPanSequenceNumber() == null) ? 0 : getPanSequenceNumber().hashCode());
         hashCode = prime * hashCode + ((getSessionDerivationData() == null) ? 0 : getSessionDerivationData().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
+        hashCode = prime * hashCode + ((getInitializationVector() == null) ? 0 : getInitializationVector().hashCode());
         return hashCode;
     }
 

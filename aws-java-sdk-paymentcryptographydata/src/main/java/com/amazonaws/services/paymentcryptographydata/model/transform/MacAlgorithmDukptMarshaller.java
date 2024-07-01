@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class MacAlgorithmDukptMarshaller {
 
-    private static final MarshallingInfo<String> DUKPTDERIVATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptDerivationType").build();
-    private static final MarshallingInfo<String> DUKPTKEYVARIANT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptKeyVariant").build();
     private static final MarshallingInfo<String> KEYSERIALNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeySerialNumber").build();
+    private static final MarshallingInfo<String> DUKPTKEYVARIANT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptKeyVariant").build();
+    private static final MarshallingInfo<String> DUKPTDERIVATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptDerivationType").build();
 
     private static final MacAlgorithmDukptMarshaller instance = new MacAlgorithmDukptMarshaller();
 
@@ -50,9 +50,9 @@ public class MacAlgorithmDukptMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(macAlgorithmDukpt.getDukptDerivationType(), DUKPTDERIVATIONTYPE_BINDING);
-            protocolMarshaller.marshall(macAlgorithmDukpt.getDukptKeyVariant(), DUKPTKEYVARIANT_BINDING);
             protocolMarshaller.marshall(macAlgorithmDukpt.getKeySerialNumber(), KEYSERIALNUMBER_BINDING);
+            protocolMarshaller.marshall(macAlgorithmDukpt.getDukptKeyVariant(), DUKPTKEYVARIANT_BINDING);
+            protocolMarshaller.marshall(macAlgorithmDukpt.getDukptDerivationType(), DUKPTDERIVATIONTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DukptDerivationAttributesMarshaller {
 
+    private static final MarshallingInfo<String> KEYSERIALNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeySerialNumber").build();
     private static final MarshallingInfo<String> DUKPTKEYDERIVATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptKeyDerivationType").build();
     private static final MarshallingInfo<String> DUKPTKEYVARIANT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DukptKeyVariant").build();
-    private static final MarshallingInfo<String> KEYSERIALNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeySerialNumber").build();
 
     private static final DukptDerivationAttributesMarshaller instance = new DukptDerivationAttributesMarshaller();
 
@@ -50,9 +50,9 @@ public class DukptDerivationAttributesMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(dukptDerivationAttributes.getKeySerialNumber(), KEYSERIALNUMBER_BINDING);
             protocolMarshaller.marshall(dukptDerivationAttributes.getDukptKeyDerivationType(), DUKPTKEYDERIVATIONTYPE_BINDING);
             protocolMarshaller.marshall(dukptDerivationAttributes.getDukptKeyVariant(), DUKPTKEYVARIANT_BINDING);
-            protocolMarshaller.marshall(dukptDerivationAttributes.getKeySerialNumber(), KEYSERIALNUMBER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

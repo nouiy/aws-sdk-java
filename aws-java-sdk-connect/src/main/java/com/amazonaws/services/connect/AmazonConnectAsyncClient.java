@@ -25,6 +25,20 @@ import java.util.concurrent.ExecutorService;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Connect_Service.html">Amazon
+ * Connect actions</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_Connect_Service.html">Amazon
+ * Connect data types</a>
+ * </p>
+ * </li>
+ * </ul>
  * <p>
  * Amazon Connect is a cloud-based contact center solution that you use to set up and manage a customer contact center
  * and provide reliable customer engagement at any scale.
@@ -2446,6 +2460,40 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAuthenticationProfileResult> describeAuthenticationProfileAsync(DescribeAuthenticationProfileRequest request) {
+
+        return describeAuthenticationProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAuthenticationProfileResult> describeAuthenticationProfileAsync(
+            final DescribeAuthenticationProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAuthenticationProfileRequest, DescribeAuthenticationProfileResult> asyncHandler) {
+        final DescribeAuthenticationProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAuthenticationProfileResult>() {
+            @Override
+            public DescribeAuthenticationProfileResult call() throws Exception {
+                DescribeAuthenticationProfileResult result = null;
+
+                try {
+                    result = executeDescribeAuthenticationProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeContactResult> describeContactAsync(DescribeContactRequest request) {
 
         return describeContactAsync(request, null);
@@ -4161,6 +4209,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeListApprovedOrigins(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAuthenticationProfilesResult> listAuthenticationProfilesAsync(ListAuthenticationProfilesRequest request) {
+
+        return listAuthenticationProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAuthenticationProfilesResult> listAuthenticationProfilesAsync(final ListAuthenticationProfilesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAuthenticationProfilesRequest, ListAuthenticationProfilesResult> asyncHandler) {
+        final ListAuthenticationProfilesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAuthenticationProfilesResult>() {
+            @Override
+            public ListAuthenticationProfilesResult call() throws Exception {
+                ListAuthenticationProfilesResult result = null;
+
+                try {
+                    result = executeListAuthenticationProfiles(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -6875,6 +6956,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeUpdateAgentStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAuthenticationProfileResult> updateAuthenticationProfileAsync(UpdateAuthenticationProfileRequest request) {
+
+        return updateAuthenticationProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAuthenticationProfileResult> updateAuthenticationProfileAsync(final UpdateAuthenticationProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAuthenticationProfileRequest, UpdateAuthenticationProfileResult> asyncHandler) {
+        final UpdateAuthenticationProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAuthenticationProfileResult>() {
+            @Override
+            public UpdateAuthenticationProfileResult call() throws Exception {
+                UpdateAuthenticationProfileResult result = null;
+
+                try {
+                    result = executeUpdateAuthenticationProfile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -6778,7 +6778,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "RandomNonce",
-        "c2jShape" : "HexLength16",
+        "c2jShape" : "EvenHexLengthBetween16And32",
         "deprecated" : false,
         "documentation" : "<p>A random number value that is unique to the TR-34 key block generated using 2 pass. The operation will fail, if a random nonce value is not provided for a TR-34 key block generated using 2 pass.</p>",
         "endpointDiscoveryId" : false,
@@ -7198,7 +7198,7 @@
         },
         "RandomNonce" : {
           "c2jName" : "RandomNonce",
-          "c2jShape" : "HexLength16",
+          "c2jShape" : "EvenHexLengthBetween16And32",
           "deprecated" : false,
           "documentation" : "<p>A random number value that is unique to the TR-34 key block generated using 2 pass. The operation will fail, if a random nonce value is not provided for a TR-34 key block generated using 2 pass.</p>",
           "endpointDiscoveryId" : false,
@@ -13316,7 +13316,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "WrappedKeyBlock",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The TR-31 wrapped key block to import.</p>\n@param wrappedKeyBlock The TR-31 wrapped key block to import.*/",
         "setterMethodName" : "setWrappedKeyBlock",
         "setterModel" : {
@@ -13387,7 +13387,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "WrappedKeyBlock",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The TR-31 wrapped key block to import.</p>\n@param wrappedKeyBlock The TR-31 wrapped key block to import.*/",
           "setterMethodName" : "setWrappedKeyBlock",
           "setterModel" : {
@@ -13875,7 +13875,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "RandomNonce",
-        "c2jShape" : "HexLength16",
+        "c2jShape" : "EvenHexLengthBetween16And32",
         "deprecated" : false,
         "documentation" : "<p>A random number value that is unique to the TR-34 key block generated using 2 pass. The operation will fail, if a random nonce value is not provided for a TR-34 key block generated using 2 pass.</p>",
         "endpointDiscoveryId" : false,
@@ -14156,7 +14156,7 @@
         },
         "RandomNonce" : {
           "c2jName" : "RandomNonce",
-          "c2jShape" : "HexLength16",
+          "c2jShape" : "EvenHexLengthBetween16And32",
           "deprecated" : false,
           "documentation" : "<p>A random number value that is unique to the TR-34 key block generated using 2 pass. The operation will fail, if a random nonce value is not provided for a TR-34 key block generated using 2 pass.</p>",
           "endpointDiscoveryId" : false,

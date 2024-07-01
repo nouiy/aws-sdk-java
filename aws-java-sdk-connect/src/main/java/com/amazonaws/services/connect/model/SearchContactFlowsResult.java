@@ -25,7 +25,7 @@ public class SearchContactFlowsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Information about the contact flows.
+     * Information about the flows.
      * </p>
      */
     private java.util.List<ContactFlow> contactFlows;
@@ -44,10 +44,10 @@ public class SearchContactFlowsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Information about the contact flows.
+     * Information about the flows.
      * </p>
      * 
-     * @return Information about the contact flows.
+     * @return Information about the flows.
      */
 
     public java.util.List<ContactFlow> getContactFlows() {
@@ -56,11 +56,11 @@ public class SearchContactFlowsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Information about the contact flows.
+     * Information about the flows.
      * </p>
      * 
      * @param contactFlows
-     *        Information about the contact flows.
+     *        Information about the flows.
      */
 
     public void setContactFlows(java.util.Collection<ContactFlow> contactFlows) {
@@ -74,7 +74,7 @@ public class SearchContactFlowsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Information about the contact flows.
+     * Information about the flows.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,7 +83,7 @@ public class SearchContactFlowsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param contactFlows
-     *        Information about the contact flows.
+     *        Information about the flows.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class SearchContactFlowsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Information about the contact flows.
+     * Information about the flows.
      * </p>
      * 
      * @param contactFlows
-     *        Information about the contact flows.
+     *        Information about the flows.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

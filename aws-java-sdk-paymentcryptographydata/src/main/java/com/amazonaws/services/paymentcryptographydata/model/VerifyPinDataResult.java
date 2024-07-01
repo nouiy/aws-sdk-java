@@ -25,23 +25,6 @@ public class VerifyPinDataResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin block
-     * generation.
-     * </p>
-     */
-    private String encryptionKeyArn;
-    /**
-     * <p>
-     * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
-     * the same key or to detect that a key has changed.
-     * </p>
-     * <p>
-     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
-     * </p>
-     */
-    private String encryptionKeyCheckValue;
-    /**
-     * <p>
      * The <code>keyARN</code> of the PIN encryption key that Amazon Web Services Payment Cryptography uses for PIN or
      * PIN Offset verification.
      * </p>
@@ -57,53 +40,13 @@ public class VerifyPinDataResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private String verificationKeyCheckValue;
-
     /**
      * <p>
      * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin block
      * generation.
      * </p>
-     * 
-     * @param encryptionKeyArn
-     *        The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin
-     *        block generation.
      */
-
-    public void setEncryptionKeyArn(String encryptionKeyArn) {
-        this.encryptionKeyArn = encryptionKeyArn;
-    }
-
-    /**
-     * <p>
-     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin block
-     * generation.
-     * </p>
-     * 
-     * @return The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin
-     *         block generation.
-     */
-
-    public String getEncryptionKeyArn() {
-        return this.encryptionKeyArn;
-    }
-
-    /**
-     * <p>
-     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin block
-     * generation.
-     * </p>
-     * 
-     * @param encryptionKeyArn
-     *        The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin
-     *        block generation.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VerifyPinDataResult withEncryptionKeyArn(String encryptionKeyArn) {
-        setEncryptionKeyArn(encryptionKeyArn);
-        return this;
-    }
-
+    private String encryptionKeyArn;
     /**
      * <p>
      * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
@@ -112,58 +55,8 @@ public class VerifyPinDataResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      * </p>
-     * 
-     * @param encryptionKeyCheckValue
-     *        The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
-     *        key have the same key or to detect that a key has changed.</p>
-     *        <p>
-     *        Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      */
-
-    public void setEncryptionKeyCheckValue(String encryptionKeyCheckValue) {
-        this.encryptionKeyCheckValue = encryptionKeyCheckValue;
-    }
-
-    /**
-     * <p>
-     * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
-     * the same key or to detect that a key has changed.
-     * </p>
-     * <p>
-     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
-     * </p>
-     * 
-     * @return The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
-     *         key have the same key or to detect that a key has changed.</p>
-     *         <p>
-     *         Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
-     */
-
-    public String getEncryptionKeyCheckValue() {
-        return this.encryptionKeyCheckValue;
-    }
-
-    /**
-     * <p>
-     * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
-     * the same key or to detect that a key has changed.
-     * </p>
-     * <p>
-     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
-     * </p>
-     * 
-     * @param encryptionKeyCheckValue
-     *        The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
-     *        key have the same key or to detect that a key has changed.</p>
-     *        <p>
-     *        Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VerifyPinDataResult withEncryptionKeyCheckValue(String encryptionKeyCheckValue) {
-        setEncryptionKeyCheckValue(encryptionKeyCheckValue);
-        return this;
-    }
+    private String encryptionKeyCheckValue;
 
     /**
      * <p>
@@ -273,6 +166,113 @@ public class VerifyPinDataResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin block
+     * generation.
+     * </p>
+     * 
+     * @param encryptionKeyArn
+     *        The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin
+     *        block generation.
+     */
+
+    public void setEncryptionKeyArn(String encryptionKeyArn) {
+        this.encryptionKeyArn = encryptionKeyArn;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin block
+     * generation.
+     * </p>
+     * 
+     * @return The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin
+     *         block generation.
+     */
+
+    public String getEncryptionKeyArn() {
+        return this.encryptionKeyArn;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin block
+     * generation.
+     * </p>
+     * 
+     * @param encryptionKeyArn
+     *        The <code>keyARN</code> of the PEK that Amazon Web Services Payment Cryptography uses for encrypted pin
+     *        block generation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VerifyPinDataResult withEncryptionKeyArn(String encryptionKeyArn) {
+        setEncryptionKeyArn(encryptionKeyArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
+     * the same key or to detect that a key has changed.
+     * </p>
+     * <p>
+     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
+     * </p>
+     * 
+     * @param encryptionKeyCheckValue
+     *        The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
+     *        key have the same key or to detect that a key has changed.</p>
+     *        <p>
+     *        Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
+     */
+
+    public void setEncryptionKeyCheckValue(String encryptionKeyCheckValue) {
+        this.encryptionKeyCheckValue = encryptionKeyCheckValue;
+    }
+
+    /**
+     * <p>
+     * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
+     * the same key or to detect that a key has changed.
+     * </p>
+     * <p>
+     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
+     * </p>
+     * 
+     * @return The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
+     *         key have the same key or to detect that a key has changed.</p>
+     *         <p>
+     *         Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
+     */
+
+    public String getEncryptionKeyCheckValue() {
+        return this.encryptionKeyCheckValue;
+    }
+
+    /**
+     * <p>
+     * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
+     * the same key or to detect that a key has changed.
+     * </p>
+     * <p>
+     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
+     * </p>
+     * 
+     * @param encryptionKeyCheckValue
+     *        The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
+     *        key have the same key or to detect that a key has changed.</p>
+     *        <p>
+     *        Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VerifyPinDataResult withEncryptionKeyCheckValue(String encryptionKeyCheckValue) {
+        setEncryptionKeyCheckValue(encryptionKeyCheckValue);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -284,14 +284,14 @@ public class VerifyPinDataResult extends com.amazonaws.AmazonWebServiceResult<co
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEncryptionKeyArn() != null)
-            sb.append("EncryptionKeyArn: ").append(getEncryptionKeyArn()).append(",");
-        if (getEncryptionKeyCheckValue() != null)
-            sb.append("EncryptionKeyCheckValue: ").append(getEncryptionKeyCheckValue()).append(",");
         if (getVerificationKeyArn() != null)
             sb.append("VerificationKeyArn: ").append(getVerificationKeyArn()).append(",");
         if (getVerificationKeyCheckValue() != null)
-            sb.append("VerificationKeyCheckValue: ").append(getVerificationKeyCheckValue());
+            sb.append("VerificationKeyCheckValue: ").append(getVerificationKeyCheckValue()).append(",");
+        if (getEncryptionKeyArn() != null)
+            sb.append("EncryptionKeyArn: ").append(getEncryptionKeyArn()).append(",");
+        if (getEncryptionKeyCheckValue() != null)
+            sb.append("EncryptionKeyCheckValue: ").append(getEncryptionKeyCheckValue());
         sb.append("}");
         return sb.toString();
     }
@@ -306,14 +306,6 @@ public class VerifyPinDataResult extends com.amazonaws.AmazonWebServiceResult<co
         if (obj instanceof VerifyPinDataResult == false)
             return false;
         VerifyPinDataResult other = (VerifyPinDataResult) obj;
-        if (other.getEncryptionKeyArn() == null ^ this.getEncryptionKeyArn() == null)
-            return false;
-        if (other.getEncryptionKeyArn() != null && other.getEncryptionKeyArn().equals(this.getEncryptionKeyArn()) == false)
-            return false;
-        if (other.getEncryptionKeyCheckValue() == null ^ this.getEncryptionKeyCheckValue() == null)
-            return false;
-        if (other.getEncryptionKeyCheckValue() != null && other.getEncryptionKeyCheckValue().equals(this.getEncryptionKeyCheckValue()) == false)
-            return false;
         if (other.getVerificationKeyArn() == null ^ this.getVerificationKeyArn() == null)
             return false;
         if (other.getVerificationKeyArn() != null && other.getVerificationKeyArn().equals(this.getVerificationKeyArn()) == false)
@@ -321,6 +313,14 @@ public class VerifyPinDataResult extends com.amazonaws.AmazonWebServiceResult<co
         if (other.getVerificationKeyCheckValue() == null ^ this.getVerificationKeyCheckValue() == null)
             return false;
         if (other.getVerificationKeyCheckValue() != null && other.getVerificationKeyCheckValue().equals(this.getVerificationKeyCheckValue()) == false)
+            return false;
+        if (other.getEncryptionKeyArn() == null ^ this.getEncryptionKeyArn() == null)
+            return false;
+        if (other.getEncryptionKeyArn() != null && other.getEncryptionKeyArn().equals(this.getEncryptionKeyArn()) == false)
+            return false;
+        if (other.getEncryptionKeyCheckValue() == null ^ this.getEncryptionKeyCheckValue() == null)
+            return false;
+        if (other.getEncryptionKeyCheckValue() != null && other.getEncryptionKeyCheckValue().equals(this.getEncryptionKeyCheckValue()) == false)
             return false;
         return true;
     }
@@ -330,10 +330,10 @@ public class VerifyPinDataResult extends com.amazonaws.AmazonWebServiceResult<co
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEncryptionKeyArn() == null) ? 0 : getEncryptionKeyArn().hashCode());
-        hashCode = prime * hashCode + ((getEncryptionKeyCheckValue() == null) ? 0 : getEncryptionKeyCheckValue().hashCode());
         hashCode = prime * hashCode + ((getVerificationKeyArn() == null) ? 0 : getVerificationKeyArn().hashCode());
         hashCode = prime * hashCode + ((getVerificationKeyCheckValue() == null) ? 0 : getVerificationKeyCheckValue().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionKeyArn() == null) ? 0 : getEncryptionKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionKeyCheckValue() == null) ? 0 : getEncryptionKeyCheckValue().hashCode());
         return hashCode;
     }
 

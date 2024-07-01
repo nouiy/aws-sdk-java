@@ -30,6 +30,14 @@ public class DukptDerivationAttributes implements Serializable, Cloneable, Struc
 
     /**
      * <p>
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
+     * </p>
+     */
+    private String keySerialNumber;
+    /**
+     * <p>
      * The key type derived using DUKPT from a Base Derivation Key (BDK) and Key Serial Number (KSN). This must be less
      * than or equal to the strength of the BDK. For example, you can't use <code>AES_128</code> as a derivation type
      * for a BDK of <code>AES_128</code> or <code>TDES_2KEY</code>
@@ -42,14 +50,58 @@ public class DukptDerivationAttributes implements Serializable, Cloneable, Struc
      * </p>
      */
     private String dukptKeyVariant;
+
     /**
      * <p>
      * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
      * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
      * counter.
      * </p>
+     * 
+     * @param keySerialNumber
+     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *        transaction counter.
      */
-    private String keySerialNumber;
+
+    public void setKeySerialNumber(String keySerialNumber) {
+        this.keySerialNumber = keySerialNumber;
+    }
+
+    /**
+     * <p>
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
+     * </p>
+     * 
+     * @return The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *         encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *         transaction counter.
+     */
+
+    public String getKeySerialNumber() {
+        return this.keySerialNumber;
+    }
+
+    /**
+     * <p>
+     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
+     * counter.
+     * </p>
+     * 
+     * @param keySerialNumber
+     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
+     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
+     *        transaction counter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DukptDerivationAttributes withKeySerialNumber(String keySerialNumber) {
+        setKeySerialNumber(keySerialNumber);
+        return this;
+    }
 
     /**
      * <p>
@@ -186,58 +238,6 @@ public class DukptDerivationAttributes implements Serializable, Cloneable, Struc
     }
 
     /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @param keySerialNumber
-     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *        transaction counter.
-     */
-
-    public void setKeySerialNumber(String keySerialNumber) {
-        this.keySerialNumber = keySerialNumber;
-    }
-
-    /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @return The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *         encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *         transaction counter.
-     */
-
-    public String getKeySerialNumber() {
-        return this.keySerialNumber;
-    }
-
-    /**
-     * <p>
-     * The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     * encryption method. The KSN is derived from the encrypting device unique identifier and an internal transaction
-     * counter.
-     * </p>
-     * 
-     * @param keySerialNumber
-     *        The unique identifier known as Key Serial Number (KSN) that comes from an encrypting device using DUKPT
-     *        encryption method. The KSN is derived from the encrypting device unique identifier and an internal
-     *        transaction counter.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DukptDerivationAttributes withKeySerialNumber(String keySerialNumber) {
-        setKeySerialNumber(keySerialNumber);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -249,12 +249,12 @@ public class DukptDerivationAttributes implements Serializable, Cloneable, Struc
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getKeySerialNumber() != null)
+            sb.append("KeySerialNumber: ").append(getKeySerialNumber()).append(",");
         if (getDukptKeyDerivationType() != null)
             sb.append("DukptKeyDerivationType: ").append(getDukptKeyDerivationType()).append(",");
         if (getDukptKeyVariant() != null)
-            sb.append("DukptKeyVariant: ").append(getDukptKeyVariant()).append(",");
-        if (getKeySerialNumber() != null)
-            sb.append("KeySerialNumber: ").append(getKeySerialNumber());
+            sb.append("DukptKeyVariant: ").append(getDukptKeyVariant());
         sb.append("}");
         return sb.toString();
     }
@@ -269,6 +269,10 @@ public class DukptDerivationAttributes implements Serializable, Cloneable, Struc
         if (obj instanceof DukptDerivationAttributes == false)
             return false;
         DukptDerivationAttributes other = (DukptDerivationAttributes) obj;
+        if (other.getKeySerialNumber() == null ^ this.getKeySerialNumber() == null)
+            return false;
+        if (other.getKeySerialNumber() != null && other.getKeySerialNumber().equals(this.getKeySerialNumber()) == false)
+            return false;
         if (other.getDukptKeyDerivationType() == null ^ this.getDukptKeyDerivationType() == null)
             return false;
         if (other.getDukptKeyDerivationType() != null && other.getDukptKeyDerivationType().equals(this.getDukptKeyDerivationType()) == false)
@@ -276,10 +280,6 @@ public class DukptDerivationAttributes implements Serializable, Cloneable, Struc
         if (other.getDukptKeyVariant() == null ^ this.getDukptKeyVariant() == null)
             return false;
         if (other.getDukptKeyVariant() != null && other.getDukptKeyVariant().equals(this.getDukptKeyVariant()) == false)
-            return false;
-        if (other.getKeySerialNumber() == null ^ this.getKeySerialNumber() == null)
-            return false;
-        if (other.getKeySerialNumber() != null && other.getKeySerialNumber().equals(this.getKeySerialNumber()) == false)
             return false;
         return true;
     }
@@ -289,9 +289,9 @@ public class DukptDerivationAttributes implements Serializable, Cloneable, Struc
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getKeySerialNumber() == null) ? 0 : getKeySerialNumber().hashCode());
         hashCode = prime * hashCode + ((getDukptKeyDerivationType() == null) ? 0 : getDukptKeyDerivationType().hashCode());
         hashCode = prime * hashCode + ((getDukptKeyVariant() == null) ? 0 : getDukptKeyVariant().hashCode());
-        hashCode = prime * hashCode + ((getKeySerialNumber() == null) ? 0 : getKeySerialNumber().hashCode());
         return hashCode;
     }
 

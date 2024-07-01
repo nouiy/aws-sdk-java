@@ -48,17 +48,17 @@ public class SessionKeyMastercardJsonUnmarshaller implements Unmarshaller<Sessio
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
+                if (context.testExpression("PrimaryAccountNumber", targetDepth)) {
                     context.nextToken();
-                    sessionKeyMastercard.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
+                    sessionKeyMastercard.setPrimaryAccountNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PanSequenceNumber", targetDepth)) {
                     context.nextToken();
                     sessionKeyMastercard.setPanSequenceNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("PrimaryAccountNumber", targetDepth)) {
+                if (context.testExpression("ApplicationTransactionCounter", targetDepth)) {
                     context.nextToken();
-                    sessionKeyMastercard.setPrimaryAccountNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                    sessionKeyMastercard.setApplicationTransactionCounter(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UnpredictableNumber", targetDepth)) {
                     context.nextToken();

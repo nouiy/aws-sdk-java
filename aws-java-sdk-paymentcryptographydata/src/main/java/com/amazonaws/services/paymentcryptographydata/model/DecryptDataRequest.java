@@ -27,6 +27,17 @@ public class DecryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
+     * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext
+     * decryption.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
+     */
+    private String keyIdentifier;
+    /**
+     * <p>
      * The ciphertext to decrypt.
      * </p>
      */
@@ -39,11 +50,77 @@ public class DecryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
     private EncryptionDecryptionAttributes decryptionAttributes;
     /**
      * <p>
+     * The WrappedKeyBlock containing the encryption key for ciphertext decryption.
+     * </p>
+     */
+    private WrappedKey wrappedKey;
+
+    /**
+     * <p>
      * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext
      * decryption.
      * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @param keyIdentifier
+     *        The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
+     *        ciphertext decryption.</p>
+     *        <p>
+     *        When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *        it is the key identifier used to perform the operation.
      */
-    private String keyIdentifier;
+
+    public void setKeyIdentifier(String keyIdentifier) {
+        this.keyIdentifier = keyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext
+     * decryption.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @return The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
+     *         ciphertext decryption.</p>
+     *         <p>
+     *         When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *         it is the key identifier used to perform the operation.
+     */
+
+    public String getKeyIdentifier() {
+        return this.keyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext
+     * decryption.
+     * </p>
+     * <p>
+     * When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is
+     * the key identifier used to perform the operation.
+     * </p>
+     * 
+     * @param keyIdentifier
+     *        The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
+     *        ciphertext decryption.</p>
+     *        <p>
+     *        When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise,
+     *        it is the key identifier used to perform the operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DecryptDataRequest withKeyIdentifier(String keyIdentifier) {
+        setKeyIdentifier(keyIdentifier);
+        return this;
+    }
 
     /**
      * <p>
@@ -127,47 +204,41 @@ public class DecryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext
-     * decryption.
+     * The WrappedKeyBlock containing the encryption key for ciphertext decryption.
      * </p>
      * 
-     * @param keyIdentifier
-     *        The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
-     *        ciphertext decryption.
+     * @param wrappedKey
+     *        The WrappedKeyBlock containing the encryption key for ciphertext decryption.
      */
 
-    public void setKeyIdentifier(String keyIdentifier) {
-        this.keyIdentifier = keyIdentifier;
+    public void setWrappedKey(WrappedKey wrappedKey) {
+        this.wrappedKey = wrappedKey;
     }
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext
-     * decryption.
+     * The WrappedKeyBlock containing the encryption key for ciphertext decryption.
      * </p>
      * 
-     * @return The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
-     *         ciphertext decryption.
+     * @return The WrappedKeyBlock containing the encryption key for ciphertext decryption.
      */
 
-    public String getKeyIdentifier() {
-        return this.keyIdentifier;
+    public WrappedKey getWrappedKey() {
+        return this.wrappedKey;
     }
 
     /**
      * <p>
-     * The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext
-     * decryption.
+     * The WrappedKeyBlock containing the encryption key for ciphertext decryption.
      * </p>
      * 
-     * @param keyIdentifier
-     *        The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for
-     *        ciphertext decryption.
+     * @param wrappedKey
+     *        The WrappedKeyBlock containing the encryption key for ciphertext decryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public DecryptDataRequest withKeyIdentifier(String keyIdentifier) {
-        setKeyIdentifier(keyIdentifier);
+    public DecryptDataRequest withWrappedKey(WrappedKey wrappedKey) {
+        setWrappedKey(wrappedKey);
         return this;
     }
 
@@ -183,12 +254,14 @@ public class DecryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getKeyIdentifier() != null)
+            sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
         if (getCipherText() != null)
             sb.append("CipherText: ").append("***Sensitive Data Redacted***").append(",");
         if (getDecryptionAttributes() != null)
             sb.append("DecryptionAttributes: ").append(getDecryptionAttributes()).append(",");
-        if (getKeyIdentifier() != null)
-            sb.append("KeyIdentifier: ").append(getKeyIdentifier());
+        if (getWrappedKey() != null)
+            sb.append("WrappedKey: ").append(getWrappedKey());
         sb.append("}");
         return sb.toString();
     }
@@ -203,6 +276,10 @@ public class DecryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (obj instanceof DecryptDataRequest == false)
             return false;
         DecryptDataRequest other = (DecryptDataRequest) obj;
+        if (other.getKeyIdentifier() == null ^ this.getKeyIdentifier() == null)
+            return false;
+        if (other.getKeyIdentifier() != null && other.getKeyIdentifier().equals(this.getKeyIdentifier()) == false)
+            return false;
         if (other.getCipherText() == null ^ this.getCipherText() == null)
             return false;
         if (other.getCipherText() != null && other.getCipherText().equals(this.getCipherText()) == false)
@@ -211,9 +288,9 @@ public class DecryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getDecryptionAttributes() != null && other.getDecryptionAttributes().equals(this.getDecryptionAttributes()) == false)
             return false;
-        if (other.getKeyIdentifier() == null ^ this.getKeyIdentifier() == null)
+        if (other.getWrappedKey() == null ^ this.getWrappedKey() == null)
             return false;
-        if (other.getKeyIdentifier() != null && other.getKeyIdentifier().equals(this.getKeyIdentifier()) == false)
+        if (other.getWrappedKey() != null && other.getWrappedKey().equals(this.getWrappedKey()) == false)
             return false;
         return true;
     }
@@ -223,9 +300,10 @@ public class DecryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getKeyIdentifier() == null) ? 0 : getKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getCipherText() == null) ? 0 : getCipherText().hashCode());
         hashCode = prime * hashCode + ((getDecryptionAttributes() == null) ? 0 : getDecryptionAttributes().hashCode());
-        hashCode = prime * hashCode + ((getKeyIdentifier() == null) ? 0 : getKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getWrappedKey() == null) ? 0 : getWrappedKey().hashCode());
         return hashCode;
     }
 
