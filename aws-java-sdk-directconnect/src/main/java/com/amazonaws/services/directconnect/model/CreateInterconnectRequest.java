@@ -33,7 +33,7 @@ public class CreateInterconnectRequest extends com.amazonaws.AmazonWebServiceReq
     private String interconnectName;
     /**
      * <p>
-     * The port bandwidth, in Gbps. The possible values are 1 and 10.
+     * The port bandwidth, in Gbps. The possible values are 1, 10, and 100.
      * </p>
      */
     private String bandwidth;
@@ -104,11 +104,11 @@ public class CreateInterconnectRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The port bandwidth, in Gbps. The possible values are 1 and 10.
+     * The port bandwidth, in Gbps. The possible values are 1, 10, and 100.
      * </p>
      * 
      * @param bandwidth
-     *        The port bandwidth, in Gbps. The possible values are 1 and 10.
+     *        The port bandwidth, in Gbps. The possible values are 1, 10, and 100.
      */
 
     public void setBandwidth(String bandwidth) {
@@ -117,10 +117,10 @@ public class CreateInterconnectRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The port bandwidth, in Gbps. The possible values are 1 and 10.
+     * The port bandwidth, in Gbps. The possible values are 1, 10, and 100.
      * </p>
      * 
-     * @return The port bandwidth, in Gbps. The possible values are 1 and 10.
+     * @return The port bandwidth, in Gbps. The possible values are 1, 10, and 100.
      */
 
     public String getBandwidth() {
@@ -129,11 +129,11 @@ public class CreateInterconnectRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The port bandwidth, in Gbps. The possible values are 1 and 10.
+     * The port bandwidth, in Gbps. The possible values are 1, 10, and 100.
      * </p>
      * 
      * @param bandwidth
-     *        The port bandwidth, in Gbps. The possible values are 1 and 10.
+     *        The port bandwidth, in Gbps. The possible values are 1, 10, and 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

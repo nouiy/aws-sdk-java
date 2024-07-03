@@ -23,10 +23,23 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateDirectConnectGatewayResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Informaiton about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual private
+     * gateways or transit gateways.
+     * </p>
+     */
     private DirectConnectGateway directConnectGateway;
 
     /**
+     * <p>
+     * Informaiton about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual private
+     * gateways or transit gateways.
+     * </p>
+     * 
      * @param directConnectGateway
+     *        Informaiton about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual
+     *        private gateways or transit gateways.
      */
 
     public void setDirectConnectGateway(DirectConnectGateway directConnectGateway) {
@@ -34,7 +47,13 @@ public class UpdateDirectConnectGatewayResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * Informaiton about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual private
+     * gateways or transit gateways.
+     * </p>
+     * 
+     * @return Informaiton about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual
+     *         private gateways or transit gateways.
      */
 
     public DirectConnectGateway getDirectConnectGateway() {
@@ -42,7 +61,14 @@ public class UpdateDirectConnectGatewayResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Informaiton about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual private
+     * gateways or transit gateways.
+     * </p>
+     * 
      * @param directConnectGateway
+     *        Informaiton about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual
+     *        private gateways or transit gateways.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

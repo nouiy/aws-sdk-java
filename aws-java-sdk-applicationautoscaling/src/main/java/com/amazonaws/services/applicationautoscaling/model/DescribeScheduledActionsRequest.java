@@ -158,7 +158,7 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
+     * Pool of WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
      * Example: <code>workspacespool/wspool-123456</code>.
      * </p>
      * </li>
@@ -295,7 +295,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the WorkSpaces in
+     * the pool.
      * </p>
      * </li>
      * </ul>
@@ -577,7 +578,7 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
+     * Pool of WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
      * Example: <code>workspacespool/wspool-123456</code>.
      * </p>
      * </li>
@@ -703,8 +704,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool
-     *        ID. Example: <code>workspacespool/wspool-123456</code>.
+     *        Pool of WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the
+     *        pool ID. Example: <code>workspacespool/wspool-123456</code>.
      *        </p>
      *        </li>
      */
@@ -833,7 +834,7 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
+     * Pool of WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
      * Example: <code>workspacespool/wspool-123456</code>.
      * </p>
      * </li>
@@ -959,7 +960,7 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the
+     *         Pool of WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the
      *         pool ID. Example: <code>workspacespool/wspool-123456</code>.
      *         </p>
      *         </li>
@@ -1089,7 +1090,7 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
+     * Pool of WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool ID.
      * Example: <code>workspacespool/wspool-123456</code>.
      * </p>
      * </li>
@@ -1215,8 +1216,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        Amazon WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the pool
-     *        ID. Example: <code>workspacespool/wspool-123456</code>.
+     *        Pool of WorkSpaces - The resource type is <code>workspacespool</code> and the unique identifier is the
+     *        pool ID. Example: <code>workspacespool/wspool-123456</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1357,7 +1358,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the WorkSpaces in
+     * the pool.
      * </p>
      * </li>
      * </ul>
@@ -1493,7 +1495,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the
+     *        WorkSpaces in the pool.
      *        </p>
      *        </li>
      * @see ScalableDimension
@@ -1633,7 +1636,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the WorkSpaces in
+     * the pool.
      * </p>
      * </li>
      * </ul>
@@ -1768,7 +1772,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      *         </li>
      *         <li>
      *         <p>
-     *         <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     *         <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the
+     *         WorkSpaces in the pool.
      *         </p>
      *         </li>
      * @see ScalableDimension
@@ -1908,7 +1913,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the WorkSpaces in
+     * the pool.
      * </p>
      * </li>
      * </ul>
@@ -2044,7 +2050,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the
+     *        WorkSpaces in the pool.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2186,7 +2193,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     * <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the WorkSpaces in
+     * the pool.
      * </p>
      * </li>
      * </ul>
@@ -2322,7 +2330,8 @@ public class DescribeScheduledActionsRequest extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The capacity of a WorkSpaces pool.
+     *        <code>workspaces:workspacespool:DesiredUserSessions</code> - The number of user sessions for the
+     *        WorkSpaces in the pool.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

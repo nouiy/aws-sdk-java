@@ -93,7 +93,7 @@
  * </li>
  * <li>
  * <p>
- * WorkSpaces pools
+ * Pool of WorkSpaces
  * </p>
  * </li>
  * <li>

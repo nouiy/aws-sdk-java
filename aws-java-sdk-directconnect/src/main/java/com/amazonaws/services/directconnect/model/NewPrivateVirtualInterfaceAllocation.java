@@ -52,7 +52,7 @@ public class NewPrivateVirtualInterfaceAllocation implements Serializable, Clone
     private Integer asn;
     /**
      * <p>
-     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value is 1500.
      * </p>
      */
     private Integer mtu;
@@ -231,11 +231,11 @@ public class NewPrivateVirtualInterfaceAllocation implements Serializable, Clone
 
     /**
      * <p>
-     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value is 1500.
      * </p>
      * 
      * @param mtu
-     *        The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value
+     *        The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value
      *        is 1500.
      */
 
@@ -245,10 +245,10 @@ public class NewPrivateVirtualInterfaceAllocation implements Serializable, Clone
 
     /**
      * <p>
-     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value is 1500.
      * </p>
      * 
-     * @return The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value
+     * @return The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value
      *         is 1500.
      */
 
@@ -258,11 +258,11 @@ public class NewPrivateVirtualInterfaceAllocation implements Serializable, Clone
 
     /**
      * <p>
-     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value is 1500.
      * </p>
      * 
      * @param mtu
-     *        The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value
+     *        The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value
      *        is 1500.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

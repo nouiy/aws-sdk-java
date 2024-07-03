@@ -20,8 +20,8 @@ public class DetectModerationLabelsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     * detected.
+     * Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from the start
+     * of the video, they were detected.
      * </p>
      */
     private java.util.List<ModerationLabel> moderationLabels;
@@ -54,12 +54,12 @@ public class DetectModerationLabelsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     * detected.
+     * Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from the start
+     * of the video, they were detected.
      * </p>
      * 
-     * @return Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     *         detected.
+     * @return Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from
+     *         the start of the video, they were detected.
      */
 
     public java.util.List<ModerationLabel> getModerationLabels() {
@@ -68,13 +68,13 @@ public class DetectModerationLabelsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     * detected.
+     * Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from the start
+     * of the video, they were detected.
      * </p>
      * 
      * @param moderationLabels
-     *        Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     *        detected.
+     *        Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from
+     *        the start of the video, they were detected.
      */
 
     public void setModerationLabels(java.util.Collection<ModerationLabel> moderationLabels) {
@@ -88,8 +88,8 @@ public class DetectModerationLabelsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     * detected.
+     * Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from the start
+     * of the video, they were detected.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -98,8 +98,8 @@ public class DetectModerationLabelsResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param moderationLabels
-     *        Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     *        detected.
+     *        Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from
+     *        the start of the video, they were detected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,13 +115,13 @@ public class DetectModerationLabelsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     * detected.
+     * Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from the start
+     * of the video, they were detected.
      * </p>
      * 
      * @param moderationLabels
-     *        Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were
-     *        detected.
+     *        Array of detected Moderation labels. For video operations, this includes the time, in milliseconds from
+     *        the start of the video, they were detected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

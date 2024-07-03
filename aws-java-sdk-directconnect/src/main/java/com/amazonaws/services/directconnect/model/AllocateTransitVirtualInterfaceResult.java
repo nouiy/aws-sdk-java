@@ -24,10 +24,20 @@ import javax.annotation.Generated;
 public class AllocateTransitVirtualInterfaceResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * Information about the transit virtual interface.
+     * </p>
+     */
     private VirtualInterface virtualInterface;
 
     /**
+     * <p>
+     * Information about the transit virtual interface.
+     * </p>
+     * 
      * @param virtualInterface
+     *        Information about the transit virtual interface.
      */
 
     public void setVirtualInterface(VirtualInterface virtualInterface) {
@@ -35,7 +45,11 @@ public class AllocateTransitVirtualInterfaceResult extends com.amazonaws.AmazonW
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the transit virtual interface.
+     * </p>
+     * 
+     * @return Information about the transit virtual interface.
      */
 
     public VirtualInterface getVirtualInterface() {
@@ -43,7 +57,12 @@ public class AllocateTransitVirtualInterfaceResult extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * Information about the transit virtual interface.
+     * </p>
+     * 
      * @param virtualInterface
+     *        Information about the transit virtual interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

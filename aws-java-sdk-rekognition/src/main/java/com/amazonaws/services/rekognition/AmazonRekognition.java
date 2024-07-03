@@ -2535,6 +2535,10 @@ public interface AmazonRekognition {
      * <code>GetlabelDetection</code> and populate the <code>NextToken</code> request parameter with the token value
      * returned from the previous call to <code>GetLabelDetection</code>.
      * </p>
+     * <p>
+     * If you are retrieving results while using the Amazon Simple Notification Service, note that you will receive an
+     * "ERROR" notification if the job encounters an issue.
+     * </p>
      * 
      * @param getLabelDetectionRequest
      * @return Result of the GetLabelDetection operation returned by the service.

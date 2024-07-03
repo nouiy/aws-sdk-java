@@ -106,7 +106,7 @@ import com.amazonaws.services.applicationautoscaling.model.*;
  * </li>
  * <li>
  * <p>
- * WorkSpaces pools
+ * Pool of WorkSpaces
  * </p>
  * </li>
  * <li>

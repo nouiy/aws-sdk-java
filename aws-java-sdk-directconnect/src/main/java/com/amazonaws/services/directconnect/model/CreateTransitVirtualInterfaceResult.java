@@ -24,10 +24,20 @@ import javax.annotation.Generated;
 public class CreateTransitVirtualInterfaceResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * Information about a virtual interface.
+     * </p>
+     */
     private VirtualInterface virtualInterface;
 
     /**
+     * <p>
+     * Information about a virtual interface.
+     * </p>
+     * 
      * @param virtualInterface
+     *        Information about a virtual interface.
      */
 
     public void setVirtualInterface(VirtualInterface virtualInterface) {
@@ -35,7 +45,11 @@ public class CreateTransitVirtualInterfaceResult extends com.amazonaws.AmazonWeb
     }
 
     /**
-     * @return
+     * <p>
+     * Information about a virtual interface.
+     * </p>
+     * 
+     * @return Information about a virtual interface.
      */
 
     public VirtualInterface getVirtualInterface() {
@@ -43,7 +57,12 @@ public class CreateTransitVirtualInterfaceResult extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * Information about a virtual interface.
+     * </p>
+     * 
      * @param virtualInterface
+     *        Information about a virtual interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

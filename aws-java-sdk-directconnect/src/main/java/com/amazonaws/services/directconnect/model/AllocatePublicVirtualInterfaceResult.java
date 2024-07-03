@@ -53,7 +53,8 @@ public class AllocatePublicVirtualInterfaceResult extends com.amazonaws.AmazonWe
     private String connectionId;
     /**
      * <p>
-     * The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.
+     * The type of virtual interface. The possible values are <code>private</code>, <code>public</code> and
+     * <code>transit</code>.
      * </p>
      */
     private String virtualInterfaceType;
@@ -408,11 +409,13 @@ public class AllocatePublicVirtualInterfaceResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.
+     * The type of virtual interface. The possible values are <code>private</code>, <code>public</code> and
+     * <code>transit</code>.
      * </p>
      * 
      * @param virtualInterfaceType
-     *        The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.
+     *        The type of virtual interface. The possible values are <code>private</code>, <code>public</code> and
+     *        <code>transit</code>.
      */
 
     public void setVirtualInterfaceType(String virtualInterfaceType) {
@@ -421,10 +424,12 @@ public class AllocatePublicVirtualInterfaceResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.
+     * The type of virtual interface. The possible values are <code>private</code>, <code>public</code> and
+     * <code>transit</code>.
      * </p>
      * 
-     * @return The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.
+     * @return The type of virtual interface. The possible values are <code>private</code>, <code>public</code> and
+     *         <code>transit</code>.
      */
 
     public String getVirtualInterfaceType() {
@@ -433,11 +438,13 @@ public class AllocatePublicVirtualInterfaceResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.
+     * The type of virtual interface. The possible values are <code>private</code>, <code>public</code> and
+     * <code>transit</code>.
      * </p>
      * 
      * @param virtualInterfaceType
-     *        The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.
+     *        The type of virtual interface. The possible values are <code>private</code>, <code>public</code> and
+     *        <code>transit</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

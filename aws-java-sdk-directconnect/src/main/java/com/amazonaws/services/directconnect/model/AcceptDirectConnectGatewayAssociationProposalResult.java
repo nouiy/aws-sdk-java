@@ -25,10 +25,21 @@ import javax.annotation.Generated;
 public class AcceptDirectConnectGatewayAssociationProposalResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements
         Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about an association between a Direct Connect gateway and a virtual gateway or transit gateway.
+     * </p>
+     */
     private DirectConnectGatewayAssociation directConnectGatewayAssociation;
 
     /**
+     * <p>
+     * Information about an association between a Direct Connect gateway and a virtual gateway or transit gateway.
+     * </p>
+     * 
      * @param directConnectGatewayAssociation
+     *        Information about an association between a Direct Connect gateway and a virtual gateway or transit
+     *        gateway.
      */
 
     public void setDirectConnectGatewayAssociation(DirectConnectGatewayAssociation directConnectGatewayAssociation) {
@@ -36,7 +47,12 @@ public class AcceptDirectConnectGatewayAssociationProposalResult extends com.ama
     }
 
     /**
-     * @return
+     * <p>
+     * Information about an association between a Direct Connect gateway and a virtual gateway or transit gateway.
+     * </p>
+     * 
+     * @return Information about an association between a Direct Connect gateway and a virtual gateway or transit
+     *         gateway.
      */
 
     public DirectConnectGatewayAssociation getDirectConnectGatewayAssociation() {
@@ -44,7 +60,13 @@ public class AcceptDirectConnectGatewayAssociationProposalResult extends com.ama
     }
 
     /**
+     * <p>
+     * Information about an association between a Direct Connect gateway and a virtual gateway or transit gateway.
+     * </p>
+     * 
      * @param directConnectGatewayAssociation
+     *        Information about an association between a Direct Connect gateway and a virtual gateway or transit
+     *        gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

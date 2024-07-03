@@ -28,7 +28,7 @@ public class CreateLagRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a maximum
-     * of four connections when the port speed is 1G or 10G, or two when the port speed is 100G.
+     * of four connections when the port speed is 1Gbps or 10Gbps, or two when the port speed is 100Gbps or 400Gbps.
      * </p>
      */
     private Integer numberOfConnections;
@@ -40,8 +40,8 @@ public class CreateLagRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String location;
     /**
      * <p>
-     * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are 1Gbps
-     * and 10Gbps.
+     * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are
+     * 1Gbps,10Gbps, 100Gbps, and 400Gbps.
      * </p>
      */
     private String connectionsBandwidth;
@@ -93,12 +93,13 @@ public class CreateLagRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a maximum
-     * of four connections when the port speed is 1G or 10G, or two when the port speed is 100G.
+     * of four connections when the port speed is 1Gbps or 10Gbps, or two when the port speed is 100Gbps or 400Gbps.
      * </p>
      * 
      * @param numberOfConnections
      *        The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a
-     *        maximum of four connections when the port speed is 1G or 10G, or two when the port speed is 100G.
+     *        maximum of four connections when the port speed is 1Gbps or 10Gbps, or two when the port speed is 100Gbps
+     *        or 400Gbps.
      */
 
     public void setNumberOfConnections(Integer numberOfConnections) {
@@ -108,11 +109,12 @@ public class CreateLagRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a maximum
-     * of four connections when the port speed is 1G or 10G, or two when the port speed is 100G.
+     * of four connections when the port speed is 1Gbps or 10Gbps, or two when the port speed is 100Gbps or 400Gbps.
      * </p>
      * 
      * @return The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a
-     *         maximum of four connections when the port speed is 1G or 10G, or two when the port speed is 100G.
+     *         maximum of four connections when the port speed is 1Gbps or 10Gbps, or two when the port speed is 100Gbps
+     *         or 400Gbps.
      */
 
     public Integer getNumberOfConnections() {
@@ -122,12 +124,13 @@ public class CreateLagRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a maximum
-     * of four connections when the port speed is 1G or 10G, or two when the port speed is 100G.
+     * of four connections when the port speed is 1Gbps or 10Gbps, or two when the port speed is 100Gbps or 400Gbps.
      * </p>
      * 
      * @param numberOfConnections
      *        The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a
-     *        maximum of four connections when the port speed is 1G or 10G, or two when the port speed is 100G.
+     *        maximum of four connections when the port speed is 1Gbps or 10Gbps, or two when the port speed is 100Gbps
+     *        or 400Gbps.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -178,13 +181,13 @@ public class CreateLagRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are 1Gbps
-     * and 10Gbps.
+     * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are
+     * 1Gbps,10Gbps, 100Gbps, and 400Gbps.
      * </p>
      * 
      * @param connectionsBandwidth
      *        The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are
-     *        1Gbps and 10Gbps.
+     *        1Gbps,10Gbps, 100Gbps, and 400Gbps.
      */
 
     public void setConnectionsBandwidth(String connectionsBandwidth) {
@@ -193,12 +196,12 @@ public class CreateLagRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are 1Gbps
-     * and 10Gbps.
+     * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are
+     * 1Gbps,10Gbps, 100Gbps, and 400Gbps.
      * </p>
      * 
      * @return The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values
-     *         are 1Gbps and 10Gbps.
+     *         are 1Gbps,10Gbps, 100Gbps, and 400Gbps.
      */
 
     public String getConnectionsBandwidth() {
@@ -207,13 +210,13 @@ public class CreateLagRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are 1Gbps
-     * and 10Gbps.
+     * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are
+     * 1Gbps,10Gbps, 100Gbps, and 400Gbps.
      * </p>
      * 
      * @param connectionsBandwidth
      *        The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are
-     *        1Gbps and 10Gbps.
+     *        1Gbps,10Gbps, 100Gbps, and 400Gbps.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

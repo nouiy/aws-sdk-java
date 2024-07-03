@@ -39,6 +39,12 @@ public class CreateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String autoUpdate;
+    /**
+     * <p>
+     * A set of tags (key-value pairs) that you want to attach to the project.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
@@ -211,6 +217,74 @@ public class CreateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * A set of tags (key-value pairs) that you want to attach to the project.
+     * </p>
+     * 
+     * @return A set of tags (key-value pairs) that you want to attach to the project.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A set of tags (key-value pairs) that you want to attach to the project.
+     * </p>
+     * 
+     * @param tags
+     *        A set of tags (key-value pairs) that you want to attach to the project.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * A set of tags (key-value pairs) that you want to attach to the project.
+     * </p>
+     * 
+     * @param tags
+     *        A set of tags (key-value pairs) that you want to attach to the project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateProjectRequest withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see CreateProjectRequest#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateProjectRequest addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateProjectRequest clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -227,7 +301,9 @@ public class CreateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getFeature() != null)
             sb.append("Feature: ").append(getFeature()).append(",");
         if (getAutoUpdate() != null)
-            sb.append("AutoUpdate: ").append(getAutoUpdate());
+            sb.append("AutoUpdate: ").append(getAutoUpdate()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -254,6 +330,10 @@ public class CreateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getAutoUpdate() != null && other.getAutoUpdate().equals(this.getAutoUpdate()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -265,6 +345,7 @@ public class CreateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getProjectName() == null) ? 0 : getProjectName().hashCode());
         hashCode = prime * hashCode + ((getFeature() == null) ? 0 : getFeature().hashCode());
         hashCode = prime * hashCode + ((getAutoUpdate() == null) ? 0 : getAutoUpdate().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

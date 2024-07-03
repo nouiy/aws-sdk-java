@@ -118,9 +118,11 @@ public interface AmazonDirectConnect {
             AcceptDirectConnectGatewayAssociationProposalRequest acceptDirectConnectGatewayAssociationProposalRequest);
 
     /**
+     * <note>
      * <p>
      * Deprecated. Use <a>AllocateHostedConnection</a> instead.
      * </p>
+     * </note>
      * <p>
      * Creates a hosted connection on an interconnect.
      * </p>
@@ -675,12 +677,12 @@ public interface AmazonDirectConnect {
      * interface.
      * </p>
      * <p>
-     * All connections in a LAG must use the same bandwidth (either 1Gbps or 10Gbps) and must terminate at the same
-     * Direct Connect endpoint.
+     * All connections in a LAG must use the same bandwidth (either 1Gbps, 10Gbps, 100Gbps, or 400Gbps) and must
+     * terminate at the same Direct Connect endpoint.
      * </p>
      * <p>
-     * You can have up to 10 dedicated connections per LAG. Regardless of this limit, if you request more connections
-     * for the LAG than Direct Connect can allocate on a single endpoint, no LAG is created.
+     * You can have up to 10 dedicated connections per location. Regardless of this limit, if you request more
+     * connections for the LAG than Direct Connect can allocate on a single endpoint, no LAG is created..
      * </p>
      * <p>
      * You can specify an existing physical dedicated connection or interconnect to include in the LAG (which counts
@@ -720,7 +722,7 @@ public interface AmazonDirectConnect {
      * to a VGW only provides access to a single VPC within the same Region.
      * </p>
      * <p>
-     * Setting the MTU of a virtual interface to 9001 (jumbo frames) can cause an update to the underlying physical
+     * Setting the MTU of a virtual interface to 8500 (jumbo frames) can cause an update to the underlying physical
      * connection if it wasn't updated to support jumbo frames. Updating the connection disrupts network connectivity
      * for all virtual interfaces associated with the connection for up to 30 seconds. To check whether your connection
      * supports jumbo frames, call <a>DescribeConnections</a>. To check whether your virtual interface supports jumbo
@@ -971,9 +973,11 @@ public interface AmazonDirectConnect {
     DeleteVirtualInterfaceResult deleteVirtualInterface(DeleteVirtualInterfaceRequest deleteVirtualInterfaceRequest);
 
     /**
+     * <note>
      * <p>
      * Deprecated. Use <a>DescribeLoa</a> instead.
      * </p>
+     * </note>
      * <p>
      * Gets the LOA-CFA for a connection.
      * </p>
@@ -1023,9 +1027,11 @@ public interface AmazonDirectConnect {
     DescribeConnectionsResult describeConnections();
 
     /**
+     * <note>
      * <p>
      * Deprecated. Use <a>DescribeHostedConnections</a> instead.
      * </p>
+     * </note>
      * <p>
      * Lists the connections that have been provisioned on the specified interconnect.
      * </p>
@@ -1214,9 +1220,11 @@ public interface AmazonDirectConnect {
     DescribeHostedConnectionsResult describeHostedConnections(DescribeHostedConnectionsRequest describeHostedConnectionsRequest);
 
     /**
+     * <note>
      * <p>
      * Deprecated. Use <a>DescribeLoa</a> instead.
      * </p>
+     * </note>
      * <p>
      * Gets the LOA-CFA for the specified interconnect.
      * </p>
@@ -1365,6 +1373,13 @@ public interface AmazonDirectConnect {
     DescribeTagsResult describeTags(DescribeTagsRequest describeTagsRequest);
 
     /**
+     * <note>
+     * <p>
+     * Deprecated. Use <code>DescribeVpnGateways</code> instead. See <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpnGateways.html"
+     * >DescribeVPNGateways</a> in the <i>Amazon Elastic Compute Cloud API Reference</i>.
+     * </p>
+     * </note>
      * <p>
      * Lists the virtual private gateways owned by the Amazon Web Services account.
      * </p>
@@ -1698,7 +1713,7 @@ public interface AmazonDirectConnect {
      * Updates the specified attributes of the specified virtual private interface.
      * </p>
      * <p>
-     * Setting the MTU of a virtual interface to 9001 (jumbo frames) can cause an update to the underlying physical
+     * Setting the MTU of a virtual interface to 8500 (jumbo frames) can cause an update to the underlying physical
      * connection if it wasn't updated to support jumbo frames. Updating the connection disrupts network connectivity
      * for all virtual interfaces associated with the connection for up to 30 seconds. To check whether your connection
      * supports jumbo frames, call <a>DescribeConnections</a>. To check whether your virtual interface supports jumbo

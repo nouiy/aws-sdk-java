@@ -30,14 +30,15 @@ public class Lag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and
-     * 10Gbps.
+     * The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps, 10Gbps,
+     * 100Gbps, or 400 Gbps..
      * </p>
      */
     private String connectionsBandwidth;
     /**
      * <p>
-     * The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
+     * The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a maximum
+     * of four connections when the port speed is 1 Gbps or 10 Gbps, or two when the port speed is 100 Gbps or 400 Gbps.
      * </p>
      */
     private Integer numberOfConnections;
@@ -201,13 +202,13 @@ public class Lag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and
-     * 10Gbps.
+     * The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps, 10Gbps,
+     * 100Gbps, or 400 Gbps..
      * </p>
      * 
      * @param connectionsBandwidth
-     *        The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and
-     *        10Gbps.
+     *        The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps,
+     *        10Gbps, 100Gbps, or 400 Gbps..
      */
 
     public void setConnectionsBandwidth(String connectionsBandwidth) {
@@ -216,12 +217,12 @@ public class Lag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and
-     * 10Gbps.
+     * The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps, 10Gbps,
+     * 100Gbps, or 400 Gbps..
      * </p>
      * 
-     * @return The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps
-     *         and 10Gbps.
+     * @return The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps,
+     *         10Gbps, 100Gbps, or 400 Gbps..
      */
 
     public String getConnectionsBandwidth() {
@@ -230,13 +231,13 @@ public class Lag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and
-     * 10Gbps.
+     * The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps, 10Gbps,
+     * 100Gbps, or 400 Gbps..
      * </p>
      * 
      * @param connectionsBandwidth
-     *        The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and
-     *        10Gbps.
+     *        The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps,
+     *        10Gbps, 100Gbps, or 400 Gbps..
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -247,11 +248,14 @@ public class Lag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
+     * The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a maximum
+     * of four connections when the port speed is 1 Gbps or 10 Gbps, or two when the port speed is 100 Gbps or 400 Gbps.
      * </p>
      * 
      * @param numberOfConnections
-     *        The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
+     *        The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a
+     *        maximum of four connections when the port speed is 1 Gbps or 10 Gbps, or two when the port speed is 100
+     *        Gbps or 400 Gbps.
      */
 
     public void setNumberOfConnections(Integer numberOfConnections) {
@@ -260,10 +264,13 @@ public class Lag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
+     * The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a maximum
+     * of four connections when the port speed is 1 Gbps or 10 Gbps, or two when the port speed is 100 Gbps or 400 Gbps.
      * </p>
      * 
-     * @return The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
+     * @return The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a
+     *         maximum of four connections when the port speed is 1 Gbps or 10 Gbps, or two when the port speed is 100
+     *         Gbps or 400 Gbps.
      */
 
     public Integer getNumberOfConnections() {
@@ -272,11 +279,14 @@ public class Lag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
+     * The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a maximum
+     * of four connections when the port speed is 1 Gbps or 10 Gbps, or two when the port speed is 100 Gbps or 400 Gbps.
      * </p>
      * 
      * @param numberOfConnections
-     *        The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
+     *        The number of physical dedicated connections initially provisioned and bundled by the LAG. You can have a
+     *        maximum of four connections when the port speed is 1 Gbps or 10 Gbps, or two when the port speed is 100
+     *        Gbps or 400 Gbps.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

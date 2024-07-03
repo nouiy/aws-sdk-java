@@ -147,9 +147,8 @@ import javax.annotation.Generated;
  * <li>
  * <p>
  * MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate
- * the organization's management account to the marketplace that corresponds to the management account's address. For
- * example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization
- * must be associated with the same marketplace.
+ * the organization's management account to the marketplace that corresponds to the management account's address. All
+ * accounts in an organization must be associated with the same marketplace.
  * </p>
  * </li>
  * <li>

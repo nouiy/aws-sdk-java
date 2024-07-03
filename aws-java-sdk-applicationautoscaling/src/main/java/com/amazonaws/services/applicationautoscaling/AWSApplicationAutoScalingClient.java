@@ -132,7 +132,7 @@ import com.amazonaws.services.applicationautoscaling.model.transform.*;
  * </li>
  * <li>
  * <p>
- * WorkSpaces pools
+ * Pool of WorkSpaces
  * </p>
  * </li>
  * <li>

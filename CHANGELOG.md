@@ -1,3 +1,24 @@
+# __1.12.756__ __2024-07-03__
+## __AWS Direct Connect__
+  - ### Features
+    - This update includes documentation for support of new native 400 GBps ports for Direct Connect.
+
+## __AWS Organizations__
+  - ### Features
+    - Added a new reason under ConstraintViolationException in RegisterDelegatedAdministrator API to prevent registering suspended accounts as delegated administrator of a service.
+
+## __Amazon Rekognition__
+  - ### Features
+    - This release adds support for tagging projects and datasets with the CreateProject and CreateDataset APIs.
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - Fix create workspace bundle RootStorage/UserStorage to accept non null values
+
+## __Application Auto Scaling__
+  - ### Features
+    - Doc only update for Application Auto Scaling that fixes resource name.
+
 # __1.12.755__ __2024-07-02__
 ## __Amazon Elastic Compute Cloud__
   - ### Features
