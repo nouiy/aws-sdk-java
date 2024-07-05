@@ -134,7 +134,7 @@ public class SessionKeyDerivationValue implements Serializable, Cloneable, Struc
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getApplicationCryptogram() != null)
-            sb.append("ApplicationCryptogram: ").append(getApplicationCryptogram()).append(",");
+            sb.append("ApplicationCryptogram: ").append("***Sensitive Data Redacted***").append(",");
         if (getApplicationTransactionCounter() != null)
             sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter());
         sb.append("}");

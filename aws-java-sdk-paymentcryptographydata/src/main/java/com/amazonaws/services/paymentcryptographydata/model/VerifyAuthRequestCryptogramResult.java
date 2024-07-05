@@ -212,7 +212,7 @@ public class VerifyAuthRequestCryptogramResult extends com.amazonaws.AmazonWebSe
         if (getKeyCheckValue() != null)
             sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
         if (getAuthResponseValue() != null)
-            sb.append("AuthResponseValue: ").append(getAuthResponseValue());
+            sb.append("AuthResponseValue: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

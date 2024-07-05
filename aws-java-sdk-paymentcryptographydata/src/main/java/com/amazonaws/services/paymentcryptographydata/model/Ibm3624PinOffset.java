@@ -240,13 +240,13 @@ public class Ibm3624PinOffset implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEncryptedPinBlock() != null)
-            sb.append("EncryptedPinBlock: ").append(getEncryptedPinBlock()).append(",");
+            sb.append("EncryptedPinBlock: ").append("***Sensitive Data Redacted***").append(",");
         if (getDecimalizationTable() != null)
-            sb.append("DecimalizationTable: ").append(getDecimalizationTable()).append(",");
+            sb.append("DecimalizationTable: ").append("***Sensitive Data Redacted***").append(",");
         if (getPinValidationDataPadCharacter() != null)
             sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter()).append(",");
         if (getPinValidationData() != null)
-            sb.append("PinValidationData: ").append(getPinValidationData());
+            sb.append("PinValidationData: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

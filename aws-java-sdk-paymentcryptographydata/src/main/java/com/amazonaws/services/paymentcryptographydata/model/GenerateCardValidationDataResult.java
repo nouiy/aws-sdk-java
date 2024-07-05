@@ -211,7 +211,7 @@ public class GenerateCardValidationDataResult extends com.amazonaws.AmazonWebSer
         if (getKeyCheckValue() != null)
             sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
         if (getValidationData() != null)
-            sb.append("ValidationData: ").append(getValidationData());
+            sb.append("ValidationData: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

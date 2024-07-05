@@ -56,23 +56,18 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      * to the website.
      * </p>
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>, this
-     * parameter will only return the first 100 subject alternative names included in the certificate. To display the
-     * full list of subject alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative names
+     * included in the certificate. To display the full list of subject alternative names, use
+     * <a>DescribeCertificate</a>.
      * </p>
      */
     private java.util.List<String> subjectAlternativeNameSummaries;
     /**
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     * indicates whether the full list of subject alternative names has been included in the response. If false, the
-     * response includes all of the subject alternative names included in the certificate. If true, the response only
-     * includes the first 100 subject alternative names included in the certificate. To display the full list of subject
-     * alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has been
+     * included in the response. If false, the response includes all of the subject alternative names included in the
+     * certificate. If true, the response only includes the first 100 subject alternative names included in the
+     * certificate. To display the full list of subject alternative names, use <a>DescribeCertificate</a>.
      * </p>
      */
     private Boolean hasAdditionalSubjectAlternativeNames;
@@ -318,11 +313,9 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      * to the website.
      * </p>
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>, this
-     * parameter will only return the first 100 subject alternative names included in the certificate. To display the
-     * full list of subject alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative names
+     * included in the certificate. To display the full list of subject alternative names, use
+     * <a>DescribeCertificate</a>.
      * </p>
      * 
      * @return One or more domain names (subject alternative names) included in the certificate. This list contains the
@@ -330,12 +323,9 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      *         alternative names include the canonical domain name (CN) of the certificate and additional domain names
      *         that can be used to connect to the website. </p>
      *         <p>
-     *         When called by <a
-     *         href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     *         this parameter will only return the first 100 subject alternative names included in the certificate. To
-     *         display the full list of subject alternative names, use <a
-     *         href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html"
-     *         >DescribeCertificate</a>.
+     *         When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative
+     *         names included in the certificate. To display the full list of subject alternative names, use
+     *         <a>DescribeCertificate</a>.
      */
 
     public java.util.List<String> getSubjectAlternativeNameSummaries() {
@@ -350,11 +340,9 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      * to the website.
      * </p>
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>, this
-     * parameter will only return the first 100 subject alternative names included in the certificate. To display the
-     * full list of subject alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative names
+     * included in the certificate. To display the full list of subject alternative names, use
+     * <a>DescribeCertificate</a>.
      * </p>
      * 
      * @param subjectAlternativeNameSummaries
@@ -363,12 +351,9 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      *        alternative names include the canonical domain name (CN) of the certificate and additional domain names
      *        that can be used to connect to the website. </p>
      *        <p>
-     *        When called by <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     *        this parameter will only return the first 100 subject alternative names included in the certificate. To
-     *        display the full list of subject alternative names, use <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html"
-     *        >DescribeCertificate</a>.
+     *        When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative
+     *        names included in the certificate. To display the full list of subject alternative names, use
+     *        <a>DescribeCertificate</a>.
      */
 
     public void setSubjectAlternativeNameSummaries(java.util.Collection<String> subjectAlternativeNameSummaries) {
@@ -388,11 +373,9 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      * to the website.
      * </p>
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>, this
-     * parameter will only return the first 100 subject alternative names included in the certificate. To display the
-     * full list of subject alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative names
+     * included in the certificate. To display the full list of subject alternative names, use
+     * <a>DescribeCertificate</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -406,12 +389,9 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      *        alternative names include the canonical domain name (CN) of the certificate and additional domain names
      *        that can be used to connect to the website. </p>
      *        <p>
-     *        When called by <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     *        this parameter will only return the first 100 subject alternative names included in the certificate. To
-     *        display the full list of subject alternative names, use <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html"
-     *        >DescribeCertificate</a>.
+     *        When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative
+     *        names included in the certificate. To display the full list of subject alternative names, use
+     *        <a>DescribeCertificate</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -433,11 +413,9 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      * to the website.
      * </p>
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>, this
-     * parameter will only return the first 100 subject alternative names included in the certificate. To display the
-     * full list of subject alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative names
+     * included in the certificate. To display the full list of subject alternative names, use
+     * <a>DescribeCertificate</a>.
      * </p>
      * 
      * @param subjectAlternativeNameSummaries
@@ -446,12 +424,9 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
      *        alternative names include the canonical domain name (CN) of the certificate and additional domain names
      *        that can be used to connect to the website. </p>
      *        <p>
-     *        When called by <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     *        this parameter will only return the first 100 subject alternative names included in the certificate. To
-     *        display the full list of subject alternative names, use <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html"
-     *        >DescribeCertificate</a>.
+     *        When called by <a>ListCertificates</a>, this parameter will only return the first 100 subject alternative
+     *        names included in the certificate. To display the full list of subject alternative names, use
+     *        <a>DescribeCertificate</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -462,24 +437,18 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     * indicates whether the full list of subject alternative names has been included in the response. If false, the
-     * response includes all of the subject alternative names included in the certificate. If true, the response only
-     * includes the first 100 subject alternative names included in the certificate. To display the full list of subject
-     * alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has been
+     * included in the response. If false, the response includes all of the subject alternative names included in the
+     * certificate. If true, the response only includes the first 100 subject alternative names included in the
+     * certificate. To display the full list of subject alternative names, use <a>DescribeCertificate</a>.
      * </p>
      * 
      * @param hasAdditionalSubjectAlternativeNames
-     *        When called by <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     *        indicates whether the full list of subject alternative names has been included in the response. If false,
-     *        the response includes all of the subject alternative names included in the certificate. If true, the
-     *        response only includes the first 100 subject alternative names included in the certificate. To display the
-     *        full list of subject alternative names, use <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html"
-     *        >DescribeCertificate</a>.
+     *        When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has
+     *        been included in the response. If false, the response includes all of the subject alternative names
+     *        included in the certificate. If true, the response only includes the first 100 subject alternative names
+     *        included in the certificate. To display the full list of subject alternative names, use
+     *        <a>DescribeCertificate</a>.
      */
 
     public void setHasAdditionalSubjectAlternativeNames(Boolean hasAdditionalSubjectAlternativeNames) {
@@ -488,23 +457,17 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     * indicates whether the full list of subject alternative names has been included in the response. If false, the
-     * response includes all of the subject alternative names included in the certificate. If true, the response only
-     * includes the first 100 subject alternative names included in the certificate. To display the full list of subject
-     * alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has been
+     * included in the response. If false, the response includes all of the subject alternative names included in the
+     * certificate. If true, the response only includes the first 100 subject alternative names included in the
+     * certificate. To display the full list of subject alternative names, use <a>DescribeCertificate</a>.
      * </p>
      * 
-     * @return When called by <a
-     *         href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     *         indicates whether the full list of subject alternative names has been included in the response. If false,
-     *         the response includes all of the subject alternative names included in the certificate. If true, the
-     *         response only includes the first 100 subject alternative names included in the certificate. To display
-     *         the full list of subject alternative names, use <a
-     *         href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html"
-     *         >DescribeCertificate</a>.
+     * @return When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has
+     *         been included in the response. If false, the response includes all of the subject alternative names
+     *         included in the certificate. If true, the response only includes the first 100 subject alternative names
+     *         included in the certificate. To display the full list of subject alternative names, use
+     *         <a>DescribeCertificate</a>.
      */
 
     public Boolean getHasAdditionalSubjectAlternativeNames() {
@@ -513,24 +476,18 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     * indicates whether the full list of subject alternative names has been included in the response. If false, the
-     * response includes all of the subject alternative names included in the certificate. If true, the response only
-     * includes the first 100 subject alternative names included in the certificate. To display the full list of subject
-     * alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has been
+     * included in the response. If false, the response includes all of the subject alternative names included in the
+     * certificate. If true, the response only includes the first 100 subject alternative names included in the
+     * certificate. To display the full list of subject alternative names, use <a>DescribeCertificate</a>.
      * </p>
      * 
      * @param hasAdditionalSubjectAlternativeNames
-     *        When called by <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     *        indicates whether the full list of subject alternative names has been included in the response. If false,
-     *        the response includes all of the subject alternative names included in the certificate. If true, the
-     *        response only includes the first 100 subject alternative names included in the certificate. To display the
-     *        full list of subject alternative names, use <a
-     *        href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html"
-     *        >DescribeCertificate</a>.
+     *        When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has
+     *        been included in the response. If false, the response includes all of the subject alternative names
+     *        included in the certificate. If true, the response only includes the first 100 subject alternative names
+     *        included in the certificate. To display the full list of subject alternative names, use
+     *        <a>DescribeCertificate</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -541,23 +498,17 @@ public class CertificateSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * When called by <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     * indicates whether the full list of subject alternative names has been included in the response. If false, the
-     * response includes all of the subject alternative names included in the certificate. If true, the response only
-     * includes the first 100 subject alternative names included in the certificate. To display the full list of subject
-     * alternative names, use <a
-     * href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html">DescribeCertificate</a>.
+     * When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has been
+     * included in the response. If false, the response includes all of the subject alternative names included in the
+     * certificate. If true, the response only includes the first 100 subject alternative names included in the
+     * certificate. To display the full list of subject alternative names, use <a>DescribeCertificate</a>.
      * </p>
      * 
-     * @return When called by <a
-     *         href="https://docs.aws.amazon.com/acm/latestAPIReference/API_ListCertificates.html">ListCertificates</a>,
-     *         indicates whether the full list of subject alternative names has been included in the response. If false,
-     *         the response includes all of the subject alternative names included in the certificate. If true, the
-     *         response only includes the first 100 subject alternative names included in the certificate. To display
-     *         the full list of subject alternative names, use <a
-     *         href="https://docs.aws.amazon.com/acm/latestAPIReference/API_DescribeCertificate.html"
-     *         >DescribeCertificate</a>.
+     * @return When called by <a>ListCertificates</a>, indicates whether the full list of subject alternative names has
+     *         been included in the response. If false, the response includes all of the subject alternative names
+     *         included in the certificate. If true, the response only includes the first 100 subject alternative names
+     *         included in the certificate. To display the full list of subject alternative names, use
+     *         <a>DescribeCertificate</a>.
      */
 
     public Boolean isHasAdditionalSubjectAlternativeNames() {

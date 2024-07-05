@@ -233,13 +233,13 @@ public class Ibm3624PinFromOffset implements Serializable, Cloneable, Structured
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDecimalizationTable() != null)
-            sb.append("DecimalizationTable: ").append(getDecimalizationTable()).append(",");
+            sb.append("DecimalizationTable: ").append("***Sensitive Data Redacted***").append(",");
         if (getPinValidationDataPadCharacter() != null)
             sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter()).append(",");
         if (getPinValidationData() != null)
-            sb.append("PinValidationData: ").append(getPinValidationData()).append(",");
+            sb.append("PinValidationData: ").append("***Sensitive Data Redacted***").append(",");
         if (getPinOffset() != null)
-            sb.append("PinOffset: ").append(getPinOffset());
+            sb.append("PinOffset: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

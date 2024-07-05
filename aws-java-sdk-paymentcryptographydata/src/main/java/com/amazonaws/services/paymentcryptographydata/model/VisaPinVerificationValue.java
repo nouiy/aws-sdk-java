@@ -141,7 +141,7 @@ public class VisaPinVerificationValue implements Serializable, Cloneable, Struct
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEncryptedPinBlock() != null)
-            sb.append("EncryptedPinBlock: ").append(getEncryptedPinBlock()).append(",");
+            sb.append("EncryptedPinBlock: ").append("***Sensitive Data Redacted***").append(",");
         if (getPinVerificationKeyIndex() != null)
             sb.append("PinVerificationKeyIndex: ").append(getPinVerificationKeyIndex());
         sb.append("}");

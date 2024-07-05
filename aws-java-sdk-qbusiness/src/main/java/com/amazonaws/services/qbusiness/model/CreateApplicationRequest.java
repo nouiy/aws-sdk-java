@@ -83,6 +83,14 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private QAppsConfiguration qAppsConfiguration;
+    /**
+     * <p>
+     * Configuration information about chat response personalization. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html">Personalizing
+     * chat responses</a>
+     * </p>
+     */
+    private PersonalizationConfiguration personalizationConfiguration;
 
     /**
      * <p>
@@ -506,6 +514,58 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Configuration information about chat response personalization. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html">Personalizing
+     * chat responses</a>
+     * </p>
+     * 
+     * @param personalizationConfiguration
+     *        Configuration information about chat response personalization. For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html"
+     *        >Personalizing chat responses</a>
+     */
+
+    public void setPersonalizationConfiguration(PersonalizationConfiguration personalizationConfiguration) {
+        this.personalizationConfiguration = personalizationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information about chat response personalization. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html">Personalizing
+     * chat responses</a>
+     * </p>
+     * 
+     * @return Configuration information about chat response personalization. For more information, see <a
+     *         href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html"
+     *         >Personalizing chat responses</a>
+     */
+
+    public PersonalizationConfiguration getPersonalizationConfiguration() {
+        return this.personalizationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information about chat response personalization. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html">Personalizing
+     * chat responses</a>
+     * </p>
+     * 
+     * @param personalizationConfiguration
+     *        Configuration information about chat response personalization. For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html"
+     *        >Personalizing chat responses</a>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateApplicationRequest withPersonalizationConfiguration(PersonalizationConfiguration personalizationConfiguration) {
+        setPersonalizationConfiguration(personalizationConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -534,7 +594,9 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getAttachmentsConfiguration() != null)
             sb.append("AttachmentsConfiguration: ").append(getAttachmentsConfiguration()).append(",");
         if (getQAppsConfiguration() != null)
-            sb.append("QAppsConfiguration: ").append(getQAppsConfiguration());
+            sb.append("QAppsConfiguration: ").append(getQAppsConfiguration()).append(",");
+        if (getPersonalizationConfiguration() != null)
+            sb.append("PersonalizationConfiguration: ").append(getPersonalizationConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -585,6 +647,10 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getQAppsConfiguration() != null && other.getQAppsConfiguration().equals(this.getQAppsConfiguration()) == false)
             return false;
+        if (other.getPersonalizationConfiguration() == null ^ this.getPersonalizationConfiguration() == null)
+            return false;
+        if (other.getPersonalizationConfiguration() != null && other.getPersonalizationConfiguration().equals(this.getPersonalizationConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -602,6 +668,7 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getAttachmentsConfiguration() == null) ? 0 : getAttachmentsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getQAppsConfiguration() == null) ? 0 : getQAppsConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getPersonalizationConfiguration() == null) ? 0 : getPersonalizationConfiguration().hashCode());
         return hashCode;
     }
 

@@ -141,9 +141,9 @@ public class PinData implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getPinOffset() != null)
-            sb.append("PinOffset: ").append(getPinOffset()).append(",");
+            sb.append("PinOffset: ").append("***Sensitive Data Redacted***").append(",");
         if (getVerificationValue() != null)
-            sb.append("VerificationValue: ").append(getVerificationValue());
+            sb.append("VerificationValue: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

@@ -524,7 +524,7 @@ public class VerifyPinDataRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getVerificationAttributes() != null)
             sb.append("VerificationAttributes: ").append(getVerificationAttributes()).append(",");
         if (getEncryptedPinBlock() != null)
-            sb.append("EncryptedPinBlock: ").append(getEncryptedPinBlock()).append(",");
+            sb.append("EncryptedPinBlock: ").append("***Sensitive Data Redacted***").append(",");
         if (getPrimaryAccountNumber() != null)
             sb.append("PrimaryAccountNumber: ").append("***Sensitive Data Redacted***").append(",");
         if (getPinBlockFormat() != null)

@@ -89,7 +89,7 @@ public class AmexCardSecurityCodeVersion1 implements Serializable, Cloneable, St
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCardExpiryDate() != null)
-            sb.append("CardExpiryDate: ").append(getCardExpiryDate());
+            sb.append("CardExpiryDate: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

@@ -134,9 +134,9 @@ public class CardVerificationValue1 implements Serializable, Cloneable, Structur
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCardExpiryDate() != null)
-            sb.append("CardExpiryDate: ").append(getCardExpiryDate()).append(",");
+            sb.append("CardExpiryDate: ").append("***Sensitive Data Redacted***").append(",");
         if (getServiceCode() != null)
-            sb.append("ServiceCode: ").append(getServiceCode());
+            sb.append("ServiceCode: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

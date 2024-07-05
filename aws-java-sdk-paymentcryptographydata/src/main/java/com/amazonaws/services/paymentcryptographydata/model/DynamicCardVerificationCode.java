@@ -247,7 +247,7 @@ public class DynamicCardVerificationCode implements Serializable, Cloneable, Str
         if (getApplicationTransactionCounter() != null)
             sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter()).append(",");
         if (getTrackData() != null)
-            sb.append("TrackData: ").append(getTrackData());
+            sb.append("TrackData: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

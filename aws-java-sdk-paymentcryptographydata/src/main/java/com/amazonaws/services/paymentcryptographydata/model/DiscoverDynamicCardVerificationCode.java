@@ -181,7 +181,7 @@ public class DiscoverDynamicCardVerificationCode implements Serializable, Clonea
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCardExpiryDate() != null)
-            sb.append("CardExpiryDate: ").append(getCardExpiryDate()).append(",");
+            sb.append("CardExpiryDate: ").append("***Sensitive Data Redacted***").append(",");
         if (getUnpredictableNumber() != null)
             sb.append("UnpredictableNumber: ").append(getUnpredictableNumber()).append(",");
         if (getApplicationTransactionCounter() != null)

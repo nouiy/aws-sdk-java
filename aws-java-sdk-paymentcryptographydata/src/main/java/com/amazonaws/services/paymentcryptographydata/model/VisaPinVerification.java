@@ -143,7 +143,7 @@ public class VisaPinVerification implements Serializable, Cloneable, StructuredP
         if (getPinVerificationKeyIndex() != null)
             sb.append("PinVerificationKeyIndex: ").append(getPinVerificationKeyIndex()).append(",");
         if (getVerificationValue() != null)
-            sb.append("VerificationValue: ").append(getVerificationValue());
+            sb.append("VerificationValue: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

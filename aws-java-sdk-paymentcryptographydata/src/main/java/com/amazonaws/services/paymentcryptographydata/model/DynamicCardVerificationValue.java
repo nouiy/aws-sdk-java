@@ -229,9 +229,9 @@ public class DynamicCardVerificationValue implements Serializable, Cloneable, St
         if (getPanSequenceNumber() != null)
             sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
         if (getCardExpiryDate() != null)
-            sb.append("CardExpiryDate: ").append(getCardExpiryDate()).append(",");
+            sb.append("CardExpiryDate: ").append("***Sensitive Data Redacted***").append(",");
         if (getServiceCode() != null)
-            sb.append("ServiceCode: ").append(getServiceCode()).append(",");
+            sb.append("ServiceCode: ").append("***Sensitive Data Redacted***").append(",");
         if (getApplicationTransactionCounter() != null)
             sb.append("ApplicationTransactionCounter: ").append(getApplicationTransactionCounter());
         sb.append("}");

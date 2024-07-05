@@ -1,3 +1,20 @@
+# __1.12.757__ __2024-07-05__
+## __AWS Certificate Manager__
+  - ### Features
+    - Documentation updates, including fixes for xml formatting, broken links, and ListCertificates description.
+
+## __Amazon EC2 Container Registry__
+  - ### Features
+    - This release for Amazon ECR makes change to bring the SDK into sync with the API.
+
+## __Payment Cryptography Data Plane__
+  - ### Features
+    - Added further restrictions on logging of potentially sensitive inputs and outputs.
+
+## __QBusiness__
+  - ### Features
+    - Add personalization to Q Applications. Customers can enable or disable personalization when creating or updating a Q application with the personalization configuration.
+
 # __1.12.756__ __2024-07-03__
 ## __AWS Direct Connect__
   - ### Features

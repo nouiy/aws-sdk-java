@@ -59,12 +59,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code/>SUCCESS
+     * <code>SUCCESS</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code/>FAILED
+     * <code>FAILED</code>
      * </p>
      * </li>
      * </ul>
@@ -258,12 +258,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code/>SUCCESS
+     * <code>SUCCESS</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code/>FAILED
+     * <code>FAILED</code>
      * </p>
      * </li>
      * </ul>
@@ -278,12 +278,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        <code/>SUCCESS
+     *        <code>SUCCESS</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code/>FAILED
+     *        <code>FAILED</code>
      *        </p>
      *        </li>
      * @see DomainStatus
@@ -305,12 +305,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code/>SUCCESS
+     * <code>SUCCESS</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code/>FAILED
+     * <code>FAILED</code>
      * </p>
      * </li>
      * </ul>
@@ -324,12 +324,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      *         </li>
      *         <li>
      *         <p>
-     *         <code/>SUCCESS
+     *         <code>SUCCESS</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code/>FAILED
+     *         <code>FAILED</code>
      *         </p>
      *         </li>
      * @see DomainStatus
@@ -351,12 +351,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code/>SUCCESS
+     * <code>SUCCESS</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code/>FAILED
+     * <code>FAILED</code>
      * </p>
      * </li>
      * </ul>
@@ -371,12 +371,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        <code/>SUCCESS
+     *        <code>SUCCESS</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code/>FAILED
+     *        <code>FAILED</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -400,12 +400,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code/>SUCCESS
+     * <code>SUCCESS</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code/>FAILED
+     * <code>FAILED</code>
      * </p>
      * </li>
      * </ul>
@@ -420,12 +420,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        <code/>SUCCESS
+     *        <code>SUCCESS</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code/>FAILED
+     *        <code>FAILED</code>
      *        </p>
      *        </li>
      * @see DomainStatus
@@ -447,12 +447,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * <code/>SUCCESS
+     * <code>SUCCESS</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code/>FAILED
+     * <code>FAILED</code>
      * </p>
      * </li>
      * </ul>
@@ -467,12 +467,12 @@ public class DomainValidation implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        <code/>SUCCESS
+     *        <code>SUCCESS</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code/>FAILED
+     *        <code>FAILED</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

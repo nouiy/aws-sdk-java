@@ -187,11 +187,11 @@ public class Ibm3624RandomPin implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDecimalizationTable() != null)
-            sb.append("DecimalizationTable: ").append(getDecimalizationTable()).append(",");
+            sb.append("DecimalizationTable: ").append("***Sensitive Data Redacted***").append(",");
         if (getPinValidationDataPadCharacter() != null)
             sb.append("PinValidationDataPadCharacter: ").append(getPinValidationDataPadCharacter()).append(",");
         if (getPinValidationData() != null)
-            sb.append("PinValidationData: ").append(getPinValidationData());
+            sb.append("PinValidationData: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

@@ -243,7 +243,7 @@ public class VerifyCardValidationDataRequest extends com.amazonaws.AmazonWebServ
         if (getVerificationAttributes() != null)
             sb.append("VerificationAttributes: ").append(getVerificationAttributes()).append(",");
         if (getValidationData() != null)
-            sb.append("ValidationData: ").append(getValidationData());
+            sb.append("ValidationData: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

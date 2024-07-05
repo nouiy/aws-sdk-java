@@ -383,7 +383,7 @@ public class EmvEncryptionAttributes implements Serializable, Cloneable, Structu
         if (getPanSequenceNumber() != null)
             sb.append("PanSequenceNumber: ").append(getPanSequenceNumber()).append(",");
         if (getSessionDerivationData() != null)
-            sb.append("SessionDerivationData: ").append(getSessionDerivationData()).append(",");
+            sb.append("SessionDerivationData: ").append("***Sensitive Data Redacted***").append(",");
         if (getMode() != null)
             sb.append("Mode: ").append(getMode()).append(",");
         if (getInitializationVector() != null)

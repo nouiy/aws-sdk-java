@@ -207,7 +207,7 @@ public class TranslatePinDataResult extends com.amazonaws.AmazonWebServiceResult
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getPinBlock() != null)
-            sb.append("PinBlock: ").append(getPinBlock()).append(",");
+            sb.append("PinBlock: ").append("***Sensitive Data Redacted***").append(",");
         if (getKeyArn() != null)
             sb.append("KeyArn: ").append(getKeyArn()).append(",");
         if (getKeyCheckValue() != null)

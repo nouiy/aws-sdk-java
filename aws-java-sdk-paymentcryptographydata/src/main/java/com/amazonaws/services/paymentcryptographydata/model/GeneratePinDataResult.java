@@ -399,7 +399,7 @@ public class GeneratePinDataResult extends com.amazonaws.AmazonWebServiceResult<
         if (getEncryptionKeyCheckValue() != null)
             sb.append("EncryptionKeyCheckValue: ").append(getEncryptionKeyCheckValue()).append(",");
         if (getEncryptedPinBlock() != null)
-            sb.append("EncryptedPinBlock: ").append(getEncryptedPinBlock()).append(",");
+            sb.append("EncryptedPinBlock: ").append("***Sensitive Data Redacted***").append(",");
         if (getPinData() != null)
             sb.append("PinData: ").append(getPinData());
         sb.append("}");

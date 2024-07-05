@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -751,7 +751,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "CardExpiryDate",
-        "c2jShape" : "NumberLengthEquals4",
+        "c2jShape" : "CardExpiryDateType",
         "deprecated" : false,
         "documentation" : "<p>The expiry date of a payment card.</p>",
         "endpointDiscoveryId" : false,
@@ -791,7 +791,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "CardExpiryDate",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
         "setterMethodName" : "setCardExpiryDate",
         "setterModel" : {
@@ -822,7 +822,7 @@
       "membersAsMap" : {
         "CardExpiryDate" : {
           "c2jName" : "CardExpiryDate",
-          "c2jShape" : "NumberLengthEquals4",
+          "c2jShape" : "CardExpiryDateType",
           "deprecated" : false,
           "documentation" : "<p>The expiry date of a payment card.</p>",
           "endpointDiscoveryId" : false,
@@ -862,7 +862,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "CardExpiryDate",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
           "setterMethodName" : "setCardExpiryDate",
           "setterModel" : {
@@ -935,7 +935,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "CardExpiryDate",
-        "c2jShape" : "NumberLengthEquals4",
+        "c2jShape" : "CardExpiryDateType",
         "deprecated" : false,
         "documentation" : "<p>The expiry date of a payment card.</p>",
         "endpointDiscoveryId" : false,
@@ -975,7 +975,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "CardExpiryDate",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
         "setterMethodName" : "setCardExpiryDate",
         "setterModel" : {
@@ -1004,7 +1004,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ServiceCode",
-        "c2jShape" : "NumberLengthEquals3",
+        "c2jShape" : "ServiceCodeType",
         "deprecated" : false,
         "documentation" : "<p>The service code of the AMEX payment card. This is different from the Card Security Code (CSC).</p>",
         "endpointDiscoveryId" : false,
@@ -1044,7 +1044,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "ServiceCode",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The service code of the AMEX payment card. This is different from the Card Security Code (CSC).</p>\n@param serviceCode The service code of the AMEX payment card. This is different from the Card Security Code (CSC).*/",
         "setterMethodName" : "setServiceCode",
         "setterModel" : {
@@ -1075,7 +1075,7 @@
       "membersAsMap" : {
         "CardExpiryDate" : {
           "c2jName" : "CardExpiryDate",
-          "c2jShape" : "NumberLengthEquals4",
+          "c2jShape" : "CardExpiryDateType",
           "deprecated" : false,
           "documentation" : "<p>The expiry date of a payment card.</p>",
           "endpointDiscoveryId" : false,
@@ -1115,7 +1115,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "CardExpiryDate",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
           "setterMethodName" : "setCardExpiryDate",
           "setterModel" : {
@@ -1145,7 +1145,7 @@
         },
         "ServiceCode" : {
           "c2jName" : "ServiceCode",
-          "c2jShape" : "NumberLengthEquals3",
+          "c2jShape" : "ServiceCodeType",
           "deprecated" : false,
           "documentation" : "<p>The service code of the AMEX payment card. This is different from the Card Security Code (CSC).</p>",
           "endpointDiscoveryId" : false,
@@ -1185,7 +1185,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "ServiceCode",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The service code of the AMEX payment card. This is different from the Card Security Code (CSC).</p>\n@param serviceCode The service code of the AMEX payment card. This is different from the Card Security Code (CSC).*/",
           "setterMethodName" : "setServiceCode",
           "setterModel" : {
@@ -4079,7 +4079,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "CardExpiryDate",
-        "c2jShape" : "NumberLengthEquals4",
+        "c2jShape" : "CardExpiryDateType",
         "deprecated" : false,
         "documentation" : "<p>The expiry date of a payment card.</p>",
         "endpointDiscoveryId" : false,
@@ -4119,7 +4119,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "CardExpiryDate",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
         "setterMethodName" : "setCardExpiryDate",
         "setterModel" : {
@@ -4148,7 +4148,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ServiceCode",
-        "c2jShape" : "NumberLengthEquals3",
+        "c2jShape" : "ServiceCodeType",
         "deprecated" : false,
         "documentation" : "<p>The service code of the payment card. This is different from Card Security Code (CSC).</p>",
         "endpointDiscoveryId" : false,
@@ -4188,7 +4188,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "ServiceCode",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The service code of the payment card. This is different from Card Security Code (CSC).</p>\n@param serviceCode The service code of the payment card. This is different from Card Security Code (CSC).*/",
         "setterMethodName" : "setServiceCode",
         "setterModel" : {
@@ -4219,7 +4219,7 @@
       "membersAsMap" : {
         "CardExpiryDate" : {
           "c2jName" : "CardExpiryDate",
-          "c2jShape" : "NumberLengthEquals4",
+          "c2jShape" : "CardExpiryDateType",
           "deprecated" : false,
           "documentation" : "<p>The expiry date of a payment card.</p>",
           "endpointDiscoveryId" : false,
@@ -4259,7 +4259,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "CardExpiryDate",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
           "setterMethodName" : "setCardExpiryDate",
           "setterModel" : {
@@ -4289,7 +4289,7 @@
         },
         "ServiceCode" : {
           "c2jName" : "ServiceCode",
-          "c2jShape" : "NumberLengthEquals3",
+          "c2jShape" : "ServiceCodeType",
           "deprecated" : false,
           "documentation" : "<p>The service code of the payment card. This is different from Card Security Code (CSC).</p>",
           "endpointDiscoveryId" : false,
@@ -4329,7 +4329,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "ServiceCode",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The service code of the payment card. This is different from Card Security Code (CSC).</p>\n@param serviceCode The service code of the payment card. This is different from Card Security Code (CSC).*/",
           "setterMethodName" : "setServiceCode",
           "setterModel" : {
@@ -4402,7 +4402,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "CardExpiryDate",
-        "c2jShape" : "NumberLengthEquals4",
+        "c2jShape" : "CardExpiryDateType",
         "deprecated" : false,
         "documentation" : "<p>The expiry date of a payment card.</p>",
         "endpointDiscoveryId" : false,
@@ -4442,7 +4442,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "CardExpiryDate",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
         "setterMethodName" : "setCardExpiryDate",
         "setterModel" : {
@@ -4473,7 +4473,7 @@
       "membersAsMap" : {
         "CardExpiryDate" : {
           "c2jName" : "CardExpiryDate",
-          "c2jShape" : "NumberLengthEquals4",
+          "c2jShape" : "CardExpiryDateType",
           "deprecated" : false,
           "documentation" : "<p>The expiry date of a payment card.</p>",
           "endpointDiscoveryId" : false,
@@ -4513,7 +4513,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "CardExpiryDate",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
           "setterMethodName" : "setCardExpiryDate",
           "setterModel" : {
@@ -5162,7 +5162,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ProprietaryAuthenticationData",
-        "c2jShape" : "HexLengthBetween1And16",
+        "c2jShape" : "ProprietaryAuthenticationDataType",
         "deprecated" : false,
         "documentation" : "<p>The proprietary authentication data used by issuer for communication during online transaction using an EMV chip card.</p>",
         "endpointDiscoveryId" : false,
@@ -5202,7 +5202,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "ProprietaryAuthenticationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The proprietary authentication data used by issuer for communication during online transaction using an EMV chip card.</p>\n@param proprietaryAuthenticationData The proprietary authentication data used by issuer for communication during online transaction using an EMV chip card.*/",
         "setterMethodName" : "setProprietaryAuthenticationData",
         "setterModel" : {
@@ -5303,7 +5303,7 @@
         },
         "ProprietaryAuthenticationData" : {
           "c2jName" : "ProprietaryAuthenticationData",
-          "c2jShape" : "HexLengthBetween1And16",
+          "c2jShape" : "ProprietaryAuthenticationDataType",
           "deprecated" : false,
           "documentation" : "<p>The proprietary authentication data used by issuer for communication during online transaction using an EMV chip card.</p>",
           "endpointDiscoveryId" : false,
@@ -5343,7 +5343,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "ProprietaryAuthenticationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The proprietary authentication data used by issuer for communication during online transaction using an EMV chip card.</p>\n@param proprietaryAuthenticationData The proprietary authentication data used by issuer for communication during online transaction using an EMV chip card.*/",
           "setterMethodName" : "setProprietaryAuthenticationData",
           "setterModel" : {
@@ -5492,7 +5492,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "CipherText",
-        "c2jShape" : "HexEvenLengthBetween16And4096",
+        "c2jShape" : "CipherTextType",
         "deprecated" : false,
         "documentation" : "<p>The ciphertext to decrypt.</p>",
         "endpointDiscoveryId" : false,
@@ -5701,7 +5701,7 @@
       "membersAsMap" : {
         "CipherText" : {
           "c2jName" : "CipherText",
-          "c2jShape" : "HexEvenLengthBetween16And4096",
+          "c2jShape" : "CipherTextType",
           "deprecated" : false,
           "documentation" : "<p>The ciphertext to decrypt.</p>",
           "endpointDiscoveryId" : false,
@@ -6159,7 +6159,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PlainText",
-        "c2jShape" : "HexEvenLengthBetween16And4096",
+        "c2jShape" : "PlainTextOutputType",
         "deprecated" : false,
         "documentation" : "<p>The decrypted plaintext data in hexBinary format.</p>",
         "endpointDiscoveryId" : false,
@@ -6370,7 +6370,7 @@
         },
         "PlainText" : {
           "c2jName" : "PlainText",
-          "c2jShape" : "HexEvenLengthBetween16And4096",
+          "c2jShape" : "PlainTextOutputType",
           "deprecated" : false,
           "documentation" : "<p>The decrypted plaintext data in hexBinary format.</p>",
           "endpointDiscoveryId" : false,
@@ -6483,7 +6483,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "CardExpiryDate",
-        "c2jShape" : "NumberLengthEquals4",
+        "c2jShape" : "CardExpiryDateType",
         "deprecated" : false,
         "documentation" : "<p>The expiry date of a payment card.</p>",
         "endpointDiscoveryId" : false,
@@ -6523,7 +6523,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "CardExpiryDate",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
         "setterMethodName" : "setCardExpiryDate",
         "setterModel" : {
@@ -6762,7 +6762,7 @@
         },
         "CardExpiryDate" : {
           "c2jName" : "CardExpiryDate",
-          "c2jShape" : "NumberLengthEquals4",
+          "c2jShape" : "CardExpiryDateType",
           "deprecated" : false,
           "documentation" : "<p>The expiry date of a payment card.</p>",
           "endpointDiscoveryId" : false,
@@ -6802,7 +6802,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "CardExpiryDate",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
           "setterMethodName" : "setCardExpiryDate",
           "setterModel" : {
@@ -8065,7 +8065,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "InitializationVector",
-        "c2jShape" : "HexLength16Or32",
+        "c2jShape" : "InitializationVectorType",
         "deprecated" : false,
         "documentation" : "<p>An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography defaults it to zero.</p>",
         "endpointDiscoveryId" : false,
@@ -8276,7 +8276,7 @@
         },
         "InitializationVector" : {
           "c2jName" : "InitializationVector",
-          "c2jShape" : "HexLength16Or32",
+          "c2jShape" : "InitializationVectorType",
           "deprecated" : false,
           "documentation" : "<p>An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography defaults it to zero.</p>",
           "endpointDiscoveryId" : false,
@@ -8839,7 +8839,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "TrackData",
-        "c2jShape" : "HexLengthBetween2And160",
+        "c2jShape" : "TrackDataType",
         "deprecated" : false,
         "documentation" : "<p>The data on the two tracks of magnetic cards used for financial transactions. This includes the cardholder name, PAN, expiration date, bank ID (BIN) and several other numbers the issuing bank uses to validate the data received.</p>",
         "endpointDiscoveryId" : false,
@@ -8879,7 +8879,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "TrackData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The data on the two tracks of magnetic cards used for financial transactions. This includes the cardholder name, PAN, expiration date, bank ID (BIN) and several other numbers the issuing bank uses to validate the data received.</p>\n@param trackData The data on the two tracks of magnetic cards used for financial transactions. This includes the cardholder name, PAN, expiration date, bank ID (BIN) and several other numbers the issuing bank uses to validate the data received.*/",
         "setterMethodName" : "setTrackData",
         "setterModel" : {
@@ -9050,7 +9050,7 @@
         },
         "TrackData" : {
           "c2jName" : "TrackData",
-          "c2jShape" : "HexLengthBetween2And160",
+          "c2jShape" : "TrackDataType",
           "deprecated" : false,
           "documentation" : "<p>The data on the two tracks of magnetic cards used for financial transactions. This includes the cardholder name, PAN, expiration date, bank ID (BIN) and several other numbers the issuing bank uses to validate the data received.</p>",
           "endpointDiscoveryId" : false,
@@ -9090,7 +9090,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "TrackData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The data on the two tracks of magnetic cards used for financial transactions. This includes the cardholder name, PAN, expiration date, bank ID (BIN) and several other numbers the issuing bank uses to validate the data received.</p>\n@param trackData The data on the two tracks of magnetic cards used for financial transactions. This includes the cardholder name, PAN, expiration date, bank ID (BIN) and several other numbers the issuing bank uses to validate the data received.*/",
           "setterMethodName" : "setTrackData",
           "setterModel" : {
@@ -9302,7 +9302,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "CardExpiryDate",
-        "c2jShape" : "NumberLengthEquals4",
+        "c2jShape" : "CardExpiryDateType",
         "deprecated" : false,
         "documentation" : "<p>The expiry date of a payment card.</p>",
         "endpointDiscoveryId" : false,
@@ -9342,7 +9342,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "CardExpiryDate",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
         "setterMethodName" : "setCardExpiryDate",
         "setterModel" : {
@@ -9371,7 +9371,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ServiceCode",
-        "c2jShape" : "NumberLengthEquals3",
+        "c2jShape" : "ServiceCodeType",
         "deprecated" : false,
         "documentation" : "<p>The service code of the payment card. This is different from Card Security Code (CSC).</p>",
         "endpointDiscoveryId" : false,
@@ -9411,7 +9411,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "ServiceCode",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The service code of the payment card. This is different from Card Security Code (CSC).</p>\n@param serviceCode The service code of the payment card. This is different from Card Security Code (CSC).*/",
         "setterMethodName" : "setServiceCode",
         "setterModel" : {
@@ -9581,7 +9581,7 @@
         },
         "CardExpiryDate" : {
           "c2jName" : "CardExpiryDate",
-          "c2jShape" : "NumberLengthEquals4",
+          "c2jShape" : "CardExpiryDateType",
           "deprecated" : false,
           "documentation" : "<p>The expiry date of a payment card.</p>",
           "endpointDiscoveryId" : false,
@@ -9621,7 +9621,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "CardExpiryDate",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The expiry date of a payment card.</p>\n@param cardExpiryDate The expiry date of a payment card.*/",
           "setterMethodName" : "setCardExpiryDate",
           "setterModel" : {
@@ -9721,7 +9721,7 @@
         },
         "ServiceCode" : {
           "c2jName" : "ServiceCode",
-          "c2jShape" : "NumberLengthEquals3",
+          "c2jShape" : "ServiceCodeType",
           "deprecated" : false,
           "documentation" : "<p>The service code of the payment card. This is different from Card Security Code (CSC).</p>",
           "endpointDiscoveryId" : false,
@@ -9761,7 +9761,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "ServiceCode",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The service code of the payment card. This is different from Card Security Code (CSC).</p>\n@param serviceCode The service code of the payment card. This is different from Card Security Code (CSC).*/",
           "setterMethodName" : "setServiceCode",
           "setterModel" : {
@@ -9903,7 +9903,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -10041,7 +10041,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "SessionDerivationData",
-        "c2jShape" : "HexLengthEquals16",
+        "c2jShape" : "SessionDerivationDataType",
         "deprecated" : false,
         "documentation" : "<p>The derivation value used to derive the ICC session key. It is typically the application transaction counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.</p>",
         "endpointDiscoveryId" : false,
@@ -10081,7 +10081,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "SessionDerivationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The derivation value used to derive the ICC session key. It is typically the application transaction counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.</p>\n@param sessionDerivationData The derivation value used to derive the ICC session key. It is typically the application transaction counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.*/",
         "setterMethodName" : "setSessionDerivationData",
         "setterModel" : {
@@ -10179,7 +10179,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "InitializationVector",
-        "c2jShape" : "HexLength16Or32",
+        "c2jShape" : "InitializationVectorType",
         "deprecated" : false,
         "documentation" : "<p>An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography defaults it to zero.</p>",
         "endpointDiscoveryId" : false,
@@ -10250,7 +10250,7 @@
       "membersAsMap" : {
         "InitializationVector" : {
           "c2jName" : "InitializationVector",
-          "c2jShape" : "HexLength16Or32",
+          "c2jShape" : "InitializationVectorType",
           "deprecated" : false,
           "documentation" : "<p>An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography defaults it to zero.</p>",
           "endpointDiscoveryId" : false,
@@ -10530,7 +10530,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -10600,7 +10600,7 @@
         },
         "SessionDerivationData" : {
           "c2jName" : "SessionDerivationData",
-          "c2jShape" : "HexLengthEquals16",
+          "c2jShape" : "SessionDerivationDataType",
           "deprecated" : false,
           "documentation" : "<p>The derivation value used to derive the ICC session key. It is typically the application transaction counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.</p>",
           "endpointDiscoveryId" : false,
@@ -10640,7 +10640,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "SessionDerivationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The derivation value used to derive the ICC session key. It is typically the application transaction counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.</p>\n@param sessionDerivationData The derivation value used to derive the ICC session key. It is typically the application transaction counter value padded with zeros or previous ARQC value padded with zeros as per EMV version 4.3 book 2.*/",
           "setterMethodName" : "setSessionDerivationData",
           "setterModel" : {
@@ -10889,7 +10889,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PlainText",
-        "c2jShape" : "HexEvenLengthBetween16And4064",
+        "c2jShape" : "PlainTextType",
         "deprecated" : false,
         "documentation" : "<p>The plaintext to be encrypted.</p> <note> <p>For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that you define in <code>KeyAlgorithm</code> and padding type that you define in <code>AsymmetricEncryptionAttributes</code>. For more information, see <a href=\"https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html\">Encrypt data</a> in the <i>Amazon Web Services Payment Cryptography User Guide</i>.</p> </note>",
         "endpointDiscoveryId" : false,
@@ -11238,7 +11238,7 @@
         },
         "PlainText" : {
           "c2jName" : "PlainText",
-          "c2jShape" : "HexEvenLengthBetween16And4064",
+          "c2jShape" : "PlainTextType",
           "deprecated" : false,
           "documentation" : "<p>The plaintext to be encrypted.</p> <note> <p>For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that you define in <code>KeyAlgorithm</code> and padding type that you define in <code>AsymmetricEncryptionAttributes</code>. For more information, see <a href=\"https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html\">Encrypt data</a> in the <i>Amazon Web Services Payment Cryptography User Guide</i>.</p> </note>",
           "endpointDiscoveryId" : false,
@@ -11556,7 +11556,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "CipherText",
-        "c2jShape" : "HexEvenLengthBetween16And4096",
+        "c2jShape" : "CipherTextType",
         "deprecated" : false,
         "documentation" : "<p>The encrypted ciphertext.</p>",
         "endpointDiscoveryId" : false,
@@ -11627,7 +11627,7 @@
       "membersAsMap" : {
         "CipherText" : {
           "c2jName" : "CipherText",
-          "c2jShape" : "HexEvenLengthBetween16And4096",
+          "c2jShape" : "CipherTextType",
           "deprecated" : false,
           "documentation" : "<p>The encrypted ciphertext.</p>",
           "endpointDiscoveryId" : false,
@@ -12625,7 +12625,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card with a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -12974,7 +12974,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card with a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -13292,7 +13292,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ValidationData",
-        "c2jShape" : "NumberLengthBetween3And5",
+        "c2jShape" : "ValidationDataType",
         "deprecated" : false,
         "documentation" : "<p>The CVV or CSC value that Amazon Web Services Payment Cryptography generates for the card.</p>",
         "endpointDiscoveryId" : false,
@@ -13332,7 +13332,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "ValidationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The CVV or CSC value that Amazon Web Services Payment Cryptography generates for the card.</p>\n@param validationData The CVV or CSC value that Amazon Web Services Payment Cryptography generates for the card.*/",
         "setterMethodName" : "setValidationData",
         "setterModel" : {
@@ -13503,7 +13503,7 @@
         },
         "ValidationData" : {
           "c2jName" : "ValidationData",
-          "c2jShape" : "NumberLengthBetween3And5",
+          "c2jShape" : "ValidationDataType",
           "deprecated" : false,
           "documentation" : "<p>The CVV or CSC value that Amazon Web Services Payment Cryptography generates for the card.</p>",
           "endpointDiscoveryId" : false,
@@ -13543,7 +13543,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "ValidationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The CVV or CSC value that Amazon Web Services Payment Cryptography generates for the card.</p>\n@param validationData The CVV or CSC value that Amazon Web Services Payment Cryptography generates for the card.*/",
           "setterMethodName" : "setValidationData",
           "setterModel" : {
@@ -13692,7 +13692,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "MessageData",
-        "c2jShape" : "HexEvenLengthBetween2And4096",
+        "c2jShape" : "MessageDataType",
         "deprecated" : false,
         "documentation" : "<p>The data for which a MAC is under generation. This value must be hexBinary.</p>",
         "endpointDiscoveryId" : false,
@@ -14111,7 +14111,7 @@
         },
         "MessageData" : {
           "c2jName" : "MessageData",
-          "c2jShape" : "HexEvenLengthBetween2And4096",
+          "c2jShape" : "MessageDataType",
           "deprecated" : false,
           "documentation" : "<p>The data for which a MAC is under generation. This value must be hexBinary.</p>",
           "endpointDiscoveryId" : false,
@@ -14359,7 +14359,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Mac",
-        "c2jShape" : "HexLengthBetween4And128",
+        "c2jShape" : "MacOutputType",
         "deprecated" : false,
         "documentation" : "<p>The MAC cryptogram generated within Amazon Web Services Payment Cryptography.</p>",
         "endpointDiscoveryId" : false,
@@ -14399,7 +14399,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "Mac",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The MAC cryptogram generated within Amazon Web Services Payment Cryptography.</p>\n@param mac The MAC cryptogram generated within Amazon Web Services Payment Cryptography.*/",
         "setterMethodName" : "setMac",
         "setterModel" : {
@@ -14570,7 +14570,7 @@
         },
         "Mac" : {
           "c2jName" : "Mac",
-          "c2jShape" : "HexLengthBetween4And128",
+          "c2jShape" : "MacOutputType",
           "deprecated" : false,
           "documentation" : "<p>The MAC cryptogram generated within Amazon Web Services Payment Cryptography.</p>",
           "endpointDiscoveryId" : false,
@@ -14610,7 +14610,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "Mac",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The MAC cryptogram generated within Amazon Web Services Payment Cryptography.</p>\n@param mac The MAC cryptogram generated within Amazon Web Services Payment Cryptography.*/",
           "setterMethodName" : "setMac",
           "setterModel" : {
@@ -14966,7 +14966,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card with a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -15456,7 +15456,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card with a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -15842,7 +15842,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "EncryptedPinBlock",
-        "c2jShape" : "HexLengthBetween16And32",
+        "c2jShape" : "EncryptedPinBlockType",
         "deprecated" : false,
         "documentation" : "<p>The PIN block encrypted under PEK from Amazon Web Services Payment Cryptography. The encrypted PIN block is a composite of PAN (Primary Account Number) and PIN (Personal Identification Number), generated in accordance with ISO 9564 standard.</p>",
         "endpointDiscoveryId" : false,
@@ -15882,7 +15882,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "EncryptedPinBlock",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The PIN block encrypted under PEK from Amazon Web Services Payment Cryptography. The encrypted PIN block is a composite of PAN (Primary Account Number) and PIN (Personal Identification Number), generated in accordance with ISO 9564 standard.</p>\n@param encryptedPinBlock The PIN block encrypted under PEK from Amazon Web Services Payment Cryptography. The encrypted PIN block is a composite of PAN (Primary Account Number) and PIN (Personal Identification Number), generated in accordance with ISO 9564 standard.*/",
         "setterMethodName" : "setEncryptedPinBlock",
         "setterModel" : {
@@ -15982,7 +15982,7 @@
       "membersAsMap" : {
         "EncryptedPinBlock" : {
           "c2jName" : "EncryptedPinBlock",
-          "c2jShape" : "HexLengthBetween16And32",
+          "c2jShape" : "EncryptedPinBlockType",
           "deprecated" : false,
           "documentation" : "<p>The PIN block encrypted under PEK from Amazon Web Services Payment Cryptography. The encrypted PIN block is a composite of PAN (Primary Account Number) and PIN (Personal Identification Number), generated in accordance with ISO 9564 standard.</p>",
           "endpointDiscoveryId" : false,
@@ -16022,7 +16022,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "EncryptedPinBlock",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The PIN block encrypted under PEK from Amazon Web Services Payment Cryptography. The encrypted PIN block is a composite of PAN (Primary Account Number) and PIN (Personal Identification Number), generated in accordance with ISO 9564 standard.</p>\n@param encryptedPinBlock The PIN block encrypted under PEK from Amazon Web Services Payment Cryptography. The encrypted PIN block is a composite of PAN (Primary Account Number) and PIN (Personal Identification Number), generated in accordance with ISO 9564 standard.*/",
           "setterMethodName" : "setEncryptedPinBlock",
           "setterModel" : {
@@ -16445,7 +16445,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "DecimalizationTable",
-        "c2jShape" : "NumberLengthEquals16",
+        "c2jShape" : "DecimalizationTableType",
         "deprecated" : false,
         "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
         "endpointDiscoveryId" : false,
@@ -16485,7 +16485,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "DecimalizationTable",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
         "setterMethodName" : "setDecimalizationTable",
         "setterModel" : {
@@ -16583,7 +16583,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PinValidationData",
-        "c2jShape" : "NumberLengthBetween4And16",
+        "c2jShape" : "PinValidationDataType",
         "deprecated" : false,
         "documentation" : "<p>The unique data for cardholder identification.</p>",
         "endpointDiscoveryId" : false,
@@ -16623,7 +16623,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinValidationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
         "setterMethodName" : "setPinValidationData",
         "setterModel" : {
@@ -16654,7 +16654,7 @@
       "membersAsMap" : {
         "DecimalizationTable" : {
           "c2jName" : "DecimalizationTable",
-          "c2jShape" : "NumberLengthEquals16",
+          "c2jShape" : "DecimalizationTableType",
           "deprecated" : false,
           "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
           "endpointDiscoveryId" : false,
@@ -16694,7 +16694,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "DecimalizationTable",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
           "setterMethodName" : "setDecimalizationTable",
           "setterModel" : {
@@ -16724,7 +16724,7 @@
         },
         "PinValidationData" : {
           "c2jName" : "PinValidationData",
-          "c2jShape" : "NumberLengthBetween4And16",
+          "c2jShape" : "PinValidationDataType",
           "deprecated" : false,
           "documentation" : "<p>The unique data for cardholder identification.</p>",
           "endpointDiscoveryId" : false,
@@ -16764,7 +16764,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinValidationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
           "setterMethodName" : "setPinValidationData",
           "setterModel" : {
@@ -16907,7 +16907,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "DecimalizationTable",
-        "c2jShape" : "NumberLengthEquals16",
+        "c2jShape" : "DecimalizationTableType",
         "deprecated" : false,
         "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
         "endpointDiscoveryId" : false,
@@ -16947,7 +16947,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "DecimalizationTable",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
         "setterMethodName" : "setDecimalizationTable",
         "setterModel" : {
@@ -17045,7 +17045,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PinValidationData",
-        "c2jShape" : "NumberLengthBetween4And16",
+        "c2jShape" : "PinValidationDataType",
         "deprecated" : false,
         "documentation" : "<p>The unique data for cardholder identification.</p>",
         "endpointDiscoveryId" : false,
@@ -17085,7 +17085,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinValidationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
         "setterMethodName" : "setPinValidationData",
         "setterModel" : {
@@ -17114,7 +17114,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PinOffset",
-        "c2jShape" : "NumberLengthBetween4And12",
+        "c2jShape" : "PinOffsetType",
         "deprecated" : false,
         "documentation" : "<p>The PIN offset value.</p>",
         "endpointDiscoveryId" : false,
@@ -17154,7 +17154,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinOffset",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The PIN offset value.</p>\n@param pinOffset The PIN offset value.*/",
         "setterMethodName" : "setPinOffset",
         "setterModel" : {
@@ -17185,7 +17185,7 @@
       "membersAsMap" : {
         "DecimalizationTable" : {
           "c2jName" : "DecimalizationTable",
-          "c2jShape" : "NumberLengthEquals16",
+          "c2jShape" : "DecimalizationTableType",
           "deprecated" : false,
           "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
           "endpointDiscoveryId" : false,
@@ -17225,7 +17225,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "DecimalizationTable",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
           "setterMethodName" : "setDecimalizationTable",
           "setterModel" : {
@@ -17255,7 +17255,7 @@
         },
         "PinOffset" : {
           "c2jName" : "PinOffset",
-          "c2jShape" : "NumberLengthBetween4And12",
+          "c2jShape" : "PinOffsetType",
           "deprecated" : false,
           "documentation" : "<p>The PIN offset value.</p>",
           "endpointDiscoveryId" : false,
@@ -17295,7 +17295,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinOffset",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The PIN offset value.</p>\n@param pinOffset The PIN offset value.*/",
           "setterMethodName" : "setPinOffset",
           "setterModel" : {
@@ -17325,7 +17325,7 @@
         },
         "PinValidationData" : {
           "c2jName" : "PinValidationData",
-          "c2jShape" : "NumberLengthBetween4And16",
+          "c2jShape" : "PinValidationDataType",
           "deprecated" : false,
           "documentation" : "<p>The unique data for cardholder identification.</p>",
           "endpointDiscoveryId" : false,
@@ -17365,7 +17365,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinValidationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
           "setterMethodName" : "setPinValidationData",
           "setterModel" : {
@@ -17508,7 +17508,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "EncryptedPinBlock",
-        "c2jShape" : "HexLengthBetween16And32",
+        "c2jShape" : "EncryptedPinBlockType",
         "deprecated" : false,
         "documentation" : "<p>The encrypted PIN block data. According to ISO 9564 standard, a PIN Block is an encoded representation of a payment card Personal Account Number (PAN) and the cardholder Personal Identification Number (PIN).</p>",
         "endpointDiscoveryId" : false,
@@ -17548,7 +17548,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "EncryptedPinBlock",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The encrypted PIN block data. According to ISO 9564 standard, a PIN Block is an encoded representation of a payment card Personal Account Number (PAN) and the cardholder Personal Identification Number (PIN).</p>\n@param encryptedPinBlock The encrypted PIN block data. According to ISO 9564 standard, a PIN Block is an encoded representation of a payment card Personal Account Number (PAN) and the cardholder Personal Identification Number (PIN).*/",
         "setterMethodName" : "setEncryptedPinBlock",
         "setterModel" : {
@@ -17577,7 +17577,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "DecimalizationTable",
-        "c2jShape" : "NumberLengthEquals16",
+        "c2jShape" : "DecimalizationTableType",
         "deprecated" : false,
         "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
         "endpointDiscoveryId" : false,
@@ -17617,7 +17617,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "DecimalizationTable",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
         "setterMethodName" : "setDecimalizationTable",
         "setterModel" : {
@@ -17715,7 +17715,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PinValidationData",
-        "c2jShape" : "NumberLengthBetween4And16",
+        "c2jShape" : "PinValidationDataType",
         "deprecated" : false,
         "documentation" : "<p>The unique data for cardholder identification.</p>",
         "endpointDiscoveryId" : false,
@@ -17755,7 +17755,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinValidationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
         "setterMethodName" : "setPinValidationData",
         "setterModel" : {
@@ -17786,7 +17786,7 @@
       "membersAsMap" : {
         "DecimalizationTable" : {
           "c2jName" : "DecimalizationTable",
-          "c2jShape" : "NumberLengthEquals16",
+          "c2jShape" : "DecimalizationTableType",
           "deprecated" : false,
           "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
           "endpointDiscoveryId" : false,
@@ -17826,7 +17826,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "DecimalizationTable",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
           "setterMethodName" : "setDecimalizationTable",
           "setterModel" : {
@@ -17856,7 +17856,7 @@
         },
         "EncryptedPinBlock" : {
           "c2jName" : "EncryptedPinBlock",
-          "c2jShape" : "HexLengthBetween16And32",
+          "c2jShape" : "EncryptedPinBlockType",
           "deprecated" : false,
           "documentation" : "<p>The encrypted PIN block data. According to ISO 9564 standard, a PIN Block is an encoded representation of a payment card Personal Account Number (PAN) and the cardholder Personal Identification Number (PIN).</p>",
           "endpointDiscoveryId" : false,
@@ -17896,7 +17896,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "EncryptedPinBlock",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The encrypted PIN block data. According to ISO 9564 standard, a PIN Block is an encoded representation of a payment card Personal Account Number (PAN) and the cardholder Personal Identification Number (PIN).</p>\n@param encryptedPinBlock The encrypted PIN block data. According to ISO 9564 standard, a PIN Block is an encoded representation of a payment card Personal Account Number (PAN) and the cardholder Personal Identification Number (PIN).*/",
           "setterMethodName" : "setEncryptedPinBlock",
           "setterModel" : {
@@ -17926,7 +17926,7 @@
         },
         "PinValidationData" : {
           "c2jName" : "PinValidationData",
-          "c2jShape" : "NumberLengthBetween4And16",
+          "c2jShape" : "PinValidationDataType",
           "deprecated" : false,
           "documentation" : "<p>The unique data for cardholder identification.</p>",
           "endpointDiscoveryId" : false,
@@ -17966,7 +17966,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinValidationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
           "setterMethodName" : "setPinValidationData",
           "setterModel" : {
@@ -18109,7 +18109,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "DecimalizationTable",
-        "c2jShape" : "NumberLengthEquals16",
+        "c2jShape" : "DecimalizationTableType",
         "deprecated" : false,
         "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
         "endpointDiscoveryId" : false,
@@ -18149,7 +18149,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "DecimalizationTable",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
         "setterMethodName" : "setDecimalizationTable",
         "setterModel" : {
@@ -18247,7 +18247,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PinValidationData",
-        "c2jShape" : "NumberLengthBetween4And16",
+        "c2jShape" : "PinValidationDataType",
         "deprecated" : false,
         "documentation" : "<p>The unique data for cardholder identification.</p>",
         "endpointDiscoveryId" : false,
@@ -18287,7 +18287,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinValidationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
         "setterMethodName" : "setPinValidationData",
         "setterModel" : {
@@ -18316,7 +18316,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PinOffset",
-        "c2jShape" : "NumberLengthBetween4And12",
+        "c2jShape" : "PinOffsetType",
         "deprecated" : false,
         "documentation" : "<p>The PIN offset value.</p>",
         "endpointDiscoveryId" : false,
@@ -18356,7 +18356,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinOffset",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The PIN offset value.</p>\n@param pinOffset The PIN offset value.*/",
         "setterMethodName" : "setPinOffset",
         "setterModel" : {
@@ -18387,7 +18387,7 @@
       "membersAsMap" : {
         "DecimalizationTable" : {
           "c2jName" : "DecimalizationTable",
-          "c2jShape" : "NumberLengthEquals16",
+          "c2jShape" : "DecimalizationTableType",
           "deprecated" : false,
           "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
           "endpointDiscoveryId" : false,
@@ -18427,7 +18427,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "DecimalizationTable",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
           "setterMethodName" : "setDecimalizationTable",
           "setterModel" : {
@@ -18457,7 +18457,7 @@
         },
         "PinOffset" : {
           "c2jName" : "PinOffset",
-          "c2jShape" : "NumberLengthBetween4And12",
+          "c2jShape" : "PinOffsetType",
           "deprecated" : false,
           "documentation" : "<p>The PIN offset value.</p>",
           "endpointDiscoveryId" : false,
@@ -18497,7 +18497,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinOffset",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The PIN offset value.</p>\n@param pinOffset The PIN offset value.*/",
           "setterMethodName" : "setPinOffset",
           "setterModel" : {
@@ -18527,7 +18527,7 @@
         },
         "PinValidationData" : {
           "c2jName" : "PinValidationData",
-          "c2jShape" : "NumberLengthBetween4And16",
+          "c2jShape" : "PinValidationDataType",
           "deprecated" : false,
           "documentation" : "<p>The unique data for cardholder identification.</p>",
           "endpointDiscoveryId" : false,
@@ -18567,7 +18567,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinValidationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
           "setterMethodName" : "setPinValidationData",
           "setterModel" : {
@@ -18710,7 +18710,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "DecimalizationTable",
-        "c2jShape" : "NumberLengthEquals16",
+        "c2jShape" : "DecimalizationTableType",
         "deprecated" : false,
         "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
         "endpointDiscoveryId" : false,
@@ -18750,7 +18750,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "DecimalizationTable",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
         "setterMethodName" : "setDecimalizationTable",
         "setterModel" : {
@@ -18848,7 +18848,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PinValidationData",
-        "c2jShape" : "NumberLengthBetween4And16",
+        "c2jShape" : "PinValidationDataType",
         "deprecated" : false,
         "documentation" : "<p>The unique data for cardholder identification.</p>",
         "endpointDiscoveryId" : false,
@@ -18888,7 +18888,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinValidationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
         "setterMethodName" : "setPinValidationData",
         "setterModel" : {
@@ -18919,7 +18919,7 @@
       "membersAsMap" : {
         "DecimalizationTable" : {
           "c2jName" : "DecimalizationTable",
-          "c2jShape" : "NumberLengthEquals16",
+          "c2jShape" : "DecimalizationTableType",
           "deprecated" : false,
           "documentation" : "<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>",
           "endpointDiscoveryId" : false,
@@ -18959,7 +18959,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "DecimalizationTable",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.</p>\n@param decimalizationTable The decimalization table to use for IBM 3624 PIN algorithm. The table is used to convert the algorithm intermediate result from hexadecimal characters to decimal.*/",
           "setterMethodName" : "setDecimalizationTable",
           "setterModel" : {
@@ -18989,7 +18989,7 @@
         },
         "PinValidationData" : {
           "c2jName" : "PinValidationData",
-          "c2jShape" : "NumberLengthBetween4And16",
+          "c2jShape" : "PinValidationDataType",
           "deprecated" : false,
           "documentation" : "<p>The unique data for cardholder identification.</p>",
           "endpointDiscoveryId" : false,
@@ -19029,7 +19029,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinValidationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The unique data for cardholder identification.</p>\n@param pinValidationData The unique data for cardholder identification.*/",
           "setterMethodName" : "setPinValidationData",
           "setterModel" : {
@@ -19859,7 +19859,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -20277,7 +20277,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -21426,7 +21426,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "PinOffset",
-        "c2jShape" : "NumberLengthBetween4And12",
+        "c2jShape" : "PinOffsetType",
         "deprecated" : false,
         "documentation" : "<p>The PIN offset value.</p>",
         "endpointDiscoveryId" : false,
@@ -21466,7 +21466,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinOffset",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The PIN offset value.</p>\n@param pinOffset The PIN offset value.*/",
         "setterMethodName" : "setPinOffset",
         "setterModel" : {
@@ -21495,7 +21495,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "VerificationValue",
-        "c2jShape" : "NumberLengthBetween4And12",
+        "c2jShape" : "VerificationValueType",
         "deprecated" : false,
         "documentation" : "<p>The unique data to identify a cardholder. In most cases, this is the same as cardholder's Primary Account Number (PAN). If a value is not provided, it defaults to PAN.</p>",
         "endpointDiscoveryId" : false,
@@ -21535,7 +21535,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "VerificationValue",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The unique data to identify a cardholder. In most cases, this is the same as cardholder's Primary Account Number (PAN). If a value is not provided, it defaults to PAN.</p>\n@param verificationValue The unique data to identify a cardholder. In most cases, this is the same as cardholder's Primary Account Number (PAN). If a value is not provided, it defaults to PAN.*/",
         "setterMethodName" : "setVerificationValue",
         "setterModel" : {
@@ -21566,7 +21566,7 @@
       "membersAsMap" : {
         "PinOffset" : {
           "c2jName" : "PinOffset",
-          "c2jShape" : "NumberLengthBetween4And12",
+          "c2jShape" : "PinOffsetType",
           "deprecated" : false,
           "documentation" : "<p>The PIN offset value.</p>",
           "endpointDiscoveryId" : false,
@@ -21606,7 +21606,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinOffset",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The PIN offset value.</p>\n@param pinOffset The PIN offset value.*/",
           "setterMethodName" : "setPinOffset",
           "setterModel" : {
@@ -21636,7 +21636,7 @@
         },
         "VerificationValue" : {
           "c2jName" : "VerificationValue",
-          "c2jShape" : "NumberLengthBetween4And12",
+          "c2jShape" : "VerificationValueType",
           "deprecated" : false,
           "documentation" : "<p>The unique data to identify a cardholder. In most cases, this is the same as cardholder's Primary Account Number (PAN). If a value is not provided, it defaults to PAN.</p>",
           "endpointDiscoveryId" : false,
@@ -21676,7 +21676,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "VerificationValue",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The unique data to identify a cardholder. In most cases, this is the same as cardholder's Primary Account Number (PAN). If a value is not provided, it defaults to PAN.</p>\n@param verificationValue The unique data to identify a cardholder. In most cases, this is the same as cardholder's Primary Account Number (PAN). If a value is not provided, it defaults to PAN.*/",
           "setterMethodName" : "setVerificationValue",
           "setterModel" : {
@@ -23096,7 +23096,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "CipherText",
-        "c2jShape" : "HexEvenLengthBetween16And4096",
+        "c2jShape" : "CipherTextType",
         "deprecated" : false,
         "documentation" : "<p>Ciphertext to be encrypted. The minimum allowed length is 16 bytes and maximum allowed length is 4096 bytes.</p>",
         "endpointDiscoveryId" : false,
@@ -23443,7 +23443,7 @@
       "membersAsMap" : {
         "CipherText" : {
           "c2jName" : "CipherText",
-          "c2jShape" : "HexEvenLengthBetween16And4096",
+          "c2jShape" : "CipherTextType",
           "deprecated" : false,
           "documentation" : "<p>Ciphertext to be encrypted. The minimum allowed length is 16 bytes and maximum allowed length is 4096 bytes.</p>",
           "endpointDiscoveryId" : false,
@@ -24111,7 +24111,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "CipherText",
-        "c2jShape" : "HexEvenLengthBetween16And4096",
+        "c2jShape" : "CipherTextType",
         "deprecated" : false,
         "documentation" : "<p>The encrypted ciphertext.</p>",
         "endpointDiscoveryId" : false,
@@ -24182,7 +24182,7 @@
       "membersAsMap" : {
         "CipherText" : {
           "c2jName" : "CipherText",
-          "c2jShape" : "HexEvenLengthBetween16And4096",
+          "c2jShape" : "CipherTextType",
           "deprecated" : false,
           "documentation" : "<p>The encrypted ciphertext.</p>",
           "endpointDiscoveryId" : false,
@@ -24939,7 +24939,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -25149,7 +25149,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -26061,7 +26061,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "ApplicationCryptogram",
-        "c2jShape" : "HexLengthEquals16",
+        "c2jShape" : "ApplicationCryptogramType",
         "deprecated" : false,
         "documentation" : "<p>The cryptogram provided by the terminal during transaction processing.</p>",
         "endpointDiscoveryId" : false,
@@ -26101,7 +26101,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "ApplicationCryptogram",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The cryptogram provided by the terminal during transaction processing.</p>\n@param applicationCryptogram The cryptogram provided by the terminal during transaction processing.*/",
         "setterMethodName" : "setApplicationCryptogram",
         "setterModel" : {
@@ -26201,7 +26201,7 @@
       "membersAsMap" : {
         "ApplicationCryptogram" : {
           "c2jName" : "ApplicationCryptogram",
-          "c2jShape" : "HexLengthEquals16",
+          "c2jShape" : "ApplicationCryptogramType",
           "deprecated" : false,
           "documentation" : "<p>The cryptogram provided by the terminal during transaction processing.</p>",
           "endpointDiscoveryId" : false,
@@ -26241,7 +26241,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "ApplicationCryptogram",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The cryptogram provided by the terminal during transaction processing.</p>\n@param applicationCryptogram The cryptogram provided by the terminal during transaction processing.*/",
           "setterMethodName" : "setApplicationCryptogram",
           "setterModel" : {
@@ -26384,7 +26384,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -26733,7 +26733,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -26846,7 +26846,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -27195,7 +27195,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -27308,7 +27308,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -27726,7 +27726,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -27909,7 +27909,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -28119,7 +28119,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -28301,7 +28301,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "InitializationVector",
-        "c2jShape" : "HexLength16Or32",
+        "c2jShape" : "InitializationVectorType",
         "deprecated" : false,
         "documentation" : "<p>An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography defaults it to zero.</p>",
         "endpointDiscoveryId" : false,
@@ -28441,7 +28441,7 @@
       "membersAsMap" : {
         "InitializationVector" : {
           "c2jName" : "InitializationVector",
-          "c2jShape" : "HexLength16Or32",
+          "c2jShape" : "InitializationVectorType",
           "deprecated" : false,
           "documentation" : "<p>An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography defaults it to zero.</p>",
           "endpointDiscoveryId" : false,
@@ -30035,7 +30035,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "PinBlock",
-        "c2jShape" : "HexLengthBetween16And32",
+        "c2jShape" : "EncryptedPinBlockType",
         "deprecated" : false,
         "documentation" : "<p>The outgoing encrypted PIN block data after translation.</p>",
         "endpointDiscoveryId" : false,
@@ -30075,7 +30075,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "PinBlock",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The outgoing encrypted PIN block data after translation.</p>\n@param pinBlock The outgoing encrypted PIN block data after translation.*/",
         "setterMethodName" : "setPinBlock",
         "setterModel" : {
@@ -30384,7 +30384,7 @@
         },
         "PinBlock" : {
           "c2jName" : "PinBlock",
-          "c2jShape" : "HexLengthBetween16And32",
+          "c2jShape" : "EncryptedPinBlockType",
           "deprecated" : false,
           "documentation" : "<p>The outgoing encrypted PIN block data after translation.</p>",
           "endpointDiscoveryId" : false,
@@ -30424,7 +30424,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "PinBlock",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The outgoing encrypted PIN block data after translation.</p>\n@param pinBlock The outgoing encrypted PIN block data after translation.*/",
           "setterMethodName" : "setPinBlock",
           "setterModel" : {
@@ -31098,7 +31098,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -31169,7 +31169,7 @@
       "membersAsMap" : {
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN) of the cardholder. A PAN is a unique identifier for a payment credit or debit card and associates the card to a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -32311,7 +32311,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "TransactionData",
-        "c2jShape" : "HexLengthBetween2And1024",
+        "c2jShape" : "TransactionDataType",
         "deprecated" : false,
         "documentation" : "<p>The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.</p>",
         "endpointDiscoveryId" : false,
@@ -32351,7 +32351,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "TransactionData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.</p>\n@param transactionData The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.*/",
         "setterMethodName" : "setTransactionData",
         "setterModel" : {
@@ -32380,7 +32380,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "AuthRequestCryptogram",
-        "c2jShape" : "HexLengthEquals16",
+        "c2jShape" : "AuthRequestCryptogramType",
         "deprecated" : false,
         "documentation" : "<p>The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a major encryption key and transaction data.</p>",
         "endpointDiscoveryId" : false,
@@ -32420,7 +32420,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "AuthRequestCryptogram",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a major encryption key and transaction data.</p>\n@param authRequestCryptogram The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a major encryption key and transaction data.*/",
         "setterMethodName" : "setAuthRequestCryptogram",
         "setterModel" : {
@@ -32658,7 +32658,7 @@
       "membersAsMap" : {
         "AuthRequestCryptogram" : {
           "c2jName" : "AuthRequestCryptogram",
-          "c2jShape" : "HexLengthEquals16",
+          "c2jShape" : "AuthRequestCryptogramType",
           "deprecated" : false,
           "documentation" : "<p>The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a major encryption key and transaction data.</p>",
           "endpointDiscoveryId" : false,
@@ -32698,7 +32698,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "AuthRequestCryptogram",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a major encryption key and transaction data.</p>\n@param authRequestCryptogram The auth request cryptogram imported into Amazon Web Services Payment Cryptography for ARQC verification using a major encryption key and transaction data.*/",
           "setterMethodName" : "setAuthRequestCryptogram",
           "setterModel" : {
@@ -33008,7 +33008,7 @@
         },
         "TransactionData" : {
           "c2jName" : "TransactionData",
-          "c2jShape" : "HexLengthBetween2And1024",
+          "c2jShape" : "TransactionDataType",
           "deprecated" : false,
           "documentation" : "<p>The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.</p>",
           "endpointDiscoveryId" : false,
@@ -33048,7 +33048,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "TransactionData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.</p>\n@param transactionData The transaction data that Amazon Web Services Payment Cryptography uses for ARQC verification. The same transaction is used for ARQC generation outside of Amazon Web Services Payment Cryptography.*/",
           "setterMethodName" : "setTransactionData",
           "setterModel" : {
@@ -33256,7 +33256,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "AuthResponseValue",
-        "c2jShape" : "HexLengthBetween1And16",
+        "c2jShape" : "AuthResponseValueType",
         "deprecated" : false,
         "documentation" : "<p>The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.</p>",
         "endpointDiscoveryId" : false,
@@ -33296,7 +33296,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "AuthResponseValue",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.</p>\n@param authResponseValue The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.*/",
         "setterMethodName" : "setAuthResponseValue",
         "setterModel" : {
@@ -33327,7 +33327,7 @@
       "membersAsMap" : {
         "AuthResponseValue" : {
           "c2jName" : "AuthResponseValue",
-          "c2jShape" : "HexLengthBetween1And16",
+          "c2jShape" : "AuthResponseValueType",
           "deprecated" : false,
           "documentation" : "<p>The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.</p>",
           "endpointDiscoveryId" : false,
@@ -33367,7 +33367,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "AuthResponseValue",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.</p>\n@param authResponseValue The result for ARQC verification or ARPC generation within Amazon Web Services Payment Cryptography.*/",
           "setterMethodName" : "setAuthResponseValue",
           "setterModel" : {
@@ -33656,7 +33656,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card with a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -33794,7 +33794,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ValidationData",
-        "c2jShape" : "NumberLengthBetween3And5",
+        "c2jShape" : "ValidationDataType",
         "deprecated" : false,
         "documentation" : "<p>The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.</p>",
         "endpointDiscoveryId" : false,
@@ -33834,7 +33834,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "ValidationData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.</p>\n@param validationData The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.*/",
         "setterMethodName" : "setValidationData",
         "setterModel" : {
@@ -33935,7 +33935,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card with a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -34005,7 +34005,7 @@
         },
         "ValidationData" : {
           "c2jName" : "ValidationData",
-          "c2jShape" : "NumberLengthBetween3And5",
+          "c2jShape" : "ValidationDataType",
           "deprecated" : false,
           "documentation" : "<p>The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.</p>",
           "endpointDiscoveryId" : false,
@@ -34045,7 +34045,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "ValidationData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.</p>\n@param validationData The CVV or CSC value for use for card data verification within Amazon Web Services Payment Cryptography.*/",
           "setterMethodName" : "setValidationData",
           "setterModel" : {
@@ -34584,7 +34584,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "MessageData",
-        "c2jShape" : "HexEvenLengthBetween2And4096",
+        "c2jShape" : "MessageDataType",
         "deprecated" : false,
         "documentation" : "<p>The data on for which MAC is under verification. This value must be hexBinary.</p>",
         "endpointDiscoveryId" : false,
@@ -34653,7 +34653,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Mac",
-        "c2jShape" : "HexEvenLengthBetween4And128",
+        "c2jShape" : "MacType",
         "deprecated" : false,
         "documentation" : "<p>The MAC being verified.</p>",
         "endpointDiscoveryId" : false,
@@ -34932,7 +34932,7 @@
         },
         "Mac" : {
           "c2jName" : "Mac",
-          "c2jShape" : "HexEvenLengthBetween4And128",
+          "c2jShape" : "MacType",
           "deprecated" : false,
           "documentation" : "<p>The MAC being verified.</p>",
           "endpointDiscoveryId" : false,
@@ -35072,7 +35072,7 @@
         },
         "MessageData" : {
           "c2jName" : "MessageData",
-          "c2jShape" : "HexEvenLengthBetween2And4096",
+          "c2jShape" : "MessageDataType",
           "deprecated" : false,
           "documentation" : "<p>The data on for which MAC is under verification. This value must be hexBinary.</p>",
           "endpointDiscoveryId" : false,
@@ -35789,7 +35789,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "EncryptedPinBlock",
-        "c2jShape" : "HexLengthBetween16And32",
+        "c2jShape" : "EncryptedPinBlockType",
         "deprecated" : false,
         "documentation" : "<p>The encrypted PIN block data that Amazon Web Services Payment Cryptography verifies.</p>",
         "endpointDiscoveryId" : false,
@@ -35829,7 +35829,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "EncryptedPinBlock",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The encrypted PIN block data that Amazon Web Services Payment Cryptography verifies.</p>\n@param encryptedPinBlock The encrypted PIN block data that Amazon Web Services Payment Cryptography verifies.*/",
         "setterMethodName" : "setEncryptedPinBlock",
         "setterModel" : {
@@ -35858,7 +35858,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "PrimaryAccountNumber",
-        "c2jShape" : "NumberLengthBetween12And19",
+        "c2jShape" : "PrimaryAccountNumberType",
         "deprecated" : false,
         "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card with a specific account holder.</p>",
         "endpointDiscoveryId" : false,
@@ -36206,7 +36206,7 @@
         },
         "EncryptedPinBlock" : {
           "c2jName" : "EncryptedPinBlock",
-          "c2jShape" : "HexLengthBetween16And32",
+          "c2jShape" : "EncryptedPinBlockType",
           "deprecated" : false,
           "documentation" : "<p>The encrypted PIN block data that Amazon Web Services Payment Cryptography verifies.</p>",
           "endpointDiscoveryId" : false,
@@ -36246,7 +36246,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "EncryptedPinBlock",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The encrypted PIN block data that Amazon Web Services Payment Cryptography verifies.</p>\n@param encryptedPinBlock The encrypted PIN block data that Amazon Web Services Payment Cryptography verifies.*/",
           "setterMethodName" : "setEncryptedPinBlock",
           "setterModel" : {
@@ -36486,7 +36486,7 @@
         },
         "PrimaryAccountNumber" : {
           "c2jName" : "PrimaryAccountNumber",
-          "c2jShape" : "NumberLengthBetween12And19",
+          "c2jShape" : "PrimaryAccountNumberType",
           "deprecated" : false,
           "documentation" : "<p>The Primary Account Number (PAN), a unique identifier for a payment credit or debit card that associates the card with a specific account holder.</p>",
           "endpointDiscoveryId" : false,
@@ -37590,7 +37590,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "VerificationValue",
-        "c2jShape" : "NumberLengthBetween4And12",
+        "c2jShape" : "VerificationValueType",
         "deprecated" : false,
         "documentation" : "<p>Parameters that are required to generate or verify Visa PVV (PIN Verification Value).</p>",
         "endpointDiscoveryId" : false,
@@ -37630,7 +37630,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "VerificationValue",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>Parameters that are required to generate or verify Visa PVV (PIN Verification Value).</p>\n@param verificationValue Parameters that are required to generate or verify Visa PVV (PIN Verification Value).*/",
         "setterMethodName" : "setVerificationValue",
         "setterModel" : {
@@ -37731,7 +37731,7 @@
         },
         "VerificationValue" : {
           "c2jName" : "VerificationValue",
-          "c2jShape" : "NumberLengthBetween4And12",
+          "c2jShape" : "VerificationValueType",
           "deprecated" : false,
           "documentation" : "<p>Parameters that are required to generate or verify Visa PVV (PIN Verification Value).</p>",
           "endpointDiscoveryId" : false,
@@ -37771,7 +37771,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "VerificationValue",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>Parameters that are required to generate or verify Visa PVV (PIN Verification Value).</p>\n@param verificationValue Parameters that are required to generate or verify Visa PVV (PIN Verification Value).*/",
           "setterMethodName" : "setVerificationValue",
           "setterModel" : {
@@ -37844,7 +37844,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "EncryptedPinBlock",
-        "c2jShape" : "HexLengthBetween16And32",
+        "c2jShape" : "EncryptedPinBlockType",
         "deprecated" : false,
         "documentation" : "<p>The encrypted PIN block data to verify.</p>",
         "endpointDiscoveryId" : false,
@@ -37884,7 +37884,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "EncryptedPinBlock",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The encrypted PIN block data to verify.</p>\n@param encryptedPinBlock The encrypted PIN block data to verify.*/",
         "setterMethodName" : "setEncryptedPinBlock",
         "setterModel" : {
@@ -37984,7 +37984,7 @@
       "membersAsMap" : {
         "EncryptedPinBlock" : {
           "c2jName" : "EncryptedPinBlock",
-          "c2jShape" : "HexLengthBetween16And32",
+          "c2jShape" : "EncryptedPinBlockType",
           "deprecated" : false,
           "documentation" : "<p>The encrypted PIN block data to verify.</p>",
           "endpointDiscoveryId" : false,
@@ -38024,7 +38024,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "EncryptedPinBlock",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The encrypted PIN block data to verify.</p>\n@param encryptedPinBlock The encrypted PIN block data to verify.*/",
           "setterMethodName" : "setEncryptedPinBlock",
           "setterModel" : {

@@ -397,9 +397,9 @@ public class VerifyAuthRequestCryptogramRequest extends com.amazonaws.AmazonWebS
         if (getKeyIdentifier() != null)
             sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
         if (getTransactionData() != null)
-            sb.append("TransactionData: ").append(getTransactionData()).append(",");
+            sb.append("TransactionData: ").append("***Sensitive Data Redacted***").append(",");
         if (getAuthRequestCryptogram() != null)
-            sb.append("AuthRequestCryptogram: ").append(getAuthRequestCryptogram()).append(",");
+            sb.append("AuthRequestCryptogram: ").append("***Sensitive Data Redacted***").append(",");
         if (getMajorKeyDerivationMode() != null)
             sb.append("MajorKeyDerivationMode: ").append(getMajorKeyDerivationMode()).append(",");
         if (getSessionKeyDerivationAttributes() != null)

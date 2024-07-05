@@ -144,7 +144,7 @@ public class CryptogramVerificationArpcMethod2 implements Serializable, Cloneabl
         if (getCardStatusUpdate() != null)
             sb.append("CardStatusUpdate: ").append(getCardStatusUpdate()).append(",");
         if (getProprietaryAuthenticationData() != null)
-            sb.append("ProprietaryAuthenticationData: ").append(getProprietaryAuthenticationData());
+            sb.append("ProprietaryAuthenticationData: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

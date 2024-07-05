@@ -211,7 +211,7 @@ public class GenerateMacResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (getKeyCheckValue() != null)
             sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
         if (getMac() != null)
-            sb.append("Mac: ").append(getMac());
+            sb.append("Mac: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
