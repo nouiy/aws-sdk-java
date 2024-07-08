@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.758-SNAPSHOT</version>
+    <version>1.12.758</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,12 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-qapps</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-apptest</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2420,6 +2426,10 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>QApps</title>
+                                  <packages>com.amazonaws.services.qapps*</packages>
+                              </group>
                               <group>
                                   <title>AWS Mainframe Modernization Application Testing</title>
                                   <packages>com.amazonaws.services.apptest*</packages>

@@ -1,3 +1,44 @@
+# __1.12.758__ __2024-07-08__
+## __AWS CodeDeploy__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __AWS Database Migration Service__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __AWS Device Farm__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __AWS Elastic Beanstalk__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Elasticsearch Service__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon GameLift__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Kinesis Firehose__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Route 53 Resolver__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Simple Email Service__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __QApps__
+  - ### Features
+    - This is a general availability (GA) release of Amazon Q Apps, a capability of Amazon Q Business. Q Apps leverages data sources your company has provided to enable users to build, share, and customize apps within your organization.
+
 # __1.12.757__ __2024-07-05__
 ## __AWS Certificate Manager__
   - ### Features
