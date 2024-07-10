@@ -38,8 +38,32 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
     private String role;
     /**
      * <p>
-     * The message content.
+     * The message content. Note the following restrictions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000 px, and
+     * 8000 px, respectively.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also include
+     * a <code>ContentBlock</code> with a <code>text</code> field.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only include images and documents if the <code>role</code> is <code>user</code>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<ContentBlock> content;
 
@@ -104,10 +128,57 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The message content.
+     * The message content. Note the following restrictions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000 px, and
+     * 8000 px, respectively.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also include
+     * a <code>ContentBlock</code> with a <code>text</code> field.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only include images and documents if the <code>role</code> is <code>user</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The message content.
+     * @return The message content. Note the following restrictions:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000
+     *         px, and 8000 px, respectively.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also
+     *         include a <code>ContentBlock</code> with a <code>text</code> field.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You can only include images and documents if the <code>role</code> is <code>user</code>.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<ContentBlock> getContent() {
@@ -116,11 +187,58 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The message content.
+     * The message content. Note the following restrictions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000 px, and
+     * 8000 px, respectively.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also include
+     * a <code>ContentBlock</code> with a <code>text</code> field.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only include images and documents if the <code>role</code> is <code>user</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param content
-     *        The message content.
+     *        The message content. Note the following restrictions:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000
+     *        px, and 8000 px, respectively.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also
+     *        include a <code>ContentBlock</code> with a <code>text</code> field.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can only include images and documents if the <code>role</code> is <code>user</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setContent(java.util.Collection<ContentBlock> content) {
@@ -134,8 +252,32 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The message content.
+     * The message content. Note the following restrictions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000 px, and
+     * 8000 px, respectively.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also include
+     * a <code>ContentBlock</code> with a <code>text</code> field.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only include images and documents if the <code>role</code> is <code>user</code>.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setContent(java.util.Collection)} or {@link #withContent(java.util.Collection)} if you want to override
@@ -143,7 +285,30 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param content
-     *        The message content.
+     *        The message content. Note the following restrictions:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000
+     *        px, and 8000 px, respectively.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also
+     *        include a <code>ContentBlock</code> with a <code>text</code> field.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can only include images and documents if the <code>role</code> is <code>user</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,11 +324,58 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The message content.
+     * The message content. Note the following restrictions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000 px, and
+     * 8000 px, respectively.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also include
+     * a <code>ContentBlock</code> with a <code>text</code> field.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only include images and documents if the <code>role</code> is <code>user</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param content
-     *        The message content.
+     *        The message content. Note the following restrictions:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000
+     *        px, and 8000 px, respectively.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also
+     *        include a <code>ContentBlock</code> with a <code>text</code> field.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can only include images and documents if the <code>role</code> is <code>user</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

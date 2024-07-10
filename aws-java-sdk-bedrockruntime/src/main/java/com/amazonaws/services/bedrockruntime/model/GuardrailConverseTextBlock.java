@@ -35,6 +35,12 @@ public class GuardrailConverseTextBlock implements Serializable, Cloneable, Stru
      * </p>
      */
     private String text;
+    /**
+     * <p>
+     * The qualifier details for the guardrails contextual grounding filter.
+     * </p>
+     */
+    private java.util.List<String> qualifiers;
 
     /**
      * <p>
@@ -77,6 +83,104 @@ public class GuardrailConverseTextBlock implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The qualifier details for the guardrails contextual grounding filter.
+     * </p>
+     * 
+     * @return The qualifier details for the guardrails contextual grounding filter.
+     * @see GuardrailConverseContentQualifier
+     */
+
+    public java.util.List<String> getQualifiers() {
+        return qualifiers;
+    }
+
+    /**
+     * <p>
+     * The qualifier details for the guardrails contextual grounding filter.
+     * </p>
+     * 
+     * @param qualifiers
+     *        The qualifier details for the guardrails contextual grounding filter.
+     * @see GuardrailConverseContentQualifier
+     */
+
+    public void setQualifiers(java.util.Collection<String> qualifiers) {
+        if (qualifiers == null) {
+            this.qualifiers = null;
+            return;
+        }
+
+        this.qualifiers = new java.util.ArrayList<String>(qualifiers);
+    }
+
+    /**
+     * <p>
+     * The qualifier details for the guardrails contextual grounding filter.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setQualifiers(java.util.Collection)} or {@link #withQualifiers(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param qualifiers
+     *        The qualifier details for the guardrails contextual grounding filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GuardrailConverseContentQualifier
+     */
+
+    public GuardrailConverseTextBlock withQualifiers(String... qualifiers) {
+        if (this.qualifiers == null) {
+            setQualifiers(new java.util.ArrayList<String>(qualifiers.length));
+        }
+        for (String ele : qualifiers) {
+            this.qualifiers.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The qualifier details for the guardrails contextual grounding filter.
+     * </p>
+     * 
+     * @param qualifiers
+     *        The qualifier details for the guardrails contextual grounding filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GuardrailConverseContentQualifier
+     */
+
+    public GuardrailConverseTextBlock withQualifiers(java.util.Collection<String> qualifiers) {
+        setQualifiers(qualifiers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The qualifier details for the guardrails contextual grounding filter.
+     * </p>
+     * 
+     * @param qualifiers
+     *        The qualifier details for the guardrails contextual grounding filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GuardrailConverseContentQualifier
+     */
+
+    public GuardrailConverseTextBlock withQualifiers(GuardrailConverseContentQualifier... qualifiers) {
+        java.util.ArrayList<String> qualifiersCopy = new java.util.ArrayList<String>(qualifiers.length);
+        for (GuardrailConverseContentQualifier value : qualifiers) {
+            qualifiersCopy.add(value.toString());
+        }
+        if (getQualifiers() == null) {
+            setQualifiers(qualifiersCopy);
+        } else {
+            getQualifiers().addAll(qualifiersCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -89,7 +193,9 @@ public class GuardrailConverseTextBlock implements Serializable, Cloneable, Stru
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getText() != null)
-            sb.append("Text: ").append(getText());
+            sb.append("Text: ").append(getText()).append(",");
+        if (getQualifiers() != null)
+            sb.append("Qualifiers: ").append(getQualifiers());
         sb.append("}");
         return sb.toString();
     }
@@ -108,6 +214,10 @@ public class GuardrailConverseTextBlock implements Serializable, Cloneable, Stru
             return false;
         if (other.getText() != null && other.getText().equals(this.getText()) == false)
             return false;
+        if (other.getQualifiers() == null ^ this.getQualifiers() == null)
+            return false;
+        if (other.getQualifiers() != null && other.getQualifiers().equals(this.getQualifiers()) == false)
+            return false;
         return true;
     }
 
@@ -117,6 +227,7 @@ public class GuardrailConverseTextBlock implements Serializable, Cloneable, Stru
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getText() == null) ? 0 : getText().hashCode());
+        hashCode = prime * hashCode + ((getQualifiers() == null) ? 0 : getQualifiers().hashCode());
         return hashCode;
     }
 

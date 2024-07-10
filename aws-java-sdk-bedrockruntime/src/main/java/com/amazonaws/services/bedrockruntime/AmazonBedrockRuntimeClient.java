@@ -155,6 +155,73 @@ public class AmazonBedrockRuntimeClient extends AmazonWebServiceClient implement
 
     /**
      * <p>
+     * The action to apply a guardrail.
+     * </p>
+     * 
+     * @param applyGuardrailRequest
+     * @return Result of the ApplyGuardrail operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AmazonBedrockRuntime.ApplyGuardrail
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/ApplyGuardrail" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ApplyGuardrailResult applyGuardrail(ApplyGuardrailRequest request) {
+        request = beforeClientExecution(request);
+        return executeApplyGuardrail(request);
+    }
+
+    @SdkInternalApi
+    final ApplyGuardrailResult executeApplyGuardrail(ApplyGuardrailRequest applyGuardrailRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(applyGuardrailRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ApplyGuardrailRequest> request = null;
+        Response<ApplyGuardrailResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ApplyGuardrailRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(applyGuardrailRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock Runtime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ApplyGuardrail");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ApplyGuardrailResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ApplyGuardrailResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
      * works with all models that support messages. This allows you to write code once and use it with different models.
      * Should a model have unique inference parameters, you can also pass those unique parameters to the model.

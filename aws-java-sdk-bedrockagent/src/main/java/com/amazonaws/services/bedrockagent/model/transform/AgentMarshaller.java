@@ -58,6 +58,8 @@ public class AgentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idleSessionTTLInSeconds").build();
     private static final MarshallingInfo<String> INSTRUCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instruction").build();
+    private static final MarshallingInfo<StructuredPojo> MEMORYCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memoryConfiguration").build();
     private static final MarshallingInfo<java.util.Date> PREPAREDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preparedAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<StructuredPojo> PROMPTOVERRIDECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -98,6 +100,7 @@ public class AgentMarshaller {
             protocolMarshaller.marshall(agent.getGuardrailConfiguration(), GUARDRAILCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agent.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
             protocolMarshaller.marshall(agent.getInstruction(), INSTRUCTION_BINDING);
+            protocolMarshaller.marshall(agent.getMemoryConfiguration(), MEMORYCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agent.getPreparedAt(), PREPAREDAT_BINDING);
             protocolMarshaller.marshall(agent.getPromptOverrideConfiguration(), PROMPTOVERRIDECONFIGURATION_BINDING);
             protocolMarshaller.marshall(agent.getRecommendedActions(), RECOMMENDEDACTIONS_BINDING);

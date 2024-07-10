@@ -28,6 +28,16 @@ public class AbstractAWSLicenseManagerLinuxSubscriptions implements AWSLicenseMa
     }
 
     @Override
+    public DeregisterSubscriptionProviderResult deregisterSubscriptionProvider(DeregisterSubscriptionProviderRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRegisteredSubscriptionProviderResult getRegisteredSubscriptionProvider(GetRegisteredSubscriptionProviderRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetServiceSettingsResult getServiceSettings(GetServiceSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -39,6 +49,31 @@ public class AbstractAWSLicenseManagerLinuxSubscriptions implements AWSLicenseMa
 
     @Override
     public ListLinuxSubscriptionsResult listLinuxSubscriptions(ListLinuxSubscriptionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRegisteredSubscriptionProvidersResult listRegisteredSubscriptionProviders(ListRegisteredSubscriptionProvidersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RegisterSubscriptionProviderResult registerSubscriptionProvider(RegisterSubscriptionProviderRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

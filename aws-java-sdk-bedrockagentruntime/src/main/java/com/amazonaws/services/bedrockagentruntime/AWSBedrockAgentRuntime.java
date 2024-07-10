@@ -43,6 +43,72 @@ public interface AWSBedrockAgentRuntime {
 
     /**
      * <p>
+     * Deletes memory from the specified memory identifier.
+     * </p>
+     * 
+     * @param deleteAgentMemoryRequest
+     * @return Result of the DeleteAgentMemory operation returned by the service.
+     * @throws ConflictException
+     *         There was a conflict performing an operation. Resolve the conflict and retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws DependencyFailedException
+     *         There was an issue with a dependency. Check the resource configurations and retry the request.
+     * @throws BadGatewayException
+     *         There was an issue with a dependency due to a server issue. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions. Check your permissions and retry your
+     *         request.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgentRuntime.DeleteAgentMemory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/DeleteAgentMemory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteAgentMemoryResult deleteAgentMemory(DeleteAgentMemoryRequest deleteAgentMemoryRequest);
+
+    /**
+     * <p>
+     * Gets the sessions stored in the memory of the agent.
+     * </p>
+     * 
+     * @param getAgentMemoryRequest
+     * @return Result of the GetAgentMemory operation returned by the service.
+     * @throws ConflictException
+     *         There was a conflict performing an operation. Resolve the conflict and retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws DependencyFailedException
+     *         There was an issue with a dependency. Check the resource configurations and retry the request.
+     * @throws BadGatewayException
+     *         There was an issue with a dependency due to a server issue. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions. Check your permissions and retry your
+     *         request.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgentRuntime.GetAgentMemory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/GetAgentMemory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetAgentMemoryResult getAgentMemory(GetAgentMemoryRequest getAgentMemoryRequest);
+
+    /**
+     * <p>
      * Queries a knowledge base and retrieves information from it.
      * </p>
      * 

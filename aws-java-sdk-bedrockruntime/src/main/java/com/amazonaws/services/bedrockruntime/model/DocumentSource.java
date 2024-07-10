@@ -19,10 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the content of the document included in a message when sending a <a
- * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a
- * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a>
- * request or in the response.
+ * Contains the content of a document.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/DocumentSource" target="_top">AWS API
@@ -33,14 +30,16 @@ public class DocumentSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A base64-encoded string of a UTF-8 encoded file, that is the document to include in the message.
+     * The raw bytes for the document. If you use an Amazon Web Services SDK, you don't need to encode the bytes in
+     * base64.
      * </p>
      */
     private java.nio.ByteBuffer bytes;
 
     /**
      * <p>
-     * A base64-encoded string of a UTF-8 encoded file, that is the document to include in the message.
+     * The raw bytes for the document. If you use an Amazon Web Services SDK, you don't need to encode the bytes in
+     * base64.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -54,7 +53,8 @@ public class DocumentSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param bytes
-     *        A base64-encoded string of a UTF-8 encoded file, that is the document to include in the message.
+     *        The raw bytes for the document. If you use an Amazon Web Services SDK, you don't need to encode the bytes
+     *        in base64.
      */
 
     public void setBytes(java.nio.ByteBuffer bytes) {
@@ -63,7 +63,8 @@ public class DocumentSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A base64-encoded string of a UTF-8 encoded file, that is the document to include in the message.
+     * The raw bytes for the document. If you use an Amazon Web Services SDK, you don't need to encode the bytes in
+     * base64.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -73,7 +74,8 @@ public class DocumentSource implements Serializable, Cloneable, StructuredPojo {
      * {@code position}.
      * </p>
      * 
-     * @return A base64-encoded string of a UTF-8 encoded file, that is the document to include in the message.
+     * @return The raw bytes for the document. If you use an Amazon Web Services SDK, you don't need to encode the bytes
+     *         in base64.
      */
 
     public java.nio.ByteBuffer getBytes() {
@@ -82,7 +84,8 @@ public class DocumentSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A base64-encoded string of a UTF-8 encoded file, that is the document to include in the message.
+     * The raw bytes for the document. If you use an Amazon Web Services SDK, you don't need to encode the bytes in
+     * base64.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -96,7 +99,8 @@ public class DocumentSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param bytes
-     *        A base64-encoded string of a UTF-8 encoded file, that is the document to include in the message.
+     *        The raw bytes for the document. If you use an Amazon Web Services SDK, you don't need to encode the bytes
+     *        in base64.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

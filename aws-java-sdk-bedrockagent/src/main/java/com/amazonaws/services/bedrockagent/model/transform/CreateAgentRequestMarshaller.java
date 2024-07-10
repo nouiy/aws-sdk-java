@@ -50,6 +50,8 @@ public class CreateAgentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idleSessionTTLInSeconds").build();
     private static final MarshallingInfo<String> INSTRUCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instruction").build();
+    private static final MarshallingInfo<StructuredPojo> MEMORYCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memoryConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> PROMPTOVERRIDECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptOverrideConfiguration").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -80,6 +82,7 @@ public class CreateAgentRequestMarshaller {
             protocolMarshaller.marshall(createAgentRequest.getGuardrailConfiguration(), GUARDRAILCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createAgentRequest.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
             protocolMarshaller.marshall(createAgentRequest.getInstruction(), INSTRUCTION_BINDING);
+            protocolMarshaller.marshall(createAgentRequest.getMemoryConfiguration(), MEMORYCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createAgentRequest.getPromptOverrideConfiguration(), PROMPTOVERRIDECONFIGURATION_BINDING);
             protocolMarshaller.marshall(createAgentRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {

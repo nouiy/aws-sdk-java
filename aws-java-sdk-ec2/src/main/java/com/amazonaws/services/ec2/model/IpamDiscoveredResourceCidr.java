@@ -107,10 +107,22 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
     private String vpcId;
     /**
      * <p>
+     * For elastic IP addresses, this is the status of an attached network interface.
+     * </p>
+     */
+    private String networkInterfaceAttachmentStatus;
+    /**
+     * <p>
      * The last successful resource discovery time.
      * </p>
      */
     private java.util.Date sampleTime;
+    /**
+     * <p>
+     * The Availability Zone ID.
+     * </p>
+     */
+    private String availabilityZoneId;
 
     /**
      * <p>
@@ -661,6 +673,65 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
 
     /**
      * <p>
+     * For elastic IP addresses, this is the status of an attached network interface.
+     * </p>
+     * 
+     * @param networkInterfaceAttachmentStatus
+     *        For elastic IP addresses, this is the status of an attached network interface.
+     * @see IpamNetworkInterfaceAttachmentStatus
+     */
+
+    public void setNetworkInterfaceAttachmentStatus(String networkInterfaceAttachmentStatus) {
+        this.networkInterfaceAttachmentStatus = networkInterfaceAttachmentStatus;
+    }
+
+    /**
+     * <p>
+     * For elastic IP addresses, this is the status of an attached network interface.
+     * </p>
+     * 
+     * @return For elastic IP addresses, this is the status of an attached network interface.
+     * @see IpamNetworkInterfaceAttachmentStatus
+     */
+
+    public String getNetworkInterfaceAttachmentStatus() {
+        return this.networkInterfaceAttachmentStatus;
+    }
+
+    /**
+     * <p>
+     * For elastic IP addresses, this is the status of an attached network interface.
+     * </p>
+     * 
+     * @param networkInterfaceAttachmentStatus
+     *        For elastic IP addresses, this is the status of an attached network interface.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpamNetworkInterfaceAttachmentStatus
+     */
+
+    public IpamDiscoveredResourceCidr withNetworkInterfaceAttachmentStatus(String networkInterfaceAttachmentStatus) {
+        setNetworkInterfaceAttachmentStatus(networkInterfaceAttachmentStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For elastic IP addresses, this is the status of an attached network interface.
+     * </p>
+     * 
+     * @param networkInterfaceAttachmentStatus
+     *        For elastic IP addresses, this is the status of an attached network interface.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpamNetworkInterfaceAttachmentStatus
+     */
+
+    public IpamDiscoveredResourceCidr withNetworkInterfaceAttachmentStatus(IpamNetworkInterfaceAttachmentStatus networkInterfaceAttachmentStatus) {
+        this.networkInterfaceAttachmentStatus = networkInterfaceAttachmentStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The last successful resource discovery time.
      * </p>
      * 
@@ -700,6 +771,46 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Availability Zone ID.
+     * </p>
+     * 
+     * @param availabilityZoneId
+     *        The Availability Zone ID.
+     */
+
+    public void setAvailabilityZoneId(String availabilityZoneId) {
+        this.availabilityZoneId = availabilityZoneId;
+    }
+
+    /**
+     * <p>
+     * The Availability Zone ID.
+     * </p>
+     * 
+     * @return The Availability Zone ID.
+     */
+
+    public String getAvailabilityZoneId() {
+        return this.availabilityZoneId;
+    }
+
+    /**
+     * <p>
+     * The Availability Zone ID.
+     * </p>
+     * 
+     * @param availabilityZoneId
+     *        The Availability Zone ID.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IpamDiscoveredResourceCidr withAvailabilityZoneId(String availabilityZoneId) {
+        setAvailabilityZoneId(availabilityZoneId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -729,8 +840,12 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
             sb.append("IpUsage: ").append(getIpUsage()).append(",");
         if (getVpcId() != null)
             sb.append("VpcId: ").append(getVpcId()).append(",");
+        if (getNetworkInterfaceAttachmentStatus() != null)
+            sb.append("NetworkInterfaceAttachmentStatus: ").append(getNetworkInterfaceAttachmentStatus()).append(",");
         if (getSampleTime() != null)
-            sb.append("SampleTime: ").append(getSampleTime());
+            sb.append("SampleTime: ").append(getSampleTime()).append(",");
+        if (getAvailabilityZoneId() != null)
+            sb.append("AvailabilityZoneId: ").append(getAvailabilityZoneId());
         sb.append("}");
         return sb.toString();
     }
@@ -781,9 +896,18 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
             return false;
         if (other.getVpcId() != null && other.getVpcId().equals(this.getVpcId()) == false)
             return false;
+        if (other.getNetworkInterfaceAttachmentStatus() == null ^ this.getNetworkInterfaceAttachmentStatus() == null)
+            return false;
+        if (other.getNetworkInterfaceAttachmentStatus() != null
+                && other.getNetworkInterfaceAttachmentStatus().equals(this.getNetworkInterfaceAttachmentStatus()) == false)
+            return false;
         if (other.getSampleTime() == null ^ this.getSampleTime() == null)
             return false;
         if (other.getSampleTime() != null && other.getSampleTime().equals(this.getSampleTime()) == false)
+            return false;
+        if (other.getAvailabilityZoneId() == null ^ this.getAvailabilityZoneId() == null)
+            return false;
+        if (other.getAvailabilityZoneId() != null && other.getAvailabilityZoneId().equals(this.getAvailabilityZoneId()) == false)
             return false;
         return true;
     }
@@ -802,7 +926,9 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getResourceTags() == null) ? 0 : getResourceTags().hashCode());
         hashCode = prime * hashCode + ((getIpUsage() == null) ? 0 : getIpUsage().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
+        hashCode = prime * hashCode + ((getNetworkInterfaceAttachmentStatus() == null) ? 0 : getNetworkInterfaceAttachmentStatus().hashCode());
         hashCode = prime * hashCode + ((getSampleTime() == null) ? 0 : getSampleTime().hashCode());
+        hashCode = prime * hashCode + ((getAvailabilityZoneId() == null) ? 0 : getAvailabilityZoneId().hashCode());
         return hashCode;
     }
 

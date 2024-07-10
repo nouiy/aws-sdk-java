@@ -85,6 +85,12 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String instruction;
     /**
      * <p>
+     * Specifies the new memory configuration for the agent.
+     * </p>
+     */
+    private MemoryConfiguration memoryConfiguration;
+    /**
+     * <p>
      * Contains configurations to override prompts in different parts of an agent sequence. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
      * </p>
@@ -477,6 +483,46 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
+     * Specifies the new memory configuration for the agent.
+     * </p>
+     * 
+     * @param memoryConfiguration
+     *        Specifies the new memory configuration for the agent.
+     */
+
+    public void setMemoryConfiguration(MemoryConfiguration memoryConfiguration) {
+        this.memoryConfiguration = memoryConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies the new memory configuration for the agent.
+     * </p>
+     * 
+     * @return Specifies the new memory configuration for the agent.
+     */
+
+    public MemoryConfiguration getMemoryConfiguration() {
+        return this.memoryConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies the new memory configuration for the agent.
+     * </p>
+     * 
+     * @param memoryConfiguration
+     *        Specifies the new memory configuration for the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAgentRequest withMemoryConfiguration(MemoryConfiguration memoryConfiguration) {
+        setMemoryConfiguration(memoryConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * Contains configurations to override prompts in different parts of an agent sequence. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
      * </p>
@@ -554,6 +600,8 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
             sb.append("IdleSessionTTLInSeconds: ").append(getIdleSessionTTLInSeconds()).append(",");
         if (getInstruction() != null)
             sb.append("Instruction: ").append("***Sensitive Data Redacted***").append(",");
+        if (getMemoryConfiguration() != null)
+            sb.append("MemoryConfiguration: ").append(getMemoryConfiguration()).append(",");
         if (getPromptOverrideConfiguration() != null)
             sb.append("PromptOverrideConfiguration: ").append("***Sensitive Data Redacted***");
         sb.append("}");
@@ -606,6 +654,10 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getInstruction() != null && other.getInstruction().equals(this.getInstruction()) == false)
             return false;
+        if (other.getMemoryConfiguration() == null ^ this.getMemoryConfiguration() == null)
+            return false;
+        if (other.getMemoryConfiguration() != null && other.getMemoryConfiguration().equals(this.getMemoryConfiguration()) == false)
+            return false;
         if (other.getPromptOverrideConfiguration() == null ^ this.getPromptOverrideConfiguration() == null)
             return false;
         if (other.getPromptOverrideConfiguration() != null && other.getPromptOverrideConfiguration().equals(this.getPromptOverrideConfiguration()) == false)
@@ -627,6 +679,7 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getGuardrailConfiguration() == null) ? 0 : getGuardrailConfiguration().hashCode());
         hashCode = prime * hashCode + ((getIdleSessionTTLInSeconds() == null) ? 0 : getIdleSessionTTLInSeconds().hashCode());
         hashCode = prime * hashCode + ((getInstruction() == null) ? 0 : getInstruction().hashCode());
+        hashCode = prime * hashCode + ((getMemoryConfiguration() == null) ? 0 : getMemoryConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPromptOverrideConfiguration() == null) ? 0 : getPromptOverrideConfiguration().hashCode());
         return hashCode;
     }

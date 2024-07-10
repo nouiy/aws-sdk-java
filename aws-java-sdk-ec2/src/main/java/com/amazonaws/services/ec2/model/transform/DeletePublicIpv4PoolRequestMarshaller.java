@@ -44,6 +44,10 @@ public class DeletePublicIpv4PoolRequestMarshaller implements Marshaller<Request
             request.addParameter("PoolId", StringUtils.fromString(deletePublicIpv4PoolRequest.getPoolId()));
         }
 
+        if (deletePublicIpv4PoolRequest.getNetworkBorderGroup() != null) {
+            request.addParameter("NetworkBorderGroup", StringUtils.fromString(deletePublicIpv4PoolRequest.getNetworkBorderGroup()));
+        }
+
         return request;
     }
 

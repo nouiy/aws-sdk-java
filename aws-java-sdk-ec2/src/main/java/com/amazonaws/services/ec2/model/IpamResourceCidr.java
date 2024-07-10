@@ -146,6 +146,12 @@ public class IpamResourceCidr implements Serializable, Cloneable {
      * </p>
      */
     private String vpcId;
+    /**
+     * <p>
+     * The Availability Zone ID.
+     * </p>
+     */
+    private String availabilityZoneId;
 
     /**
      * <p>
@@ -1048,6 +1054,46 @@ public class IpamResourceCidr implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Availability Zone ID.
+     * </p>
+     * 
+     * @param availabilityZoneId
+     *        The Availability Zone ID.
+     */
+
+    public void setAvailabilityZoneId(String availabilityZoneId) {
+        this.availabilityZoneId = availabilityZoneId;
+    }
+
+    /**
+     * <p>
+     * The Availability Zone ID.
+     * </p>
+     * 
+     * @return The Availability Zone ID.
+     */
+
+    public String getAvailabilityZoneId() {
+        return this.availabilityZoneId;
+    }
+
+    /**
+     * <p>
+     * The Availability Zone ID.
+     * </p>
+     * 
+     * @param availabilityZoneId
+     *        The Availability Zone ID.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IpamResourceCidr withAvailabilityZoneId(String availabilityZoneId) {
+        setAvailabilityZoneId(availabilityZoneId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1088,7 +1134,9 @@ public class IpamResourceCidr implements Serializable, Cloneable {
         if (getOverlapStatus() != null)
             sb.append("OverlapStatus: ").append(getOverlapStatus()).append(",");
         if (getVpcId() != null)
-            sb.append("VpcId: ").append(getVpcId());
+            sb.append("VpcId: ").append(getVpcId()).append(",");
+        if (getAvailabilityZoneId() != null)
+            sb.append("AvailabilityZoneId: ").append(getAvailabilityZoneId());
         sb.append("}");
         return sb.toString();
     }
@@ -1163,6 +1211,10 @@ public class IpamResourceCidr implements Serializable, Cloneable {
             return false;
         if (other.getVpcId() != null && other.getVpcId().equals(this.getVpcId()) == false)
             return false;
+        if (other.getAvailabilityZoneId() == null ^ this.getAvailabilityZoneId() == null)
+            return false;
+        if (other.getAvailabilityZoneId() != null && other.getAvailabilityZoneId().equals(this.getAvailabilityZoneId()) == false)
+            return false;
         return true;
     }
 
@@ -1186,6 +1238,7 @@ public class IpamResourceCidr implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getManagementState() == null) ? 0 : getManagementState().hashCode());
         hashCode = prime * hashCode + ((getOverlapStatus() == null) ? 0 : getOverlapStatus().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
+        hashCode = prime * hashCode + ((getAvailabilityZoneId() == null) ? 0 : getAvailabilityZoneId().hashCode());
         return hashCode;
     }
 

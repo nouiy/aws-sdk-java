@@ -27,10 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DataSourceConfigurationMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> CONFLUENCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("confluenceConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> S3CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Configuration").build();
+    private static final MarshallingInfo<StructuredPojo> SALESFORCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("salesforceConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> SHAREPOINTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sharePointConfiguration").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<StructuredPojo> WEBCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("webConfiguration").build();
 
     private static final DataSourceConfigurationMarshaller instance = new DataSourceConfigurationMarshaller();
 
@@ -48,8 +56,12 @@ public class DataSourceConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(dataSourceConfiguration.getConfluenceConfiguration(), CONFLUENCECONFIGURATION_BINDING);
             protocolMarshaller.marshall(dataSourceConfiguration.getS3Configuration(), S3CONFIGURATION_BINDING);
+            protocolMarshaller.marshall(dataSourceConfiguration.getSalesforceConfiguration(), SALESFORCECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(dataSourceConfiguration.getSharePointConfiguration(), SHAREPOINTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(dataSourceConfiguration.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(dataSourceConfiguration.getWebConfiguration(), WEBCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

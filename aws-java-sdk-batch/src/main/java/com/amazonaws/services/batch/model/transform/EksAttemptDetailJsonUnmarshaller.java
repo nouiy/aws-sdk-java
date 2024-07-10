@@ -60,6 +60,10 @@ public class EksAttemptDetailJsonUnmarshaller implements Unmarshaller<EksAttempt
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("eksClusterArn", targetDepth)) {
+                    context.nextToken();
+                    eksAttemptDetail.setEksClusterArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("podName", targetDepth)) {
                     context.nextToken();
                     eksAttemptDetail.setPodName(context.getUnmarshaller(String.class).unmarshall(context));

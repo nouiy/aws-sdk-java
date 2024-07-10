@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about the location of the data source.
+ * Contains information about the data source location.
  * </p>
  * <p>
  * This data type is used in the following API operations:
@@ -56,24 +56,88 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Contains the S3 location of the data source.
+     * The Confluence data source location.
+     * </p>
+     */
+    private RetrievalResultConfluenceLocation confluenceLocation;
+    /**
+     * <p>
+     * The S3 data source location.
      * </p>
      */
     private RetrievalResultS3Location s3Location;
     /**
      * <p>
-     * The type of the location of the data source.
+     * The Salesforce data source location.
+     * </p>
+     */
+    private RetrievalResultSalesforceLocation salesforceLocation;
+    /**
+     * <p>
+     * The SharePoint data source location.
+     * </p>
+     */
+    private RetrievalResultSharePointLocation sharePointLocation;
+    /**
+     * <p>
+     * The type of data source location.
      * </p>
      */
     private String type;
+    /**
+     * <p>
+     * The web URL/URLs data source location.
+     * </p>
+     */
+    private RetrievalResultWebLocation webLocation;
 
     /**
      * <p>
-     * Contains the S3 location of the data source.
+     * The Confluence data source location.
+     * </p>
+     * 
+     * @param confluenceLocation
+     *        The Confluence data source location.
+     */
+
+    public void setConfluenceLocation(RetrievalResultConfluenceLocation confluenceLocation) {
+        this.confluenceLocation = confluenceLocation;
+    }
+
+    /**
+     * <p>
+     * The Confluence data source location.
+     * </p>
+     * 
+     * @return The Confluence data source location.
+     */
+
+    public RetrievalResultConfluenceLocation getConfluenceLocation() {
+        return this.confluenceLocation;
+    }
+
+    /**
+     * <p>
+     * The Confluence data source location.
+     * </p>
+     * 
+     * @param confluenceLocation
+     *        The Confluence data source location.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrievalResultLocation withConfluenceLocation(RetrievalResultConfluenceLocation confluenceLocation) {
+        setConfluenceLocation(confluenceLocation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The S3 data source location.
      * </p>
      * 
      * @param s3Location
-     *        Contains the S3 location of the data source.
+     *        The S3 data source location.
      */
 
     public void setS3Location(RetrievalResultS3Location s3Location) {
@@ -82,10 +146,10 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Contains the S3 location of the data source.
+     * The S3 data source location.
      * </p>
      * 
-     * @return Contains the S3 location of the data source.
+     * @return The S3 data source location.
      */
 
     public RetrievalResultS3Location getS3Location() {
@@ -94,11 +158,11 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Contains the S3 location of the data source.
+     * The S3 data source location.
      * </p>
      * 
      * @param s3Location
-     *        Contains the S3 location of the data source.
+     *        The S3 data source location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,11 +173,91 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of the location of the data source.
+     * The Salesforce data source location.
+     * </p>
+     * 
+     * @param salesforceLocation
+     *        The Salesforce data source location.
+     */
+
+    public void setSalesforceLocation(RetrievalResultSalesforceLocation salesforceLocation) {
+        this.salesforceLocation = salesforceLocation;
+    }
+
+    /**
+     * <p>
+     * The Salesforce data source location.
+     * </p>
+     * 
+     * @return The Salesforce data source location.
+     */
+
+    public RetrievalResultSalesforceLocation getSalesforceLocation() {
+        return this.salesforceLocation;
+    }
+
+    /**
+     * <p>
+     * The Salesforce data source location.
+     * </p>
+     * 
+     * @param salesforceLocation
+     *        The Salesforce data source location.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrievalResultLocation withSalesforceLocation(RetrievalResultSalesforceLocation salesforceLocation) {
+        setSalesforceLocation(salesforceLocation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The SharePoint data source location.
+     * </p>
+     * 
+     * @param sharePointLocation
+     *        The SharePoint data source location.
+     */
+
+    public void setSharePointLocation(RetrievalResultSharePointLocation sharePointLocation) {
+        this.sharePointLocation = sharePointLocation;
+    }
+
+    /**
+     * <p>
+     * The SharePoint data source location.
+     * </p>
+     * 
+     * @return The SharePoint data source location.
+     */
+
+    public RetrievalResultSharePointLocation getSharePointLocation() {
+        return this.sharePointLocation;
+    }
+
+    /**
+     * <p>
+     * The SharePoint data source location.
+     * </p>
+     * 
+     * @param sharePointLocation
+     *        The SharePoint data source location.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrievalResultLocation withSharePointLocation(RetrievalResultSharePointLocation sharePointLocation) {
+        setSharePointLocation(sharePointLocation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of data source location.
      * </p>
      * 
      * @param type
-     *        The type of the location of the data source.
+     *        The type of data source location.
      * @see RetrievalResultLocationType
      */
 
@@ -123,10 +267,10 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of the location of the data source.
+     * The type of data source location.
      * </p>
      * 
-     * @return The type of the location of the data source.
+     * @return The type of data source location.
      * @see RetrievalResultLocationType
      */
 
@@ -136,11 +280,11 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of the location of the data source.
+     * The type of data source location.
      * </p>
      * 
      * @param type
-     *        The type of the location of the data source.
+     *        The type of data source location.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RetrievalResultLocationType
      */
@@ -152,17 +296,57 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of the location of the data source.
+     * The type of data source location.
      * </p>
      * 
      * @param type
-     *        The type of the location of the data source.
+     *        The type of data source location.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RetrievalResultLocationType
      */
 
     public RetrievalResultLocation withType(RetrievalResultLocationType type) {
         this.type = type.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The web URL/URLs data source location.
+     * </p>
+     * 
+     * @param webLocation
+     *        The web URL/URLs data source location.
+     */
+
+    public void setWebLocation(RetrievalResultWebLocation webLocation) {
+        this.webLocation = webLocation;
+    }
+
+    /**
+     * <p>
+     * The web URL/URLs data source location.
+     * </p>
+     * 
+     * @return The web URL/URLs data source location.
+     */
+
+    public RetrievalResultWebLocation getWebLocation() {
+        return this.webLocation;
+    }
+
+    /**
+     * <p>
+     * The web URL/URLs data source location.
+     * </p>
+     * 
+     * @param webLocation
+     *        The web URL/URLs data source location.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrievalResultLocation withWebLocation(RetrievalResultWebLocation webLocation) {
+        setWebLocation(webLocation);
         return this;
     }
 
@@ -178,10 +362,18 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getConfluenceLocation() != null)
+            sb.append("ConfluenceLocation: ").append(getConfluenceLocation()).append(",");
         if (getS3Location() != null)
             sb.append("S3Location: ").append(getS3Location()).append(",");
+        if (getSalesforceLocation() != null)
+            sb.append("SalesforceLocation: ").append(getSalesforceLocation()).append(",");
+        if (getSharePointLocation() != null)
+            sb.append("SharePointLocation: ").append(getSharePointLocation()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getWebLocation() != null)
+            sb.append("WebLocation: ").append(getWebLocation());
         sb.append("}");
         return sb.toString();
     }
@@ -196,13 +388,29 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
         if (obj instanceof RetrievalResultLocation == false)
             return false;
         RetrievalResultLocation other = (RetrievalResultLocation) obj;
+        if (other.getConfluenceLocation() == null ^ this.getConfluenceLocation() == null)
+            return false;
+        if (other.getConfluenceLocation() != null && other.getConfluenceLocation().equals(this.getConfluenceLocation()) == false)
+            return false;
         if (other.getS3Location() == null ^ this.getS3Location() == null)
             return false;
         if (other.getS3Location() != null && other.getS3Location().equals(this.getS3Location()) == false)
             return false;
+        if (other.getSalesforceLocation() == null ^ this.getSalesforceLocation() == null)
+            return false;
+        if (other.getSalesforceLocation() != null && other.getSalesforceLocation().equals(this.getSalesforceLocation()) == false)
+            return false;
+        if (other.getSharePointLocation() == null ^ this.getSharePointLocation() == null)
+            return false;
+        if (other.getSharePointLocation() != null && other.getSharePointLocation().equals(this.getSharePointLocation()) == false)
+            return false;
         if (other.getType() == null ^ this.getType() == null)
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
+        if (other.getWebLocation() == null ^ this.getWebLocation() == null)
+            return false;
+        if (other.getWebLocation() != null && other.getWebLocation().equals(this.getWebLocation()) == false)
             return false;
         return true;
     }
@@ -212,8 +420,12 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getConfluenceLocation() == null) ? 0 : getConfluenceLocation().hashCode());
         hashCode = prime * hashCode + ((getS3Location() == null) ? 0 : getS3Location().hashCode());
+        hashCode = prime * hashCode + ((getSalesforceLocation() == null) ? 0 : getSalesforceLocation().hashCode());
+        hashCode = prime * hashCode + ((getSharePointLocation() == null) ? 0 : getSharePointLocation().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getWebLocation() == null) ? 0 : getWebLocation().hashCode());
         return hashCode;
     }
 

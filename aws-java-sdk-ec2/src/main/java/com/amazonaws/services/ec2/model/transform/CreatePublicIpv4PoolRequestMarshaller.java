@@ -75,6 +75,10 @@ public class CreatePublicIpv4PoolRequestMarshaller implements Marshaller<Request
             }
         }
 
+        if (createPublicIpv4PoolRequest.getNetworkBorderGroup() != null) {
+            request.addParameter("NetworkBorderGroup", StringUtils.fromString(createPublicIpv4PoolRequest.getNetworkBorderGroup()));
+        }
+
         return request;
     }
 

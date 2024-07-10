@@ -53,7 +53,32 @@ public class AbstractAWSBedrockAgent implements AWSBedrockAgent {
     }
 
     @Override
+    public CreateFlowResult createFlow(CreateFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateFlowAliasResult createFlowAlias(CreateFlowAliasRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateFlowVersionResult createFlowVersion(CreateFlowVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateKnowledgeBaseResult createKnowledgeBase(CreateKnowledgeBaseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreatePromptResult createPrompt(CreatePromptRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreatePromptVersionResult createPromptVersion(CreatePromptVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -83,7 +108,27 @@ public class AbstractAWSBedrockAgent implements AWSBedrockAgent {
     }
 
     @Override
+    public DeleteFlowResult deleteFlow(DeleteFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteFlowAliasResult deleteFlowAlias(DeleteFlowAliasRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteFlowVersionResult deleteFlowVersion(DeleteFlowVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteKnowledgeBaseResult deleteKnowledgeBase(DeleteKnowledgeBaseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePromptResult deletePrompt(DeletePromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -123,12 +168,32 @@ public class AbstractAWSBedrockAgent implements AWSBedrockAgent {
     }
 
     @Override
+    public GetFlowResult getFlow(GetFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetFlowAliasResult getFlowAlias(GetFlowAliasRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetFlowVersionResult getFlowVersion(GetFlowVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetIngestionJobResult getIngestionJob(GetIngestionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public GetKnowledgeBaseResult getKnowledgeBase(GetKnowledgeBaseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetPromptResult getPrompt(GetPromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -163,6 +228,21 @@ public class AbstractAWSBedrockAgent implements AWSBedrockAgent {
     }
 
     @Override
+    public ListFlowAliasesResult listFlowAliases(ListFlowAliasesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListFlowVersionsResult listFlowVersions(ListFlowVersionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListFlowsResult listFlows(ListFlowsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListIngestionJobsResult listIngestionJobs(ListIngestionJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -173,12 +253,22 @@ public class AbstractAWSBedrockAgent implements AWSBedrockAgent {
     }
 
     @Override
+    public ListPromptsResult listPrompts(ListPromptsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public PrepareAgentResult prepareAgent(PrepareAgentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PrepareFlowResult prepareFlow(PrepareFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -223,7 +313,22 @@ public class AbstractAWSBedrockAgent implements AWSBedrockAgent {
     }
 
     @Override
+    public UpdateFlowResult updateFlow(UpdateFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateFlowAliasResult updateFlowAlias(UpdateFlowAliasRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateKnowledgeBaseResult updateKnowledgeBase(UpdateKnowledgeBaseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePromptResult updatePrompt(UpdatePromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

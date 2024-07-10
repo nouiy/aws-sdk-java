@@ -95,8 +95,18 @@ public class IpamDiscoveredResourceCidrStaxUnmarshaller implements Unmarshaller<
                     continue;
                 }
 
+                if (context.testExpression("networkInterfaceAttachmentStatus", targetDepth)) {
+                    ipamDiscoveredResourceCidr.setNetworkInterfaceAttachmentStatus(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("sampleTime", targetDepth)) {
                     ipamDiscoveredResourceCidr.setSampleTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("availabilityZoneId", targetDepth)) {
+                    ipamDiscoveredResourceCidr.setAvailabilityZoneId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
             } else if (xmlEvent.isEndElement()) {

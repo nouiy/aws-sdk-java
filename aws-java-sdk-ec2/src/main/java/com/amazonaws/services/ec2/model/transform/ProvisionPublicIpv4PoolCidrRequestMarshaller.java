@@ -54,6 +54,10 @@ public class ProvisionPublicIpv4PoolCidrRequestMarshaller implements
             request.addParameter("NetmaskLength", StringUtils.fromInteger(provisionPublicIpv4PoolCidrRequest.getNetmaskLength()));
         }
 
+        if (provisionPublicIpv4PoolCidrRequest.getNetworkBorderGroup() != null) {
+            request.addParameter("NetworkBorderGroup", StringUtils.fromString(provisionPublicIpv4PoolCidrRequest.getNetworkBorderGroup()));
+        }
+
         return request;
     }
 

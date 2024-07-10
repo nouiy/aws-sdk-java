@@ -66,6 +66,10 @@ public class NodePropertyOverrideJsonUnmarshaller implements Unmarshaller<NodePr
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("eksPropertiesOverride", targetDepth)) {
+                    context.nextToken();
+                    nodePropertyOverride.setEksPropertiesOverride(EksPropertiesOverrideJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

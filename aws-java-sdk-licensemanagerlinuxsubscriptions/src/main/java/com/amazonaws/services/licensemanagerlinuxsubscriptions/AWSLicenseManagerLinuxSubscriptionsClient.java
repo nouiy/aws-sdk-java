@@ -82,6 +82,11 @@ public class AWSLicenseManagerLinuxSubscriptionsClient extends AmazonWebServiceC
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.licensemanagerlinuxsubscriptions.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException")
+                                    .withExceptionUnmarshaller(
+                                            com.amazonaws.services.licensemanagerlinuxsubscriptions.model.transform.ResourceNotFoundExceptionUnmarshaller
+                                                    .getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.licensemanagerlinuxsubscriptions.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -140,7 +145,141 @@ public class AWSLicenseManagerLinuxSubscriptionsClient extends AmazonWebServiceC
 
     /**
      * <p>
-     * Lists the Linux subscriptions service settings.
+     * Remove a third-party subscription provider from the Bring Your Own License (BYOL) subscriptions registered to
+     * your account.
+     * </p>
+     * 
+     * @param deregisterSubscriptionProviderRequest
+     * @return Result of the DeregisterSubscriptionProvider operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.DeregisterSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/DeregisterSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeregisterSubscriptionProviderResult deregisterSubscriptionProvider(DeregisterSubscriptionProviderRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeregisterSubscriptionProvider(request);
+    }
+
+    @SdkInternalApi
+    final DeregisterSubscriptionProviderResult executeDeregisterSubscriptionProvider(DeregisterSubscriptionProviderRequest deregisterSubscriptionProviderRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deregisterSubscriptionProviderRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeregisterSubscriptionProviderRequest> request = null;
+        Response<DeregisterSubscriptionProviderResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeregisterSubscriptionProviderRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deregisterSubscriptionProviderRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "License Manager Linux Subscriptions");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeregisterSubscriptionProvider");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeregisterSubscriptionProviderResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeregisterSubscriptionProviderResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get details for a Bring Your Own License (BYOL) subscription that's registered to your account.
+     * </p>
+     * 
+     * @param getRegisteredSubscriptionProviderRequest
+     * @return Result of the GetRegisteredSubscriptionProvider operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.GetRegisteredSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/GetRegisteredSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetRegisteredSubscriptionProviderResult getRegisteredSubscriptionProvider(GetRegisteredSubscriptionProviderRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRegisteredSubscriptionProvider(request);
+    }
+
+    @SdkInternalApi
+    final GetRegisteredSubscriptionProviderResult executeGetRegisteredSubscriptionProvider(
+            GetRegisteredSubscriptionProviderRequest getRegisteredSubscriptionProviderRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRegisteredSubscriptionProviderRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRegisteredSubscriptionProviderRequest> request = null;
+        Response<GetRegisteredSubscriptionProviderResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRegisteredSubscriptionProviderRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getRegisteredSubscriptionProviderRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "License Manager Linux Subscriptions");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRegisteredSubscriptionProvider");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRegisteredSubscriptionProviderResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetRegisteredSubscriptionProviderResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the Linux subscriptions service settings for your account.
      * </p>
      * 
      * @param getServiceSettingsRequest
@@ -322,6 +461,318 @@ public class AWSLicenseManagerLinuxSubscriptionsClient extends AmazonWebServiceC
             HttpResponseHandler<AmazonWebServiceResponse<ListLinuxSubscriptionsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListLinuxSubscriptionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List Bring Your Own License (BYOL) subscription registration resources for your account.
+     * </p>
+     * 
+     * @param listRegisteredSubscriptionProvidersRequest
+     * @return Result of the ListRegisteredSubscriptionProviders operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.ListRegisteredSubscriptionProviders
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListRegisteredSubscriptionProviders"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListRegisteredSubscriptionProvidersResult listRegisteredSubscriptionProviders(ListRegisteredSubscriptionProvidersRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRegisteredSubscriptionProviders(request);
+    }
+
+    @SdkInternalApi
+    final ListRegisteredSubscriptionProvidersResult executeListRegisteredSubscriptionProviders(
+            ListRegisteredSubscriptionProvidersRequest listRegisteredSubscriptionProvidersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRegisteredSubscriptionProvidersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRegisteredSubscriptionProvidersRequest> request = null;
+        Response<ListRegisteredSubscriptionProvidersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRegisteredSubscriptionProvidersRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listRegisteredSubscriptionProvidersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "License Manager Linux Subscriptions");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRegisteredSubscriptionProviders");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRegisteredSubscriptionProvidersResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListRegisteredSubscriptionProvidersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List the metadata tags that are assigned to the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.ListTagsForResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTagsForResource(request);
+    }
+
+    @SdkInternalApi
+    final ListTagsForResourceResult executeListTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTagsForResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTagsForResourceRequest> request = null;
+        Response<ListTagsForResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTagsForResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listTagsForResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "License Manager Linux Subscriptions");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTagsForResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Register the supported third-party subscription provider for your Bring Your Own License (BYOL) subscription.
+     * </p>
+     * 
+     * @param registerSubscriptionProviderRequest
+     * @return Result of the RegisterSubscriptionProvider operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.RegisterSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/RegisterSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public RegisterSubscriptionProviderResult registerSubscriptionProvider(RegisterSubscriptionProviderRequest request) {
+        request = beforeClientExecution(request);
+        return executeRegisterSubscriptionProvider(request);
+    }
+
+    @SdkInternalApi
+    final RegisterSubscriptionProviderResult executeRegisterSubscriptionProvider(RegisterSubscriptionProviderRequest registerSubscriptionProviderRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(registerSubscriptionProviderRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RegisterSubscriptionProviderRequest> request = null;
+        Response<RegisterSubscriptionProviderResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RegisterSubscriptionProviderRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(registerSubscriptionProviderRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "License Manager Linux Subscriptions");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RegisterSubscriptionProvider");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RegisterSubscriptionProviderResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new RegisterSubscriptionProviderResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Add metadata tags to the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/TagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeTagResource(request);
+    }
+
+    @SdkInternalApi
+    final TagResourceResult executeTagResource(TagResourceRequest tagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(tagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<TagResourceRequest> request = null;
+        Response<TagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new TagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(tagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "License Manager Linux Subscriptions");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<TagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new TagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Remove one or more metadata tag from the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @sample AWSLicenseManagerLinuxSubscriptions.UntagResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeUntagResource(request);
+    }
+
+    @SdkInternalApi
+    final UntagResourceResult executeUntagResource(UntagResourceRequest untagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(untagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UntagResourceRequest> request = null;
+        Response<UntagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UntagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(untagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "License Manager Linux Subscriptions");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UntagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

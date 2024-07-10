@@ -34,6 +34,8 @@ public class RecipeMarshaller {
             .marshallLocationName("Inputs").build();
     private static final MarshallingInfo<StructuredPojo> RECIPEREFERENCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecipeReference").build();
+    private static final MarshallingInfo<List> RECIPESTEPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RecipeSteps").build();
 
     private static final RecipeMarshaller instance = new RecipeMarshaller();
 
@@ -54,6 +56,7 @@ public class RecipeMarshaller {
             protocolMarshaller.marshall(recipe.getName(), NAME_BINDING);
             protocolMarshaller.marshall(recipe.getInputs(), INPUTS_BINDING);
             protocolMarshaller.marshall(recipe.getRecipeReference(), RECIPEREFERENCE_BINDING);
+            protocolMarshaller.marshall(recipe.getRecipeSteps(), RECIPESTEPS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

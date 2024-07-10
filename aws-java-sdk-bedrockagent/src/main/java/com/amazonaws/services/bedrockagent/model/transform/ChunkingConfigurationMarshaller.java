@@ -31,6 +31,10 @@ public class ChunkingConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("chunkingStrategy").build();
     private static final MarshallingInfo<StructuredPojo> FIXEDSIZECHUNKINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fixedSizeChunkingConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> HIERARCHICALCHUNKINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hierarchicalChunkingConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> SEMANTICCHUNKINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("semanticChunkingConfiguration").build();
 
     private static final ChunkingConfigurationMarshaller instance = new ChunkingConfigurationMarshaller();
 
@@ -50,6 +54,8 @@ public class ChunkingConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(chunkingConfiguration.getChunkingStrategy(), CHUNKINGSTRATEGY_BINDING);
             protocolMarshaller.marshall(chunkingConfiguration.getFixedSizeChunkingConfiguration(), FIXEDSIZECHUNKINGCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(chunkingConfiguration.getHierarchicalChunkingConfiguration(), HIERARCHICALCHUNKINGCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(chunkingConfiguration.getSemanticChunkingConfiguration(), SEMANTICCHUNKINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

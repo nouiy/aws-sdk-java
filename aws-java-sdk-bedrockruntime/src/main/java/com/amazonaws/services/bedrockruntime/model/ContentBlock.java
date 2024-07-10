@@ -19,8 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A block of content for a message that you pass to, or receive from, a model with the Converse API (<a>Converse</a>
- * and <a>ConverseStream</a>).
+ * A block of content for a message that you pass to, or receive from, a model with the <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a> API
+ * operations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/ContentBlock" target="_top">AWS API

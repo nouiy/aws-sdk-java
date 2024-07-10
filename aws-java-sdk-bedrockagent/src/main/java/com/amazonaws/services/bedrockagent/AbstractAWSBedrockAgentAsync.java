@@ -93,6 +93,45 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateFlowResult> createFlowAsync(CreateFlowRequest request) {
+
+        return createFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowResult> createFlowAsync(CreateFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateFlowRequest, CreateFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowAliasResult> createFlowAliasAsync(CreateFlowAliasRequest request) {
+
+        return createFlowAliasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowAliasResult> createFlowAliasAsync(CreateFlowAliasRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateFlowAliasRequest, CreateFlowAliasResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowVersionResult> createFlowVersionAsync(CreateFlowVersionRequest request) {
+
+        return createFlowVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowVersionResult> createFlowVersionAsync(CreateFlowVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateFlowVersionRequest, CreateFlowVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKnowledgeBaseResult> createKnowledgeBaseAsync(CreateKnowledgeBaseRequest request) {
 
         return createKnowledgeBaseAsync(request, null);
@@ -101,6 +140,32 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     @Override
     public java.util.concurrent.Future<CreateKnowledgeBaseResult> createKnowledgeBaseAsync(CreateKnowledgeBaseRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateKnowledgeBaseRequest, CreateKnowledgeBaseResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest request) {
+
+        return createPromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePromptRequest, CreatePromptResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptVersionResult> createPromptVersionAsync(CreatePromptVersionRequest request) {
+
+        return createPromptVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptVersionResult> createPromptVersionAsync(CreatePromptVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePromptVersionRequest, CreatePromptVersionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -171,6 +236,45 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteFlowResult> deleteFlowAsync(DeleteFlowRequest request) {
+
+        return deleteFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowResult> deleteFlowAsync(DeleteFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteFlowRequest, DeleteFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowAliasResult> deleteFlowAliasAsync(DeleteFlowAliasRequest request) {
+
+        return deleteFlowAliasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowAliasResult> deleteFlowAliasAsync(DeleteFlowAliasRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteFlowAliasRequest, DeleteFlowAliasResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowVersionResult> deleteFlowVersionAsync(DeleteFlowVersionRequest request) {
+
+        return deleteFlowVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowVersionResult> deleteFlowVersionAsync(DeleteFlowVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteFlowVersionRequest, DeleteFlowVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKnowledgeBaseResult> deleteKnowledgeBaseAsync(DeleteKnowledgeBaseRequest request) {
 
         return deleteKnowledgeBaseAsync(request, null);
@@ -179,6 +283,19 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     @Override
     public java.util.concurrent.Future<DeleteKnowledgeBaseResult> deleteKnowledgeBaseAsync(DeleteKnowledgeBaseRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteKnowledgeBaseRequest, DeleteKnowledgeBaseResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest request) {
+
+        return deletePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePromptRequest, DeletePromptResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -275,6 +392,45 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetFlowResult> getFlowAsync(GetFlowRequest request) {
+
+        return getFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowResult> getFlowAsync(GetFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetFlowRequest, GetFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowAliasResult> getFlowAliasAsync(GetFlowAliasRequest request) {
+
+        return getFlowAliasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowAliasResult> getFlowAliasAsync(GetFlowAliasRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetFlowAliasRequest, GetFlowAliasResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowVersionResult> getFlowVersionAsync(GetFlowVersionRequest request) {
+
+        return getFlowVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowVersionResult> getFlowVersionAsync(GetFlowVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetFlowVersionRequest, GetFlowVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIngestionJobResult> getIngestionJobAsync(GetIngestionJobRequest request) {
 
         return getIngestionJobAsync(request, null);
@@ -296,6 +452,19 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     @Override
     public java.util.concurrent.Future<GetKnowledgeBaseResult> getKnowledgeBaseAsync(GetKnowledgeBaseRequest request,
             com.amazonaws.handlers.AsyncHandler<GetKnowledgeBaseRequest, GetKnowledgeBaseResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPromptResult> getPromptAsync(GetPromptRequest request) {
+
+        return getPromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPromptResult> getPromptAsync(GetPromptRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPromptRequest, GetPromptResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -379,6 +548,45 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListFlowAliasesResult> listFlowAliasesAsync(ListFlowAliasesRequest request) {
+
+        return listFlowAliasesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowAliasesResult> listFlowAliasesAsync(ListFlowAliasesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListFlowAliasesRequest, ListFlowAliasesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowVersionsResult> listFlowVersionsAsync(ListFlowVersionsRequest request) {
+
+        return listFlowVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowVersionsResult> listFlowVersionsAsync(ListFlowVersionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListFlowVersionsRequest, ListFlowVersionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowsResult> listFlowsAsync(ListFlowsRequest request) {
+
+        return listFlowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowsResult> listFlowsAsync(ListFlowsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListFlowsRequest, ListFlowsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListIngestionJobsResult> listIngestionJobsAsync(ListIngestionJobsRequest request) {
 
         return listIngestionJobsAsync(request, null);
@@ -405,6 +613,19 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListPromptsResult> listPromptsAsync(ListPromptsRequest request) {
+
+        return listPromptsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPromptsResult> listPromptsAsync(ListPromptsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListPromptsRequest, ListPromptsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);
@@ -426,6 +647,19 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     @Override
     public java.util.concurrent.Future<PrepareAgentResult> prepareAgentAsync(PrepareAgentRequest request,
             com.amazonaws.handlers.AsyncHandler<PrepareAgentRequest, PrepareAgentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PrepareFlowResult> prepareFlowAsync(PrepareFlowRequest request) {
+
+        return prepareFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PrepareFlowResult> prepareFlowAsync(PrepareFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<PrepareFlowRequest, PrepareFlowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -535,6 +769,32 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateFlowResult> updateFlowAsync(UpdateFlowRequest request) {
+
+        return updateFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFlowResult> updateFlowAsync(UpdateFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFlowRequest, UpdateFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFlowAliasResult> updateFlowAliasAsync(UpdateFlowAliasRequest request) {
+
+        return updateFlowAliasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFlowAliasResult> updateFlowAliasAsync(UpdateFlowAliasRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFlowAliasRequest, UpdateFlowAliasResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateKnowledgeBaseResult> updateKnowledgeBaseAsync(UpdateKnowledgeBaseRequest request) {
 
         return updateKnowledgeBaseAsync(request, null);
@@ -543,6 +803,19 @@ public class AbstractAWSBedrockAgentAsync extends AbstractAWSBedrockAgent implem
     @Override
     public java.util.concurrent.Future<UpdateKnowledgeBaseResult> updateKnowledgeBaseAsync(UpdateKnowledgeBaseRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateKnowledgeBaseRequest, UpdateKnowledgeBaseResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest request) {
+
+        return updatePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdatePromptRequest, UpdatePromptResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

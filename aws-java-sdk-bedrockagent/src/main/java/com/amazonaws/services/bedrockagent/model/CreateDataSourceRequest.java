@@ -37,13 +37,31 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String clientToken;
     /**
      * <p>
-     * The data deletion policy assigned to the data source.
+     * The data deletion policy for the data source.
      * </p>
+     * <p>
+     * You can set the data deletion policy to:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     * knowledge base or data source resource. Note that the vector store itself is not deleted, only the underlying
+     * data. This flag is ignored if an Amazon Web Services account is deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     * resource.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String dataDeletionPolicy;
     /**
      * <p>
-     * Contains metadata about where the data source is stored.
+     * The connection configuration for the data source.
      * </p>
      */
     private DataSourceConfiguration dataSourceConfiguration;
@@ -144,11 +162,46 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy assigned to the data source.
+     * The data deletion policy for the data source.
      * </p>
+     * <p>
+     * You can set the data deletion policy to:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     * knowledge base or data source resource. Note that the vector store itself is not deleted, only the underlying
+     * data. This flag is ignored if an Amazon Web Services account is deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     * resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy assigned to the data source.
+     *        The data deletion policy for the data source.</p>
+     *        <p>
+     *        You can set the data deletion policy to:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     *        knowledge base or data source resource. Note that the vector store itself is not deleted, only the
+     *        underlying data. This flag is ignored if an Amazon Web Services account is deleted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     *        resource.
+     *        </p>
+     *        </li>
      * @see DataDeletionPolicy
      */
 
@@ -158,10 +211,45 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy assigned to the data source.
+     * The data deletion policy for the data source.
      * </p>
+     * <p>
+     * You can set the data deletion policy to:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     * knowledge base or data source resource. Note that the vector store itself is not deleted, only the underlying
+     * data. This flag is ignored if an Amazon Web Services account is deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     * resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The data deletion policy assigned to the data source.
+     * @return The data deletion policy for the data source.</p>
+     *         <p>
+     *         You can set the data deletion policy to:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     *         knowledge base or data source resource. Note that the vector store itself is not deleted, only the
+     *         underlying data. This flag is ignored if an Amazon Web Services account is deleted.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     *         resource.
+     *         </p>
+     *         </li>
      * @see DataDeletionPolicy
      */
 
@@ -171,11 +259,46 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy assigned to the data source.
+     * The data deletion policy for the data source.
      * </p>
+     * <p>
+     * You can set the data deletion policy to:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     * knowledge base or data source resource. Note that the vector store itself is not deleted, only the underlying
+     * data. This flag is ignored if an Amazon Web Services account is deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     * resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy assigned to the data source.
+     *        The data deletion policy for the data source.</p>
+     *        <p>
+     *        You can set the data deletion policy to:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     *        knowledge base or data source resource. Note that the vector store itself is not deleted, only the
+     *        underlying data. This flag is ignored if an Amazon Web Services account is deleted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     *        resource.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -187,11 +310,46 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy assigned to the data source.
+     * The data deletion policy for the data source.
      * </p>
+     * <p>
+     * You can set the data deletion policy to:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     * knowledge base or data source resource. Note that the vector store itself is not deleted, only the underlying
+     * data. This flag is ignored if an Amazon Web Services account is deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     * resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy assigned to the data source.
+     *        The data deletion policy for the data source.</p>
+     *        <p>
+     *        You can set the data deletion policy to:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        DELETE: Deletes all underlying data belonging to the data source from the vector store upon deletion of a
+     *        knowledge base or data source resource. Note that the vector store itself is not deleted, only the
+     *        underlying data. This flag is ignored if an Amazon Web Services account is deleted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RETAIN: Retains all underlying data in your vector store upon deletion of a knowledge base or data source
+     *        resource.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -203,11 +361,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Contains metadata about where the data source is stored.
+     * The connection configuration for the data source.
      * </p>
      * 
      * @param dataSourceConfiguration
-     *        Contains metadata about where the data source is stored.
+     *        The connection configuration for the data source.
      */
 
     public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
@@ -216,10 +374,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Contains metadata about where the data source is stored.
+     * The connection configuration for the data source.
      * </p>
      * 
-     * @return Contains metadata about where the data source is stored.
+     * @return The connection configuration for the data source.
      */
 
     public DataSourceConfiguration getDataSourceConfiguration() {
@@ -228,11 +386,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Contains metadata about where the data source is stored.
+     * The connection configuration for the data source.
      * </p>
      * 
      * @param dataSourceConfiguration
-     *        Contains metadata about where the data source is stored.
+     *        The connection configuration for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

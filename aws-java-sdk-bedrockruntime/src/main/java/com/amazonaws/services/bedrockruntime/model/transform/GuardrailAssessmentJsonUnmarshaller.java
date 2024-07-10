@@ -65,6 +65,11 @@ public class GuardrailAssessmentJsonUnmarshaller implements Unmarshaller<Guardra
                     guardrailAssessment.setSensitiveInformationPolicy(GuardrailSensitiveInformationPolicyAssessmentJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("contextualGroundingPolicy", targetDepth)) {
+                    context.nextToken();
+                    guardrailAssessment.setContextualGroundingPolicy(GuardrailContextualGroundingPolicyAssessmentJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

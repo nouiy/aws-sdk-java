@@ -113,6 +113,10 @@ public class AddOutputRequestJsonUnmarshaller implements Unmarshaller<AddOutputR
                     context.nextToken();
                     addOutputRequest.setVpcInterfaceAttachment(VpcInterfaceAttachmentJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("outputStatus", targetDepth)) {
+                    context.nextToken();
+                    addOutputRequest.setOutputStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

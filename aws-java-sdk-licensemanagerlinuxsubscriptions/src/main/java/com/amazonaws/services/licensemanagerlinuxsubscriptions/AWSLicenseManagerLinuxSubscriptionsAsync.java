@@ -35,7 +35,83 @@ public interface AWSLicenseManagerLinuxSubscriptionsAsync extends AWSLicenseMana
 
     /**
      * <p>
-     * Lists the Linux subscriptions service settings.
+     * Remove a third-party subscription provider from the Bring Your Own License (BYOL) subscriptions registered to
+     * your account.
+     * </p>
+     * 
+     * @param deregisterSubscriptionProviderRequest
+     * @return A Java Future containing the result of the DeregisterSubscriptionProvider operation returned by the
+     *         service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsync.DeregisterSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/DeregisterSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterSubscriptionProviderResult> deregisterSubscriptionProviderAsync(
+            DeregisterSubscriptionProviderRequest deregisterSubscriptionProviderRequest);
+
+    /**
+     * <p>
+     * Remove a third-party subscription provider from the Bring Your Own License (BYOL) subscriptions registered to
+     * your account.
+     * </p>
+     * 
+     * @param deregisterSubscriptionProviderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeregisterSubscriptionProvider operation returned by the
+     *         service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsyncHandler.DeregisterSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/DeregisterSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterSubscriptionProviderResult> deregisterSubscriptionProviderAsync(
+            DeregisterSubscriptionProviderRequest deregisterSubscriptionProviderRequest,
+            com.amazonaws.handlers.AsyncHandler<DeregisterSubscriptionProviderRequest, DeregisterSubscriptionProviderResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get details for a Bring Your Own License (BYOL) subscription that's registered to your account.
+     * </p>
+     * 
+     * @param getRegisteredSubscriptionProviderRequest
+     * @return A Java Future containing the result of the GetRegisteredSubscriptionProvider operation returned by the
+     *         service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsync.GetRegisteredSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/GetRegisteredSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRegisteredSubscriptionProviderResult> getRegisteredSubscriptionProviderAsync(
+            GetRegisteredSubscriptionProviderRequest getRegisteredSubscriptionProviderRequest);
+
+    /**
+     * <p>
+     * Get details for a Bring Your Own License (BYOL) subscription that's registered to your account.
+     * </p>
+     * 
+     * @param getRegisteredSubscriptionProviderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRegisteredSubscriptionProvider operation returned by the
+     *         service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsyncHandler.GetRegisteredSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/GetRegisteredSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRegisteredSubscriptionProviderResult> getRegisteredSubscriptionProviderAsync(
+            GetRegisteredSubscriptionProviderRequest getRegisteredSubscriptionProviderRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRegisteredSubscriptionProviderRequest, GetRegisteredSubscriptionProviderResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the Linux subscriptions service settings for your account.
      * </p>
      * 
      * @param getServiceSettingsRequest
@@ -49,7 +125,7 @@ public interface AWSLicenseManagerLinuxSubscriptionsAsync extends AWSLicenseMana
 
     /**
      * <p>
-     * Lists the Linux subscriptions service settings.
+     * Lists the Linux subscriptions service settings for your account.
      * </p>
      * 
      * @param getServiceSettingsRequest
@@ -145,6 +221,177 @@ public interface AWSLicenseManagerLinuxSubscriptionsAsync extends AWSLicenseMana
      */
     java.util.concurrent.Future<ListLinuxSubscriptionsResult> listLinuxSubscriptionsAsync(ListLinuxSubscriptionsRequest listLinuxSubscriptionsRequest,
             com.amazonaws.handlers.AsyncHandler<ListLinuxSubscriptionsRequest, ListLinuxSubscriptionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List Bring Your Own License (BYOL) subscription registration resources for your account.
+     * </p>
+     * 
+     * @param listRegisteredSubscriptionProvidersRequest
+     * @return A Java Future containing the result of the ListRegisteredSubscriptionProviders operation returned by the
+     *         service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsync.ListRegisteredSubscriptionProviders
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListRegisteredSubscriptionProviders"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRegisteredSubscriptionProvidersResult> listRegisteredSubscriptionProvidersAsync(
+            ListRegisteredSubscriptionProvidersRequest listRegisteredSubscriptionProvidersRequest);
+
+    /**
+     * <p>
+     * List Bring Your Own License (BYOL) subscription registration resources for your account.
+     * </p>
+     * 
+     * @param listRegisteredSubscriptionProvidersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRegisteredSubscriptionProviders operation returned by the
+     *         service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsyncHandler.ListRegisteredSubscriptionProviders
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListRegisteredSubscriptionProviders"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRegisteredSubscriptionProvidersResult> listRegisteredSubscriptionProvidersAsync(
+            ListRegisteredSubscriptionProvidersRequest listRegisteredSubscriptionProvidersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRegisteredSubscriptionProvidersRequest, ListRegisteredSubscriptionProvidersResult> asyncHandler);
+
+    /**
+     * <p>
+     * List the metadata tags that are assigned to the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsync.ListTagsForResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * List the metadata tags that are assigned to the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsyncHandler.ListTagsForResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Register the supported third-party subscription provider for your Bring Your Own License (BYOL) subscription.
+     * </p>
+     * 
+     * @param registerSubscriptionProviderRequest
+     * @return A Java Future containing the result of the RegisterSubscriptionProvider operation returned by the
+     *         service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsync.RegisterSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/RegisterSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterSubscriptionProviderResult> registerSubscriptionProviderAsync(
+            RegisterSubscriptionProviderRequest registerSubscriptionProviderRequest);
+
+    /**
+     * <p>
+     * Register the supported third-party subscription provider for your Bring Your Own License (BYOL) subscription.
+     * </p>
+     * 
+     * @param registerSubscriptionProviderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RegisterSubscriptionProvider operation returned by the
+     *         service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsyncHandler.RegisterSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/RegisterSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterSubscriptionProviderResult> registerSubscriptionProviderAsync(
+            RegisterSubscriptionProviderRequest registerSubscriptionProviderRequest,
+            com.amazonaws.handlers.AsyncHandler<RegisterSubscriptionProviderRequest, RegisterSubscriptionProviderResult> asyncHandler);
+
+    /**
+     * <p>
+     * Add metadata tags to the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsync.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/TagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Add metadata tags to the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsyncHandler.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/TagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Remove one or more metadata tag from the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsync.UntagResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Remove one or more metadata tag from the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AWSLicenseManagerLinuxSubscriptionsAsyncHandler.UntagResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
     /**
      * <p>

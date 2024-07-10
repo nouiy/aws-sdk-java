@@ -32,6 +32,15 @@ public class DeletePublicIpv4PoolRequest extends AmazonWebServiceRequest impleme
      * </p>
      */
     private String poolId;
+    /**
+     * <p>
+     * The Availability Zone (AZ) or Local Zone (LZ) network border group that the resource that the IP address is
+     * assigned to is in. Defaults to an AZ network border group. For more information on available Local Zones, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">Local Zone
+     * availability</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     */
+    private String networkBorderGroup;
 
     /**
      * <p>
@@ -74,6 +83,67 @@ public class DeletePublicIpv4PoolRequest extends AmazonWebServiceRequest impleme
     }
 
     /**
+     * <p>
+     * The Availability Zone (AZ) or Local Zone (LZ) network border group that the resource that the IP address is
+     * assigned to is in. Defaults to an AZ network border group. For more information on available Local Zones, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">Local Zone
+     * availability</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param networkBorderGroup
+     *        The Availability Zone (AZ) or Local Zone (LZ) network border group that the resource that the IP address
+     *        is assigned to is in. Defaults to an AZ network border group. For more information on available Local
+     *        Zones, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">Local Zone
+     *        availability</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public void setNetworkBorderGroup(String networkBorderGroup) {
+        this.networkBorderGroup = networkBorderGroup;
+    }
+
+    /**
+     * <p>
+     * The Availability Zone (AZ) or Local Zone (LZ) network border group that the resource that the IP address is
+     * assigned to is in. Defaults to an AZ network border group. For more information on available Local Zones, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">Local Zone
+     * availability</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @return The Availability Zone (AZ) or Local Zone (LZ) network border group that the resource that the IP address
+     *         is assigned to is in. Defaults to an AZ network border group. For more information on available Local
+     *         Zones, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">Local Zone
+     *         availability</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public String getNetworkBorderGroup() {
+        return this.networkBorderGroup;
+    }
+
+    /**
+     * <p>
+     * The Availability Zone (AZ) or Local Zone (LZ) network border group that the resource that the IP address is
+     * assigned to is in. Defaults to an AZ network border group. For more information on available Local Zones, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">Local Zone
+     * availability</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param networkBorderGroup
+     *        The Availability Zone (AZ) or Local Zone (LZ) network border group that the resource that the IP address
+     *        is assigned to is in. Defaults to an AZ network border group. For more information on available Local
+     *        Zones, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">Local Zone
+     *        availability</a> in the <i>Amazon EC2 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeletePublicIpv4PoolRequest withNetworkBorderGroup(String networkBorderGroup) {
+        setNetworkBorderGroup(networkBorderGroup);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -97,7 +167,9 @@ public class DeletePublicIpv4PoolRequest extends AmazonWebServiceRequest impleme
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getPoolId() != null)
-            sb.append("PoolId: ").append(getPoolId());
+            sb.append("PoolId: ").append(getPoolId()).append(",");
+        if (getNetworkBorderGroup() != null)
+            sb.append("NetworkBorderGroup: ").append(getNetworkBorderGroup());
         sb.append("}");
         return sb.toString();
     }
@@ -116,6 +188,10 @@ public class DeletePublicIpv4PoolRequest extends AmazonWebServiceRequest impleme
             return false;
         if (other.getPoolId() != null && other.getPoolId().equals(this.getPoolId()) == false)
             return false;
+        if (other.getNetworkBorderGroup() == null ^ this.getNetworkBorderGroup() == null)
+            return false;
+        if (other.getNetworkBorderGroup() != null && other.getNetworkBorderGroup().equals(this.getNetworkBorderGroup()) == false)
+            return false;
         return true;
     }
 
@@ -125,6 +201,7 @@ public class DeletePublicIpv4PoolRequest extends AmazonWebServiceRequest impleme
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getPoolId() == null) ? 0 : getPoolId().hashCode());
+        hashCode = prime * hashCode + ((getNetworkBorderGroup() == null) ? 0 : getNetworkBorderGroup().hashCode());
         return hashCode;
     }
 

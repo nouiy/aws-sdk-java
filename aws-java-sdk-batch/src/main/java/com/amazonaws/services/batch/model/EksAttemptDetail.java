@@ -42,6 +42,12 @@ public class EksAttemptDetail implements Serializable, Cloneable, StructuredPojo
     private java.util.List<EksAttemptContainerDetail> initContainers;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+     * </p>
+     */
+    private String eksClusterArn;
+    /**
+     * <p>
      * The name of the pod for this job attempt.
      * </p>
      */
@@ -210,6 +216,46 @@ public class EksAttemptDetail implements Serializable, Cloneable, StructuredPojo
 
     public EksAttemptDetail withInitContainers(java.util.Collection<EksAttemptContainerDetail> initContainers) {
         setInitContainers(initContainers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+     * </p>
+     * 
+     * @param eksClusterArn
+     *        The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+     */
+
+    public void setEksClusterArn(String eksClusterArn) {
+        this.eksClusterArn = eksClusterArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+     */
+
+    public String getEksClusterArn() {
+        return this.eksClusterArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+     * </p>
+     * 
+     * @param eksClusterArn
+     *        The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EksAttemptDetail withEksClusterArn(String eksClusterArn) {
+        setEksClusterArn(eksClusterArn);
         return this;
     }
 
@@ -444,6 +490,8 @@ public class EksAttemptDetail implements Serializable, Cloneable, StructuredPojo
             sb.append("Containers: ").append(getContainers()).append(",");
         if (getInitContainers() != null)
             sb.append("InitContainers: ").append(getInitContainers()).append(",");
+        if (getEksClusterArn() != null)
+            sb.append("EksClusterArn: ").append(getEksClusterArn()).append(",");
         if (getPodName() != null)
             sb.append("PodName: ").append(getPodName()).append(",");
         if (getNodeName() != null)
@@ -476,6 +524,10 @@ public class EksAttemptDetail implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getInitContainers() != null && other.getInitContainers().equals(this.getInitContainers()) == false)
             return false;
+        if (other.getEksClusterArn() == null ^ this.getEksClusterArn() == null)
+            return false;
+        if (other.getEksClusterArn() != null && other.getEksClusterArn().equals(this.getEksClusterArn()) == false)
+            return false;
         if (other.getPodName() == null ^ this.getPodName() == null)
             return false;
         if (other.getPodName() != null && other.getPodName().equals(this.getPodName()) == false)
@@ -506,6 +558,7 @@ public class EksAttemptDetail implements Serializable, Cloneable, StructuredPojo
 
         hashCode = prime * hashCode + ((getContainers() == null) ? 0 : getContainers().hashCode());
         hashCode = prime * hashCode + ((getInitContainers() == null) ? 0 : getInitContainers().hashCode());
+        hashCode = prime * hashCode + ((getEksClusterArn() == null) ? 0 : getEksClusterArn().hashCode());
         hashCode = prime * hashCode + ((getPodName() == null) ? 0 : getPodName().hashCode());
         hashCode = prime * hashCode + ((getNodeName() == null) ? 0 : getNodeName().hashCode());
         hashCode = prime * hashCode + ((getStartedAt() == null) ? 0 : getStartedAt().hashCode());

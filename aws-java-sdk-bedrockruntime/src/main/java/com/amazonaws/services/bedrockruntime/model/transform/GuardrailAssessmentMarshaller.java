@@ -35,6 +35,8 @@ public class GuardrailAssessmentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("wordPolicy").build();
     private static final MarshallingInfo<StructuredPojo> SENSITIVEINFORMATIONPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sensitiveInformationPolicy").build();
+    private static final MarshallingInfo<StructuredPojo> CONTEXTUALGROUNDINGPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("contextualGroundingPolicy").build();
 
     private static final GuardrailAssessmentMarshaller instance = new GuardrailAssessmentMarshaller();
 
@@ -56,6 +58,7 @@ public class GuardrailAssessmentMarshaller {
             protocolMarshaller.marshall(guardrailAssessment.getContentPolicy(), CONTENTPOLICY_BINDING);
             protocolMarshaller.marshall(guardrailAssessment.getWordPolicy(), WORDPOLICY_BINDING);
             protocolMarshaller.marshall(guardrailAssessment.getSensitiveInformationPolicy(), SENSITIVEINFORMATIONPOLICY_BINDING);
+            protocolMarshaller.marshall(guardrailAssessment.getContextualGroundingPolicy(), CONTEXTUALGROUNDINGPOLICY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

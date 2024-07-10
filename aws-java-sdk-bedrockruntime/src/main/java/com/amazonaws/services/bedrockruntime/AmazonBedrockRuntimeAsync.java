@@ -34,6 +34,37 @@ public interface AmazonBedrockRuntimeAsync extends AmazonBedrockRuntime {
 
     /**
      * <p>
+     * The action to apply a guardrail.
+     * </p>
+     * 
+     * @param applyGuardrailRequest
+     * @return A Java Future containing the result of the ApplyGuardrail operation returned by the service.
+     * @sample AmazonBedrockRuntimeAsync.ApplyGuardrail
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/ApplyGuardrail" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ApplyGuardrailResult> applyGuardrailAsync(ApplyGuardrailRequest applyGuardrailRequest);
+
+    /**
+     * <p>
+     * The action to apply a guardrail.
+     * </p>
+     * 
+     * @param applyGuardrailRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ApplyGuardrail operation returned by the service.
+     * @sample AmazonBedrockRuntimeAsyncHandler.ApplyGuardrail
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/ApplyGuardrail" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ApplyGuardrailResult> applyGuardrailAsync(ApplyGuardrailRequest applyGuardrailRequest,
+            com.amazonaws.handlers.AsyncHandler<ApplyGuardrailRequest, ApplyGuardrailResult> asyncHandler);
+
+    /**
+     * <p>
      * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
      * works with all models that support messages. This allows you to write code once and use it with different models.
      * Should a model have unique inference parameters, you can also pass those unique parameters to the model.

@@ -90,7 +90,7 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
     private String foundationModel;
     /**
      * <p>
-     * The guardrails configuration assigned to the agent version.
+     * Details about the guardrail associated with the agent.
      * </p>
      */
     private GuardrailConfiguration guardrailConfiguration;
@@ -110,6 +110,12 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String instruction;
+    /**
+     * <p>
+     * Contains details of the memory configuration on the version of the agent.
+     * </p>
+     */
+    private MemoryConfiguration memoryConfiguration;
     /**
      * <p>
      * Contains configurations to override prompt templates in different parts of an agent sequence. For more
@@ -588,11 +594,11 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The guardrails configuration assigned to the agent version.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
      * @param guardrailConfiguration
-     *        The guardrails configuration assigned to the agent version.
+     *        Details about the guardrail associated with the agent.
      */
 
     public void setGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
@@ -601,10 +607,10 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The guardrails configuration assigned to the agent version.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
-     * @return The guardrails configuration assigned to the agent version.
+     * @return Details about the guardrail associated with the agent.
      */
 
     public GuardrailConfiguration getGuardrailConfiguration() {
@@ -613,11 +619,11 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The guardrails configuration assigned to the agent version.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
      * @param guardrailConfiguration
-     *        The guardrails configuration assigned to the agent version.
+     *        Details about the guardrail associated with the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -727,6 +733,46 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
 
     public AgentVersion withInstruction(String instruction) {
         setInstruction(instruction);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details of the memory configuration on the version of the agent.
+     * </p>
+     * 
+     * @param memoryConfiguration
+     *        Contains details of the memory configuration on the version of the agent.
+     */
+
+    public void setMemoryConfiguration(MemoryConfiguration memoryConfiguration) {
+        this.memoryConfiguration = memoryConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details of the memory configuration on the version of the agent.
+     * </p>
+     * 
+     * @return Contains details of the memory configuration on the version of the agent.
+     */
+
+    public MemoryConfiguration getMemoryConfiguration() {
+        return this.memoryConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details of the memory configuration on the version of the agent.
+     * </p>
+     * 
+     * @param memoryConfiguration
+     *        Contains details of the memory configuration on the version of the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentVersion withMemoryConfiguration(MemoryConfiguration memoryConfiguration) {
+        setMemoryConfiguration(memoryConfiguration);
         return this;
     }
 
@@ -970,6 +1016,8 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
             sb.append("IdleSessionTTLInSeconds: ").append(getIdleSessionTTLInSeconds()).append(",");
         if (getInstruction() != null)
             sb.append("Instruction: ").append("***Sensitive Data Redacted***").append(",");
+        if (getMemoryConfiguration() != null)
+            sb.append("MemoryConfiguration: ").append(getMemoryConfiguration()).append(",");
         if (getPromptOverrideConfiguration() != null)
             sb.append("PromptOverrideConfiguration: ").append("***Sensitive Data Redacted***").append(",");
         if (getRecommendedActions() != null)
@@ -1044,6 +1092,10 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getInstruction() != null && other.getInstruction().equals(this.getInstruction()) == false)
             return false;
+        if (other.getMemoryConfiguration() == null ^ this.getMemoryConfiguration() == null)
+            return false;
+        if (other.getMemoryConfiguration() != null && other.getMemoryConfiguration().equals(this.getMemoryConfiguration()) == false)
+            return false;
         if (other.getPromptOverrideConfiguration() == null ^ this.getPromptOverrideConfiguration() == null)
             return false;
         if (other.getPromptOverrideConfiguration() != null && other.getPromptOverrideConfiguration().equals(this.getPromptOverrideConfiguration()) == false)
@@ -1081,6 +1133,7 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getGuardrailConfiguration() == null) ? 0 : getGuardrailConfiguration().hashCode());
         hashCode = prime * hashCode + ((getIdleSessionTTLInSeconds() == null) ? 0 : getIdleSessionTTLInSeconds().hashCode());
         hashCode = prime * hashCode + ((getInstruction() == null) ? 0 : getInstruction().hashCode());
+        hashCode = prime * hashCode + ((getMemoryConfiguration() == null) ? 0 : getMemoryConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPromptOverrideConfiguration() == null) ? 0 : getPromptOverrideConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRecommendedActions() == null) ? 0 : getRecommendedActions().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());

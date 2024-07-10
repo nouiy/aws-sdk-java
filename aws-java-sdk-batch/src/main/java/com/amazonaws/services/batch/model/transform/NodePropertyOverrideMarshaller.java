@@ -36,6 +36,8 @@ public class NodePropertyOverrideMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ecsPropertiesOverride").build();
     private static final MarshallingInfo<List> INSTANCETYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("instanceTypes").build();
+    private static final MarshallingInfo<StructuredPojo> EKSPROPERTIESOVERRIDE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksPropertiesOverride").build();
 
     private static final NodePropertyOverrideMarshaller instance = new NodePropertyOverrideMarshaller();
 
@@ -57,6 +59,7 @@ public class NodePropertyOverrideMarshaller {
             protocolMarshaller.marshall(nodePropertyOverride.getContainerOverrides(), CONTAINEROVERRIDES_BINDING);
             protocolMarshaller.marshall(nodePropertyOverride.getEcsPropertiesOverride(), ECSPROPERTIESOVERRIDE_BINDING);
             protocolMarshaller.marshall(nodePropertyOverride.getInstanceTypes(), INSTANCETYPES_BINDING);
+            protocolMarshaller.marshall(nodePropertyOverride.getEksPropertiesOverride(), EKSPROPERTIESOVERRIDE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

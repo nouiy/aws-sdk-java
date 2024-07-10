@@ -60,7 +60,7 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     private String description;
     /**
      * <p>
-     * The details of the guardrails configuration in the agent version summary.
+     * Details about the guardrail associated with the agent.
      * </p>
      */
     private GuardrailConfiguration guardrailConfiguration;
@@ -292,11 +292,11 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The details of the guardrails configuration in the agent version summary.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
      * @param guardrailConfiguration
-     *        The details of the guardrails configuration in the agent version summary.
+     *        Details about the guardrail associated with the agent.
      */
 
     public void setGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
@@ -305,10 +305,10 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The details of the guardrails configuration in the agent version summary.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
-     * @return The details of the guardrails configuration in the agent version summary.
+     * @return Details about the guardrail associated with the agent.
      */
 
     public GuardrailConfiguration getGuardrailConfiguration() {
@@ -317,11 +317,11 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The details of the guardrails configuration in the agent version summary.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
      * @param guardrailConfiguration
-     *        The details of the guardrails configuration in the agent version summary.
+     *        Details about the guardrail associated with the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -103,6 +103,13 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      * </li>
      * <li>
      * <p>
+     * To enable your agent to retain conversational context across multiple sessions, include a
+     * <code>memoryConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/agents-configure-memory.html">Configure memory</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * To override the default prompt behavior for agent orchestration and to use advanced prompts, include a
      * <code>promptOverrideConfiguration</code> object. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
@@ -158,6 +165,13 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      * </li>
      * <li>
      * <p>
+     * To enable your agent to retain conversational context across multiple sessions, include a
+     * <code>memoryConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/agents-configure-memory.html">Configure memory</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * To override the default prompt behavior for agent orchestration and to use advanced prompts, include a
      * <code>promptOverrideConfiguration</code> object. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
@@ -191,11 +205,17 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      * </p>
      * <p>
      * To allow your agent to request the user for additional information when trying to complete a task, add an action
-     * group with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.UserInput</code>. You must leave
-     * the <code>description</code>, <code>apiSchema</code>, and <code>actionGroupExecutor</code> fields blank for this
-     * action group. During orchestration, if your agent determines that it needs to invoke an API in an action group,
-     * but doesn't have enough information to complete the API request, it will invoke this action group instead and
-     * return an <a
+     * group with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.UserInput</code>.
+     * </p>
+     * <p>
+     * To allow your agent to generate, run, and troubleshoot code when trying to complete a task, add an action group
+     * with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.CodeInterpreter</code>.
+     * </p>
+     * <p>
+     * You must leave the <code>description</code>, <code>apiSchema</code>, and <code>actionGroupExecutor</code> fields
+     * blank for this action group. During orchestration, if your agent determines that it needs to invoke an API in an
+     * action group, but doesn't have enough information to complete the API request, it will invoke this action group
+     * instead and return an <a
      * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Observation.html">Observation</a>
      * reprompting the user for more information.
      * </p>
@@ -215,11 +235,17 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      * </p>
      * <p>
      * To allow your agent to request the user for additional information when trying to complete a task, add an action
-     * group with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.UserInput</code>. You must leave
-     * the <code>description</code>, <code>apiSchema</code>, and <code>actionGroupExecutor</code> fields blank for this
-     * action group. During orchestration, if your agent determines that it needs to invoke an API in an action group,
-     * but doesn't have enough information to complete the API request, it will invoke this action group instead and
-     * return an <a
+     * group with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.UserInput</code>.
+     * </p>
+     * <p>
+     * To allow your agent to generate, run, and troubleshoot code when trying to complete a task, add an action group
+     * with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.CodeInterpreter</code>.
+     * </p>
+     * <p>
+     * You must leave the <code>description</code>, <code>apiSchema</code>, and <code>actionGroupExecutor</code> fields
+     * blank for this action group. During orchestration, if your agent determines that it needs to invoke an API in an
+     * action group, but doesn't have enough information to complete the API request, it will invoke this action group
+     * instead and return an <a
      * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Observation.html">Observation</a>
      * reprompting the user for more information.
      * </p>
@@ -270,11 +296,11 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Sets up a data source to be added to a knowledge base.
+     * Creates a data source connector for a knowledge base.
      * </p>
      * <important>
      * <p>
-     * You can't change the <code>chunkingConfiguration</code> after you create the data source.
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source connector.
      * </p>
      * </important>
      * 
@@ -288,11 +314,11 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Sets up a data source to be added to a knowledge base.
+     * Creates a data source connector for a knowledge base.
      * </p>
      * <important>
      * <p>
-     * You can't change the <code>chunkingConfiguration</code> after you create the data source.
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source connector.
      * </p>
      * </important>
      * 
@@ -308,6 +334,117 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      */
     java.util.concurrent.Future<CreateDataSourceResult> createDataSourceAsync(CreateDataSourceRequest createDataSourceRequest,
             com.amazonaws.handlers.AsyncHandler<CreateDataSourceRequest, CreateDataSourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a prompt flow that you can use to send an input through various steps to yield an output. Configure
+     * nodes, each of which corresponds to a step of the flow, and create connections between the nodes to create paths
+     * to different outputs. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-how-it-works.html">How it works</a> and <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-create.html">Create a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowRequest
+     * @return A Java Future containing the result of the CreateFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsync.CreateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFlowResult> createFlowAsync(CreateFlowRequest createFlowRequest);
+
+    /**
+     * <p>
+     * Creates a prompt flow that you can use to send an input through various steps to yield an output. Configure
+     * nodes, each of which corresponds to a step of the flow, and create connections between the nodes to create paths
+     * to different outputs. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-how-it-works.html">How it works</a> and <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-create.html">Create a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.CreateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFlowResult> createFlowAsync(CreateFlowRequest createFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateFlowRequest, CreateFlowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an alias of a flow for deployment. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowAliasRequest
+     * @return A Java Future containing the result of the CreateFlowAlias operation returned by the service.
+     * @sample AWSBedrockAgentAsync.CreateFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFlowAliasResult> createFlowAliasAsync(CreateFlowAliasRequest createFlowAliasRequest);
+
+    /**
+     * <p>
+     * Creates an alias of a flow for deployment. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowAliasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateFlowAlias operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.CreateFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFlowAliasResult> createFlowAliasAsync(CreateFlowAliasRequest createFlowAliasRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateFlowAliasRequest, CreateFlowAliasResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a version of the flow that you can deploy. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowVersionRequest
+     * @return A Java Future containing the result of the CreateFlowVersion operation returned by the service.
+     * @sample AWSBedrockAgentAsync.CreateFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlowVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFlowVersionResult> createFlowVersionAsync(CreateFlowVersionRequest createFlowVersionRequest);
+
+    /**
+     * <p>
+     * Creates a version of the flow that you can deploy. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowVersionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateFlowVersion operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.CreateFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlowVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFlowVersionResult> createFlowVersionAsync(CreateFlowVersionRequest createFlowVersionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateFlowVersionRequest, CreateFlowVersionResult> asyncHandler);
 
     /**
      * <p>
@@ -474,6 +611,82 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
+     * Creates a prompt in your prompt library that you can add to a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management in Amazon
+     * Bedrock</a>, <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-create.html">Create
+     * a prompt using Prompt management</a> and <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html">Prompt flows in Amazon Bedrock</a> in the
+     * Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createPromptRequest
+     * @return A Java Future containing the result of the CreatePrompt operation returned by the service.
+     * @sample AWSBedrockAgentAsync.CreatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest createPromptRequest);
+
+    /**
+     * <p>
+     * Creates a prompt in your prompt library that you can add to a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management in Amazon
+     * Bedrock</a>, <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-create.html">Create
+     * a prompt using Prompt management</a> and <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html">Prompt flows in Amazon Bedrock</a> in the
+     * Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createPromptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePrompt operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.CreatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest createPromptRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePromptRequest, CreatePromptResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a static snapshot of your prompt that can be deployed to production. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html">Deploy prompts using
+     * Prompt management by creating versions</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createPromptVersionRequest
+     * @return A Java Future containing the result of the CreatePromptVersion operation returned by the service.
+     * @sample AWSBedrockAgentAsync.CreatePromptVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreatePromptVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePromptVersionResult> createPromptVersionAsync(CreatePromptVersionRequest createPromptVersionRequest);
+
+    /**
+     * <p>
+     * Creates a static snapshot of your prompt that can be deployed to production. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html">Deploy prompts using
+     * Prompt management by creating versions</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createPromptVersionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePromptVersion operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.CreatePromptVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreatePromptVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePromptVersionResult> createPromptVersionAsync(CreatePromptVersionRequest createPromptVersionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePromptVersionRequest, CreatePromptVersionResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes an agent.
      * </p>
      * 
@@ -629,6 +842,99 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
+     * Deletes a flow.
+     * </p>
+     * 
+     * @param deleteFlowRequest
+     * @return A Java Future containing the result of the DeleteFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsync.DeleteFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFlowResult> deleteFlowAsync(DeleteFlowRequest deleteFlowRequest);
+
+    /**
+     * <p>
+     * Deletes a flow.
+     * </p>
+     * 
+     * @param deleteFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.DeleteFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFlowResult> deleteFlowAsync(DeleteFlowRequest deleteFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteFlowRequest, DeleteFlowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an alias of a flow.
+     * </p>
+     * 
+     * @param deleteFlowAliasRequest
+     * @return A Java Future containing the result of the DeleteFlowAlias operation returned by the service.
+     * @sample AWSBedrockAgentAsync.DeleteFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFlowAliasResult> deleteFlowAliasAsync(DeleteFlowAliasRequest deleteFlowAliasRequest);
+
+    /**
+     * <p>
+     * Deletes an alias of a flow.
+     * </p>
+     * 
+     * @param deleteFlowAliasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteFlowAlias operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.DeleteFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFlowAliasResult> deleteFlowAliasAsync(DeleteFlowAliasRequest deleteFlowAliasRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteFlowAliasRequest, DeleteFlowAliasResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a version of a flow.
+     * </p>
+     * 
+     * @param deleteFlowVersionRequest
+     * @return A Java Future containing the result of the DeleteFlowVersion operation returned by the service.
+     * @sample AWSBedrockAgentAsync.DeleteFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlowVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFlowVersionResult> deleteFlowVersionAsync(DeleteFlowVersionRequest deleteFlowVersionRequest);
+
+    /**
+     * <p>
+     * Deletes a version of a flow.
+     * </p>
+     * 
+     * @param deleteFlowVersionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteFlowVersion operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.DeleteFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlowVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFlowVersionResult> deleteFlowVersionAsync(DeleteFlowVersionRequest deleteFlowVersionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteFlowVersionRequest, DeleteFlowVersionResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a knowledge base. Before deleting a knowledge base, you should disassociate the knowledge base from any
      * agents that it is associated with by making a <a
      * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_DisassociateAgentKnowledgeBase.html"
@@ -663,6 +969,45 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      */
     java.util.concurrent.Future<DeleteKnowledgeBaseResult> deleteKnowledgeBaseAsync(DeleteKnowledgeBaseRequest deleteKnowledgeBaseRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteKnowledgeBaseRequest, DeleteKnowledgeBaseResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a prompt or a prompt version from the Prompt management tool. For more information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-delete.html"
+     * >Delete prompts from the Prompt management tool</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html#prompt-management-versions-delete.html"
+     * >Delete a version of a prompt from the Prompt management tool</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param deletePromptRequest
+     * @return A Java Future containing the result of the DeletePrompt operation returned by the service.
+     * @sample AWSBedrockAgentAsync.DeletePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeletePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest deletePromptRequest);
+
+    /**
+     * <p>
+     * Deletes a prompt or a prompt version from the Prompt management tool. For more information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-delete.html"
+     * >Delete prompts from the Prompt management tool</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html#prompt-management-versions-delete.html"
+     * >Delete a version of a prompt from the Prompt management tool</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param deletePromptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePrompt operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.DeletePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeletePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest deletePromptRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePromptRequest, DeletePromptResult> asyncHandler);
 
     /**
      * <p>
@@ -887,6 +1232,111 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
+     * Retrieves information about a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-manage.html">Manage a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowRequest
+     * @return A Java Future containing the result of the GetFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsync.GetFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetFlowResult> getFlowAsync(GetFlowRequest getFlowRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-manage.html">Manage a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.GetFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetFlowResult> getFlowAsync(GetFlowRequest getFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<GetFlowRequest, GetFlowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves information about a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowAliasRequest
+     * @return A Java Future containing the result of the GetFlowAlias operation returned by the service.
+     * @sample AWSBedrockAgentAsync.GetFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlowAlias" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetFlowAliasResult> getFlowAliasAsync(GetFlowAliasRequest getFlowAliasRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowAliasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetFlowAlias operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.GetFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlowAlias" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetFlowAliasResult> getFlowAliasAsync(GetFlowAliasRequest getFlowAliasRequest,
+            com.amazonaws.handlers.AsyncHandler<GetFlowAliasRequest, GetFlowAliasResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves information about a version of a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowVersionRequest
+     * @return A Java Future containing the result of the GetFlowVersion operation returned by the service.
+     * @sample AWSBedrockAgentAsync.GetFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlowVersion" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetFlowVersionResult> getFlowVersionAsync(GetFlowVersionRequest getFlowVersionRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a version of a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowVersionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetFlowVersion operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.GetFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlowVersion" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetFlowVersionResult> getFlowVersionAsync(GetFlowVersionRequest getFlowVersionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetFlowVersionRequest, GetFlowVersionResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about a ingestion job, in which a data source is added to a knowledge base.
      * </p>
      * 
@@ -946,6 +1396,45 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      */
     java.util.concurrent.Future<GetKnowledgeBaseResult> getKnowledgeBaseAsync(GetKnowledgeBaseRequest getKnowledgeBaseRequest,
             com.amazonaws.handlers.AsyncHandler<GetKnowledgeBaseRequest, GetKnowledgeBaseResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves information about a prompt or a version of it. For more information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-view.html"
+     * >View information about prompts using Prompt management</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html#prompt-management-versions-view.html"
+     * >View information about a version of your prompt</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getPromptRequest
+     * @return A Java Future containing the result of the GetPrompt operation returned by the service.
+     * @sample AWSBedrockAgentAsync.GetPrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetPrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPromptResult> getPromptAsync(GetPromptRequest getPromptRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a prompt or a version of it. For more information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-view.html"
+     * >View information about prompts using Prompt management</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html#prompt-management-versions-view.html"
+     * >View information about a version of your prompt</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getPromptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPrompt operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.GetPrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetPrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPromptResult> getPromptAsync(GetPromptRequest getPromptRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPromptRequest, GetPromptResult> asyncHandler);
 
     /**
      * <p>
@@ -1135,6 +1624,107 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
+     * Returns a list of aliases for a flow.
+     * </p>
+     * 
+     * @param listFlowAliasesRequest
+     * @return A Java Future containing the result of the ListFlowAliases operation returned by the service.
+     * @sample AWSBedrockAgentAsync.ListFlowAliases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlowAliases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFlowAliasesResult> listFlowAliasesAsync(ListFlowAliasesRequest listFlowAliasesRequest);
+
+    /**
+     * <p>
+     * Returns a list of aliases for a flow.
+     * </p>
+     * 
+     * @param listFlowAliasesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListFlowAliases operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.ListFlowAliases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlowAliases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFlowAliasesResult> listFlowAliasesAsync(ListFlowAliasesRequest listFlowAliasesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListFlowAliasesRequest, ListFlowAliasesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of information about each flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listFlowVersionsRequest
+     * @return A Java Future containing the result of the ListFlowVersions operation returned by the service.
+     * @sample AWSBedrockAgentAsync.ListFlowVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlowVersions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFlowVersionsResult> listFlowVersionsAsync(ListFlowVersionsRequest listFlowVersionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of information about each flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listFlowVersionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListFlowVersions operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.ListFlowVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlowVersions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFlowVersionsResult> listFlowVersionsAsync(ListFlowVersionsRequest listFlowVersionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListFlowVersionsRequest, ListFlowVersionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of flows and information about each flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-manage.html">Manage a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listFlowsRequest
+     * @return A Java Future containing the result of the ListFlows operation returned by the service.
+     * @sample AWSBedrockAgentAsync.ListFlows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlows" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListFlowsResult> listFlowsAsync(ListFlowsRequest listFlowsRequest);
+
+    /**
+     * <p>
+     * Returns a list of flows and information about each flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-manage.html">Manage a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listFlowsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListFlows operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.ListFlows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlows" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListFlowsResult> listFlowsAsync(ListFlowsRequest listFlowsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListFlowsRequest, ListFlowsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the ingestion jobs for a data source and information about each of them.
      * </p>
      * 
@@ -1197,6 +1787,43 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
+     * Returns a list of prompts from the Prompt management tool and information about each prompt. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-view.html"
+     * >View information about prompts using Prompt management</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listPromptsRequest
+     * @return A Java Future containing the result of the ListPrompts operation returned by the service.
+     * @sample AWSBedrockAgentAsync.ListPrompts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListPrompts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListPromptsResult> listPromptsAsync(ListPromptsRequest listPromptsRequest);
+
+    /**
+     * <p>
+     * Returns a list of prompts from the Prompt management tool and information about each prompt. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-view.html"
+     * >View information about prompts using Prompt management</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listPromptsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPrompts operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.ListPrompts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListPrompts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListPromptsResult> listPromptsAsync(ListPromptsRequest listPromptsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListPromptsRequest, ListPromptsResult> asyncHandler);
+
+    /**
+     * <p>
      * List all the tags for the resource you specify.
      * </p>
      * 
@@ -1256,6 +1883,41 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      */
     java.util.concurrent.Future<PrepareAgentResult> prepareAgentAsync(PrepareAgentRequest prepareAgentRequest,
             com.amazonaws.handlers.AsyncHandler<PrepareAgentRequest, PrepareAgentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Prepares the <code>DRAFT</code> version of a flow so that it can be invoked. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-test.html">Test a flow in Amazon Bedrock</a> in
+     * the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param prepareFlowRequest
+     * @return A Java Future containing the result of the PrepareFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsync.PrepareFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/PrepareFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PrepareFlowResult> prepareFlowAsync(PrepareFlowRequest prepareFlowRequest);
+
+    /**
+     * <p>
+     * Prepares the <code>DRAFT</code> version of a flow so that it can be invoked. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-test.html">Test a flow in Amazon Bedrock</a> in
+     * the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param prepareFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PrepareFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.PrepareFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/PrepareFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PrepareFlowResult> prepareFlowAsync(PrepareFlowRequest prepareFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<PrepareFlowRequest, PrepareFlowResult> asyncHandler);
 
     /**
      * <p>
@@ -1480,12 +2142,12 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates configurations for a data source.
+     * Updates the configurations for a data source connector.
      * </p>
      * <important>
      * <p>
-     * You can't change the <code>chunkingConfiguration</code> after you create the data source. Specify the existing
-     * <code>chunkingConfiguration</code>.
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source connector. Specify the
+     * existing <code>chunkingConfiguration</code>.
      * </p>
      * </important>
      * 
@@ -1499,12 +2161,12 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates configurations for a data source.
+     * Updates the configurations for a data source connector.
      * </p>
      * <important>
      * <p>
-     * You can't change the <code>chunkingConfiguration</code> after you create the data source. Specify the existing
-     * <code>chunkingConfiguration</code>.
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source connector. Specify the
+     * existing <code>chunkingConfiguration</code>.
      * </p>
      * </important>
      * 
@@ -1520,6 +2182,78 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      */
     java.util.concurrent.Future<UpdateDataSourceResult> updateDataSourceAsync(UpdateDataSourceRequest updateDataSourceRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDataSourceRequest, UpdateDataSourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies a flow. Include both fields that you want to keep and fields that you want to change. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-how-it-works.html">How it
+     * works</a> and <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-create.html">Create a flow in
+     * Amazon Bedrock</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateFlowRequest
+     * @return A Java Future containing the result of the UpdateFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsync.UpdateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFlowResult> updateFlowAsync(UpdateFlowRequest updateFlowRequest);
+
+    /**
+     * <p>
+     * Modifies a flow. Include both fields that you want to keep and fields that you want to change. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-how-it-works.html">How it
+     * works</a> and <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-create.html">Create a flow in
+     * Amazon Bedrock</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFlow operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.UpdateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFlowResult> updateFlowAsync(UpdateFlowRequest updateFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFlowRequest, UpdateFlowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the alias of a flow. Include both fields that you want to keep and ones that you want to change. For
+     * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a
+     * flow in Amazon Bedrock</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateFlowAliasRequest
+     * @return A Java Future containing the result of the UpdateFlowAlias operation returned by the service.
+     * @sample AWSBedrockAgentAsync.UpdateFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFlowAliasResult> updateFlowAliasAsync(UpdateFlowAliasRequest updateFlowAliasRequest);
+
+    /**
+     * <p>
+     * Modifies the alias of a flow. Include both fields that you want to keep and ones that you want to change. For
+     * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a
+     * flow in Amazon Bedrock</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateFlowAliasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFlowAlias operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.UpdateFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFlowAliasResult> updateFlowAliasAsync(UpdateFlowAliasRequest updateFlowAliasRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFlowAliasRequest, UpdateFlowAliasResult> asyncHandler);
 
     /**
      * <p>
@@ -1605,5 +2339,46 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      */
     java.util.concurrent.Future<UpdateKnowledgeBaseResult> updateKnowledgeBaseAsync(UpdateKnowledgeBaseRequest updateKnowledgeBaseRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateKnowledgeBaseRequest, UpdateKnowledgeBaseResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies a prompt in your prompt library. Include both fields that you want to keep and fields that you want to
+     * replace. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management in Amazon
+     * Bedrock</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-edit">Edit
+     * prompts in your prompt library</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updatePromptRequest
+     * @return A Java Future containing the result of the UpdatePrompt operation returned by the service.
+     * @sample AWSBedrockAgentAsync.UpdatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest updatePromptRequest);
+
+    /**
+     * <p>
+     * Modifies a prompt in your prompt library. Include both fields that you want to keep and fields that you want to
+     * replace. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management in Amazon
+     * Bedrock</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-edit">Edit
+     * prompts in your prompt library</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updatePromptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePrompt operation returned by the service.
+     * @sample AWSBedrockAgentAsyncHandler.UpdatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest updatePromptRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePromptRequest, UpdatePromptResult> asyncHandler);
 
 }

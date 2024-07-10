@@ -62,6 +62,11 @@ public class KnowledgeBaseRetrieveAndGenerateConfigurationJsonUnmarshaller imple
                     context.nextToken();
                     knowledgeBaseRetrieveAndGenerateConfiguration.setModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("orchestrationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBaseRetrieveAndGenerateConfiguration.setOrchestrationConfiguration(OrchestrationConfigurationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
                 if (context.testExpression("retrievalConfiguration", targetDepth)) {
                     context.nextToken();
                     knowledgeBaseRetrieveAndGenerateConfiguration.setRetrievalConfiguration(KnowledgeBaseRetrievalConfigurationJsonUnmarshaller.getInstance()

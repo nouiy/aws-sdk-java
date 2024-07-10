@@ -50,7 +50,7 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
 
     /**
      * <p>
-     * Contains configurations for response generation based on the knowwledge base query results.
+     * Contains configurations for response generation based on the knowledge base query results.
      * </p>
      */
     private GenerationConfiguration generationConfiguration;
@@ -68,6 +68,12 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     private String modelArn;
     /**
      * <p>
+     * Settings for how the model processes the prompt prior to retrieval and generation.
+     * </p>
+     */
+    private OrchestrationConfiguration orchestrationConfiguration;
+    /**
+     * <p>
      * Contains configurations for how to retrieve and return the knowledge base query.
      * </p>
      */
@@ -75,11 +81,11 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
 
     /**
      * <p>
-     * Contains configurations for response generation based on the knowwledge base query results.
+     * Contains configurations for response generation based on the knowledge base query results.
      * </p>
      * 
      * @param generationConfiguration
-     *        Contains configurations for response generation based on the knowwledge base query results.
+     *        Contains configurations for response generation based on the knowledge base query results.
      */
 
     public void setGenerationConfiguration(GenerationConfiguration generationConfiguration) {
@@ -88,10 +94,10 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
 
     /**
      * <p>
-     * Contains configurations for response generation based on the knowwledge base query results.
+     * Contains configurations for response generation based on the knowledge base query results.
      * </p>
      * 
-     * @return Contains configurations for response generation based on the knowwledge base query results.
+     * @return Contains configurations for response generation based on the knowledge base query results.
      */
 
     public GenerationConfiguration getGenerationConfiguration() {
@@ -100,11 +106,11 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
 
     /**
      * <p>
-     * Contains configurations for response generation based on the knowwledge base query results.
+     * Contains configurations for response generation based on the knowledge base query results.
      * </p>
      * 
      * @param generationConfiguration
-     *        Contains configurations for response generation based on the knowwledge base query results.
+     *        Contains configurations for response generation based on the knowledge base query results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,6 +201,46 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
 
     /**
      * <p>
+     * Settings for how the model processes the prompt prior to retrieval and generation.
+     * </p>
+     * 
+     * @param orchestrationConfiguration
+     *        Settings for how the model processes the prompt prior to retrieval and generation.
+     */
+
+    public void setOrchestrationConfiguration(OrchestrationConfiguration orchestrationConfiguration) {
+        this.orchestrationConfiguration = orchestrationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for how the model processes the prompt prior to retrieval and generation.
+     * </p>
+     * 
+     * @return Settings for how the model processes the prompt prior to retrieval and generation.
+     */
+
+    public OrchestrationConfiguration getOrchestrationConfiguration() {
+        return this.orchestrationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for how the model processes the prompt prior to retrieval and generation.
+     * </p>
+     * 
+     * @param orchestrationConfiguration
+     *        Settings for how the model processes the prompt prior to retrieval and generation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBaseRetrieveAndGenerateConfiguration withOrchestrationConfiguration(OrchestrationConfiguration orchestrationConfiguration) {
+        setOrchestrationConfiguration(orchestrationConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * Contains configurations for how to retrieve and return the knowledge base query.
      * </p>
      * 
@@ -251,6 +297,8 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
             sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getModelArn() != null)
             sb.append("ModelArn: ").append(getModelArn()).append(",");
+        if (getOrchestrationConfiguration() != null)
+            sb.append("OrchestrationConfiguration: ").append(getOrchestrationConfiguration()).append(",");
         if (getRetrievalConfiguration() != null)
             sb.append("RetrievalConfiguration: ").append(getRetrievalConfiguration());
         sb.append("}");
@@ -279,6 +327,10 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
             return false;
         if (other.getModelArn() != null && other.getModelArn().equals(this.getModelArn()) == false)
             return false;
+        if (other.getOrchestrationConfiguration() == null ^ this.getOrchestrationConfiguration() == null)
+            return false;
+        if (other.getOrchestrationConfiguration() != null && other.getOrchestrationConfiguration().equals(this.getOrchestrationConfiguration()) == false)
+            return false;
         if (other.getRetrievalConfiguration() == null ^ this.getRetrievalConfiguration() == null)
             return false;
         if (other.getRetrievalConfiguration() != null && other.getRetrievalConfiguration().equals(this.getRetrievalConfiguration()) == false)
@@ -294,6 +346,7 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
         hashCode = prime * hashCode + ((getGenerationConfiguration() == null) ? 0 : getGenerationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getModelArn() == null) ? 0 : getModelArn().hashCode());
+        hashCode = prime * hashCode + ((getOrchestrationConfiguration() == null) ? 0 : getOrchestrationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRetrievalConfiguration() == null) ? 0 : getRetrievalConfiguration().hashCode());
         return hashCode;
     }

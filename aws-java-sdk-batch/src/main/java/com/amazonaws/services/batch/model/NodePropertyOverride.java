@@ -56,6 +56,12 @@ public class NodePropertyOverride implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.List<String> instanceTypes;
+    /**
+     * <p>
+     * An object that contains the properties that you want to replace for the existing Amazon EKS resources of a job.
+     * </p>
+     */
+    private EksPropertiesOverride eksPropertiesOverride;
 
     /**
      * <p>
@@ -269,6 +275,49 @@ public class NodePropertyOverride implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * An object that contains the properties that you want to replace for the existing Amazon EKS resources of a job.
+     * </p>
+     * 
+     * @param eksPropertiesOverride
+     *        An object that contains the properties that you want to replace for the existing Amazon EKS resources of a
+     *        job.
+     */
+
+    public void setEksPropertiesOverride(EksPropertiesOverride eksPropertiesOverride) {
+        this.eksPropertiesOverride = eksPropertiesOverride;
+    }
+
+    /**
+     * <p>
+     * An object that contains the properties that you want to replace for the existing Amazon EKS resources of a job.
+     * </p>
+     * 
+     * @return An object that contains the properties that you want to replace for the existing Amazon EKS resources of
+     *         a job.
+     */
+
+    public EksPropertiesOverride getEksPropertiesOverride() {
+        return this.eksPropertiesOverride;
+    }
+
+    /**
+     * <p>
+     * An object that contains the properties that you want to replace for the existing Amazon EKS resources of a job.
+     * </p>
+     * 
+     * @param eksPropertiesOverride
+     *        An object that contains the properties that you want to replace for the existing Amazon EKS resources of a
+     *        job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NodePropertyOverride withEksPropertiesOverride(EksPropertiesOverride eksPropertiesOverride) {
+        setEksPropertiesOverride(eksPropertiesOverride);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -287,7 +336,9 @@ public class NodePropertyOverride implements Serializable, Cloneable, Structured
         if (getEcsPropertiesOverride() != null)
             sb.append("EcsPropertiesOverride: ").append(getEcsPropertiesOverride()).append(",");
         if (getInstanceTypes() != null)
-            sb.append("InstanceTypes: ").append(getInstanceTypes());
+            sb.append("InstanceTypes: ").append(getInstanceTypes()).append(",");
+        if (getEksPropertiesOverride() != null)
+            sb.append("EksPropertiesOverride: ").append(getEksPropertiesOverride());
         sb.append("}");
         return sb.toString();
     }
@@ -318,6 +369,10 @@ public class NodePropertyOverride implements Serializable, Cloneable, Structured
             return false;
         if (other.getInstanceTypes() != null && other.getInstanceTypes().equals(this.getInstanceTypes()) == false)
             return false;
+        if (other.getEksPropertiesOverride() == null ^ this.getEksPropertiesOverride() == null)
+            return false;
+        if (other.getEksPropertiesOverride() != null && other.getEksPropertiesOverride().equals(this.getEksPropertiesOverride()) == false)
+            return false;
         return true;
     }
 
@@ -330,6 +385,7 @@ public class NodePropertyOverride implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getContainerOverrides() == null) ? 0 : getContainerOverrides().hashCode());
         hashCode = prime * hashCode + ((getEcsPropertiesOverride() == null) ? 0 : getEcsPropertiesOverride().hashCode());
         hashCode = prime * hashCode + ((getInstanceTypes() == null) ? 0 : getInstanceTypes().hashCode());
+        hashCode = prime * hashCode + ((getEksPropertiesOverride() == null) ? 0 : getEksPropertiesOverride().hashCode());
         return hashCode;
     }
 

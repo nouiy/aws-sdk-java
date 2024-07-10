@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.bedrockruntime.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class GuardrailConverseTextBlockMarshaller {
 
     private static final MarshallingInfo<String> TEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("text").build();
+    private static final MarshallingInfo<List> QUALIFIERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("qualifiers").build();
 
     private static final GuardrailConverseTextBlockMarshaller instance = new GuardrailConverseTextBlockMarshaller();
 
@@ -47,6 +50,7 @@ public class GuardrailConverseTextBlockMarshaller {
 
         try {
             protocolMarshaller.marshall(guardrailConverseTextBlock.getText(), TEXT_BINDING);
+            protocolMarshaller.marshall(guardrailConverseTextBlock.getQualifiers(), QUALIFIERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

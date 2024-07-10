@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configuration information for the tools that you pass to a model.
+ * Configuration information for the tools that you pass to a model. For more information, see <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html">Tool use (function calling)</a> in the
+ * Amazon Bedrock User Guide.
  * </p>
  * <note>
  * <p>

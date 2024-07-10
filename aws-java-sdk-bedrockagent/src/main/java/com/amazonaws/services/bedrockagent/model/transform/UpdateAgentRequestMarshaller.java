@@ -45,6 +45,8 @@ public class UpdateAgentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idleSessionTTLInSeconds").build();
     private static final MarshallingInfo<String> INSTRUCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instruction").build();
+    private static final MarshallingInfo<StructuredPojo> MEMORYCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("memoryConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> PROMPTOVERRIDECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptOverrideConfiguration").build();
 
@@ -73,6 +75,7 @@ public class UpdateAgentRequestMarshaller {
             protocolMarshaller.marshall(updateAgentRequest.getGuardrailConfiguration(), GUARDRAILCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getInstruction(), INSTRUCTION_BINDING);
+            protocolMarshaller.marshall(updateAgentRequest.getMemoryConfiguration(), MEMORYCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getPromptOverrideConfiguration(), PROMPTOVERRIDECONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

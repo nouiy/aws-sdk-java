@@ -56,6 +56,10 @@ public class InstanceJsonUnmarshaller implements Unmarshaller<Instance, JsonUnma
                     context.nextToken();
                     instance.setAmiId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DualSubscription", targetDepth)) {
+                    context.nextToken();
+                    instance.setDualSubscription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("InstanceID", targetDepth)) {
                     context.nextToken();
                     instance.setInstanceID(context.getUnmarshaller(String.class).unmarshall(context));
@@ -68,6 +72,10 @@ public class InstanceJsonUnmarshaller implements Unmarshaller<Instance, JsonUnma
                     context.nextToken();
                     instance.setLastUpdatedTime(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("OsVersion", targetDepth)) {
+                    context.nextToken();
+                    instance.setOsVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ProductCode", targetDepth)) {
                     context.nextToken();
                     instance.setProductCode(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
@@ -78,6 +86,10 @@ public class InstanceJsonUnmarshaller implements Unmarshaller<Instance, JsonUnma
                     context.nextToken();
                     instance.setRegion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RegisteredWithSubscriptionProvider", targetDepth)) {
+                    context.nextToken();
+                    instance.setRegisteredWithSubscriptionProvider(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Status", targetDepth)) {
                     context.nextToken();
                     instance.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
@@ -85,6 +97,14 @@ public class InstanceJsonUnmarshaller implements Unmarshaller<Instance, JsonUnma
                 if (context.testExpression("SubscriptionName", targetDepth)) {
                     context.nextToken();
                     instance.setSubscriptionName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SubscriptionProviderCreateTime", targetDepth)) {
+                    context.nextToken();
+                    instance.setSubscriptionProviderCreateTime(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SubscriptionProviderUpdateTime", targetDepth)) {
+                    context.nextToken();
+                    instance.setSubscriptionProviderUpdateTime(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UsageOperation", targetDepth)) {
                     context.nextToken();

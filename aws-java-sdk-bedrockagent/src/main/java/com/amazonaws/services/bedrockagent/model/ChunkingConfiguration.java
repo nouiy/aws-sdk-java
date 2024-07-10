@@ -45,6 +45,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large chunks,
+     * and the second layer contains smaller chunks derived from the first layer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with natural
+     * language processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
      * pre-process your documents by splitting them into separate files.
      * </p>
@@ -59,6 +71,21 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      * </p>
      */
     private FixedSizeChunkingConfiguration fixedSizeChunkingConfiguration;
+    /**
+     * <p>
+     * Settings for hierarchical document chunking for a data source. Hierarchical chunking splits documents into layers
+     * of chunks where the first layer contains large chunks, and the second layer contains smaller chunks derived from
+     * the first layer.
+     * </p>
+     */
+    private HierarchicalChunkingConfiguration hierarchicalChunkingConfiguration;
+    /**
+     * <p>
+     * Settings for semantic document chunking for a data source. Semantic chunking splits a document into into smaller
+     * documents based on groups of similar content derived from the text with natural language processing.
+     * </p>
+     */
+    private SemanticChunkingConfiguration semanticChunkingConfiguration;
 
     /**
      * <p>
@@ -72,6 +99,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      * <p>
      * <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that you set
      * in the <code>fixedSizeChunkingConfiguration</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large chunks,
+     * and the second layer contains smaller chunks derived from the first layer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with natural
+     * language processing.
      * </p>
      * </li>
      * <li>
@@ -92,6 +131,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      *        <p>
      *        <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that
      *        you set in the <code>fixedSizeChunkingConfiguration</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large
+     *        chunks, and the second layer contains smaller chunks derived from the first layer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with
+     *        natural language processing.
      *        </p>
      *        </li>
      *        <li>
@@ -123,6 +174,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large chunks,
+     * and the second layer contains smaller chunks derived from the first layer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with natural
+     * language processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
      * pre-process your documents by splitting them into separate files.
      * </p>
@@ -138,6 +201,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      *         <p>
      *         <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that
      *         you set in the <code>fixedSizeChunkingConfiguration</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large
+     *         chunks, and the second layer contains smaller chunks derived from the first layer.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with
+     *         natural language processing.
      *         </p>
      *         </li>
      *         <li>
@@ -169,6 +244,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large chunks,
+     * and the second layer contains smaller chunks derived from the first layer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with natural
+     * language processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
      * pre-process your documents by splitting them into separate files.
      * </p>
@@ -185,6 +272,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      *        <p>
      *        <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that
      *        you set in the <code>fixedSizeChunkingConfiguration</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large
+     *        chunks, and the second layer contains smaller chunks derived from the first layer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with
+     *        natural language processing.
      *        </p>
      *        </li>
      *        <li>
@@ -218,6 +317,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large chunks,
+     * and the second layer contains smaller chunks derived from the first layer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with natural
+     * language processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
      * pre-process your documents by splitting them into separate files.
      * </p>
@@ -234,6 +345,18 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
      *        <p>
      *        <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that
      *        you set in the <code>fixedSizeChunkingConfiguration</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>HIERARCHICAL</code> – Split documents into layers of chunks where the first layer contains large
+     *        chunks, and the second layer contains smaller chunks derived from the first layer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SEMANTIC</code> – Split documents into chunks based on groups of similar content derived with
+     *        natural language processing.
      *        </p>
      *        </li>
      *        <li>
@@ -298,6 +421,107 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Settings for hierarchical document chunking for a data source. Hierarchical chunking splits documents into layers
+     * of chunks where the first layer contains large chunks, and the second layer contains smaller chunks derived from
+     * the first layer.
+     * </p>
+     * 
+     * @param hierarchicalChunkingConfiguration
+     *        Settings for hierarchical document chunking for a data source. Hierarchical chunking splits documents into
+     *        layers of chunks where the first layer contains large chunks, and the second layer contains smaller chunks
+     *        derived from the first layer.
+     */
+
+    public void setHierarchicalChunkingConfiguration(HierarchicalChunkingConfiguration hierarchicalChunkingConfiguration) {
+        this.hierarchicalChunkingConfiguration = hierarchicalChunkingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for hierarchical document chunking for a data source. Hierarchical chunking splits documents into layers
+     * of chunks where the first layer contains large chunks, and the second layer contains smaller chunks derived from
+     * the first layer.
+     * </p>
+     * 
+     * @return Settings for hierarchical document chunking for a data source. Hierarchical chunking splits documents
+     *         into layers of chunks where the first layer contains large chunks, and the second layer contains smaller
+     *         chunks derived from the first layer.
+     */
+
+    public HierarchicalChunkingConfiguration getHierarchicalChunkingConfiguration() {
+        return this.hierarchicalChunkingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for hierarchical document chunking for a data source. Hierarchical chunking splits documents into layers
+     * of chunks where the first layer contains large chunks, and the second layer contains smaller chunks derived from
+     * the first layer.
+     * </p>
+     * 
+     * @param hierarchicalChunkingConfiguration
+     *        Settings for hierarchical document chunking for a data source. Hierarchical chunking splits documents into
+     *        layers of chunks where the first layer contains large chunks, and the second layer contains smaller chunks
+     *        derived from the first layer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChunkingConfiguration withHierarchicalChunkingConfiguration(HierarchicalChunkingConfiguration hierarchicalChunkingConfiguration) {
+        setHierarchicalChunkingConfiguration(hierarchicalChunkingConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Settings for semantic document chunking for a data source. Semantic chunking splits a document into into smaller
+     * documents based on groups of similar content derived from the text with natural language processing.
+     * </p>
+     * 
+     * @param semanticChunkingConfiguration
+     *        Settings for semantic document chunking for a data source. Semantic chunking splits a document into into
+     *        smaller documents based on groups of similar content derived from the text with natural language
+     *        processing.
+     */
+
+    public void setSemanticChunkingConfiguration(SemanticChunkingConfiguration semanticChunkingConfiguration) {
+        this.semanticChunkingConfiguration = semanticChunkingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for semantic document chunking for a data source. Semantic chunking splits a document into into smaller
+     * documents based on groups of similar content derived from the text with natural language processing.
+     * </p>
+     * 
+     * @return Settings for semantic document chunking for a data source. Semantic chunking splits a document into into
+     *         smaller documents based on groups of similar content derived from the text with natural language
+     *         processing.
+     */
+
+    public SemanticChunkingConfiguration getSemanticChunkingConfiguration() {
+        return this.semanticChunkingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for semantic document chunking for a data source. Semantic chunking splits a document into into smaller
+     * documents based on groups of similar content derived from the text with natural language processing.
+     * </p>
+     * 
+     * @param semanticChunkingConfiguration
+     *        Settings for semantic document chunking for a data source. Semantic chunking splits a document into into
+     *        smaller documents based on groups of similar content derived from the text with natural language
+     *        processing.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChunkingConfiguration withSemanticChunkingConfiguration(SemanticChunkingConfiguration semanticChunkingConfiguration) {
+        setSemanticChunkingConfiguration(semanticChunkingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -312,7 +536,11 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
         if (getChunkingStrategy() != null)
             sb.append("ChunkingStrategy: ").append(getChunkingStrategy()).append(",");
         if (getFixedSizeChunkingConfiguration() != null)
-            sb.append("FixedSizeChunkingConfiguration: ").append(getFixedSizeChunkingConfiguration());
+            sb.append("FixedSizeChunkingConfiguration: ").append(getFixedSizeChunkingConfiguration()).append(",");
+        if (getHierarchicalChunkingConfiguration() != null)
+            sb.append("HierarchicalChunkingConfiguration: ").append(getHierarchicalChunkingConfiguration()).append(",");
+        if (getSemanticChunkingConfiguration() != null)
+            sb.append("SemanticChunkingConfiguration: ").append(getSemanticChunkingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -336,6 +564,16 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
         if (other.getFixedSizeChunkingConfiguration() != null
                 && other.getFixedSizeChunkingConfiguration().equals(this.getFixedSizeChunkingConfiguration()) == false)
             return false;
+        if (other.getHierarchicalChunkingConfiguration() == null ^ this.getHierarchicalChunkingConfiguration() == null)
+            return false;
+        if (other.getHierarchicalChunkingConfiguration() != null
+                && other.getHierarchicalChunkingConfiguration().equals(this.getHierarchicalChunkingConfiguration()) == false)
+            return false;
+        if (other.getSemanticChunkingConfiguration() == null ^ this.getSemanticChunkingConfiguration() == null)
+            return false;
+        if (other.getSemanticChunkingConfiguration() != null
+                && other.getSemanticChunkingConfiguration().equals(this.getSemanticChunkingConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -346,6 +584,8 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
 
         hashCode = prime * hashCode + ((getChunkingStrategy() == null) ? 0 : getChunkingStrategy().hashCode());
         hashCode = prime * hashCode + ((getFixedSizeChunkingConfiguration() == null) ? 0 : getFixedSizeChunkingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getHierarchicalChunkingConfiguration() == null) ? 0 : getHierarchicalChunkingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSemanticChunkingConfiguration() == null) ? 0 : getSemanticChunkingConfiguration().hashCode());
         return hashCode;
     }
 

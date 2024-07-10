@@ -31,7 +31,7 @@ public class UpdateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
     private String guardrailId;
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      */
     private String guardrailArn;
@@ -90,11 +90,11 @@ public class UpdateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
      * @param guardrailArn
-     *        The ARN of the guardrail that was created.
+     *        The ARN of the guardrail.
      */
 
     public void setGuardrailArn(String guardrailArn) {
@@ -103,10 +103,10 @@ public class UpdateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
-     * @return The ARN of the guardrail that was created.
+     * @return The ARN of the guardrail.
      */
 
     public String getGuardrailArn() {
@@ -115,11 +115,11 @@ public class UpdateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
      * @param guardrailArn
-     *        The ARN of the guardrail that was created.
+     *        The ARN of the guardrail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The unique identifier of the guardrail
+     * The unique identifier of the guardrail. This can be an ID or the ARN.
      * </p>
      */
     private String guardrailIdentifier;
@@ -69,6 +69,12 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
     private GuardrailSensitiveInformationPolicyConfig sensitiveInformationPolicyConfig;
     /**
      * <p>
+     * The contextual grounding policy configuration used to update a guardrail.
+     * </p>
+     */
+    private GuardrailContextualGroundingPolicyConfig contextualGroundingPolicyConfig;
+    /**
+     * <p>
      * The message to return when the guardrail blocks a prompt.
      * </p>
      */
@@ -88,11 +94,11 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The unique identifier of the guardrail
+     * The unique identifier of the guardrail. This can be an ID or the ARN.
      * </p>
      * 
      * @param guardrailIdentifier
-     *        The unique identifier of the guardrail
+     *        The unique identifier of the guardrail. This can be an ID or the ARN.
      */
 
     public void setGuardrailIdentifier(String guardrailIdentifier) {
@@ -101,10 +107,10 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The unique identifier of the guardrail
+     * The unique identifier of the guardrail. This can be an ID or the ARN.
      * </p>
      * 
-     * @return The unique identifier of the guardrail
+     * @return The unique identifier of the guardrail. This can be an ID or the ARN.
      */
 
     public String getGuardrailIdentifier() {
@@ -113,11 +119,11 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The unique identifier of the guardrail
+     * The unique identifier of the guardrail. This can be an ID or the ARN.
      * </p>
      * 
      * @param guardrailIdentifier
-     *        The unique identifier of the guardrail
+     *        The unique identifier of the guardrail. This can be an ID or the ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -368,6 +374,46 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * The contextual grounding policy configuration used to update a guardrail.
+     * </p>
+     * 
+     * @param contextualGroundingPolicyConfig
+     *        The contextual grounding policy configuration used to update a guardrail.
+     */
+
+    public void setContextualGroundingPolicyConfig(GuardrailContextualGroundingPolicyConfig contextualGroundingPolicyConfig) {
+        this.contextualGroundingPolicyConfig = contextualGroundingPolicyConfig;
+    }
+
+    /**
+     * <p>
+     * The contextual grounding policy configuration used to update a guardrail.
+     * </p>
+     * 
+     * @return The contextual grounding policy configuration used to update a guardrail.
+     */
+
+    public GuardrailContextualGroundingPolicyConfig getContextualGroundingPolicyConfig() {
+        return this.contextualGroundingPolicyConfig;
+    }
+
+    /**
+     * <p>
+     * The contextual grounding policy configuration used to update a guardrail.
+     * </p>
+     * 
+     * @param contextualGroundingPolicyConfig
+     *        The contextual grounding policy configuration used to update a guardrail.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateGuardrailRequest withContextualGroundingPolicyConfig(GuardrailContextualGroundingPolicyConfig contextualGroundingPolicyConfig) {
+        setContextualGroundingPolicyConfig(contextualGroundingPolicyConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * The message to return when the guardrail blocks a prompt.
      * </p>
      * 
@@ -512,6 +558,8 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("WordPolicyConfig: ").append(getWordPolicyConfig()).append(",");
         if (getSensitiveInformationPolicyConfig() != null)
             sb.append("SensitiveInformationPolicyConfig: ").append(getSensitiveInformationPolicyConfig()).append(",");
+        if (getContextualGroundingPolicyConfig() != null)
+            sb.append("ContextualGroundingPolicyConfig: ").append(getContextualGroundingPolicyConfig()).append(",");
         if (getBlockedInputMessaging() != null)
             sb.append("BlockedInputMessaging: ").append("***Sensitive Data Redacted***").append(",");
         if (getBlockedOutputsMessaging() != null)
@@ -561,6 +609,11 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
         if (other.getSensitiveInformationPolicyConfig() != null
                 && other.getSensitiveInformationPolicyConfig().equals(this.getSensitiveInformationPolicyConfig()) == false)
             return false;
+        if (other.getContextualGroundingPolicyConfig() == null ^ this.getContextualGroundingPolicyConfig() == null)
+            return false;
+        if (other.getContextualGroundingPolicyConfig() != null
+                && other.getContextualGroundingPolicyConfig().equals(this.getContextualGroundingPolicyConfig()) == false)
+            return false;
         if (other.getBlockedInputMessaging() == null ^ this.getBlockedInputMessaging() == null)
             return false;
         if (other.getBlockedInputMessaging() != null && other.getBlockedInputMessaging().equals(this.getBlockedInputMessaging()) == false)
@@ -588,6 +641,7 @@ public class UpdateGuardrailRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getContentPolicyConfig() == null) ? 0 : getContentPolicyConfig().hashCode());
         hashCode = prime * hashCode + ((getWordPolicyConfig() == null) ? 0 : getWordPolicyConfig().hashCode());
         hashCode = prime * hashCode + ((getSensitiveInformationPolicyConfig() == null) ? 0 : getSensitiveInformationPolicyConfig().hashCode());
+        hashCode = prime * hashCode + ((getContextualGroundingPolicyConfig() == null) ? 0 : getContextualGroundingPolicyConfig().hashCode());
         hashCode = prime * hashCode + ((getBlockedInputMessaging() == null) ? 0 : getBlockedInputMessaging().hashCode());
         hashCode = prime * hashCode + ((getBlockedOutputsMessaging() == null) ? 0 : getBlockedOutputsMessaging().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());

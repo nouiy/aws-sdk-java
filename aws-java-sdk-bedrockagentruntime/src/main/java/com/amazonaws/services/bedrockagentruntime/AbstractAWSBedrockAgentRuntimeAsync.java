@@ -28,6 +28,32 @@ public class AbstractAWSBedrockAgentRuntimeAsync extends AbstractAWSBedrockAgent
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteAgentMemoryResult> deleteAgentMemoryAsync(DeleteAgentMemoryRequest request) {
+
+        return deleteAgentMemoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAgentMemoryResult> deleteAgentMemoryAsync(DeleteAgentMemoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAgentMemoryRequest, DeleteAgentMemoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAgentMemoryResult> getAgentMemoryAsync(GetAgentMemoryRequest request) {
+
+        return getAgentMemoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAgentMemoryResult> getAgentMemoryAsync(GetAgentMemoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAgentMemoryRequest, GetAgentMemoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<RetrieveResult> retrieveAsync(RetrieveRequest request) {
 
         return retrieveAsync(request, null);

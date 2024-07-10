@@ -67,6 +67,8 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
     private String bridgeArn;
     /** The bridge output ports currently in use. */
     private java.util.List<Integer> bridgePorts;
+    /** An indication of whether the output is transmitting data or not. */
+    private String outputStatus;
 
     /**
      * Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
@@ -665,6 +667,57 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * An indication of whether the output is transmitting data or not.
+     * 
+     * @param outputStatus
+     *        An indication of whether the output is transmitting data or not.
+     * @see OutputStatus
+     */
+
+    public void setOutputStatus(String outputStatus) {
+        this.outputStatus = outputStatus;
+    }
+
+    /**
+     * An indication of whether the output is transmitting data or not.
+     * 
+     * @return An indication of whether the output is transmitting data or not.
+     * @see OutputStatus
+     */
+
+    public String getOutputStatus() {
+        return this.outputStatus;
+    }
+
+    /**
+     * An indication of whether the output is transmitting data or not.
+     * 
+     * @param outputStatus
+     *        An indication of whether the output is transmitting data or not.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OutputStatus
+     */
+
+    public Output withOutputStatus(String outputStatus) {
+        setOutputStatus(outputStatus);
+        return this;
+    }
+
+    /**
+     * An indication of whether the output is transmitting data or not.
+     * 
+     * @param outputStatus
+     *        An indication of whether the output is transmitting data or not.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OutputStatus
+     */
+
+    public Output withOutputStatus(OutputStatus outputStatus) {
+        this.outputStatus = outputStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -705,7 +758,9 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
         if (getBridgeArn() != null)
             sb.append("BridgeArn: ").append(getBridgeArn()).append(",");
         if (getBridgePorts() != null)
-            sb.append("BridgePorts: ").append(getBridgePorts());
+            sb.append("BridgePorts: ").append(getBridgePorts()).append(",");
+        if (getOutputStatus() != null)
+            sb.append("OutputStatus: ").append(getOutputStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -782,6 +837,10 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getBridgePorts() != null && other.getBridgePorts().equals(this.getBridgePorts()) == false)
             return false;
+        if (other.getOutputStatus() == null ^ this.getOutputStatus() == null)
+            return false;
+        if (other.getOutputStatus() != null && other.getOutputStatus().equals(this.getOutputStatus()) == false)
+            return false;
         return true;
     }
 
@@ -805,6 +864,7 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVpcInterfaceAttachment() == null) ? 0 : getVpcInterfaceAttachment().hashCode());
         hashCode = prime * hashCode + ((getBridgeArn() == null) ? 0 : getBridgeArn().hashCode());
         hashCode = prime * hashCode + ((getBridgePorts() == null) ? 0 : getBridgePorts().hashCode());
+        hashCode = prime * hashCode + ((getOutputStatus() == null) ? 0 : getOutputStatus().hashCode());
         return hashCode;
     }
 

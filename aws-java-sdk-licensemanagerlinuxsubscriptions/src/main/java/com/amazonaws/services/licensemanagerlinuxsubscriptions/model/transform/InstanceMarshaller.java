@@ -32,20 +32,30 @@ public class InstanceMarshaller {
             .marshallLocationName("AccountID").build();
     private static final MarshallingInfo<String> AMIID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("AmiId").build();
+    private static final MarshallingInfo<String> DUALSUBSCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DualSubscription").build();
     private static final MarshallingInfo<String> INSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceID").build();
     private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceType").build();
     private static final MarshallingInfo<String> LASTUPDATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedTime").build();
+    private static final MarshallingInfo<String> OSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("OsVersion").build();
     private static final MarshallingInfo<List> PRODUCTCODE_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ProductCode").build();
     private static final MarshallingInfo<String> REGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Region").build();
+    private static final MarshallingInfo<String> REGISTEREDWITHSUBSCRIPTIONPROVIDER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RegisteredWithSubscriptionProvider").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Status").build();
     private static final MarshallingInfo<String> SUBSCRIPTIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubscriptionName").build();
+    private static final MarshallingInfo<String> SUBSCRIPTIONPROVIDERCREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubscriptionProviderCreateTime").build();
+    private static final MarshallingInfo<String> SUBSCRIPTIONPROVIDERUPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubscriptionProviderUpdateTime").build();
     private static final MarshallingInfo<String> USAGEOPERATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UsageOperation").build();
 
@@ -67,13 +77,18 @@ public class InstanceMarshaller {
         try {
             protocolMarshaller.marshall(instance.getAccountID(), ACCOUNTID_BINDING);
             protocolMarshaller.marshall(instance.getAmiId(), AMIID_BINDING);
+            protocolMarshaller.marshall(instance.getDualSubscription(), DUALSUBSCRIPTION_BINDING);
             protocolMarshaller.marshall(instance.getInstanceID(), INSTANCEID_BINDING);
             protocolMarshaller.marshall(instance.getInstanceType(), INSTANCETYPE_BINDING);
             protocolMarshaller.marshall(instance.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);
+            protocolMarshaller.marshall(instance.getOsVersion(), OSVERSION_BINDING);
             protocolMarshaller.marshall(instance.getProductCode(), PRODUCTCODE_BINDING);
             protocolMarshaller.marshall(instance.getRegion(), REGION_BINDING);
+            protocolMarshaller.marshall(instance.getRegisteredWithSubscriptionProvider(), REGISTEREDWITHSUBSCRIPTIONPROVIDER_BINDING);
             protocolMarshaller.marshall(instance.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(instance.getSubscriptionName(), SUBSCRIPTIONNAME_BINDING);
+            protocolMarshaller.marshall(instance.getSubscriptionProviderCreateTime(), SUBSCRIPTIONPROVIDERCREATETIME_BINDING);
+            protocolMarshaller.marshall(instance.getSubscriptionProviderUpdateTime(), SUBSCRIPTIONPROVIDERUPDATETIME_BINDING);
             protocolMarshaller.marshall(instance.getUsageOperation(), USAGEOPERATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

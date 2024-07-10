@@ -27,13 +27,13 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy for the data source that you want to update.
      * </p>
      */
     private String dataDeletionPolicy;
     /**
      * <p>
-     * Contains details about the storage configuration of the data source.
+     * The connection configuration for the data source that you want to update.
      * </p>
      */
     private DataSourceConfiguration dataSourceConfiguration;
@@ -51,7 +51,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String description;
     /**
      * <p>
-     * The unique identifier of the knowledge base to which the data source belongs.
+     * The unique identifier of the knowledge base for the data source.
      * </p>
      */
     private String knowledgeBaseId;
@@ -76,11 +76,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy for the data source that you want to update.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy of the updated data source.
+     *        The data deletion policy for the data source that you want to update.
      * @see DataDeletionPolicy
      */
 
@@ -90,10 +90,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy for the data source that you want to update.
      * </p>
      * 
-     * @return The data deletion policy of the updated data source.
+     * @return The data deletion policy for the data source that you want to update.
      * @see DataDeletionPolicy
      */
 
@@ -103,11 +103,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy for the data source that you want to update.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy of the updated data source.
+     *        The data deletion policy for the data source that you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -119,11 +119,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy for the data source that you want to update.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy of the updated data source.
+     *        The data deletion policy for the data source that you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -135,11 +135,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Contains details about the storage configuration of the data source.
+     * The connection configuration for the data source that you want to update.
      * </p>
      * 
      * @param dataSourceConfiguration
-     *        Contains details about the storage configuration of the data source.
+     *        The connection configuration for the data source that you want to update.
      */
 
     public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
@@ -148,10 +148,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Contains details about the storage configuration of the data source.
+     * The connection configuration for the data source that you want to update.
      * </p>
      * 
-     * @return Contains details about the storage configuration of the data source.
+     * @return The connection configuration for the data source that you want to update.
      */
 
     public DataSourceConfiguration getDataSourceConfiguration() {
@@ -160,11 +160,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Contains details about the storage configuration of the data source.
+     * The connection configuration for the data source that you want to update.
      * </p>
      * 
      * @param dataSourceConfiguration
-     *        Contains details about the storage configuration of the data source.
+     *        The connection configuration for the data source that you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -255,11 +255,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the knowledge base to which the data source belongs.
+     * The unique identifier of the knowledge base for the data source.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The unique identifier of the knowledge base to which the data source belongs.
+     *        The unique identifier of the knowledge base for the data source.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -268,10 +268,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the knowledge base to which the data source belongs.
+     * The unique identifier of the knowledge base for the data source.
      * </p>
      * 
-     * @return The unique identifier of the knowledge base to which the data source belongs.
+     * @return The unique identifier of the knowledge base for the data source.
      */
 
     public String getKnowledgeBaseId() {
@@ -280,11 +280,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the knowledge base to which the data source belongs.
+     * The unique identifier of the knowledge base for the data source.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The unique identifier of the knowledge base to which the data source belongs.
+     *        The unique identifier of the knowledge base for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

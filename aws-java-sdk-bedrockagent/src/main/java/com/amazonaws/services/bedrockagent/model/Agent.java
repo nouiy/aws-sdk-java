@@ -143,7 +143,7 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
     private String foundationModel;
     /**
      * <p>
-     * The guardrails configuration assigned to the agent.
+     * Details about the guardrail associated with the agent.
      * </p>
      */
     private GuardrailConfiguration guardrailConfiguration;
@@ -163,6 +163,12 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String instruction;
+    /**
+     * <p>
+     * Contains memory configuration for the agent.
+     * </p>
+     */
+    private MemoryConfiguration memoryConfiguration;
     /**
      * <p>
      * The time at which the agent was last prepared.
@@ -1037,11 +1043,11 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The guardrails configuration assigned to the agent.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
      * @param guardrailConfiguration
-     *        The guardrails configuration assigned to the agent.
+     *        Details about the guardrail associated with the agent.
      */
 
     public void setGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
@@ -1050,10 +1056,10 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The guardrails configuration assigned to the agent.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
-     * @return The guardrails configuration assigned to the agent.
+     * @return Details about the guardrail associated with the agent.
      */
 
     public GuardrailConfiguration getGuardrailConfiguration() {
@@ -1062,11 +1068,11 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The guardrails configuration assigned to the agent.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
      * @param guardrailConfiguration
-     *        The guardrails configuration assigned to the agent.
+     *        Details about the guardrail associated with the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1176,6 +1182,46 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     public Agent withInstruction(String instruction) {
         setInstruction(instruction);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains memory configuration for the agent.
+     * </p>
+     * 
+     * @param memoryConfiguration
+     *        Contains memory configuration for the agent.
+     */
+
+    public void setMemoryConfiguration(MemoryConfiguration memoryConfiguration) {
+        this.memoryConfiguration = memoryConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains memory configuration for the agent.
+     * </p>
+     * 
+     * @return Contains memory configuration for the agent.
+     */
+
+    public MemoryConfiguration getMemoryConfiguration() {
+        return this.memoryConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains memory configuration for the agent.
+     * </p>
+     * 
+     * @param memoryConfiguration
+     *        Contains memory configuration for the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Agent withMemoryConfiguration(MemoryConfiguration memoryConfiguration) {
+        setMemoryConfiguration(memoryConfiguration);
         return this;
     }
 
@@ -1423,6 +1469,8 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
             sb.append("IdleSessionTTLInSeconds: ").append(getIdleSessionTTLInSeconds()).append(",");
         if (getInstruction() != null)
             sb.append("Instruction: ").append("***Sensitive Data Redacted***").append(",");
+        if (getMemoryConfiguration() != null)
+            sb.append("MemoryConfiguration: ").append(getMemoryConfiguration()).append(",");
         if (getPreparedAt() != null)
             sb.append("PreparedAt: ").append(getPreparedAt()).append(",");
         if (getPromptOverrideConfiguration() != null)
@@ -1505,6 +1553,10 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getInstruction() != null && other.getInstruction().equals(this.getInstruction()) == false)
             return false;
+        if (other.getMemoryConfiguration() == null ^ this.getMemoryConfiguration() == null)
+            return false;
+        if (other.getMemoryConfiguration() != null && other.getMemoryConfiguration().equals(this.getMemoryConfiguration()) == false)
+            return false;
         if (other.getPreparedAt() == null ^ this.getPreparedAt() == null)
             return false;
         if (other.getPreparedAt() != null && other.getPreparedAt().equals(this.getPreparedAt()) == false)
@@ -1544,6 +1596,7 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getGuardrailConfiguration() == null) ? 0 : getGuardrailConfiguration().hashCode());
         hashCode = prime * hashCode + ((getIdleSessionTTLInSeconds() == null) ? 0 : getIdleSessionTTLInSeconds().hashCode());
         hashCode = prime * hashCode + ((getInstruction() == null) ? 0 : getInstruction().hashCode());
+        hashCode = prime * hashCode + ((getMemoryConfiguration() == null) ? 0 : getMemoryConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPreparedAt() == null) ? 0 : getPreparedAt().hashCode());
         hashCode = prime * hashCode + ((getPromptOverrideConfiguration() == null) ? 0 : getPromptOverrideConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRecommendedActions() == null) ? 0 : getRecommendedActions().hashCode());

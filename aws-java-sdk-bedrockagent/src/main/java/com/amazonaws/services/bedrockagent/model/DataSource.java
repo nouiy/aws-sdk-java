@@ -36,13 +36,13 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date createdAt;
     /**
      * <p>
-     * The data deletion policy for a data source.
+     * The data deletion policy for the data source.
      * </p>
      */
     private String dataDeletionPolicy;
     /**
      * <p>
-     * Contains details about how the data source is stored.
+     * The connection configuration for the data source.
      * </p>
      */
     private DataSourceConfiguration dataSourceConfiguration;
@@ -155,11 +155,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data deletion policy for a data source.
+     * The data deletion policy for the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy for a data source.
+     *        The data deletion policy for the data source.
      * @see DataDeletionPolicy
      */
 
@@ -169,10 +169,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data deletion policy for a data source.
+     * The data deletion policy for the data source.
      * </p>
      * 
-     * @return The data deletion policy for a data source.
+     * @return The data deletion policy for the data source.
      * @see DataDeletionPolicy
      */
 
@@ -182,11 +182,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data deletion policy for a data source.
+     * The data deletion policy for the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy for a data source.
+     *        The data deletion policy for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -198,11 +198,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data deletion policy for a data source.
+     * The data deletion policy for the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy for a data source.
+     *        The data deletion policy for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -214,11 +214,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains details about how the data source is stored.
+     * The connection configuration for the data source.
      * </p>
      * 
      * @param dataSourceConfiguration
-     *        Contains details about how the data source is stored.
+     *        The connection configuration for the data source.
      */
 
     public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
@@ -227,10 +227,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains details about how the data source is stored.
+     * The connection configuration for the data source.
      * </p>
      * 
-     * @return Contains details about how the data source is stored.
+     * @return The connection configuration for the data source.
      */
 
     public DataSourceConfiguration getDataSourceConfiguration() {
@@ -239,11 +239,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains details about how the data source is stored.
+     * The connection configuration for the data source.
      * </p>
      * 
      * @param dataSourceConfiguration
-     *        Contains details about how the data source is stored.
+     *        The connection configuration for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

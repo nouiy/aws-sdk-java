@@ -113,6 +113,10 @@ public class OutputJsonUnmarshaller implements Unmarshaller<Output, JsonUnmarsha
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("outputStatus", targetDepth)) {
+                    context.nextToken();
+                    output.setOutputStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

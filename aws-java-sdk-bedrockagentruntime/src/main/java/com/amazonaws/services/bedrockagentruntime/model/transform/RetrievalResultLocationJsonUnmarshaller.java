@@ -48,13 +48,29 @@ public class RetrievalResultLocationJsonUnmarshaller implements Unmarshaller<Ret
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("confluenceLocation", targetDepth)) {
+                    context.nextToken();
+                    retrievalResultLocation.setConfluenceLocation(RetrievalResultConfluenceLocationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("s3Location", targetDepth)) {
                     context.nextToken();
                     retrievalResultLocation.setS3Location(RetrievalResultS3LocationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("salesforceLocation", targetDepth)) {
+                    context.nextToken();
+                    retrievalResultLocation.setSalesforceLocation(RetrievalResultSalesforceLocationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("sharePointLocation", targetDepth)) {
+                    context.nextToken();
+                    retrievalResultLocation.setSharePointLocation(RetrievalResultSharePointLocationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
                     retrievalResultLocation.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("webLocation", targetDepth)) {
+                    context.nextToken();
+                    retrievalResultLocation.setWebLocation(RetrievalResultWebLocationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

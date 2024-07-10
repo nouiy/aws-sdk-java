@@ -45,6 +45,12 @@ public class Recipe implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private RecipeReference recipeReference;
+    /**
+     * <p>
+     * Transform steps used in the recipe node.
+     * </p>
+     */
+    private java.util.List<RecipeStep> recipeSteps;
 
     /**
      * <p>
@@ -197,6 +203,76 @@ public class Recipe implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Transform steps used in the recipe node.
+     * </p>
+     * 
+     * @return Transform steps used in the recipe node.
+     */
+
+    public java.util.List<RecipeStep> getRecipeSteps() {
+        return recipeSteps;
+    }
+
+    /**
+     * <p>
+     * Transform steps used in the recipe node.
+     * </p>
+     * 
+     * @param recipeSteps
+     *        Transform steps used in the recipe node.
+     */
+
+    public void setRecipeSteps(java.util.Collection<RecipeStep> recipeSteps) {
+        if (recipeSteps == null) {
+            this.recipeSteps = null;
+            return;
+        }
+
+        this.recipeSteps = new java.util.ArrayList<RecipeStep>(recipeSteps);
+    }
+
+    /**
+     * <p>
+     * Transform steps used in the recipe node.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRecipeSteps(java.util.Collection)} or {@link #withRecipeSteps(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param recipeSteps
+     *        Transform steps used in the recipe node.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recipe withRecipeSteps(RecipeStep... recipeSteps) {
+        if (this.recipeSteps == null) {
+            setRecipeSteps(new java.util.ArrayList<RecipeStep>(recipeSteps.length));
+        }
+        for (RecipeStep ele : recipeSteps) {
+            this.recipeSteps.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Transform steps used in the recipe node.
+     * </p>
+     * 
+     * @param recipeSteps
+     *        Transform steps used in the recipe node.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recipe withRecipeSteps(java.util.Collection<RecipeStep> recipeSteps) {
+        setRecipeSteps(recipeSteps);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -213,7 +289,9 @@ public class Recipe implements Serializable, Cloneable, StructuredPojo {
         if (getInputs() != null)
             sb.append("Inputs: ").append(getInputs()).append(",");
         if (getRecipeReference() != null)
-            sb.append("RecipeReference: ").append(getRecipeReference());
+            sb.append("RecipeReference: ").append(getRecipeReference()).append(",");
+        if (getRecipeSteps() != null)
+            sb.append("RecipeSteps: ").append(getRecipeSteps());
         sb.append("}");
         return sb.toString();
     }
@@ -240,6 +318,10 @@ public class Recipe implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRecipeReference() != null && other.getRecipeReference().equals(this.getRecipeReference()) == false)
             return false;
+        if (other.getRecipeSteps() == null ^ this.getRecipeSteps() == null)
+            return false;
+        if (other.getRecipeSteps() != null && other.getRecipeSteps().equals(this.getRecipeSteps()) == false)
+            return false;
         return true;
     }
 
@@ -251,6 +333,7 @@ public class Recipe implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getInputs() == null) ? 0 : getInputs().hashCode());
         hashCode = prime * hashCode + ((getRecipeReference() == null) ? 0 : getRecipeReference().hashCode());
+        hashCode = prime * hashCode + ((getRecipeSteps() == null) ? 0 : getRecipeSteps().hashCode());
         return hashCode;
     }
 

@@ -82,14 +82,17 @@ public class AWSBedrockAgentRuntimeClient extends AmazonWebServiceClient impleme
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockagentruntime.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.bedrockagentruntime.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockagentruntime.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockagentruntime.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.bedrockagentruntime.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.bedrockagentruntime.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockagentruntime.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
@@ -99,9 +102,6 @@ public class AWSBedrockAgentRuntimeClient extends AmazonWebServiceClient impleme
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockagentruntime.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.bedrockagentruntime.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("BadGatewayException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockagentruntime.model.transform.BadGatewayExceptionUnmarshaller.getInstance()))
@@ -153,6 +153,156 @@ public class AWSBedrockAgentRuntimeClient extends AmazonWebServiceClient impleme
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/bedrockagentruntime/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/bedrockagentruntime/request.handler2s"));
         requestHandler2s.addAll(chainFactory.getGlobalHandlers());
+    }
+
+    /**
+     * <p>
+     * Deletes memory from the specified memory identifier.
+     * </p>
+     * 
+     * @param deleteAgentMemoryRequest
+     * @return Result of the DeleteAgentMemory operation returned by the service.
+     * @throws ConflictException
+     *         There was a conflict performing an operation. Resolve the conflict and retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws DependencyFailedException
+     *         There was an issue with a dependency. Check the resource configurations and retry the request.
+     * @throws BadGatewayException
+     *         There was an issue with a dependency due to a server issue. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions. Check your permissions and retry your
+     *         request.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgentRuntime.DeleteAgentMemory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/DeleteAgentMemory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteAgentMemoryResult deleteAgentMemory(DeleteAgentMemoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAgentMemory(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAgentMemoryResult executeDeleteAgentMemory(DeleteAgentMemoryRequest deleteAgentMemoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAgentMemoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAgentMemoryRequest> request = null;
+        Response<DeleteAgentMemoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAgentMemoryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteAgentMemoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock Agent Runtime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAgentMemory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAgentMemoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteAgentMemoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the sessions stored in the memory of the agent.
+     * </p>
+     * 
+     * @param getAgentMemoryRequest
+     * @return Result of the GetAgentMemory operation returned by the service.
+     * @throws ConflictException
+     *         There was a conflict performing an operation. Resolve the conflict and retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws DependencyFailedException
+     *         There was an issue with a dependency. Check the resource configurations and retry the request.
+     * @throws BadGatewayException
+     *         There was an issue with a dependency due to a server issue. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions. Check your permissions and retry your
+     *         request.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgentRuntime.GetAgentMemory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/GetAgentMemory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAgentMemoryResult getAgentMemory(GetAgentMemoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAgentMemory(request);
+    }
+
+    @SdkInternalApi
+    final GetAgentMemoryResult executeGetAgentMemory(GetAgentMemoryRequest getAgentMemoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAgentMemoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAgentMemoryRequest> request = null;
+        Response<GetAgentMemoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAgentMemoryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAgentMemoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock Agent Runtime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAgentMemory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAgentMemoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetAgentMemoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**

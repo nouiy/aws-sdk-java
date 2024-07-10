@@ -31,17 +31,27 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * An array of structures that you can use to filter the results to those that match one or more sets of key-value
-     * pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an optional operator
-     * to see subscriptions that match, partially match, or don't match a certain Amazon Machine Image (AMI) ID.
+     * An array of structures that you can use to filter the results by your specified criteria. For example, you can
+     * specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to list all
+     * subscriptions that match a partial string in the <code>Value</code>, such as <code>us-west</code>.
      * </p>
      * <p>
-     * The valid names for this filter are:
+     * For each filter, you can specify one of the following values for the <code>Name</code> key to streamline results:
      * </p>
      * <ul>
      * <li>
      * <p>
+     * <code>AccountID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AmiID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DualSubscription</code>
      * </p>
      * </li>
      * <li>
@@ -51,22 +61,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>AccountID</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Status</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Region</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UsageOperation</code>
+     * <code>InstanceType</code>
      * </p>
      * </li>
      * <li>
@@ -76,12 +71,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>InstanceType</code>
+     * <code>Region</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Status</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UsageOperation</code>
      * </p>
      * </li>
      * </ul>
      * <p>
-     * The valid Operators for this filter are:
+     * For each filter, you can use one of the following <code>Operator</code> values to define the behavior of the
+     * filter:
      * </p>
      * <ul>
      * <li>
@@ -104,30 +110,40 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
     private java.util.List<Filter> filters;
     /**
      * <p>
-     * Maximum number of results to return in a single call.
+     * The maximum items to return in a request.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * Token for the next set of results.
+     * A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * An array of structures that you can use to filter the results to those that match one or more sets of key-value
-     * pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an optional operator
-     * to see subscriptions that match, partially match, or don't match a certain Amazon Machine Image (AMI) ID.
+     * An array of structures that you can use to filter the results by your specified criteria. For example, you can
+     * specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to list all
+     * subscriptions that match a partial string in the <code>Value</code>, such as <code>us-west</code>.
      * </p>
      * <p>
-     * The valid names for this filter are:
+     * For each filter, you can specify one of the following values for the <code>Name</code> key to streamline results:
      * </p>
      * <ul>
      * <li>
      * <p>
+     * <code>AccountID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AmiID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DualSubscription</code>
      * </p>
      * </li>
      * <li>
@@ -137,22 +153,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>AccountID</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Status</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Region</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UsageOperation</code>
+     * <code>InstanceType</code>
      * </p>
      * </li>
      * <li>
@@ -162,12 +163,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>InstanceType</code>
+     * <code>Region</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Status</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UsageOperation</code>
      * </p>
      * </li>
      * </ul>
      * <p>
-     * The valid Operators for this filter are:
+     * For each filter, you can use one of the following <code>Operator</code> values to define the behavior of the
+     * filter:
      * </p>
      * <ul>
      * <li>
@@ -187,17 +199,28 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * </ul>
      * 
-     * @return An array of structures that you can use to filter the results to those that match one or more sets of
-     *         key-value pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an
-     *         optional operator to see subscriptions that match, partially match, or don't match a certain Amazon
-     *         Machine Image (AMI) ID.</p>
+     * @return An array of structures that you can use to filter the results by your specified criteria. For example,
+     *         you can specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to
+     *         list all subscriptions that match a partial string in the <code>Value</code>, such as
+     *         <code>us-west</code>.</p>
      *         <p>
-     *         The valid names for this filter are:
+     *         For each filter, you can specify one of the following values for the <code>Name</code> key to streamline
+     *         results:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
+     *         <code>AccountID</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AmiID</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DualSubscription</code>
      *         </p>
      *         </li>
      *         <li>
@@ -207,22 +230,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AccountID</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>Status</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>Region</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>UsageOperation</code>
+     *         <code>InstanceType</code>
      *         </p>
      *         </li>
      *         <li>
@@ -232,12 +240,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      *         </li>
      *         <li>
      *         <p>
-     *         <code>InstanceType</code>
+     *         <code>Region</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Status</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>UsageOperation</code>
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         The valid Operators for this filter are:
+     *         For each filter, you can use one of the following <code>Operator</code> values to define the behavior of
+     *         the filter:
      *         </p>
      *         <ul>
      *         <li>
@@ -263,17 +282,27 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * An array of structures that you can use to filter the results to those that match one or more sets of key-value
-     * pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an optional operator
-     * to see subscriptions that match, partially match, or don't match a certain Amazon Machine Image (AMI) ID.
+     * An array of structures that you can use to filter the results by your specified criteria. For example, you can
+     * specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to list all
+     * subscriptions that match a partial string in the <code>Value</code>, such as <code>us-west</code>.
      * </p>
      * <p>
-     * The valid names for this filter are:
+     * For each filter, you can specify one of the following values for the <code>Name</code> key to streamline results:
      * </p>
      * <ul>
      * <li>
      * <p>
+     * <code>AccountID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AmiID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DualSubscription</code>
      * </p>
      * </li>
      * <li>
@@ -283,22 +312,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>AccountID</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Status</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Region</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UsageOperation</code>
+     * <code>InstanceType</code>
      * </p>
      * </li>
      * <li>
@@ -308,12 +322,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>InstanceType</code>
+     * <code>Region</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Status</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UsageOperation</code>
      * </p>
      * </li>
      * </ul>
      * <p>
-     * The valid Operators for this filter are:
+     * For each filter, you can use one of the following <code>Operator</code> values to define the behavior of the
+     * filter:
      * </p>
      * <ul>
      * <li>
@@ -334,17 +359,27 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </ul>
      * 
      * @param filters
-     *        An array of structures that you can use to filter the results to those that match one or more sets of
-     *        key-value pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an
-     *        optional operator to see subscriptions that match, partially match, or don't match a certain Amazon
-     *        Machine Image (AMI) ID.</p>
+     *        An array of structures that you can use to filter the results by your specified criteria. For example, you
+     *        can specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to list
+     *        all subscriptions that match a partial string in the <code>Value</code>, such as <code>us-west</code>.</p>
      *        <p>
-     *        The valid names for this filter are:
+     *        For each filter, you can specify one of the following values for the <code>Name</code> key to streamline
+     *        results:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>AccountID</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AmiID</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DualSubscription</code>
      *        </p>
      *        </li>
      *        <li>
@@ -354,22 +389,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AccountID</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Status</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Region</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>UsageOperation</code>
+     *        <code>InstanceType</code>
      *        </p>
      *        </li>
      *        <li>
@@ -379,12 +399,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <code>InstanceType</code>
+     *        <code>Region</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Status</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>UsageOperation</code>
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        The valid Operators for this filter are:
+     *        For each filter, you can use one of the following <code>Operator</code> values to define the behavior of
+     *        the filter:
      *        </p>
      *        <ul>
      *        <li>
@@ -415,17 +446,27 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * An array of structures that you can use to filter the results to those that match one or more sets of key-value
-     * pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an optional operator
-     * to see subscriptions that match, partially match, or don't match a certain Amazon Machine Image (AMI) ID.
+     * An array of structures that you can use to filter the results by your specified criteria. For example, you can
+     * specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to list all
+     * subscriptions that match a partial string in the <code>Value</code>, such as <code>us-west</code>.
      * </p>
      * <p>
-     * The valid names for this filter are:
+     * For each filter, you can specify one of the following values for the <code>Name</code> key to streamline results:
      * </p>
      * <ul>
      * <li>
      * <p>
+     * <code>AccountID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AmiID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DualSubscription</code>
      * </p>
      * </li>
      * <li>
@@ -435,22 +476,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>AccountID</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Status</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Region</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UsageOperation</code>
+     * <code>InstanceType</code>
      * </p>
      * </li>
      * <li>
@@ -460,12 +486,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>InstanceType</code>
+     * <code>Region</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Status</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UsageOperation</code>
      * </p>
      * </li>
      * </ul>
      * <p>
-     * The valid Operators for this filter are:
+     * For each filter, you can use one of the following <code>Operator</code> values to define the behavior of the
+     * filter:
      * </p>
      * <ul>
      * <li>
@@ -491,17 +528,27 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param filters
-     *        An array of structures that you can use to filter the results to those that match one or more sets of
-     *        key-value pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an
-     *        optional operator to see subscriptions that match, partially match, or don't match a certain Amazon
-     *        Machine Image (AMI) ID.</p>
+     *        An array of structures that you can use to filter the results by your specified criteria. For example, you
+     *        can specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to list
+     *        all subscriptions that match a partial string in the <code>Value</code>, such as <code>us-west</code>.</p>
      *        <p>
-     *        The valid names for this filter are:
+     *        For each filter, you can specify one of the following values for the <code>Name</code> key to streamline
+     *        results:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>AccountID</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AmiID</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DualSubscription</code>
      *        </p>
      *        </li>
      *        <li>
@@ -511,22 +558,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AccountID</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Status</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Region</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>UsageOperation</code>
+     *        <code>InstanceType</code>
      *        </p>
      *        </li>
      *        <li>
@@ -536,12 +568,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <code>InstanceType</code>
+     *        <code>Region</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Status</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>UsageOperation</code>
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        The valid Operators for this filter are:
+     *        For each filter, you can use one of the following <code>Operator</code> values to define the behavior of
+     *        the filter:
      *        </p>
      *        <ul>
      *        <li>
@@ -574,17 +617,27 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * An array of structures that you can use to filter the results to those that match one or more sets of key-value
-     * pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an optional operator
-     * to see subscriptions that match, partially match, or don't match a certain Amazon Machine Image (AMI) ID.
+     * An array of structures that you can use to filter the results by your specified criteria. For example, you can
+     * specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to list all
+     * subscriptions that match a partial string in the <code>Value</code>, such as <code>us-west</code>.
      * </p>
      * <p>
-     * The valid names for this filter are:
+     * For each filter, you can specify one of the following values for the <code>Name</code> key to streamline results:
      * </p>
      * <ul>
      * <li>
      * <p>
+     * <code>AccountID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AmiID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DualSubscription</code>
      * </p>
      * </li>
      * <li>
@@ -594,22 +647,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>AccountID</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Status</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Region</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UsageOperation</code>
+     * <code>InstanceType</code>
      * </p>
      * </li>
      * <li>
@@ -619,12 +657,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <code>InstanceType</code>
+     * <code>Region</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Status</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UsageOperation</code>
      * </p>
      * </li>
      * </ul>
      * <p>
-     * The valid Operators for this filter are:
+     * For each filter, you can use one of the following <code>Operator</code> values to define the behavior of the
+     * filter:
      * </p>
      * <ul>
      * <li>
@@ -645,17 +694,27 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      * </ul>
      * 
      * @param filters
-     *        An array of structures that you can use to filter the results to those that match one or more sets of
-     *        key-value pairs that you specify. For example, you can filter by the name of <code>AmiID</code> with an
-     *        optional operator to see subscriptions that match, partially match, or don't match a certain Amazon
-     *        Machine Image (AMI) ID.</p>
+     *        An array of structures that you can use to filter the results by your specified criteria. For example, you
+     *        can specify <code>Region</code> in the <code>Name</code>, with the <code>contains</code> operator to list
+     *        all subscriptions that match a partial string in the <code>Value</code>, such as <code>us-west</code>.</p>
      *        <p>
-     *        The valid names for this filter are:
+     *        For each filter, you can specify one of the following values for the <code>Name</code> key to streamline
+     *        results:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>AccountID</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AmiID</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DualSubscription</code>
      *        </p>
      *        </li>
      *        <li>
@@ -665,22 +724,7 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AccountID</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Status</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Region</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>UsageOperation</code>
+     *        <code>InstanceType</code>
      *        </p>
      *        </li>
      *        <li>
@@ -690,12 +734,23 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <code>InstanceType</code>
+     *        <code>Region</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Status</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>UsageOperation</code>
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        The valid Operators for this filter are:
+     *        For each filter, you can use one of the following <code>Operator</code> values to define the behavior of
+     *        the filter:
      *        </p>
      *        <ul>
      *        <li>
@@ -723,11 +778,11 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Maximum number of results to return in a single call.
+     * The maximum items to return in a request.
      * </p>
      * 
      * @param maxResults
-     *        Maximum number of results to return in a single call.
+     *        The maximum items to return in a request.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -736,10 +791,10 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Maximum number of results to return in a single call.
+     * The maximum items to return in a request.
      * </p>
      * 
-     * @return Maximum number of results to return in a single call.
+     * @return The maximum items to return in a request.
      */
 
     public Integer getMaxResults() {
@@ -748,11 +803,11 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Maximum number of results to return in a single call.
+     * The maximum items to return in a request.
      * </p>
      * 
      * @param maxResults
-     *        Maximum number of results to return in a single call.
+     *        The maximum items to return in a request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -763,11 +818,11 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Token for the next set of results.
+     * A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * </p>
      * 
      * @param nextToken
-     *        Token for the next set of results.
+     *        A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      */
 
     public void setNextToken(String nextToken) {
@@ -776,10 +831,10 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Token for the next set of results.
+     * A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * </p>
      * 
-     * @return Token for the next set of results.
+     * @return A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      */
 
     public String getNextToken() {
@@ -788,11 +843,11 @@ public class ListLinuxSubscriptionInstancesRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Token for the next set of results.
+     * A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * </p>
      * 
      * @param nextToken
-     *        Token for the next set of results.
+     *        A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

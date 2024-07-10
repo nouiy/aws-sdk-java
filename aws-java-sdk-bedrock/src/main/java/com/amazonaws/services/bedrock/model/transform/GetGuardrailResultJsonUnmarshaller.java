@@ -88,6 +88,10 @@ public class GetGuardrailResultJsonUnmarshaller implements Unmarshaller<GetGuard
                     context.nextToken();
                     getGuardrailResult.setSensitiveInformationPolicy(GuardrailSensitiveInformationPolicyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("contextualGroundingPolicy", targetDepth)) {
+                    context.nextToken();
+                    getGuardrailResult.setContextualGroundingPolicy(GuardrailContextualGroundingPolicyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
                     getGuardrailResult.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));

@@ -62,6 +62,12 @@ public class RecipeJsonUnmarshaller implements Unmarshaller<Recipe, JsonUnmarsha
                     context.nextToken();
                     recipe.setRecipeReference(RecipeReferenceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RecipeSteps", targetDepth)) {
+                    context.nextToken();
+                    recipe.setRecipeSteps(new ListUnmarshaller<RecipeStep>(RecipeStepJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

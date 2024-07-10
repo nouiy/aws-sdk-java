@@ -43,7 +43,52 @@ public interface AWSLicenseManagerLinuxSubscriptions {
 
     /**
      * <p>
-     * Lists the Linux subscriptions service settings.
+     * Remove a third-party subscription provider from the Bring Your Own License (BYOL) subscriptions registered to
+     * your account.
+     * </p>
+     * 
+     * @param deregisterSubscriptionProviderRequest
+     * @return Result of the DeregisterSubscriptionProvider operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.DeregisterSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/DeregisterSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeregisterSubscriptionProviderResult deregisterSubscriptionProvider(DeregisterSubscriptionProviderRequest deregisterSubscriptionProviderRequest);
+
+    /**
+     * <p>
+     * Get details for a Bring Your Own License (BYOL) subscription that's registered to your account.
+     * </p>
+     * 
+     * @param getRegisteredSubscriptionProviderRequest
+     * @return Result of the GetRegisteredSubscriptionProvider operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.GetRegisteredSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/GetRegisteredSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRegisteredSubscriptionProviderResult getRegisteredSubscriptionProvider(GetRegisteredSubscriptionProviderRequest getRegisteredSubscriptionProviderRequest);
+
+    /**
+     * <p>
+     * Lists the Linux subscriptions service settings for your account.
      * </p>
      * 
      * @param getServiceSettingsRequest
@@ -105,6 +150,104 @@ public interface AWSLicenseManagerLinuxSubscriptions {
      *      target="_top">AWS API Documentation</a>
      */
     ListLinuxSubscriptionsResult listLinuxSubscriptions(ListLinuxSubscriptionsRequest listLinuxSubscriptionsRequest);
+
+    /**
+     * <p>
+     * List Bring Your Own License (BYOL) subscription registration resources for your account.
+     * </p>
+     * 
+     * @param listRegisteredSubscriptionProvidersRequest
+     * @return Result of the ListRegisteredSubscriptionProviders operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.ListRegisteredSubscriptionProviders
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListRegisteredSubscriptionProviders"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListRegisteredSubscriptionProvidersResult listRegisteredSubscriptionProviders(
+            ListRegisteredSubscriptionProvidersRequest listRegisteredSubscriptionProvidersRequest);
+
+    /**
+     * <p>
+     * List the metadata tags that are assigned to the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.ListTagsForResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Register the supported third-party subscription provider for your Bring Your Own License (BYOL) subscription.
+     * </p>
+     * 
+     * @param registerSubscriptionProviderRequest
+     * @return Result of the RegisterSubscriptionProvider operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.RegisterSubscriptionProvider
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/RegisterSubscriptionProvider"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RegisterSubscriptionProviderResult registerSubscriptionProvider(RegisterSubscriptionProviderRequest registerSubscriptionProviderRequest);
+
+    /**
+     * <p>
+     * Add metadata tags to the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @sample AWSLicenseManagerLinuxSubscriptions.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/TagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Remove one or more metadata tag from the specified Amazon Web Services resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws InternalServerException
+     *         An exception occurred with the service.
+     * @throws ResourceNotFoundException
+     *         Unable to find the requested Amazon Web Services resource.
+     * @sample AWSLicenseManagerLinuxSubscriptions.UntagResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * <p>

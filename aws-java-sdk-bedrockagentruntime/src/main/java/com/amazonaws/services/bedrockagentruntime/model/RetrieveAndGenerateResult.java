@@ -44,7 +44,10 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
     private RetrieveAndGenerateOutput output;
     /**
      * <p>
-     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * The unique identifier of the session. When you first make a <code>RetrieveAndGenerate</code> request, Amazon
+     * Bedrock automatically generates this value. You must reuse this value for all subsequent requests in the same
+     * conversational session. This value allows Amazon Bedrock to maintain context and knowledge from previous
+     * interactions. You can't explicitly set the <code>sessionId</code> yourself.
      * </p>
      */
     private String sessionId;
@@ -228,12 +231,17 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * The unique identifier of the session. When you first make a <code>RetrieveAndGenerate</code> request, Amazon
+     * Bedrock automatically generates this value. You must reuse this value for all subsequent requests in the same
+     * conversational session. This value allows Amazon Bedrock to maintain context and knowledge from previous
+     * interactions. You can't explicitly set the <code>sessionId</code> yourself.
      * </p>
      * 
      * @param sessionId
-     *        The unique identifier of the session. Reuse the same value to continue the same session with the knowledge
-     *        base.
+     *        The unique identifier of the session. When you first make a <code>RetrieveAndGenerate</code> request,
+     *        Amazon Bedrock automatically generates this value. You must reuse this value for all subsequent requests
+     *        in the same conversational session. This value allows Amazon Bedrock to maintain context and knowledge
+     *        from previous interactions. You can't explicitly set the <code>sessionId</code> yourself.
      */
 
     public void setSessionId(String sessionId) {
@@ -242,11 +250,16 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * The unique identifier of the session. When you first make a <code>RetrieveAndGenerate</code> request, Amazon
+     * Bedrock automatically generates this value. You must reuse this value for all subsequent requests in the same
+     * conversational session. This value allows Amazon Bedrock to maintain context and knowledge from previous
+     * interactions. You can't explicitly set the <code>sessionId</code> yourself.
      * </p>
      * 
-     * @return The unique identifier of the session. Reuse the same value to continue the same session with the
-     *         knowledge base.
+     * @return The unique identifier of the session. When you first make a <code>RetrieveAndGenerate</code> request,
+     *         Amazon Bedrock automatically generates this value. You must reuse this value for all subsequent requests
+     *         in the same conversational session. This value allows Amazon Bedrock to maintain context and knowledge
+     *         from previous interactions. You can't explicitly set the <code>sessionId</code> yourself.
      */
 
     public String getSessionId() {
@@ -255,12 +268,17 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * The unique identifier of the session. When you first make a <code>RetrieveAndGenerate</code> request, Amazon
+     * Bedrock automatically generates this value. You must reuse this value for all subsequent requests in the same
+     * conversational session. This value allows Amazon Bedrock to maintain context and knowledge from previous
+     * interactions. You can't explicitly set the <code>sessionId</code> yourself.
      * </p>
      * 
      * @param sessionId
-     *        The unique identifier of the session. Reuse the same value to continue the same session with the knowledge
-     *        base.
+     *        The unique identifier of the session. When you first make a <code>RetrieveAndGenerate</code> request,
+     *        Amazon Bedrock automatically generates this value. You must reuse this value for all subsequent requests
+     *        in the same conversational session. This value allows Amazon Bedrock to maintain context and knowledge
+     *        from previous interactions. You can't explicitly set the <code>sessionId</code> yourself.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

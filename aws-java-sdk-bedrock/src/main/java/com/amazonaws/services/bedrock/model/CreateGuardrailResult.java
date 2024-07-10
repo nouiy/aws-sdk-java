@@ -31,13 +31,13 @@ public class CreateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
     private String guardrailId;
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      */
     private String guardrailArn;
     /**
      * <p>
-     * The version of the guardrail that was created. This value should be 1.
+     * The version of the guardrail that was created. This value will always be <code>DRAFT</code>.
      * </p>
      */
     private String version;
@@ -90,11 +90,11 @@ public class CreateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
      * @param guardrailArn
-     *        The ARN of the guardrail that was created.
+     *        The ARN of the guardrail.
      */
 
     public void setGuardrailArn(String guardrailArn) {
@@ -103,10 +103,10 @@ public class CreateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
-     * @return The ARN of the guardrail that was created.
+     * @return The ARN of the guardrail.
      */
 
     public String getGuardrailArn() {
@@ -115,11 +115,11 @@ public class CreateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
      * @param guardrailArn
-     *        The ARN of the guardrail that was created.
+     *        The ARN of the guardrail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,11 +130,11 @@ public class CreateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The version of the guardrail that was created. This value should be 1.
+     * The version of the guardrail that was created. This value will always be <code>DRAFT</code>.
      * </p>
      * 
      * @param version
-     *        The version of the guardrail that was created. This value should be 1.
+     *        The version of the guardrail that was created. This value will always be <code>DRAFT</code>.
      */
 
     public void setVersion(String version) {
@@ -143,10 +143,10 @@ public class CreateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The version of the guardrail that was created. This value should be 1.
+     * The version of the guardrail that was created. This value will always be <code>DRAFT</code>.
      * </p>
      * 
-     * @return The version of the guardrail that was created. This value should be 1.
+     * @return The version of the guardrail that was created. This value will always be <code>DRAFT</code>.
      */
 
     public String getVersion() {
@@ -155,11 +155,11 @@ public class CreateGuardrailResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The version of the guardrail that was created. This value should be 1.
+     * The version of the guardrail that was created. This value will always be <code>DRAFT</code>.
      * </p>
      * 
      * @param version
-     *        The version of the guardrail that was created. This value should be 1.
+     *        The version of the guardrail that was created. This value will always be <code>DRAFT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

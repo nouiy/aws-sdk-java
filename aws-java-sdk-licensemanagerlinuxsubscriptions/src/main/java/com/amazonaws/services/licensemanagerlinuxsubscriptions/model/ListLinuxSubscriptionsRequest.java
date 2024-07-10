@@ -69,13 +69,13 @@ public class ListLinuxSubscriptionsRequest extends com.amazonaws.AmazonWebServic
     private java.util.List<Filter> filters;
     /**
      * <p>
-     * Maximum number of results to return in a single call.
+     * The maximum items to return in a request.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * Token for the next set of results.
+     * A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * </p>
      */
     private String nextToken;
@@ -408,11 +408,11 @@ public class ListLinuxSubscriptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Maximum number of results to return in a single call.
+     * The maximum items to return in a request.
      * </p>
      * 
      * @param maxResults
-     *        Maximum number of results to return in a single call.
+     *        The maximum items to return in a request.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -421,10 +421,10 @@ public class ListLinuxSubscriptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Maximum number of results to return in a single call.
+     * The maximum items to return in a request.
      * </p>
      * 
-     * @return Maximum number of results to return in a single call.
+     * @return The maximum items to return in a request.
      */
 
     public Integer getMaxResults() {
@@ -433,11 +433,11 @@ public class ListLinuxSubscriptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Maximum number of results to return in a single call.
+     * The maximum items to return in a request.
      * </p>
      * 
      * @param maxResults
-     *        Maximum number of results to return in a single call.
+     *        The maximum items to return in a request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -448,11 +448,11 @@ public class ListLinuxSubscriptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Token for the next set of results.
+     * A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * </p>
      * 
      * @param nextToken
-     *        Token for the next set of results.
+     *        A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      */
 
     public void setNextToken(String nextToken) {
@@ -461,10 +461,10 @@ public class ListLinuxSubscriptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Token for the next set of results.
+     * A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * </p>
      * 
-     * @return Token for the next set of results.
+     * @return A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      */
 
     public String getNextToken() {
@@ -473,11 +473,11 @@ public class ListLinuxSubscriptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Token for the next set of results.
+     * A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * </p>
      * 
      * @param nextToken
-     *        Token for the next set of results.
+     *        A token to specify where to start paginating. This is the nextToken from a previously truncated response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -34,6 +34,68 @@ public interface AWSBedrockAgentRuntimeAsync extends AWSBedrockAgentRuntime {
 
     /**
      * <p>
+     * Deletes memory from the specified memory identifier.
+     * </p>
+     * 
+     * @param deleteAgentMemoryRequest
+     * @return A Java Future containing the result of the DeleteAgentMemory operation returned by the service.
+     * @sample AWSBedrockAgentRuntimeAsync.DeleteAgentMemory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/DeleteAgentMemory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAgentMemoryResult> deleteAgentMemoryAsync(DeleteAgentMemoryRequest deleteAgentMemoryRequest);
+
+    /**
+     * <p>
+     * Deletes memory from the specified memory identifier.
+     * </p>
+     * 
+     * @param deleteAgentMemoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAgentMemory operation returned by the service.
+     * @sample AWSBedrockAgentRuntimeAsyncHandler.DeleteAgentMemory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/DeleteAgentMemory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAgentMemoryResult> deleteAgentMemoryAsync(DeleteAgentMemoryRequest deleteAgentMemoryRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAgentMemoryRequest, DeleteAgentMemoryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the sessions stored in the memory of the agent.
+     * </p>
+     * 
+     * @param getAgentMemoryRequest
+     * @return A Java Future containing the result of the GetAgentMemory operation returned by the service.
+     * @sample AWSBedrockAgentRuntimeAsync.GetAgentMemory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/GetAgentMemory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAgentMemoryResult> getAgentMemoryAsync(GetAgentMemoryRequest getAgentMemoryRequest);
+
+    /**
+     * <p>
+     * Gets the sessions stored in the memory of the agent.
+     * </p>
+     * 
+     * @param getAgentMemoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAgentMemory operation returned by the service.
+     * @sample AWSBedrockAgentRuntimeAsyncHandler.GetAgentMemory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/GetAgentMemory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAgentMemoryResult> getAgentMemoryAsync(GetAgentMemoryRequest getAgentMemoryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAgentMemoryRequest, GetAgentMemoryResult> asyncHandler);
+
+    /**
+     * <p>
      * Queries a knowledge base and retrieves information from it.
      * </p>
      * 

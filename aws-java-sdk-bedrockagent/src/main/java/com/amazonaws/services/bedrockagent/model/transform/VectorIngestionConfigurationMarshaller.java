@@ -29,6 +29,10 @@ public class VectorIngestionConfigurationMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> CHUNKINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("chunkingConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMTRANSFORMATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customTransformationConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> PARSINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parsingConfiguration").build();
 
     private static final VectorIngestionConfigurationMarshaller instance = new VectorIngestionConfigurationMarshaller();
 
@@ -47,6 +51,8 @@ public class VectorIngestionConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(vectorIngestionConfiguration.getChunkingConfiguration(), CHUNKINGCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(vectorIngestionConfiguration.getCustomTransformationConfiguration(), CUSTOMTRANSFORMATIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(vectorIngestionConfiguration.getParsingConfiguration(), PARSINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

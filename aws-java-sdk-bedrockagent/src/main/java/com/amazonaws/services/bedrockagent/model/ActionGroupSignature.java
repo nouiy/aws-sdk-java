@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ActionGroupSignature {
 
-    AMAZONUserInput("AMAZON.UserInput");
+    AMAZONUserInput("AMAZON.UserInput"),
+    AMAZONCodeInterpreter("AMAZON.CodeInterpreter");
 
     private String value;
 

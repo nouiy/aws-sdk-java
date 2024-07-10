@@ -28,6 +28,11 @@ public class AbstractAmazonBedrockRuntime implements AmazonBedrockRuntime {
     }
 
     @Override
+    public ApplyGuardrailResult applyGuardrail(ApplyGuardrailRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ConverseResult converse(ConverseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

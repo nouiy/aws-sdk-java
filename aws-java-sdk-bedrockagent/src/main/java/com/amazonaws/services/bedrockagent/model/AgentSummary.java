@@ -54,7 +54,7 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The details of the guardrails configuration in the agent summary.
+     * Details about the guardrail associated with the agent.
      * </p>
      */
     private GuardrailConfiguration guardrailConfiguration;
@@ -252,11 +252,11 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the guardrails configuration in the agent summary.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
      * @param guardrailConfiguration
-     *        The details of the guardrails configuration in the agent summary.
+     *        Details about the guardrail associated with the agent.
      */
 
     public void setGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
@@ -265,10 +265,10 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the guardrails configuration in the agent summary.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
-     * @return The details of the guardrails configuration in the agent summary.
+     * @return Details about the guardrail associated with the agent.
      */
 
     public GuardrailConfiguration getGuardrailConfiguration() {
@@ -277,11 +277,11 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the guardrails configuration in the agent summary.
+     * Details about the guardrail associated with the agent.
      * </p>
      * 
      * @param guardrailConfiguration
-     *        The details of the guardrails configuration in the agent summary.
+     *        Details about the guardrail associated with the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

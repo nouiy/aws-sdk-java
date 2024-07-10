@@ -124,6 +124,11 @@ public class IpamResourceCidrStaxUnmarshaller implements Unmarshaller<IpamResour
                     ipamResourceCidr.setVpcId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("availabilityZoneId", targetDepth)) {
+                    ipamResourceCidr.setAvailabilityZoneId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return ipamResourceCidr;

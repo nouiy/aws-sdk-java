@@ -56,6 +56,15 @@ public class ChunkingConfigurationJsonUnmarshaller implements Unmarshaller<Chunk
                     context.nextToken();
                     chunkingConfiguration.setFixedSizeChunkingConfiguration(FixedSizeChunkingConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("hierarchicalChunkingConfiguration", targetDepth)) {
+                    context.nextToken();
+                    chunkingConfiguration.setHierarchicalChunkingConfiguration(HierarchicalChunkingConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
+                if (context.testExpression("semanticChunkingConfiguration", targetDepth)) {
+                    context.nextToken();
+                    chunkingConfiguration.setSemanticChunkingConfiguration(SemanticChunkingConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

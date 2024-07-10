@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the S3 location of the data source.
+ * The S3 data source location.
  * </p>
  * <p>
  * This data type is used in the following API operations:
@@ -56,18 +56,18 @@ public class RetrievalResultS3Location implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The S3 URI of the data source.
+     * The S3 URI for the data source location.
      * </p>
      */
     private String uri;
 
     /**
      * <p>
-     * The S3 URI of the data source.
+     * The S3 URI for the data source location.
      * </p>
      * 
      * @param uri
-     *        The S3 URI of the data source.
+     *        The S3 URI for the data source location.
      */
 
     public void setUri(String uri) {
@@ -76,10 +76,10 @@ public class RetrievalResultS3Location implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The S3 URI of the data source.
+     * The S3 URI for the data source location.
      * </p>
      * 
-     * @return The S3 URI of the data source.
+     * @return The S3 URI for the data source location.
      */
 
     public String getUri() {
@@ -88,11 +88,11 @@ public class RetrievalResultS3Location implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The S3 URI of the data source.
+     * The S3 URI for the data source location.
      * </p>
      * 
      * @param uri
-     *        The S3 URI of the data source.
+     *        The S3 URI for the data source location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

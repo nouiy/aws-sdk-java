@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The managed word list that was configured for the guardrail. (This is a list of words that are pre-defined and
- * managed by Guardrails only.)
+ * managed by guardrails only.)
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/GuardrailManagedWords" target="_top">AWS API

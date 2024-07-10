@@ -43,7 +43,7 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
     private String guardrailId;
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      */
     private String guardrailArn;
@@ -83,6 +83,12 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      */
     private GuardrailSensitiveInformationPolicy sensitiveInformationPolicy;
+    /**
+     * <p>
+     * The contextual grounding policy used in the guardrail.
+     * </p>
+     */
+    private GuardrailContextualGroundingPolicy contextualGroundingPolicy;
     /**
      * <p>
      * The date and time at which the guardrail was created.
@@ -250,11 +256,11 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
      * @param guardrailArn
-     *        The ARN of the guardrail that was created.
+     *        The ARN of the guardrail.
      */
 
     public void setGuardrailArn(String guardrailArn) {
@@ -263,10 +269,10 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
-     * @return The ARN of the guardrail that was created.
+     * @return The ARN of the guardrail.
      */
 
     public String getGuardrailArn() {
@@ -275,11 +281,11 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ARN of the guardrail that was created.
+     * The ARN of the guardrail.
      * </p>
      * 
      * @param guardrailArn
-     *        The ARN of the guardrail that was created.
+     *        The ARN of the guardrail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -544,6 +550,46 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
 
     public GetGuardrailResult withSensitiveInformationPolicy(GuardrailSensitiveInformationPolicy sensitiveInformationPolicy) {
         setSensitiveInformationPolicy(sensitiveInformationPolicy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The contextual grounding policy used in the guardrail.
+     * </p>
+     * 
+     * @param contextualGroundingPolicy
+     *        The contextual grounding policy used in the guardrail.
+     */
+
+    public void setContextualGroundingPolicy(GuardrailContextualGroundingPolicy contextualGroundingPolicy) {
+        this.contextualGroundingPolicy = contextualGroundingPolicy;
+    }
+
+    /**
+     * <p>
+     * The contextual grounding policy used in the guardrail.
+     * </p>
+     * 
+     * @return The contextual grounding policy used in the guardrail.
+     */
+
+    public GuardrailContextualGroundingPolicy getContextualGroundingPolicy() {
+        return this.contextualGroundingPolicy;
+    }
+
+    /**
+     * <p>
+     * The contextual grounding policy used in the guardrail.
+     * </p>
+     * 
+     * @param contextualGroundingPolicy
+     *        The contextual grounding policy used in the guardrail.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetGuardrailResult withContextualGroundingPolicy(GuardrailContextualGroundingPolicy contextualGroundingPolicy) {
+        setContextualGroundingPolicy(contextualGroundingPolicy);
         return this;
     }
 
@@ -935,6 +981,8 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
             sb.append("WordPolicy: ").append(getWordPolicy()).append(",");
         if (getSensitiveInformationPolicy() != null)
             sb.append("SensitiveInformationPolicy: ").append(getSensitiveInformationPolicy()).append(",");
+        if (getContextualGroundingPolicy() != null)
+            sb.append("ContextualGroundingPolicy: ").append(getContextualGroundingPolicy()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getUpdatedAt() != null)
@@ -1003,6 +1051,10 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getSensitiveInformationPolicy() != null && other.getSensitiveInformationPolicy().equals(this.getSensitiveInformationPolicy()) == false)
             return false;
+        if (other.getContextualGroundingPolicy() == null ^ this.getContextualGroundingPolicy() == null)
+            return false;
+        if (other.getContextualGroundingPolicy() != null && other.getContextualGroundingPolicy().equals(this.getContextualGroundingPolicy()) == false)
+            return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
@@ -1049,6 +1101,7 @@ public class GetGuardrailResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getContentPolicy() == null) ? 0 : getContentPolicy().hashCode());
         hashCode = prime * hashCode + ((getWordPolicy() == null) ? 0 : getWordPolicy().hashCode());
         hashCode = prime * hashCode + ((getSensitiveInformationPolicy() == null) ? 0 : getSensitiveInformationPolicy().hashCode());
+        hashCode = prime * hashCode + ((getContextualGroundingPolicy() == null) ? 0 : getContextualGroundingPolicy().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getStatusReasons() == null) ? 0 : getStatusReasons().hashCode());

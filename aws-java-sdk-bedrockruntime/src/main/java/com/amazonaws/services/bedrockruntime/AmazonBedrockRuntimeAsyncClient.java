@@ -76,6 +76,39 @@ public class AmazonBedrockRuntimeAsyncClient extends AmazonBedrockRuntimeClient 
     }
 
     @Override
+    public java.util.concurrent.Future<ApplyGuardrailResult> applyGuardrailAsync(ApplyGuardrailRequest request) {
+
+        return applyGuardrailAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ApplyGuardrailResult> applyGuardrailAsync(final ApplyGuardrailRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ApplyGuardrailRequest, ApplyGuardrailResult> asyncHandler) {
+        final ApplyGuardrailRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ApplyGuardrailResult>() {
+            @Override
+            public ApplyGuardrailResult call() throws Exception {
+                ApplyGuardrailResult result = null;
+
+                try {
+                    result = executeApplyGuardrail(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ConverseResult> converseAsync(ConverseRequest request) {
 
         return converseAsync(request, null);

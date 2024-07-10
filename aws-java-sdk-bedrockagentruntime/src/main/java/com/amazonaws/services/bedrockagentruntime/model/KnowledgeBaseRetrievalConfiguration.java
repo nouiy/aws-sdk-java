@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+ * Contains configurations for knowledge base query. For more information, see <a
  * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
  * </p>
  * <p>

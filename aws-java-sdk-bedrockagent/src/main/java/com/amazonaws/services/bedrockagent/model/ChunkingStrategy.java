@@ -21,7 +21,9 @@ import javax.annotation.Generated;
 public enum ChunkingStrategy {
 
     FIXED_SIZE("FIXED_SIZE"),
-    NONE("NONE");
+    NONE("NONE"),
+    HIERARCHICAL("HIERARCHICAL"),
+    SEMANTIC("SEMANTIC");
 
     private String value;
 

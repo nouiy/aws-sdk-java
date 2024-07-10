@@ -27,7 +27,7 @@ public class CreateGuardrailVersionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The unique identifier of the guardrail.
+     * The unique identifier of the guardrail. This can be an ID or the ARN.
      * </p>
      */
     private String guardrailIdentifier;
@@ -50,11 +50,11 @@ public class CreateGuardrailVersionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The unique identifier of the guardrail.
+     * The unique identifier of the guardrail. This can be an ID or the ARN.
      * </p>
      * 
      * @param guardrailIdentifier
-     *        The unique identifier of the guardrail.
+     *        The unique identifier of the guardrail. This can be an ID or the ARN.
      */
 
     public void setGuardrailIdentifier(String guardrailIdentifier) {
@@ -63,10 +63,10 @@ public class CreateGuardrailVersionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The unique identifier of the guardrail.
+     * The unique identifier of the guardrail. This can be an ID or the ARN.
      * </p>
      * 
-     * @return The unique identifier of the guardrail.
+     * @return The unique identifier of the guardrail. This can be an ID or the ARN.
      */
 
     public String getGuardrailIdentifier() {
@@ -75,11 +75,11 @@ public class CreateGuardrailVersionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The unique identifier of the guardrail.
+     * The unique identifier of the guardrail. This can be an ID or the ARN.
      * </p>
      * 
      * @param guardrailIdentifier
-     *        The unique identifier of the guardrail.
+     *        The unique identifier of the guardrail. This can be an ID or the ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

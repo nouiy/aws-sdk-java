@@ -42,6 +42,8 @@ public class CreateGuardrailRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("wordPolicyConfig").build();
     private static final MarshallingInfo<StructuredPojo> SENSITIVEINFORMATIONPOLICYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sensitiveInformationPolicyConfig").build();
+    private static final MarshallingInfo<StructuredPojo> CONTEXTUALGROUNDINGPOLICYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("contextualGroundingPolicyConfig").build();
     private static final MarshallingInfo<String> BLOCKEDINPUTMESSAGING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("blockedInputMessaging").build();
     private static final MarshallingInfo<String> BLOCKEDOUTPUTSMESSAGING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -76,6 +78,7 @@ public class CreateGuardrailRequestMarshaller {
             protocolMarshaller.marshall(createGuardrailRequest.getContentPolicyConfig(), CONTENTPOLICYCONFIG_BINDING);
             protocolMarshaller.marshall(createGuardrailRequest.getWordPolicyConfig(), WORDPOLICYCONFIG_BINDING);
             protocolMarshaller.marshall(createGuardrailRequest.getSensitiveInformationPolicyConfig(), SENSITIVEINFORMATIONPOLICYCONFIG_BINDING);
+            protocolMarshaller.marshall(createGuardrailRequest.getContextualGroundingPolicyConfig(), CONTEXTUALGROUNDINGPOLICYCONFIG_BINDING);
             protocolMarshaller.marshall(createGuardrailRequest.getBlockedInputMessaging(), BLOCKEDINPUTMESSAGING_BINDING);
             protocolMarshaller.marshall(createGuardrailRequest.getBlockedOutputsMessaging(), BLOCKEDOUTPUTSMESSAGING_BINDING);
             protocolMarshaller.marshall(createGuardrailRequest.getKmsKeyId(), KMSKEYID_BINDING);

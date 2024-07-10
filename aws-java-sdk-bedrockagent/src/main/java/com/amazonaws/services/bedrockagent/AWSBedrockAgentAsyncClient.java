@@ -241,6 +241,105 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateFlowResult> createFlowAsync(CreateFlowRequest request) {
+
+        return createFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowResult> createFlowAsync(final CreateFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateFlowRequest, CreateFlowResult> asyncHandler) {
+        final CreateFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateFlowResult>() {
+            @Override
+            public CreateFlowResult call() throws Exception {
+                CreateFlowResult result = null;
+
+                try {
+                    result = executeCreateFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowAliasResult> createFlowAliasAsync(CreateFlowAliasRequest request) {
+
+        return createFlowAliasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowAliasResult> createFlowAliasAsync(final CreateFlowAliasRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateFlowAliasRequest, CreateFlowAliasResult> asyncHandler) {
+        final CreateFlowAliasRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateFlowAliasResult>() {
+            @Override
+            public CreateFlowAliasResult call() throws Exception {
+                CreateFlowAliasResult result = null;
+
+                try {
+                    result = executeCreateFlowAlias(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowVersionResult> createFlowVersionAsync(CreateFlowVersionRequest request) {
+
+        return createFlowVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFlowVersionResult> createFlowVersionAsync(final CreateFlowVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateFlowVersionRequest, CreateFlowVersionResult> asyncHandler) {
+        final CreateFlowVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateFlowVersionResult>() {
+            @Override
+            public CreateFlowVersionResult call() throws Exception {
+                CreateFlowVersionResult result = null;
+
+                try {
+                    result = executeCreateFlowVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKnowledgeBaseResult> createKnowledgeBaseAsync(CreateKnowledgeBaseRequest request) {
 
         return createKnowledgeBaseAsync(request, null);
@@ -258,6 +357,72 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
 
                 try {
                     result = executeCreateKnowledgeBase(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest request) {
+
+        return createPromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(final CreatePromptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePromptRequest, CreatePromptResult> asyncHandler) {
+        final CreatePromptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePromptResult>() {
+            @Override
+            public CreatePromptResult call() throws Exception {
+                CreatePromptResult result = null;
+
+                try {
+                    result = executeCreatePrompt(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptVersionResult> createPromptVersionAsync(CreatePromptVersionRequest request) {
+
+        return createPromptVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptVersionResult> createPromptVersionAsync(final CreatePromptVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePromptVersionRequest, CreatePromptVersionResult> asyncHandler) {
+        final CreatePromptVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePromptVersionResult>() {
+            @Override
+            public CreatePromptVersionResult call() throws Exception {
+                CreatePromptVersionResult result = null;
+
+                try {
+                    result = executeCreatePromptVersion(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -439,6 +604,105 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteFlowResult> deleteFlowAsync(DeleteFlowRequest request) {
+
+        return deleteFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowResult> deleteFlowAsync(final DeleteFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteFlowRequest, DeleteFlowResult> asyncHandler) {
+        final DeleteFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteFlowResult>() {
+            @Override
+            public DeleteFlowResult call() throws Exception {
+                DeleteFlowResult result = null;
+
+                try {
+                    result = executeDeleteFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowAliasResult> deleteFlowAliasAsync(DeleteFlowAliasRequest request) {
+
+        return deleteFlowAliasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowAliasResult> deleteFlowAliasAsync(final DeleteFlowAliasRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteFlowAliasRequest, DeleteFlowAliasResult> asyncHandler) {
+        final DeleteFlowAliasRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteFlowAliasResult>() {
+            @Override
+            public DeleteFlowAliasResult call() throws Exception {
+                DeleteFlowAliasResult result = null;
+
+                try {
+                    result = executeDeleteFlowAlias(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowVersionResult> deleteFlowVersionAsync(DeleteFlowVersionRequest request) {
+
+        return deleteFlowVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFlowVersionResult> deleteFlowVersionAsync(final DeleteFlowVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteFlowVersionRequest, DeleteFlowVersionResult> asyncHandler) {
+        final DeleteFlowVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteFlowVersionResult>() {
+            @Override
+            public DeleteFlowVersionResult call() throws Exception {
+                DeleteFlowVersionResult result = null;
+
+                try {
+                    result = executeDeleteFlowVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKnowledgeBaseResult> deleteKnowledgeBaseAsync(DeleteKnowledgeBaseRequest request) {
 
         return deleteKnowledgeBaseAsync(request, null);
@@ -456,6 +720,39 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
 
                 try {
                     result = executeDeleteKnowledgeBase(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest request) {
+
+        return deletePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(final DeletePromptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePromptRequest, DeletePromptResult> asyncHandler) {
+        final DeletePromptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePromptResult>() {
+            @Override
+            public DeletePromptResult call() throws Exception {
+                DeletePromptResult result = null;
+
+                try {
+                    result = executeDeletePrompt(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -704,6 +1001,105 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetFlowResult> getFlowAsync(GetFlowRequest request) {
+
+        return getFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowResult> getFlowAsync(final GetFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetFlowRequest, GetFlowResult> asyncHandler) {
+        final GetFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetFlowResult>() {
+            @Override
+            public GetFlowResult call() throws Exception {
+                GetFlowResult result = null;
+
+                try {
+                    result = executeGetFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowAliasResult> getFlowAliasAsync(GetFlowAliasRequest request) {
+
+        return getFlowAliasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowAliasResult> getFlowAliasAsync(final GetFlowAliasRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetFlowAliasRequest, GetFlowAliasResult> asyncHandler) {
+        final GetFlowAliasRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetFlowAliasResult>() {
+            @Override
+            public GetFlowAliasResult call() throws Exception {
+                GetFlowAliasResult result = null;
+
+                try {
+                    result = executeGetFlowAlias(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowVersionResult> getFlowVersionAsync(GetFlowVersionRequest request) {
+
+        return getFlowVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFlowVersionResult> getFlowVersionAsync(final GetFlowVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetFlowVersionRequest, GetFlowVersionResult> asyncHandler) {
+        final GetFlowVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetFlowVersionResult>() {
+            @Override
+            public GetFlowVersionResult call() throws Exception {
+                GetFlowVersionResult result = null;
+
+                try {
+                    result = executeGetFlowVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIngestionJobResult> getIngestionJobAsync(GetIngestionJobRequest request) {
 
         return getIngestionJobAsync(request, null);
@@ -754,6 +1150,39 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
 
                 try {
                     result = executeGetKnowledgeBase(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPromptResult> getPromptAsync(GetPromptRequest request) {
+
+        return getPromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPromptResult> getPromptAsync(final GetPromptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPromptRequest, GetPromptResult> asyncHandler) {
+        final GetPromptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPromptResult>() {
+            @Override
+            public GetPromptResult call() throws Exception {
+                GetPromptResult result = null;
+
+                try {
+                    result = executeGetPrompt(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -968,6 +1397,105 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListFlowAliasesResult> listFlowAliasesAsync(ListFlowAliasesRequest request) {
+
+        return listFlowAliasesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowAliasesResult> listFlowAliasesAsync(final ListFlowAliasesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListFlowAliasesRequest, ListFlowAliasesResult> asyncHandler) {
+        final ListFlowAliasesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListFlowAliasesResult>() {
+            @Override
+            public ListFlowAliasesResult call() throws Exception {
+                ListFlowAliasesResult result = null;
+
+                try {
+                    result = executeListFlowAliases(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowVersionsResult> listFlowVersionsAsync(ListFlowVersionsRequest request) {
+
+        return listFlowVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowVersionsResult> listFlowVersionsAsync(final ListFlowVersionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListFlowVersionsRequest, ListFlowVersionsResult> asyncHandler) {
+        final ListFlowVersionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListFlowVersionsResult>() {
+            @Override
+            public ListFlowVersionsResult call() throws Exception {
+                ListFlowVersionsResult result = null;
+
+                try {
+                    result = executeListFlowVersions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowsResult> listFlowsAsync(ListFlowsRequest request) {
+
+        return listFlowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFlowsResult> listFlowsAsync(final ListFlowsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListFlowsRequest, ListFlowsResult> asyncHandler) {
+        final ListFlowsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListFlowsResult>() {
+            @Override
+            public ListFlowsResult call() throws Exception {
+                ListFlowsResult result = null;
+
+                try {
+                    result = executeListFlows(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListIngestionJobsResult> listIngestionJobsAsync(ListIngestionJobsRequest request) {
 
         return listIngestionJobsAsync(request, null);
@@ -1034,6 +1562,39 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListPromptsResult> listPromptsAsync(ListPromptsRequest request) {
+
+        return listPromptsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPromptsResult> listPromptsAsync(final ListPromptsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListPromptsRequest, ListPromptsResult> asyncHandler) {
+        final ListPromptsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPromptsResult>() {
+            @Override
+            public ListPromptsResult call() throws Exception {
+                ListPromptsResult result = null;
+
+                try {
+                    result = executeListPrompts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);
@@ -1084,6 +1645,39 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
 
                 try {
                     result = executePrepareAgent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PrepareFlowResult> prepareFlowAsync(PrepareFlowRequest request) {
+
+        return prepareFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PrepareFlowResult> prepareFlowAsync(final PrepareFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PrepareFlowRequest, PrepareFlowResult> asyncHandler) {
+        final PrepareFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PrepareFlowResult>() {
+            @Override
+            public PrepareFlowResult call() throws Exception {
+                PrepareFlowResult result = null;
+
+                try {
+                    result = executePrepareFlow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1364,6 +1958,72 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateFlowResult> updateFlowAsync(UpdateFlowRequest request) {
+
+        return updateFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFlowResult> updateFlowAsync(final UpdateFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateFlowRequest, UpdateFlowResult> asyncHandler) {
+        final UpdateFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateFlowResult>() {
+            @Override
+            public UpdateFlowResult call() throws Exception {
+                UpdateFlowResult result = null;
+
+                try {
+                    result = executeUpdateFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFlowAliasResult> updateFlowAliasAsync(UpdateFlowAliasRequest request) {
+
+        return updateFlowAliasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFlowAliasResult> updateFlowAliasAsync(final UpdateFlowAliasRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateFlowAliasRequest, UpdateFlowAliasResult> asyncHandler) {
+        final UpdateFlowAliasRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateFlowAliasResult>() {
+            @Override
+            public UpdateFlowAliasResult call() throws Exception {
+                UpdateFlowAliasResult result = null;
+
+                try {
+                    result = executeUpdateFlowAlias(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateKnowledgeBaseResult> updateKnowledgeBaseAsync(UpdateKnowledgeBaseRequest request) {
 
         return updateKnowledgeBaseAsync(request, null);
@@ -1381,6 +2041,39 @@ public class AWSBedrockAgentAsyncClient extends AWSBedrockAgentClient implements
 
                 try {
                     result = executeUpdateKnowledgeBase(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest request) {
+
+        return updatePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(final UpdatePromptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePromptRequest, UpdatePromptResult> asyncHandler) {
+        final UpdatePromptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePromptResult>() {
+            @Override
+            public UpdatePromptResult call() throws Exception {
+                UpdatePromptResult result = null;
+
+                try {
+                    result = executeUpdatePrompt(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -32,6 +32,8 @@ public class EksAttemptDetailMarshaller {
             .marshallLocationName("containers").build();
     private static final MarshallingInfo<List> INITCONTAINERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("initContainers").build();
+    private static final MarshallingInfo<String> EKSCLUSTERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksClusterArn").build();
     private static final MarshallingInfo<String> PODNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("podName").build();
     private static final MarshallingInfo<String> NODENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -61,6 +63,7 @@ public class EksAttemptDetailMarshaller {
         try {
             protocolMarshaller.marshall(eksAttemptDetail.getContainers(), CONTAINERS_BINDING);
             protocolMarshaller.marshall(eksAttemptDetail.getInitContainers(), INITCONTAINERS_BINDING);
+            protocolMarshaller.marshall(eksAttemptDetail.getEksClusterArn(), EKSCLUSTERARN_BINDING);
             protocolMarshaller.marshall(eksAttemptDetail.getPodName(), PODNAME_BINDING);
             protocolMarshaller.marshall(eksAttemptDetail.getNodeName(), NODENAME_BINDING);
             protocolMarshaller.marshall(eksAttemptDetail.getStartedAt(), STARTEDAT_BINDING);

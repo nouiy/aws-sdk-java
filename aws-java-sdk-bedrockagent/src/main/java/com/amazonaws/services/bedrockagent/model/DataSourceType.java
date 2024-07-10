@@ -20,7 +20,11 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum DataSourceType {
 
-    S3("S3");
+    S3("S3"),
+    WEB("WEB"),
+    CONFLUENCE("CONFLUENCE"),
+    SALESFORCE("SALESFORCE"),
+    SHAREPOINT("SHAREPOINT");
 
     private String value;
 

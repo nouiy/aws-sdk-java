@@ -52,6 +52,12 @@ public class GuardrailAssessment implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private GuardrailSensitiveInformationPolicyAssessment sensitiveInformationPolicy;
+    /**
+     * <p>
+     * The contextual grounding policy used for the guardrail assessment.
+     * </p>
+     */
+    private GuardrailContextualGroundingPolicyAssessment contextualGroundingPolicy;
 
     /**
      * <p>
@@ -214,6 +220,46 @@ public class GuardrailAssessment implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The contextual grounding policy used for the guardrail assessment.
+     * </p>
+     * 
+     * @param contextualGroundingPolicy
+     *        The contextual grounding policy used for the guardrail assessment.
+     */
+
+    public void setContextualGroundingPolicy(GuardrailContextualGroundingPolicyAssessment contextualGroundingPolicy) {
+        this.contextualGroundingPolicy = contextualGroundingPolicy;
+    }
+
+    /**
+     * <p>
+     * The contextual grounding policy used for the guardrail assessment.
+     * </p>
+     * 
+     * @return The contextual grounding policy used for the guardrail assessment.
+     */
+
+    public GuardrailContextualGroundingPolicyAssessment getContextualGroundingPolicy() {
+        return this.contextualGroundingPolicy;
+    }
+
+    /**
+     * <p>
+     * The contextual grounding policy used for the guardrail assessment.
+     * </p>
+     * 
+     * @param contextualGroundingPolicy
+     *        The contextual grounding policy used for the guardrail assessment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GuardrailAssessment withContextualGroundingPolicy(GuardrailContextualGroundingPolicyAssessment contextualGroundingPolicy) {
+        setContextualGroundingPolicy(contextualGroundingPolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,7 +278,9 @@ public class GuardrailAssessment implements Serializable, Cloneable, StructuredP
         if (getWordPolicy() != null)
             sb.append("WordPolicy: ").append(getWordPolicy()).append(",");
         if (getSensitiveInformationPolicy() != null)
-            sb.append("SensitiveInformationPolicy: ").append(getSensitiveInformationPolicy());
+            sb.append("SensitiveInformationPolicy: ").append(getSensitiveInformationPolicy()).append(",");
+        if (getContextualGroundingPolicy() != null)
+            sb.append("ContextualGroundingPolicy: ").append(getContextualGroundingPolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -263,6 +311,10 @@ public class GuardrailAssessment implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getSensitiveInformationPolicy() != null && other.getSensitiveInformationPolicy().equals(this.getSensitiveInformationPolicy()) == false)
             return false;
+        if (other.getContextualGroundingPolicy() == null ^ this.getContextualGroundingPolicy() == null)
+            return false;
+        if (other.getContextualGroundingPolicy() != null && other.getContextualGroundingPolicy().equals(this.getContextualGroundingPolicy()) == false)
+            return false;
         return true;
     }
 
@@ -275,6 +327,7 @@ public class GuardrailAssessment implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getContentPolicy() == null) ? 0 : getContentPolicy().hashCode());
         hashCode = prime * hashCode + ((getWordPolicy() == null) ? 0 : getWordPolicy().hashCode());
         hashCode = prime * hashCode + ((getSensitiveInformationPolicy() == null) ? 0 : getSensitiveInformationPolicy().hashCode());
+        hashCode = prime * hashCode + ((getContextualGroundingPolicy() == null) ? 0 : getContextualGroundingPolicy().hashCode());
         return hashCode;
     }
 

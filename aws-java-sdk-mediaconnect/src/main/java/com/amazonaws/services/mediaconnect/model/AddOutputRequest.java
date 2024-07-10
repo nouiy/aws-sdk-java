@@ -76,6 +76,11 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
     private String streamId;
     /** The name of the VPC interface attachment to use for this output. */
     private VpcInterfaceAttachment vpcInterfaceAttachment;
+    /**
+     * An indication of whether the new output should be enabled or disabled as soon as it is created. If you don't
+     * specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     */
+    private String outputStatus;
 
     /**
      * The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses
@@ -715,6 +720,65 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * An indication of whether the new output should be enabled or disabled as soon as it is created. If you don't
+     * specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * 
+     * @param outputStatus
+     *        An indication of whether the new output should be enabled or disabled as soon as it is created. If you
+     *        don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * @see OutputStatus
+     */
+
+    public void setOutputStatus(String outputStatus) {
+        this.outputStatus = outputStatus;
+    }
+
+    /**
+     * An indication of whether the new output should be enabled or disabled as soon as it is created. If you don't
+     * specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * 
+     * @return An indication of whether the new output should be enabled or disabled as soon as it is created. If you
+     *         don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * @see OutputStatus
+     */
+
+    public String getOutputStatus() {
+        return this.outputStatus;
+    }
+
+    /**
+     * An indication of whether the new output should be enabled or disabled as soon as it is created. If you don't
+     * specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * 
+     * @param outputStatus
+     *        An indication of whether the new output should be enabled or disabled as soon as it is created. If you
+     *        don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OutputStatus
+     */
+
+    public AddOutputRequest withOutputStatus(String outputStatus) {
+        setOutputStatus(outputStatus);
+        return this;
+    }
+
+    /**
+     * An indication of whether the new output should be enabled or disabled as soon as it is created. If you don't
+     * specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * 
+     * @param outputStatus
+     *        An indication of whether the new output should be enabled or disabled as soon as it is created. If you
+     *        don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OutputStatus
+     */
+
+    public AddOutputRequest withOutputStatus(OutputStatus outputStatus) {
+        this.outputStatus = outputStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -755,7 +819,9 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
         if (getStreamId() != null)
             sb.append("StreamId: ").append(getStreamId()).append(",");
         if (getVpcInterfaceAttachment() != null)
-            sb.append("VpcInterfaceAttachment: ").append(getVpcInterfaceAttachment());
+            sb.append("VpcInterfaceAttachment: ").append(getVpcInterfaceAttachment()).append(",");
+        if (getOutputStatus() != null)
+            sb.append("OutputStatus: ").append(getOutputStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -831,6 +897,10 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getVpcInterfaceAttachment() != null && other.getVpcInterfaceAttachment().equals(this.getVpcInterfaceAttachment()) == false)
             return false;
+        if (other.getOutputStatus() == null ^ this.getOutputStatus() == null)
+            return false;
+        if (other.getOutputStatus() != null && other.getOutputStatus().equals(this.getOutputStatus()) == false)
+            return false;
         return true;
     }
 
@@ -854,6 +924,7 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getSmoothingLatency() == null) ? 0 : getSmoothingLatency().hashCode());
         hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
         hashCode = prime * hashCode + ((getVpcInterfaceAttachment() == null) ? 0 : getVpcInterfaceAttachment().hashCode());
+        hashCode = prime * hashCode + ((getOutputStatus() == null) ? 0 : getOutputStatus().hashCode());
         return hashCode;
     }
 

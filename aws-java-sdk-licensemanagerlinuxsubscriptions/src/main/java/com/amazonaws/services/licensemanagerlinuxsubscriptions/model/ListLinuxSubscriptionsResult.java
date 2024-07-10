@@ -26,7 +26,8 @@ public class ListLinuxSubscriptionsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Token for the next set of results.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the
+     * service hasn't included in this request. Use this token with the next request to retrieve additional objects.
      * </p>
      */
     private String nextToken;
@@ -39,11 +40,14 @@ public class ListLinuxSubscriptionsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Token for the next set of results.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the
+     * service hasn't included in this request. Use this token with the next request to retrieve additional objects.
      * </p>
      * 
      * @param nextToken
-     *        Token for the next set of results.
+     *        The next token used for paginated responses. When this field isn't empty, there are additional elements
+     *        that the service hasn't included in this request. Use this token with the next request to retrieve
+     *        additional objects.
      */
 
     public void setNextToken(String nextToken) {
@@ -52,10 +56,13 @@ public class ListLinuxSubscriptionsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Token for the next set of results.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the
+     * service hasn't included in this request. Use this token with the next request to retrieve additional objects.
      * </p>
      * 
-     * @return Token for the next set of results.
+     * @return The next token used for paginated responses. When this field isn't empty, there are additional elements
+     *         that the service hasn't included in this request. Use this token with the next request to retrieve
+     *         additional objects.
      */
 
     public String getNextToken() {
@@ -64,11 +71,14 @@ public class ListLinuxSubscriptionsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Token for the next set of results.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the
+     * service hasn't included in this request. Use this token with the next request to retrieve additional objects.
      * </p>
      * 
      * @param nextToken
-     *        Token for the next set of results.
+     *        The next token used for paginated responses. When this field isn't empty, there are additional elements
+     *        that the service hasn't included in this request. Use this token with the next request to retrieve
+     *        additional objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

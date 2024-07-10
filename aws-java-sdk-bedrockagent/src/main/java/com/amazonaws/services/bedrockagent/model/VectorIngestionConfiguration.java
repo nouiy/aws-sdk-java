@@ -35,6 +35,18 @@ public class VectorIngestionConfiguration implements Serializable, Cloneable, St
      * </p>
      */
     private ChunkingConfiguration chunkingConfiguration;
+    /**
+     * <p>
+     * A custom document transformer for parsed data source documents.
+     * </p>
+     */
+    private CustomTransformationConfiguration customTransformationConfiguration;
+    /**
+     * <p>
+     * A custom parser for data source documents.
+     * </p>
+     */
+    private ParsingConfiguration parsingConfiguration;
 
     /**
      * <p>
@@ -83,6 +95,86 @@ public class VectorIngestionConfiguration implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * A custom document transformer for parsed data source documents.
+     * </p>
+     * 
+     * @param customTransformationConfiguration
+     *        A custom document transformer for parsed data source documents.
+     */
+
+    public void setCustomTransformationConfiguration(CustomTransformationConfiguration customTransformationConfiguration) {
+        this.customTransformationConfiguration = customTransformationConfiguration;
+    }
+
+    /**
+     * <p>
+     * A custom document transformer for parsed data source documents.
+     * </p>
+     * 
+     * @return A custom document transformer for parsed data source documents.
+     */
+
+    public CustomTransformationConfiguration getCustomTransformationConfiguration() {
+        return this.customTransformationConfiguration;
+    }
+
+    /**
+     * <p>
+     * A custom document transformer for parsed data source documents.
+     * </p>
+     * 
+     * @param customTransformationConfiguration
+     *        A custom document transformer for parsed data source documents.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VectorIngestionConfiguration withCustomTransformationConfiguration(CustomTransformationConfiguration customTransformationConfiguration) {
+        setCustomTransformationConfiguration(customTransformationConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A custom parser for data source documents.
+     * </p>
+     * 
+     * @param parsingConfiguration
+     *        A custom parser for data source documents.
+     */
+
+    public void setParsingConfiguration(ParsingConfiguration parsingConfiguration) {
+        this.parsingConfiguration = parsingConfiguration;
+    }
+
+    /**
+     * <p>
+     * A custom parser for data source documents.
+     * </p>
+     * 
+     * @return A custom parser for data source documents.
+     */
+
+    public ParsingConfiguration getParsingConfiguration() {
+        return this.parsingConfiguration;
+    }
+
+    /**
+     * <p>
+     * A custom parser for data source documents.
+     * </p>
+     * 
+     * @param parsingConfiguration
+     *        A custom parser for data source documents.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VectorIngestionConfiguration withParsingConfiguration(ParsingConfiguration parsingConfiguration) {
+        setParsingConfiguration(parsingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -95,7 +187,11 @@ public class VectorIngestionConfiguration implements Serializable, Cloneable, St
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getChunkingConfiguration() != null)
-            sb.append("ChunkingConfiguration: ").append(getChunkingConfiguration());
+            sb.append("ChunkingConfiguration: ").append(getChunkingConfiguration()).append(",");
+        if (getCustomTransformationConfiguration() != null)
+            sb.append("CustomTransformationConfiguration: ").append(getCustomTransformationConfiguration()).append(",");
+        if (getParsingConfiguration() != null)
+            sb.append("ParsingConfiguration: ").append(getParsingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -114,6 +210,15 @@ public class VectorIngestionConfiguration implements Serializable, Cloneable, St
             return false;
         if (other.getChunkingConfiguration() != null && other.getChunkingConfiguration().equals(this.getChunkingConfiguration()) == false)
             return false;
+        if (other.getCustomTransformationConfiguration() == null ^ this.getCustomTransformationConfiguration() == null)
+            return false;
+        if (other.getCustomTransformationConfiguration() != null
+                && other.getCustomTransformationConfiguration().equals(this.getCustomTransformationConfiguration()) == false)
+            return false;
+        if (other.getParsingConfiguration() == null ^ this.getParsingConfiguration() == null)
+            return false;
+        if (other.getParsingConfiguration() != null && other.getParsingConfiguration().equals(this.getParsingConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -123,6 +228,8 @@ public class VectorIngestionConfiguration implements Serializable, Cloneable, St
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChunkingConfiguration() == null) ? 0 : getChunkingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getCustomTransformationConfiguration() == null) ? 0 : getCustomTransformationConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getParsingConfiguration() == null) ? 0 : getParsingConfiguration().hashCode());
         return hashCode;
     }
 

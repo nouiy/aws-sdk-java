@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details of the guardrails configuration.
+ * Details about the guardrail associated with an agent.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GuardrailConfiguration"
@@ -30,24 +30,24 @@ public class GuardrailConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The guardrails identifier assigned to the guardrails configuration.
+     * The unique identifier of the guardrail.
      * </p>
      */
     private String guardrailIdentifier;
     /**
      * <p>
-     * The guardrails version assigned to the guardrails configuration.
+     * The version of the guardrail.
      * </p>
      */
     private String guardrailVersion;
 
     /**
      * <p>
-     * The guardrails identifier assigned to the guardrails configuration.
+     * The unique identifier of the guardrail.
      * </p>
      * 
      * @param guardrailIdentifier
-     *        The guardrails identifier assigned to the guardrails configuration.
+     *        The unique identifier of the guardrail.
      */
 
     public void setGuardrailIdentifier(String guardrailIdentifier) {
@@ -56,10 +56,10 @@ public class GuardrailConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The guardrails identifier assigned to the guardrails configuration.
+     * The unique identifier of the guardrail.
      * </p>
      * 
-     * @return The guardrails identifier assigned to the guardrails configuration.
+     * @return The unique identifier of the guardrail.
      */
 
     public String getGuardrailIdentifier() {
@@ -68,11 +68,11 @@ public class GuardrailConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The guardrails identifier assigned to the guardrails configuration.
+     * The unique identifier of the guardrail.
      * </p>
      * 
      * @param guardrailIdentifier
-     *        The guardrails identifier assigned to the guardrails configuration.
+     *        The unique identifier of the guardrail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class GuardrailConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The guardrails version assigned to the guardrails configuration.
+     * The version of the guardrail.
      * </p>
      * 
      * @param guardrailVersion
-     *        The guardrails version assigned to the guardrails configuration.
+     *        The version of the guardrail.
      */
 
     public void setGuardrailVersion(String guardrailVersion) {
@@ -96,10 +96,10 @@ public class GuardrailConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The guardrails version assigned to the guardrails configuration.
+     * The version of the guardrail.
      * </p>
      * 
-     * @return The guardrails version assigned to the guardrails configuration.
+     * @return The version of the guardrail.
      */
 
     public String getGuardrailVersion() {
@@ -108,11 +108,11 @@ public class GuardrailConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The guardrails version assigned to the guardrails configuration.
+     * The version of the guardrail.
      * </p>
      * 
      * @param guardrailVersion
-     *        The guardrails version assigned to the guardrails configuration.
+     *        The version of the guardrail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

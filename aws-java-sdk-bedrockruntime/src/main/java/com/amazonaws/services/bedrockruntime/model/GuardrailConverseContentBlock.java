@@ -20,7 +20,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p/>
  * <p>
- * A content block for selective guarding with the Converse API (<a>Converse</a> and <a>ConverseStream</a>).
+ * A content block for selective guarding with the <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a> API
+ * operations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/GuardrailConverseContentBlock"

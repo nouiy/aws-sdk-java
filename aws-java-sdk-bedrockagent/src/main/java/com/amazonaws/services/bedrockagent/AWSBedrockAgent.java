@@ -105,6 +105,13 @@ public interface AWSBedrockAgent {
      * </li>
      * <li>
      * <p>
+     * To enable your agent to retain conversational context across multiple sessions, include a
+     * <code>memoryConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/agents-configure-memory.html">Configure memory</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * To override the default prompt behavior for agent orchestration and to use advanced prompts, include a
      * <code>promptOverrideConfiguration</code> object. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
@@ -145,11 +152,17 @@ public interface AWSBedrockAgent {
      * </p>
      * <p>
      * To allow your agent to request the user for additional information when trying to complete a task, add an action
-     * group with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.UserInput</code>. You must leave
-     * the <code>description</code>, <code>apiSchema</code>, and <code>actionGroupExecutor</code> fields blank for this
-     * action group. During orchestration, if your agent determines that it needs to invoke an API in an action group,
-     * but doesn't have enough information to complete the API request, it will invoke this action group instead and
-     * return an <a
+     * group with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.UserInput</code>.
+     * </p>
+     * <p>
+     * To allow your agent to generate, run, and troubleshoot code when trying to complete a task, add an action group
+     * with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.CodeInterpreter</code>.
+     * </p>
+     * <p>
+     * You must leave the <code>description</code>, <code>apiSchema</code>, and <code>actionGroupExecutor</code> fields
+     * blank for this action group. During orchestration, if your agent determines that it needs to invoke an API in an
+     * action group, but doesn't have enough information to complete the API request, it will invoke this action group
+     * instead and return an <a
      * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Observation.html">Observation</a>
      * reprompting the user for more information.
      * </p>
@@ -207,11 +220,11 @@ public interface AWSBedrockAgent {
 
     /**
      * <p>
-     * Sets up a data source to be added to a knowledge base.
+     * Creates a data source connector for a knowledge base.
      * </p>
      * <important>
      * <p>
-     * You can't change the <code>chunkingConfiguration</code> after you create the data source.
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source connector.
      * </p>
      * </important>
      * 
@@ -237,6 +250,96 @@ public interface AWSBedrockAgent {
      *      API Documentation</a>
      */
     CreateDataSourceResult createDataSource(CreateDataSourceRequest createDataSourceRequest);
+
+    /**
+     * <p>
+     * Creates a prompt flow that you can use to send an input through various steps to yield an output. Configure
+     * nodes, each of which corresponds to a step of the flow, and create connections between the nodes to create paths
+     * to different outputs. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-how-it-works.html">How it works</a> and <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-create.html">Create a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowRequest
+     * @return Result of the CreateFlow operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.CreateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateFlowResult createFlow(CreateFlowRequest createFlowRequest);
+
+    /**
+     * <p>
+     * Creates an alias of a flow for deployment. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowAliasRequest
+     * @return Result of the CreateFlowAlias operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.CreateFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateFlowAliasResult createFlowAlias(CreateFlowAliasRequest createFlowAliasRequest);
+
+    /**
+     * <p>
+     * Creates a version of the flow that you can deploy. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createFlowVersionRequest
+     * @return Result of the CreateFlowVersion operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.CreateFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateFlowVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateFlowVersionResult createFlowVersion(CreateFlowVersionRequest createFlowVersionRequest);
 
     /**
      * <p>
@@ -328,6 +431,66 @@ public interface AWSBedrockAgent {
      *      target="_top">AWS API Documentation</a>
      */
     CreateKnowledgeBaseResult createKnowledgeBase(CreateKnowledgeBaseRequest createKnowledgeBaseRequest);
+
+    /**
+     * <p>
+     * Creates a prompt in your prompt library that you can add to a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management in Amazon
+     * Bedrock</a>, <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-create.html">Create
+     * a prompt using Prompt management</a> and <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html">Prompt flows in Amazon Bedrock</a> in the
+     * Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createPromptRequest
+     * @return Result of the CreatePrompt operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.CreatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreatePromptResult createPrompt(CreatePromptRequest createPromptRequest);
+
+    /**
+     * <p>
+     * Creates a static snapshot of your prompt that can be deployed to production. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html">Deploy prompts using
+     * Prompt management by creating versions</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param createPromptVersionRequest
+     * @return Result of the CreatePromptVersion operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.CreatePromptVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreatePromptVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreatePromptVersionResult createPromptVersion(CreatePromptVersionRequest createPromptVersionRequest);
 
     /**
      * <p>
@@ -459,6 +622,84 @@ public interface AWSBedrockAgent {
 
     /**
      * <p>
+     * Deletes a flow.
+     * </p>
+     * 
+     * @param deleteFlowRequest
+     * @return Result of the DeleteFlow operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @sample AWSBedrockAgent.DeleteFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteFlowResult deleteFlow(DeleteFlowRequest deleteFlowRequest);
+
+    /**
+     * <p>
+     * Deletes an alias of a flow.
+     * </p>
+     * 
+     * @param deleteFlowAliasRequest
+     * @return Result of the DeleteFlowAlias operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @sample AWSBedrockAgent.DeleteFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteFlowAliasResult deleteFlowAlias(DeleteFlowAliasRequest deleteFlowAliasRequest);
+
+    /**
+     * <p>
+     * Deletes a version of a flow.
+     * </p>
+     * 
+     * @param deleteFlowVersionRequest
+     * @return Result of the DeleteFlowVersion operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @sample AWSBedrockAgent.DeleteFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteFlowVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteFlowVersionResult deleteFlowVersion(DeleteFlowVersionRequest deleteFlowVersionRequest);
+
+    /**
+     * <p>
      * Deletes a knowledge base. Before deleting a knowledge base, you should disassociate the knowledge base from any
      * agents that it is associated with by making a <a
      * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_DisassociateAgentKnowledgeBase.html"
@@ -485,6 +726,36 @@ public interface AWSBedrockAgent {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteKnowledgeBaseResult deleteKnowledgeBase(DeleteKnowledgeBaseRequest deleteKnowledgeBaseRequest);
+
+    /**
+     * <p>
+     * Deletes a prompt or a prompt version from the Prompt management tool. For more information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-delete.html"
+     * >Delete prompts from the Prompt management tool</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html#prompt-management-versions-delete.html"
+     * >Delete a version of a prompt from the Prompt management tool</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param deletePromptRequest
+     * @return Result of the DeletePrompt operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @sample AWSBedrockAgent.DeletePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeletePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeletePromptResult deletePrompt(DeletePromptRequest deletePromptRequest);
 
     /**
      * <p>
@@ -658,6 +929,84 @@ public interface AWSBedrockAgent {
 
     /**
      * <p>
+     * Retrieves information about a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-manage.html">Manage a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowRequest
+     * @return Result of the GetFlow operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @sample AWSBedrockAgent.GetFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetFlowResult getFlow(GetFlowRequest getFlowRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowAliasRequest
+     * @return Result of the GetFlowAlias operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @sample AWSBedrockAgent.GetFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlowAlias" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetFlowAliasResult getFlowAlias(GetFlowAliasRequest getFlowAliasRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a version of a flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getFlowVersionRequest
+     * @return Result of the GetFlowVersion operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @sample AWSBedrockAgent.GetFlowVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetFlowVersion" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetFlowVersionResult getFlowVersion(GetFlowVersionRequest getFlowVersionRequest);
+
+    /**
+     * <p>
      * Gets information about a ingestion job, in which a data source is added to a knowledge base.
      * </p>
      * 
@@ -703,6 +1052,34 @@ public interface AWSBedrockAgent {
      *      API Documentation</a>
      */
     GetKnowledgeBaseResult getKnowledgeBase(GetKnowledgeBaseRequest getKnowledgeBaseRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a prompt or a version of it. For more information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-view.html"
+     * >View information about prompts using Prompt management</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-deploy.html#prompt-management-versions-view.html"
+     * >View information about a version of your prompt</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param getPromptRequest
+     * @return Result of the GetPrompt operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @sample AWSBedrockAgent.GetPrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetPrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetPromptResult getPrompt(GetPromptRequest getPromptRequest);
 
     /**
      * <p>
@@ -847,6 +1224,79 @@ public interface AWSBedrockAgent {
 
     /**
      * <p>
+     * Returns a list of aliases for a flow.
+     * </p>
+     * 
+     * @param listFlowAliasesRequest
+     * @return Result of the ListFlowAliases operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @sample AWSBedrockAgent.ListFlowAliases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlowAliases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListFlowAliasesResult listFlowAliases(ListFlowAliasesRequest listFlowAliasesRequest);
+
+    /**
+     * <p>
+     * Returns a list of information about each flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listFlowVersionsRequest
+     * @return Result of the ListFlowVersions operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @sample AWSBedrockAgent.ListFlowVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlowVersions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListFlowVersionsResult listFlowVersions(ListFlowVersionsRequest listFlowVersionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of flows and information about each flow. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-manage.html">Manage a flow in Amazon Bedrock</a>
+     * in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listFlowsRequest
+     * @return Result of the ListFlows operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AWSBedrockAgent.ListFlows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListFlows" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListFlowsResult listFlows(ListFlowsRequest listFlowsRequest);
+
+    /**
+     * <p>
      * Lists the ingestion jobs for a data source and information about each of them.
      * </p>
      * 
@@ -889,6 +1339,33 @@ public interface AWSBedrockAgent {
      *      target="_top">AWS API Documentation</a>
      */
     ListKnowledgeBasesResult listKnowledgeBases(ListKnowledgeBasesRequest listKnowledgeBasesRequest);
+
+    /**
+     * <p>
+     * Returns a list of prompts from the Prompt management tool and information about each prompt. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-view.html"
+     * >View information about prompts using Prompt management</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param listPromptsRequest
+     * @return Result of the ListPrompts operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @sample AWSBedrockAgent.ListPrompts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListPrompts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListPromptsResult listPrompts(ListPromptsRequest listPromptsRequest);
 
     /**
      * <p>
@@ -941,6 +1418,36 @@ public interface AWSBedrockAgent {
      *      Documentation</a>
      */
     PrepareAgentResult prepareAgent(PrepareAgentRequest prepareAgentRequest);
+
+    /**
+     * <p>
+     * Prepares the <code>DRAFT</code> version of a flow so that it can be invoked. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-test.html">Test a flow in Amazon Bedrock</a> in
+     * the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param prepareFlowRequest
+     * @return Result of the PrepareFlow operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.PrepareFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/PrepareFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PrepareFlowResult prepareFlow(PrepareFlowRequest prepareFlowRequest);
 
     /**
      * <p>
@@ -1134,12 +1641,12 @@ public interface AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates configurations for a data source.
+     * Updates the configurations for a data source connector.
      * </p>
      * <important>
      * <p>
-     * You can't change the <code>chunkingConfiguration</code> after you create the data source. Specify the existing
-     * <code>chunkingConfiguration</code>.
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source connector. Specify the
+     * existing <code>chunkingConfiguration</code>.
      * </p>
      * </important>
      * 
@@ -1163,6 +1670,67 @@ public interface AWSBedrockAgent {
      *      API Documentation</a>
      */
     UpdateDataSourceResult updateDataSource(UpdateDataSourceRequest updateDataSourceRequest);
+
+    /**
+     * <p>
+     * Modifies a flow. Include both fields that you want to keep and fields that you want to change. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-how-it-works.html">How it
+     * works</a> and <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-create.html">Create a flow in
+     * Amazon Bedrock</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateFlowRequest
+     * @return Result of the UpdateFlow operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.UpdateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateFlowResult updateFlow(UpdateFlowRequest updateFlowRequest);
+
+    /**
+     * <p>
+     * Modifies the alias of a flow. Include both fields that you want to keep and ones that you want to change. For
+     * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-deploy.html">Deploy a
+     * flow in Amazon Bedrock</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateFlowAliasRequest
+     * @return Result of the UpdateFlowAlias operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.UpdateFlowAlias
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateFlowAlias" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateFlowAliasResult updateFlowAlias(UpdateFlowAliasRequest updateFlowAliasRequest);
 
     /**
      * <p>
@@ -1216,6 +1784,39 @@ public interface AWSBedrockAgent {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateKnowledgeBaseResult updateKnowledgeBase(UpdateKnowledgeBaseRequest updateKnowledgeBaseRequest);
+
+    /**
+     * <p>
+     * Modifies a prompt in your prompt library. Include both fields that you want to keep and fields that you want to
+     * replace. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management in Amazon
+     * Bedrock</a> and <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-manage.html#prompt-management-edit">Edit
+     * prompts in your prompt library</a> in the Amazon Bedrock User Guide.
+     * </p>
+     * 
+     * @param updatePromptRequest
+     * @return Result of the UpdatePrompt operation returned by the service.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ResourceNotFoundException
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
+     * @throws ConflictException
+     *         There was a conflict performing an operation.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @sample AWSBedrockAgent.UpdatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdatePromptResult updatePrompt(UpdatePromptRequest updatePromptRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

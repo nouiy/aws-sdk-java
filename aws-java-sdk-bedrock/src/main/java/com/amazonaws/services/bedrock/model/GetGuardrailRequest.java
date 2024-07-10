@@ -27,7 +27,7 @@ public class GetGuardrailRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The unique identifier of the guardrail for which to get details.
+     * The unique identifier of the guardrail for which to get details. This can be an ID or the ARN.
      * </p>
      */
     private String guardrailIdentifier;
@@ -41,11 +41,11 @@ public class GetGuardrailRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The unique identifier of the guardrail for which to get details.
+     * The unique identifier of the guardrail for which to get details. This can be an ID or the ARN.
      * </p>
      * 
      * @param guardrailIdentifier
-     *        The unique identifier of the guardrail for which to get details.
+     *        The unique identifier of the guardrail for which to get details. This can be an ID or the ARN.
      */
 
     public void setGuardrailIdentifier(String guardrailIdentifier) {
@@ -54,10 +54,10 @@ public class GetGuardrailRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The unique identifier of the guardrail for which to get details.
+     * The unique identifier of the guardrail for which to get details. This can be an ID or the ARN.
      * </p>
      * 
-     * @return The unique identifier of the guardrail for which to get details.
+     * @return The unique identifier of the guardrail for which to get details. This can be an ID or the ARN.
      */
 
     public String getGuardrailIdentifier() {
@@ -66,11 +66,11 @@ public class GetGuardrailRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The unique identifier of the guardrail for which to get details.
+     * The unique identifier of the guardrail for which to get details. This can be an ID or the ARN.
      * </p>
      * 
      * @param guardrailIdentifier
-     *        The unique identifier of the guardrail for which to get details.
+     *        The unique identifier of the guardrail for which to get details. This can be an ID or the ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,6 +28,16 @@ public class AbstractAWSBedrockAgentRuntime implements AWSBedrockAgentRuntime {
     }
 
     @Override
+    public DeleteAgentMemoryResult deleteAgentMemory(DeleteAgentMemoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAgentMemoryResult getAgentMemory(GetAgentMemoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RetrieveResult retrieve(RetrieveRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

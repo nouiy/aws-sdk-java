@@ -27,10 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RetrievalResultLocationMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> CONFLUENCELOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("confluenceLocation").build();
     private static final MarshallingInfo<StructuredPojo> S3LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Location").build();
+    private static final MarshallingInfo<StructuredPojo> SALESFORCELOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("salesforceLocation").build();
+    private static final MarshallingInfo<StructuredPojo> SHAREPOINTLOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sharePointLocation").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<StructuredPojo> WEBLOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("webLocation").build();
 
     private static final RetrievalResultLocationMarshaller instance = new RetrievalResultLocationMarshaller();
 
@@ -48,8 +56,12 @@ public class RetrievalResultLocationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(retrievalResultLocation.getConfluenceLocation(), CONFLUENCELOCATION_BINDING);
             protocolMarshaller.marshall(retrievalResultLocation.getS3Location(), S3LOCATION_BINDING);
+            protocolMarshaller.marshall(retrievalResultLocation.getSalesforceLocation(), SALESFORCELOCATION_BINDING);
+            protocolMarshaller.marshall(retrievalResultLocation.getSharePointLocation(), SHAREPOINTLOCATION_BINDING);
             protocolMarshaller.marshall(retrievalResultLocation.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(retrievalResultLocation.getWebLocation(), WEBLOCATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

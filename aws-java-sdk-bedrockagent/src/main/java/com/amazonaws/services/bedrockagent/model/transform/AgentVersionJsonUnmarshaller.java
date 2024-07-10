@@ -102,6 +102,10 @@ public class AgentVersionJsonUnmarshaller implements Unmarshaller<AgentVersion, 
                     context.nextToken();
                     agentVersion.setInstruction(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("memoryConfiguration", targetDepth)) {
+                    context.nextToken();
+                    agentVersion.setMemoryConfiguration(MemoryConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("promptOverrideConfiguration", targetDepth)) {
                     context.nextToken();
                     agentVersion.setPromptOverrideConfiguration(PromptOverrideConfigurationJsonUnmarshaller.getInstance().unmarshall(context));

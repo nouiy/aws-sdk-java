@@ -42,6 +42,12 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private String amiId;
     /**
      * <p>
+     * Indicates that you have two different license subscriptions for the same software on your instance.
+     * </p>
+     */
+    private String dualSubscription;
+    /**
+     * <p>
      * The instance ID of the resource.
      * </p>
      */
@@ -60,6 +66,12 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private String lastUpdatedTime;
     /**
      * <p>
+     * The operating system software version that runs on your instance.
+     * </p>
+     */
+    private String osVersion;
+    /**
+     * <p>
      * The product code for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/license-manager/latest/userguide/linux-subscriptions-usage-operation.html"
      * >Usage operation values</a> in the <i>License Manager User Guide</i> .
@@ -74,16 +86,37 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private String region;
     /**
      * <p>
+     * Indicates that your instance uses a BYOL license subscription from a third-party Linux subscription provider that
+     * you've registered with License Manager.
+     * </p>
+     */
+    private String registeredWithSubscriptionProvider;
+    /**
+     * <p>
      * The status of the instance.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The name of the subscription being used by the instance.
+     * The name of the license subscription that the instance uses.
      * </p>
      */
     private String subscriptionName;
+    /**
+     * <p>
+     * The timestamp when you registered the third-party Linux subscription provider for the subscription that the
+     * instance uses.
+     * </p>
+     */
+    private String subscriptionProviderCreateTime;
+    /**
+     * <p>
+     * The timestamp from the last time that the instance synced with the registered third-party Linux subscription
+     * provider.
+     * </p>
+     */
+    private String subscriptionProviderUpdateTime;
     /**
      * <p>
      * The usage operation of the instance. For more information, see For more information, see <a
@@ -170,6 +203,46 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     public Instance withAmiId(String amiId) {
         setAmiId(amiId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates that you have two different license subscriptions for the same software on your instance.
+     * </p>
+     * 
+     * @param dualSubscription
+     *        Indicates that you have two different license subscriptions for the same software on your instance.
+     */
+
+    public void setDualSubscription(String dualSubscription) {
+        this.dualSubscription = dualSubscription;
+    }
+
+    /**
+     * <p>
+     * Indicates that you have two different license subscriptions for the same software on your instance.
+     * </p>
+     * 
+     * @return Indicates that you have two different license subscriptions for the same software on your instance.
+     */
+
+    public String getDualSubscription() {
+        return this.dualSubscription;
+    }
+
+    /**
+     * <p>
+     * Indicates that you have two different license subscriptions for the same software on your instance.
+     * </p>
+     * 
+     * @param dualSubscription
+     *        Indicates that you have two different license subscriptions for the same software on your instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withDualSubscription(String dualSubscription) {
+        setDualSubscription(dualSubscription);
         return this;
     }
 
@@ -290,6 +363,46 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     public Instance withLastUpdatedTime(String lastUpdatedTime) {
         setLastUpdatedTime(lastUpdatedTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The operating system software version that runs on your instance.
+     * </p>
+     * 
+     * @param osVersion
+     *        The operating system software version that runs on your instance.
+     */
+
+    public void setOsVersion(String osVersion) {
+        this.osVersion = osVersion;
+    }
+
+    /**
+     * <p>
+     * The operating system software version that runs on your instance.
+     * </p>
+     * 
+     * @return The operating system software version that runs on your instance.
+     */
+
+    public String getOsVersion() {
+        return this.osVersion;
+    }
+
+    /**
+     * <p>
+     * The operating system software version that runs on your instance.
+     * </p>
+     * 
+     * @param osVersion
+     *        The operating system software version that runs on your instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withOsVersion(String osVersion) {
+        setOsVersion(osVersion);
         return this;
     }
 
@@ -421,6 +534,52 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Indicates that your instance uses a BYOL license subscription from a third-party Linux subscription provider that
+     * you've registered with License Manager.
+     * </p>
+     * 
+     * @param registeredWithSubscriptionProvider
+     *        Indicates that your instance uses a BYOL license subscription from a third-party Linux subscription
+     *        provider that you've registered with License Manager.
+     */
+
+    public void setRegisteredWithSubscriptionProvider(String registeredWithSubscriptionProvider) {
+        this.registeredWithSubscriptionProvider = registeredWithSubscriptionProvider;
+    }
+
+    /**
+     * <p>
+     * Indicates that your instance uses a BYOL license subscription from a third-party Linux subscription provider that
+     * you've registered with License Manager.
+     * </p>
+     * 
+     * @return Indicates that your instance uses a BYOL license subscription from a third-party Linux subscription
+     *         provider that you've registered with License Manager.
+     */
+
+    public String getRegisteredWithSubscriptionProvider() {
+        return this.registeredWithSubscriptionProvider;
+    }
+
+    /**
+     * <p>
+     * Indicates that your instance uses a BYOL license subscription from a third-party Linux subscription provider that
+     * you've registered with License Manager.
+     * </p>
+     * 
+     * @param registeredWithSubscriptionProvider
+     *        Indicates that your instance uses a BYOL license subscription from a third-party Linux subscription
+     *        provider that you've registered with License Manager.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withRegisteredWithSubscriptionProvider(String registeredWithSubscriptionProvider) {
+        setRegisteredWithSubscriptionProvider(registeredWithSubscriptionProvider);
+        return this;
+    }
+
+    /**
+     * <p>
      * The status of the instance.
      * </p>
      * 
@@ -461,11 +620,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the subscription being used by the instance.
+     * The name of the license subscription that the instance uses.
      * </p>
      * 
      * @param subscriptionName
-     *        The name of the subscription being used by the instance.
+     *        The name of the license subscription that the instance uses.
      */
 
     public void setSubscriptionName(String subscriptionName) {
@@ -474,10 +633,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the subscription being used by the instance.
+     * The name of the license subscription that the instance uses.
      * </p>
      * 
-     * @return The name of the subscription being used by the instance.
+     * @return The name of the license subscription that the instance uses.
      */
 
     public String getSubscriptionName() {
@@ -486,16 +645,108 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the subscription being used by the instance.
+     * The name of the license subscription that the instance uses.
      * </p>
      * 
      * @param subscriptionName
-     *        The name of the subscription being used by the instance.
+     *        The name of the license subscription that the instance uses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Instance withSubscriptionName(String subscriptionName) {
         setSubscriptionName(subscriptionName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp when you registered the third-party Linux subscription provider for the subscription that the
+     * instance uses.
+     * </p>
+     * 
+     * @param subscriptionProviderCreateTime
+     *        The timestamp when you registered the third-party Linux subscription provider for the subscription that
+     *        the instance uses.
+     */
+
+    public void setSubscriptionProviderCreateTime(String subscriptionProviderCreateTime) {
+        this.subscriptionProviderCreateTime = subscriptionProviderCreateTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp when you registered the third-party Linux subscription provider for the subscription that the
+     * instance uses.
+     * </p>
+     * 
+     * @return The timestamp when you registered the third-party Linux subscription provider for the subscription that
+     *         the instance uses.
+     */
+
+    public String getSubscriptionProviderCreateTime() {
+        return this.subscriptionProviderCreateTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp when you registered the third-party Linux subscription provider for the subscription that the
+     * instance uses.
+     * </p>
+     * 
+     * @param subscriptionProviderCreateTime
+     *        The timestamp when you registered the third-party Linux subscription provider for the subscription that
+     *        the instance uses.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withSubscriptionProviderCreateTime(String subscriptionProviderCreateTime) {
+        setSubscriptionProviderCreateTime(subscriptionProviderCreateTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp from the last time that the instance synced with the registered third-party Linux subscription
+     * provider.
+     * </p>
+     * 
+     * @param subscriptionProviderUpdateTime
+     *        The timestamp from the last time that the instance synced with the registered third-party Linux
+     *        subscription provider.
+     */
+
+    public void setSubscriptionProviderUpdateTime(String subscriptionProviderUpdateTime) {
+        this.subscriptionProviderUpdateTime = subscriptionProviderUpdateTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp from the last time that the instance synced with the registered third-party Linux subscription
+     * provider.
+     * </p>
+     * 
+     * @return The timestamp from the last time that the instance synced with the registered third-party Linux
+     *         subscription provider.
+     */
+
+    public String getSubscriptionProviderUpdateTime() {
+        return this.subscriptionProviderUpdateTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp from the last time that the instance synced with the registered third-party Linux subscription
+     * provider.
+     * </p>
+     * 
+     * @param subscriptionProviderUpdateTime
+     *        The timestamp from the last time that the instance synced with the registered third-party Linux
+     *        subscription provider.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withSubscriptionProviderUpdateTime(String subscriptionProviderUpdateTime) {
+        setSubscriptionProviderUpdateTime(subscriptionProviderUpdateTime);
         return this;
     }
 
@@ -567,20 +818,30 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
             sb.append("AccountID: ").append(getAccountID()).append(",");
         if (getAmiId() != null)
             sb.append("AmiId: ").append(getAmiId()).append(",");
+        if (getDualSubscription() != null)
+            sb.append("DualSubscription: ").append(getDualSubscription()).append(",");
         if (getInstanceID() != null)
             sb.append("InstanceID: ").append(getInstanceID()).append(",");
         if (getInstanceType() != null)
             sb.append("InstanceType: ").append(getInstanceType()).append(",");
         if (getLastUpdatedTime() != null)
             sb.append("LastUpdatedTime: ").append(getLastUpdatedTime()).append(",");
+        if (getOsVersion() != null)
+            sb.append("OsVersion: ").append(getOsVersion()).append(",");
         if (getProductCode() != null)
             sb.append("ProductCode: ").append(getProductCode()).append(",");
         if (getRegion() != null)
             sb.append("Region: ").append(getRegion()).append(",");
+        if (getRegisteredWithSubscriptionProvider() != null)
+            sb.append("RegisteredWithSubscriptionProvider: ").append(getRegisteredWithSubscriptionProvider()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getSubscriptionName() != null)
             sb.append("SubscriptionName: ").append(getSubscriptionName()).append(",");
+        if (getSubscriptionProviderCreateTime() != null)
+            sb.append("SubscriptionProviderCreateTime: ").append(getSubscriptionProviderCreateTime()).append(",");
+        if (getSubscriptionProviderUpdateTime() != null)
+            sb.append("SubscriptionProviderUpdateTime: ").append(getSubscriptionProviderUpdateTime()).append(",");
         if (getUsageOperation() != null)
             sb.append("UsageOperation: ").append(getUsageOperation());
         sb.append("}");
@@ -605,6 +866,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAmiId() != null && other.getAmiId().equals(this.getAmiId()) == false)
             return false;
+        if (other.getDualSubscription() == null ^ this.getDualSubscription() == null)
+            return false;
+        if (other.getDualSubscription() != null && other.getDualSubscription().equals(this.getDualSubscription()) == false)
+            return false;
         if (other.getInstanceID() == null ^ this.getInstanceID() == null)
             return false;
         if (other.getInstanceID() != null && other.getInstanceID().equals(this.getInstanceID()) == false)
@@ -617,6 +882,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLastUpdatedTime() != null && other.getLastUpdatedTime().equals(this.getLastUpdatedTime()) == false)
             return false;
+        if (other.getOsVersion() == null ^ this.getOsVersion() == null)
+            return false;
+        if (other.getOsVersion() != null && other.getOsVersion().equals(this.getOsVersion()) == false)
+            return false;
         if (other.getProductCode() == null ^ this.getProductCode() == null)
             return false;
         if (other.getProductCode() != null && other.getProductCode().equals(this.getProductCode()) == false)
@@ -625,6 +894,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRegion() != null && other.getRegion().equals(this.getRegion()) == false)
             return false;
+        if (other.getRegisteredWithSubscriptionProvider() == null ^ this.getRegisteredWithSubscriptionProvider() == null)
+            return false;
+        if (other.getRegisteredWithSubscriptionProvider() != null
+                && other.getRegisteredWithSubscriptionProvider().equals(this.getRegisteredWithSubscriptionProvider()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -632,6 +906,16 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
         if (other.getSubscriptionName() == null ^ this.getSubscriptionName() == null)
             return false;
         if (other.getSubscriptionName() != null && other.getSubscriptionName().equals(this.getSubscriptionName()) == false)
+            return false;
+        if (other.getSubscriptionProviderCreateTime() == null ^ this.getSubscriptionProviderCreateTime() == null)
+            return false;
+        if (other.getSubscriptionProviderCreateTime() != null
+                && other.getSubscriptionProviderCreateTime().equals(this.getSubscriptionProviderCreateTime()) == false)
+            return false;
+        if (other.getSubscriptionProviderUpdateTime() == null ^ this.getSubscriptionProviderUpdateTime() == null)
+            return false;
+        if (other.getSubscriptionProviderUpdateTime() != null
+                && other.getSubscriptionProviderUpdateTime().equals(this.getSubscriptionProviderUpdateTime()) == false)
             return false;
         if (other.getUsageOperation() == null ^ this.getUsageOperation() == null)
             return false;
@@ -647,13 +931,18 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getAccountID() == null) ? 0 : getAccountID().hashCode());
         hashCode = prime * hashCode + ((getAmiId() == null) ? 0 : getAmiId().hashCode());
+        hashCode = prime * hashCode + ((getDualSubscription() == null) ? 0 : getDualSubscription().hashCode());
         hashCode = prime * hashCode + ((getInstanceID() == null) ? 0 : getInstanceID().hashCode());
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());
+        hashCode = prime * hashCode + ((getOsVersion() == null) ? 0 : getOsVersion().hashCode());
         hashCode = prime * hashCode + ((getProductCode() == null) ? 0 : getProductCode().hashCode());
         hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
+        hashCode = prime * hashCode + ((getRegisteredWithSubscriptionProvider() == null) ? 0 : getRegisteredWithSubscriptionProvider().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getSubscriptionName() == null) ? 0 : getSubscriptionName().hashCode());
+        hashCode = prime * hashCode + ((getSubscriptionProviderCreateTime() == null) ? 0 : getSubscriptionProviderCreateTime().hashCode());
+        hashCode = prime * hashCode + ((getSubscriptionProviderUpdateTime() == null) ? 0 : getSubscriptionProviderUpdateTime().hashCode());
         hashCode = prime * hashCode + ((getUsageOperation() == null) ? 0 : getUsageOperation().hashCode());
         return hashCode;
     }

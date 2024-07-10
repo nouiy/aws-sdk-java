@@ -65,6 +65,12 @@ public class NodeRangeProperty implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private EcsProperties ecsProperties;
+    /**
+     * <p>
+     * This is an object that represents the properties of the node range for a multi-node parallel job.
+     * </p>
+     */
+    private EksProperties eksProperties;
 
     /**
      * <p>
@@ -346,6 +352,46 @@ public class NodeRangeProperty implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * This is an object that represents the properties of the node range for a multi-node parallel job.
+     * </p>
+     * 
+     * @param eksProperties
+     *        This is an object that represents the properties of the node range for a multi-node parallel job.
+     */
+
+    public void setEksProperties(EksProperties eksProperties) {
+        this.eksProperties = eksProperties;
+    }
+
+    /**
+     * <p>
+     * This is an object that represents the properties of the node range for a multi-node parallel job.
+     * </p>
+     * 
+     * @return This is an object that represents the properties of the node range for a multi-node parallel job.
+     */
+
+    public EksProperties getEksProperties() {
+        return this.eksProperties;
+    }
+
+    /**
+     * <p>
+     * This is an object that represents the properties of the node range for a multi-node parallel job.
+     * </p>
+     * 
+     * @param eksProperties
+     *        This is an object that represents the properties of the node range for a multi-node parallel job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NodeRangeProperty withEksProperties(EksProperties eksProperties) {
+        setEksProperties(eksProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -364,7 +410,9 @@ public class NodeRangeProperty implements Serializable, Cloneable, StructuredPoj
         if (getInstanceTypes() != null)
             sb.append("InstanceTypes: ").append(getInstanceTypes()).append(",");
         if (getEcsProperties() != null)
-            sb.append("EcsProperties: ").append(getEcsProperties());
+            sb.append("EcsProperties: ").append(getEcsProperties()).append(",");
+        if (getEksProperties() != null)
+            sb.append("EksProperties: ").append(getEksProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -395,6 +443,10 @@ public class NodeRangeProperty implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getEcsProperties() != null && other.getEcsProperties().equals(this.getEcsProperties()) == false)
             return false;
+        if (other.getEksProperties() == null ^ this.getEksProperties() == null)
+            return false;
+        if (other.getEksProperties() != null && other.getEksProperties().equals(this.getEksProperties()) == false)
+            return false;
         return true;
     }
 
@@ -407,6 +459,7 @@ public class NodeRangeProperty implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getContainer() == null) ? 0 : getContainer().hashCode());
         hashCode = prime * hashCode + ((getInstanceTypes() == null) ? 0 : getInstanceTypes().hashCode());
         hashCode = prime * hashCode + ((getEcsProperties() == null) ? 0 : getEcsProperties().hashCode());
+        hashCode = prime * hashCode + ((getEksProperties() == null) ? 0 : getEksProperties().hashCode());
         return hashCode;
     }
 

@@ -77,6 +77,75 @@ public class AWSLicenseManagerLinuxSubscriptionsAsyncClient extends AWSLicenseMa
     }
 
     @Override
+    public java.util.concurrent.Future<DeregisterSubscriptionProviderResult> deregisterSubscriptionProviderAsync(DeregisterSubscriptionProviderRequest request) {
+
+        return deregisterSubscriptionProviderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeregisterSubscriptionProviderResult> deregisterSubscriptionProviderAsync(
+            final DeregisterSubscriptionProviderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeregisterSubscriptionProviderRequest, DeregisterSubscriptionProviderResult> asyncHandler) {
+        final DeregisterSubscriptionProviderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeregisterSubscriptionProviderResult>() {
+            @Override
+            public DeregisterSubscriptionProviderResult call() throws Exception {
+                DeregisterSubscriptionProviderResult result = null;
+
+                try {
+                    result = executeDeregisterSubscriptionProvider(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRegisteredSubscriptionProviderResult> getRegisteredSubscriptionProviderAsync(
+            GetRegisteredSubscriptionProviderRequest request) {
+
+        return getRegisteredSubscriptionProviderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRegisteredSubscriptionProviderResult> getRegisteredSubscriptionProviderAsync(
+            final GetRegisteredSubscriptionProviderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRegisteredSubscriptionProviderRequest, GetRegisteredSubscriptionProviderResult> asyncHandler) {
+        final GetRegisteredSubscriptionProviderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRegisteredSubscriptionProviderResult>() {
+            @Override
+            public GetRegisteredSubscriptionProviderResult call() throws Exception {
+                GetRegisteredSubscriptionProviderResult result = null;
+
+                try {
+                    result = executeGetRegisteredSubscriptionProvider(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetServiceSettingsResult> getServiceSettingsAsync(GetServiceSettingsRequest request) {
 
         return getServiceSettingsAsync(request, null);
@@ -161,6 +230,173 @@ public class AWSLicenseManagerLinuxSubscriptionsAsyncClient extends AWSLicenseMa
 
                 try {
                     result = executeListLinuxSubscriptions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRegisteredSubscriptionProvidersResult> listRegisteredSubscriptionProvidersAsync(
+            ListRegisteredSubscriptionProvidersRequest request) {
+
+        return listRegisteredSubscriptionProvidersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRegisteredSubscriptionProvidersResult> listRegisteredSubscriptionProvidersAsync(
+            final ListRegisteredSubscriptionProvidersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRegisteredSubscriptionProvidersRequest, ListRegisteredSubscriptionProvidersResult> asyncHandler) {
+        final ListRegisteredSubscriptionProvidersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRegisteredSubscriptionProvidersResult>() {
+            @Override
+            public ListRegisteredSubscriptionProvidersResult call() throws Exception {
+                ListRegisteredSubscriptionProvidersResult result = null;
+
+                try {
+                    result = executeListRegisteredSubscriptionProviders(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(final ListTagsForResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+        final ListTagsForResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTagsForResourceResult>() {
+            @Override
+            public ListTagsForResourceResult call() throws Exception {
+                ListTagsForResourceResult result = null;
+
+                try {
+                    result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterSubscriptionProviderResult> registerSubscriptionProviderAsync(RegisterSubscriptionProviderRequest request) {
+
+        return registerSubscriptionProviderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterSubscriptionProviderResult> registerSubscriptionProviderAsync(final RegisterSubscriptionProviderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RegisterSubscriptionProviderRequest, RegisterSubscriptionProviderResult> asyncHandler) {
+        final RegisterSubscriptionProviderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RegisterSubscriptionProviderResult>() {
+            @Override
+            public RegisterSubscriptionProviderResult call() throws Exception {
+                RegisterSubscriptionProviderResult result = null;
+
+                try {
+                    result = executeRegisterSubscriptionProvider(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(final TagResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+        final TagResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TagResourceResult>() {
+            @Override
+            public TagResourceResult call() throws Exception {
+                TagResourceResult result = null;
+
+                try {
+                    result = executeTagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(final UntagResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+        final UntagResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UntagResourceResult>() {
+            @Override
+            public UntagResourceResult call() throws Exception {
+                UntagResourceResult result = null;
+
+                try {
+                    result = executeUntagResource(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

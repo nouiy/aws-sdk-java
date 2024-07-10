@@ -718,7 +718,7 @@ public class PromptConfiguration implements Serializable, Cloneable, StructuredP
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getBasePromptTemplate() != null)
-            sb.append("BasePromptTemplate: ").append(getBasePromptTemplate()).append(",");
+            sb.append("BasePromptTemplate: ").append("***Sensitive Data Redacted***").append(",");
         if (getInferenceConfiguration() != null)
             sb.append("InferenceConfiguration: ").append(getInferenceConfiguration()).append(",");
         if (getParserMode() != null)

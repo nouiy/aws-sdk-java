@@ -110,6 +110,10 @@ public class AgentJsonUnmarshaller implements Unmarshaller<Agent, JsonUnmarshall
                     context.nextToken();
                     agent.setInstruction(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("memoryConfiguration", targetDepth)) {
+                    context.nextToken();
+                    agent.setMemoryConfiguration(MemoryConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("preparedAt", targetDepth)) {
                     context.nextToken();
                     agent.setPreparedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));

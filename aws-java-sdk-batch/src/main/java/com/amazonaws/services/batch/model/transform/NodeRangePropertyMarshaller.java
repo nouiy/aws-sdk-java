@@ -36,6 +36,8 @@ public class NodeRangePropertyMarshaller {
             .marshallLocationName("instanceTypes").build();
     private static final MarshallingInfo<StructuredPojo> ECSPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ecsProperties").build();
+    private static final MarshallingInfo<StructuredPojo> EKSPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksProperties").build();
 
     private static final NodeRangePropertyMarshaller instance = new NodeRangePropertyMarshaller();
 
@@ -57,6 +59,7 @@ public class NodeRangePropertyMarshaller {
             protocolMarshaller.marshall(nodeRangeProperty.getContainer(), CONTAINER_BINDING);
             protocolMarshaller.marshall(nodeRangeProperty.getInstanceTypes(), INSTANCETYPES_BINDING);
             protocolMarshaller.marshall(nodeRangeProperty.getEcsProperties(), ECSPROPERTIES_BINDING);
+            protocolMarshaller.marshall(nodeRangeProperty.getEksProperties(), EKSPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

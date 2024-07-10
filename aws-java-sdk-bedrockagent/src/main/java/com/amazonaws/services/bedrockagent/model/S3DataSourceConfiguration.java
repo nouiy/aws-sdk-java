@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about the S3 configuration of the data source.
+ * The configuration information to connect to Amazon S3 as your data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/S3DataSourceConfiguration"
@@ -30,19 +30,19 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the bucket that contains the data source.
+     * The Amazon Resource Name (ARN) of the S3 bucket that contains your data.
      * </p>
      */
     private String bucketArn;
     /**
      * <p>
-     * The bucket account owner ID for the S3 bucket.
+     * The account ID for the owner of the S3 bucket.
      * </p>
      */
     private String bucketOwnerAccountId;
     /**
      * <p>
-     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * A list of S3 prefixes to include certain files or content. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      * prefixes</a>.
      * </p>
@@ -51,11 +51,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the bucket that contains the data source.
+     * The Amazon Resource Name (ARN) of the S3 bucket that contains your data.
      * </p>
      * 
      * @param bucketArn
-     *        The Amazon Resource Name (ARN) of the bucket that contains the data source.
+     *        The Amazon Resource Name (ARN) of the S3 bucket that contains your data.
      */
 
     public void setBucketArn(String bucketArn) {
@@ -64,10 +64,10 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the bucket that contains the data source.
+     * The Amazon Resource Name (ARN) of the S3 bucket that contains your data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the bucket that contains the data source.
+     * @return The Amazon Resource Name (ARN) of the S3 bucket that contains your data.
      */
 
     public String getBucketArn() {
@@ -76,11 +76,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the bucket that contains the data source.
+     * The Amazon Resource Name (ARN) of the S3 bucket that contains your data.
      * </p>
      * 
      * @param bucketArn
-     *        The Amazon Resource Name (ARN) of the bucket that contains the data source.
+     *        The Amazon Resource Name (ARN) of the S3 bucket that contains your data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,11 +91,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The bucket account owner ID for the S3 bucket.
+     * The account ID for the owner of the S3 bucket.
      * </p>
      * 
      * @param bucketOwnerAccountId
-     *        The bucket account owner ID for the S3 bucket.
+     *        The account ID for the owner of the S3 bucket.
      */
 
     public void setBucketOwnerAccountId(String bucketOwnerAccountId) {
@@ -104,10 +104,10 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The bucket account owner ID for the S3 bucket.
+     * The account ID for the owner of the S3 bucket.
      * </p>
      * 
-     * @return The bucket account owner ID for the S3 bucket.
+     * @return The account ID for the owner of the S3 bucket.
      */
 
     public String getBucketOwnerAccountId() {
@@ -116,11 +116,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The bucket account owner ID for the S3 bucket.
+     * The account ID for the owner of the S3 bucket.
      * </p>
      * 
      * @param bucketOwnerAccountId
-     *        The bucket account owner ID for the S3 bucket.
+     *        The account ID for the owner of the S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,12 +131,12 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * A list of S3 prefixes to include certain files or content. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      * prefixes</a>.
      * </p>
      * 
-     * @return A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * @return A list of S3 prefixes to include certain files or content. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      *         prefixes</a>.
      */
@@ -147,13 +147,13 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * A list of S3 prefixes to include certain files or content. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      * prefixes</a>.
      * </p>
      * 
      * @param inclusionPrefixes
-     *        A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     *        A list of S3 prefixes to include certain files or content. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      *        prefixes</a>.
      */
@@ -169,7 +169,7 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * A list of S3 prefixes to include certain files or content. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      * prefixes</a>.
      * </p>
@@ -180,7 +180,7 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param inclusionPrefixes
-     *        A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     *        A list of S3 prefixes to include certain files or content. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      *        prefixes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -198,13 +198,13 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * A list of S3 prefixes to include certain files or content. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      * prefixes</a>.
      * </p>
      * 
      * @param inclusionPrefixes
-     *        A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     *        A list of S3 prefixes to include certain files or content. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
      *        prefixes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -232,7 +232,7 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
         if (getBucketOwnerAccountId() != null)
             sb.append("BucketOwnerAccountId: ").append(getBucketOwnerAccountId()).append(",");
         if (getInclusionPrefixes() != null)
-            sb.append("InclusionPrefixes: ").append(getInclusionPrefixes());
+            sb.append("InclusionPrefixes: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

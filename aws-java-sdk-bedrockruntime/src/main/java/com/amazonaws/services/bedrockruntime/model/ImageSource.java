@@ -30,14 +30,14 @@ public class ImageSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The raw image bytes for the image. If you use an AWS SDK, you don't need to base64 encode the image bytes.
+     * The raw image bytes for the image. If you use an AWS SDK, you don't need to encode the image bytes in base64.
      * </p>
      */
     private java.nio.ByteBuffer bytes;
 
     /**
      * <p>
-     * The raw image bytes for the image. If you use an AWS SDK, you don't need to base64 encode the image bytes.
+     * The raw image bytes for the image. If you use an AWS SDK, you don't need to encode the image bytes in base64.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -51,7 +51,8 @@ public class ImageSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param bytes
-     *        The raw image bytes for the image. If you use an AWS SDK, you don't need to base64 encode the image bytes.
+     *        The raw image bytes for the image. If you use an AWS SDK, you don't need to encode the image bytes in
+     *        base64.
      */
 
     public void setBytes(java.nio.ByteBuffer bytes) {
@@ -60,7 +61,7 @@ public class ImageSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The raw image bytes for the image. If you use an AWS SDK, you don't need to base64 encode the image bytes.
+     * The raw image bytes for the image. If you use an AWS SDK, you don't need to encode the image bytes in base64.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -70,8 +71,8 @@ public class ImageSource implements Serializable, Cloneable, StructuredPojo {
      * {@code position}.
      * </p>
      * 
-     * @return The raw image bytes for the image. If you use an AWS SDK, you don't need to base64 encode the image
-     *         bytes.
+     * @return The raw image bytes for the image. If you use an AWS SDK, you don't need to encode the image bytes in
+     *         base64.
      */
 
     public java.nio.ByteBuffer getBytes() {
@@ -80,7 +81,7 @@ public class ImageSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The raw image bytes for the image. If you use an AWS SDK, you don't need to base64 encode the image bytes.
+     * The raw image bytes for the image. If you use an AWS SDK, you don't need to encode the image bytes in base64.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -94,7 +95,8 @@ public class ImageSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param bytes
-     *        The raw image bytes for the image. If you use an AWS SDK, you don't need to base64 encode the image bytes.
+     *        The raw image bytes for the image. If you use an AWS SDK, you don't need to encode the image bytes in
+     *        base64.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

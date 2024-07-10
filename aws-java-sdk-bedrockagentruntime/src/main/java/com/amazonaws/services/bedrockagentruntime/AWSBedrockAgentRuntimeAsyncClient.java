@@ -76,6 +76,72 @@ public class AWSBedrockAgentRuntimeAsyncClient extends AWSBedrockAgentRuntimeCli
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteAgentMemoryResult> deleteAgentMemoryAsync(DeleteAgentMemoryRequest request) {
+
+        return deleteAgentMemoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAgentMemoryResult> deleteAgentMemoryAsync(final DeleteAgentMemoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAgentMemoryRequest, DeleteAgentMemoryResult> asyncHandler) {
+        final DeleteAgentMemoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAgentMemoryResult>() {
+            @Override
+            public DeleteAgentMemoryResult call() throws Exception {
+                DeleteAgentMemoryResult result = null;
+
+                try {
+                    result = executeDeleteAgentMemory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAgentMemoryResult> getAgentMemoryAsync(GetAgentMemoryRequest request) {
+
+        return getAgentMemoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAgentMemoryResult> getAgentMemoryAsync(final GetAgentMemoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAgentMemoryRequest, GetAgentMemoryResult> asyncHandler) {
+        final GetAgentMemoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAgentMemoryResult>() {
+            @Override
+            public GetAgentMemoryResult call() throws Exception {
+                GetAgentMemoryResult result = null;
+
+                try {
+                    result = executeGetAgentMemory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<RetrieveResult> retrieveAsync(RetrieveRequest request) {
 
         return retrieveAsync(request, null);

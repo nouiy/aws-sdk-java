@@ -19,10 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A document to include in a message when sending a <a
- * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a
- * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a>
- * request. You can include up to 5 documents in a request. The maximum document size is 50 MB.
+ * A document to include in a message.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/DocumentBlock" target="_top">AWS API
@@ -39,8 +36,41 @@ public class DocumentBlock implements Serializable, Cloneable, StructuredPojo {
     private String format;
     /**
      * <p>
-     * A name for the document.
+     * A name for the document. The name can only contain the following characters:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Alphanumeric characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Whitespace characters (no more than one in a row)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Hyphens
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Parentheses
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Square brackets
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * This field is vulnerable to prompt injections, because the model might inadvertently interpret it as
+     * instructions. Therefore, we recommend that you specify a neutral name.
+     * </p>
+     * </note>
      */
     private String name;
     /**
@@ -111,11 +141,76 @@ public class DocumentBlock implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A name for the document.
+     * A name for the document. The name can only contain the following characters:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Alphanumeric characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Whitespace characters (no more than one in a row)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Hyphens
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Parentheses
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Square brackets
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * This field is vulnerable to prompt injections, because the model might inadvertently interpret it as
+     * instructions. Therefore, we recommend that you specify a neutral name.
+     * </p>
+     * </note>
      * 
      * @param name
-     *        A name for the document.
+     *        A name for the document. The name can only contain the following characters:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Alphanumeric characters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Whitespace characters (no more than one in a row)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Hyphens
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Parentheses
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Square brackets
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        This field is vulnerable to prompt injections, because the model might inadvertently interpret it as
+     *        instructions. Therefore, we recommend that you specify a neutral name.
+     *        </p>
      */
 
     public void setName(String name) {
@@ -124,10 +219,75 @@ public class DocumentBlock implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A name for the document.
+     * A name for the document. The name can only contain the following characters:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Alphanumeric characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Whitespace characters (no more than one in a row)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Hyphens
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Parentheses
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Square brackets
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * This field is vulnerable to prompt injections, because the model might inadvertently interpret it as
+     * instructions. Therefore, we recommend that you specify a neutral name.
+     * </p>
+     * </note>
      * 
-     * @return A name for the document.
+     * @return A name for the document. The name can only contain the following characters:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Alphanumeric characters
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Whitespace characters (no more than one in a row)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Hyphens
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Parentheses
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Square brackets
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         This field is vulnerable to prompt injections, because the model might inadvertently interpret it as
+     *         instructions. Therefore, we recommend that you specify a neutral name.
+     *         </p>
      */
 
     public String getName() {
@@ -136,11 +296,76 @@ public class DocumentBlock implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A name for the document.
+     * A name for the document. The name can only contain the following characters:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Alphanumeric characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Whitespace characters (no more than one in a row)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Hyphens
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Parentheses
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Square brackets
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * This field is vulnerable to prompt injections, because the model might inadvertently interpret it as
+     * instructions. Therefore, we recommend that you specify a neutral name.
+     * </p>
+     * </note>
      * 
      * @param name
-     *        A name for the document.
+     *        A name for the document. The name can only contain the following characters:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Alphanumeric characters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Whitespace characters (no more than one in a row)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Hyphens
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Parentheses
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Square brackets
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        This field is vulnerable to prompt injections, because the model might inadvertently interpret it as
+     *        instructions. Therefore, we recommend that you specify a neutral name.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
