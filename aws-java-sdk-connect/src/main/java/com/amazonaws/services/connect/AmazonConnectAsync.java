@@ -7001,6 +7001,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Searches AgentStatuses in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchAgentStatusesRequest
+     * @return A Java Future containing the result of the SearchAgentStatuses operation returned by the service.
+     * @sample AmazonConnectAsync.SearchAgentStatuses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchAgentStatuses" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchAgentStatusesResult> searchAgentStatusesAsync(SearchAgentStatusesRequest searchAgentStatusesRequest);
+
+    /**
+     * <p>
+     * Searches AgentStatuses in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchAgentStatusesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchAgentStatuses operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchAgentStatuses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchAgentStatuses" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchAgentStatusesResult> searchAgentStatusesAsync(SearchAgentStatusesRequest searchAgentStatusesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchAgentStatusesRequest, SearchAgentStatusesResult> asyncHandler);
+
+    /**
+     * <p>
      * Searches for available phone numbers that you can claim to your Amazon Connect instance or traffic distribution
      * group. If the provided <code>TargetArn</code> is a traffic distribution group, you can call this API in both
      * Amazon Web Services Regions associated with the traffic distribution group.
@@ -7378,6 +7409,51 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<SearchSecurityProfilesResult> searchSecurityProfilesAsync(SearchSecurityProfilesRequest searchSecurityProfilesRequest,
             com.amazonaws.handlers.AsyncHandler<SearchSecurityProfilesRequest, SearchSecurityProfilesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Searches UserHierarchyGroups in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * <important>
+     * <p>
+     * The UserHierarchyGroup with <code>"LevelId": "0"</code> is the foundation for building levels on top of an
+     * instance. It is not user-definable, nor is it visible in the UI.
+     * </p>
+     * </important>
+     * 
+     * @param searchUserHierarchyGroupsRequest
+     * @return A Java Future containing the result of the SearchUserHierarchyGroups operation returned by the service.
+     * @sample AmazonConnectAsync.SearchUserHierarchyGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchUserHierarchyGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchUserHierarchyGroupsResult> searchUserHierarchyGroupsAsync(
+            SearchUserHierarchyGroupsRequest searchUserHierarchyGroupsRequest);
+
+    /**
+     * <p>
+     * Searches UserHierarchyGroups in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * <important>
+     * <p>
+     * The UserHierarchyGroup with <code>"LevelId": "0"</code> is the foundation for building levels on top of an
+     * instance. It is not user-definable, nor is it visible in the UI.
+     * </p>
+     * </important>
+     * 
+     * @param searchUserHierarchyGroupsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchUserHierarchyGroups operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchUserHierarchyGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchUserHierarchyGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchUserHierarchyGroupsResult> searchUserHierarchyGroupsAsync(
+            SearchUserHierarchyGroupsRequest searchUserHierarchyGroupsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchUserHierarchyGroupsRequest, SearchUserHierarchyGroupsResult> asyncHandler);
 
     /**
      * <p>

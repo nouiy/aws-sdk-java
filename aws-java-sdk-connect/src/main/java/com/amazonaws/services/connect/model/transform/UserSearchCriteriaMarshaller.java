@@ -34,6 +34,8 @@ public class UserSearchCriteriaMarshaller {
             .marshallLocationName("AndConditions").build();
     private static final MarshallingInfo<StructuredPojo> STRINGCONDITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StringCondition").build();
+    private static final MarshallingInfo<StructuredPojo> LISTCONDITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ListCondition").build();
     private static final MarshallingInfo<StructuredPojo> HIERARCHYGROUPCONDITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HierarchyGroupCondition").build();
 
@@ -56,6 +58,7 @@ public class UserSearchCriteriaMarshaller {
             protocolMarshaller.marshall(userSearchCriteria.getOrConditions(), ORCONDITIONS_BINDING);
             protocolMarshaller.marshall(userSearchCriteria.getAndConditions(), ANDCONDITIONS_BINDING);
             protocolMarshaller.marshall(userSearchCriteria.getStringCondition(), STRINGCONDITION_BINDING);
+            protocolMarshaller.marshall(userSearchCriteria.getListCondition(), LISTCONDITION_BINDING);
             protocolMarshaller.marshall(userSearchCriteria.getHierarchyGroupCondition(), HIERARCHYGROUPCONDITION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

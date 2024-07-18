@@ -107,7 +107,7 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
     private String vpcId;
     /**
      * <p>
-     * For elastic IP addresses, this is the status of an attached network interface.
+     * For elastic network interfaces, this is the status of whether or not the elastic network interface is attached.
      * </p>
      */
     private String networkInterfaceAttachmentStatus;
@@ -673,11 +673,12 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For elastic IP addresses, this is the status of an attached network interface.
+     * For elastic network interfaces, this is the status of whether or not the elastic network interface is attached.
      * </p>
      * 
      * @param networkInterfaceAttachmentStatus
-     *        For elastic IP addresses, this is the status of an attached network interface.
+     *        For elastic network interfaces, this is the status of whether or not the elastic network interface is
+     *        attached.
      * @see IpamNetworkInterfaceAttachmentStatus
      */
 
@@ -687,10 +688,11 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For elastic IP addresses, this is the status of an attached network interface.
+     * For elastic network interfaces, this is the status of whether or not the elastic network interface is attached.
      * </p>
      * 
-     * @return For elastic IP addresses, this is the status of an attached network interface.
+     * @return For elastic network interfaces, this is the status of whether or not the elastic network interface is
+     *         attached.
      * @see IpamNetworkInterfaceAttachmentStatus
      */
 
@@ -700,11 +702,12 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For elastic IP addresses, this is the status of an attached network interface.
+     * For elastic network interfaces, this is the status of whether or not the elastic network interface is attached.
      * </p>
      * 
      * @param networkInterfaceAttachmentStatus
-     *        For elastic IP addresses, this is the status of an attached network interface.
+     *        For elastic network interfaces, this is the status of whether or not the elastic network interface is
+     *        attached.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpamNetworkInterfaceAttachmentStatus
      */
@@ -716,11 +719,12 @@ public class IpamDiscoveredResourceCidr implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For elastic IP addresses, this is the status of an attached network interface.
+     * For elastic network interfaces, this is the status of whether or not the elastic network interface is attached.
      * </p>
      * 
      * @param networkInterfaceAttachmentStatus
-     *        For elastic IP addresses, this is the status of an attached network interface.
+     *        For elastic network interfaces, this is the status of whether or not the elastic network interface is
+     *        attached.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpamNetworkInterfaceAttachmentStatus
      */

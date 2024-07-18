@@ -4926,6 +4926,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Searches AgentStatuses in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchAgentStatusesRequest
+     * @return Result of the SearchAgentStatuses operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchAgentStatuses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchAgentStatuses" target="_top">AWS
+     *      API Documentation</a>
+     */
+    SearchAgentStatusesResult searchAgentStatuses(SearchAgentStatusesRequest searchAgentStatusesRequest);
+
+    /**
+     * <p>
      * Searches for available phone numbers that you can claim to your Amazon Connect instance or traffic distribution
      * group. If the provided <code>TargetArn</code> is a traffic distribution group, you can call this API in both
      * Amazon Web Services Regions associated with the traffic distribution group.
@@ -5202,6 +5225,35 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     SearchSecurityProfilesResult searchSecurityProfiles(SearchSecurityProfilesRequest searchSecurityProfilesRequest);
+
+    /**
+     * <p>
+     * Searches UserHierarchyGroups in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * <important>
+     * <p>
+     * The UserHierarchyGroup with <code>"LevelId": "0"</code> is the foundation for building levels on top of an
+     * instance. It is not user-definable, nor is it visible in the UI.
+     * </p>
+     * </important>
+     * 
+     * @param searchUserHierarchyGroupsRequest
+     * @return Result of the SearchUserHierarchyGroups operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchUserHierarchyGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchUserHierarchyGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SearchUserHierarchyGroupsResult searchUserHierarchyGroups(SearchUserHierarchyGroupsRequest searchUserHierarchyGroupsRequest);
 
     /**
      * <p>

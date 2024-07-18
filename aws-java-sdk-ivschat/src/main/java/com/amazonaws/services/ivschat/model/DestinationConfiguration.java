@@ -32,6 +32,12 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
+     * An Amazon S3 destination configuration where chat activity will be logged.
+     * </p>
+     */
+    private S3DestinationConfiguration s3;
+    /**
+     * <p>
      * An Amazon CloudWatch Logs destination configuration where chat activity will be logged.
      * </p>
      */
@@ -42,12 +48,46 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
      * </p>
      */
     private FirehoseDestinationConfiguration firehose;
+
     /**
      * <p>
      * An Amazon S3 destination configuration where chat activity will be logged.
      * </p>
+     * 
+     * @param s3
+     *        An Amazon S3 destination configuration where chat activity will be logged.
      */
-    private S3DestinationConfiguration s3;
+
+    public void setS3(S3DestinationConfiguration s3) {
+        this.s3 = s3;
+    }
+
+    /**
+     * <p>
+     * An Amazon S3 destination configuration where chat activity will be logged.
+     * </p>
+     * 
+     * @return An Amazon S3 destination configuration where chat activity will be logged.
+     */
+
+    public S3DestinationConfiguration getS3() {
+        return this.s3;
+    }
+
+    /**
+     * <p>
+     * An Amazon S3 destination configuration where chat activity will be logged.
+     * </p>
+     * 
+     * @param s3
+     *        An Amazon S3 destination configuration where chat activity will be logged.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationConfiguration withS3(S3DestinationConfiguration s3) {
+        setS3(s3);
+        return this;
+    }
 
     /**
      * <p>
@@ -130,46 +170,6 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p>
-     * An Amazon S3 destination configuration where chat activity will be logged.
-     * </p>
-     * 
-     * @param s3
-     *        An Amazon S3 destination configuration where chat activity will be logged.
-     */
-
-    public void setS3(S3DestinationConfiguration s3) {
-        this.s3 = s3;
-    }
-
-    /**
-     * <p>
-     * An Amazon S3 destination configuration where chat activity will be logged.
-     * </p>
-     * 
-     * @return An Amazon S3 destination configuration where chat activity will be logged.
-     */
-
-    public S3DestinationConfiguration getS3() {
-        return this.s3;
-    }
-
-    /**
-     * <p>
-     * An Amazon S3 destination configuration where chat activity will be logged.
-     * </p>
-     * 
-     * @param s3
-     *        An Amazon S3 destination configuration where chat activity will be logged.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DestinationConfiguration withS3(S3DestinationConfiguration s3) {
-        setS3(s3);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,12 +181,12 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getS3() != null)
+            sb.append("S3: ").append(getS3()).append(",");
         if (getCloudWatchLogs() != null)
             sb.append("CloudWatchLogs: ").append(getCloudWatchLogs()).append(",");
         if (getFirehose() != null)
-            sb.append("Firehose: ").append(getFirehose()).append(",");
-        if (getS3() != null)
-            sb.append("S3: ").append(getS3());
+            sb.append("Firehose: ").append(getFirehose());
         sb.append("}");
         return sb.toString();
     }
@@ -201,6 +201,10 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
         if (obj instanceof DestinationConfiguration == false)
             return false;
         DestinationConfiguration other = (DestinationConfiguration) obj;
+        if (other.getS3() == null ^ this.getS3() == null)
+            return false;
+        if (other.getS3() != null && other.getS3().equals(this.getS3()) == false)
+            return false;
         if (other.getCloudWatchLogs() == null ^ this.getCloudWatchLogs() == null)
             return false;
         if (other.getCloudWatchLogs() != null && other.getCloudWatchLogs().equals(this.getCloudWatchLogs()) == false)
@@ -208,10 +212,6 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
         if (other.getFirehose() == null ^ this.getFirehose() == null)
             return false;
         if (other.getFirehose() != null && other.getFirehose().equals(this.getFirehose()) == false)
-            return false;
-        if (other.getS3() == null ^ this.getS3() == null)
-            return false;
-        if (other.getS3() != null && other.getS3().equals(this.getS3()) == false)
             return false;
         return true;
     }
@@ -221,9 +221,9 @@ public class DestinationConfiguration implements Serializable, Cloneable, Struct
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getS3() == null) ? 0 : getS3().hashCode());
         hashCode = prime * hashCode + ((getCloudWatchLogs() == null) ? 0 : getCloudWatchLogs().hashCode());
         hashCode = prime * hashCode + ((getFirehose() == null) ? 0 : getFirehose().hashCode());
-        hashCode = prime * hashCode + ((getS3() == null) ? 0 : getS3().hashCode());
         return hashCode;
     }
 

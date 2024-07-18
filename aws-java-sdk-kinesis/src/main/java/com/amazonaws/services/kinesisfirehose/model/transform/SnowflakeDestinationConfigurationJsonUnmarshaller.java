@@ -126,6 +126,10 @@ public class SnowflakeDestinationConfigurationJsonUnmarshaller implements Unmars
                     snowflakeDestinationConfiguration.setSecretsManagerConfiguration(SecretsManagerConfigurationJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("BufferingHints", targetDepth)) {
+                    context.nextToken();
+                    snowflakeDestinationConfiguration.setBufferingHints(SnowflakeBufferingHintsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

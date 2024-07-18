@@ -106,7 +106,8 @@ public enum ResourceType {
     VpcEncryptionControl("vpc-encryption-control"),
     IpamResourceDiscovery("ipam-resource-discovery"),
     IpamResourceDiscoveryAssociation("ipam-resource-discovery-association"),
-    InstanceConnectEndpoint("instance-connect-endpoint");
+    InstanceConnectEndpoint("instance-connect-endpoint"),
+    IpamExternalResourceVerificationToken("ipam-external-resource-verification-token");
 
     private String value;
 

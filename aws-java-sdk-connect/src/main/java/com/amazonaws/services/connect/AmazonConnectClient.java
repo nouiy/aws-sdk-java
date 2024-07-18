@@ -12501,6 +12501,71 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Searches AgentStatuses in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchAgentStatusesRequest
+     * @return Result of the SearchAgentStatuses operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchAgentStatuses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchAgentStatuses" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public SearchAgentStatusesResult searchAgentStatuses(SearchAgentStatusesRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchAgentStatuses(request);
+    }
+
+    @SdkInternalApi
+    final SearchAgentStatusesResult executeSearchAgentStatuses(SearchAgentStatusesRequest searchAgentStatusesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchAgentStatusesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchAgentStatusesRequest> request = null;
+        Response<SearchAgentStatusesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchAgentStatusesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(searchAgentStatusesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchAgentStatuses");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchAgentStatusesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchAgentStatusesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Searches for available phone numbers that you can claim to your Amazon Connect instance or traffic distribution
      * group. If the provided <code>TargetArn</code> is a traffic distribution group, you can call this API in both
      * Amazon Web Services Regions associated with the traffic distribution group.
@@ -13282,6 +13347,79 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<SearchSecurityProfilesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new SearchSecurityProfilesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Searches UserHierarchyGroups in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * <important>
+     * <p>
+     * The UserHierarchyGroup with <code>"LevelId": "0"</code> is the foundation for building levels on top of an
+     * instance. It is not user-definable, nor is it visible in the UI.
+     * </p>
+     * </important>
+     * 
+     * @param searchUserHierarchyGroupsRequest
+     * @return Result of the SearchUserHierarchyGroups operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchUserHierarchyGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchUserHierarchyGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public SearchUserHierarchyGroupsResult searchUserHierarchyGroups(SearchUserHierarchyGroupsRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchUserHierarchyGroups(request);
+    }
+
+    @SdkInternalApi
+    final SearchUserHierarchyGroupsResult executeSearchUserHierarchyGroups(SearchUserHierarchyGroupsRequest searchUserHierarchyGroupsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchUserHierarchyGroupsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchUserHierarchyGroupsRequest> request = null;
+        Response<SearchUserHierarchyGroupsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchUserHierarchyGroupsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(searchUserHierarchyGroupsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchUserHierarchyGroups");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchUserHierarchyGroupsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new SearchUserHierarchyGroupsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -43,6 +43,13 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The pricing model for queries in an account.
      * </p>
+     * <note>
+     * <p>
+     * The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     * <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     * <code>COMPUTE_UNITS</code>.
+     * </p>
+     * </note>
      */
     private String queryPricingModel;
 
@@ -135,9 +142,21 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The pricing model for queries in an account.
      * </p>
+     * <note>
+     * <p>
+     * The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     * <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     * <code>COMPUTE_UNITS</code>.
+     * </p>
+     * </note>
      * 
      * @param queryPricingModel
-     *        The pricing model for queries in an account.
+     *        The pricing model for queries in an account.</p> <note>
+     *        <p>
+     *        The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     *        <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     *        <code>COMPUTE_UNITS</code>.
+     *        </p>
      * @see QueryPricingModel
      */
 
@@ -149,8 +168,20 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The pricing model for queries in an account.
      * </p>
+     * <note>
+     * <p>
+     * The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     * <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     * <code>COMPUTE_UNITS</code>.
+     * </p>
+     * </note>
      * 
-     * @return The pricing model for queries in an account.
+     * @return The pricing model for queries in an account.</p> <note>
+     *         <p>
+     *         The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     *         <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     *         <code>COMPUTE_UNITS</code>.
+     *         </p>
      * @see QueryPricingModel
      */
 
@@ -162,9 +193,21 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The pricing model for queries in an account.
      * </p>
+     * <note>
+     * <p>
+     * The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     * <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     * <code>COMPUTE_UNITS</code>.
+     * </p>
+     * </note>
      * 
      * @param queryPricingModel
-     *        The pricing model for queries in an account.
+     *        The pricing model for queries in an account.</p> <note>
+     *        <p>
+     *        The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     *        <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     *        <code>COMPUTE_UNITS</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryPricingModel
      */
@@ -178,9 +221,21 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The pricing model for queries in an account.
      * </p>
+     * <note>
+     * <p>
+     * The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     * <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     * <code>COMPUTE_UNITS</code>.
+     * </p>
+     * </note>
      * 
      * @param queryPricingModel
-     *        The pricing model for queries in an account.
+     *        The pricing model for queries in an account.</p> <note>
+     *        <p>
+     *        The <code>QueryPricingModel</code> parameter is used by several Timestream operations; however, the
+     *        <code>UpdateAccountSettings</code> API operation doesn't recognize any values other than
+     *        <code>COMPUTE_UNITS</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryPricingModel
      */

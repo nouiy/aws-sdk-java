@@ -61,6 +61,8 @@ public class CreateDeliveryStreamRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MSKSourceConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> SNOWFLAKEDESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnowflakeDestinationConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> ICEBERGDESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IcebergDestinationConfiguration").build();
 
     private static final CreateDeliveryStreamRequestMarshaller instance = new CreateDeliveryStreamRequestMarshaller();
 
@@ -96,6 +98,7 @@ public class CreateDeliveryStreamRequestMarshaller {
                     AMAZONOPENSEARCHSERVERLESSDESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createDeliveryStreamRequest.getMSKSourceConfiguration(), MSKSOURCECONFIGURATION_BINDING);
             protocolMarshaller.marshall(createDeliveryStreamRequest.getSnowflakeDestinationConfiguration(), SNOWFLAKEDESTINATIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createDeliveryStreamRequest.getIcebergDestinationConfiguration(), ICEBERGDESTINATIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

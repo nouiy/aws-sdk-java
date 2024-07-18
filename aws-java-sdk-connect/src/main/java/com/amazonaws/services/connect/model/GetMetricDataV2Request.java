@@ -1048,7 +1048,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * <p>
-     * UI name: This metric is not available in Amazon Connect admin website.
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     * >Contacts removed from queue in X seconds</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -4161,7 +4163,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * <p>
-     * UI name: This metric is not available in Amazon Connect admin website.
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     * >Contacts removed from queue in X seconds</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -5604,7 +5608,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *         </p>
      *         <p>
-     *         UI name: This metric is not available in Amazon Connect admin website.
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     *         >Contacts removed from queue in X seconds</a>
      *         </p>
      *         </dd>
      *         <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -7053,7 +7059,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * <p>
-     * UI name: This metric is not available in Amazon Connect admin website.
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     * >Contacts removed from queue in X seconds</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -8497,7 +8505,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
      *        <p>
-     *        UI name: This metric is not available in Amazon Connect admin website.
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     *        >Contacts removed from queue in X seconds</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -9951,7 +9961,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * <p>
-     * UI name: This metric is not available in Amazon Connect admin website.
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     * >Contacts removed from queue in X seconds</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -11400,7 +11412,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
      *        <p>
-     *        UI name: This metric is not available in Amazon Connect admin website.
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     *        >Contacts removed from queue in X seconds</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -12856,7 +12870,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * <p>
-     * UI name: This metric is not available in Amazon Connect admin website.
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     * >Contacts removed from queue in X seconds</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -14300,7 +14316,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
      *        <p>
-     *        UI name: This metric is not available in Amazon Connect admin website.
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical"
+     *        >Contacts removed from queue in X seconds</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>

@@ -2842,6 +2842,12 @@ public interface AmazonRDS {
      * <p>
      * Returns a list of resources (for example, DB instances) that have at least one pending maintenance action.
      * </p>
+     * <p>
+     * This API follows an eventual consistency model. This means that the result of the
+     * <code>DescribePendingMaintenanceActions</code> command might not be immediately visible to all subsequent RDS
+     * commands. Keep this in mind when you use <code>DescribePendingMaintenanceActions</code> immediately after using a
+     * previous API command such as <code>ApplyPendingMaintenanceActions</code>.
+     * </p>
      * 
      * @param describePendingMaintenanceActionsRequest
      * @return Result of the DescribePendingMaintenanceActions operation returned by the service.

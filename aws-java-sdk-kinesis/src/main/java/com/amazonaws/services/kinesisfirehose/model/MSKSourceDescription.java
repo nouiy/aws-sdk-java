@@ -52,6 +52,17 @@ public class MSKSourceDescription implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.Date deliveryStartTimestamp;
+    /**
+     * <p>
+     * The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read.
+     * By default, this is set to timestamp when Firehose becomes Active.
+     * </p>
+     * <p>
+     * If you want to create a Firehose stream with Earliest start position from SDK or CLI, you need to set the
+     * <code>ReadFromTimestampUTC</code> parameter to Epoch (1970-01-01T00:00:00Z).
+     * </p>
+     */
+    private java.util.Date readFromTimestamp;
 
     /**
      * <p>
@@ -217,6 +228,73 @@ public class MSKSourceDescription implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read.
+     * By default, this is set to timestamp when Firehose becomes Active.
+     * </p>
+     * <p>
+     * If you want to create a Firehose stream with Earliest start position from SDK or CLI, you need to set the
+     * <code>ReadFromTimestampUTC</code> parameter to Epoch (1970-01-01T00:00:00Z).
+     * </p>
+     * 
+     * @param readFromTimestamp
+     *        The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to
+     *        read. By default, this is set to timestamp when Firehose becomes Active. </p>
+     *        <p>
+     *        If you want to create a Firehose stream with Earliest start position from SDK or CLI, you need to set the
+     *        <code>ReadFromTimestampUTC</code> parameter to Epoch (1970-01-01T00:00:00Z).
+     */
+
+    public void setReadFromTimestamp(java.util.Date readFromTimestamp) {
+        this.readFromTimestamp = readFromTimestamp;
+    }
+
+    /**
+     * <p>
+     * The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read.
+     * By default, this is set to timestamp when Firehose becomes Active.
+     * </p>
+     * <p>
+     * If you want to create a Firehose stream with Earliest start position from SDK or CLI, you need to set the
+     * <code>ReadFromTimestampUTC</code> parameter to Epoch (1970-01-01T00:00:00Z).
+     * </p>
+     * 
+     * @return The start date and time in UTC for the offset position within your MSK topic from where Firehose begins
+     *         to read. By default, this is set to timestamp when Firehose becomes Active. </p>
+     *         <p>
+     *         If you want to create a Firehose stream with Earliest start position from SDK or CLI, you need to set the
+     *         <code>ReadFromTimestampUTC</code> parameter to Epoch (1970-01-01T00:00:00Z).
+     */
+
+    public java.util.Date getReadFromTimestamp() {
+        return this.readFromTimestamp;
+    }
+
+    /**
+     * <p>
+     * The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read.
+     * By default, this is set to timestamp when Firehose becomes Active.
+     * </p>
+     * <p>
+     * If you want to create a Firehose stream with Earliest start position from SDK or CLI, you need to set the
+     * <code>ReadFromTimestampUTC</code> parameter to Epoch (1970-01-01T00:00:00Z).
+     * </p>
+     * 
+     * @param readFromTimestamp
+     *        The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to
+     *        read. By default, this is set to timestamp when Firehose becomes Active. </p>
+     *        <p>
+     *        If you want to create a Firehose stream with Earliest start position from SDK or CLI, you need to set the
+     *        <code>ReadFromTimestampUTC</code> parameter to Epoch (1970-01-01T00:00:00Z).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MSKSourceDescription withReadFromTimestamp(java.util.Date readFromTimestamp) {
+        setReadFromTimestamp(readFromTimestamp);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -235,7 +313,9 @@ public class MSKSourceDescription implements Serializable, Cloneable, Structured
         if (getAuthenticationConfiguration() != null)
             sb.append("AuthenticationConfiguration: ").append(getAuthenticationConfiguration()).append(",");
         if (getDeliveryStartTimestamp() != null)
-            sb.append("DeliveryStartTimestamp: ").append(getDeliveryStartTimestamp());
+            sb.append("DeliveryStartTimestamp: ").append(getDeliveryStartTimestamp()).append(",");
+        if (getReadFromTimestamp() != null)
+            sb.append("ReadFromTimestamp: ").append(getReadFromTimestamp());
         sb.append("}");
         return sb.toString();
     }
@@ -266,6 +346,10 @@ public class MSKSourceDescription implements Serializable, Cloneable, Structured
             return false;
         if (other.getDeliveryStartTimestamp() != null && other.getDeliveryStartTimestamp().equals(this.getDeliveryStartTimestamp()) == false)
             return false;
+        if (other.getReadFromTimestamp() == null ^ this.getReadFromTimestamp() == null)
+            return false;
+        if (other.getReadFromTimestamp() != null && other.getReadFromTimestamp().equals(this.getReadFromTimestamp()) == false)
+            return false;
         return true;
     }
 
@@ -278,6 +362,7 @@ public class MSKSourceDescription implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getTopicName() == null) ? 0 : getTopicName().hashCode());
         hashCode = prime * hashCode + ((getAuthenticationConfiguration() == null) ? 0 : getAuthenticationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDeliveryStartTimestamp() == null) ? 0 : getDeliveryStartTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getReadFromTimestamp() == null) ? 0 : getReadFromTimestamp().hashCode());
         return hashCode;
     }
 

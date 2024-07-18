@@ -140,6 +140,13 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
      * </p>
      */
     private SecretsManagerConfiguration secretsManagerConfiguration;
+    /**
+     * <p>
+     * Describes the buffering to perform before delivering data to the Snowflake destination. If you do not specify any
+     * value, Firehose uses the default values.
+     * </p>
+     */
+    private SnowflakeBufferingHints bufferingHints;
 
     /**
      * <p>
@@ -966,6 +973,52 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * Describes the buffering to perform before delivering data to the Snowflake destination. If you do not specify any
+     * value, Firehose uses the default values.
+     * </p>
+     * 
+     * @param bufferingHints
+     *        Describes the buffering to perform before delivering data to the Snowflake destination. If you do not
+     *        specify any value, Firehose uses the default values.
+     */
+
+    public void setBufferingHints(SnowflakeBufferingHints bufferingHints) {
+        this.bufferingHints = bufferingHints;
+    }
+
+    /**
+     * <p>
+     * Describes the buffering to perform before delivering data to the Snowflake destination. If you do not specify any
+     * value, Firehose uses the default values.
+     * </p>
+     * 
+     * @return Describes the buffering to perform before delivering data to the Snowflake destination. If you do not
+     *         specify any value, Firehose uses the default values.
+     */
+
+    public SnowflakeBufferingHints getBufferingHints() {
+        return this.bufferingHints;
+    }
+
+    /**
+     * <p>
+     * Describes the buffering to perform before delivering data to the Snowflake destination. If you do not specify any
+     * value, Firehose uses the default values.
+     * </p>
+     * 
+     * @param bufferingHints
+     *        Describes the buffering to perform before delivering data to the Snowflake destination. If you do not
+     *        specify any value, Firehose uses the default values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SnowflakeDestinationConfiguration withBufferingHints(SnowflakeBufferingHints bufferingHints) {
+        setBufferingHints(bufferingHints);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1014,7 +1067,9 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
         if (getS3Configuration() != null)
             sb.append("S3Configuration: ").append(getS3Configuration()).append(",");
         if (getSecretsManagerConfiguration() != null)
-            sb.append("SecretsManagerConfiguration: ").append(getSecretsManagerConfiguration());
+            sb.append("SecretsManagerConfiguration: ").append(getSecretsManagerConfiguration()).append(",");
+        if (getBufferingHints() != null)
+            sb.append("BufferingHints: ").append(getBufferingHints());
         sb.append("}");
         return sb.toString();
     }
@@ -1105,6 +1160,10 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
             return false;
         if (other.getSecretsManagerConfiguration() != null && other.getSecretsManagerConfiguration().equals(this.getSecretsManagerConfiguration()) == false)
             return false;
+        if (other.getBufferingHints() == null ^ this.getBufferingHints() == null)
+            return false;
+        if (other.getBufferingHints() != null && other.getBufferingHints().equals(this.getBufferingHints()) == false)
+            return false;
         return true;
     }
 
@@ -1132,6 +1191,7 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
         hashCode = prime * hashCode + ((getS3BackupMode() == null) ? 0 : getS3BackupMode().hashCode());
         hashCode = prime * hashCode + ((getS3Configuration() == null) ? 0 : getS3Configuration().hashCode());
         hashCode = prime * hashCode + ((getSecretsManagerConfiguration() == null) ? 0 : getSecretsManagerConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getBufferingHints() == null) ? 0 : getBufferingHints().hashCode());
         return hashCode;
     }
 

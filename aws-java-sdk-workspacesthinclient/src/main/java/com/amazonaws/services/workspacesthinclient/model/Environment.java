@@ -144,7 +144,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * "The tag keys and optional values for the newly created devices for this environment."
+     * The tag keys and optional values for the newly created devices for this environment.
      * </p>
      */
     private java.util.Map<String, String> deviceCreationTags;
@@ -1018,10 +1018,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * "The tag keys and optional values for the newly created devices for this environment."
+     * The tag keys and optional values for the newly created devices for this environment.
      * </p>
      * 
-     * @return "The tag keys and optional values for the newly created devices for this environment."
+     * @return The tag keys and optional values for the newly created devices for this environment.
      */
 
     public java.util.Map<String, String> getDeviceCreationTags() {
@@ -1030,11 +1030,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * "The tag keys and optional values for the newly created devices for this environment."
+     * The tag keys and optional values for the newly created devices for this environment.
      * </p>
      * 
      * @param deviceCreationTags
-     *        "The tag keys and optional values for the newly created devices for this environment."
+     *        The tag keys and optional values for the newly created devices for this environment.
      */
 
     public void setDeviceCreationTags(java.util.Map<String, String> deviceCreationTags) {
@@ -1043,11 +1043,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * "The tag keys and optional values for the newly created devices for this environment."
+     * The tag keys and optional values for the newly created devices for this environment.
      * </p>
      * 
      * @param deviceCreationTags
-     *        "The tag keys and optional values for the newly created devices for this environment."
+     *        The tag keys and optional values for the newly created devices for this environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

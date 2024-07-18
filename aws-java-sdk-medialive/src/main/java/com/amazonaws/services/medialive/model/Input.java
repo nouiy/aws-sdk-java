@@ -67,6 +67,8 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> tags;
 
     private String type;
+    /** The settings associated with an SRT input. */
+    private SrtSettings srtSettings;
 
     /**
      * The Unique ARN of the input (generated, immutable).
@@ -931,6 +933,40 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * The settings associated with an SRT input.
+     * 
+     * @param srtSettings
+     *        The settings associated with an SRT input.
+     */
+
+    public void setSrtSettings(SrtSettings srtSettings) {
+        this.srtSettings = srtSettings;
+    }
+
+    /**
+     * The settings associated with an SRT input.
+     * 
+     * @return The settings associated with an SRT input.
+     */
+
+    public SrtSettings getSrtSettings() {
+        return this.srtSettings;
+    }
+
+    /**
+     * The settings associated with an SRT input.
+     * 
+     * @param srtSettings
+     *        The settings associated with an SRT input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Input withSrtSettings(SrtSettings srtSettings) {
+        setSrtSettings(srtSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -973,7 +1009,9 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getSrtSettings() != null)
+            sb.append("SrtSettings: ").append(getSrtSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -1052,6 +1090,10 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getSrtSettings() == null ^ this.getSrtSettings() == null)
+            return false;
+        if (other.getSrtSettings() != null && other.getSrtSettings().equals(this.getSrtSettings()) == false)
+            return false;
         return true;
     }
 
@@ -1076,6 +1118,7 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getSrtSettings() == null) ? 0 : getSrtSettings().hashCode());
         return hashCode;
     }
 

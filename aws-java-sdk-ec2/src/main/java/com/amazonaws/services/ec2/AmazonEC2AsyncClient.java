@@ -2890,6 +2890,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<CreateIpamExternalResourceVerificationTokenResult> createIpamExternalResourceVerificationTokenAsync(
+            CreateIpamExternalResourceVerificationTokenRequest request) {
+
+        return createIpamExternalResourceVerificationTokenAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIpamExternalResourceVerificationTokenResult> createIpamExternalResourceVerificationTokenAsync(
+            final CreateIpamExternalResourceVerificationTokenRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateIpamExternalResourceVerificationTokenRequest, CreateIpamExternalResourceVerificationTokenResult> asyncHandler) {
+        final CreateIpamExternalResourceVerificationTokenRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateIpamExternalResourceVerificationTokenResult>() {
+            @Override
+            public CreateIpamExternalResourceVerificationTokenResult call() throws Exception {
+                CreateIpamExternalResourceVerificationTokenResult result = null;
+
+                try {
+                    result = executeCreateIpamExternalResourceVerificationToken(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIpamPoolResult> createIpamPoolAsync(CreateIpamPoolRequest request) {
 
         return createIpamPoolAsync(request, null);
@@ -5440,6 +5475,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeDeleteIpam(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamExternalResourceVerificationTokenResult> deleteIpamExternalResourceVerificationTokenAsync(
+            DeleteIpamExternalResourceVerificationTokenRequest request) {
+
+        return deleteIpamExternalResourceVerificationTokenAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamExternalResourceVerificationTokenResult> deleteIpamExternalResourceVerificationTokenAsync(
+            final DeleteIpamExternalResourceVerificationTokenRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteIpamExternalResourceVerificationTokenRequest, DeleteIpamExternalResourceVerificationTokenResult> asyncHandler) {
+        final DeleteIpamExternalResourceVerificationTokenRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteIpamExternalResourceVerificationTokenResult>() {
+            @Override
+            public DeleteIpamExternalResourceVerificationTokenResult call() throws Exception {
+                DeleteIpamExternalResourceVerificationTokenResult result = null;
+
+                try {
+                    result = executeDeleteIpamExternalResourceVerificationToken(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -10034,6 +10104,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeDescribeIpamByoasn(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamExternalResourceVerificationTokensResult> describeIpamExternalResourceVerificationTokensAsync(
+            DescribeIpamExternalResourceVerificationTokensRequest request) {
+
+        return describeIpamExternalResourceVerificationTokensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamExternalResourceVerificationTokensResult> describeIpamExternalResourceVerificationTokensAsync(
+            final DescribeIpamExternalResourceVerificationTokensRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeIpamExternalResourceVerificationTokensRequest, DescribeIpamExternalResourceVerificationTokensResult> asyncHandler) {
+        final DescribeIpamExternalResourceVerificationTokensRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeIpamExternalResourceVerificationTokensResult>() {
+            @Override
+            public DescribeIpamExternalResourceVerificationTokensResult call() throws Exception {
+                DescribeIpamExternalResourceVerificationTokensResult result = null;
+
+                try {
+                    result = executeDescribeIpamExternalResourceVerificationTokens(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

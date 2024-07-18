@@ -19,9 +19,6 @@ import javax.annotation.Generated;
  * <p>
  * Describes the modification status of an EBS volume.
  * </p>
- * <p>
- * If the volume has never been modified, some element values will be null.
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/VolumeModification" target="_top">AWS API
  *      Documentation</a>
@@ -37,7 +34,7 @@ public class VolumeModification implements Serializable, Cloneable {
     private String volumeId;
     /**
      * <p>
-     * The current modification state. The modification state is null for unmodified volumes.
+     * The current modification state.
      * </p>
      */
     private String modificationState;
@@ -168,11 +165,11 @@ public class VolumeModification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current modification state. The modification state is null for unmodified volumes.
+     * The current modification state.
      * </p>
      * 
      * @param modificationState
-     *        The current modification state. The modification state is null for unmodified volumes.
+     *        The current modification state.
      * @see VolumeModificationState
      */
 
@@ -182,10 +179,10 @@ public class VolumeModification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current modification state. The modification state is null for unmodified volumes.
+     * The current modification state.
      * </p>
      * 
-     * @return The current modification state. The modification state is null for unmodified volumes.
+     * @return The current modification state.
      * @see VolumeModificationState
      */
 
@@ -195,11 +192,11 @@ public class VolumeModification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current modification state. The modification state is null for unmodified volumes.
+     * The current modification state.
      * </p>
      * 
      * @param modificationState
-     *        The current modification state. The modification state is null for unmodified volumes.
+     *        The current modification state.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeModificationState
      */
@@ -211,11 +208,11 @@ public class VolumeModification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current modification state. The modification state is null for unmodified volumes.
+     * The current modification state.
      * </p>
      * 
      * @param modificationState
-     *        The current modification state. The modification state is null for unmodified volumes.
+     *        The current modification state.
      * @see VolumeModificationState
      */
 
@@ -225,11 +222,11 @@ public class VolumeModification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current modification state. The modification state is null for unmodified volumes.
+     * The current modification state.
      * </p>
      * 
      * @param modificationState
-     *        The current modification state. The modification state is null for unmodified volumes.
+     *        The current modification state.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeModificationState
      */

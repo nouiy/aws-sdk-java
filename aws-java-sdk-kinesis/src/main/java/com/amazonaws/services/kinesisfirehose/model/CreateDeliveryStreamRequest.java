@@ -154,6 +154,15 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private SnowflakeDestinationConfiguration snowflakeDestinationConfiguration;
+    /**
+     * <p>
+     * Configure Apache Iceberg Tables destination.
+     * </p>
+     * <p>
+     * Amazon Data Firehose is in preview release and is subject to change.
+     * </p>
+     */
+    private IcebergDestinationConfiguration icebergDestinationConfiguration;
 
     /**
      * <p>
@@ -1129,6 +1138,61 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Configure Apache Iceberg Tables destination.
+     * </p>
+     * <p>
+     * Amazon Data Firehose is in preview release and is subject to change.
+     * </p>
+     * 
+     * @param icebergDestinationConfiguration
+     *        Configure Apache Iceberg Tables destination. </p>
+     *        <p>
+     *        Amazon Data Firehose is in preview release and is subject to change.
+     */
+
+    public void setIcebergDestinationConfiguration(IcebergDestinationConfiguration icebergDestinationConfiguration) {
+        this.icebergDestinationConfiguration = icebergDestinationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configure Apache Iceberg Tables destination.
+     * </p>
+     * <p>
+     * Amazon Data Firehose is in preview release and is subject to change.
+     * </p>
+     * 
+     * @return Configure Apache Iceberg Tables destination. </p>
+     *         <p>
+     *         Amazon Data Firehose is in preview release and is subject to change.
+     */
+
+    public IcebergDestinationConfiguration getIcebergDestinationConfiguration() {
+        return this.icebergDestinationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configure Apache Iceberg Tables destination.
+     * </p>
+     * <p>
+     * Amazon Data Firehose is in preview release and is subject to change.
+     * </p>
+     * 
+     * @param icebergDestinationConfiguration
+     *        Configure Apache Iceberg Tables destination. </p>
+     *        <p>
+     *        Amazon Data Firehose is in preview release and is subject to change.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDeliveryStreamRequest withIcebergDestinationConfiguration(IcebergDestinationConfiguration icebergDestinationConfiguration) {
+        setIcebergDestinationConfiguration(icebergDestinationConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1169,7 +1233,9 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
         if (getMSKSourceConfiguration() != null)
             sb.append("MSKSourceConfiguration: ").append(getMSKSourceConfiguration()).append(",");
         if (getSnowflakeDestinationConfiguration() != null)
-            sb.append("SnowflakeDestinationConfiguration: ").append(getSnowflakeDestinationConfiguration());
+            sb.append("SnowflakeDestinationConfiguration: ").append(getSnowflakeDestinationConfiguration()).append(",");
+        if (getIcebergDestinationConfiguration() != null)
+            sb.append("IcebergDestinationConfiguration: ").append(getIcebergDestinationConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1254,6 +1320,11 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
         if (other.getSnowflakeDestinationConfiguration() != null
                 && other.getSnowflakeDestinationConfiguration().equals(this.getSnowflakeDestinationConfiguration()) == false)
             return false;
+        if (other.getIcebergDestinationConfiguration() == null ^ this.getIcebergDestinationConfiguration() == null)
+            return false;
+        if (other.getIcebergDestinationConfiguration() != null
+                && other.getIcebergDestinationConfiguration().equals(this.getIcebergDestinationConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1280,6 +1351,7 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
                 + ((getAmazonOpenSearchServerlessDestinationConfiguration() == null) ? 0 : getAmazonOpenSearchServerlessDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getMSKSourceConfiguration() == null) ? 0 : getMSKSourceConfiguration().hashCode());
         hashCode = prime * hashCode + ((getSnowflakeDestinationConfiguration() == null) ? 0 : getSnowflakeDestinationConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getIcebergDestinationConfiguration() == null) ? 0 : getIcebergDestinationConfiguration().hashCode());
         return hashCode;
     }
 

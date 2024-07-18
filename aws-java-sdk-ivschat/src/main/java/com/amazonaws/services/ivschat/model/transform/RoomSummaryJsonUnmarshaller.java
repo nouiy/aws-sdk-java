@@ -52,36 +52,36 @@ public class RoomSummaryJsonUnmarshaller implements Unmarshaller<RoomSummary, Js
                     context.nextToken();
                     roomSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createTime", targetDepth)) {
-                    context.nextToken();
-                    roomSummary.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     roomSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("loggingConfigurationIdentifiers", targetDepth)) {
+                if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
-                    roomSummary.setLoggingConfigurationIdentifiers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
+                    roomSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("messageReviewHandler", targetDepth)) {
                     context.nextToken();
                     roomSummary.setMessageReviewHandler(MessageReviewHandlerJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("name", targetDepth)) {
+                if (context.testExpression("createTime", targetDepth)) {
                     context.nextToken();
-                    roomSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                    roomSummary.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("updateTime", targetDepth)) {
+                    context.nextToken();
+                    roomSummary.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     roomSummary.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
-                if (context.testExpression("updateTime", targetDepth)) {
+                if (context.testExpression("loggingConfigurationIdentifiers", targetDepth)) {
                     context.nextToken();
-                    roomSummary.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    roomSummary.setLoggingConfigurationIdentifiers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

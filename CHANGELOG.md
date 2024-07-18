@@ -1,3 +1,52 @@
+# __1.12.762__ __2024-07-18__
+## __AWS Certificate Manager Private Certificate Authority__
+  - ### Features
+    - Fix broken waiters for the acm-pca client.  Waiters broke in version 1.13.144 of the Boto3 SDK.
+
+## __AWS Elemental MediaLive__
+  - ### Features
+    - AWS Elemental MediaLive now supports the SRT protocol via the new SRT Caller input type.
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Doc only update for Secrets Manager
+
+## __Amazon Connect Service__
+  - ### Features
+    - Amazon Connect expands search API coverage for additional resources.  Search for hierarchy groups by name, ID, tag, or other criteria (new endpoint). Search for agent statuses by name, ID, tag, or other criteria (new endpoint). Search for users by their assigned proficiencies (enhanced endpoint)
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Amazon VPC IP Address Manager (IPAM) now supports Bring-Your-Own-IP (BYOIP) for IP addresses registered with any Internet Registry. This feature uses DNS TXT records to validate ownership of a public IP address range.
+
+## __Amazon Interactive Video Service Chat__
+  - ### Features
+    - Documentation update for IVS Chat API Reference.
+
+## __Amazon Kinesis Firehose__
+  - ### Features
+    - This release 1) Add configurable buffering hints for Snowflake as destination. 2) Add ReadFromTimestamp for MSK As Source. Firehose will start reading data from MSK Cluster using offset associated with this timestamp. 3) Gated public beta release to add Apache Iceberg tables as destination.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Updates Amazon RDS documentation to specify an eventual consistency model for DescribePendingMaintenanceActions.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - SageMaker Training supports R5, T3 and R5D instances family. And SageMaker Processing supports G5 and R5D instances family.
+
+## __Amazon Timestream Query__
+  - ### Features
+    - Doc-only update for TimestreamQuery. Added guidance about the accepted valid value for the QueryPricingModel parameter.
+
+## __Amazon WorkSpaces Thin Client__
+  - ### Features
+    - Documentation update for WorkSpaces Thin Client.
+
+## __Tax Settings__
+  - ### Features
+    - Set default endpoint for aws partition. Requests from all regions in aws partition will be forward to us-east-1 endpoint.
+
 # __1.12.761__ __2024-07-12__
 ## __AWS ARC - Zonal Shift__
   - ### Features

@@ -48,13 +48,13 @@ public class MessageReviewHandlerJsonUnmarshaller implements Unmarshaller<Messag
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("fallbackResult", targetDepth)) {
-                    context.nextToken();
-                    messageReviewHandler.setFallbackResult(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("uri", targetDepth)) {
                     context.nextToken();
                     messageReviewHandler.setUri(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fallbackResult", targetDepth)) {
+                    context.nextToken();
+                    messageReviewHandler.setFallbackResult(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

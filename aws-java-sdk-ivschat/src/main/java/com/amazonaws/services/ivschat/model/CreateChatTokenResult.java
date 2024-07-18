@@ -25,13 +25,6 @@ public class CreateChatTokenResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that this is
-     * returned as a string</i>.
-     * </p>
-     */
-    private java.util.Date sessionExpirationTime;
-    /**
-     * <p>
      * The issued client token, encrypted.
      * </p>
      */
@@ -43,52 +36,13 @@ public class CreateChatTokenResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      */
     private java.util.Date tokenExpirationTime;
-
     /**
      * <p>
      * Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that this is
      * returned as a string</i>.
      * </p>
-     * 
-     * @param sessionExpirationTime
-     *        Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that
-     *        this is returned as a string</i>.
      */
-
-    public void setSessionExpirationTime(java.util.Date sessionExpirationTime) {
-        this.sessionExpirationTime = sessionExpirationTime;
-    }
-
-    /**
-     * <p>
-     * Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that this is
-     * returned as a string</i>.
-     * </p>
-     * 
-     * @return Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that
-     *         this is returned as a string</i>.
-     */
-
-    public java.util.Date getSessionExpirationTime() {
-        return this.sessionExpirationTime;
-    }
-
-    /**
-     * <p>
-     * Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that this is
-     * returned as a string</i>.
-     * </p>
-     * 
-     * @param sessionExpirationTime
-     *        Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that
-     *        this is returned as a string</i>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateChatTokenResult withSessionExpirationTime(java.util.Date sessionExpirationTime) {
-        setSessionExpirationTime(sessionExpirationTime);
-        return this;
-    }
+    private java.util.Date sessionExpirationTime;
 
     /**
      * <p>
@@ -177,6 +131,52 @@ public class CreateChatTokenResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that this is
+     * returned as a string</i>.
+     * </p>
+     * 
+     * @param sessionExpirationTime
+     *        Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that
+     *        this is returned as a string</i>.
+     */
+
+    public void setSessionExpirationTime(java.util.Date sessionExpirationTime) {
+        this.sessionExpirationTime = sessionExpirationTime;
+    }
+
+    /**
+     * <p>
+     * Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that this is
+     * returned as a string</i>.
+     * </p>
+     * 
+     * @return Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that
+     *         this is returned as a string</i>.
+     */
+
+    public java.util.Date getSessionExpirationTime() {
+        return this.sessionExpirationTime;
+    }
+
+    /**
+     * <p>
+     * Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that this is
+     * returned as a string</i>.
+     * </p>
+     * 
+     * @param sessionExpirationTime
+     *        Time after which an end user's session is no longer valid. This is an ISO 8601 timestamp; <i>note that
+     *        this is returned as a string</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChatTokenResult withSessionExpirationTime(java.util.Date sessionExpirationTime) {
+        setSessionExpirationTime(sessionExpirationTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -188,12 +188,12 @@ public class CreateChatTokenResult extends com.amazonaws.AmazonWebServiceResult<
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getSessionExpirationTime() != null)
-            sb.append("SessionExpirationTime: ").append(getSessionExpirationTime()).append(",");
         if (getToken() != null)
             sb.append("Token: ").append("***Sensitive Data Redacted***").append(",");
         if (getTokenExpirationTime() != null)
-            sb.append("TokenExpirationTime: ").append(getTokenExpirationTime());
+            sb.append("TokenExpirationTime: ").append(getTokenExpirationTime()).append(",");
+        if (getSessionExpirationTime() != null)
+            sb.append("SessionExpirationTime: ").append(getSessionExpirationTime());
         sb.append("}");
         return sb.toString();
     }
@@ -208,10 +208,6 @@ public class CreateChatTokenResult extends com.amazonaws.AmazonWebServiceResult<
         if (obj instanceof CreateChatTokenResult == false)
             return false;
         CreateChatTokenResult other = (CreateChatTokenResult) obj;
-        if (other.getSessionExpirationTime() == null ^ this.getSessionExpirationTime() == null)
-            return false;
-        if (other.getSessionExpirationTime() != null && other.getSessionExpirationTime().equals(this.getSessionExpirationTime()) == false)
-            return false;
         if (other.getToken() == null ^ this.getToken() == null)
             return false;
         if (other.getToken() != null && other.getToken().equals(this.getToken()) == false)
@@ -219,6 +215,10 @@ public class CreateChatTokenResult extends com.amazonaws.AmazonWebServiceResult<
         if (other.getTokenExpirationTime() == null ^ this.getTokenExpirationTime() == null)
             return false;
         if (other.getTokenExpirationTime() != null && other.getTokenExpirationTime().equals(this.getTokenExpirationTime()) == false)
+            return false;
+        if (other.getSessionExpirationTime() == null ^ this.getSessionExpirationTime() == null)
+            return false;
+        if (other.getSessionExpirationTime() != null && other.getSessionExpirationTime().equals(this.getSessionExpirationTime()) == false)
             return false;
         return true;
     }
@@ -228,9 +228,9 @@ public class CreateChatTokenResult extends com.amazonaws.AmazonWebServiceResult<
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getSessionExpirationTime() == null) ? 0 : getSessionExpirationTime().hashCode());
         hashCode = prime * hashCode + ((getToken() == null) ? 0 : getToken().hashCode());
         hashCode = prime * hashCode + ((getTokenExpirationTime() == null) ? 0 : getTokenExpirationTime().hashCode());
+        hashCode = prime * hashCode + ((getSessionExpirationTime() == null) ? 0 : getSessionExpirationTime().hashCode());
         return hashCode;
     }
 

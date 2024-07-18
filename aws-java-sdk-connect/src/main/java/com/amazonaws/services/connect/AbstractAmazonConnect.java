@@ -893,6 +893,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public SearchAgentStatusesResult searchAgentStatuses(SearchAgentStatusesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchAvailablePhoneNumbersResult searchAvailablePhoneNumbers(SearchAvailablePhoneNumbersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -949,6 +954,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public SearchSecurityProfilesResult searchSecurityProfiles(SearchSecurityProfilesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchUserHierarchyGroupsResult searchUserHierarchyGroups(SearchUserHierarchyGroupsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

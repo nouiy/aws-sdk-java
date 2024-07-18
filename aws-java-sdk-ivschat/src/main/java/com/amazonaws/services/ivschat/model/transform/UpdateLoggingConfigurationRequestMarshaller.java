@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateLoggingConfigurationRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> DESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConfiguration").build();
     private static final MarshallingInfo<String> IDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("identifier").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<StructuredPojo> DESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConfiguration").build();
 
     private static final UpdateLoggingConfigurationRequestMarshaller instance = new UpdateLoggingConfigurationRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class UpdateLoggingConfigurationRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updateLoggingConfigurationRequest.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateLoggingConfigurationRequest.getIdentifier(), IDENTIFIER_BINDING);
             protocolMarshaller.marshall(updateLoggingConfigurationRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(updateLoggingConfigurationRequest.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

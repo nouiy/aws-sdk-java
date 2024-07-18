@@ -52,21 +52,25 @@ public class UpdateLoggingConfigurationResultJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     updateLoggingConfigurationResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createTime", targetDepth)) {
-                    context.nextToken();
-                    updateLoggingConfigurationResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("destinationConfiguration", targetDepth)) {
-                    context.nextToken();
-                    updateLoggingConfigurationResult.setDestinationConfiguration(DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     updateLoggingConfigurationResult.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("createTime", targetDepth)) {
+                    context.nextToken();
+                    updateLoggingConfigurationResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("updateTime", targetDepth)) {
+                    context.nextToken();
+                    updateLoggingConfigurationResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     updateLoggingConfigurationResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("destinationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    updateLoggingConfigurationResult.setDestinationConfiguration(DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();
@@ -76,10 +80,6 @@ public class UpdateLoggingConfigurationResultJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     updateLoggingConfigurationResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
-                }
-                if (context.testExpression("updateTime", targetDepth)) {
-                    context.nextToken();
-                    updateLoggingConfigurationResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

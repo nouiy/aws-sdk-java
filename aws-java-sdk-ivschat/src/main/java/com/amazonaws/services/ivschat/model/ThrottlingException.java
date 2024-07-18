@@ -22,11 +22,11 @@ public class ThrottlingException extends com.amazonaws.services.ivschat.model.Am
     private static final long serialVersionUID = 1L;
 
     /** <p/> */
-    private Integer limit;
-    /** <p/> */
     private String resourceId;
     /** <p/> */
     private String resourceType;
+    /** <p/> */
+    private Integer limit;
 
     /**
      * Constructs a new ThrottlingException with the specified error message.
@@ -36,40 +36,6 @@ public class ThrottlingException extends com.amazonaws.services.ivschat.model.Am
      */
     public ThrottlingException(String message) {
         super(message);
-    }
-
-    /**
-     * <p/>
-     * 
-     * @param limit
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("limit")
-    public void setLimit(Integer limit) {
-        this.limit = limit;
-    }
-
-    /**
-     * <p/>
-     * 
-     * @return
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("limit")
-    public Integer getLimit() {
-        return this.limit;
-    }
-
-    /**
-     * <p/>
-     * 
-     * @param limit
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ThrottlingException withLimit(Integer limit) {
-        setLimit(limit);
-        return this;
     }
 
     /**
@@ -153,6 +119,40 @@ public class ThrottlingException extends com.amazonaws.services.ivschat.model.Am
 
     public ThrottlingException withResourceType(ResourceType resourceType) {
         this.resourceType = resourceType.toString();
+        return this;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param limit
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("limit")
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @return
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("limit")
+    public Integer getLimit() {
+        return this.limit;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param limit
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ThrottlingException withLimit(Integer limit) {
+        setLimit(limit);
         return this;
     }
 

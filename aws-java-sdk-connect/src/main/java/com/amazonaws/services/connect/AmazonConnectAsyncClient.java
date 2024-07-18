@@ -5850,6 +5850,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<SearchAgentStatusesResult> searchAgentStatusesAsync(SearchAgentStatusesRequest request) {
+
+        return searchAgentStatusesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAgentStatusesResult> searchAgentStatusesAsync(final SearchAgentStatusesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchAgentStatusesRequest, SearchAgentStatusesResult> asyncHandler) {
+        final SearchAgentStatusesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchAgentStatusesResult>() {
+            @Override
+            public SearchAgentStatusesResult call() throws Exception {
+                SearchAgentStatusesResult result = null;
+
+                try {
+                    result = executeSearchAgentStatuses(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(SearchAvailablePhoneNumbersRequest request) {
 
         return searchAvailablePhoneNumbersAsync(request, null);
@@ -6230,6 +6263,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeSearchSecurityProfiles(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchUserHierarchyGroupsResult> searchUserHierarchyGroupsAsync(SearchUserHierarchyGroupsRequest request) {
+
+        return searchUserHierarchyGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchUserHierarchyGroupsResult> searchUserHierarchyGroupsAsync(final SearchUserHierarchyGroupsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchUserHierarchyGroupsRequest, SearchUserHierarchyGroupsResult> asyncHandler) {
+        final SearchUserHierarchyGroupsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchUserHierarchyGroupsResult>() {
+            @Override
+            public SearchUserHierarchyGroupsResult call() throws Exception {
+                SearchUserHierarchyGroupsResult result = null;
+
+                try {
+                    result = executeSearchUserHierarchyGroups(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

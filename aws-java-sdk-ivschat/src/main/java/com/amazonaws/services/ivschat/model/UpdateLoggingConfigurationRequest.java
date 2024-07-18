@@ -27,14 +27,6 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A complex type that contains a destination configuration for where chat content will be logged. There can be only
-     * one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>) in a
-     * <code>destinationConfiguration</code>.
-     * </p>
-     */
-    private DestinationConfiguration destinationConfiguration;
-    /**
-     * <p>
      * Identifier of the logging configuration to be updated.
      * </p>
      */
@@ -45,58 +37,14 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String name;
-
     /**
      * <p>
      * A complex type that contains a destination configuration for where chat content will be logged. There can be only
      * one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>) in a
      * <code>destinationConfiguration</code>.
      * </p>
-     * 
-     * @param destinationConfiguration
-     *        A complex type that contains a destination configuration for where chat content will be logged. There can
-     *        be only one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>)
-     *        in a <code>destinationConfiguration</code>.
      */
-
-    public void setDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
-        this.destinationConfiguration = destinationConfiguration;
-    }
-
-    /**
-     * <p>
-     * A complex type that contains a destination configuration for where chat content will be logged. There can be only
-     * one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>) in a
-     * <code>destinationConfiguration</code>.
-     * </p>
-     * 
-     * @return A complex type that contains a destination configuration for where chat content will be logged. There can
-     *         be only one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>)
-     *         in a <code>destinationConfiguration</code>.
-     */
-
-    public DestinationConfiguration getDestinationConfiguration() {
-        return this.destinationConfiguration;
-    }
-
-    /**
-     * <p>
-     * A complex type that contains a destination configuration for where chat content will be logged. There can be only
-     * one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>) in a
-     * <code>destinationConfiguration</code>.
-     * </p>
-     * 
-     * @param destinationConfiguration
-     *        A complex type that contains a destination configuration for where chat content will be logged. There can
-     *        be only one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>)
-     *        in a <code>destinationConfiguration</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateLoggingConfigurationRequest withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
-        setDestinationConfiguration(destinationConfiguration);
-        return this;
-    }
+    private DestinationConfiguration destinationConfiguration;
 
     /**
      * <p>
@@ -179,6 +127,58 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * A complex type that contains a destination configuration for where chat content will be logged. There can be only
+     * one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>) in a
+     * <code>destinationConfiguration</code>.
+     * </p>
+     * 
+     * @param destinationConfiguration
+     *        A complex type that contains a destination configuration for where chat content will be logged. There can
+     *        be only one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>)
+     *        in a <code>destinationConfiguration</code>.
+     */
+
+    public void setDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
+        this.destinationConfiguration = destinationConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains a destination configuration for where chat content will be logged. There can be only
+     * one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>) in a
+     * <code>destinationConfiguration</code>.
+     * </p>
+     * 
+     * @return A complex type that contains a destination configuration for where chat content will be logged. There can
+     *         be only one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>)
+     *         in a <code>destinationConfiguration</code>.
+     */
+
+    public DestinationConfiguration getDestinationConfiguration() {
+        return this.destinationConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains a destination configuration for where chat content will be logged. There can be only
+     * one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>) in a
+     * <code>destinationConfiguration</code>.
+     * </p>
+     * 
+     * @param destinationConfiguration
+     *        A complex type that contains a destination configuration for where chat content will be logged. There can
+     *        be only one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>)
+     *        in a <code>destinationConfiguration</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateLoggingConfigurationRequest withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
+        setDestinationConfiguration(destinationConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -190,12 +190,12 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDestinationConfiguration() != null)
-            sb.append("DestinationConfiguration: ").append(getDestinationConfiguration()).append(",");
         if (getIdentifier() != null)
             sb.append("Identifier: ").append(getIdentifier()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getDestinationConfiguration() != null)
+            sb.append("DestinationConfiguration: ").append(getDestinationConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -210,10 +210,6 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         if (obj instanceof UpdateLoggingConfigurationRequest == false)
             return false;
         UpdateLoggingConfigurationRequest other = (UpdateLoggingConfigurationRequest) obj;
-        if (other.getDestinationConfiguration() == null ^ this.getDestinationConfiguration() == null)
-            return false;
-        if (other.getDestinationConfiguration() != null && other.getDestinationConfiguration().equals(this.getDestinationConfiguration()) == false)
-            return false;
         if (other.getIdentifier() == null ^ this.getIdentifier() == null)
             return false;
         if (other.getIdentifier() != null && other.getIdentifier().equals(this.getIdentifier()) == false)
@@ -221,6 +217,10 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getDestinationConfiguration() == null ^ this.getDestinationConfiguration() == null)
+            return false;
+        if (other.getDestinationConfiguration() != null && other.getDestinationConfiguration().equals(this.getDestinationConfiguration()) == false)
             return false;
         return true;
     }
@@ -230,9 +230,9 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getIdentifier() == null) ? 0 : getIdentifier().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         return hashCode;
     }
 

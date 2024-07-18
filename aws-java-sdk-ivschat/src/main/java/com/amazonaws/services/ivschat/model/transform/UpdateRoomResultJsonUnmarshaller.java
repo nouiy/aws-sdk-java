@@ -52,44 +52,44 @@ public class UpdateRoomResultJsonUnmarshaller implements Unmarshaller<UpdateRoom
                     context.nextToken();
                     updateRoomResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createTime", targetDepth)) {
-                    context.nextToken();
-                    updateRoomResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     updateRoomResult.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("loggingConfigurationIdentifiers", targetDepth)) {
+                if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
-                    updateRoomResult.setLoggingConfigurationIdentifiers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
+                    updateRoomResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("maximumMessageLength", targetDepth)) {
+                if (context.testExpression("createTime", targetDepth)) {
                     context.nextToken();
-                    updateRoomResult.setMaximumMessageLength(context.getUnmarshaller(Integer.class).unmarshall(context));
+                    updateRoomResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("updateTime", targetDepth)) {
+                    context.nextToken();
+                    updateRoomResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("maximumMessageRatePerSecond", targetDepth)) {
                     context.nextToken();
                     updateRoomResult.setMaximumMessageRatePerSecond(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("maximumMessageLength", targetDepth)) {
+                    context.nextToken();
+                    updateRoomResult.setMaximumMessageLength(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("messageReviewHandler", targetDepth)) {
                     context.nextToken();
                     updateRoomResult.setMessageReviewHandler(MessageReviewHandlerJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("name", targetDepth)) {
-                    context.nextToken();
-                    updateRoomResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     updateRoomResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
-                if (context.testExpression("updateTime", targetDepth)) {
+                if (context.testExpression("loggingConfigurationIdentifiers", targetDepth)) {
                     context.nextToken();
-                    updateRoomResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    updateRoomResult.setLoggingConfigurationIdentifiers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

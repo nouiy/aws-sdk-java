@@ -142,6 +142,12 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
      * </p>
      */
     private SecretsManagerConfiguration secretsManagerConfiguration;
+    /**
+     * <p>
+     * Describes the buffering to perform before delivering data to the Snowflake destination.
+     * </p>
+     */
+    private SnowflakeBufferingHints bufferingHints;
 
     /**
      * <p>
@@ -976,6 +982,46 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Describes the buffering to perform before delivering data to the Snowflake destination.
+     * </p>
+     * 
+     * @param bufferingHints
+     *        Describes the buffering to perform before delivering data to the Snowflake destination.
+     */
+
+    public void setBufferingHints(SnowflakeBufferingHints bufferingHints) {
+        this.bufferingHints = bufferingHints;
+    }
+
+    /**
+     * <p>
+     * Describes the buffering to perform before delivering data to the Snowflake destination.
+     * </p>
+     * 
+     * @return Describes the buffering to perform before delivering data to the Snowflake destination.
+     */
+
+    public SnowflakeBufferingHints getBufferingHints() {
+        return this.bufferingHints;
+    }
+
+    /**
+     * <p>
+     * Describes the buffering to perform before delivering data to the Snowflake destination.
+     * </p>
+     * 
+     * @param bufferingHints
+     *        Describes the buffering to perform before delivering data to the Snowflake destination.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SnowflakeDestinationUpdate withBufferingHints(SnowflakeBufferingHints bufferingHints) {
+        setBufferingHints(bufferingHints);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1022,7 +1068,9 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
         if (getS3Update() != null)
             sb.append("S3Update: ").append(getS3Update()).append(",");
         if (getSecretsManagerConfiguration() != null)
-            sb.append("SecretsManagerConfiguration: ").append(getSecretsManagerConfiguration());
+            sb.append("SecretsManagerConfiguration: ").append(getSecretsManagerConfiguration()).append(",");
+        if (getBufferingHints() != null)
+            sb.append("BufferingHints: ").append(getBufferingHints());
         sb.append("}");
         return sb.toString();
     }
@@ -1109,6 +1157,10 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
             return false;
         if (other.getSecretsManagerConfiguration() != null && other.getSecretsManagerConfiguration().equals(this.getSecretsManagerConfiguration()) == false)
             return false;
+        if (other.getBufferingHints() == null ^ this.getBufferingHints() == null)
+            return false;
+        if (other.getBufferingHints() != null && other.getBufferingHints().equals(this.getBufferingHints()) == false)
+            return false;
         return true;
     }
 
@@ -1135,6 +1187,7 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getS3BackupMode() == null) ? 0 : getS3BackupMode().hashCode());
         hashCode = prime * hashCode + ((getS3Update() == null) ? 0 : getS3Update().hashCode());
         hashCode = prime * hashCode + ((getSecretsManagerConfiguration() == null) ? 0 : getSecretsManagerConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getBufferingHints() == null) ? 0 : getBufferingHints().hashCode());
         return hashCode;
     }
 

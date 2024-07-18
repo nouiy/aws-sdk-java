@@ -5295,6 +5295,67 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Create a verification token. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param createIpamExternalResourceVerificationTokenRequest
+     * @return Result of the CreateIpamExternalResourceVerificationToken operation returned by the service.
+     * @sample AmazonEC2.CreateIpamExternalResourceVerificationToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamExternalResourceVerificationToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateIpamExternalResourceVerificationTokenResult createIpamExternalResourceVerificationToken(
+            CreateIpamExternalResourceVerificationTokenRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIpamExternalResourceVerificationToken(request);
+    }
+
+    @SdkInternalApi
+    final CreateIpamExternalResourceVerificationTokenResult executeCreateIpamExternalResourceVerificationToken(
+            CreateIpamExternalResourceVerificationTokenRequest createIpamExternalResourceVerificationTokenRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIpamExternalResourceVerificationTokenRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIpamExternalResourceVerificationTokenRequest> request = null;
+        Response<CreateIpamExternalResourceVerificationTokenResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIpamExternalResourceVerificationTokenRequestMarshaller().marshall(super
+                        .beforeMarshalling(createIpamExternalResourceVerificationTokenRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIpamExternalResourceVerificationToken");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateIpamExternalResourceVerificationTokenResult> responseHandler = new StaxResponseHandler<CreateIpamExternalResourceVerificationTokenResult>(
+                    new CreateIpamExternalResourceVerificationTokenResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Create an IP address pool for Amazon VPC IP Address Manager (IPAM). In IPAM, a pool is a collection of contiguous
      * IP addresses CIDRs. Pools enable you to organize your IP addresses according to your routing and security needs.
      * For example, if you have separate routing and security needs for development and production applications, you can
@@ -10231,6 +10292,67 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
             }
 
             StaxResponseHandler<DeleteIpamResult> responseHandler = new StaxResponseHandler<DeleteIpamResult>(new DeleteIpamResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete a verification token. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param deleteIpamExternalResourceVerificationTokenRequest
+     * @return Result of the DeleteIpamExternalResourceVerificationToken operation returned by the service.
+     * @sample AmazonEC2.DeleteIpamExternalResourceVerificationToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamExternalResourceVerificationToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteIpamExternalResourceVerificationTokenResult deleteIpamExternalResourceVerificationToken(
+            DeleteIpamExternalResourceVerificationTokenRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIpamExternalResourceVerificationToken(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIpamExternalResourceVerificationTokenResult executeDeleteIpamExternalResourceVerificationToken(
+            DeleteIpamExternalResourceVerificationTokenRequest deleteIpamExternalResourceVerificationTokenRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIpamExternalResourceVerificationTokenRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIpamExternalResourceVerificationTokenRequest> request = null;
+        Response<DeleteIpamExternalResourceVerificationTokenResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIpamExternalResourceVerificationTokenRequestMarshaller().marshall(super
+                        .beforeMarshalling(deleteIpamExternalResourceVerificationTokenRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIpamExternalResourceVerificationToken");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteIpamExternalResourceVerificationTokenResult> responseHandler = new StaxResponseHandler<DeleteIpamExternalResourceVerificationTokenResult>(
+                    new DeleteIpamExternalResourceVerificationTokenResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -17910,6 +18032,68 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describe verification tokens. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param describeIpamExternalResourceVerificationTokensRequest
+     * @return Result of the DescribeIpamExternalResourceVerificationTokens operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamExternalResourceVerificationTokens
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamExternalResourceVerificationTokens"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeIpamExternalResourceVerificationTokensResult describeIpamExternalResourceVerificationTokens(
+            DescribeIpamExternalResourceVerificationTokensRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeIpamExternalResourceVerificationTokens(request);
+    }
+
+    @SdkInternalApi
+    final DescribeIpamExternalResourceVerificationTokensResult executeDescribeIpamExternalResourceVerificationTokens(
+            DescribeIpamExternalResourceVerificationTokensRequest describeIpamExternalResourceVerificationTokensRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeIpamExternalResourceVerificationTokensRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeIpamExternalResourceVerificationTokensRequest> request = null;
+        Response<DescribeIpamExternalResourceVerificationTokensResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeIpamExternalResourceVerificationTokensRequestMarshaller().marshall(super
+                        .beforeMarshalling(describeIpamExternalResourceVerificationTokensRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeIpamExternalResourceVerificationTokens");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeIpamExternalResourceVerificationTokensResult> responseHandler = new StaxResponseHandler<DescribeIpamExternalResourceVerificationTokensResult>(
+                    new DescribeIpamExternalResourceVerificationTokensResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get information about your IPAM pools.
      * </p>
      * 
@@ -19567,7 +19751,17 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes the specified placement groups or all of your placement groups. For more information, see <a
+     * Describes the specified placement groups or all of your placement groups.
+     * </p>
+     * <note>
+     * <p>
+     * To describe a specific placement group that is <i>shared</i> with your account, you must specify the ID of the
+     * placement group using the <code>GroupId</code> parameter. Specifying the name of a <i>shared</i> placement group
+     * using the <code>GroupNames</code> parameter will result in an error.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide</i>.
      * </p>
@@ -22970,10 +23164,6 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     /**
      * <p>
      * Describes the most recent volume modification request for the specified EBS volumes.
-     * </p>
-     * <p>
-     * If a volume has never been modified, some information in the output will be null. If a volume has been modified
-     * more than once, the output includes only the most recent modification request.
      * </p>
      * <p>
      * For more information, see <a
@@ -27814,15 +28004,6 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Gets the console output for the specified instance. For Linux instances, the instance console output displays the
      * exact console output that would normally be displayed on a physical monitor attached to a computer. For Windows
      * instances, the instance console output includes the last three system event log errors.
-     * </p>
-     * <p>
-     * By default, the console output returns buffered information that was posted shortly after an instance transition
-     * state (start, stop, reboot, or terminate). This information is available for at least one hour after the most
-     * recent post. Only the most recent 64 KB of console output is available.
-     * </p>
-     * <p>
-     * You can optionally retrieve the latest serial console output at any time during the instance lifecycle. This
-     * option is supported on instance types that use the Nitro hypervisor.
      * </p>
      * <p>
      * For more information, see <a href=

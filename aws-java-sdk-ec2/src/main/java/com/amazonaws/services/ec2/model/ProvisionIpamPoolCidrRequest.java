@@ -42,7 +42,7 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
     /**
      * <p>
      * A signed document that proves that you are authorized to bring a specified IP address range to Amazon using
-     * BYOIP. This option applies to public pools only.
+     * BYOIP. This option only applies to IPv4 and IPv6 pools in the public scope.
      * </p>
      */
     private IpamCidrAuthorizationContext cidrAuthorizationContext;
@@ -62,6 +62,19 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if not
+     * specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     */
+    private String verificationMethod;
+    /**
+     * <p>
+     * Verification token ID. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     */
+    private String ipamExternalResourceVerificationTokenId;
 
     /**
      * <p>
@@ -152,12 +165,12 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
     /**
      * <p>
      * A signed document that proves that you are authorized to bring a specified IP address range to Amazon using
-     * BYOIP. This option applies to public pools only.
+     * BYOIP. This option only applies to IPv4 and IPv6 pools in the public scope.
      * </p>
      * 
      * @param cidrAuthorizationContext
      *        A signed document that proves that you are authorized to bring a specified IP address range to Amazon
-     *        using BYOIP. This option applies to public pools only.
+     *        using BYOIP. This option only applies to IPv4 and IPv6 pools in the public scope.
      */
 
     public void setCidrAuthorizationContext(IpamCidrAuthorizationContext cidrAuthorizationContext) {
@@ -167,11 +180,11 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
     /**
      * <p>
      * A signed document that proves that you are authorized to bring a specified IP address range to Amazon using
-     * BYOIP. This option applies to public pools only.
+     * BYOIP. This option only applies to IPv4 and IPv6 pools in the public scope.
      * </p>
      * 
      * @return A signed document that proves that you are authorized to bring a specified IP address range to Amazon
-     *         using BYOIP. This option applies to public pools only.
+     *         using BYOIP. This option only applies to IPv4 and IPv6 pools in the public scope.
      */
 
     public IpamCidrAuthorizationContext getCidrAuthorizationContext() {
@@ -181,12 +194,12 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
     /**
      * <p>
      * A signed document that proves that you are authorized to bring a specified IP address range to Amazon using
-     * BYOIP. This option applies to public pools only.
+     * BYOIP. This option only applies to IPv4 and IPv6 pools in the public scope.
      * </p>
      * 
      * @param cidrAuthorizationContext
      *        A signed document that proves that you are authorized to bring a specified IP address range to Amazon
-     *        using BYOIP. This option applies to public pools only.
+     *        using BYOIP. This option only applies to IPv4 and IPv6 pools in the public scope.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,6 +313,113 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
     }
 
     /**
+     * <p>
+     * The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if not
+     * specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     * 
+     * @param verificationMethod
+     *        The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if
+     *        not specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * @see VerificationMethod
+     */
+
+    public void setVerificationMethod(String verificationMethod) {
+        this.verificationMethod = verificationMethod;
+    }
+
+    /**
+     * <p>
+     * The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if not
+     * specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     * 
+     * @return The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if
+     *         not specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * @see VerificationMethod
+     */
+
+    public String getVerificationMethod() {
+        return this.verificationMethod;
+    }
+
+    /**
+     * <p>
+     * The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if not
+     * specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     * 
+     * @param verificationMethod
+     *        The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if
+     *        not specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VerificationMethod
+     */
+
+    public ProvisionIpamPoolCidrRequest withVerificationMethod(String verificationMethod) {
+        setVerificationMethod(verificationMethod);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if not
+     * specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     * 
+     * @param verificationMethod
+     *        The method for verifying control of a public IP address range. Defaults to <code>remarks-x509</code> if
+     *        not specified. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VerificationMethod
+     */
+
+    public ProvisionIpamPoolCidrRequest withVerificationMethod(VerificationMethod verificationMethod) {
+        this.verificationMethod = verificationMethod.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Verification token ID. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     * 
+     * @param ipamExternalResourceVerificationTokenId
+     *        Verification token ID. This option only applies to IPv4 and IPv6 pools in the public scope.
+     */
+
+    public void setIpamExternalResourceVerificationTokenId(String ipamExternalResourceVerificationTokenId) {
+        this.ipamExternalResourceVerificationTokenId = ipamExternalResourceVerificationTokenId;
+    }
+
+    /**
+     * <p>
+     * Verification token ID. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     * 
+     * @return Verification token ID. This option only applies to IPv4 and IPv6 pools in the public scope.
+     */
+
+    public String getIpamExternalResourceVerificationTokenId() {
+        return this.ipamExternalResourceVerificationTokenId;
+    }
+
+    /**
+     * <p>
+     * Verification token ID. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * </p>
+     * 
+     * @param ipamExternalResourceVerificationTokenId
+     *        Verification token ID. This option only applies to IPv4 and IPv6 pools in the public scope.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProvisionIpamPoolCidrRequest withIpamExternalResourceVerificationTokenId(String ipamExternalResourceVerificationTokenId) {
+        setIpamExternalResourceVerificationTokenId(ipamExternalResourceVerificationTokenId);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -331,7 +451,11 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
         if (getNetmaskLength() != null)
             sb.append("NetmaskLength: ").append(getNetmaskLength()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getVerificationMethod() != null)
+            sb.append("VerificationMethod: ").append(getVerificationMethod()).append(",");
+        if (getIpamExternalResourceVerificationTokenId() != null)
+            sb.append("IpamExternalResourceVerificationTokenId: ").append(getIpamExternalResourceVerificationTokenId());
         sb.append("}");
         return sb.toString();
     }
@@ -366,6 +490,15 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getVerificationMethod() == null ^ this.getVerificationMethod() == null)
+            return false;
+        if (other.getVerificationMethod() != null && other.getVerificationMethod().equals(this.getVerificationMethod()) == false)
+            return false;
+        if (other.getIpamExternalResourceVerificationTokenId() == null ^ this.getIpamExternalResourceVerificationTokenId() == null)
+            return false;
+        if (other.getIpamExternalResourceVerificationTokenId() != null
+                && other.getIpamExternalResourceVerificationTokenId().equals(this.getIpamExternalResourceVerificationTokenId()) == false)
+            return false;
         return true;
     }
 
@@ -379,6 +512,8 @@ public class ProvisionIpamPoolCidrRequest extends AmazonWebServiceRequest implem
         hashCode = prime * hashCode + ((getCidrAuthorizationContext() == null) ? 0 : getCidrAuthorizationContext().hashCode());
         hashCode = prime * hashCode + ((getNetmaskLength() == null) ? 0 : getNetmaskLength().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getVerificationMethod() == null) ? 0 : getVerificationMethod().hashCode());
+        hashCode = prime * hashCode + ((getIpamExternalResourceVerificationTokenId() == null) ? 0 : getIpamExternalResourceVerificationTokenId().hashCode());
         return hashCode;
     }
 

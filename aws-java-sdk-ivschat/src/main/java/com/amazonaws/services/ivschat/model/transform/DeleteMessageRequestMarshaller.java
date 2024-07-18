@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DeleteMessageRequestMarshaller {
 
+    private static final MarshallingInfo<String> ROOMIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("roomIdentifier").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
     private static final MarshallingInfo<String> REASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("reason").build();
-    private static final MarshallingInfo<String> ROOMIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("roomIdentifier").build();
 
     private static final DeleteMessageRequestMarshaller instance = new DeleteMessageRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class DeleteMessageRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(deleteMessageRequest.getRoomIdentifier(), ROOMIDENTIFIER_BINDING);
             protocolMarshaller.marshall(deleteMessageRequest.getId(), ID_BINDING);
             protocolMarshaller.marshall(deleteMessageRequest.getReason(), REASON_BINDING);
-            protocolMarshaller.marshall(deleteMessageRequest.getRoomIdentifier(), ROOMIDENTIFIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

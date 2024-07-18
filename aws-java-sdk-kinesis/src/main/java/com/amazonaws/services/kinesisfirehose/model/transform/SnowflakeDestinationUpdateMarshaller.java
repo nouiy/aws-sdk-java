@@ -63,6 +63,8 @@ public class SnowflakeDestinationUpdateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3Update").build();
     private static final MarshallingInfo<StructuredPojo> SECRETSMANAGERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> BUFFERINGHINTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BufferingHints").build();
 
     private static final SnowflakeDestinationUpdateMarshaller instance = new SnowflakeDestinationUpdateMarshaller();
 
@@ -98,6 +100,7 @@ public class SnowflakeDestinationUpdateMarshaller {
             protocolMarshaller.marshall(snowflakeDestinationUpdate.getS3BackupMode(), S3BACKUPMODE_BINDING);
             protocolMarshaller.marshall(snowflakeDestinationUpdate.getS3Update(), S3UPDATE_BINDING);
             protocolMarshaller.marshall(snowflakeDestinationUpdate.getSecretsManagerConfiguration(), SECRETSMANAGERCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(snowflakeDestinationUpdate.getBufferingHints(), BUFFERINGHINTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

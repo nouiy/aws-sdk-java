@@ -33,6 +33,8 @@ public class MSKSourceConfigurationMarshaller {
             .marshallLocationName("TopicName").build();
     private static final MarshallingInfo<StructuredPojo> AUTHENTICATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthenticationConfiguration").build();
+    private static final MarshallingInfo<java.util.Date> READFROMTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReadFromTimestamp").timestampFormat("unixTimestamp").build();
 
     private static final MSKSourceConfigurationMarshaller instance = new MSKSourceConfigurationMarshaller();
 
@@ -53,6 +55,7 @@ public class MSKSourceConfigurationMarshaller {
             protocolMarshaller.marshall(mSKSourceConfiguration.getMSKClusterARN(), MSKCLUSTERARN_BINDING);
             protocolMarshaller.marshall(mSKSourceConfiguration.getTopicName(), TOPICNAME_BINDING);
             protocolMarshaller.marshall(mSKSourceConfiguration.getAuthenticationConfiguration(), AUTHENTICATIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(mSKSourceConfiguration.getReadFromTimestamp(), READFROMTIMESTAMP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -60,6 +60,10 @@ public class MSKSourceConfigurationJsonUnmarshaller implements Unmarshaller<MSKS
                     context.nextToken();
                     mSKSourceConfiguration.setAuthenticationConfiguration(AuthenticationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ReadFromTimestamp", targetDepth)) {
+                    context.nextToken();
+                    mSKSourceConfiguration.setReadFromTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

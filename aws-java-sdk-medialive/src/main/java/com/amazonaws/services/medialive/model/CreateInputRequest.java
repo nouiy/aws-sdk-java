@@ -57,6 +57,8 @@ public class CreateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String type;
 
     private InputVpcRequest vpc;
+    /** The settings associated with an SRT input. */
+    private SrtSettingsRequest srtSettings;
 
     /**
      * Destination settings for PUSH type inputs.
@@ -623,6 +625,40 @@ public class CreateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * The settings associated with an SRT input.
+     * 
+     * @param srtSettings
+     *        The settings associated with an SRT input.
+     */
+
+    public void setSrtSettings(SrtSettingsRequest srtSettings) {
+        this.srtSettings = srtSettings;
+    }
+
+    /**
+     * The settings associated with an SRT input.
+     * 
+     * @return The settings associated with an SRT input.
+     */
+
+    public SrtSettingsRequest getSrtSettings() {
+        return this.srtSettings;
+    }
+
+    /**
+     * The settings associated with an SRT input.
+     * 
+     * @param srtSettings
+     *        The settings associated with an SRT input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateInputRequest withSrtSettings(SrtSettingsRequest srtSettings) {
+        setSrtSettings(srtSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -655,7 +691,9 @@ public class CreateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getVpc() != null)
-            sb.append("Vpc: ").append(getVpc());
+            sb.append("Vpc: ").append(getVpc()).append(",");
+        if (getSrtSettings() != null)
+            sb.append("SrtSettings: ").append(getSrtSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -714,6 +752,10 @@ public class CreateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getVpc() != null && other.getVpc().equals(this.getVpc()) == false)
             return false;
+        if (other.getSrtSettings() == null ^ this.getSrtSettings() == null)
+            return false;
+        if (other.getSrtSettings() != null && other.getSrtSettings().equals(this.getSrtSettings()) == false)
+            return false;
         return true;
     }
 
@@ -733,6 +775,7 @@ public class CreateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getVpc() == null) ? 0 : getVpc().hashCode());
+        hashCode = prime * hashCode + ((getSrtSettings() == null) ? 0 : getSrtSettings().hashCode());
         return hashCode;
     }
 

@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListRoomsRequestMarshaller {
 
-    private static final MarshallingInfo<String> LOGGINGCONFIGURATIONIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingConfigurationIdentifier").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
-    private static final MarshallingInfo<String> MESSAGEREVIEWHANDLERURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("messageReviewHandlerUri").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> MESSAGEREVIEWHANDLERURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("messageReviewHandlerUri").build();
+    private static final MarshallingInfo<String> LOGGINGCONFIGURATIONIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingConfigurationIdentifier").build();
 
     private static final ListRoomsRequestMarshaller instance = new ListRoomsRequestMarshaller();
 
@@ -54,11 +54,11 @@ public class ListRoomsRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listRoomsRequest.getLoggingConfigurationIdentifier(), LOGGINGCONFIGURATIONIDENTIFIER_BINDING);
-            protocolMarshaller.marshall(listRoomsRequest.getMaxResults(), MAXRESULTS_BINDING);
-            protocolMarshaller.marshall(listRoomsRequest.getMessageReviewHandlerUri(), MESSAGEREVIEWHANDLERURI_BINDING);
             protocolMarshaller.marshall(listRoomsRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(listRoomsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listRoomsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listRoomsRequest.getMessageReviewHandlerUri(), MESSAGEREVIEWHANDLERURI_BINDING);
+            protocolMarshaller.marshall(listRoomsRequest.getLoggingConfigurationIdentifier(), LOGGINGCONFIGURATIONIDENTIFIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

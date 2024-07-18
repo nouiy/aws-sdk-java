@@ -88,7 +88,27 @@ public enum TrainingInstanceType {
     MlC6i12xlarge("ml.c6i.12xlarge"),
     MlC6i16xlarge("ml.c6i.16xlarge"),
     MlC6i24xlarge("ml.c6i.24xlarge"),
-    MlC6i32xlarge("ml.c6i.32xlarge");
+    MlC6i32xlarge("ml.c6i.32xlarge"),
+    MlR5dLarge("ml.r5d.large"),
+    MlR5dXlarge("ml.r5d.xlarge"),
+    MlR5d2xlarge("ml.r5d.2xlarge"),
+    MlR5d4xlarge("ml.r5d.4xlarge"),
+    MlR5d8xlarge("ml.r5d.8xlarge"),
+    MlR5d12xlarge("ml.r5d.12xlarge"),
+    MlR5d16xlarge("ml.r5d.16xlarge"),
+    MlR5d24xlarge("ml.r5d.24xlarge"),
+    MlT3Medium("ml.t3.medium"),
+    MlT3Large("ml.t3.large"),
+    MlT3Xlarge("ml.t3.xlarge"),
+    MlT32xlarge("ml.t3.2xlarge"),
+    MlR5Large("ml.r5.large"),
+    MlR5Xlarge("ml.r5.xlarge"),
+    MlR52xlarge("ml.r5.2xlarge"),
+    MlR54xlarge("ml.r5.4xlarge"),
+    MlR58xlarge("ml.r5.8xlarge"),
+    MlR512xlarge("ml.r5.12xlarge"),
+    MlR516xlarge("ml.r5.16xlarge"),
+    MlR524xlarge("ml.r5.24xlarge");
 
     private String value;
 

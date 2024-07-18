@@ -26,9 +26,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Eac3AtmosSettings implements Serializable, Cloneable, StructuredPojo {
 
-    /**
-     * Average bitrate in bits/second. Valid bitrates depend on the coding mode. // * @affectsRightSizing true
-     */
+    /** Average bitrate in bits/second. Valid bitrates depend on the coding mode. */
     private Double bitrate;
     /** Dolby Digital Plus with Dolby Atmos coding mode. Determines number of channels. */
     private String codingMode;
@@ -53,10 +51,10 @@ public class Eac3AtmosSettings implements Serializable, Cloneable, StructuredPoj
     private Double surroundTrim;
 
     /**
-     * Average bitrate in bits/second. Valid bitrates depend on the coding mode. // * @affectsRightSizing true
+     * Average bitrate in bits/second. Valid bitrates depend on the coding mode.
      * 
      * @param bitrate
-     *        Average bitrate in bits/second. Valid bitrates depend on the coding mode. // * @affectsRightSizing true
+     *        Average bitrate in bits/second. Valid bitrates depend on the coding mode.
      */
 
     public void setBitrate(Double bitrate) {
@@ -64,9 +62,9 @@ public class Eac3AtmosSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Average bitrate in bits/second. Valid bitrates depend on the coding mode. // * @affectsRightSizing true
+     * Average bitrate in bits/second. Valid bitrates depend on the coding mode.
      * 
-     * @return Average bitrate in bits/second. Valid bitrates depend on the coding mode. // * @affectsRightSizing true
+     * @return Average bitrate in bits/second. Valid bitrates depend on the coding mode.
      */
 
     public Double getBitrate() {
@@ -74,10 +72,10 @@ public class Eac3AtmosSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Average bitrate in bits/second. Valid bitrates depend on the coding mode. // * @affectsRightSizing true
+     * Average bitrate in bits/second. Valid bitrates depend on the coding mode.
      * 
      * @param bitrate
-     *        Average bitrate in bits/second. Valid bitrates depend on the coding mode. // * @affectsRightSizing true
+     *        Average bitrate in bits/second. Valid bitrates depend on the coding mode.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

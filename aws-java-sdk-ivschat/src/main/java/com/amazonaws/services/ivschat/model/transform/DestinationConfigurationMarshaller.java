@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DestinationConfigurationMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> S3_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3").build();
     private static final MarshallingInfo<StructuredPojo> CLOUDWATCHLOGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cloudWatchLogs").build();
     private static final MarshallingInfo<StructuredPojo> FIREHOSE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("firehose").build();
-    private static final MarshallingInfo<StructuredPojo> S3_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3").build();
 
     private static final DestinationConfigurationMarshaller instance = new DestinationConfigurationMarshaller();
 
@@ -50,9 +50,9 @@ public class DestinationConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(destinationConfiguration.getS3(), S3_BINDING);
             protocolMarshaller.marshall(destinationConfiguration.getCloudWatchLogs(), CLOUDWATCHLOGS_BINDING);
             protocolMarshaller.marshall(destinationConfiguration.getFirehose(), FIREHOSE_BINDING);
-            protocolMarshaller.marshall(destinationConfiguration.getS3(), S3_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -52,6 +52,8 @@ public class UpdateDestinationRequestMarshaller {
             .build();
     private static final MarshallingInfo<StructuredPojo> SNOWFLAKEDESTINATIONUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnowflakeDestinationUpdate").build();
+    private static final MarshallingInfo<StructuredPojo> ICEBERGDESTINATIONUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IcebergDestinationUpdate").build();
 
     private static final UpdateDestinationRequestMarshaller instance = new UpdateDestinationRequestMarshaller();
 
@@ -83,6 +85,7 @@ public class UpdateDestinationRequestMarshaller {
             protocolMarshaller.marshall(updateDestinationRequest.getAmazonOpenSearchServerlessDestinationUpdate(),
                     AMAZONOPENSEARCHSERVERLESSDESTINATIONUPDATE_BINDING);
             protocolMarshaller.marshall(updateDestinationRequest.getSnowflakeDestinationUpdate(), SNOWFLAKEDESTINATIONUPDATE_BINDING);
+            protocolMarshaller.marshall(updateDestinationRequest.getIcebergDestinationUpdate(), ICEBERGDESTINATIONUPDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

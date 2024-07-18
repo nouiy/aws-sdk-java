@@ -127,6 +127,10 @@ public class DescribeInputResultJsonUnmarshaller implements Unmarshaller<Describ
                     context.nextToken();
                     describeInputResult.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("srtSettings", targetDepth)) {
+                    context.nextToken();
+                    describeInputResult.setSrtSettings(SrtSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

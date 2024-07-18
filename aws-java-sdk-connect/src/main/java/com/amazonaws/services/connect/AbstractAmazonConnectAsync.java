@@ -2301,6 +2301,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<SearchAgentStatusesResult> searchAgentStatusesAsync(SearchAgentStatusesRequest request) {
+
+        return searchAgentStatusesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAgentStatusesResult> searchAgentStatusesAsync(SearchAgentStatusesRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchAgentStatusesRequest, SearchAgentStatusesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(SearchAvailablePhoneNumbersRequest request) {
 
         return searchAvailablePhoneNumbersAsync(request, null);
@@ -2452,6 +2465,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<SearchSecurityProfilesResult> searchSecurityProfilesAsync(SearchSecurityProfilesRequest request,
             com.amazonaws.handlers.AsyncHandler<SearchSecurityProfilesRequest, SearchSecurityProfilesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchUserHierarchyGroupsResult> searchUserHierarchyGroupsAsync(SearchUserHierarchyGroupsRequest request) {
+
+        return searchUserHierarchyGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchUserHierarchyGroupsResult> searchUserHierarchyGroupsAsync(SearchUserHierarchyGroupsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchUserHierarchyGroupsRequest, SearchUserHierarchyGroupsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

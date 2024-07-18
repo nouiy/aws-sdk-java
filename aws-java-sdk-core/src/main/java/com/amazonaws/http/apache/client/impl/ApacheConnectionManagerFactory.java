@@ -23,8 +23,9 @@ import com.amazonaws.http.client.ConnectionManagerFactory;
 import com.amazonaws.http.conn.SdkPlainSocketFactory;
 import com.amazonaws.http.conn.ssl.SdkTLSSocketFactory;
 import com.amazonaws.http.settings.HttpClientSettings;
+import com.amazonaws.internal.InputShutdownCheckingSslSocket;
 import com.amazonaws.internal.SdkSSLContext;
-import javax.net.ssl.KeyManager;
+import com.amazonaws.internal.SdkSSLSocket;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHost;
@@ -39,8 +40,8 @@ import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.impl.conn.DefaultSchemePortResolver;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.protocol.HttpContext;
-
 import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.KeyManager;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.TrustManager;
@@ -186,6 +187,7 @@ public class ApacheConnectionManagerFactory implements
 
             SSLSocket sslsock = (SSLSocket) ((sock != null) ? sock :
                     createSocket(context));
+            sslsock = new InputShutdownCheckingSslSocket(new SdkSSLSocket(sslsock));
             if (localAddress != null) sslsock.bind(localAddress);
 
 

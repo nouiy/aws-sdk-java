@@ -67,6 +67,15 @@ public class ProvisionIpamPoolCidrRequestMarshaller implements Marshaller<Reques
 
         request.addParameter("ClientToken", IdempotentUtils.resolveString(provisionIpamPoolCidrRequest.getClientToken()));
 
+        if (provisionIpamPoolCidrRequest.getVerificationMethod() != null) {
+            request.addParameter("VerificationMethod", StringUtils.fromString(provisionIpamPoolCidrRequest.getVerificationMethod()));
+        }
+
+        if (provisionIpamPoolCidrRequest.getIpamExternalResourceVerificationTokenId() != null) {
+            request.addParameter("IpamExternalResourceVerificationTokenId",
+                    StringUtils.fromString(provisionIpamPoolCidrRequest.getIpamExternalResourceVerificationTokenId()));
+        }
+
         return request;
     }
 

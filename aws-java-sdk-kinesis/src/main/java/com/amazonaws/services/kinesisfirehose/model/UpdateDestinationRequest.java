@@ -102,6 +102,15 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private SnowflakeDestinationUpdate snowflakeDestinationUpdate;
+    /**
+     * <p>
+     * Describes an update for a destination in Apache Iceberg Tables.
+     * </p>
+     * <p>
+     * Amazon Data Firehose is in preview release and is subject to change.
+     * </p>
+     */
+    private IcebergDestinationUpdate icebergDestinationUpdate;
 
     /**
      * <p>
@@ -610,6 +619,61 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Describes an update for a destination in Apache Iceberg Tables.
+     * </p>
+     * <p>
+     * Amazon Data Firehose is in preview release and is subject to change.
+     * </p>
+     * 
+     * @param icebergDestinationUpdate
+     *        Describes an update for a destination in Apache Iceberg Tables. </p>
+     *        <p>
+     *        Amazon Data Firehose is in preview release and is subject to change.
+     */
+
+    public void setIcebergDestinationUpdate(IcebergDestinationUpdate icebergDestinationUpdate) {
+        this.icebergDestinationUpdate = icebergDestinationUpdate;
+    }
+
+    /**
+     * <p>
+     * Describes an update for a destination in Apache Iceberg Tables.
+     * </p>
+     * <p>
+     * Amazon Data Firehose is in preview release and is subject to change.
+     * </p>
+     * 
+     * @return Describes an update for a destination in Apache Iceberg Tables. </p>
+     *         <p>
+     *         Amazon Data Firehose is in preview release and is subject to change.
+     */
+
+    public IcebergDestinationUpdate getIcebergDestinationUpdate() {
+        return this.icebergDestinationUpdate;
+    }
+
+    /**
+     * <p>
+     * Describes an update for a destination in Apache Iceberg Tables.
+     * </p>
+     * <p>
+     * Amazon Data Firehose is in preview release and is subject to change.
+     * </p>
+     * 
+     * @param icebergDestinationUpdate
+     *        Describes an update for a destination in Apache Iceberg Tables. </p>
+     *        <p>
+     *        Amazon Data Firehose is in preview release and is subject to change.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDestinationRequest withIcebergDestinationUpdate(IcebergDestinationUpdate icebergDestinationUpdate) {
+        setIcebergDestinationUpdate(icebergDestinationUpdate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -644,7 +708,9 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getAmazonOpenSearchServerlessDestinationUpdate() != null)
             sb.append("AmazonOpenSearchServerlessDestinationUpdate: ").append(getAmazonOpenSearchServerlessDestinationUpdate()).append(",");
         if (getSnowflakeDestinationUpdate() != null)
-            sb.append("SnowflakeDestinationUpdate: ").append(getSnowflakeDestinationUpdate());
+            sb.append("SnowflakeDestinationUpdate: ").append(getSnowflakeDestinationUpdate()).append(",");
+        if (getIcebergDestinationUpdate() != null)
+            sb.append("IcebergDestinationUpdate: ").append(getIcebergDestinationUpdate());
         sb.append("}");
         return sb.toString();
     }
@@ -712,6 +778,10 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getSnowflakeDestinationUpdate() != null && other.getSnowflakeDestinationUpdate().equals(this.getSnowflakeDestinationUpdate()) == false)
             return false;
+        if (other.getIcebergDestinationUpdate() == null ^ this.getIcebergDestinationUpdate() == null)
+            return false;
+        if (other.getIcebergDestinationUpdate() != null && other.getIcebergDestinationUpdate().equals(this.getIcebergDestinationUpdate()) == false)
+            return false;
         return true;
     }
 
@@ -733,6 +803,7 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode
                 + ((getAmazonOpenSearchServerlessDestinationUpdate() == null) ? 0 : getAmazonOpenSearchServerlessDestinationUpdate().hashCode());
         hashCode = prime * hashCode + ((getSnowflakeDestinationUpdate() == null) ? 0 : getSnowflakeDestinationUpdate().hashCode());
+        hashCode = prime * hashCode + ((getIcebergDestinationUpdate() == null) ? 0 : getIcebergDestinationUpdate().hashCode());
         return hashCode;
     }
 

@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class MessageReviewHandlerMarshaller {
 
-    private static final MarshallingInfo<String> FALLBACKRESULT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fallbackResult").build();
     private static final MarshallingInfo<String> URI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("uri").build();
+    private static final MarshallingInfo<String> FALLBACKRESULT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fallbackResult").build();
 
     private static final MessageReviewHandlerMarshaller instance = new MessageReviewHandlerMarshaller();
 
@@ -48,8 +48,8 @@ public class MessageReviewHandlerMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(messageReviewHandler.getFallbackResult(), FALLBACKRESULT_BINDING);
             protocolMarshaller.marshall(messageReviewHandler.getUri(), URI_BINDING);
+            protocolMarshaller.marshall(messageReviewHandler.getFallbackResult(), FALLBACKRESULT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

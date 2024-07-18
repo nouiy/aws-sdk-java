@@ -441,6 +441,12 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public CreateIpamExternalResourceVerificationTokenResult createIpamExternalResourceVerificationToken(
+            CreateIpamExternalResourceVerificationTokenRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateIpamPoolResult createIpamPool(CreateIpamPoolRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -823,6 +829,12 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DeleteIpamResult deleteIpam(DeleteIpamRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteIpamExternalResourceVerificationTokenResult deleteIpamExternalResourceVerificationToken(
+            DeleteIpamExternalResourceVerificationTokenRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1544,6 +1556,12 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DescribeIpamByoasnResult describeIpamByoasn(DescribeIpamByoasnRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeIpamExternalResourceVerificationTokensResult describeIpamExternalResourceVerificationTokens(
+            DescribeIpamExternalResourceVerificationTokensRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

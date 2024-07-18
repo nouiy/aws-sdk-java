@@ -29,7 +29,8 @@ public enum InputType {
     MEDIACONNECT("MEDIACONNECT"),
     INPUT_DEVICE("INPUT_DEVICE"),
     AWS_CDI("AWS_CDI"),
-    TS_FILE("TS_FILE");
+    TS_FILE("TS_FILE"),
+    SRT_CALLER("SRT_CALLER");
 
     private String value;
 

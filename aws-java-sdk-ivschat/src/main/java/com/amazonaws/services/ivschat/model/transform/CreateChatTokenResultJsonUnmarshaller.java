@@ -48,10 +48,6 @@ public class CreateChatTokenResultJsonUnmarshaller implements Unmarshaller<Creat
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("sessionExpirationTime", targetDepth)) {
-                    context.nextToken();
-                    createChatTokenResult.setSessionExpirationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("token", targetDepth)) {
                     context.nextToken();
                     createChatTokenResult.setToken(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class CreateChatTokenResultJsonUnmarshaller implements Unmarshaller<Creat
                 if (context.testExpression("tokenExpirationTime", targetDepth)) {
                     context.nextToken();
                     createChatTokenResult.setTokenExpirationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("sessionExpirationTime", targetDepth)) {
+                    context.nextToken();
+                    createChatTokenResult.setSessionExpirationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

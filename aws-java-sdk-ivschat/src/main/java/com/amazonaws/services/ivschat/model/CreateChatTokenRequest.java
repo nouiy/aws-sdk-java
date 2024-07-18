@@ -27,11 +27,17 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can
-     * contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
+     * Identifier of the room that the client is trying to access. Currently this must be an ARN.
      * </p>
      */
-    private java.util.Map<String, String> attributes;
+    private String roomIdentifier;
+    /**
+     * <p>
+     * Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8
+     * encoded text.
+     * </p>
+     */
+    private String userId;
     /**
      * <p>
      * Set of capabilities that the user is allowed to perform in the room. Default: None (the capability to view
@@ -41,95 +47,101 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
     private java.util.List<String> capabilities;
     /**
      * <p>
-     * Identifier of the room that the client is trying to access. Currently this must be an ARN.
-     * </p>
-     */
-    private String roomIdentifier;
-    /**
-     * <p>
      * Session duration (in minutes), after which the session expires. Default: 60 (1 hour).
      * </p>
      */
     private Integer sessionDurationInMinutes;
     /**
      * <p>
+     * Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can
+     * contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
+     * </p>
+     */
+    private java.util.Map<String, String> attributes;
+
+    /**
+     * <p>
+     * Identifier of the room that the client is trying to access. Currently this must be an ARN.
+     * </p>
+     * 
+     * @param roomIdentifier
+     *        Identifier of the room that the client is trying to access. Currently this must be an ARN.
+     */
+
+    public void setRoomIdentifier(String roomIdentifier) {
+        this.roomIdentifier = roomIdentifier;
+    }
+
+    /**
+     * <p>
+     * Identifier of the room that the client is trying to access. Currently this must be an ARN.
+     * </p>
+     * 
+     * @return Identifier of the room that the client is trying to access. Currently this must be an ARN.
+     */
+
+    public String getRoomIdentifier() {
+        return this.roomIdentifier;
+    }
+
+    /**
+     * <p>
+     * Identifier of the room that the client is trying to access. Currently this must be an ARN.
+     * </p>
+     * 
+     * @param roomIdentifier
+     *        Identifier of the room that the client is trying to access. Currently this must be an ARN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChatTokenRequest withRoomIdentifier(String roomIdentifier) {
+        setRoomIdentifier(roomIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
      * Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8
      * encoded text.
      * </p>
-     */
-    private String userId;
-
-    /**
-     * <p>
-     * Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can
-     * contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
-     * </p>
      * 
-     * @return Application-provided attributes to encode into the token and attach to a chat session. Map keys and
-     *         values can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
+     * @param userId
+     *        Application-provided ID that uniquely identifies the user associated with this token. This can be any
+     *        UTF-8 encoded text.
      */
 
-    public java.util.Map<String, String> getAttributes() {
-        return attributes;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     /**
      * <p>
-     * Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can
-     * contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
+     * Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8
+     * encoded text.
      * </p>
      * 
-     * @param attributes
-     *        Application-provided attributes to encode into the token and attach to a chat session. Map keys and values
-     *        can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
+     * @return Application-provided ID that uniquely identifies the user associated with this token. This can be any
+     *         UTF-8 encoded text.
      */
 
-    public void setAttributes(java.util.Map<String, String> attributes) {
-        this.attributes = attributes;
+    public String getUserId() {
+        return this.userId;
     }
 
     /**
      * <p>
-     * Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can
-     * contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
+     * Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8
+     * encoded text.
      * </p>
      * 
-     * @param attributes
-     *        Application-provided attributes to encode into the token and attach to a chat session. Map keys and values
-     *        can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
+     * @param userId
+     *        Application-provided ID that uniquely identifies the user associated with this token. This can be any
+     *        UTF-8 encoded text.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateChatTokenRequest withAttributes(java.util.Map<String, String> attributes) {
-        setAttributes(attributes);
-        return this;
-    }
-
-    /**
-     * Add a single Attributes entry
-     *
-     * @see CreateChatTokenRequest#withAttributes
-     * @returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateChatTokenRequest addAttributesEntry(String key, String value) {
-        if (null == this.attributes) {
-            this.attributes = new java.util.HashMap<String, String>();
-        }
-        if (this.attributes.containsKey(key))
-            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
-        this.attributes.put(key, value);
-        return this;
-    }
-
-    /**
-     * Removes all the entries added into Attributes.
-     *
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateChatTokenRequest clearAttributesEntries() {
-        this.attributes = null;
+    public CreateChatTokenRequest withUserId(String userId) {
+        setUserId(userId);
         return this;
     }
 
@@ -243,46 +255,6 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Identifier of the room that the client is trying to access. Currently this must be an ARN.
-     * </p>
-     * 
-     * @param roomIdentifier
-     *        Identifier of the room that the client is trying to access. Currently this must be an ARN.
-     */
-
-    public void setRoomIdentifier(String roomIdentifier) {
-        this.roomIdentifier = roomIdentifier;
-    }
-
-    /**
-     * <p>
-     * Identifier of the room that the client is trying to access. Currently this must be an ARN.
-     * </p>
-     * 
-     * @return Identifier of the room that the client is trying to access. Currently this must be an ARN.
-     */
-
-    public String getRoomIdentifier() {
-        return this.roomIdentifier;
-    }
-
-    /**
-     * <p>
-     * Identifier of the room that the client is trying to access. Currently this must be an ARN.
-     * </p>
-     * 
-     * @param roomIdentifier
-     *        Identifier of the room that the client is trying to access. Currently this must be an ARN.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateChatTokenRequest withRoomIdentifier(String roomIdentifier) {
-        setRoomIdentifier(roomIdentifier);
-        return this;
-    }
-
-    /**
-     * <p>
      * Session duration (in minutes), after which the session expires. Default: 60 (1 hour).
      * </p>
      * 
@@ -323,47 +295,75 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8
-     * encoded text.
+     * Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can
+     * contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
      * </p>
      * 
-     * @param userId
-     *        Application-provided ID that uniquely identifies the user associated with this token. This can be any
-     *        UTF-8 encoded text.
+     * @return Application-provided attributes to encode into the token and attach to a chat session. Map keys and
+     *         values can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
      */
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public java.util.Map<String, String> getAttributes() {
+        return attributes;
     }
 
     /**
      * <p>
-     * Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8
-     * encoded text.
+     * Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can
+     * contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
      * </p>
      * 
-     * @return Application-provided ID that uniquely identifies the user associated with this token. This can be any
-     *         UTF-8 encoded text.
+     * @param attributes
+     *        Application-provided attributes to encode into the token and attach to a chat session. Map keys and values
+     *        can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
      */
 
-    public String getUserId() {
-        return this.userId;
+    public void setAttributes(java.util.Map<String, String> attributes) {
+        this.attributes = attributes;
     }
 
     /**
      * <p>
-     * Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8
-     * encoded text.
+     * Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can
+     * contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
      * </p>
      * 
-     * @param userId
-     *        Application-provided ID that uniquely identifies the user associated with this token. This can be any
-     *        UTF-8 encoded text.
+     * @param attributes
+     *        Application-provided attributes to encode into the token and attach to a chat session. Map keys and values
+     *        can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateChatTokenRequest withUserId(String userId) {
-        setUserId(userId);
+    public CreateChatTokenRequest withAttributes(java.util.Map<String, String> attributes) {
+        setAttributes(attributes);
+        return this;
+    }
+
+    /**
+     * Add a single Attributes entry
+     *
+     * @see CreateChatTokenRequest#withAttributes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChatTokenRequest addAttributesEntry(String key, String value) {
+        if (null == this.attributes) {
+            this.attributes = new java.util.HashMap<String, String>();
+        }
+        if (this.attributes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.attributes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Attributes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChatTokenRequest clearAttributesEntries() {
+        this.attributes = null;
         return this;
     }
 
@@ -379,16 +379,16 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAttributes() != null)
-            sb.append("Attributes: ").append("***Sensitive Data Redacted***").append(",");
-        if (getCapabilities() != null)
-            sb.append("Capabilities: ").append(getCapabilities()).append(",");
         if (getRoomIdentifier() != null)
             sb.append("RoomIdentifier: ").append(getRoomIdentifier()).append(",");
+        if (getUserId() != null)
+            sb.append("UserId: ").append("***Sensitive Data Redacted***").append(",");
+        if (getCapabilities() != null)
+            sb.append("Capabilities: ").append(getCapabilities()).append(",");
         if (getSessionDurationInMinutes() != null)
             sb.append("SessionDurationInMinutes: ").append(getSessionDurationInMinutes()).append(",");
-        if (getUserId() != null)
-            sb.append("UserId: ").append("***Sensitive Data Redacted***");
+        if (getAttributes() != null)
+            sb.append("Attributes: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -403,25 +403,25 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
         if (obj instanceof CreateChatTokenRequest == false)
             return false;
         CreateChatTokenRequest other = (CreateChatTokenRequest) obj;
-        if (other.getAttributes() == null ^ this.getAttributes() == null)
+        if (other.getRoomIdentifier() == null ^ this.getRoomIdentifier() == null)
             return false;
-        if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
+        if (other.getRoomIdentifier() != null && other.getRoomIdentifier().equals(this.getRoomIdentifier()) == false)
+            return false;
+        if (other.getUserId() == null ^ this.getUserId() == null)
+            return false;
+        if (other.getUserId() != null && other.getUserId().equals(this.getUserId()) == false)
             return false;
         if (other.getCapabilities() == null ^ this.getCapabilities() == null)
             return false;
         if (other.getCapabilities() != null && other.getCapabilities().equals(this.getCapabilities()) == false)
             return false;
-        if (other.getRoomIdentifier() == null ^ this.getRoomIdentifier() == null)
-            return false;
-        if (other.getRoomIdentifier() != null && other.getRoomIdentifier().equals(this.getRoomIdentifier()) == false)
-            return false;
         if (other.getSessionDurationInMinutes() == null ^ this.getSessionDurationInMinutes() == null)
             return false;
         if (other.getSessionDurationInMinutes() != null && other.getSessionDurationInMinutes().equals(this.getSessionDurationInMinutes()) == false)
             return false;
-        if (other.getUserId() == null ^ this.getUserId() == null)
+        if (other.getAttributes() == null ^ this.getAttributes() == null)
             return false;
-        if (other.getUserId() != null && other.getUserId().equals(this.getUserId()) == false)
+        if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
             return false;
         return true;
     }
@@ -431,11 +431,11 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
-        hashCode = prime * hashCode + ((getCapabilities() == null) ? 0 : getCapabilities().hashCode());
         hashCode = prime * hashCode + ((getRoomIdentifier() == null) ? 0 : getRoomIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getSessionDurationInMinutes() == null) ? 0 : getSessionDurationInMinutes().hashCode());
         hashCode = prime * hashCode + ((getUserId() == null) ? 0 : getUserId().hashCode());
+        hashCode = prime * hashCode + ((getCapabilities() == null) ? 0 : getCapabilities().hashCode());
+        hashCode = prime * hashCode + ((getSessionDurationInMinutes() == null) ? 0 : getSessionDurationInMinutes().hashCode());
+        hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
         return hashCode;
     }
 

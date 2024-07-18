@@ -58,6 +58,13 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
     private StringCondition stringCondition;
     /**
      * <p>
+     * A leaf node condition which can be used to specify a List condition to search users with attributes included in
+     * Lists like Proficiencies.
+     * </p>
+     */
+    private ListCondition listCondition;
+    /**
+     * <p>
      * A leaf node condition which can be used to specify a hierarchy group condition.
      * </p>
      */
@@ -269,6 +276,52 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * A leaf node condition which can be used to specify a List condition to search users with attributes included in
+     * Lists like Proficiencies.
+     * </p>
+     * 
+     * @param listCondition
+     *        A leaf node condition which can be used to specify a List condition to search users with attributes
+     *        included in Lists like Proficiencies.
+     */
+
+    public void setListCondition(ListCondition listCondition) {
+        this.listCondition = listCondition;
+    }
+
+    /**
+     * <p>
+     * A leaf node condition which can be used to specify a List condition to search users with attributes included in
+     * Lists like Proficiencies.
+     * </p>
+     * 
+     * @return A leaf node condition which can be used to specify a List condition to search users with attributes
+     *         included in Lists like Proficiencies.
+     */
+
+    public ListCondition getListCondition() {
+        return this.listCondition;
+    }
+
+    /**
+     * <p>
+     * A leaf node condition which can be used to specify a List condition to search users with attributes included in
+     * Lists like Proficiencies.
+     * </p>
+     * 
+     * @param listCondition
+     *        A leaf node condition which can be used to specify a List condition to search users with attributes
+     *        included in Lists like Proficiencies.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSearchCriteria withListCondition(ListCondition listCondition) {
+        setListCondition(listCondition);
+        return this;
+    }
+
+    /**
+     * <p>
      * A leaf node condition which can be used to specify a hierarchy group condition.
      * </p>
      * 
@@ -325,6 +378,8 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
             sb.append("AndConditions: ").append(getAndConditions()).append(",");
         if (getStringCondition() != null)
             sb.append("StringCondition: ").append(getStringCondition()).append(",");
+        if (getListCondition() != null)
+            sb.append("ListCondition: ").append(getListCondition()).append(",");
         if (getHierarchyGroupCondition() != null)
             sb.append("HierarchyGroupCondition: ").append(getHierarchyGroupCondition());
         sb.append("}");
@@ -353,6 +408,10 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getStringCondition() != null && other.getStringCondition().equals(this.getStringCondition()) == false)
             return false;
+        if (other.getListCondition() == null ^ this.getListCondition() == null)
+            return false;
+        if (other.getListCondition() != null && other.getListCondition().equals(this.getListCondition()) == false)
+            return false;
         if (other.getHierarchyGroupCondition() == null ^ this.getHierarchyGroupCondition() == null)
             return false;
         if (other.getHierarchyGroupCondition() != null && other.getHierarchyGroupCondition().equals(this.getHierarchyGroupCondition()) == false)
@@ -368,6 +427,7 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getOrConditions() == null) ? 0 : getOrConditions().hashCode());
         hashCode = prime * hashCode + ((getAndConditions() == null) ? 0 : getAndConditions().hashCode());
         hashCode = prime * hashCode + ((getStringCondition() == null) ? 0 : getStringCondition().hashCode());
+        hashCode = prime * hashCode + ((getListCondition() == null) ? 0 : getListCondition().hashCode());
         hashCode = prime * hashCode + ((getHierarchyGroupCondition() == null) ? 0 : getHierarchyGroupCondition().hashCode());
         return hashCode;
     }

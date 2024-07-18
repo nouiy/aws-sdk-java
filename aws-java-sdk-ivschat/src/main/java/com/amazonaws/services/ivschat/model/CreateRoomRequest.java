@@ -27,10 +27,16 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Array of logging-configuration identifiers attached to the room.
+     * Room name. The value does not need to be unique.
      * </p>
      */
-    private java.util.List<String> loggingConfigurationIdentifiers;
+    private String name;
+    /**
+     * <p>
+     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     * </p>
+     */
+    private Integer maximumMessageRatePerSecond;
     /**
      * <p>
      * Maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit
@@ -40,22 +46,10 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private Integer maximumMessageLength;
     /**
      * <p>
-     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * </p>
-     */
-    private Integer maximumMessageRatePerSecond;
-    /**
-     * <p>
      * Configuration information for optional review of messages.
      * </p>
      */
     private MessageReviewHandler messageReviewHandler;
-    /**
-     * <p>
-     * Room name. The value does not need to be unique.
-     * </p>
-     */
-    private String name;
     /**
      * <p>
      * Tags to attach to the resource. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
@@ -65,74 +59,90 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private java.util.Map<String, String> tags;
-
     /**
      * <p>
      * Array of logging-configuration identifiers attached to the room.
      * </p>
+     */
+    private java.util.List<String> loggingConfigurationIdentifiers;
+
+    /**
+     * <p>
+     * Room name. The value does not need to be unique.
+     * </p>
      * 
-     * @return Array of logging-configuration identifiers attached to the room.
+     * @param name
+     *        Room name. The value does not need to be unique.
      */
 
-    public java.util.List<String> getLoggingConfigurationIdentifiers() {
-        return loggingConfigurationIdentifiers;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * <p>
-     * Array of logging-configuration identifiers attached to the room.
+     * Room name. The value does not need to be unique.
      * </p>
      * 
-     * @param loggingConfigurationIdentifiers
-     *        Array of logging-configuration identifiers attached to the room.
+     * @return Room name. The value does not need to be unique.
      */
 
-    public void setLoggingConfigurationIdentifiers(java.util.Collection<String> loggingConfigurationIdentifiers) {
-        if (loggingConfigurationIdentifiers == null) {
-            this.loggingConfigurationIdentifiers = null;
-            return;
-        }
-
-        this.loggingConfigurationIdentifiers = new java.util.ArrayList<String>(loggingConfigurationIdentifiers);
+    public String getName() {
+        return this.name;
     }
 
     /**
      * <p>
-     * Array of logging-configuration identifiers attached to the room.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setLoggingConfigurationIdentifiers(java.util.Collection)} or
-     * {@link #withLoggingConfigurationIdentifiers(java.util.Collection)} if you want to override the existing values.
+     * Room name. The value does not need to be unique.
      * </p>
      * 
-     * @param loggingConfigurationIdentifiers
-     *        Array of logging-configuration identifiers attached to the room.
+     * @param name
+     *        Room name. The value does not need to be unique.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateRoomRequest withLoggingConfigurationIdentifiers(String... loggingConfigurationIdentifiers) {
-        if (this.loggingConfigurationIdentifiers == null) {
-            setLoggingConfigurationIdentifiers(new java.util.ArrayList<String>(loggingConfigurationIdentifiers.length));
-        }
-        for (String ele : loggingConfigurationIdentifiers) {
-            this.loggingConfigurationIdentifiers.add(ele);
-        }
+    public CreateRoomRequest withName(String name) {
+        setName(name);
         return this;
     }
 
     /**
      * <p>
-     * Array of logging-configuration identifiers attached to the room.
+     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
      * </p>
      * 
-     * @param loggingConfigurationIdentifiers
-     *        Array of logging-configuration identifiers attached to the room.
+     * @param maximumMessageRatePerSecond
+     *        Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     */
+
+    public void setMaximumMessageRatePerSecond(Integer maximumMessageRatePerSecond) {
+        this.maximumMessageRatePerSecond = maximumMessageRatePerSecond;
+    }
+
+    /**
+     * <p>
+     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     * </p>
+     * 
+     * @return Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     */
+
+    public Integer getMaximumMessageRatePerSecond() {
+        return this.maximumMessageRatePerSecond;
+    }
+
+    /**
+     * <p>
+     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     * </p>
+     * 
+     * @param maximumMessageRatePerSecond
+     *        Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateRoomRequest withLoggingConfigurationIdentifiers(java.util.Collection<String> loggingConfigurationIdentifiers) {
-        setLoggingConfigurationIdentifiers(loggingConfigurationIdentifiers);
+    public CreateRoomRequest withMaximumMessageRatePerSecond(Integer maximumMessageRatePerSecond) {
+        setMaximumMessageRatePerSecond(maximumMessageRatePerSecond);
         return this;
     }
 
@@ -184,46 +194,6 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * </p>
-     * 
-     * @param maximumMessageRatePerSecond
-     *        Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     */
-
-    public void setMaximumMessageRatePerSecond(Integer maximumMessageRatePerSecond) {
-        this.maximumMessageRatePerSecond = maximumMessageRatePerSecond;
-    }
-
-    /**
-     * <p>
-     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * </p>
-     * 
-     * @return Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     */
-
-    public Integer getMaximumMessageRatePerSecond() {
-        return this.maximumMessageRatePerSecond;
-    }
-
-    /**
-     * <p>
-     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * </p>
-     * 
-     * @param maximumMessageRatePerSecond
-     *        Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateRoomRequest withMaximumMessageRatePerSecond(Integer maximumMessageRatePerSecond) {
-        setMaximumMessageRatePerSecond(maximumMessageRatePerSecond);
-        return this;
-    }
-
-    /**
-     * <p>
      * Configuration information for optional review of messages.
      * </p>
      * 
@@ -259,46 +229,6 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     public CreateRoomRequest withMessageReviewHandler(MessageReviewHandler messageReviewHandler) {
         setMessageReviewHandler(messageReviewHandler);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Room name. The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        Room name. The value does not need to be unique.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * Room name. The value does not need to be unique.
-     * </p>
-     * 
-     * @return Room name. The value does not need to be unique.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * Room name. The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        Room name. The value does not need to be unique.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateRoomRequest withName(String name) {
-        setName(name);
         return this;
     }
 
@@ -389,6 +319,76 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * Array of logging-configuration identifiers attached to the room.
+     * </p>
+     * 
+     * @return Array of logging-configuration identifiers attached to the room.
+     */
+
+    public java.util.List<String> getLoggingConfigurationIdentifiers() {
+        return loggingConfigurationIdentifiers;
+    }
+
+    /**
+     * <p>
+     * Array of logging-configuration identifiers attached to the room.
+     * </p>
+     * 
+     * @param loggingConfigurationIdentifiers
+     *        Array of logging-configuration identifiers attached to the room.
+     */
+
+    public void setLoggingConfigurationIdentifiers(java.util.Collection<String> loggingConfigurationIdentifiers) {
+        if (loggingConfigurationIdentifiers == null) {
+            this.loggingConfigurationIdentifiers = null;
+            return;
+        }
+
+        this.loggingConfigurationIdentifiers = new java.util.ArrayList<String>(loggingConfigurationIdentifiers);
+    }
+
+    /**
+     * <p>
+     * Array of logging-configuration identifiers attached to the room.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLoggingConfigurationIdentifiers(java.util.Collection)} or
+     * {@link #withLoggingConfigurationIdentifiers(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param loggingConfigurationIdentifiers
+     *        Array of logging-configuration identifiers attached to the room.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRoomRequest withLoggingConfigurationIdentifiers(String... loggingConfigurationIdentifiers) {
+        if (this.loggingConfigurationIdentifiers == null) {
+            setLoggingConfigurationIdentifiers(new java.util.ArrayList<String>(loggingConfigurationIdentifiers.length));
+        }
+        for (String ele : loggingConfigurationIdentifiers) {
+            this.loggingConfigurationIdentifiers.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Array of logging-configuration identifiers attached to the room.
+     * </p>
+     * 
+     * @param loggingConfigurationIdentifiers
+     *        Array of logging-configuration identifiers attached to the room.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRoomRequest withLoggingConfigurationIdentifiers(java.util.Collection<String> loggingConfigurationIdentifiers) {
+        setLoggingConfigurationIdentifiers(loggingConfigurationIdentifiers);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -400,18 +400,18 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getLoggingConfigurationIdentifiers() != null)
-            sb.append("LoggingConfigurationIdentifiers: ").append(getLoggingConfigurationIdentifiers()).append(",");
-        if (getMaximumMessageLength() != null)
-            sb.append("MaximumMessageLength: ").append(getMaximumMessageLength()).append(",");
-        if (getMaximumMessageRatePerSecond() != null)
-            sb.append("MaximumMessageRatePerSecond: ").append(getMaximumMessageRatePerSecond()).append(",");
-        if (getMessageReviewHandler() != null)
-            sb.append("MessageReviewHandler: ").append(getMessageReviewHandler()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getMaximumMessageRatePerSecond() != null)
+            sb.append("MaximumMessageRatePerSecond: ").append(getMaximumMessageRatePerSecond()).append(",");
+        if (getMaximumMessageLength() != null)
+            sb.append("MaximumMessageLength: ").append(getMaximumMessageLength()).append(",");
+        if (getMessageReviewHandler() != null)
+            sb.append("MessageReviewHandler: ").append(getMessageReviewHandler()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getLoggingConfigurationIdentifiers() != null)
+            sb.append("LoggingConfigurationIdentifiers: ").append(getLoggingConfigurationIdentifiers());
         sb.append("}");
         return sb.toString();
     }
@@ -426,30 +426,30 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (obj instanceof CreateRoomRequest == false)
             return false;
         CreateRoomRequest other = (CreateRoomRequest) obj;
-        if (other.getLoggingConfigurationIdentifiers() == null ^ this.getLoggingConfigurationIdentifiers() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getLoggingConfigurationIdentifiers() != null
-                && other.getLoggingConfigurationIdentifiers().equals(this.getLoggingConfigurationIdentifiers()) == false)
-            return false;
-        if (other.getMaximumMessageLength() == null ^ this.getMaximumMessageLength() == null)
-            return false;
-        if (other.getMaximumMessageLength() != null && other.getMaximumMessageLength().equals(this.getMaximumMessageLength()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getMaximumMessageRatePerSecond() == null ^ this.getMaximumMessageRatePerSecond() == null)
             return false;
         if (other.getMaximumMessageRatePerSecond() != null && other.getMaximumMessageRatePerSecond().equals(this.getMaximumMessageRatePerSecond()) == false)
             return false;
+        if (other.getMaximumMessageLength() == null ^ this.getMaximumMessageLength() == null)
+            return false;
+        if (other.getMaximumMessageLength() != null && other.getMaximumMessageLength().equals(this.getMaximumMessageLength()) == false)
+            return false;
         if (other.getMessageReviewHandler() == null ^ this.getMessageReviewHandler() == null)
             return false;
         if (other.getMessageReviewHandler() != null && other.getMessageReviewHandler().equals(this.getMessageReviewHandler()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getLoggingConfigurationIdentifiers() == null ^ this.getLoggingConfigurationIdentifiers() == null)
+            return false;
+        if (other.getLoggingConfigurationIdentifiers() != null
+                && other.getLoggingConfigurationIdentifiers().equals(this.getLoggingConfigurationIdentifiers()) == false)
             return false;
         return true;
     }
@@ -459,12 +459,12 @@ public class CreateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getLoggingConfigurationIdentifiers() == null) ? 0 : getLoggingConfigurationIdentifiers().hashCode());
-        hashCode = prime * hashCode + ((getMaximumMessageLength() == null) ? 0 : getMaximumMessageLength().hashCode());
-        hashCode = prime * hashCode + ((getMaximumMessageRatePerSecond() == null) ? 0 : getMaximumMessageRatePerSecond().hashCode());
-        hashCode = prime * hashCode + ((getMessageReviewHandler() == null) ? 0 : getMessageReviewHandler().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getMaximumMessageRatePerSecond() == null) ? 0 : getMaximumMessageRatePerSecond().hashCode());
+        hashCode = prime * hashCode + ((getMaximumMessageLength() == null) ? 0 : getMaximumMessageLength().hashCode());
+        hashCode = prime * hashCode + ((getMessageReviewHandler() == null) ? 0 : getMessageReviewHandler().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getLoggingConfigurationIdentifiers() == null) ? 0 : getLoggingConfigurationIdentifiers().hashCode());
         return hashCode;
     }
 

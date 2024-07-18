@@ -52,10 +52,6 @@ public class ThrottlingExceptionUnmarshaller extends EnhancedJsonErrorUnmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("limit", targetDepth)) {
-                    context.nextToken();
-                    throttlingException.setLimit(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (context.testExpression("resourceId", targetDepth)) {
                     context.nextToken();
                     throttlingException.setResourceId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -63,6 +59,10 @@ public class ThrottlingExceptionUnmarshaller extends EnhancedJsonErrorUnmarshall
                 if (context.testExpression("resourceType", targetDepth)) {
                     context.nextToken();
                     throttlingException.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("limit", targetDepth)) {
+                    context.nextToken();
+                    throttlingException.setLimit(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

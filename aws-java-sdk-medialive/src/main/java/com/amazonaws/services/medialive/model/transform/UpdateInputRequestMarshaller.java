@@ -44,6 +44,8 @@ public class UpdateInputRequestMarshaller {
             .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<List> SOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sources").build();
+    private static final MarshallingInfo<StructuredPojo> SRTSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("srtSettings").build();
 
     private static final UpdateInputRequestMarshaller instance = new UpdateInputRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class UpdateInputRequestMarshaller {
             protocolMarshaller.marshall(updateInputRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateInputRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(updateInputRequest.getSources(), SOURCES_BINDING);
+            protocolMarshaller.marshall(updateInputRequest.getSrtSettings(), SRTSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

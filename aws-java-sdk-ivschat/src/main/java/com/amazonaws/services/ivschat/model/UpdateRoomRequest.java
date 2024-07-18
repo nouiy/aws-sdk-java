@@ -33,10 +33,16 @@ public class UpdateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String identifier;
     /**
      * <p>
-     * Array of logging-configuration identifiers attached to the room.
+     * Room name. The value does not need to be unique.
      * </p>
      */
-    private java.util.List<String> loggingConfigurationIdentifiers;
+    private String name;
+    /**
+     * <p>
+     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     * </p>
+     */
+    private Integer maximumMessageRatePerSecond;
     /**
      * <p>
      * The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit
@@ -46,12 +52,6 @@ public class UpdateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private Integer maximumMessageLength;
     /**
      * <p>
-     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * </p>
-     */
-    private Integer maximumMessageRatePerSecond;
-    /**
-     * <p>
      * Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
      * disassociate a message review handler from the specified room.
      * </p>
@@ -59,10 +59,10 @@ public class UpdateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private MessageReviewHandler messageReviewHandler;
     /**
      * <p>
-     * Room name. The value does not need to be unique.
+     * Array of logging-configuration identifiers attached to the room.
      * </p>
      */
-    private String name;
+    private java.util.List<String> loggingConfigurationIdentifiers;
 
     /**
      * <p>
@@ -101,6 +101,178 @@ public class UpdateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     public UpdateRoomRequest withIdentifier(String identifier) {
         setIdentifier(identifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Room name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Room name. The value does not need to be unique.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Room name. The value does not need to be unique.
+     * </p>
+     * 
+     * @return Room name. The value does not need to be unique.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Room name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Room name. The value does not need to be unique.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRoomRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     * </p>
+     * 
+     * @param maximumMessageRatePerSecond
+     *        Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     */
+
+    public void setMaximumMessageRatePerSecond(Integer maximumMessageRatePerSecond) {
+        this.maximumMessageRatePerSecond = maximumMessageRatePerSecond;
+    }
+
+    /**
+     * <p>
+     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     * </p>
+     * 
+     * @return Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     */
+
+    public Integer getMaximumMessageRatePerSecond() {
+        return this.maximumMessageRatePerSecond;
+    }
+
+    /**
+     * <p>
+     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     * </p>
+     * 
+     * @param maximumMessageRatePerSecond
+     *        Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRoomRequest withMaximumMessageRatePerSecond(Integer maximumMessageRatePerSecond) {
+        setMaximumMessageRatePerSecond(maximumMessageRatePerSecond);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit
+     * applies specifically to rune/code-point count, not number of bytes. Default: 500.
+     * </p>
+     * 
+     * @param maximumMessageLength
+     *        The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this
+     *        limit applies specifically to rune/code-point count, not number of bytes. Default: 500.
+     */
+
+    public void setMaximumMessageLength(Integer maximumMessageLength) {
+        this.maximumMessageLength = maximumMessageLength;
+    }
+
+    /**
+     * <p>
+     * The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit
+     * applies specifically to rune/code-point count, not number of bytes. Default: 500.
+     * </p>
+     * 
+     * @return The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this
+     *         limit applies specifically to rune/code-point count, not number of bytes. Default: 500.
+     */
+
+    public Integer getMaximumMessageLength() {
+        return this.maximumMessageLength;
+    }
+
+    /**
+     * <p>
+     * The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit
+     * applies specifically to rune/code-point count, not number of bytes. Default: 500.
+     * </p>
+     * 
+     * @param maximumMessageLength
+     *        The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this
+     *        limit applies specifically to rune/code-point count, not number of bytes. Default: 500.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRoomRequest withMaximumMessageLength(Integer maximumMessageLength) {
+        setMaximumMessageLength(maximumMessageLength);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
+     * disassociate a message review handler from the specified room.
+     * </p>
+     * 
+     * @param messageReviewHandler
+     *        Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
+     *        disassociate a message review handler from the specified room.
+     */
+
+    public void setMessageReviewHandler(MessageReviewHandler messageReviewHandler) {
+        this.messageReviewHandler = messageReviewHandler;
+    }
+
+    /**
+     * <p>
+     * Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
+     * disassociate a message review handler from the specified room.
+     * </p>
+     * 
+     * @return Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
+     *         disassociate a message review handler from the specified room.
+     */
+
+    public MessageReviewHandler getMessageReviewHandler() {
+        return this.messageReviewHandler;
+    }
+
+    /**
+     * <p>
+     * Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
+     * disassociate a message review handler from the specified room.
+     * </p>
+     * 
+     * @param messageReviewHandler
+     *        Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
+     *        disassociate a message review handler from the specified room.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRoomRequest withMessageReviewHandler(MessageReviewHandler messageReviewHandler) {
+        setMessageReviewHandler(messageReviewHandler);
         return this;
     }
 
@@ -175,178 +347,6 @@ public class UpdateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * <p>
-     * The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit
-     * applies specifically to rune/code-point count, not number of bytes. Default: 500.
-     * </p>
-     * 
-     * @param maximumMessageLength
-     *        The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this
-     *        limit applies specifically to rune/code-point count, not number of bytes. Default: 500.
-     */
-
-    public void setMaximumMessageLength(Integer maximumMessageLength) {
-        this.maximumMessageLength = maximumMessageLength;
-    }
-
-    /**
-     * <p>
-     * The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit
-     * applies specifically to rune/code-point count, not number of bytes. Default: 500.
-     * </p>
-     * 
-     * @return The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this
-     *         limit applies specifically to rune/code-point count, not number of bytes. Default: 500.
-     */
-
-    public Integer getMaximumMessageLength() {
-        return this.maximumMessageLength;
-    }
-
-    /**
-     * <p>
-     * The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit
-     * applies specifically to rune/code-point count, not number of bytes. Default: 500.
-     * </p>
-     * 
-     * @param maximumMessageLength
-     *        The maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this
-     *        limit applies specifically to rune/code-point count, not number of bytes. Default: 500.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateRoomRequest withMaximumMessageLength(Integer maximumMessageLength) {
-        setMaximumMessageLength(maximumMessageLength);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * </p>
-     * 
-     * @param maximumMessageRatePerSecond
-     *        Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     */
-
-    public void setMaximumMessageRatePerSecond(Integer maximumMessageRatePerSecond) {
-        this.maximumMessageRatePerSecond = maximumMessageRatePerSecond;
-    }
-
-    /**
-     * <p>
-     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * </p>
-     * 
-     * @return Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     */
-
-    public Integer getMaximumMessageRatePerSecond() {
-        return this.maximumMessageRatePerSecond;
-    }
-
-    /**
-     * <p>
-     * Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * </p>
-     * 
-     * @param maximumMessageRatePerSecond
-     *        Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateRoomRequest withMaximumMessageRatePerSecond(Integer maximumMessageRatePerSecond) {
-        setMaximumMessageRatePerSecond(maximumMessageRatePerSecond);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
-     * disassociate a message review handler from the specified room.
-     * </p>
-     * 
-     * @param messageReviewHandler
-     *        Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
-     *        disassociate a message review handler from the specified room.
-     */
-
-    public void setMessageReviewHandler(MessageReviewHandler messageReviewHandler) {
-        this.messageReviewHandler = messageReviewHandler;
-    }
-
-    /**
-     * <p>
-     * Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
-     * disassociate a message review handler from the specified room.
-     * </p>
-     * 
-     * @return Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
-     *         disassociate a message review handler from the specified room.
-     */
-
-    public MessageReviewHandler getMessageReviewHandler() {
-        return this.messageReviewHandler;
-    }
-
-    /**
-     * <p>
-     * Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
-     * disassociate a message review handler from the specified room.
-     * </p>
-     * 
-     * @param messageReviewHandler
-     *        Configuration information for optional review of messages. Specify an empty <code>uri</code> string to
-     *        disassociate a message review handler from the specified room.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateRoomRequest withMessageReviewHandler(MessageReviewHandler messageReviewHandler) {
-        setMessageReviewHandler(messageReviewHandler);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Room name. The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        Room name. The value does not need to be unique.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * Room name. The value does not need to be unique.
-     * </p>
-     * 
-     * @return Room name. The value does not need to be unique.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * Room name. The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        Room name. The value does not need to be unique.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateRoomRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -360,16 +360,16 @@ public class UpdateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
         sb.append("{");
         if (getIdentifier() != null)
             sb.append("Identifier: ").append(getIdentifier()).append(",");
-        if (getLoggingConfigurationIdentifiers() != null)
-            sb.append("LoggingConfigurationIdentifiers: ").append(getLoggingConfigurationIdentifiers()).append(",");
-        if (getMaximumMessageLength() != null)
-            sb.append("MaximumMessageLength: ").append(getMaximumMessageLength()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getMaximumMessageRatePerSecond() != null)
             sb.append("MaximumMessageRatePerSecond: ").append(getMaximumMessageRatePerSecond()).append(",");
+        if (getMaximumMessageLength() != null)
+            sb.append("MaximumMessageLength: ").append(getMaximumMessageLength()).append(",");
         if (getMessageReviewHandler() != null)
             sb.append("MessageReviewHandler: ").append(getMessageReviewHandler()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName());
+        if (getLoggingConfigurationIdentifiers() != null)
+            sb.append("LoggingConfigurationIdentifiers: ").append(getLoggingConfigurationIdentifiers());
         sb.append("}");
         return sb.toString();
     }
@@ -388,26 +388,26 @@ public class UpdateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getIdentifier() != null && other.getIdentifier().equals(this.getIdentifier()) == false)
             return false;
-        if (other.getLoggingConfigurationIdentifiers() == null ^ this.getLoggingConfigurationIdentifiers() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getLoggingConfigurationIdentifiers() != null
-                && other.getLoggingConfigurationIdentifiers().equals(this.getLoggingConfigurationIdentifiers()) == false)
-            return false;
-        if (other.getMaximumMessageLength() == null ^ this.getMaximumMessageLength() == null)
-            return false;
-        if (other.getMaximumMessageLength() != null && other.getMaximumMessageLength().equals(this.getMaximumMessageLength()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getMaximumMessageRatePerSecond() == null ^ this.getMaximumMessageRatePerSecond() == null)
             return false;
         if (other.getMaximumMessageRatePerSecond() != null && other.getMaximumMessageRatePerSecond().equals(this.getMaximumMessageRatePerSecond()) == false)
             return false;
+        if (other.getMaximumMessageLength() == null ^ this.getMaximumMessageLength() == null)
+            return false;
+        if (other.getMaximumMessageLength() != null && other.getMaximumMessageLength().equals(this.getMaximumMessageLength()) == false)
+            return false;
         if (other.getMessageReviewHandler() == null ^ this.getMessageReviewHandler() == null)
             return false;
         if (other.getMessageReviewHandler() != null && other.getMessageReviewHandler().equals(this.getMessageReviewHandler()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
+        if (other.getLoggingConfigurationIdentifiers() == null ^ this.getLoggingConfigurationIdentifiers() == null)
             return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+        if (other.getLoggingConfigurationIdentifiers() != null
+                && other.getLoggingConfigurationIdentifiers().equals(this.getLoggingConfigurationIdentifiers()) == false)
             return false;
         return true;
     }
@@ -418,11 +418,11 @@ public class UpdateRoomRequest extends com.amazonaws.AmazonWebServiceRequest imp
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getIdentifier() == null) ? 0 : getIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getLoggingConfigurationIdentifiers() == null) ? 0 : getLoggingConfigurationIdentifiers().hashCode());
-        hashCode = prime * hashCode + ((getMaximumMessageLength() == null) ? 0 : getMaximumMessageLength().hashCode());
-        hashCode = prime * hashCode + ((getMaximumMessageRatePerSecond() == null) ? 0 : getMaximumMessageRatePerSecond().hashCode());
-        hashCode = prime * hashCode + ((getMessageReviewHandler() == null) ? 0 : getMessageReviewHandler().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getMaximumMessageRatePerSecond() == null) ? 0 : getMaximumMessageRatePerSecond().hashCode());
+        hashCode = prime * hashCode + ((getMaximumMessageLength() == null) ? 0 : getMaximumMessageLength().hashCode());
+        hashCode = prime * hashCode + ((getMessageReviewHandler() == null) ? 0 : getMessageReviewHandler().hashCode());
+        hashCode = prime * hashCode + ((getLoggingConfigurationIdentifiers() == null) ? 0 : getLoggingConfigurationIdentifiers().hashCode());
         return hashCode;
     }
 

@@ -3980,6 +3980,45 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Create a verification token. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param createIpamExternalResourceVerificationTokenRequest
+     * @return A Java Future containing the result of the CreateIpamExternalResourceVerificationToken operation returned
+     *         by the service.
+     * @sample AmazonEC2Async.CreateIpamExternalResourceVerificationToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamExternalResourceVerificationToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamExternalResourceVerificationTokenResult> createIpamExternalResourceVerificationTokenAsync(
+            CreateIpamExternalResourceVerificationTokenRequest createIpamExternalResourceVerificationTokenRequest);
+
+    /**
+     * <p>
+     * Create a verification token. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param createIpamExternalResourceVerificationTokenRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIpamExternalResourceVerificationToken operation returned
+     *         by the service.
+     * @sample AmazonEC2AsyncHandler.CreateIpamExternalResourceVerificationToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamExternalResourceVerificationToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamExternalResourceVerificationTokenResult> createIpamExternalResourceVerificationTokenAsync(
+            CreateIpamExternalResourceVerificationTokenRequest createIpamExternalResourceVerificationTokenRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamExternalResourceVerificationTokenRequest, CreateIpamExternalResourceVerificationTokenResult> asyncHandler);
+
+    /**
+     * <p>
      * Create an IP address pool for Amazon VPC IP Address Manager (IPAM). In IPAM, a pool is a collection of contiguous
      * IP addresses CIDRs. Pools enable you to organize your IP addresses according to your routing and security needs.
      * For example, if you have separate routing and security needs for development and production applications, you can
@@ -7808,6 +7847,45 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DeleteIpamResult> deleteIpamAsync(DeleteIpamRequest deleteIpamRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteIpamRequest, DeleteIpamResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete a verification token. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param deleteIpamExternalResourceVerificationTokenRequest
+     * @return A Java Future containing the result of the DeleteIpamExternalResourceVerificationToken operation returned
+     *         by the service.
+     * @sample AmazonEC2Async.DeleteIpamExternalResourceVerificationToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamExternalResourceVerificationToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamExternalResourceVerificationTokenResult> deleteIpamExternalResourceVerificationTokenAsync(
+            DeleteIpamExternalResourceVerificationTokenRequest deleteIpamExternalResourceVerificationTokenRequest);
+
+    /**
+     * <p>
+     * Delete a verification token. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param deleteIpamExternalResourceVerificationTokenRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIpamExternalResourceVerificationToken operation returned
+     *         by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteIpamExternalResourceVerificationToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamExternalResourceVerificationToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamExternalResourceVerificationTokenResult> deleteIpamExternalResourceVerificationTokenAsync(
+            DeleteIpamExternalResourceVerificationTokenRequest deleteIpamExternalResourceVerificationTokenRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamExternalResourceVerificationTokenRequest, DeleteIpamExternalResourceVerificationTokenResult> asyncHandler);
 
     /**
      * <p>
@@ -13319,6 +13397,47 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Describe verification tokens. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param describeIpamExternalResourceVerificationTokensRequest
+     * @return A Java Future containing the result of the DescribeIpamExternalResourceVerificationTokens operation
+     *         returned by the service.
+     * @sample AmazonEC2Async.DescribeIpamExternalResourceVerificationTokens
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamExternalResourceVerificationTokens"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamExternalResourceVerificationTokensResult> describeIpamExternalResourceVerificationTokensAsync(
+            DescribeIpamExternalResourceVerificationTokensRequest describeIpamExternalResourceVerificationTokensRequest);
+
+    /**
+     * <p>
+     * Describe verification tokens. A verification token is an Amazon Web Services-generated random value that you can
+     * use to prove ownership of an external resource. For example, you can use a verification token to validate that
+     * you control a public IP address range when you bring an IP address range to Amazon Web Services (BYOIP).
+     * </p>
+     * 
+     * @param describeIpamExternalResourceVerificationTokensRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIpamExternalResourceVerificationTokens operation
+     *         returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeIpamExternalResourceVerificationTokens
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamExternalResourceVerificationTokens"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamExternalResourceVerificationTokensResult> describeIpamExternalResourceVerificationTokensAsync(
+            DescribeIpamExternalResourceVerificationTokensRequest describeIpamExternalResourceVerificationTokensRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamExternalResourceVerificationTokensRequest, DescribeIpamExternalResourceVerificationTokensResult> asyncHandler);
+
+    /**
+     * <p>
      * Get information about your IPAM pools.
      * </p>
      * 
@@ -14401,7 +14520,17 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describes the specified placement groups or all of your placement groups. For more information, see <a
+     * Describes the specified placement groups or all of your placement groups.
+     * </p>
+     * <note>
+     * <p>
+     * To describe a specific placement group that is <i>shared</i> with your account, you must specify the ID of the
+     * placement group using the <code>GroupId</code> parameter. Specifying the name of a <i>shared</i> placement group
+     * using the <code>GroupNames</code> parameter will result in an error.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide</i>.
      * </p>
@@ -14416,7 +14545,17 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describes the specified placement groups or all of your placement groups. For more information, see <a
+     * Describes the specified placement groups or all of your placement groups.
+     * </p>
+     * <note>
+     * <p>
+     * To describe a specific placement group that is <i>shared</i> with your account, you must specify the ID of the
+     * placement group using the <code>GroupId</code> parameter. Specifying the name of a <i>shared</i> placement group
+     * using the <code>GroupNames</code> parameter will result in an error.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide</i>.
      * </p>
@@ -17151,10 +17290,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Describes the most recent volume modification request for the specified EBS volumes.
      * </p>
      * <p>
-     * If a volume has never been modified, some information in the output will be null. If a volume has been modified
-     * more than once, the output includes only the most recent modification request.
-     * </p>
-     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html"> Monitor the
      * progress of volume modifications</a> in the <i>Amazon EBS User Guide</i>.
@@ -17173,10 +17308,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Describes the most recent volume modification request for the specified EBS volumes.
-     * </p>
-     * <p>
-     * If a volume has never been modified, some information in the output will be null. If a volume has been modified
-     * more than once, the output includes only the most recent modification request.
      * </p>
      * <p>
      * For more information, see <a
@@ -20638,15 +20769,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * instances, the instance console output includes the last three system event log errors.
      * </p>
      * <p>
-     * By default, the console output returns buffered information that was posted shortly after an instance transition
-     * state (start, stop, reboot, or terminate). This information is available for at least one hour after the most
-     * recent post. Only the most recent 64 KB of console output is available.
-     * </p>
-     * <p>
-     * You can optionally retrieve the latest serial console output at any time during the instance lifecycle. This
-     * option is supported on instance types that use the Nitro hypervisor.
-     * </p>
-     * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html#instance-console-console-output"
      * >Instance console output</a> in the <i>Amazon EC2 User Guide</i>.
@@ -20665,15 +20787,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Gets the console output for the specified instance. For Linux instances, the instance console output displays the
      * exact console output that would normally be displayed on a physical monitor attached to a computer. For Windows
      * instances, the instance console output includes the last three system event log errors.
-     * </p>
-     * <p>
-     * By default, the console output returns buffered information that was posted shortly after an instance transition
-     * state (start, stop, reboot, or terminate). This information is available for at least one hour after the most
-     * recent post. Only the most recent 64 KB of console output is available.
-     * </p>
-     * <p>
-     * You can optionally retrieve the latest serial console output at any time during the instance lifecycle. This
-     * option is supported on instance types that use the Nitro hypervisor.
      * </p>
      * <p>
      * For more information, see <a href=

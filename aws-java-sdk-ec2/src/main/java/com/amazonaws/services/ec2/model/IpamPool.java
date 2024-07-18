@@ -80,12 +80,29 @@ public class IpamPool implements Serializable, Cloneable {
     private String ipamRegion;
     /**
      * <p>
-     * The locale of the IPAM pool. In IPAM, the locale is the Amazon Web Services Region or, for IPAM IPv4 pools in the
-     * public scope, the network border group for an Amazon Web Services Local Zone where you want to make an IPAM pool
-     * available for allocations (<a
+     * The locale of the IPAM pool.
+     * </p>
+     * <p>
+     * The locale for the pool should be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services Region where you want this IPAM pool to be available for allocations.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The network border group for an Amazon Web Services Local Zone where you want this IPAM pool to be available for
+     * allocations (<a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">supported Local
-     * Zones</a>). If you choose an Amazon Web Services Region for locale that has not been configured as an operating
-     * Region for the IPAM, you'll get an error.
+     * Zones</a>). This option is only available for IPAM IPv4 pools in the public scope.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you choose an Amazon Web Services Region for locale that has not been configured as an operating Region for
+     * the IPAM, you'll get an error.
      * </p>
      */
     private String locale;
@@ -577,21 +594,54 @@ public class IpamPool implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The locale of the IPAM pool. In IPAM, the locale is the Amazon Web Services Region or, for IPAM IPv4 pools in the
-     * public scope, the network border group for an Amazon Web Services Local Zone where you want to make an IPAM pool
-     * available for allocations (<a
+     * The locale of the IPAM pool.
+     * </p>
+     * <p>
+     * The locale for the pool should be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services Region where you want this IPAM pool to be available for allocations.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The network border group for an Amazon Web Services Local Zone where you want this IPAM pool to be available for
+     * allocations (<a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">supported Local
-     * Zones</a>). If you choose an Amazon Web Services Region for locale that has not been configured as an operating
-     * Region for the IPAM, you'll get an error.
+     * Zones</a>). This option is only available for IPAM IPv4 pools in the public scope.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you choose an Amazon Web Services Region for locale that has not been configured as an operating Region for
+     * the IPAM, you'll get an error.
      * </p>
      * 
      * @param locale
-     *        The locale of the IPAM pool. In IPAM, the locale is the Amazon Web Services Region or, for IPAM IPv4 pools
-     *        in the public scope, the network border group for an Amazon Web Services Local Zone where you want to make
-     *        an IPAM pool available for allocations (<a
+     *        The locale of the IPAM pool.</p>
+     *        <p>
+     *        The locale for the pool should be one of the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Amazon Web Services Region where you want this IPAM pool to be available for allocations.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The network border group for an Amazon Web Services Local Zone where you want this IPAM pool to be
+     *        available for allocations (<a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">supported Local
-     *        Zones</a>). If you choose an Amazon Web Services Region for locale that has not been configured as an
-     *        operating Region for the IPAM, you'll get an error.
+     *        Zones</a>). This option is only available for IPAM IPv4 pools in the public scope.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        If you choose an Amazon Web Services Region for locale that has not been configured as an operating Region
+     *        for the IPAM, you'll get an error.
      */
 
     public void setLocale(String locale) {
@@ -600,20 +650,53 @@ public class IpamPool implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The locale of the IPAM pool. In IPAM, the locale is the Amazon Web Services Region or, for IPAM IPv4 pools in the
-     * public scope, the network border group for an Amazon Web Services Local Zone where you want to make an IPAM pool
-     * available for allocations (<a
+     * The locale of the IPAM pool.
+     * </p>
+     * <p>
+     * The locale for the pool should be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services Region where you want this IPAM pool to be available for allocations.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The network border group for an Amazon Web Services Local Zone where you want this IPAM pool to be available for
+     * allocations (<a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">supported Local
-     * Zones</a>). If you choose an Amazon Web Services Region for locale that has not been configured as an operating
-     * Region for the IPAM, you'll get an error.
+     * Zones</a>). This option is only available for IPAM IPv4 pools in the public scope.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you choose an Amazon Web Services Region for locale that has not been configured as an operating Region for
+     * the IPAM, you'll get an error.
      * </p>
      * 
-     * @return The locale of the IPAM pool. In IPAM, the locale is the Amazon Web Services Region or, for IPAM IPv4
-     *         pools in the public scope, the network border group for an Amazon Web Services Local Zone where you want
-     *         to make an IPAM pool available for allocations (<a
+     * @return The locale of the IPAM pool.</p>
+     *         <p>
+     *         The locale for the pool should be one of the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         An Amazon Web Services Region where you want this IPAM pool to be available for allocations.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The network border group for an Amazon Web Services Local Zone where you want this IPAM pool to be
+     *         available for allocations (<a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">supported
-     *         Local Zones</a>). If you choose an Amazon Web Services Region for locale that has not been configured as
-     *         an operating Region for the IPAM, you'll get an error.
+     *         Local Zones</a>). This option is only available for IPAM IPv4 pools in the public scope.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         If you choose an Amazon Web Services Region for locale that has not been configured as an operating
+     *         Region for the IPAM, you'll get an error.
      */
 
     public String getLocale() {
@@ -622,21 +705,54 @@ public class IpamPool implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The locale of the IPAM pool. In IPAM, the locale is the Amazon Web Services Region or, for IPAM IPv4 pools in the
-     * public scope, the network border group for an Amazon Web Services Local Zone where you want to make an IPAM pool
-     * available for allocations (<a
+     * The locale of the IPAM pool.
+     * </p>
+     * <p>
+     * The locale for the pool should be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services Region where you want this IPAM pool to be available for allocations.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The network border group for an Amazon Web Services Local Zone where you want this IPAM pool to be available for
+     * allocations (<a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">supported Local
-     * Zones</a>). If you choose an Amazon Web Services Region for locale that has not been configured as an operating
-     * Region for the IPAM, you'll get an error.
+     * Zones</a>). This option is only available for IPAM IPv4 pools in the public scope.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you choose an Amazon Web Services Region for locale that has not been configured as an operating Region for
+     * the IPAM, you'll get an error.
      * </p>
      * 
      * @param locale
-     *        The locale of the IPAM pool. In IPAM, the locale is the Amazon Web Services Region or, for IPAM IPv4 pools
-     *        in the public scope, the network border group for an Amazon Web Services Local Zone where you want to make
-     *        an IPAM pool available for allocations (<a
+     *        The locale of the IPAM pool.</p>
+     *        <p>
+     *        The locale for the pool should be one of the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Amazon Web Services Region where you want this IPAM pool to be available for allocations.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The network border group for an Amazon Web Services Local Zone where you want this IPAM pool to be
+     *        available for allocations (<a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">supported Local
-     *        Zones</a>). If you choose an Amazon Web Services Region for locale that has not been configured as an
-     *        operating Region for the IPAM, you'll get an error.
+     *        Zones</a>). This option is only available for IPAM IPv4 pools in the public scope.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        If you choose an Amazon Web Services Region for locale that has not been configured as an operating Region
+     *        for the IPAM, you'll get an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

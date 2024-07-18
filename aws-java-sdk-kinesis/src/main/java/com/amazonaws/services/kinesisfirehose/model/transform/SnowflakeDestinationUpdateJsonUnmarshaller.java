@@ -120,6 +120,10 @@ public class SnowflakeDestinationUpdateJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     snowflakeDestinationUpdate.setSecretsManagerConfiguration(SecretsManagerConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("BufferingHints", targetDepth)) {
+                    context.nextToken();
+                    snowflakeDestinationUpdate.setBufferingHints(SnowflakeBufferingHintsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

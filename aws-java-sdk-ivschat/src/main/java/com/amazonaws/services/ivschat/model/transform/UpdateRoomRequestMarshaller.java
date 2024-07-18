@@ -30,16 +30,16 @@ public class UpdateRoomRequestMarshaller {
 
     private static final MarshallingInfo<String> IDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("identifier").build();
-    private static final MarshallingInfo<List> LOGGINGCONFIGURATIONIDENTIFIERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingConfigurationIdentifiers").build();
-    private static final MarshallingInfo<Integer> MAXIMUMMESSAGELENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageLength").build();
-    private static final MarshallingInfo<Integer> MAXIMUMMESSAGERATEPERSECOND_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageRatePerSecond").build();
-    private static final MarshallingInfo<StructuredPojo> MESSAGEREVIEWHANDLER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("messageReviewHandler").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<Integer> MAXIMUMMESSAGERATEPERSECOND_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageRatePerSecond").build();
+    private static final MarshallingInfo<Integer> MAXIMUMMESSAGELENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageLength").build();
+    private static final MarshallingInfo<StructuredPojo> MESSAGEREVIEWHANDLER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("messageReviewHandler").build();
+    private static final MarshallingInfo<List> LOGGINGCONFIGURATIONIDENTIFIERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingConfigurationIdentifiers").build();
 
     private static final UpdateRoomRequestMarshaller instance = new UpdateRoomRequestMarshaller();
 
@@ -58,11 +58,11 @@ public class UpdateRoomRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateRoomRequest.getIdentifier(), IDENTIFIER_BINDING);
-            protocolMarshaller.marshall(updateRoomRequest.getLoggingConfigurationIdentifiers(), LOGGINGCONFIGURATIONIDENTIFIERS_BINDING);
-            protocolMarshaller.marshall(updateRoomRequest.getMaximumMessageLength(), MAXIMUMMESSAGELENGTH_BINDING);
-            protocolMarshaller.marshall(updateRoomRequest.getMaximumMessageRatePerSecond(), MAXIMUMMESSAGERATEPERSECOND_BINDING);
-            protocolMarshaller.marshall(updateRoomRequest.getMessageReviewHandler(), MESSAGEREVIEWHANDLER_BINDING);
             protocolMarshaller.marshall(updateRoomRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(updateRoomRequest.getMaximumMessageRatePerSecond(), MAXIMUMMESSAGERATEPERSECOND_BINDING);
+            protocolMarshaller.marshall(updateRoomRequest.getMaximumMessageLength(), MAXIMUMMESSAGELENGTH_BINDING);
+            protocolMarshaller.marshall(updateRoomRequest.getMessageReviewHandler(), MESSAGEREVIEWHANDLER_BINDING);
+            protocolMarshaller.marshall(updateRoomRequest.getLoggingConfigurationIdentifiers(), LOGGINGCONFIGURATIONIDENTIFIERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

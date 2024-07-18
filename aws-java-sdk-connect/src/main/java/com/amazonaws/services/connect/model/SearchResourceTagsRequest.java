@@ -37,6 +37,51 @@ public class SearchResourceTagsRequest extends com.amazonaws.AmazonWebServiceReq
      * The list of resource types to be used to search tags from. If not provided or if any empty list is provided, this
      * API will search from all supported resource types.
      * </p>
+     * <p class="title">
+     * <b>Supported resource types</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * AGENT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ROUTING_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * STANDARD_QUEUE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SECURITY_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * OPERATING_HOURS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PROMPT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CONTACT_FLOW
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FLOW_MODULE
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<String> resourceTypes;
     /**
@@ -110,9 +155,98 @@ public class SearchResourceTagsRequest extends com.amazonaws.AmazonWebServiceReq
      * The list of resource types to be used to search tags from. If not provided or if any empty list is provided, this
      * API will search from all supported resource types.
      * </p>
+     * <p class="title">
+     * <b>Supported resource types</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * AGENT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ROUTING_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * STANDARD_QUEUE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SECURITY_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * OPERATING_HOURS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PROMPT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CONTACT_FLOW
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FLOW_MODULE
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The list of resource types to be used to search tags from. If not provided or if any empty list is
-     *         provided, this API will search from all supported resource types.
+     *         provided, this API will search from all supported resource types.</p>
+     *         <p class="title">
+     *         <b>Supported resource types</b>
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         AGENT
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         ROUTING_PROFILE
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         STANDARD_QUEUE
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         SECURITY_PROFILE
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         OPERATING_HOURS
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         PROMPT
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         CONTACT_FLOW
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         FLOW_MODULE
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<String> getResourceTypes() {
@@ -124,10 +258,99 @@ public class SearchResourceTagsRequest extends com.amazonaws.AmazonWebServiceReq
      * The list of resource types to be used to search tags from. If not provided or if any empty list is provided, this
      * API will search from all supported resource types.
      * </p>
+     * <p class="title">
+     * <b>Supported resource types</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * AGENT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ROUTING_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * STANDARD_QUEUE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SECURITY_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * OPERATING_HOURS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PROMPT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CONTACT_FLOW
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FLOW_MODULE
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param resourceTypes
      *        The list of resource types to be used to search tags from. If not provided or if any empty list is
-     *        provided, this API will search from all supported resource types.
+     *        provided, this API will search from all supported resource types.</p>
+     *        <p class="title">
+     *        <b>Supported resource types</b>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        AGENT
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        ROUTING_PROFILE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        STANDARD_QUEUE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SECURITY_PROFILE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        OPERATING_HOURS
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        PROMPT
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CONTACT_FLOW
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FLOW_MODULE
+     *        </p>
+     *        </li>
      */
 
     public void setResourceTypes(java.util.Collection<String> resourceTypes) {
@@ -144,6 +367,51 @@ public class SearchResourceTagsRequest extends com.amazonaws.AmazonWebServiceReq
      * The list of resource types to be used to search tags from. If not provided or if any empty list is provided, this
      * API will search from all supported resource types.
      * </p>
+     * <p class="title">
+     * <b>Supported resource types</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * AGENT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ROUTING_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * STANDARD_QUEUE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SECURITY_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * OPERATING_HOURS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PROMPT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CONTACT_FLOW
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FLOW_MODULE
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceTypes(java.util.Collection)} or {@link #withResourceTypes(java.util.Collection)} if you want
@@ -152,7 +420,51 @@ public class SearchResourceTagsRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param resourceTypes
      *        The list of resource types to be used to search tags from. If not provided or if any empty list is
-     *        provided, this API will search from all supported resource types.
+     *        provided, this API will search from all supported resource types.</p>
+     *        <p class="title">
+     *        <b>Supported resource types</b>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        AGENT
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        ROUTING_PROFILE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        STANDARD_QUEUE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SECURITY_PROFILE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        OPERATING_HOURS
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        PROMPT
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CONTACT_FLOW
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FLOW_MODULE
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,10 +483,99 @@ public class SearchResourceTagsRequest extends com.amazonaws.AmazonWebServiceReq
      * The list of resource types to be used to search tags from. If not provided or if any empty list is provided, this
      * API will search from all supported resource types.
      * </p>
+     * <p class="title">
+     * <b>Supported resource types</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * AGENT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ROUTING_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * STANDARD_QUEUE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SECURITY_PROFILE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * OPERATING_HOURS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PROMPT
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CONTACT_FLOW
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FLOW_MODULE
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param resourceTypes
      *        The list of resource types to be used to search tags from. If not provided or if any empty list is
-     *        provided, this API will search from all supported resource types.
+     *        provided, this API will search from all supported resource types.</p>
+     *        <p class="title">
+     *        <b>Supported resource types</b>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        AGENT
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        ROUTING_PROFILE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        STANDARD_QUEUE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SECURITY_PROFILE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        OPERATING_HOURS
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        PROMPT
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CONTACT_FLOW
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FLOW_MODULE
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,57 +27,17 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Maximum number of logging configurations to return. Default: 50.
-     * </p>
-     */
-    private Integer maxResults;
-    /**
-     * <p>
      * The first logging configurations to retrieve. This is used for pagination; see the <code>nextToken</code>
      * response field.
      * </p>
      */
     private String nextToken;
-
     /**
      * <p>
      * Maximum number of logging configurations to return. Default: 50.
      * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of logging configurations to return. Default: 50.
      */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of logging configurations to return. Default: 50.
-     * </p>
-     * 
-     * @return Maximum number of logging configurations to return. Default: 50.
-     */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of logging configurations to return. Default: 50.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of logging configurations to return. Default: 50.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListLoggingConfigurationsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
-        return this;
-    }
+    private Integer maxResults;
 
     /**
      * <p>
@@ -126,6 +86,46 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Maximum number of logging configurations to return. Default: 50.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of logging configurations to return. Default: 50.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of logging configurations to return. Default: 50.
+     * </p>
+     * 
+     * @return Maximum number of logging configurations to return. Default: 50.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of logging configurations to return. Default: 50.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of logging configurations to return. Default: 50.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListLoggingConfigurationsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,10 +137,10 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -155,13 +155,13 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
         if (obj instanceof ListLoggingConfigurationsRequest == false)
             return false;
         ListLoggingConfigurationsRequest other = (ListLoggingConfigurationsRequest) obj;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
-            return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -171,8 +171,8 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

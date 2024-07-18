@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListLoggingConfigurationsRequestMarshaller {
 
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
 
     private static final ListLoggingConfigurationsRequestMarshaller instance = new ListLoggingConfigurationsRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class ListLoggingConfigurationsRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listLoggingConfigurationsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listLoggingConfigurationsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listLoggingConfigurationsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

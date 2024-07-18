@@ -61,6 +61,8 @@ public class InputMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<StructuredPojo> SRTSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("srtSettings").build();
 
     private static final InputMarshaller instance = new InputMarshaller();
 
@@ -94,6 +96,7 @@ public class InputMarshaller {
             protocolMarshaller.marshall(input.getState(), STATE_BINDING);
             protocolMarshaller.marshall(input.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(input.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(input.getSrtSettings(), SRTSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

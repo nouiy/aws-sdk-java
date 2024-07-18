@@ -27,6 +27,12 @@ public class DeleteMessageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * Identifier of the room where the message should be deleted. Currently this must be an ARN.
+     * </p>
+     */
+    private String roomIdentifier;
+    /**
+     * <p>
      * ID of the message to be deleted. This is the <code>Id</code> field in the received message (see <a
      * href="https://docs.aws.amazon.com/ivs/latest/chatmsgapireference/actions-message-subscribe.html"> Message
      * (Subscribe)</a> in the Chat Messaging API).
@@ -39,12 +45,46 @@ public class DeleteMessageRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String reason;
+
     /**
      * <p>
      * Identifier of the room where the message should be deleted. Currently this must be an ARN.
      * </p>
+     * 
+     * @param roomIdentifier
+     *        Identifier of the room where the message should be deleted. Currently this must be an ARN.
      */
-    private String roomIdentifier;
+
+    public void setRoomIdentifier(String roomIdentifier) {
+        this.roomIdentifier = roomIdentifier;
+    }
+
+    /**
+     * <p>
+     * Identifier of the room where the message should be deleted. Currently this must be an ARN.
+     * </p>
+     * 
+     * @return Identifier of the room where the message should be deleted. Currently this must be an ARN.
+     */
+
+    public String getRoomIdentifier() {
+        return this.roomIdentifier;
+    }
+
+    /**
+     * <p>
+     * Identifier of the room where the message should be deleted. Currently this must be an ARN.
+     * </p>
+     * 
+     * @param roomIdentifier
+     *        Identifier of the room where the message should be deleted. Currently this must be an ARN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteMessageRequest withRoomIdentifier(String roomIdentifier) {
+        setRoomIdentifier(roomIdentifier);
+        return this;
+    }
 
     /**
      * <p>
@@ -139,46 +179,6 @@ public class DeleteMessageRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * <p>
-     * Identifier of the room where the message should be deleted. Currently this must be an ARN.
-     * </p>
-     * 
-     * @param roomIdentifier
-     *        Identifier of the room where the message should be deleted. Currently this must be an ARN.
-     */
-
-    public void setRoomIdentifier(String roomIdentifier) {
-        this.roomIdentifier = roomIdentifier;
-    }
-
-    /**
-     * <p>
-     * Identifier of the room where the message should be deleted. Currently this must be an ARN.
-     * </p>
-     * 
-     * @return Identifier of the room where the message should be deleted. Currently this must be an ARN.
-     */
-
-    public String getRoomIdentifier() {
-        return this.roomIdentifier;
-    }
-
-    /**
-     * <p>
-     * Identifier of the room where the message should be deleted. Currently this must be an ARN.
-     * </p>
-     * 
-     * @param roomIdentifier
-     *        Identifier of the room where the message should be deleted. Currently this must be an ARN.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteMessageRequest withRoomIdentifier(String roomIdentifier) {
-        setRoomIdentifier(roomIdentifier);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -190,12 +190,12 @@ public class DeleteMessageRequest extends com.amazonaws.AmazonWebServiceRequest 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getRoomIdentifier() != null)
+            sb.append("RoomIdentifier: ").append(getRoomIdentifier()).append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getReason() != null)
-            sb.append("Reason: ").append(getReason()).append(",");
-        if (getRoomIdentifier() != null)
-            sb.append("RoomIdentifier: ").append(getRoomIdentifier());
+            sb.append("Reason: ").append(getReason());
         sb.append("}");
         return sb.toString();
     }
@@ -210,6 +210,10 @@ public class DeleteMessageRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (obj instanceof DeleteMessageRequest == false)
             return false;
         DeleteMessageRequest other = (DeleteMessageRequest) obj;
+        if (other.getRoomIdentifier() == null ^ this.getRoomIdentifier() == null)
+            return false;
+        if (other.getRoomIdentifier() != null && other.getRoomIdentifier().equals(this.getRoomIdentifier()) == false)
+            return false;
         if (other.getId() == null ^ this.getId() == null)
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
@@ -217,10 +221,6 @@ public class DeleteMessageRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (other.getReason() == null ^ this.getReason() == null)
             return false;
         if (other.getReason() != null && other.getReason().equals(this.getReason()) == false)
-            return false;
-        if (other.getRoomIdentifier() == null ^ this.getRoomIdentifier() == null)
-            return false;
-        if (other.getRoomIdentifier() != null && other.getRoomIdentifier().equals(this.getRoomIdentifier()) == false)
             return false;
         return true;
     }
@@ -230,9 +230,9 @@ public class DeleteMessageRequest extends com.amazonaws.AmazonWebServiceRequest 
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getRoomIdentifier() == null) ? 0 : getRoomIdentifier().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getReason() == null) ? 0 : getReason().hashCode());
-        hashCode = prime * hashCode + ((getRoomIdentifier() == null) ? 0 : getRoomIdentifier().hashCode());
         return hashCode;
     }
 

@@ -27,11 +27,10 @@ public class SendEventRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Application-defined metadata to attach to the event sent to clients. The maximum length of the metadata is 1 KB
-     * total.
+     * Identifier of the room to which the event will be sent. Currently this must be an ARN.
      * </p>
      */
-    private java.util.Map<String, String> attributes;
+    private String roomIdentifier;
     /**
      * <p>
      * Application-defined name of the event to send to clients.
@@ -40,10 +39,91 @@ public class SendEventRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String eventName;
     /**
      * <p>
-     * Identifier of the room to which the event will be sent. Currently this must be an ARN.
+     * Application-defined metadata to attach to the event sent to clients. The maximum length of the metadata is 1 KB
+     * total.
      * </p>
      */
-    private String roomIdentifier;
+    private java.util.Map<String, String> attributes;
+
+    /**
+     * <p>
+     * Identifier of the room to which the event will be sent. Currently this must be an ARN.
+     * </p>
+     * 
+     * @param roomIdentifier
+     *        Identifier of the room to which the event will be sent. Currently this must be an ARN.
+     */
+
+    public void setRoomIdentifier(String roomIdentifier) {
+        this.roomIdentifier = roomIdentifier;
+    }
+
+    /**
+     * <p>
+     * Identifier of the room to which the event will be sent. Currently this must be an ARN.
+     * </p>
+     * 
+     * @return Identifier of the room to which the event will be sent. Currently this must be an ARN.
+     */
+
+    public String getRoomIdentifier() {
+        return this.roomIdentifier;
+    }
+
+    /**
+     * <p>
+     * Identifier of the room to which the event will be sent. Currently this must be an ARN.
+     * </p>
+     * 
+     * @param roomIdentifier
+     *        Identifier of the room to which the event will be sent. Currently this must be an ARN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SendEventRequest withRoomIdentifier(String roomIdentifier) {
+        setRoomIdentifier(roomIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Application-defined name of the event to send to clients.
+     * </p>
+     * 
+     * @param eventName
+     *        Application-defined name of the event to send to clients.
+     */
+
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
+
+    /**
+     * <p>
+     * Application-defined name of the event to send to clients.
+     * </p>
+     * 
+     * @return Application-defined name of the event to send to clients.
+     */
+
+    public String getEventName() {
+        return this.eventName;
+    }
+
+    /**
+     * <p>
+     * Application-defined name of the event to send to clients.
+     * </p>
+     * 
+     * @param eventName
+     *        Application-defined name of the event to send to clients.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SendEventRequest withEventName(String eventName) {
+        setEventName(eventName);
+        return this;
+    }
 
     /**
      * <p>
@@ -120,86 +200,6 @@ public class SendEventRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
-     * <p>
-     * Application-defined name of the event to send to clients.
-     * </p>
-     * 
-     * @param eventName
-     *        Application-defined name of the event to send to clients.
-     */
-
-    public void setEventName(String eventName) {
-        this.eventName = eventName;
-    }
-
-    /**
-     * <p>
-     * Application-defined name of the event to send to clients.
-     * </p>
-     * 
-     * @return Application-defined name of the event to send to clients.
-     */
-
-    public String getEventName() {
-        return this.eventName;
-    }
-
-    /**
-     * <p>
-     * Application-defined name of the event to send to clients.
-     * </p>
-     * 
-     * @param eventName
-     *        Application-defined name of the event to send to clients.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SendEventRequest withEventName(String eventName) {
-        setEventName(eventName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Identifier of the room to which the event will be sent. Currently this must be an ARN.
-     * </p>
-     * 
-     * @param roomIdentifier
-     *        Identifier of the room to which the event will be sent. Currently this must be an ARN.
-     */
-
-    public void setRoomIdentifier(String roomIdentifier) {
-        this.roomIdentifier = roomIdentifier;
-    }
-
-    /**
-     * <p>
-     * Identifier of the room to which the event will be sent. Currently this must be an ARN.
-     * </p>
-     * 
-     * @return Identifier of the room to which the event will be sent. Currently this must be an ARN.
-     */
-
-    public String getRoomIdentifier() {
-        return this.roomIdentifier;
-    }
-
-    /**
-     * <p>
-     * Identifier of the room to which the event will be sent. Currently this must be an ARN.
-     * </p>
-     * 
-     * @param roomIdentifier
-     *        Identifier of the room to which the event will be sent. Currently this must be an ARN.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SendEventRequest withRoomIdentifier(String roomIdentifier) {
-        setRoomIdentifier(roomIdentifier);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -211,12 +211,12 @@ public class SendEventRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAttributes() != null)
-            sb.append("Attributes: ").append(getAttributes()).append(",");
+        if (getRoomIdentifier() != null)
+            sb.append("RoomIdentifier: ").append(getRoomIdentifier()).append(",");
         if (getEventName() != null)
             sb.append("EventName: ").append(getEventName()).append(",");
-        if (getRoomIdentifier() != null)
-            sb.append("RoomIdentifier: ").append(getRoomIdentifier());
+        if (getAttributes() != null)
+            sb.append("Attributes: ").append(getAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -231,17 +231,17 @@ public class SendEventRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof SendEventRequest == false)
             return false;
         SendEventRequest other = (SendEventRequest) obj;
-        if (other.getAttributes() == null ^ this.getAttributes() == null)
+        if (other.getRoomIdentifier() == null ^ this.getRoomIdentifier() == null)
             return false;
-        if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
+        if (other.getRoomIdentifier() != null && other.getRoomIdentifier().equals(this.getRoomIdentifier()) == false)
             return false;
         if (other.getEventName() == null ^ this.getEventName() == null)
             return false;
         if (other.getEventName() != null && other.getEventName().equals(this.getEventName()) == false)
             return false;
-        if (other.getRoomIdentifier() == null ^ this.getRoomIdentifier() == null)
+        if (other.getAttributes() == null ^ this.getAttributes() == null)
             return false;
-        if (other.getRoomIdentifier() != null && other.getRoomIdentifier().equals(this.getRoomIdentifier()) == false)
+        if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
             return false;
         return true;
     }
@@ -251,9 +251,9 @@ public class SendEventRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
-        hashCode = prime * hashCode + ((getEventName() == null) ? 0 : getEventName().hashCode());
         hashCode = prime * hashCode + ((getRoomIdentifier() == null) ? 0 : getRoomIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getEventName() == null) ? 0 : getEventName().hashCode());
+        hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
         return hashCode;
     }
 

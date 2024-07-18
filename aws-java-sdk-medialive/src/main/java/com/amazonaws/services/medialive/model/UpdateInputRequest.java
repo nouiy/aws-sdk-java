@@ -49,6 +49,8 @@ public class UpdateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
      * specify sources for PULL type Inputs. Leave Destinations empty.
      */
     private java.util.List<InputSourceRequest> sources;
+    /** The settings associated with an SRT input. */
+    private SrtSettingsRequest srtSettings;
 
     /**
      * Destination settings for PUSH type inputs.
@@ -488,6 +490,40 @@ public class UpdateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * The settings associated with an SRT input.
+     * 
+     * @param srtSettings
+     *        The settings associated with an SRT input.
+     */
+
+    public void setSrtSettings(SrtSettingsRequest srtSettings) {
+        this.srtSettings = srtSettings;
+    }
+
+    /**
+     * The settings associated with an SRT input.
+     * 
+     * @return The settings associated with an SRT input.
+     */
+
+    public SrtSettingsRequest getSrtSettings() {
+        return this.srtSettings;
+    }
+
+    /**
+     * The settings associated with an SRT input.
+     * 
+     * @param srtSettings
+     *        The settings associated with an SRT input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateInputRequest withSrtSettings(SrtSettingsRequest srtSettings) {
+        setSrtSettings(srtSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -514,7 +550,9 @@ public class UpdateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getSources() != null)
-            sb.append("Sources: ").append(getSources());
+            sb.append("Sources: ").append(getSources()).append(",");
+        if (getSrtSettings() != null)
+            sb.append("SrtSettings: ").append(getSrtSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -561,6 +599,10 @@ public class UpdateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getSources() != null && other.getSources().equals(this.getSources()) == false)
             return false;
+        if (other.getSrtSettings() == null ^ this.getSrtSettings() == null)
+            return false;
+        if (other.getSrtSettings() != null && other.getSrtSettings().equals(this.getSrtSettings()) == false)
+            return false;
         return true;
     }
 
@@ -577,6 +619,7 @@ public class UpdateInputRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSources() == null) ? 0 : getSources().hashCode());
+        hashCode = prime * hashCode + ((getSrtSettings() == null) ? 0 : getSrtSettings().hashCode());
         return hashCode;
     }
 

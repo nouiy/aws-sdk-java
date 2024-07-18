@@ -29,12 +29,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SendEventRequestMarshaller {
 
-    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("attributes").build();
-    private static final MarshallingInfo<String> EVENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("eventName").build();
     private static final MarshallingInfo<String> ROOMIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("roomIdentifier").build();
+    private static final MarshallingInfo<String> EVENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("eventName").build();
+    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("attributes").build();
 
     private static final SendEventRequestMarshaller instance = new SendEventRequestMarshaller();
 
@@ -52,9 +52,9 @@ public class SendEventRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(sendEventRequest.getAttributes(), ATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(sendEventRequest.getEventName(), EVENTNAME_BINDING);
             protocolMarshaller.marshall(sendEventRequest.getRoomIdentifier(), ROOMIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(sendEventRequest.getEventName(), EVENTNAME_BINDING);
+            protocolMarshaller.marshall(sendEventRequest.getAttributes(), ATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

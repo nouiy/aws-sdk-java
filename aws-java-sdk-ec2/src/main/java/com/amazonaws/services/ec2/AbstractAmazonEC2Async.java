@@ -1133,6 +1133,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreateIpamExternalResourceVerificationTokenResult> createIpamExternalResourceVerificationTokenAsync(
+            CreateIpamExternalResourceVerificationTokenRequest request) {
+
+        return createIpamExternalResourceVerificationTokenAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIpamExternalResourceVerificationTokenResult> createIpamExternalResourceVerificationTokenAsync(
+            CreateIpamExternalResourceVerificationTokenRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamExternalResourceVerificationTokenRequest, CreateIpamExternalResourceVerificationTokenResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIpamPoolResult> createIpamPoolAsync(CreateIpamPoolRequest request) {
 
         return createIpamPoolAsync(request, null);
@@ -2169,6 +2184,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteIpamResult> deleteIpamAsync(DeleteIpamRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteIpamRequest, DeleteIpamResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamExternalResourceVerificationTokenResult> deleteIpamExternalResourceVerificationTokenAsync(
+            DeleteIpamExternalResourceVerificationTokenRequest request) {
+
+        return deleteIpamExternalResourceVerificationTokenAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIpamExternalResourceVerificationTokenResult> deleteIpamExternalResourceVerificationTokenAsync(
+            DeleteIpamExternalResourceVerificationTokenRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamExternalResourceVerificationTokenRequest, DeleteIpamExternalResourceVerificationTokenResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -4275,6 +4305,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DescribeIpamByoasnResult> describeIpamByoasnAsync(DescribeIpamByoasnRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeIpamByoasnRequest, DescribeIpamByoasnResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamExternalResourceVerificationTokensResult> describeIpamExternalResourceVerificationTokensAsync(
+            DescribeIpamExternalResourceVerificationTokensRequest request) {
+
+        return describeIpamExternalResourceVerificationTokensAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamExternalResourceVerificationTokensResult> describeIpamExternalResourceVerificationTokensAsync(
+            DescribeIpamExternalResourceVerificationTokensRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamExternalResourceVerificationTokensRequest, DescribeIpamExternalResourceVerificationTokensResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -52,7 +52,7 @@ public class DescribeDBClusterParametersRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * <code>customer</code>
+     * <code>user</code>
      * </p>
      * </li>
      * <li>
@@ -204,7 +204,7 @@ public class DescribeDBClusterParametersRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * <code>customer</code>
+     * <code>user</code>
      * </p>
      * </li>
      * <li>
@@ -227,7 +227,7 @@ public class DescribeDBClusterParametersRequest extends com.amazonaws.AmazonWebS
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>customer</code>
+     *        <code>user</code>
      *        </p>
      *        </li>
      *        <li>
@@ -256,7 +256,7 @@ public class DescribeDBClusterParametersRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * <code>customer</code>
+     * <code>user</code>
      * </p>
      * </li>
      * <li>
@@ -278,7 +278,7 @@ public class DescribeDBClusterParametersRequest extends com.amazonaws.AmazonWebS
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>customer</code>
+     *         <code>user</code>
      *         </p>
      *         </li>
      *         <li>
@@ -307,7 +307,7 @@ public class DescribeDBClusterParametersRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * <code>customer</code>
+     * <code>user</code>
      * </p>
      * </li>
      * <li>
@@ -330,7 +330,7 @@ public class DescribeDBClusterParametersRequest extends com.amazonaws.AmazonWebS
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>customer</code>
+     *        <code>user</code>
      *        </p>
      *        </li>
      *        <li>

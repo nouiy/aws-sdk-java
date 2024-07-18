@@ -27,18 +27,18 @@ public class CreateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
+     * Logging-configuration name. The value does not need to be unique.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
      * A complex type that contains a destination configuration for where chat content will be logged. There can be only
      * one type of destination (<code>cloudWatchLogs</code>, <code>firehose</code>, or <code>s3</code>) in a
      * <code>destinationConfiguration</code>.
      * </p>
      */
     private DestinationConfiguration destinationConfiguration;
-    /**
-     * <p>
-     * Logging-configuration name. The value does not need to be unique.
-     * </p>
-     */
-    private String name;
     /**
      * <p>
      * Tags to attach to the resource. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
@@ -48,6 +48,46 @@ public class CreateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private java.util.Map<String, String> tags;
+
+    /**
+     * <p>
+     * Logging-configuration name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Logging-configuration name. The value does not need to be unique.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Logging-configuration name. The value does not need to be unique.
+     * </p>
+     * 
+     * @return Logging-configuration name. The value does not need to be unique.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Logging-configuration name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Logging-configuration name. The value does not need to be unique.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLoggingConfigurationRequest withName(String name) {
+        setName(name);
+        return this;
+    }
 
     /**
      * <p>
@@ -98,46 +138,6 @@ public class CreateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     public CreateLoggingConfigurationRequest withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
         setDestinationConfiguration(destinationConfiguration);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Logging-configuration name. The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        Logging-configuration name. The value does not need to be unique.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * Logging-configuration name. The value does not need to be unique.
-     * </p>
-     * 
-     * @return Logging-configuration name. The value does not need to be unique.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * Logging-configuration name. The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        Logging-configuration name. The value does not need to be unique.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateLoggingConfigurationRequest withName(String name) {
-        setName(name);
         return this;
     }
 
@@ -239,10 +239,10 @@ public class CreateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDestinationConfiguration() != null)
-            sb.append("DestinationConfiguration: ").append(getDestinationConfiguration()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getDestinationConfiguration() != null)
+            sb.append("DestinationConfiguration: ").append(getDestinationConfiguration()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -259,13 +259,13 @@ public class CreateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         if (obj instanceof CreateLoggingConfigurationRequest == false)
             return false;
         CreateLoggingConfigurationRequest other = (CreateLoggingConfigurationRequest) obj;
-        if (other.getDestinationConfiguration() == null ^ this.getDestinationConfiguration() == null)
-            return false;
-        if (other.getDestinationConfiguration() != null && other.getDestinationConfiguration().equals(this.getDestinationConfiguration()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getDestinationConfiguration() == null ^ this.getDestinationConfiguration() == null)
+            return false;
+        if (other.getDestinationConfiguration() != null && other.getDestinationConfiguration().equals(this.getDestinationConfiguration()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -279,8 +279,8 @@ public class CreateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

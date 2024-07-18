@@ -80,8 +80,21 @@ public class DescribePlacementGroupsRequest extends AmazonWebServiceRequest impl
      * The names of the placement groups.
      * </p>
      * <p>
-     * Default: Describes all your placement groups, or only those otherwise specified.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can specify a name only if the placement group is owned by your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If a placement group is <i>shared</i> with your account, specifying the name results in an error. You must use
+     * the <code>GroupId</code> parameter instead.
+     * </p>
+     * </li>
+     * </ul>
      */
     private com.amazonaws.internal.SdkInternalList<String> groupNames;
     /**
@@ -513,12 +526,38 @@ public class DescribePlacementGroupsRequest extends AmazonWebServiceRequest impl
      * The names of the placement groups.
      * </p>
      * <p>
-     * Default: Describes all your placement groups, or only those otherwise specified.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can specify a name only if the placement group is owned by your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If a placement group is <i>shared</i> with your account, specifying the name results in an error. You must use
+     * the <code>GroupId</code> parameter instead.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The names of the placement groups.</p>
      *         <p>
-     *         Default: Describes all your placement groups, or only those otherwise specified.
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You can specify a name only if the placement group is owned by your account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If a placement group is <i>shared</i> with your account, specifying the name results in an error. You
+     *         must use the <code>GroupId</code> parameter instead.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<String> getGroupNames() {
@@ -533,13 +572,39 @@ public class DescribePlacementGroupsRequest extends AmazonWebServiceRequest impl
      * The names of the placement groups.
      * </p>
      * <p>
-     * Default: Describes all your placement groups, or only those otherwise specified.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can specify a name only if the placement group is owned by your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If a placement group is <i>shared</i> with your account, specifying the name results in an error. You must use
+     * the <code>GroupId</code> parameter instead.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param groupNames
      *        The names of the placement groups.</p>
      *        <p>
-     *        Default: Describes all your placement groups, or only those otherwise specified.
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        You can specify a name only if the placement group is owned by your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If a placement group is <i>shared</i> with your account, specifying the name results in an error. You must
+     *        use the <code>GroupId</code> parameter instead.
+     *        </p>
+     *        </li>
      */
 
     public void setGroupNames(java.util.Collection<String> groupNames) {
@@ -556,8 +621,21 @@ public class DescribePlacementGroupsRequest extends AmazonWebServiceRequest impl
      * The names of the placement groups.
      * </p>
      * <p>
-     * Default: Describes all your placement groups, or only those otherwise specified.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can specify a name only if the placement group is owned by your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If a placement group is <i>shared</i> with your account, specifying the name results in an error. You must use
+     * the <code>GroupId</code> parameter instead.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setGroupNames(java.util.Collection)} or {@link #withGroupNames(java.util.Collection)} if you want to
@@ -567,7 +645,20 @@ public class DescribePlacementGroupsRequest extends AmazonWebServiceRequest impl
      * @param groupNames
      *        The names of the placement groups.</p>
      *        <p>
-     *        Default: Describes all your placement groups, or only those otherwise specified.
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        You can specify a name only if the placement group is owned by your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If a placement group is <i>shared</i> with your account, specifying the name results in an error. You must
+     *        use the <code>GroupId</code> parameter instead.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -586,13 +677,39 @@ public class DescribePlacementGroupsRequest extends AmazonWebServiceRequest impl
      * The names of the placement groups.
      * </p>
      * <p>
-     * Default: Describes all your placement groups, or only those otherwise specified.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can specify a name only if the placement group is owned by your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If a placement group is <i>shared</i> with your account, specifying the name results in an error. You must use
+     * the <code>GroupId</code> parameter instead.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param groupNames
      *        The names of the placement groups.</p>
      *        <p>
-     *        Default: Describes all your placement groups, or only those otherwise specified.
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        You can specify a name only if the placement group is owned by your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If a placement group is <i>shared</i> with your account, specifying the name results in an error. You must
+     *        use the <code>GroupId</code> parameter instead.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

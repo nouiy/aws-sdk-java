@@ -27,10 +27,16 @@ public class ListRoomsRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Logging-configuration identifier.
+     * Filters the list to match the specified room name.
      * </p>
      */
-    private String loggingConfigurationIdentifier;
+    private String name;
+    /**
+     * <p>
+     * The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
+     * </p>
+     */
+    private String nextToken;
     /**
      * <p>
      * Maximum number of rooms to return. Default: 50.
@@ -45,54 +51,88 @@ public class ListRoomsRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String messageReviewHandlerUri;
     /**
      * <p>
-     * Filters the list to match the specified room name.
+     * Logging-configuration identifier.
      * </p>
      */
-    private String name;
+    private String loggingConfigurationIdentifier;
+
+    /**
+     * <p>
+     * Filters the list to match the specified room name.
+     * </p>
+     * 
+     * @param name
+     *        Filters the list to match the specified room name.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Filters the list to match the specified room name.
+     * </p>
+     * 
+     * @return Filters the list to match the specified room name.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Filters the list to match the specified room name.
+     * </p>
+     * 
+     * @param name
+     *        Filters the list to match the specified room name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRoomsRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
     /**
      * <p>
      * The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * </p>
-     */
-    private String nextToken;
-
-    /**
-     * <p>
-     * Logging-configuration identifier.
-     * </p>
      * 
-     * @param loggingConfigurationIdentifier
-     *        Logging-configuration identifier.
+     * @param nextToken
+     *        The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      */
 
-    public void setLoggingConfigurationIdentifier(String loggingConfigurationIdentifier) {
-        this.loggingConfigurationIdentifier = loggingConfigurationIdentifier;
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
     }
 
     /**
      * <p>
-     * Logging-configuration identifier.
+     * The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * </p>
      * 
-     * @return Logging-configuration identifier.
+     * @return The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      */
 
-    public String getLoggingConfigurationIdentifier() {
-        return this.loggingConfigurationIdentifier;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
      * <p>
-     * Logging-configuration identifier.
+     * The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * </p>
      * 
-     * @param loggingConfigurationIdentifier
-     *        Logging-configuration identifier.
+     * @param nextToken
+     *        The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListRoomsRequest withLoggingConfigurationIdentifier(String loggingConfigurationIdentifier) {
-        setLoggingConfigurationIdentifier(loggingConfigurationIdentifier);
+    public ListRoomsRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
         return this;
     }
 
@@ -178,81 +218,41 @@ public class ListRoomsRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Filters the list to match the specified room name.
+     * Logging-configuration identifier.
      * </p>
      * 
-     * @param name
-     *        Filters the list to match the specified room name.
+     * @param loggingConfigurationIdentifier
+     *        Logging-configuration identifier.
      */
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLoggingConfigurationIdentifier(String loggingConfigurationIdentifier) {
+        this.loggingConfigurationIdentifier = loggingConfigurationIdentifier;
     }
 
     /**
      * <p>
-     * Filters the list to match the specified room name.
+     * Logging-configuration identifier.
      * </p>
      * 
-     * @return Filters the list to match the specified room name.
+     * @return Logging-configuration identifier.
      */
 
-    public String getName() {
-        return this.name;
+    public String getLoggingConfigurationIdentifier() {
+        return this.loggingConfigurationIdentifier;
     }
 
     /**
      * <p>
-     * Filters the list to match the specified room name.
+     * Logging-configuration identifier.
      * </p>
      * 
-     * @param name
-     *        Filters the list to match the specified room name.
+     * @param loggingConfigurationIdentifier
+     *        Logging-configuration identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListRoomsRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * </p>
-     * 
-     * @param nextToken
-     *        The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * </p>
-     * 
-     * @return The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * </p>
-     * 
-     * @param nextToken
-     *        The first room to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRoomsRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
+    public ListRoomsRequest withLoggingConfigurationIdentifier(String loggingConfigurationIdentifier) {
+        setLoggingConfigurationIdentifier(loggingConfigurationIdentifier);
         return this;
     }
 
@@ -268,16 +268,16 @@ public class ListRoomsRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getLoggingConfigurationIdentifier() != null)
-            sb.append("LoggingConfigurationIdentifier: ").append(getLoggingConfigurationIdentifier()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getMessageReviewHandlerUri() != null)
             sb.append("MessageReviewHandlerUri: ").append(getMessageReviewHandlerUri()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+        if (getLoggingConfigurationIdentifier() != null)
+            sb.append("LoggingConfigurationIdentifier: ").append(getLoggingConfigurationIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -292,10 +292,13 @@ public class ListRoomsRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof ListRoomsRequest == false)
             return false;
         ListRoomsRequest other = (ListRoomsRequest) obj;
-        if (other.getLoggingConfigurationIdentifier() == null ^ this.getLoggingConfigurationIdentifier() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getLoggingConfigurationIdentifier() != null
-                && other.getLoggingConfigurationIdentifier().equals(this.getLoggingConfigurationIdentifier()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
@@ -305,13 +308,10 @@ public class ListRoomsRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getMessageReviewHandlerUri() != null && other.getMessageReviewHandlerUri().equals(this.getMessageReviewHandlerUri()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
+        if (other.getLoggingConfigurationIdentifier() == null ^ this.getLoggingConfigurationIdentifier() == null)
             return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+        if (other.getLoggingConfigurationIdentifier() != null
+                && other.getLoggingConfigurationIdentifier().equals(this.getLoggingConfigurationIdentifier()) == false)
             return false;
         return true;
     }
@@ -321,11 +321,11 @@ public class ListRoomsRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getLoggingConfigurationIdentifier() == null) ? 0 : getLoggingConfigurationIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
-        hashCode = prime * hashCode + ((getMessageReviewHandlerUri() == null) ? 0 : getMessageReviewHandlerUri().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getMessageReviewHandlerUri() == null) ? 0 : getMessageReviewHandlerUri().hashCode());
+        hashCode = prime * hashCode + ((getLoggingConfigurationIdentifier() == null) ? 0 : getLoggingConfigurationIdentifier().hashCode());
         return hashCode;
     }
 

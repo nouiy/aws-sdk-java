@@ -60,15 +60,19 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
     private String availabilityZone;
     /**
      * <p>
-     * The number of units provided by the specified instance type.
+     * The number of units provided by the specified instance type. These are the same units that you chose to set the
+     * target capacity in terms of instances, or a performance characteristic such as vCPUs, memory, or I/O.
+     * </p>
+     * <p>
+     * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the number of instances to
+     * the next whole number. If this value is not specified, the default is 1.
      * </p>
      * <note>
      * <p>
-     * When specifying weights, the price used in the <code>lowest-price</code> and
-     * <code>price-capacity-optimized</code> allocation strategies is per <i>unit</i> hour (where the instance price is
-     * divided by the specified weight). However, if all the specified weights are above the requested
-     * <code>TargetCapacity</code>, resulting in only 1 instance being launched, the price used is per <i>instance</i>
-     * hour.
+     * When specifying weights, the price used in the <code>lowestPrice</code> and <code>priceCapacityOptimized</code>
+     * allocation strategies is per <i>unit</i> hour (where the instance price is divided by the specified weight).
+     * However, if all the specified weights are above the requested <code>TargetCapacity</code>, resulting in only 1
+     * instance being launched, the price used is per <i>instance</i> hour.
      * </p>
      * </note>
      */
@@ -330,23 +334,34 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of units provided by the specified instance type.
+     * The number of units provided by the specified instance type. These are the same units that you chose to set the
+     * target capacity in terms of instances, or a performance characteristic such as vCPUs, memory, or I/O.
+     * </p>
+     * <p>
+     * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the number of instances to
+     * the next whole number. If this value is not specified, the default is 1.
      * </p>
      * <note>
      * <p>
-     * When specifying weights, the price used in the <code>lowest-price</code> and
-     * <code>price-capacity-optimized</code> allocation strategies is per <i>unit</i> hour (where the instance price is
-     * divided by the specified weight). However, if all the specified weights are above the requested
-     * <code>TargetCapacity</code>, resulting in only 1 instance being launched, the price used is per <i>instance</i>
-     * hour.
+     * When specifying weights, the price used in the <code>lowestPrice</code> and <code>priceCapacityOptimized</code>
+     * allocation strategies is per <i>unit</i> hour (where the instance price is divided by the specified weight).
+     * However, if all the specified weights are above the requested <code>TargetCapacity</code>, resulting in only 1
+     * instance being launched, the price used is per <i>instance</i> hour.
      * </p>
      * </note>
      * 
      * @param weightedCapacity
-     *        The number of units provided by the specified instance type.</p> <note>
+     *        The number of units provided by the specified instance type. These are the same units that you chose to
+     *        set the target capacity in terms of instances, or a performance characteristic such as vCPUs, memory, or
+     *        I/O.</p>
      *        <p>
-     *        When specifying weights, the price used in the <code>lowest-price</code> and
-     *        <code>price-capacity-optimized</code> allocation strategies is per <i>unit</i> hour (where the instance
+     *        If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the number of
+     *        instances to the next whole number. If this value is not specified, the default is 1.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        When specifying weights, the price used in the <code>lowestPrice</code> and
+     *        <code>priceCapacityOptimized</code> allocation strategies is per <i>unit</i> hour (where the instance
      *        price is divided by the specified weight). However, if all the specified weights are above the requested
      *        <code>TargetCapacity</code>, resulting in only 1 instance being launched, the price used is per
      *        <i>instance</i> hour.
@@ -359,22 +374,33 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of units provided by the specified instance type.
+     * The number of units provided by the specified instance type. These are the same units that you chose to set the
+     * target capacity in terms of instances, or a performance characteristic such as vCPUs, memory, or I/O.
+     * </p>
+     * <p>
+     * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the number of instances to
+     * the next whole number. If this value is not specified, the default is 1.
      * </p>
      * <note>
      * <p>
-     * When specifying weights, the price used in the <code>lowest-price</code> and
-     * <code>price-capacity-optimized</code> allocation strategies is per <i>unit</i> hour (where the instance price is
-     * divided by the specified weight). However, if all the specified weights are above the requested
-     * <code>TargetCapacity</code>, resulting in only 1 instance being launched, the price used is per <i>instance</i>
-     * hour.
+     * When specifying weights, the price used in the <code>lowestPrice</code> and <code>priceCapacityOptimized</code>
+     * allocation strategies is per <i>unit</i> hour (where the instance price is divided by the specified weight).
+     * However, if all the specified weights are above the requested <code>TargetCapacity</code>, resulting in only 1
+     * instance being launched, the price used is per <i>instance</i> hour.
      * </p>
      * </note>
      * 
-     * @return The number of units provided by the specified instance type.</p> <note>
+     * @return The number of units provided by the specified instance type. These are the same units that you chose to
+     *         set the target capacity in terms of instances, or a performance characteristic such as vCPUs, memory, or
+     *         I/O.</p>
      *         <p>
-     *         When specifying weights, the price used in the <code>lowest-price</code> and
-     *         <code>price-capacity-optimized</code> allocation strategies is per <i>unit</i> hour (where the instance
+     *         If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the number of
+     *         instances to the next whole number. If this value is not specified, the default is 1.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         When specifying weights, the price used in the <code>lowestPrice</code> and
+     *         <code>priceCapacityOptimized</code> allocation strategies is per <i>unit</i> hour (where the instance
      *         price is divided by the specified weight). However, if all the specified weights are above the requested
      *         <code>TargetCapacity</code>, resulting in only 1 instance being launched, the price used is per
      *         <i>instance</i> hour.
@@ -387,23 +413,34 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of units provided by the specified instance type.
+     * The number of units provided by the specified instance type. These are the same units that you chose to set the
+     * target capacity in terms of instances, or a performance characteristic such as vCPUs, memory, or I/O.
+     * </p>
+     * <p>
+     * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the number of instances to
+     * the next whole number. If this value is not specified, the default is 1.
      * </p>
      * <note>
      * <p>
-     * When specifying weights, the price used in the <code>lowest-price</code> and
-     * <code>price-capacity-optimized</code> allocation strategies is per <i>unit</i> hour (where the instance price is
-     * divided by the specified weight). However, if all the specified weights are above the requested
-     * <code>TargetCapacity</code>, resulting in only 1 instance being launched, the price used is per <i>instance</i>
-     * hour.
+     * When specifying weights, the price used in the <code>lowestPrice</code> and <code>priceCapacityOptimized</code>
+     * allocation strategies is per <i>unit</i> hour (where the instance price is divided by the specified weight).
+     * However, if all the specified weights are above the requested <code>TargetCapacity</code>, resulting in only 1
+     * instance being launched, the price used is per <i>instance</i> hour.
      * </p>
      * </note>
      * 
      * @param weightedCapacity
-     *        The number of units provided by the specified instance type.</p> <note>
+     *        The number of units provided by the specified instance type. These are the same units that you chose to
+     *        set the target capacity in terms of instances, or a performance characteristic such as vCPUs, memory, or
+     *        I/O.</p>
      *        <p>
-     *        When specifying weights, the price used in the <code>lowest-price</code> and
-     *        <code>price-capacity-optimized</code> allocation strategies is per <i>unit</i> hour (where the instance
+     *        If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the number of
+     *        instances to the next whole number. If this value is not specified, the default is 1.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        When specifying weights, the price used in the <code>lowestPrice</code> and
+     *        <code>priceCapacityOptimized</code> allocation strategies is per <i>unit</i> hour (where the instance
      *        price is divided by the specified weight). However, if all the specified weights are above the requested
      *        <code>TargetCapacity</code>, resulting in only 1 instance being launched, the price used is per
      *        <i>instance</i> hour.

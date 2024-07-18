@@ -27,12 +27,6 @@ public class DisconnectUserRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Reason for disconnecting the user.
-     * </p>
-     */
-    private String reason;
-    /**
-     * <p>
      * Identifier of the room from which the user's clients should be disconnected. Currently this must be an ARN.
      * </p>
      */
@@ -43,46 +37,12 @@ public class DisconnectUserRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String userId;
-
     /**
      * <p>
      * Reason for disconnecting the user.
      * </p>
-     * 
-     * @param reason
-     *        Reason for disconnecting the user.
      */
-
-    public void setReason(String reason) {
-        this.reason = reason;
-    }
-
-    /**
-     * <p>
-     * Reason for disconnecting the user.
-     * </p>
-     * 
-     * @return Reason for disconnecting the user.
-     */
-
-    public String getReason() {
-        return this.reason;
-    }
-
-    /**
-     * <p>
-     * Reason for disconnecting the user.
-     * </p>
-     * 
-     * @param reason
-     *        Reason for disconnecting the user.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DisconnectUserRequest withReason(String reason) {
-        setReason(reason);
-        return this;
-    }
+    private String reason;
 
     /**
      * <p>
@@ -168,6 +128,46 @@ public class DisconnectUserRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Reason for disconnecting the user.
+     * </p>
+     * 
+     * @param reason
+     *        Reason for disconnecting the user.
+     */
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    /**
+     * <p>
+     * Reason for disconnecting the user.
+     * </p>
+     * 
+     * @return Reason for disconnecting the user.
+     */
+
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
+     * <p>
+     * Reason for disconnecting the user.
+     * </p>
+     * 
+     * @param reason
+     *        Reason for disconnecting the user.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DisconnectUserRequest withReason(String reason) {
+        setReason(reason);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -179,12 +179,12 @@ public class DisconnectUserRequest extends com.amazonaws.AmazonWebServiceRequest
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getReason() != null)
-            sb.append("Reason: ").append(getReason()).append(",");
         if (getRoomIdentifier() != null)
             sb.append("RoomIdentifier: ").append(getRoomIdentifier()).append(",");
         if (getUserId() != null)
-            sb.append("UserId: ").append("***Sensitive Data Redacted***");
+            sb.append("UserId: ").append("***Sensitive Data Redacted***").append(",");
+        if (getReason() != null)
+            sb.append("Reason: ").append(getReason());
         sb.append("}");
         return sb.toString();
     }
@@ -199,10 +199,6 @@ public class DisconnectUserRequest extends com.amazonaws.AmazonWebServiceRequest
         if (obj instanceof DisconnectUserRequest == false)
             return false;
         DisconnectUserRequest other = (DisconnectUserRequest) obj;
-        if (other.getReason() == null ^ this.getReason() == null)
-            return false;
-        if (other.getReason() != null && other.getReason().equals(this.getReason()) == false)
-            return false;
         if (other.getRoomIdentifier() == null ^ this.getRoomIdentifier() == null)
             return false;
         if (other.getRoomIdentifier() != null && other.getRoomIdentifier().equals(this.getRoomIdentifier()) == false)
@@ -210,6 +206,10 @@ public class DisconnectUserRequest extends com.amazonaws.AmazonWebServiceRequest
         if (other.getUserId() == null ^ this.getUserId() == null)
             return false;
         if (other.getUserId() != null && other.getUserId().equals(this.getUserId()) == false)
+            return false;
+        if (other.getReason() == null ^ this.getReason() == null)
+            return false;
+        if (other.getReason() != null && other.getReason().equals(this.getReason()) == false)
             return false;
         return true;
     }
@@ -219,9 +219,9 @@ public class DisconnectUserRequest extends com.amazonaws.AmazonWebServiceRequest
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getReason() == null) ? 0 : getReason().hashCode());
         hashCode = prime * hashCode + ((getRoomIdentifier() == null) ? 0 : getRoomIdentifier().hashCode());
         hashCode = prime * hashCode + ((getUserId() == null) ? 0 : getUserId().hashCode());
+        hashCode = prime * hashCode + ((getReason() == null) ? 0 : getReason().hashCode());
         return hashCode;
     }
 

@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DisconnectUserRequestMarshaller {
 
-    private static final MarshallingInfo<String> REASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("reason").build();
     private static final MarshallingInfo<String> ROOMIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("roomIdentifier").build();
     private static final MarshallingInfo<String> USERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("userId").build();
+    private static final MarshallingInfo<String> REASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("reason").build();
 
     private static final DisconnectUserRequestMarshaller instance = new DisconnectUserRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class DisconnectUserRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(disconnectUserRequest.getReason(), REASON_BINDING);
             protocolMarshaller.marshall(disconnectUserRequest.getRoomIdentifier(), ROOMIDENTIFIER_BINDING);
             protocolMarshaller.marshall(disconnectUserRequest.getUserId(), USERID_BINDING);
+            protocolMarshaller.marshall(disconnectUserRequest.getReason(), REASON_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

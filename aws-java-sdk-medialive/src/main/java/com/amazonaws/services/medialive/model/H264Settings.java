@@ -57,7 +57,16 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     private H264ColorSpaceSettings colorSpaceSettings;
     /** Entropy encoding mode. Use cabac (must be in Main or High profile) or cavlc. */
     private String entropyEncoding;
-    /** Optional filters that you can apply to an encode. */
+    /**
+     * Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the filters. We
+     * recommend that you try both filters and observe the results to decide which one to use.
+     * 
+     * The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines perceptual
+     * filtering and motion compensated temporal filtering (MCTF). It operates independently of the compression level.
+     * 
+     * The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the current
+     * compression level to filter imperceptible signals. This filter works only when the resolution is 1080p or lower.
+     */
     private H264FilterSettings filterSettings;
     /**
      * Four bit AFD value to write on all frames of video in the output stream. Only valid when afdSignaling is set to
@@ -650,10 +659,26 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Optional filters that you can apply to an encode.
+     * Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the filters. We
+     * recommend that you try both filters and observe the results to decide which one to use.
+     * 
+     * The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines perceptual
+     * filtering and motion compensated temporal filtering (MCTF). It operates independently of the compression level.
+     * 
+     * The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the current
+     * compression level to filter imperceptible signals. This filter works only when the resolution is 1080p or lower.
      * 
      * @param filterSettings
-     *        Optional filters that you can apply to an encode.
+     *        Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the
+     *        filters. We recommend that you try both filters and observe the results to decide which one to use.
+     * 
+     *        The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines
+     *        perceptual filtering and motion compensated temporal filtering (MCTF). It operates independently of the
+     *        compression level.
+     * 
+     *        The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the
+     *        current compression level to filter imperceptible signals. This filter works only when the resolution is
+     *        1080p or lower.
      */
 
     public void setFilterSettings(H264FilterSettings filterSettings) {
@@ -661,9 +686,25 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Optional filters that you can apply to an encode.
+     * Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the filters. We
+     * recommend that you try both filters and observe the results to decide which one to use.
      * 
-     * @return Optional filters that you can apply to an encode.
+     * The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines perceptual
+     * filtering and motion compensated temporal filtering (MCTF). It operates independently of the compression level.
+     * 
+     * The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the current
+     * compression level to filter imperceptible signals. This filter works only when the resolution is 1080p or lower.
+     * 
+     * @return Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the
+     *         filters. We recommend that you try both filters and observe the results to decide which one to use.
+     * 
+     *         The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines
+     *         perceptual filtering and motion compensated temporal filtering (MCTF). It operates independently of the
+     *         compression level.
+     * 
+     *         The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the
+     *         current compression level to filter imperceptible signals. This filter works only when the resolution is
+     *         1080p or lower.
      */
 
     public H264FilterSettings getFilterSettings() {
@@ -671,10 +712,26 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Optional filters that you can apply to an encode.
+     * Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the filters. We
+     * recommend that you try both filters and observe the results to decide which one to use.
+     * 
+     * The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines perceptual
+     * filtering and motion compensated temporal filtering (MCTF). It operates independently of the compression level.
+     * 
+     * The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the current
+     * compression level to filter imperceptible signals. This filter works only when the resolution is 1080p or lower.
      * 
      * @param filterSettings
-     *        Optional filters that you can apply to an encode.
+     *        Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the
+     *        filters. We recommend that you try both filters and observe the results to decide which one to use.
+     * 
+     *        The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines
+     *        perceptual filtering and motion compensated temporal filtering (MCTF). It operates independently of the
+     *        compression level.
+     * 
+     *        The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the
+     *        current compression level to filter imperceptible signals. This filter works only when the resolution is
+     *        1080p or lower.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

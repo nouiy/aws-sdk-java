@@ -48,6 +48,10 @@ public class DestinationConfigurationJsonUnmarshaller implements Unmarshaller<De
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("s3", targetDepth)) {
+                    context.nextToken();
+                    destinationConfiguration.setS3(S3DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("cloudWatchLogs", targetDepth)) {
                     context.nextToken();
                     destinationConfiguration.setCloudWatchLogs(CloudWatchLogsDestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
@@ -55,10 +59,6 @@ public class DestinationConfigurationJsonUnmarshaller implements Unmarshaller<De
                 if (context.testExpression("firehose", targetDepth)) {
                     context.nextToken();
                     destinationConfiguration.setFirehose(FirehoseDestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("s3", targetDepth)) {
-                    context.nextToken();
-                    destinationConfiguration.setS3(S3DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

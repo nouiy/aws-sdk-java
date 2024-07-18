@@ -95,6 +95,14 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
      * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
+     * <note>
+     * <p>
+     * You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about managing
+     * automated backups for RDS Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     * automated backups</a>.
+     * </p>
+     * </note>
      */
     private Boolean deleteAutomatedBackups;
 
@@ -512,11 +520,25 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
      * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
+     * <note>
+     * <p>
+     * You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about managing
+     * automated backups for RDS Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     * automated backups</a>.
+     * </p>
+     * </note>
      * 
      * @param deleteAutomatedBackups
      *        Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter
      *        isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     *        deleted.
+     *        deleted. </p> <note>
+     *        <p>
+     *        You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about managing
+     *        automated backups for RDS Multi-AZ DB clusters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     *        automated backups</a>.
+     *        </p>
      */
 
     public void setDeleteAutomatedBackups(Boolean deleteAutomatedBackups) {
@@ -528,10 +550,24 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
      * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
+     * <note>
+     * <p>
+     * You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about managing
+     * automated backups for RDS Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     * automated backups</a>.
+     * </p>
+     * </note>
      * 
      * @return Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter
      *         isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     *         deleted.
+     *         deleted. </p> <note>
+     *         <p>
+     *         You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about
+     *         managing automated backups for RDS Multi-AZ DB clusters, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     *         automated backups</a>.
+     *         </p>
      */
 
     public Boolean getDeleteAutomatedBackups() {
@@ -543,11 +579,25 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
      * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
+     * <note>
+     * <p>
+     * You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about managing
+     * automated backups for RDS Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     * automated backups</a>.
+     * </p>
+     * </note>
      * 
      * @param deleteAutomatedBackups
      *        Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter
      *        isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     *        deleted.
+     *        deleted. </p> <note>
+     *        <p>
+     *        You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about managing
+     *        automated backups for RDS Multi-AZ DB clusters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     *        automated backups</a>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -561,10 +611,24 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
      * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
+     * <note>
+     * <p>
+     * You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about managing
+     * automated backups for RDS Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     * automated backups</a>.
+     * </p>
+     * </note>
      * 
      * @return Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter
      *         isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     *         deleted.
+     *         deleted. </p> <note>
+     *         <p>
+     *         You must delete automated backups for Amazon RDS Multi-AZ DB clusters. For more information about
+     *         managing automated backups for RDS Multi-AZ DB clusters, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ManagingAutomatedBackups.html">Managing
+     *         automated backups</a>.
+     *         </p>
      */
 
     public Boolean isDeleteAutomatedBackups() {

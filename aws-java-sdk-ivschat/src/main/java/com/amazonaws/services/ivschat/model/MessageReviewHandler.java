@@ -30,6 +30,12 @@ public class MessageReviewHandler implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * Identifier of the message review handler. Currently this must be an ARN of a lambda function.
+     * </p>
+     */
+    private String uri;
+    /**
+     * <p>
      * Specifies the fallback behavior (whether the message is allowed or denied) if the handler does not return a valid
      * response, encounters an error, or times out. (For the timeout period, see <a
      * href="https://docs.aws.amazon.com/ivs/latest/userguide/service-quotas.html"> Service Quotas</a>.) If allowed, the
@@ -38,12 +44,46 @@ public class MessageReviewHandler implements Serializable, Cloneable, Structured
      * </p>
      */
     private String fallbackResult;
+
     /**
      * <p>
      * Identifier of the message review handler. Currently this must be an ARN of a lambda function.
      * </p>
+     * 
+     * @param uri
+     *        Identifier of the message review handler. Currently this must be an ARN of a lambda function.
      */
-    private String uri;
+
+    public void setUri(String uri) {
+        this.uri = uri;
+    }
+
+    /**
+     * <p>
+     * Identifier of the message review handler. Currently this must be an ARN of a lambda function.
+     * </p>
+     * 
+     * @return Identifier of the message review handler. Currently this must be an ARN of a lambda function.
+     */
+
+    public String getUri() {
+        return this.uri;
+    }
+
+    /**
+     * <p>
+     * Identifier of the message review handler. Currently this must be an ARN of a lambda function.
+     * </p>
+     * 
+     * @param uri
+     *        Identifier of the message review handler. Currently this must be an ARN of a lambda function.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MessageReviewHandler withUri(String uri) {
+        setUri(uri);
+        return this;
+    }
 
     /**
      * <p>
@@ -137,46 +177,6 @@ public class MessageReviewHandler implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p>
-     * Identifier of the message review handler. Currently this must be an ARN of a lambda function.
-     * </p>
-     * 
-     * @param uri
-     *        Identifier of the message review handler. Currently this must be an ARN of a lambda function.
-     */
-
-    public void setUri(String uri) {
-        this.uri = uri;
-    }
-
-    /**
-     * <p>
-     * Identifier of the message review handler. Currently this must be an ARN of a lambda function.
-     * </p>
-     * 
-     * @return Identifier of the message review handler. Currently this must be an ARN of a lambda function.
-     */
-
-    public String getUri() {
-        return this.uri;
-    }
-
-    /**
-     * <p>
-     * Identifier of the message review handler. Currently this must be an ARN of a lambda function.
-     * </p>
-     * 
-     * @param uri
-     *        Identifier of the message review handler. Currently this must be an ARN of a lambda function.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public MessageReviewHandler withUri(String uri) {
-        setUri(uri);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -188,10 +188,10 @@ public class MessageReviewHandler implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getFallbackResult() != null)
-            sb.append("FallbackResult: ").append(getFallbackResult()).append(",");
         if (getUri() != null)
-            sb.append("Uri: ").append(getUri());
+            sb.append("Uri: ").append(getUri()).append(",");
+        if (getFallbackResult() != null)
+            sb.append("FallbackResult: ").append(getFallbackResult());
         sb.append("}");
         return sb.toString();
     }
@@ -206,13 +206,13 @@ public class MessageReviewHandler implements Serializable, Cloneable, Structured
         if (obj instanceof MessageReviewHandler == false)
             return false;
         MessageReviewHandler other = (MessageReviewHandler) obj;
-        if (other.getFallbackResult() == null ^ this.getFallbackResult() == null)
-            return false;
-        if (other.getFallbackResult() != null && other.getFallbackResult().equals(this.getFallbackResult()) == false)
-            return false;
         if (other.getUri() == null ^ this.getUri() == null)
             return false;
         if (other.getUri() != null && other.getUri().equals(this.getUri()) == false)
+            return false;
+        if (other.getFallbackResult() == null ^ this.getFallbackResult() == null)
+            return false;
+        if (other.getFallbackResult() != null && other.getFallbackResult().equals(this.getFallbackResult()) == false)
             return false;
         return true;
     }
@@ -222,8 +222,8 @@ public class MessageReviewHandler implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getFallbackResult() == null) ? 0 : getFallbackResult().hashCode());
         hashCode = prime * hashCode + ((getUri() == null) ? 0 : getUri().hashCode());
+        hashCode = prime * hashCode + ((getFallbackResult() == null) ? 0 : getFallbackResult().hashCode());
         return hashCode;
     }
 

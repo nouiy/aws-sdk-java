@@ -29,18 +29,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateRoomRequestMarshaller {
 
-    private static final MarshallingInfo<List> LOGGINGCONFIGURATIONIDENTIFIERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingConfigurationIdentifiers").build();
-    private static final MarshallingInfo<Integer> MAXIMUMMESSAGELENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageLength").build();
-    private static final MarshallingInfo<Integer> MAXIMUMMESSAGERATEPERSECOND_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageRatePerSecond").build();
-    private static final MarshallingInfo<StructuredPojo> MESSAGEREVIEWHANDLER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("messageReviewHandler").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<Integer> MAXIMUMMESSAGERATEPERSECOND_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageRatePerSecond").build();
+    private static final MarshallingInfo<Integer> MAXIMUMMESSAGELENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageLength").build();
+    private static final MarshallingInfo<StructuredPojo> MESSAGEREVIEWHANDLER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("messageReviewHandler").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<List> LOGGINGCONFIGURATIONIDENTIFIERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingConfigurationIdentifiers").build();
 
     private static final CreateRoomRequestMarshaller instance = new CreateRoomRequestMarshaller();
 
@@ -58,12 +58,12 @@ public class CreateRoomRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createRoomRequest.getLoggingConfigurationIdentifiers(), LOGGINGCONFIGURATIONIDENTIFIERS_BINDING);
-            protocolMarshaller.marshall(createRoomRequest.getMaximumMessageLength(), MAXIMUMMESSAGELENGTH_BINDING);
-            protocolMarshaller.marshall(createRoomRequest.getMaximumMessageRatePerSecond(), MAXIMUMMESSAGERATEPERSECOND_BINDING);
-            protocolMarshaller.marshall(createRoomRequest.getMessageReviewHandler(), MESSAGEREVIEWHANDLER_BINDING);
             protocolMarshaller.marshall(createRoomRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(createRoomRequest.getMaximumMessageRatePerSecond(), MAXIMUMMESSAGERATEPERSECOND_BINDING);
+            protocolMarshaller.marshall(createRoomRequest.getMaximumMessageLength(), MAXIMUMMESSAGELENGTH_BINDING);
+            protocolMarshaller.marshall(createRoomRequest.getMessageReviewHandler(), MESSAGEREVIEWHANDLER_BINDING);
             protocolMarshaller.marshall(createRoomRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createRoomRequest.getLoggingConfigurationIdentifiers(), LOGGINGCONFIGURATIONIDENTIFIERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

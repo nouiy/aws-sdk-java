@@ -64,6 +64,10 @@ public class UserSearchCriteriaJsonUnmarshaller implements Unmarshaller<UserSear
                     context.nextToken();
                     userSearchCriteria.setStringCondition(StringConditionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ListCondition", targetDepth)) {
+                    context.nextToken();
+                    userSearchCriteria.setListCondition(ListConditionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("HierarchyGroupCondition", targetDepth)) {
                     context.nextToken();
                     userSearchCriteria.setHierarchyGroupCondition(HierarchyGroupConditionJsonUnmarshaller.getInstance().unmarshall(context));

@@ -49,6 +49,8 @@ public class DestinationDescriptionMarshaller {
     private static final MarshallingInfo<StructuredPojo> AMAZONOPENSEARCHSERVERLESSDESTINATIONDESCRIPTION_BINDING = MarshallingInfo
             .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("AmazonOpenSearchServerlessDestinationDescription").build();
+    private static final MarshallingInfo<StructuredPojo> ICEBERGDESTINATIONDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IcebergDestinationDescription").build();
 
     private static final DestinationDescriptionMarshaller instance = new DestinationDescriptionMarshaller();
 
@@ -78,6 +80,7 @@ public class DestinationDescriptionMarshaller {
             protocolMarshaller.marshall(destinationDescription.getSnowflakeDestinationDescription(), SNOWFLAKEDESTINATIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(destinationDescription.getAmazonOpenSearchServerlessDestinationDescription(),
                     AMAZONOPENSEARCHSERVERLESSDESTINATIONDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(destinationDescription.getIcebergDestinationDescription(), ICEBERGDESTINATIONDESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

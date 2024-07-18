@@ -63,7 +63,23 @@ public enum ProcessingInstanceType {
     MlG4dn4xlarge("ml.g4dn.4xlarge"),
     MlG4dn8xlarge("ml.g4dn.8xlarge"),
     MlG4dn12xlarge("ml.g4dn.12xlarge"),
-    MlG4dn16xlarge("ml.g4dn.16xlarge");
+    MlG4dn16xlarge("ml.g4dn.16xlarge"),
+    MlG5Xlarge("ml.g5.xlarge"),
+    MlG52xlarge("ml.g5.2xlarge"),
+    MlG54xlarge("ml.g5.4xlarge"),
+    MlG58xlarge("ml.g5.8xlarge"),
+    MlG516xlarge("ml.g5.16xlarge"),
+    MlG512xlarge("ml.g5.12xlarge"),
+    MlG524xlarge("ml.g5.24xlarge"),
+    MlG548xlarge("ml.g5.48xlarge"),
+    MlR5dLarge("ml.r5d.large"),
+    MlR5dXlarge("ml.r5d.xlarge"),
+    MlR5d2xlarge("ml.r5d.2xlarge"),
+    MlR5d4xlarge("ml.r5d.4xlarge"),
+    MlR5d8xlarge("ml.r5d.8xlarge"),
+    MlR5d12xlarge("ml.r5d.12xlarge"),
+    MlR5d16xlarge("ml.r5d.16xlarge"),
+    MlR5d24xlarge("ml.r5d.24xlarge");
 
     private String value;
 

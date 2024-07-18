@@ -29,16 +29,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateChatTokenRequestMarshaller {
 
-    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("attributes").build();
-    private static final MarshallingInfo<List> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("capabilities").build();
     private static final MarshallingInfo<String> ROOMIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("roomIdentifier").build();
-    private static final MarshallingInfo<Integer> SESSIONDURATIONINMINUTES_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sessionDurationInMinutes").build();
     private static final MarshallingInfo<String> USERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("userId").build();
+    private static final MarshallingInfo<List> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("capabilities").build();
+    private static final MarshallingInfo<Integer> SESSIONDURATIONINMINUTES_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sessionDurationInMinutes").build();
+    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("attributes").build();
 
     private static final CreateChatTokenRequestMarshaller instance = new CreateChatTokenRequestMarshaller();
 
@@ -56,11 +56,11 @@ public class CreateChatTokenRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createChatTokenRequest.getAttributes(), ATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(createChatTokenRequest.getCapabilities(), CAPABILITIES_BINDING);
             protocolMarshaller.marshall(createChatTokenRequest.getRoomIdentifier(), ROOMIDENTIFIER_BINDING);
-            protocolMarshaller.marshall(createChatTokenRequest.getSessionDurationInMinutes(), SESSIONDURATIONINMINUTES_BINDING);
             protocolMarshaller.marshall(createChatTokenRequest.getUserId(), USERID_BINDING);
+            protocolMarshaller.marshall(createChatTokenRequest.getCapabilities(), CAPABILITIES_BINDING);
+            protocolMarshaller.marshall(createChatTokenRequest.getSessionDurationInMinutes(), SESSIONDURATIONINMINUTES_BINDING);
+            protocolMarshaller.marshall(createChatTokenRequest.getAttributes(), ATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
