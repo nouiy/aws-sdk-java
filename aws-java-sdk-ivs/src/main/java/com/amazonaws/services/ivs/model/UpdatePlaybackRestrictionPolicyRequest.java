@@ -27,6 +27,12 @@ public class UpdatePlaybackRestrictionPolicyRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
+     * ARN of the playback-restriction-policy to be updated.
+     * </p>
+     */
+    private String arn;
+    /**
+     * <p>
      * A list of country codes that control geoblocking restriction. Allowed values are the officially assigned <a
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> codes. Default: All countries (an
      * empty array).
@@ -44,12 +50,6 @@ public class UpdatePlaybackRestrictionPolicyRequest extends com.amazonaws.Amazon
     private java.util.List<String> allowedOrigins;
     /**
      * <p>
-     * ARN of the playback-restriction-policy to be updated.
-     * </p>
-     */
-    private String arn;
-    /**
-     * <p>
      * Whether channel playback is constrained by origin site. Default: <code>false</code>.
      * </p>
      */
@@ -60,6 +60,46 @@ public class UpdatePlaybackRestrictionPolicyRequest extends com.amazonaws.Amazon
      * </p>
      */
     private String name;
+
+    /**
+     * <p>
+     * ARN of the playback-restriction-policy to be updated.
+     * </p>
+     * 
+     * @param arn
+     *        ARN of the playback-restriction-policy to be updated.
+     */
+
+    public void setArn(String arn) {
+        this.arn = arn;
+    }
+
+    /**
+     * <p>
+     * ARN of the playback-restriction-policy to be updated.
+     * </p>
+     * 
+     * @return ARN of the playback-restriction-policy to be updated.
+     */
+
+    public String getArn() {
+        return this.arn;
+    }
+
+    /**
+     * <p>
+     * ARN of the playback-restriction-policy to be updated.
+     * </p>
+     * 
+     * @param arn
+     *        ARN of the playback-restriction-policy to be updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePlaybackRestrictionPolicyRequest withArn(String arn) {
+        setArn(arn);
+        return this;
+    }
 
     /**
      * <p>
@@ -243,46 +283,6 @@ public class UpdatePlaybackRestrictionPolicyRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * ARN of the playback-restriction-policy to be updated.
-     * </p>
-     * 
-     * @param arn
-     *        ARN of the playback-restriction-policy to be updated.
-     */
-
-    public void setArn(String arn) {
-        this.arn = arn;
-    }
-
-    /**
-     * <p>
-     * ARN of the playback-restriction-policy to be updated.
-     * </p>
-     * 
-     * @return ARN of the playback-restriction-policy to be updated.
-     */
-
-    public String getArn() {
-        return this.arn;
-    }
-
-    /**
-     * <p>
-     * ARN of the playback-restriction-policy to be updated.
-     * </p>
-     * 
-     * @param arn
-     *        ARN of the playback-restriction-policy to be updated.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePlaybackRestrictionPolicyRequest withArn(String arn) {
-        setArn(arn);
-        return this;
-    }
-
-    /**
-     * <p>
      * Whether channel playback is constrained by origin site. Default: <code>false</code>.
      * </p>
      * 
@@ -385,12 +385,12 @@ public class UpdatePlaybackRestrictionPolicyRequest extends com.amazonaws.Amazon
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getArn() != null)
+            sb.append("Arn: ").append(getArn()).append(",");
         if (getAllowedCountries() != null)
             sb.append("AllowedCountries: ").append(getAllowedCountries()).append(",");
         if (getAllowedOrigins() != null)
             sb.append("AllowedOrigins: ").append(getAllowedOrigins()).append(",");
-        if (getArn() != null)
-            sb.append("Arn: ").append(getArn()).append(",");
         if (getEnableStrictOriginEnforcement() != null)
             sb.append("EnableStrictOriginEnforcement: ").append(getEnableStrictOriginEnforcement()).append(",");
         if (getName() != null)
@@ -409,6 +409,10 @@ public class UpdatePlaybackRestrictionPolicyRequest extends com.amazonaws.Amazon
         if (obj instanceof UpdatePlaybackRestrictionPolicyRequest == false)
             return false;
         UpdatePlaybackRestrictionPolicyRequest other = (UpdatePlaybackRestrictionPolicyRequest) obj;
+        if (other.getArn() == null ^ this.getArn() == null)
+            return false;
+        if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
         if (other.getAllowedCountries() == null ^ this.getAllowedCountries() == null)
             return false;
         if (other.getAllowedCountries() != null && other.getAllowedCountries().equals(this.getAllowedCountries()) == false)
@@ -416,10 +420,6 @@ public class UpdatePlaybackRestrictionPolicyRequest extends com.amazonaws.Amazon
         if (other.getAllowedOrigins() == null ^ this.getAllowedOrigins() == null)
             return false;
         if (other.getAllowedOrigins() != null && other.getAllowedOrigins().equals(this.getAllowedOrigins()) == false)
-            return false;
-        if (other.getArn() == null ^ this.getArn() == null)
-            return false;
-        if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
         if (other.getEnableStrictOriginEnforcement() == null ^ this.getEnableStrictOriginEnforcement() == null)
             return false;
@@ -438,9 +438,9 @@ public class UpdatePlaybackRestrictionPolicyRequest extends com.amazonaws.Amazon
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getAllowedCountries() == null) ? 0 : getAllowedCountries().hashCode());
         hashCode = prime * hashCode + ((getAllowedOrigins() == null) ? 0 : getAllowedOrigins().hashCode());
-        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getEnableStrictOriginEnforcement() == null) ? 0 : getEnableStrictOriginEnforcement().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         return hashCode;

@@ -32,12 +32,6 @@ public class StreamEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     */
-    private java.util.Date eventTime;
-    /**
-     * <p>
      * Name that identifies the stream event within a <code>type</code>.
      * </p>
      */
@@ -48,49 +42,12 @@ public class StreamEvent implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String type;
-
     /**
      * <p>
      * Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
      * </p>
-     * 
-     * @param eventTime
-     *        Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
      */
-
-    public void setEventTime(java.util.Date eventTime) {
-        this.eventTime = eventTime;
-    }
-
-    /**
-     * <p>
-     * Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @return Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *         string</i>.
-     */
-
-    public java.util.Date getEventTime() {
-        return this.eventTime;
-    }
-
-    /**
-     * <p>
-     * Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param eventTime
-     *        Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StreamEvent withEventTime(java.util.Date eventTime) {
-        setEventTime(eventTime);
-        return this;
-    }
+    private java.util.Date eventTime;
 
     /**
      * <p>
@@ -173,6 +130,49 @@ public class StreamEvent implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param eventTime
+     *        Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     */
+
+    public void setEventTime(java.util.Date eventTime) {
+        this.eventTime = eventTime;
+    }
+
+    /**
+     * <p>
+     * Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @return Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *         string</i>.
+     */
+
+    public java.util.Date getEventTime() {
+        return this.eventTime;
+    }
+
+    /**
+     * <p>
+     * Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param eventTime
+     *        Time when the event occurred. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamEvent withEventTime(java.util.Date eventTime) {
+        setEventTime(eventTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,12 +184,12 @@ public class StreamEvent implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEventTime() != null)
-            sb.append("EventTime: ").append(getEventTime()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getEventTime() != null)
+            sb.append("EventTime: ").append(getEventTime());
         sb.append("}");
         return sb.toString();
     }
@@ -204,10 +204,6 @@ public class StreamEvent implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof StreamEvent == false)
             return false;
         StreamEvent other = (StreamEvent) obj;
-        if (other.getEventTime() == null ^ this.getEventTime() == null)
-            return false;
-        if (other.getEventTime() != null && other.getEventTime().equals(this.getEventTime()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
@@ -215,6 +211,10 @@ public class StreamEvent implements Serializable, Cloneable, StructuredPojo {
         if (other.getType() == null ^ this.getType() == null)
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
+        if (other.getEventTime() == null ^ this.getEventTime() == null)
+            return false;
+        if (other.getEventTime() != null && other.getEventTime().equals(this.getEventTime()) == false)
             return false;
         return true;
     }
@@ -224,9 +224,9 @@ public class StreamEvent implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEventTime() == null) ? 0 : getEventTime().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getEventTime() == null) ? 0 : getEventTime().hashCode());
         return hashCode;
     }
 

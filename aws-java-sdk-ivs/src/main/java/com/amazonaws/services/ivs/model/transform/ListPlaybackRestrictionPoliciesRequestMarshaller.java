@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListPlaybackRestrictionPoliciesRequestMarshaller {
 
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
 
     private static final ListPlaybackRestrictionPoliciesRequestMarshaller instance = new ListPlaybackRestrictionPoliciesRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class ListPlaybackRestrictionPoliciesRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listPlaybackRestrictionPoliciesRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listPlaybackRestrictionPoliciesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listPlaybackRestrictionPoliciesRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

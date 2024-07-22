@@ -36,16 +36,16 @@ public class RecordingConfigurationSummary implements Serializable, Cloneable, S
     private String arn;
     /**
      * <p>
-     * A complex type that contains information about where recorded video will be stored.
-     * </p>
-     */
-    private DestinationConfiguration destinationConfiguration;
-    /**
-     * <p>
      * Recording-configuration name. The value does not need to be unique.
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * A complex type that contains information about where recorded video will be stored.
+     * </p>
+     */
+    private DestinationConfiguration destinationConfiguration;
     /**
      * <p>
      * Indicates the current state of the recording configuration. When the state is <code>ACTIVE</code>, the
@@ -106,46 +106,6 @@ public class RecordingConfigurationSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * A complex type that contains information about where recorded video will be stored.
-     * </p>
-     * 
-     * @param destinationConfiguration
-     *        A complex type that contains information about where recorded video will be stored.
-     */
-
-    public void setDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
-        this.destinationConfiguration = destinationConfiguration;
-    }
-
-    /**
-     * <p>
-     * A complex type that contains information about where recorded video will be stored.
-     * </p>
-     * 
-     * @return A complex type that contains information about where recorded video will be stored.
-     */
-
-    public DestinationConfiguration getDestinationConfiguration() {
-        return this.destinationConfiguration;
-    }
-
-    /**
-     * <p>
-     * A complex type that contains information about where recorded video will be stored.
-     * </p>
-     * 
-     * @param destinationConfiguration
-     *        A complex type that contains information about where recorded video will be stored.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RecordingConfigurationSummary withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
-        setDestinationConfiguration(destinationConfiguration);
-        return this;
-    }
-
-    /**
-     * <p>
      * Recording-configuration name. The value does not need to be unique.
      * </p>
      * 
@@ -181,6 +141,46 @@ public class RecordingConfigurationSummary implements Serializable, Cloneable, S
 
     public RecordingConfigurationSummary withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains information about where recorded video will be stored.
+     * </p>
+     * 
+     * @param destinationConfiguration
+     *        A complex type that contains information about where recorded video will be stored.
+     */
+
+    public void setDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
+        this.destinationConfiguration = destinationConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains information about where recorded video will be stored.
+     * </p>
+     * 
+     * @return A complex type that contains information about where recorded video will be stored.
+     */
+
+    public DestinationConfiguration getDestinationConfiguration() {
+        return this.destinationConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains information about where recorded video will be stored.
+     * </p>
+     * 
+     * @param destinationConfiguration
+     *        A complex type that contains information about where recorded video will be stored.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecordingConfigurationSummary withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
+        setDestinationConfiguration(destinationConfiguration);
         return this;
     }
 
@@ -358,10 +358,10 @@ public class RecordingConfigurationSummary implements Serializable, Cloneable, S
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getDestinationConfiguration() != null)
-            sb.append("DestinationConfiguration: ").append(getDestinationConfiguration()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getDestinationConfiguration() != null)
+            sb.append("DestinationConfiguration: ").append(getDestinationConfiguration()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
         if (getTags() != null)
@@ -384,13 +384,13 @@ public class RecordingConfigurationSummary implements Serializable, Cloneable, S
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getDestinationConfiguration() == null ^ this.getDestinationConfiguration() == null)
-            return false;
-        if (other.getDestinationConfiguration() != null && other.getDestinationConfiguration().equals(this.getDestinationConfiguration()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getDestinationConfiguration() == null ^ this.getDestinationConfiguration() == null)
+            return false;
+        if (other.getDestinationConfiguration() != null && other.getDestinationConfiguration().equals(this.getDestinationConfiguration()) == false)
             return false;
         if (other.getState() == null ^ this.getState() == null)
             return false;
@@ -409,8 +409,8 @@ public class RecordingConfigurationSummary implements Serializable, Cloneable, S
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

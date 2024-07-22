@@ -48,13 +48,13 @@ public class VideoConfigurationJsonUnmarshaller implements Unmarshaller<VideoCon
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("avcLevel", targetDepth)) {
-                    context.nextToken();
-                    videoConfiguration.setAvcLevel(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("avcProfile", targetDepth)) {
                     context.nextToken();
                     videoConfiguration.setAvcProfile(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("avcLevel", targetDepth)) {
+                    context.nextToken();
+                    videoConfiguration.setAvcLevel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("codec", targetDepth)) {
                     context.nextToken();

@@ -31,10 +31,16 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The properties of the channel at the time of going live.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      */
-    private Channel channel;
+    private String streamId;
+    /**
+     * <p>
+     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     */
+    private java.util.Date startTime;
     /**
      * <p>
      * Time when the channel went offline. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
@@ -42,6 +48,12 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date endTime;
+    /**
+     * <p>
+     * The properties of the channel at the time of going live.
+     * </p>
+     */
+    private Channel channel;
     /**
      * <p>
      * The properties of the incoming RTMP stream for the stream.
@@ -56,18 +68,6 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
     private RecordingConfiguration recordingConfiguration;
     /**
      * <p>
-     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     */
-    private java.util.Date startTime;
-    /**
-     * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
-     * </p>
-     */
-    private String streamId;
-    /**
-     * <p>
      * List of Amazon IVS events that the stream encountered. The list is sorted by most recent events and contains up
      * to 500 events. For Amazon IVS events, see <a
      * href="https://docs.aws.amazon.com/ivs/latest/userguide/eventbridge.html">Using Amazon EventBridge with Amazon
@@ -78,41 +78,84 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The properties of the channel at the time of going live.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @param channel
-     *        The properties of the channel at the time of going live.
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
      */
 
-    public void setChannel(Channel channel) {
-        this.channel = channel;
+    public void setStreamId(String streamId) {
+        this.streamId = streamId;
     }
 
     /**
      * <p>
-     * The properties of the channel at the time of going live.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @return The properties of the channel at the time of going live.
+     * @return Unique identifier for a live or previously live stream in the specified channel.
      */
 
-    public Channel getChannel() {
-        return this.channel;
+    public String getStreamId() {
+        return this.streamId;
     }
 
     /**
      * <p>
-     * The properties of the channel at the time of going live.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @param channel
-     *        The properties of the channel at the time of going live.
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StreamSession withChannel(Channel channel) {
-        setChannel(channel);
+    public StreamSession withStreamId(String streamId) {
+        setStreamId(streamId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param startTime
+     *        Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     */
+
+    public void setStartTime(java.util.Date startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * <p>
+     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @return Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *         string</i>.
+     */
+
+    public java.util.Date getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * <p>
+     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param startTime
+     *        Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamSession withStartTime(java.util.Date startTime) {
+        setStartTime(startTime);
         return this;
     }
 
@@ -159,6 +202,46 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
 
     public StreamSession withEndTime(java.util.Date endTime) {
         setEndTime(endTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The properties of the channel at the time of going live.
+     * </p>
+     * 
+     * @param channel
+     *        The properties of the channel at the time of going live.
+     */
+
+    public void setChannel(Channel channel) {
+        this.channel = channel;
+    }
+
+    /**
+     * <p>
+     * The properties of the channel at the time of going live.
+     * </p>
+     * 
+     * @return The properties of the channel at the time of going live.
+     */
+
+    public Channel getChannel() {
+        return this.channel;
+    }
+
+    /**
+     * <p>
+     * The properties of the channel at the time of going live.
+     * </p>
+     * 
+     * @param channel
+     *        The properties of the channel at the time of going live.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamSession withChannel(Channel channel) {
+        setChannel(channel);
         return this;
     }
 
@@ -239,89 +322,6 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
 
     public StreamSession withRecordingConfiguration(RecordingConfiguration recordingConfiguration) {
         setRecordingConfiguration(recordingConfiguration);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param startTime
-     *        Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
-     */
-
-    public void setStartTime(java.util.Date startTime) {
-        this.startTime = startTime;
-    }
-
-    /**
-     * <p>
-     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @return Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *         string</i>.
-     */
-
-    public java.util.Date getStartTime() {
-        return this.startTime;
-    }
-
-    /**
-     * <p>
-     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param startTime
-     *        Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StreamSession withStartTime(java.util.Date startTime) {
-        setStartTime(startTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
-     * </p>
-     * 
-     * @param streamId
-     *        Unique identifier for a live or previously live stream in the specified channel.
-     */
-
-    public void setStreamId(String streamId) {
-        this.streamId = streamId;
-    }
-
-    /**
-     * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
-     * </p>
-     * 
-     * @return Unique identifier for a live or previously live stream in the specified channel.
-     */
-
-    public String getStreamId() {
-        return this.streamId;
-    }
-
-    /**
-     * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
-     * </p>
-     * 
-     * @param streamId
-     *        Unique identifier for a live or previously live stream in the specified channel.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StreamSession withStreamId(String streamId) {
-        setStreamId(streamId);
         return this;
     }
 
@@ -431,18 +431,18 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getChannel() != null)
-            sb.append("Channel: ").append(getChannel()).append(",");
+        if (getStreamId() != null)
+            sb.append("StreamId: ").append(getStreamId()).append(",");
+        if (getStartTime() != null)
+            sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getEndTime() != null)
             sb.append("EndTime: ").append(getEndTime()).append(",");
+        if (getChannel() != null)
+            sb.append("Channel: ").append(getChannel()).append(",");
         if (getIngestConfiguration() != null)
             sb.append("IngestConfiguration: ").append(getIngestConfiguration()).append(",");
         if (getRecordingConfiguration() != null)
             sb.append("RecordingConfiguration: ").append(getRecordingConfiguration()).append(",");
-        if (getStartTime() != null)
-            sb.append("StartTime: ").append(getStartTime()).append(",");
-        if (getStreamId() != null)
-            sb.append("StreamId: ").append(getStreamId()).append(",");
         if (getTruncatedEvents() != null)
             sb.append("TruncatedEvents: ").append(getTruncatedEvents());
         sb.append("}");
@@ -459,13 +459,21 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof StreamSession == false)
             return false;
         StreamSession other = (StreamSession) obj;
-        if (other.getChannel() == null ^ this.getChannel() == null)
+        if (other.getStreamId() == null ^ this.getStreamId() == null)
             return false;
-        if (other.getChannel() != null && other.getChannel().equals(this.getChannel()) == false)
+        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
+            return false;
+        if (other.getStartTime() == null ^ this.getStartTime() == null)
+            return false;
+        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
             return false;
         if (other.getEndTime() == null ^ this.getEndTime() == null)
             return false;
         if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
+            return false;
+        if (other.getChannel() == null ^ this.getChannel() == null)
+            return false;
+        if (other.getChannel() != null && other.getChannel().equals(this.getChannel()) == false)
             return false;
         if (other.getIngestConfiguration() == null ^ this.getIngestConfiguration() == null)
             return false;
@@ -474,14 +482,6 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
         if (other.getRecordingConfiguration() == null ^ this.getRecordingConfiguration() == null)
             return false;
         if (other.getRecordingConfiguration() != null && other.getRecordingConfiguration().equals(this.getRecordingConfiguration()) == false)
-            return false;
-        if (other.getStartTime() == null ^ this.getStartTime() == null)
-            return false;
-        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
-            return false;
-        if (other.getStreamId() == null ^ this.getStreamId() == null)
-            return false;
-        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
             return false;
         if (other.getTruncatedEvents() == null ^ this.getTruncatedEvents() == null)
             return false;
@@ -495,12 +495,12 @@ public class StreamSession implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getChannel() == null) ? 0 : getChannel().hashCode());
+        hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
+        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
+        hashCode = prime * hashCode + ((getChannel() == null) ? 0 : getChannel().hashCode());
         hashCode = prime * hashCode + ((getIngestConfiguration() == null) ? 0 : getIngestConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRecordingConfiguration() == null) ? 0 : getRecordingConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
-        hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
         hashCode = prime * hashCode + ((getTruncatedEvents() == null) ? 0 : getTruncatedEvents().hashCode());
         return hashCode;
     }

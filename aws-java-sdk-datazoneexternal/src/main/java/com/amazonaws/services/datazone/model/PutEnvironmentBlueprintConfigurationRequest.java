@@ -51,6 +51,12 @@ public class PutEnvironmentBlueprintConfigurationRequest extends com.amazonaws.A
     private String manageAccessRoleArn;
     /**
      * <p>
+     * The provisioning configuration of a blueprint.
+     * </p>
+     */
+    private java.util.List<ProvisioningConfiguration> provisioningConfigurations;
+    /**
+     * <p>
      * The ARN of the provisioning role.
      * </p>
      */
@@ -254,6 +260,76 @@ public class PutEnvironmentBlueprintConfigurationRequest extends com.amazonaws.A
 
     /**
      * <p>
+     * The provisioning configuration of a blueprint.
+     * </p>
+     * 
+     * @return The provisioning configuration of a blueprint.
+     */
+
+    public java.util.List<ProvisioningConfiguration> getProvisioningConfigurations() {
+        return provisioningConfigurations;
+    }
+
+    /**
+     * <p>
+     * The provisioning configuration of a blueprint.
+     * </p>
+     * 
+     * @param provisioningConfigurations
+     *        The provisioning configuration of a blueprint.
+     */
+
+    public void setProvisioningConfigurations(java.util.Collection<ProvisioningConfiguration> provisioningConfigurations) {
+        if (provisioningConfigurations == null) {
+            this.provisioningConfigurations = null;
+            return;
+        }
+
+        this.provisioningConfigurations = new java.util.ArrayList<ProvisioningConfiguration>(provisioningConfigurations);
+    }
+
+    /**
+     * <p>
+     * The provisioning configuration of a blueprint.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setProvisioningConfigurations(java.util.Collection)} or
+     * {@link #withProvisioningConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param provisioningConfigurations
+     *        The provisioning configuration of a blueprint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutEnvironmentBlueprintConfigurationRequest withProvisioningConfigurations(ProvisioningConfiguration... provisioningConfigurations) {
+        if (this.provisioningConfigurations == null) {
+            setProvisioningConfigurations(new java.util.ArrayList<ProvisioningConfiguration>(provisioningConfigurations.length));
+        }
+        for (ProvisioningConfiguration ele : provisioningConfigurations) {
+            this.provisioningConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The provisioning configuration of a blueprint.
+     * </p>
+     * 
+     * @param provisioningConfigurations
+     *        The provisioning configuration of a blueprint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutEnvironmentBlueprintConfigurationRequest withProvisioningConfigurations(java.util.Collection<ProvisioningConfiguration> provisioningConfigurations) {
+        setProvisioningConfigurations(provisioningConfigurations);
+        return this;
+    }
+
+    /**
+     * <p>
      * The ARN of the provisioning role.
      * </p>
      * 
@@ -380,6 +456,8 @@ public class PutEnvironmentBlueprintConfigurationRequest extends com.amazonaws.A
             sb.append("EnvironmentBlueprintIdentifier: ").append(getEnvironmentBlueprintIdentifier()).append(",");
         if (getManageAccessRoleArn() != null)
             sb.append("ManageAccessRoleArn: ").append(getManageAccessRoleArn()).append(",");
+        if (getProvisioningConfigurations() != null)
+            sb.append("ProvisioningConfigurations: ").append(getProvisioningConfigurations()).append(",");
         if (getProvisioningRoleArn() != null)
             sb.append("ProvisioningRoleArn: ").append(getProvisioningRoleArn()).append(",");
         if (getRegionalParameters() != null)
@@ -415,6 +493,10 @@ public class PutEnvironmentBlueprintConfigurationRequest extends com.amazonaws.A
             return false;
         if (other.getManageAccessRoleArn() != null && other.getManageAccessRoleArn().equals(this.getManageAccessRoleArn()) == false)
             return false;
+        if (other.getProvisioningConfigurations() == null ^ this.getProvisioningConfigurations() == null)
+            return false;
+        if (other.getProvisioningConfigurations() != null && other.getProvisioningConfigurations().equals(this.getProvisioningConfigurations()) == false)
+            return false;
         if (other.getProvisioningRoleArn() == null ^ this.getProvisioningRoleArn() == null)
             return false;
         if (other.getProvisioningRoleArn() != null && other.getProvisioningRoleArn().equals(this.getProvisioningRoleArn()) == false)
@@ -435,6 +517,7 @@ public class PutEnvironmentBlueprintConfigurationRequest extends com.amazonaws.A
         hashCode = prime * hashCode + ((getEnabledRegions() == null) ? 0 : getEnabledRegions().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentBlueprintIdentifier() == null) ? 0 : getEnvironmentBlueprintIdentifier().hashCode());
         hashCode = prime * hashCode + ((getManageAccessRoleArn() == null) ? 0 : getManageAccessRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getProvisioningConfigurations() == null) ? 0 : getProvisioningConfigurations().hashCode());
         hashCode = prime * hashCode + ((getProvisioningRoleArn() == null) ? 0 : getProvisioningRoleArn().hashCode());
         hashCode = prime * hashCode + ((getRegionalParameters() == null) ? 0 : getRegionalParameters().hashCode());
         return hashCode;

@@ -1,3 +1,20 @@
+# __1.12.763__ __2024-07-22__
+## __Amazon DataZone__
+  - ### Features
+    - This release adds 1/ support of register S3 locations of assets in AWS Lake Formation hybrid access mode for DefaultDataLake blueprint. 2/ support of CRUD operations for Asset Filters.
+
+## __Amazon Interactive Video Service__
+  - ### Features
+    - Documentation update for IVS Low Latency API Reference.
+
+## __Amazon Neptune Graph__
+  - ### Features
+    - Amazon Neptune Analytics provides new options for customers to start with smaller graphs at a lower cost. CreateGraph, CreaateGraphImportTask, UpdateGraph and StartImportTask APIs will now allow 32 and 64 for `provisioned-memory`
+
+## __Redshift Serverless__
+  - ### Features
+    - Adds dualstack support for Redshift Serverless workgroup.
+
 # __1.12.762__ __2024-07-18__
 ## __AWS Certificate Manager Private Certificate Authority__
   - ### Features

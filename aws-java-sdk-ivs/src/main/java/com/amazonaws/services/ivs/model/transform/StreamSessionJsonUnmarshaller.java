@@ -48,13 +48,21 @@ public class StreamSessionJsonUnmarshaller implements Unmarshaller<StreamSession
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("channel", targetDepth)) {
+                if (context.testExpression("streamId", targetDepth)) {
                     context.nextToken();
-                    streamSession.setChannel(ChannelJsonUnmarshaller.getInstance().unmarshall(context));
+                    streamSession.setStreamId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("startTime", targetDepth)) {
+                    context.nextToken();
+                    streamSession.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("endTime", targetDepth)) {
                     context.nextToken();
                     streamSession.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("channel", targetDepth)) {
+                    context.nextToken();
+                    streamSession.setChannel(ChannelJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("ingestConfiguration", targetDepth)) {
                     context.nextToken();
@@ -63,14 +71,6 @@ public class StreamSessionJsonUnmarshaller implements Unmarshaller<StreamSession
                 if (context.testExpression("recordingConfiguration", targetDepth)) {
                     context.nextToken();
                     streamSession.setRecordingConfiguration(RecordingConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("startTime", targetDepth)) {
-                    context.nextToken();
-                    streamSession.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("streamId", targetDepth)) {
-                    context.nextToken();
-                    streamSession.setStreamId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("truncatedEvents", targetDepth)) {
                     context.nextToken();

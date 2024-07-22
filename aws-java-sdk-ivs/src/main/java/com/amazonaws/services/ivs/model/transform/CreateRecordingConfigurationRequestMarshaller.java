@@ -29,18 +29,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateRecordingConfigurationRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> DESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConfiguration").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<Integer> RECORDINGRECONNECTWINDOWSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingReconnectWindowSeconds").build();
-    private static final MarshallingInfo<StructuredPojo> RENDITIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("renditionConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> DESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConfiguration").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> THUMBNAILCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("thumbnailConfiguration").build();
+    private static final MarshallingInfo<Integer> RECORDINGRECONNECTWINDOWSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingReconnectWindowSeconds").build();
+    private static final MarshallingInfo<StructuredPojo> RENDITIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("renditionConfiguration").build();
 
     private static final CreateRecordingConfigurationRequestMarshaller instance = new CreateRecordingConfigurationRequestMarshaller();
 
@@ -58,12 +58,12 @@ public class CreateRecordingConfigurationRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createRecordingConfigurationRequest.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createRecordingConfigurationRequest.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(createRecordingConfigurationRequest.getRecordingReconnectWindowSeconds(), RECORDINGRECONNECTWINDOWSECONDS_BINDING);
-            protocolMarshaller.marshall(createRecordingConfigurationRequest.getRenditionConfiguration(), RENDITIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createRecordingConfigurationRequest.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createRecordingConfigurationRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createRecordingConfigurationRequest.getThumbnailConfiguration(), THUMBNAILCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createRecordingConfigurationRequest.getRecordingReconnectWindowSeconds(), RECORDINGRECONNECTWINDOWSECONDS_BINDING);
+            protocolMarshaller.marshall(createRecordingConfigurationRequest.getRenditionConfiguration(), RENDITIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

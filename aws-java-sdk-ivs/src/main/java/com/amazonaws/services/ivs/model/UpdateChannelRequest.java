@@ -33,16 +33,10 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String arn;
     /**
      * <p>
-     * Whether the channel is private (enabled for playback authorization).
+     * Channel name.
      * </p>
      */
-    private Boolean authorized;
-    /**
-     * <p>
-     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     * </p>
-     */
-    private Boolean insecureIngest;
+    private String name;
     /**
      * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
@@ -52,17 +46,32 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String latencyMode;
     /**
      * <p>
-     * Channel name.
+     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable input
+     * resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. For
+     * details, see <a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/channel-types.html">Channel
+     * Types</a>.
      * </p>
      */
-    private String name;
+    private String type;
     /**
      * <p>
-     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
-     * If this is set to an empty string, playback restriction policy is disabled.
+     * Whether the channel is private (enabled for playback authorization).
      * </p>
      */
-    private String playbackRestrictionPolicyArn;
+    private Boolean authorized;
+    /**
+     * <p>
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this is set
+     * to an empty string, recording is disabled.
+     * </p>
+     */
+    private String recordingConfigurationArn;
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     * </p>
+     */
+    private Boolean insecureIngest;
     /**
      * <p>
      * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
@@ -74,20 +83,11 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String preset;
     /**
      * <p>
-     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this is set
-     * to an empty string, recording is disabled.
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * If this is set to an empty string, playback restriction policy is disabled.
      * </p>
      */
-    private String recordingConfigurationArn;
-    /**
-     * <p>
-     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable input
-     * resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. For
-     * details, see <a href="https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/channel-types.html">Channel
-     * Types</a>.
-     * </p>
-     */
-    private String type;
+    private String playbackRestrictionPolicyArn;
 
     /**
      * <p>
@@ -131,106 +131,42 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Whether the channel is private (enabled for playback authorization).
+     * Channel name.
      * </p>
      * 
-     * @param authorized
-     *        Whether the channel is private (enabled for playback authorization).
+     * @param name
+     *        Channel name.
      */
 
-    public void setAuthorized(Boolean authorized) {
-        this.authorized = authorized;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * <p>
-     * Whether the channel is private (enabled for playback authorization).
+     * Channel name.
      * </p>
      * 
-     * @return Whether the channel is private (enabled for playback authorization).
+     * @return Channel name.
      */
 
-    public Boolean getAuthorized() {
-        return this.authorized;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * <p>
-     * Whether the channel is private (enabled for playback authorization).
+     * Channel name.
      * </p>
      * 
-     * @param authorized
-     *        Whether the channel is private (enabled for playback authorization).
+     * @param name
+     *        Channel name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateChannelRequest withAuthorized(Boolean authorized) {
-        setAuthorized(authorized);
+    public UpdateChannelRequest withName(String name) {
+        setName(name);
         return this;
-    }
-
-    /**
-     * <p>
-     * Whether the channel is private (enabled for playback authorization).
-     * </p>
-     * 
-     * @return Whether the channel is private (enabled for playback authorization).
-     */
-
-    public Boolean isAuthorized() {
-        return this.authorized;
-    }
-
-    /**
-     * <p>
-     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     * </p>
-     * 
-     * @param insecureIngest
-     *        Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     */
-
-    public void setInsecureIngest(Boolean insecureIngest) {
-        this.insecureIngest = insecureIngest;
-    }
-
-    /**
-     * <p>
-     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     * </p>
-     * 
-     * @return Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     */
-
-    public Boolean getInsecureIngest() {
-        return this.insecureIngest;
-    }
-
-    /**
-     * <p>
-     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     * </p>
-     * 
-     * @param insecureIngest
-     *        Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateChannelRequest withInsecureIngest(Boolean insecureIngest) {
-        setInsecureIngest(insecureIngest);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     * </p>
-     * 
-     * @return Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
-     */
-
-    public Boolean isInsecureIngest() {
-        return this.insecureIngest;
     }
 
     /**
@@ -297,221 +233,6 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     public UpdateChannelRequest withLatencyMode(ChannelLatencyMode latencyMode) {
         this.latencyMode = latencyMode.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * Channel name.
-     * </p>
-     * 
-     * @param name
-     *        Channel name.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * Channel name.
-     * </p>
-     * 
-     * @return Channel name.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * Channel name.
-     * </p>
-     * 
-     * @param name
-     *        Channel name.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateChannelRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
-     * If this is set to an empty string, playback restriction policy is disabled.
-     * </p>
-     * 
-     * @param playbackRestrictionPolicyArn
-     *        Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
-     *        restriction. If this is set to an empty string, playback restriction policy is disabled.
-     */
-
-    public void setPlaybackRestrictionPolicyArn(String playbackRestrictionPolicyArn) {
-        this.playbackRestrictionPolicyArn = playbackRestrictionPolicyArn;
-    }
-
-    /**
-     * <p>
-     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
-     * If this is set to an empty string, playback restriction policy is disabled.
-     * </p>
-     * 
-     * @return Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
-     *         restriction. If this is set to an empty string, playback restriction policy is disabled.
-     */
-
-    public String getPlaybackRestrictionPolicyArn() {
-        return this.playbackRestrictionPolicyArn;
-    }
-
-    /**
-     * <p>
-     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
-     * If this is set to an empty string, playback restriction policy is disabled.
-     * </p>
-     * 
-     * @param playbackRestrictionPolicyArn
-     *        Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
-     *        restriction. If this is set to an empty string, playback restriction policy is disabled.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateChannelRequest withPlaybackRestrictionPolicyArn(String playbackRestrictionPolicyArn) {
-        setPlaybackRestrictionPolicyArn(playbackRestrictionPolicyArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
-     * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
-     * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
-     * <code>preset</code> is the empty string (<code>""</code>).
-     * </p>
-     * 
-     * @param preset
-     *        Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
-     *        <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
-     *        <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and
-     *        <code>STANDARD</code>), <code>preset</code> is the empty string (<code>""</code>).
-     * @see TranscodePreset
-     */
-
-    public void setPreset(String preset) {
-        this.preset = preset;
-    }
-
-    /**
-     * <p>
-     * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
-     * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
-     * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
-     * <code>preset</code> is the empty string (<code>""</code>).
-     * </p>
-     * 
-     * @return Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
-     *         <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
-     *         <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and
-     *         <code>STANDARD</code>), <code>preset</code> is the empty string (<code>""</code>).
-     * @see TranscodePreset
-     */
-
-    public String getPreset() {
-        return this.preset;
-    }
-
-    /**
-     * <p>
-     * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
-     * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
-     * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
-     * <code>preset</code> is the empty string (<code>""</code>).
-     * </p>
-     * 
-     * @param preset
-     *        Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
-     *        <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
-     *        <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and
-     *        <code>STANDARD</code>), <code>preset</code> is the empty string (<code>""</code>).
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see TranscodePreset
-     */
-
-    public UpdateChannelRequest withPreset(String preset) {
-        setPreset(preset);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
-     * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
-     * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
-     * <code>preset</code> is the empty string (<code>""</code>).
-     * </p>
-     * 
-     * @param preset
-     *        Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
-     *        <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
-     *        <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and
-     *        <code>STANDARD</code>), <code>preset</code> is the empty string (<code>""</code>).
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see TranscodePreset
-     */
-
-    public UpdateChannelRequest withPreset(TranscodePreset preset) {
-        this.preset = preset.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this is set
-     * to an empty string, recording is disabled.
-     * </p>
-     * 
-     * @param recordingConfigurationArn
-     *        Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this
-     *        is set to an empty string, recording is disabled.
-     */
-
-    public void setRecordingConfigurationArn(String recordingConfigurationArn) {
-        this.recordingConfigurationArn = recordingConfigurationArn;
-    }
-
-    /**
-     * <p>
-     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this is set
-     * to an empty string, recording is disabled.
-     * </p>
-     * 
-     * @return Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this
-     *         is set to an empty string, recording is disabled.
-     */
-
-    public String getRecordingConfigurationArn() {
-        return this.recordingConfigurationArn;
-    }
-
-    /**
-     * <p>
-     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this is set
-     * to an empty string, recording is disabled.
-     * </p>
-     * 
-     * @param recordingConfigurationArn
-     *        Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this
-     *        is set to an empty string, recording is disabled.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateChannelRequest withRecordingConfigurationArn(String recordingConfigurationArn) {
-        setRecordingConfigurationArn(recordingConfigurationArn);
         return this;
     }
 
@@ -600,6 +321,285 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Whether the channel is private (enabled for playback authorization).
+     * </p>
+     * 
+     * @param authorized
+     *        Whether the channel is private (enabled for playback authorization).
+     */
+
+    public void setAuthorized(Boolean authorized) {
+        this.authorized = authorized;
+    }
+
+    /**
+     * <p>
+     * Whether the channel is private (enabled for playback authorization).
+     * </p>
+     * 
+     * @return Whether the channel is private (enabled for playback authorization).
+     */
+
+    public Boolean getAuthorized() {
+        return this.authorized;
+    }
+
+    /**
+     * <p>
+     * Whether the channel is private (enabled for playback authorization).
+     * </p>
+     * 
+     * @param authorized
+     *        Whether the channel is private (enabled for playback authorization).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateChannelRequest withAuthorized(Boolean authorized) {
+        setAuthorized(authorized);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the channel is private (enabled for playback authorization).
+     * </p>
+     * 
+     * @return Whether the channel is private (enabled for playback authorization).
+     */
+
+    public Boolean isAuthorized() {
+        return this.authorized;
+    }
+
+    /**
+     * <p>
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this is set
+     * to an empty string, recording is disabled.
+     * </p>
+     * 
+     * @param recordingConfigurationArn
+     *        Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this
+     *        is set to an empty string, recording is disabled.
+     */
+
+    public void setRecordingConfigurationArn(String recordingConfigurationArn) {
+        this.recordingConfigurationArn = recordingConfigurationArn;
+    }
+
+    /**
+     * <p>
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this is set
+     * to an empty string, recording is disabled.
+     * </p>
+     * 
+     * @return Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this
+     *         is set to an empty string, recording is disabled.
+     */
+
+    public String getRecordingConfigurationArn() {
+        return this.recordingConfigurationArn;
+    }
+
+    /**
+     * <p>
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this is set
+     * to an empty string, recording is disabled.
+     * </p>
+     * 
+     * @param recordingConfigurationArn
+     *        Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. If this
+     *        is set to an empty string, recording is disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateChannelRequest withRecordingConfigurationArn(String recordingConfigurationArn) {
+        setRecordingConfigurationArn(recordingConfigurationArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     * </p>
+     * 
+     * @param insecureIngest
+     *        Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     */
+
+    public void setInsecureIngest(Boolean insecureIngest) {
+        this.insecureIngest = insecureIngest;
+    }
+
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     * </p>
+     * 
+     * @return Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     */
+
+    public Boolean getInsecureIngest() {
+        return this.insecureIngest;
+    }
+
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     * </p>
+     * 
+     * @param insecureIngest
+     *        Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateChannelRequest withInsecureIngest(Boolean insecureIngest) {
+        setInsecureIngest(insecureIngest);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     * </p>
+     * 
+     * @return Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
+     */
+
+    public Boolean isInsecureIngest() {
+        return this.insecureIngest;
+    }
+
+    /**
+     * <p>
+     * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
+     * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
+     * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
+     * <code>preset</code> is the empty string (<code>""</code>).
+     * </p>
+     * 
+     * @param preset
+     *        Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
+     *        <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
+     *        <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and
+     *        <code>STANDARD</code>), <code>preset</code> is the empty string (<code>""</code>).
+     * @see TranscodePreset
+     */
+
+    public void setPreset(String preset) {
+        this.preset = preset;
+    }
+
+    /**
+     * <p>
+     * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
+     * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
+     * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
+     * <code>preset</code> is the empty string (<code>""</code>).
+     * </p>
+     * 
+     * @return Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
+     *         <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
+     *         <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and
+     *         <code>STANDARD</code>), <code>preset</code> is the empty string (<code>""</code>).
+     * @see TranscodePreset
+     */
+
+    public String getPreset() {
+        return this.preset;
+    }
+
+    /**
+     * <p>
+     * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
+     * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
+     * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
+     * <code>preset</code> is the empty string (<code>""</code>).
+     * </p>
+     * 
+     * @param preset
+     *        Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
+     *        <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
+     *        <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and
+     *        <code>STANDARD</code>), <code>preset</code> is the empty string (<code>""</code>).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TranscodePreset
+     */
+
+    public UpdateChannelRequest withPreset(String preset) {
+        setPreset(preset);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
+     * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
+     * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
+     * <code>preset</code> is the empty string (<code>""</code>).
+     * </p>
+     * 
+     * @param preset
+     *        Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
+     *        <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
+     *        <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and
+     *        <code>STANDARD</code>), <code>preset</code> is the empty string (<code>""</code>).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TranscodePreset
+     */
+
+    public UpdateChannelRequest withPreset(TranscodePreset preset) {
+        this.preset = preset.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * If this is set to an empty string, playback restriction policy is disabled.
+     * </p>
+     * 
+     * @param playbackRestrictionPolicyArn
+     *        Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *        restriction. If this is set to an empty string, playback restriction policy is disabled.
+     */
+
+    public void setPlaybackRestrictionPolicyArn(String playbackRestrictionPolicyArn) {
+        this.playbackRestrictionPolicyArn = playbackRestrictionPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * If this is set to an empty string, playback restriction policy is disabled.
+     * </p>
+     * 
+     * @return Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *         restriction. If this is set to an empty string, playback restriction policy is disabled.
+     */
+
+    public String getPlaybackRestrictionPolicyArn() {
+        return this.playbackRestrictionPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * If this is set to an empty string, playback restriction policy is disabled.
+     * </p>
+     * 
+     * @param playbackRestrictionPolicyArn
+     *        Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *        restriction. If this is set to an empty string, playback restriction policy is disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateChannelRequest withPlaybackRestrictionPolicyArn(String playbackRestrictionPolicyArn) {
+        setPlaybackRestrictionPolicyArn(playbackRestrictionPolicyArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -613,22 +613,22 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getAuthorized() != null)
-            sb.append("Authorized: ").append(getAuthorized()).append(",");
-        if (getInsecureIngest() != null)
-            sb.append("InsecureIngest: ").append(getInsecureIngest()).append(",");
-        if (getLatencyMode() != null)
-            sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getPlaybackRestrictionPolicyArn() != null)
-            sb.append("PlaybackRestrictionPolicyArn: ").append(getPlaybackRestrictionPolicyArn()).append(",");
-        if (getPreset() != null)
-            sb.append("Preset: ").append(getPreset()).append(",");
+        if (getLatencyMode() != null)
+            sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType()).append(",");
+        if (getAuthorized() != null)
+            sb.append("Authorized: ").append(getAuthorized()).append(",");
         if (getRecordingConfigurationArn() != null)
             sb.append("RecordingConfigurationArn: ").append(getRecordingConfigurationArn()).append(",");
-        if (getType() != null)
-            sb.append("Type: ").append(getType());
+        if (getInsecureIngest() != null)
+            sb.append("InsecureIngest: ").append(getInsecureIngest()).append(",");
+        if (getPreset() != null)
+            sb.append("Preset: ").append(getPreset()).append(",");
+        if (getPlaybackRestrictionPolicyArn() != null)
+            sb.append("PlaybackRestrictionPolicyArn: ").append(getPlaybackRestrictionPolicyArn());
         sb.append("}");
         return sb.toString();
     }
@@ -647,37 +647,37 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getAuthorized() == null ^ this.getAuthorized() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getAuthorized() != null && other.getAuthorized().equals(this.getAuthorized()) == false)
-            return false;
-        if (other.getInsecureIngest() == null ^ this.getInsecureIngest() == null)
-            return false;
-        if (other.getInsecureIngest() != null && other.getInsecureIngest().equals(this.getInsecureIngest()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getLatencyMode() == null ^ this.getLatencyMode() == null)
             return false;
         if (other.getLatencyMode() != null && other.getLatencyMode().equals(this.getLatencyMode()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
+        if (other.getType() == null ^ this.getType() == null)
             return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
-        if (other.getPlaybackRestrictionPolicyArn() == null ^ this.getPlaybackRestrictionPolicyArn() == null)
+        if (other.getAuthorized() == null ^ this.getAuthorized() == null)
             return false;
-        if (other.getPlaybackRestrictionPolicyArn() != null && other.getPlaybackRestrictionPolicyArn().equals(this.getPlaybackRestrictionPolicyArn()) == false)
-            return false;
-        if (other.getPreset() == null ^ this.getPreset() == null)
-            return false;
-        if (other.getPreset() != null && other.getPreset().equals(this.getPreset()) == false)
+        if (other.getAuthorized() != null && other.getAuthorized().equals(this.getAuthorized()) == false)
             return false;
         if (other.getRecordingConfigurationArn() == null ^ this.getRecordingConfigurationArn() == null)
             return false;
         if (other.getRecordingConfigurationArn() != null && other.getRecordingConfigurationArn().equals(this.getRecordingConfigurationArn()) == false)
             return false;
-        if (other.getType() == null ^ this.getType() == null)
+        if (other.getInsecureIngest() == null ^ this.getInsecureIngest() == null)
             return false;
-        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+        if (other.getInsecureIngest() != null && other.getInsecureIngest().equals(this.getInsecureIngest()) == false)
+            return false;
+        if (other.getPreset() == null ^ this.getPreset() == null)
+            return false;
+        if (other.getPreset() != null && other.getPreset().equals(this.getPreset()) == false)
+            return false;
+        if (other.getPlaybackRestrictionPolicyArn() == null ^ this.getPlaybackRestrictionPolicyArn() == null)
+            return false;
+        if (other.getPlaybackRestrictionPolicyArn() != null && other.getPlaybackRestrictionPolicyArn().equals(this.getPlaybackRestrictionPolicyArn()) == false)
             return false;
         return true;
     }
@@ -688,14 +688,14 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getAuthorized() == null) ? 0 : getAuthorized().hashCode());
-        hashCode = prime * hashCode + ((getInsecureIngest() == null) ? 0 : getInsecureIngest().hashCode());
-        hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getPlaybackRestrictionPolicyArn() == null) ? 0 : getPlaybackRestrictionPolicyArn().hashCode());
-        hashCode = prime * hashCode + ((getPreset() == null) ? 0 : getPreset().hashCode());
-        hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());
+        hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getAuthorized() == null) ? 0 : getAuthorized().hashCode());
+        hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());
+        hashCode = prime * hashCode + ((getInsecureIngest() == null) ? 0 : getInsecureIngest().hashCode());
+        hashCode = prime * hashCode + ((getPreset() == null) ? 0 : getPreset().hashCode());
+        hashCode = prime * hashCode + ((getPlaybackRestrictionPolicyArn() == null) ? 0 : getPlaybackRestrictionPolicyArn().hashCode());
         return hashCode;
     }
 

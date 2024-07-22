@@ -31,10 +31,10 @@ public class RecordingConfigurationSummaryMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
-    private static final MarshallingInfo<StructuredPojo> DESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConfiguration").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<StructuredPojo> DESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConfiguration").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -57,8 +57,8 @@ public class RecordingConfigurationSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(recordingConfigurationSummary.getArn(), ARN_BINDING);
-            protocolMarshaller.marshall(recordingConfigurationSummary.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(recordingConfigurationSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(recordingConfigurationSummary.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(recordingConfigurationSummary.getState(), STATE_BINDING);
             protocolMarshaller.marshall(recordingConfigurationSummary.getTags(), TAGS_BINDING);
         } catch (Exception e) {

@@ -52,6 +52,13 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
     private Boolean enhancedVpcRouting;
     /**
      * <p>
+     * The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and <code>dualstack</code>
+     * .
+     * </p>
+     */
+    private String ipAddressType;
+    /**
+     * <p>
      * The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
      * specified in RPUs.
      * </p>
@@ -309,6 +316,52 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     public Boolean isEnhancedVpcRouting() {
         return this.enhancedVpcRouting;
+    }
+
+    /**
+     * <p>
+     * The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and <code>dualstack</code>
+     * .
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and
+     *        <code>dualstack</code>.
+     */
+
+    public void setIpAddressType(String ipAddressType) {
+        this.ipAddressType = ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and <code>dualstack</code>
+     * .
+     * </p>
+     * 
+     * @return The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and
+     *         <code>dualstack</code>.
+     */
+
+    public String getIpAddressType() {
+        return this.ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and <code>dualstack</code>
+     * .
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and
+     *        <code>dualstack</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateWorkgroupRequest withIpAddressType(String ipAddressType) {
+        setIpAddressType(ipAddressType);
+        return this;
     }
 
     /**
@@ -653,6 +706,8 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("ConfigParameters: ").append(getConfigParameters()).append(",");
         if (getEnhancedVpcRouting() != null)
             sb.append("EnhancedVpcRouting: ").append(getEnhancedVpcRouting()).append(",");
+        if (getIpAddressType() != null)
+            sb.append("IpAddressType: ").append(getIpAddressType()).append(",");
         if (getMaxCapacity() != null)
             sb.append("MaxCapacity: ").append(getMaxCapacity()).append(",");
         if (getPort() != null)
@@ -691,6 +746,10 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getEnhancedVpcRouting() != null && other.getEnhancedVpcRouting().equals(this.getEnhancedVpcRouting()) == false)
             return false;
+        if (other.getIpAddressType() == null ^ this.getIpAddressType() == null)
+            return false;
+        if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
+            return false;
         if (other.getMaxCapacity() == null ^ this.getMaxCapacity() == null)
             return false;
         if (other.getMaxCapacity() != null && other.getMaxCapacity().equals(this.getMaxCapacity()) == false)
@@ -726,6 +785,7 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getBaseCapacity() == null) ? 0 : getBaseCapacity().hashCode());
         hashCode = prime * hashCode + ((getConfigParameters() == null) ? 0 : getConfigParameters().hashCode());
         hashCode = prime * hashCode + ((getEnhancedVpcRouting() == null) ? 0 : getEnhancedVpcRouting().hashCode());
+        hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
         hashCode = prime * hashCode + ((getMaxCapacity() == null) ? 0 : getMaxCapacity().hashCode());
         hashCode = prime * hashCode + ((getPort() == null) ? 0 : getPort().hashCode());
         hashCode = prime * hashCode + ((getPubliclyAccessible() == null) ? 0 : getPubliclyAccessible().hashCode());

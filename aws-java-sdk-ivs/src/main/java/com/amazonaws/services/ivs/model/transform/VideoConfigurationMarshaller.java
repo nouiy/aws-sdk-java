@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class VideoConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> AVCLEVEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("avcLevel").build();
     private static final MarshallingInfo<String> AVCPROFILE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("avcProfile").build();
+    private static final MarshallingInfo<String> AVCLEVEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("avcLevel").build();
     private static final MarshallingInfo<String> CODEC_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("codec").build();
     private static final MarshallingInfo<String> ENCODER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -60,8 +60,8 @@ public class VideoConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(videoConfiguration.getAvcLevel(), AVCLEVEL_BINDING);
             protocolMarshaller.marshall(videoConfiguration.getAvcProfile(), AVCPROFILE_BINDING);
+            protocolMarshaller.marshall(videoConfiguration.getAvcLevel(), AVCLEVEL_BINDING);
             protocolMarshaller.marshall(videoConfiguration.getCodec(), CODEC_BINDING);
             protocolMarshaller.marshall(videoConfiguration.getEncoder(), ENCODER_BINDING);
             protocolMarshaller.marshall(videoConfiguration.getTargetBitrate(), TARGETBITRATE_BINDING);

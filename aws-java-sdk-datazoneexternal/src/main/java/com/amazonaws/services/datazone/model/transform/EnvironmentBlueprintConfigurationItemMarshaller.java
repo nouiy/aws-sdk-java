@@ -39,6 +39,8 @@ public class EnvironmentBlueprintConfigurationItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentBlueprintId").build();
     private static final MarshallingInfo<String> MANAGEACCESSROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("manageAccessRoleArn").build();
+    private static final MarshallingInfo<List> PROVISIONINGCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("provisioningConfigurations").build();
     private static final MarshallingInfo<String> PROVISIONINGROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("provisioningRoleArn").build();
     private static final MarshallingInfo<Map> REGIONALPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
@@ -67,6 +69,7 @@ public class EnvironmentBlueprintConfigurationItemMarshaller {
             protocolMarshaller.marshall(environmentBlueprintConfigurationItem.getEnabledRegions(), ENABLEDREGIONS_BINDING);
             protocolMarshaller.marshall(environmentBlueprintConfigurationItem.getEnvironmentBlueprintId(), ENVIRONMENTBLUEPRINTID_BINDING);
             protocolMarshaller.marshall(environmentBlueprintConfigurationItem.getManageAccessRoleArn(), MANAGEACCESSROLEARN_BINDING);
+            protocolMarshaller.marshall(environmentBlueprintConfigurationItem.getProvisioningConfigurations(), PROVISIONINGCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(environmentBlueprintConfigurationItem.getProvisioningRoleArn(), PROVISIONINGROLEARN_BINDING);
             protocolMarshaller.marshall(environmentBlueprintConfigurationItem.getRegionalParameters(), REGIONALPARAMETERS_BINDING);
             protocolMarshaller.marshall(environmentBlueprintConfigurationItem.getUpdatedAt(), UPDATEDAT_BINDING);

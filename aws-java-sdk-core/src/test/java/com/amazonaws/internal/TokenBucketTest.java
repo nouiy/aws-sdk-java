@@ -70,12 +70,10 @@ public class TokenBucketTest {
         tb.enable();
 
         // 1 token to wait for at a rate of 1 per second should sleep for approx 1s
-        long a = System.nanoTime();
         boolean acquired = tb.acquire(1);
-        long elapsed = System.nanoTime() - a;
 
         assertThat(acquired, equalTo(true));
-        assertThat(TimeUnit.NANOSECONDS.toSeconds(elapsed), equalTo(1L));
+        assertThat(tb.getLastWaitTimeMs(), equalTo(1000L));
         assertThat(tb.getCurrentCapacity(), equalTo(-1.0));
     }
 
@@ -137,14 +135,12 @@ public class TokenBucketTest {
         tb.setCurrentCapacity(4.0);
         tb.enable();
 
-        long a = System.nanoTime();
         boolean acquired = tb.acquire(5, true);
-        long elapsed = System.nanoTime() - a;
 
         assertThat(acquired, equalTo(false));
         assertThat(tb.getCurrentCapacity(), equalTo(4.0));
         // The method call should be nowhere near a millisecond
-        assertThat(TimeUnit.NANOSECONDS.toSeconds(elapsed), equalTo(0L));
+        assertThat(tb.getLastWaitTimeMs(), equalTo(0L));
     }
 
     @Test

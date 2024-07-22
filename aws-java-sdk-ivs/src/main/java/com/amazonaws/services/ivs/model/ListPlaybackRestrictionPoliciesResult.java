@@ -26,63 +26,17 @@ public class ListPlaybackRestrictionPoliciesResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
+     * List of the matching policies.
+     * </p>
+     */
+    private java.util.List<PlaybackRestrictionPolicySummary> playbackRestrictionPolicies;
+    /**
+     * <p>
      * If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
      * next set.
      * </p>
      */
     private String nextToken;
-    /**
-     * <p>
-     * List of the matching policies.
-     * </p>
-     */
-    private java.util.List<PlaybackRestrictionPolicySummary> playbackRestrictionPolicies;
-
-    /**
-     * <p>
-     * If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     * next set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get
-     *        the next set.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     * next set.
-     * </p>
-     * 
-     * @return If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get
-     *         the next set.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     * next set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get
-     *        the next set.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListPlaybackRestrictionPoliciesResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
 
     /**
      * <p>
@@ -156,6 +110,52 @@ public class ListPlaybackRestrictionPoliciesResult extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
+     * next set.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get
+     *        the next set.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
+     * next set.
+     * </p>
+     * 
+     * @return If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get
+     *         the next set.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
+     * next set.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more channels than <code>maxResults</code>, use <code>nextToken</code> in the request to get
+     *        the next set.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPlaybackRestrictionPoliciesResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -167,10 +167,10 @@ public class ListPlaybackRestrictionPoliciesResult extends com.amazonaws.AmazonW
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getPlaybackRestrictionPolicies() != null)
-            sb.append("PlaybackRestrictionPolicies: ").append(getPlaybackRestrictionPolicies());
+            sb.append("PlaybackRestrictionPolicies: ").append(getPlaybackRestrictionPolicies()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -185,13 +185,13 @@ public class ListPlaybackRestrictionPoliciesResult extends com.amazonaws.AmazonW
         if (obj instanceof ListPlaybackRestrictionPoliciesResult == false)
             return false;
         ListPlaybackRestrictionPoliciesResult other = (ListPlaybackRestrictionPoliciesResult) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getPlaybackRestrictionPolicies() == null ^ this.getPlaybackRestrictionPolicies() == null)
             return false;
         if (other.getPlaybackRestrictionPolicies() != null && other.getPlaybackRestrictionPolicies().equals(this.getPlaybackRestrictionPolicies()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -201,8 +201,8 @@ public class ListPlaybackRestrictionPoliciesResult extends com.amazonaws.AmazonW
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getPlaybackRestrictionPolicies() == null) ? 0 : getPlaybackRestrictionPolicies().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

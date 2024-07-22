@@ -36,16 +36,10 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
     private String channelArn;
     /**
      * <p>
-     * The stream’s health.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      */
-    private String health;
-    /**
-     * <p>
-     * Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     */
-    private java.util.Date startTime;
+    private String streamId;
     /**
      * <p>
      * The stream’s state. Do not rely on the <code>OFFLINE</code> state, as the API may not return it; instead, a
@@ -55,10 +49,10 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
     private String state;
     /**
      * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
+     * The stream’s health.
      * </p>
      */
-    private String streamId;
+    private String health;
     /**
      * <p>
      * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
@@ -67,6 +61,12 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Long viewerCount;
+    /**
+     * <p>
+     * Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     */
+    private java.util.Date startTime;
 
     /**
      * <p>
@@ -110,100 +110,41 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The stream’s health.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @param health
-     *        The stream’s health.
-     * @see StreamHealth
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
      */
 
-    public void setHealth(String health) {
-        this.health = health;
+    public void setStreamId(String streamId) {
+        this.streamId = streamId;
     }
 
     /**
      * <p>
-     * The stream’s health.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @return The stream’s health.
-     * @see StreamHealth
+     * @return Unique identifier for a live or previously live stream in the specified channel.
      */
 
-    public String getHealth() {
-        return this.health;
+    public String getStreamId() {
+        return this.streamId;
     }
 
     /**
      * <p>
-     * The stream’s health.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @param health
-     *        The stream’s health.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see StreamHealth
-     */
-
-    public StreamSummary withHealth(String health) {
-        setHealth(health);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The stream’s health.
-     * </p>
-     * 
-     * @param health
-     *        The stream’s health.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see StreamHealth
-     */
-
-    public StreamSummary withHealth(StreamHealth health) {
-        this.health = health.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param startTime
-     *        Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     */
-
-    public void setStartTime(java.util.Date startTime) {
-        this.startTime = startTime;
-    }
-
-    /**
-     * <p>
-     * Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @return Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     */
-
-    public java.util.Date getStartTime() {
-        return this.startTime;
-    }
-
-    /**
-     * <p>
-     * Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param startTime
-     *        Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StreamSummary withStartTime(java.util.Date startTime) {
-        setStartTime(startTime);
+    public StreamSummary withStreamId(String streamId) {
+        setStreamId(streamId);
         return this;
     }
 
@@ -276,41 +217,60 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
+     * The stream’s health.
      * </p>
      * 
-     * @param streamId
-     *        Unique identifier for a live or previously live stream in the specified channel.
+     * @param health
+     *        The stream’s health.
+     * @see StreamHealth
      */
 
-    public void setStreamId(String streamId) {
-        this.streamId = streamId;
+    public void setHealth(String health) {
+        this.health = health;
     }
 
     /**
      * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
+     * The stream’s health.
      * </p>
      * 
-     * @return Unique identifier for a live or previously live stream in the specified channel.
+     * @return The stream’s health.
+     * @see StreamHealth
      */
 
-    public String getStreamId() {
-        return this.streamId;
+    public String getHealth() {
+        return this.health;
     }
 
     /**
      * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
+     * The stream’s health.
      * </p>
      * 
-     * @param streamId
-     *        Unique identifier for a live or previously live stream in the specified channel.
+     * @param health
+     *        The stream’s health.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StreamHealth
      */
 
-    public StreamSummary withStreamId(String streamId) {
-        setStreamId(streamId);
+    public StreamSummary withHealth(String health) {
+        setHealth(health);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The stream’s health.
+     * </p>
+     * 
+     * @param health
+     *        The stream’s health.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StreamHealth
+     */
+
+    public StreamSummary withHealth(StreamHealth health) {
+        this.health = health.toString();
         return this;
     }
 
@@ -370,6 +330,46 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param startTime
+     *        Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     */
+
+    public void setStartTime(java.util.Date startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * <p>
+     * Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @return Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     */
+
+    public java.util.Date getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * <p>
+     * Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param startTime
+     *        Time of the stream’s start. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamSummary withStartTime(java.util.Date startTime) {
+        setStartTime(startTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -383,16 +383,16 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
-        if (getHealth() != null)
-            sb.append("Health: ").append(getHealth()).append(",");
-        if (getStartTime() != null)
-            sb.append("StartTime: ").append(getStartTime()).append(",");
-        if (getState() != null)
-            sb.append("State: ").append(getState()).append(",");
         if (getStreamId() != null)
             sb.append("StreamId: ").append(getStreamId()).append(",");
+        if (getState() != null)
+            sb.append("State: ").append(getState()).append(",");
+        if (getHealth() != null)
+            sb.append("Health: ").append(getHealth()).append(",");
         if (getViewerCount() != null)
-            sb.append("ViewerCount: ").append(getViewerCount());
+            sb.append("ViewerCount: ").append(getViewerCount()).append(",");
+        if (getStartTime() != null)
+            sb.append("StartTime: ").append(getStartTime());
         sb.append("}");
         return sb.toString();
     }
@@ -411,25 +411,25 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getChannelArn() != null && other.getChannelArn().equals(this.getChannelArn()) == false)
             return false;
-        if (other.getHealth() == null ^ this.getHealth() == null)
+        if (other.getStreamId() == null ^ this.getStreamId() == null)
             return false;
-        if (other.getHealth() != null && other.getHealth().equals(this.getHealth()) == false)
-            return false;
-        if (other.getStartTime() == null ^ this.getStartTime() == null)
-            return false;
-        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
+        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
             return false;
         if (other.getState() == null ^ this.getState() == null)
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
-        if (other.getStreamId() == null ^ this.getStreamId() == null)
+        if (other.getHealth() == null ^ this.getHealth() == null)
             return false;
-        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
+        if (other.getHealth() != null && other.getHealth().equals(this.getHealth()) == false)
             return false;
         if (other.getViewerCount() == null ^ this.getViewerCount() == null)
             return false;
         if (other.getViewerCount() != null && other.getViewerCount().equals(this.getViewerCount()) == false)
+            return false;
+        if (other.getStartTime() == null ^ this.getStartTime() == null)
+            return false;
+        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
             return false;
         return true;
     }
@@ -440,11 +440,11 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
-        hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
-        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
-        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
+        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
         hashCode = prime * hashCode + ((getViewerCount() == null) ? 0 : getViewerCount().hashCode());
+        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         return hashCode;
     }
 

@@ -30,56 +30,16 @@ public class IngestConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Encoder settings for audio.
-     * </p>
-     */
-    private AudioConfiguration audio;
-    /**
-     * <p>
      * Encoder settings for video.
      * </p>
      */
     private VideoConfiguration video;
-
     /**
      * <p>
      * Encoder settings for audio.
      * </p>
-     * 
-     * @param audio
-     *        Encoder settings for audio.
      */
-
-    public void setAudio(AudioConfiguration audio) {
-        this.audio = audio;
-    }
-
-    /**
-     * <p>
-     * Encoder settings for audio.
-     * </p>
-     * 
-     * @return Encoder settings for audio.
-     */
-
-    public AudioConfiguration getAudio() {
-        return this.audio;
-    }
-
-    /**
-     * <p>
-     * Encoder settings for audio.
-     * </p>
-     * 
-     * @param audio
-     *        Encoder settings for audio.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public IngestConfiguration withAudio(AudioConfiguration audio) {
-        setAudio(audio);
-        return this;
-    }
+    private AudioConfiguration audio;
 
     /**
      * <p>
@@ -122,6 +82,46 @@ public class IngestConfiguration implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Encoder settings for audio.
+     * </p>
+     * 
+     * @param audio
+     *        Encoder settings for audio.
+     */
+
+    public void setAudio(AudioConfiguration audio) {
+        this.audio = audio;
+    }
+
+    /**
+     * <p>
+     * Encoder settings for audio.
+     * </p>
+     * 
+     * @return Encoder settings for audio.
+     */
+
+    public AudioConfiguration getAudio() {
+        return this.audio;
+    }
+
+    /**
+     * <p>
+     * Encoder settings for audio.
+     * </p>
+     * 
+     * @param audio
+     *        Encoder settings for audio.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IngestConfiguration withAudio(AudioConfiguration audio) {
+        setAudio(audio);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,10 +133,10 @@ public class IngestConfiguration implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudio() != null)
-            sb.append("Audio: ").append(getAudio()).append(",");
         if (getVideo() != null)
-            sb.append("Video: ").append(getVideo());
+            sb.append("Video: ").append(getVideo()).append(",");
+        if (getAudio() != null)
+            sb.append("Audio: ").append(getAudio());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class IngestConfiguration implements Serializable, Cloneable, StructuredP
         if (obj instanceof IngestConfiguration == false)
             return false;
         IngestConfiguration other = (IngestConfiguration) obj;
-        if (other.getAudio() == null ^ this.getAudio() == null)
-            return false;
-        if (other.getAudio() != null && other.getAudio().equals(this.getAudio()) == false)
-            return false;
         if (other.getVideo() == null ^ this.getVideo() == null)
             return false;
         if (other.getVideo() != null && other.getVideo().equals(this.getVideo()) == false)
+            return false;
+        if (other.getAudio() == null ^ this.getAudio() == null)
+            return false;
+        if (other.getAudio() != null && other.getAudio().equals(this.getAudio()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class IngestConfiguration implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudio() == null) ? 0 : getAudio().hashCode());
         hashCode = prime * hashCode + ((getVideo() == null) ? 0 : getVideo().hashCode());
+        hashCode = prime * hashCode + ((getAudio() == null) ? 0 : getAudio().hashCode());
         return hashCode;
     }
 

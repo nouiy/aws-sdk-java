@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StreamEventMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> EVENTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eventTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<java.util.Date> EVENTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eventTime").timestampFormat("iso8601").build();
 
     private static final StreamEventMarshaller instance = new StreamEventMarshaller();
 
@@ -50,9 +50,9 @@ public class StreamEventMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(streamEvent.getEventTime(), EVENTTIME_BINDING);
             protocolMarshaller.marshall(streamEvent.getName(), NAME_BINDING);
             protocolMarshaller.marshall(streamEvent.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(streamEvent.getEventTime(), EVENTTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

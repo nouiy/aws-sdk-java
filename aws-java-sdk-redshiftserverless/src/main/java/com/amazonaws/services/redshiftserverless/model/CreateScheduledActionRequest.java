@@ -54,7 +54,7 @@ public class CreateScheduledActionRequest extends com.amazonaws.AmazonWebService
      * scheduler to schedule creating snapshots. (Principal scheduler.redshift.amazonaws.com) to assume permissions on
      * your behalf. For more information about the IAM role to use with the Amazon Redshift scheduler, see <a
      * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html">Using
-     * Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Cluster Management Guide
+     * Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Management Guide
      * </p>
      */
     private String roleArn;
@@ -270,7 +270,7 @@ public class CreateScheduledActionRequest extends com.amazonaws.AmazonWebService
      * scheduler to schedule creating snapshots. (Principal scheduler.redshift.amazonaws.com) to assume permissions on
      * your behalf. For more information about the IAM role to use with the Amazon Redshift scheduler, see <a
      * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html">Using
-     * Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Cluster Management Guide
+     * Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Management Guide
      * </p>
      * 
      * @param roleArn
@@ -280,7 +280,7 @@ public class CreateScheduledActionRequest extends com.amazonaws.AmazonWebService
      *        permissions on your behalf. For more information about the IAM role to use with the Amazon Redshift
      *        scheduler, see <a
      *        href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html"
-     *        >Using Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Cluster Management Guide
+     *        >Using Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Management Guide
      */
 
     public void setRoleArn(String roleArn) {
@@ -294,7 +294,7 @@ public class CreateScheduledActionRequest extends com.amazonaws.AmazonWebService
      * scheduler to schedule creating snapshots. (Principal scheduler.redshift.amazonaws.com) to assume permissions on
      * your behalf. For more information about the IAM role to use with the Amazon Redshift scheduler, see <a
      * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html">Using
-     * Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Cluster Management Guide
+     * Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Management Guide
      * </p>
      * 
      * @return The ARN of the IAM role to assume to run the scheduled action. This IAM role must have permission to run
@@ -303,7 +303,7 @@ public class CreateScheduledActionRequest extends com.amazonaws.AmazonWebService
      *         permissions on your behalf. For more information about the IAM role to use with the Amazon Redshift
      *         scheduler, see <a
      *         href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html"
-     *         >Using Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Cluster Management Guide
+     *         >Using Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Management Guide
      */
 
     public String getRoleArn() {
@@ -317,7 +317,7 @@ public class CreateScheduledActionRequest extends com.amazonaws.AmazonWebService
      * scheduler to schedule creating snapshots. (Principal scheduler.redshift.amazonaws.com) to assume permissions on
      * your behalf. For more information about the IAM role to use with the Amazon Redshift scheduler, see <a
      * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html">Using
-     * Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Cluster Management Guide
+     * Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Management Guide
      * </p>
      * 
      * @param roleArn
@@ -327,7 +327,7 @@ public class CreateScheduledActionRequest extends com.amazonaws.AmazonWebService
      *        permissions on your behalf. For more information about the IAM role to use with the Amazon Redshift
      *        scheduler, see <a
      *        href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html"
-     *        >Using Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Cluster Management Guide
+     *        >Using Identity-Based Policies for Amazon Redshift</a> in the Amazon Redshift Management Guide
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

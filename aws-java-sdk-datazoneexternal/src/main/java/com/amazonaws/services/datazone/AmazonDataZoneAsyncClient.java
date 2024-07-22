@@ -275,6 +275,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAssetFilterResult> createAssetFilterAsync(CreateAssetFilterRequest request) {
+
+        return createAssetFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAssetFilterResult> createAssetFilterAsync(final CreateAssetFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAssetFilterRequest, CreateAssetFilterResult> asyncHandler) {
+        final CreateAssetFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAssetFilterResult>() {
+            @Override
+            public CreateAssetFilterResult call() throws Exception {
+                CreateAssetFilterResult result = null;
+
+                try {
+                    result = executeCreateAssetFilter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAssetRevisionResult> createAssetRevisionAsync(CreateAssetRevisionRequest request) {
 
         return createAssetRevisionAsync(request, null);
@@ -886,6 +919,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeDeleteAsset(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAssetFilterResult> deleteAssetFilterAsync(DeleteAssetFilterRequest request) {
+
+        return deleteAssetFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAssetFilterResult> deleteAssetFilterAsync(final DeleteAssetFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAssetFilterRequest, DeleteAssetFilterResult> asyncHandler) {
+        final DeleteAssetFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAssetFilterResult>() {
+            @Override
+            public DeleteAssetFilterResult call() throws Exception {
+                DeleteAssetFilterResult result = null;
+
+                try {
+                    result = executeDeleteAssetFilter(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1515,6 +1581,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeGetAsset(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAssetFilterResult> getAssetFilterAsync(GetAssetFilterRequest request) {
+
+        return getAssetFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAssetFilterResult> getAssetFilterAsync(final GetAssetFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAssetFilterRequest, GetAssetFilterResult> asyncHandler) {
+        final GetAssetFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAssetFilterResult>() {
+            @Override
+            public GetAssetFilterResult call() throws Exception {
+                GetAssetFilterResult result = null;
+
+                try {
+                    result = executeGetAssetFilter(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2310,6 +2409,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeGetUserProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetFiltersResult> listAssetFiltersAsync(ListAssetFiltersRequest request) {
+
+        return listAssetFiltersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetFiltersResult> listAssetFiltersAsync(final ListAssetFiltersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAssetFiltersRequest, ListAssetFiltersResult> asyncHandler) {
+        final ListAssetFiltersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAssetFiltersResult>() {
+            @Override
+            public ListAssetFiltersResult call() throws Exception {
+                ListAssetFiltersResult result = null;
+
+                try {
+                    result = executeListAssetFilters(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3502,6 +3634,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAssetFilterResult> updateAssetFilterAsync(UpdateAssetFilterRequest request) {
+
+        return updateAssetFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAssetFilterResult> updateAssetFilterAsync(final UpdateAssetFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAssetFilterRequest, UpdateAssetFilterResult> asyncHandler) {
+        final UpdateAssetFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAssetFilterResult>() {
+            @Override
+            public UpdateAssetFilterResult call() throws Exception {
+                UpdateAssetFilterResult result = null;
+
+                try {
+                    result = executeUpdateAssetFilter(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

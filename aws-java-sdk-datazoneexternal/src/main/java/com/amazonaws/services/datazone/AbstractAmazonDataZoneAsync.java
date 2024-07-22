@@ -106,6 +106,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAssetFilterResult> createAssetFilterAsync(CreateAssetFilterRequest request) {
+
+        return createAssetFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAssetFilterResult> createAssetFilterAsync(CreateAssetFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateAssetFilterRequest, CreateAssetFilterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAssetRevisionResult> createAssetRevisionAsync(CreateAssetRevisionRequest request) {
 
         return createAssetRevisionAsync(request, null);
@@ -348,6 +361,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<DeleteAssetResult> deleteAssetAsync(DeleteAssetRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteAssetRequest, DeleteAssetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAssetFilterResult> deleteAssetFilterAsync(DeleteAssetFilterRequest request) {
+
+        return deleteAssetFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAssetFilterResult> deleteAssetFilterAsync(DeleteAssetFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAssetFilterRequest, DeleteAssetFilterResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -597,6 +623,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<GetAssetResult> getAssetAsync(GetAssetRequest request,
             com.amazonaws.handlers.AsyncHandler<GetAssetRequest, GetAssetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAssetFilterResult> getAssetFilterAsync(GetAssetFilterRequest request) {
+
+        return getAssetFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAssetFilterResult> getAssetFilterAsync(GetAssetFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAssetFilterRequest, GetAssetFilterResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -911,6 +950,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<GetUserProfileResult> getUserProfileAsync(GetUserProfileRequest request,
             com.amazonaws.handlers.AsyncHandler<GetUserProfileRequest, GetUserProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetFiltersResult> listAssetFiltersAsync(ListAssetFiltersRequest request) {
+
+        return listAssetFiltersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetFiltersResult> listAssetFiltersAsync(ListAssetFiltersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAssetFiltersRequest, ListAssetFiltersResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1383,6 +1435,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAssetFilterResult> updateAssetFilterAsync(UpdateAssetFilterRequest request) {
+
+        return updateAssetFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAssetFilterResult> updateAssetFilterAsync(UpdateAssetFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAssetFilterRequest, UpdateAssetFilterResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

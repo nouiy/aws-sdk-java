@@ -30,6 +30,18 @@ public class StreamSessionSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * Unique identifier for a live or previously live stream in the specified channel.
+     * </p>
+     */
+    private String streamId;
+    /**
+     * <p>
+     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     */
+    private java.util.Date startTime;
+    /**
+     * <p>
      * Time when the channel went offline. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
      * For live streams, this is <code>NULL</code>.
      * </p>
@@ -41,18 +53,89 @@ public class StreamSessionSummary implements Serializable, Cloneable, Structured
      * </p>
      */
     private Boolean hasErrorEvent;
-    /**
-     * <p>
-     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     */
-    private java.util.Date startTime;
+
     /**
      * <p>
      * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
+     * 
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
      */
-    private String streamId;
+
+    public void setStreamId(String streamId) {
+        this.streamId = streamId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for a live or previously live stream in the specified channel.
+     * </p>
+     * 
+     * @return Unique identifier for a live or previously live stream in the specified channel.
+     */
+
+    public String getStreamId() {
+        return this.streamId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for a live or previously live stream in the specified channel.
+     * </p>
+     * 
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamSessionSummary withStreamId(String streamId) {
+        setStreamId(streamId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param startTime
+     *        Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     */
+
+    public void setStartTime(java.util.Date startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * <p>
+     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @return Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *         string</i>.
+     */
+
+    public java.util.Date getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * <p>
+     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
+     * </p>
+     * 
+     * @param startTime
+     *        Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
+     *        string</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamSessionSummary withStartTime(java.util.Date startTime) {
+        setStartTime(startTime);
+        return this;
+    }
 
     /**
      * <p>
@@ -153,89 +236,6 @@ public class StreamSessionSummary implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p>
-     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param startTime
-     *        Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
-     */
-
-    public void setStartTime(java.util.Date startTime) {
-        this.startTime = startTime;
-    }
-
-    /**
-     * <p>
-     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @return Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *         string</i>.
-     */
-
-    public java.util.Date getStartTime() {
-        return this.startTime;
-    }
-
-    /**
-     * <p>
-     * Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.
-     * </p>
-     * 
-     * @param startTime
-     *        Time when the channel went live. This is an ISO 8601 timestamp; <i>note that this is returned as a
-     *        string</i>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StreamSessionSummary withStartTime(java.util.Date startTime) {
-        setStartTime(startTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
-     * </p>
-     * 
-     * @param streamId
-     *        Unique identifier for a live or previously live stream in the specified channel.
-     */
-
-    public void setStreamId(String streamId) {
-        this.streamId = streamId;
-    }
-
-    /**
-     * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
-     * </p>
-     * 
-     * @return Unique identifier for a live or previously live stream in the specified channel.
-     */
-
-    public String getStreamId() {
-        return this.streamId;
-    }
-
-    /**
-     * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
-     * </p>
-     * 
-     * @param streamId
-     *        Unique identifier for a live or previously live stream in the specified channel.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StreamSessionSummary withStreamId(String streamId) {
-        setStreamId(streamId);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -247,14 +247,14 @@ public class StreamSessionSummary implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getStreamId() != null)
+            sb.append("StreamId: ").append(getStreamId()).append(",");
+        if (getStartTime() != null)
+            sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getEndTime() != null)
             sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getHasErrorEvent() != null)
-            sb.append("HasErrorEvent: ").append(getHasErrorEvent()).append(",");
-        if (getStartTime() != null)
-            sb.append("StartTime: ").append(getStartTime()).append(",");
-        if (getStreamId() != null)
-            sb.append("StreamId: ").append(getStreamId());
+            sb.append("HasErrorEvent: ").append(getHasErrorEvent());
         sb.append("}");
         return sb.toString();
     }
@@ -269,6 +269,14 @@ public class StreamSessionSummary implements Serializable, Cloneable, Structured
         if (obj instanceof StreamSessionSummary == false)
             return false;
         StreamSessionSummary other = (StreamSessionSummary) obj;
+        if (other.getStreamId() == null ^ this.getStreamId() == null)
+            return false;
+        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
+            return false;
+        if (other.getStartTime() == null ^ this.getStartTime() == null)
+            return false;
+        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
+            return false;
         if (other.getEndTime() == null ^ this.getEndTime() == null)
             return false;
         if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
@@ -276,14 +284,6 @@ public class StreamSessionSummary implements Serializable, Cloneable, Structured
         if (other.getHasErrorEvent() == null ^ this.getHasErrorEvent() == null)
             return false;
         if (other.getHasErrorEvent() != null && other.getHasErrorEvent().equals(this.getHasErrorEvent()) == false)
-            return false;
-        if (other.getStartTime() == null ^ this.getStartTime() == null)
-            return false;
-        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
-            return false;
-        if (other.getStreamId() == null ^ this.getStreamId() == null)
-            return false;
-        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
             return false;
         return true;
     }
@@ -293,10 +293,10 @@ public class StreamSessionSummary implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
+        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getHasErrorEvent() == null) ? 0 : getHasErrorEvent().hashCode());
-        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
-        hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
         return hashCode;
     }
 

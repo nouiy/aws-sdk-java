@@ -271,6 +271,9 @@ public interface AWSRedshiftServerless {
      *         The input failed to satisfy the constraints specified by an AWS service.
      * @throws TooManyTagsException
      *         The request exceeded the number of tags allowed for a resource.
+     * @throws Ipv6CidrBlockNotFoundException
+     *         There are no subnets in your VPC with associated IPv6 CIDR blocks. To use dual-stack mode, associate an
+     *         IPv6 CIDR block with each subnet in your VPC.
      * @sample AWSRedshiftServerless.CreateWorkgroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateWorkgroup"
      *      target="_top">AWS API Documentation</a>
@@ -1259,6 +1262,9 @@ public interface AWSRedshiftServerless {
      *         The submitted action has conflicts.
      * @throws ValidationException
      *         The input failed to satisfy the constraints specified by an AWS service.
+     * @throws Ipv6CidrBlockNotFoundException
+     *         There are no subnets in your VPC with associated IPv6 CIDR blocks. To use dual-stack mode, associate an
+     *         IPv6 CIDR block with each subnet in your VPC.
      * @sample AWSRedshiftServerless.UpdateWorkgroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateWorkgroup"
      *      target="_top">AWS API Documentation</a>

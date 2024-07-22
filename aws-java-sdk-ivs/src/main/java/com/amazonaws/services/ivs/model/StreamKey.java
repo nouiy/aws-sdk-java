@@ -36,6 +36,12 @@ public class StreamKey implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
+     * Stream-key value.
+     * </p>
+     */
+    private String value;
+    /**
+     * <p>
      * Channel ARN for the stream.
      * </p>
      */
@@ -50,12 +56,6 @@ public class StreamKey implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
-    /**
-     * <p>
-     * Stream-key value.
-     * </p>
-     */
-    private String value;
 
     /**
      * <p>
@@ -94,6 +94,46 @@ public class StreamKey implements Serializable, Cloneable, StructuredPojo {
 
     public StreamKey withArn(String arn) {
         setArn(arn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Stream-key value.
+     * </p>
+     * 
+     * @param value
+     *        Stream-key value.
+     */
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    /**
+     * <p>
+     * Stream-key value.
+     * </p>
+     * 
+     * @return Stream-key value.
+     */
+
+    public String getValue() {
+        return this.value;
+    }
+
+    /**
+     * <p>
+     * Stream-key value.
+     * </p>
+     * 
+     * @param value
+     *        Stream-key value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamKey withValue(String value) {
+        setValue(value);
         return this;
     }
 
@@ -231,46 +271,6 @@ public class StreamKey implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p>
-     * Stream-key value.
-     * </p>
-     * 
-     * @param value
-     *        Stream-key value.
-     */
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    /**
-     * <p>
-     * Stream-key value.
-     * </p>
-     * 
-     * @return Stream-key value.
-     */
-
-    public String getValue() {
-        return this.value;
-    }
-
-    /**
-     * <p>
-     * Stream-key value.
-     * </p>
-     * 
-     * @param value
-     *        Stream-key value.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StreamKey withValue(String value) {
-        setValue(value);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -284,12 +284,12 @@ public class StreamKey implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getValue() != null)
+            sb.append("Value: ").append("***Sensitive Data Redacted***").append(",");
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
-        if (getValue() != null)
-            sb.append("Value: ").append("***Sensitive Data Redacted***");
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -308,6 +308,10 @@ public class StreamKey implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
+        if (other.getValue() == null ^ this.getValue() == null)
+            return false;
+        if (other.getValue() != null && other.getValue().equals(this.getValue()) == false)
+            return false;
         if (other.getChannelArn() == null ^ this.getChannelArn() == null)
             return false;
         if (other.getChannelArn() != null && other.getChannelArn().equals(this.getChannelArn()) == false)
@@ -315,10 +319,6 @@ public class StreamKey implements Serializable, Cloneable, StructuredPojo {
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
-            return false;
-        if (other.getValue() == null ^ this.getValue() == null)
-            return false;
-        if (other.getValue() != null && other.getValue().equals(this.getValue()) == false)
             return false;
         return true;
     }
@@ -329,9 +329,9 @@ public class StreamKey implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
-        hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
         return hashCode;
     }
 

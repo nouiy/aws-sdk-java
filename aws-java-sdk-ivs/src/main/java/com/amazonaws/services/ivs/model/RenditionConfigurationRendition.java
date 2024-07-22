@@ -20,9 +20,9 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum RenditionConfigurationRendition {
 
-    FULL_HD("FULL_HD"),
-    HD("HD"),
     SD("SD"),
+    HD("HD"),
+    FULL_HD("FULL_HD"),
     LOWEST_RESOLUTION("LOWEST_RESOLUTION");
 
     private String value;

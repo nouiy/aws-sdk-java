@@ -71,6 +71,13 @@ public class EnvironmentBlueprintConfigurationItemJsonUnmarshaller implements Un
                     context.nextToken();
                     environmentBlueprintConfigurationItem.setManageAccessRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("provisioningConfigurations", targetDepth)) {
+                    context.nextToken();
+                    environmentBlueprintConfigurationItem.setProvisioningConfigurations(new ListUnmarshaller<ProvisioningConfiguration>(
+                            ProvisioningConfigurationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("provisioningRoleArn", targetDepth)) {
                     context.nextToken();
                     environmentBlueprintConfigurationItem.setProvisioningRoleArn(context.getUnmarshaller(String.class).unmarshall(context));

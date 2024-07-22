@@ -29,12 +29,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PlaybackRestrictionPolicySummaryMarshaller {
 
+    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("arn").build();
     private static final MarshallingInfo<List> ALLOWEDCOUNTRIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("allowedCountries").build();
     private static final MarshallingInfo<List> ALLOWEDORIGINS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("allowedOrigins").build();
-    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("arn").build();
     private static final MarshallingInfo<Boolean> ENABLESTRICTORIGINENFORCEMENT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableStrictOriginEnforcement").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -58,9 +58,9 @@ public class PlaybackRestrictionPolicySummaryMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(playbackRestrictionPolicySummary.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(playbackRestrictionPolicySummary.getAllowedCountries(), ALLOWEDCOUNTRIES_BINDING);
             protocolMarshaller.marshall(playbackRestrictionPolicySummary.getAllowedOrigins(), ALLOWEDORIGINS_BINDING);
-            protocolMarshaller.marshall(playbackRestrictionPolicySummary.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(playbackRestrictionPolicySummary.getEnableStrictOriginEnforcement(), ENABLESTRICTORIGINENFORCEMENT_BINDING);
             protocolMarshaller.marshall(playbackRestrictionPolicySummary.getName(), NAME_BINDING);
             protocolMarshaller.marshall(playbackRestrictionPolicySummary.getTags(), TAGS_BINDING);

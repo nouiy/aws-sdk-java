@@ -33,16 +33,16 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
     private StreamFilters filterBy;
     /**
      * <p>
-     * Maximum number of streams to return. Default: 100.
-     * </p>
-     */
-    private Integer maxResults;
-    /**
-     * <p>
      * The first stream to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * Maximum number of streams to return. Default: 100.
+     * </p>
+     */
+    private Integer maxResults;
 
     /**
      * <p>
@@ -81,46 +81,6 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     public ListStreamsRequest withFilterBy(StreamFilters filterBy) {
         setFilterBy(filterBy);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Maximum number of streams to return. Default: 100.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of streams to return. Default: 100.
-     */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of streams to return. Default: 100.
-     * </p>
-     * 
-     * @return Maximum number of streams to return. Default: 100.
-     */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of streams to return. Default: 100.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of streams to return. Default: 100.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListStreamsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
         return this;
     }
 
@@ -165,6 +125,46 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Maximum number of streams to return. Default: 100.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of streams to return. Default: 100.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of streams to return. Default: 100.
+     * </p>
+     * 
+     * @return Maximum number of streams to return. Default: 100.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of streams to return. Default: 100.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of streams to return. Default: 100.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListStreamsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -178,10 +178,10 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
         sb.append("{");
         if (getFilterBy() != null)
             sb.append("FilterBy: ").append(getFilterBy()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -200,13 +200,13 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getFilterBy() != null && other.getFilterBy().equals(this.getFilterBy()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
-            return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -217,8 +217,8 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFilterBy() == null) ? 0 : getFilterBy().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

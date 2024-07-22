@@ -29,10 +29,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ImportPlaybackKeyPairRequestMarshaller {
 
-    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("name").build();
     private static final MarshallingInfo<String> PUBLICKEYMATERIAL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("publicKeyMaterial").build();
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -52,8 +52,8 @@ public class ImportPlaybackKeyPairRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(importPlaybackKeyPairRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(importPlaybackKeyPairRequest.getPublicKeyMaterial(), PUBLICKEYMATERIAL_BINDING);
+            protocolMarshaller.marshall(importPlaybackKeyPairRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(importPlaybackKeyPairRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

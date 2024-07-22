@@ -48,15 +48,15 @@ public class BatchGetStreamKeyResultJsonUnmarshaller implements Unmarshaller<Bat
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("errors", targetDepth)) {
-                    context.nextToken();
-                    batchGetStreamKeyResult.setErrors(new ListUnmarshaller<BatchError>(BatchErrorJsonUnmarshaller.getInstance())
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("streamKeys", targetDepth)) {
                     context.nextToken();
                     batchGetStreamKeyResult.setStreamKeys(new ListUnmarshaller<StreamKey>(StreamKeyJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("errors", targetDepth)) {
+                    context.nextToken();
+                    batchGetStreamKeyResult.setErrors(new ListUnmarshaller<BatchError>(BatchErrorJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }

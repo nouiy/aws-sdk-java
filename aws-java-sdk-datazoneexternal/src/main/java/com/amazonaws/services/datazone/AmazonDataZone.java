@@ -210,6 +210,35 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Creates a data asset filter.
+     * </p>
+     * 
+     * @param createAssetFilterRequest
+     * @return Result of the CreateAssetFilter operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The request has exceeded the specified service quota.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.CreateAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/CreateAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateAssetFilterResult createAssetFilter(CreateAssetFilterRequest createAssetFilterRequest);
+
+    /**
+     * <p>
      * Creates a revision of the asset.
      * </p>
      * 
@@ -728,6 +757,33 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Deletes an asset filter.
+     * </p>
+     * 
+     * @param deleteAssetFilterRequest
+     * @return Result of the DeleteAssetFilter operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.DeleteAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteAssetFilterResult deleteAssetFilter(DeleteAssetFilterRequest deleteAssetFilterRequest);
+
+    /**
+     * <p>
      * Deletes an asset type in Amazon DataZone.
      * </p>
      * 
@@ -1228,6 +1284,31 @@ public interface AmazonDataZone {
      *      Documentation</a>
      */
     GetAssetResult getAsset(GetAssetRequest getAssetRequest);
+
+    /**
+     * <p>
+     * Gets an asset filter.
+     * </p>
+     * 
+     * @param getAssetFilterRequest
+     * @return Result of the GetAssetFilter operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.GetAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetAssetFilterResult getAssetFilter(GetAssetFilterRequest getAssetFilterRequest);
 
     /**
      * <p>
@@ -1841,6 +1922,31 @@ public interface AmazonDataZone {
      *      Documentation</a>
      */
     GetUserProfileResult getUserProfile(GetUserProfileRequest getUserProfileRequest);
+
+    /**
+     * <p>
+     * Lists asset filters.
+     * </p>
+     * 
+     * @param listAssetFiltersRequest
+     * @return Result of the ListAssetFilters operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.ListAssetFilters
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListAssetFilters" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListAssetFiltersResult listAssetFilters(ListAssetFiltersRequest listAssetFiltersRequest);
 
     /**
      * <p>
@@ -2767,6 +2873,33 @@ public interface AmazonDataZone {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates an asset filter.
+     * </p>
+     * 
+     * @param updateAssetFilterRequest
+     * @return Result of the UpdateAssetFilter operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.UpdateAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/UpdateAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateAssetFilterResult updateAssetFilter(UpdateAssetFilterRequest updateAssetFilterRequest);
 
     /**
      * <p>

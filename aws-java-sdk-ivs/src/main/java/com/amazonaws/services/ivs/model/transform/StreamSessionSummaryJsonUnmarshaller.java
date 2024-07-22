@@ -48,6 +48,14 @@ public class StreamSessionSummaryJsonUnmarshaller implements Unmarshaller<Stream
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("streamId", targetDepth)) {
+                    context.nextToken();
+                    streamSessionSummary.setStreamId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("startTime", targetDepth)) {
+                    context.nextToken();
+                    streamSessionSummary.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("endTime", targetDepth)) {
                     context.nextToken();
                     streamSessionSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
@@ -55,14 +63,6 @@ public class StreamSessionSummaryJsonUnmarshaller implements Unmarshaller<Stream
                 if (context.testExpression("hasErrorEvent", targetDepth)) {
                     context.nextToken();
                     streamSessionSummary.setHasErrorEvent(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("startTime", targetDepth)) {
-                    context.nextToken();
-                    streamSessionSummary.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("streamId", targetDepth)) {
-                    context.nextToken();
-                    streamSessionSummary.setStreamId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

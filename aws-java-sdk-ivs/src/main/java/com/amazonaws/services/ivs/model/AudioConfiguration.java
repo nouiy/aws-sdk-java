@@ -31,16 +31,16 @@ public class AudioConfiguration implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Number of audio channels.
-     * </p>
-     */
-    private Long channels;
-    /**
-     * <p>
      * Codec used for the audio encoding.
      * </p>
      */
     private String codec;
+    /**
+     * <p>
+     * The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * </p>
+     */
+    private Long targetBitrate;
     /**
      * <p>
      * Number of audio samples recorded per second.
@@ -49,50 +49,10 @@ public class AudioConfiguration implements Serializable, Cloneable, StructuredPo
     private Long sampleRate;
     /**
      * <p>
-     * The expected ingest bitrate (bits per second). This is configured in the encoder.
-     * </p>
-     */
-    private Long targetBitrate;
-
-    /**
-     * <p>
      * Number of audio channels.
      * </p>
-     * 
-     * @param channels
-     *        Number of audio channels.
      */
-
-    public void setChannels(Long channels) {
-        this.channels = channels;
-    }
-
-    /**
-     * <p>
-     * Number of audio channels.
-     * </p>
-     * 
-     * @return Number of audio channels.
-     */
-
-    public Long getChannels() {
-        return this.channels;
-    }
-
-    /**
-     * <p>
-     * Number of audio channels.
-     * </p>
-     * 
-     * @param channels
-     *        Number of audio channels.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AudioConfiguration withChannels(Long channels) {
-        setChannels(channels);
-        return this;
-    }
+    private Long channels;
 
     /**
      * <p>
@@ -131,6 +91,46 @@ public class AudioConfiguration implements Serializable, Cloneable, StructuredPo
 
     public AudioConfiguration withCodec(String codec) {
         setCodec(codec);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * </p>
+     * 
+     * @param targetBitrate
+     *        The expected ingest bitrate (bits per second). This is configured in the encoder.
+     */
+
+    public void setTargetBitrate(Long targetBitrate) {
+        this.targetBitrate = targetBitrate;
+    }
+
+    /**
+     * <p>
+     * The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * </p>
+     * 
+     * @return The expected ingest bitrate (bits per second). This is configured in the encoder.
+     */
+
+    public Long getTargetBitrate() {
+        return this.targetBitrate;
+    }
+
+    /**
+     * <p>
+     * The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * </p>
+     * 
+     * @param targetBitrate
+     *        The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudioConfiguration withTargetBitrate(Long targetBitrate) {
+        setTargetBitrate(targetBitrate);
         return this;
     }
 
@@ -176,41 +176,41 @@ public class AudioConfiguration implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * Number of audio channels.
      * </p>
      * 
-     * @param targetBitrate
-     *        The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * @param channels
+     *        Number of audio channels.
      */
 
-    public void setTargetBitrate(Long targetBitrate) {
-        this.targetBitrate = targetBitrate;
+    public void setChannels(Long channels) {
+        this.channels = channels;
     }
 
     /**
      * <p>
-     * The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * Number of audio channels.
      * </p>
      * 
-     * @return The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * @return Number of audio channels.
      */
 
-    public Long getTargetBitrate() {
-        return this.targetBitrate;
+    public Long getChannels() {
+        return this.channels;
     }
 
     /**
      * <p>
-     * The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * Number of audio channels.
      * </p>
      * 
-     * @param targetBitrate
-     *        The expected ingest bitrate (bits per second). This is configured in the encoder.
+     * @param channels
+     *        Number of audio channels.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public AudioConfiguration withTargetBitrate(Long targetBitrate) {
-        setTargetBitrate(targetBitrate);
+    public AudioConfiguration withChannels(Long channels) {
+        setChannels(channels);
         return this;
     }
 
@@ -226,14 +226,14 @@ public class AudioConfiguration implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getChannels() != null)
-            sb.append("Channels: ").append(getChannels()).append(",");
         if (getCodec() != null)
             sb.append("Codec: ").append(getCodec()).append(",");
+        if (getTargetBitrate() != null)
+            sb.append("TargetBitrate: ").append(getTargetBitrate()).append(",");
         if (getSampleRate() != null)
             sb.append("SampleRate: ").append(getSampleRate()).append(",");
-        if (getTargetBitrate() != null)
-            sb.append("TargetBitrate: ").append(getTargetBitrate());
+        if (getChannels() != null)
+            sb.append("Channels: ").append(getChannels());
         sb.append("}");
         return sb.toString();
     }
@@ -248,21 +248,21 @@ public class AudioConfiguration implements Serializable, Cloneable, StructuredPo
         if (obj instanceof AudioConfiguration == false)
             return false;
         AudioConfiguration other = (AudioConfiguration) obj;
-        if (other.getChannels() == null ^ this.getChannels() == null)
-            return false;
-        if (other.getChannels() != null && other.getChannels().equals(this.getChannels()) == false)
-            return false;
         if (other.getCodec() == null ^ this.getCodec() == null)
             return false;
         if (other.getCodec() != null && other.getCodec().equals(this.getCodec()) == false)
+            return false;
+        if (other.getTargetBitrate() == null ^ this.getTargetBitrate() == null)
+            return false;
+        if (other.getTargetBitrate() != null && other.getTargetBitrate().equals(this.getTargetBitrate()) == false)
             return false;
         if (other.getSampleRate() == null ^ this.getSampleRate() == null)
             return false;
         if (other.getSampleRate() != null && other.getSampleRate().equals(this.getSampleRate()) == false)
             return false;
-        if (other.getTargetBitrate() == null ^ this.getTargetBitrate() == null)
+        if (other.getChannels() == null ^ this.getChannels() == null)
             return false;
-        if (other.getTargetBitrate() != null && other.getTargetBitrate().equals(this.getTargetBitrate()) == false)
+        if (other.getChannels() != null && other.getChannels().equals(this.getChannels()) == false)
             return false;
         return true;
     }
@@ -272,10 +272,10 @@ public class AudioConfiguration implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getChannels() == null) ? 0 : getChannels().hashCode());
         hashCode = prime * hashCode + ((getCodec() == null) ? 0 : getCodec().hashCode());
-        hashCode = prime * hashCode + ((getSampleRate() == null) ? 0 : getSampleRate().hashCode());
         hashCode = prime * hashCode + ((getTargetBitrate() == null) ? 0 : getTargetBitrate().hashCode());
+        hashCode = prime * hashCode + ((getSampleRate() == null) ? 0 : getSampleRate().hashCode());
+        hashCode = prime * hashCode + ((getChannels() == null) ? 0 : getChannels().hashCode());
         return hashCode;
     }
 

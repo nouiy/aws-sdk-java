@@ -52,13 +52,13 @@ public class RecordingConfigurationSummaryJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     recordingConfigurationSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("destinationConfiguration", targetDepth)) {
-                    context.nextToken();
-                    recordingConfigurationSummary.setDestinationConfiguration(DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     recordingConfigurationSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("destinationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    recordingConfigurationSummary.setDestinationConfiguration(DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();

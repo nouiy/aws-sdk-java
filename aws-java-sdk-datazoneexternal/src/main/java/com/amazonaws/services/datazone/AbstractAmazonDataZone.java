@@ -58,6 +58,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public CreateAssetFilterResult createAssetFilter(CreateAssetFilterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateAssetRevisionResult createAssetRevision(CreateAssetRevisionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -153,6 +158,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public DeleteAssetFilterResult deleteAssetFilter(DeleteAssetFilterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAssetTypeResult deleteAssetType(DeleteAssetTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -244,6 +254,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public GetAssetResult getAsset(GetAssetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAssetFilterResult getAssetFilter(GetAssetFilterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -364,6 +379,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public GetUserProfileResult getUserProfile(GetUserProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAssetFiltersResult listAssetFilters(ListAssetFiltersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -544,6 +564,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAssetFilterResult updateAssetFilter(UpdateAssetFilterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

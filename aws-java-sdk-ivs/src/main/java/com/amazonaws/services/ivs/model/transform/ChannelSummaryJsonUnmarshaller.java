@@ -52,29 +52,17 @@ public class ChannelSummaryJsonUnmarshaller implements Unmarshaller<ChannelSumma
                     context.nextToken();
                     channelSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("authorized", targetDepth)) {
+                if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
-                    channelSummary.setAuthorized(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("insecureIngest", targetDepth)) {
-                    context.nextToken();
-                    channelSummary.setInsecureIngest(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    channelSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("latencyMode", targetDepth)) {
                     context.nextToken();
                     channelSummary.setLatencyMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("name", targetDepth)) {
+                if (context.testExpression("authorized", targetDepth)) {
                     context.nextToken();
-                    channelSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("playbackRestrictionPolicyArn", targetDepth)) {
-                    context.nextToken();
-                    channelSummary.setPlaybackRestrictionPolicyArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("preset", targetDepth)) {
-                    context.nextToken();
-                    channelSummary.setPreset(context.getUnmarshaller(String.class).unmarshall(context));
+                    channelSummary.setAuthorized(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("recordingConfigurationArn", targetDepth)) {
                     context.nextToken();
@@ -85,9 +73,21 @@ public class ChannelSummaryJsonUnmarshaller implements Unmarshaller<ChannelSumma
                     channelSummary.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("insecureIngest", targetDepth)) {
+                    context.nextToken();
+                    channelSummary.setInsecureIngest(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
                     channelSummary.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("preset", targetDepth)) {
+                    context.nextToken();
+                    channelSummary.setPreset(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("playbackRestrictionPolicyArn", targetDepth)) {
+                    context.nextToken();
+                    channelSummary.setPlaybackRestrictionPolicyArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

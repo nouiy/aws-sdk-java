@@ -33,16 +33,16 @@ public class ListStreamKeysRequest extends com.amazonaws.AmazonWebServiceRequest
     private String channelArn;
     /**
      * <p>
-     * Maximum number of streamKeys to return. Default: 1.
-     * </p>
-     */
-    private Integer maxResults;
-    /**
-     * <p>
      * The first stream key to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * Maximum number of streamKeys to return. Default: 1.
+     * </p>
+     */
+    private Integer maxResults;
 
     /**
      * <p>
@@ -81,46 +81,6 @@ public class ListStreamKeysRequest extends com.amazonaws.AmazonWebServiceRequest
 
     public ListStreamKeysRequest withChannelArn(String channelArn) {
         setChannelArn(channelArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Maximum number of streamKeys to return. Default: 1.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of streamKeys to return. Default: 1.
-     */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of streamKeys to return. Default: 1.
-     * </p>
-     * 
-     * @return Maximum number of streamKeys to return. Default: 1.
-     */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of streamKeys to return. Default: 1.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of streamKeys to return. Default: 1.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListStreamKeysRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
         return this;
     }
 
@@ -168,6 +128,46 @@ public class ListStreamKeysRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Maximum number of streamKeys to return. Default: 1.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of streamKeys to return. Default: 1.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of streamKeys to return. Default: 1.
+     * </p>
+     * 
+     * @return Maximum number of streamKeys to return. Default: 1.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of streamKeys to return. Default: 1.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of streamKeys to return. Default: 1.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListStreamKeysRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,10 +181,10 @@ public class ListStreamKeysRequest extends com.amazonaws.AmazonWebServiceRequest
         sb.append("{");
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -203,13 +203,13 @@ public class ListStreamKeysRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getChannelArn() != null && other.getChannelArn().equals(this.getChannelArn()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
-            return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -220,8 +220,8 @@ public class ListStreamKeysRequest extends com.amazonaws.AmazonWebServiceRequest
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

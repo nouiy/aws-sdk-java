@@ -34,6 +34,8 @@ public class CreateWorkgroupRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configParameters").build();
     private static final MarshallingInfo<Boolean> ENHANCEDVPCROUTING_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enhancedVpcRouting").build();
+    private static final MarshallingInfo<String> IPADDRESSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipAddressType").build();
     private static final MarshallingInfo<Integer> MAXCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxCapacity").build();
     private static final MarshallingInfo<String> NAMESPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -70,6 +72,7 @@ public class CreateWorkgroupRequestMarshaller {
             protocolMarshaller.marshall(createWorkgroupRequest.getBaseCapacity(), BASECAPACITY_BINDING);
             protocolMarshaller.marshall(createWorkgroupRequest.getConfigParameters(), CONFIGPARAMETERS_BINDING);
             protocolMarshaller.marshall(createWorkgroupRequest.getEnhancedVpcRouting(), ENHANCEDVPCROUTING_BINDING);
+            protocolMarshaller.marshall(createWorkgroupRequest.getIpAddressType(), IPADDRESSTYPE_BINDING);
             protocolMarshaller.marshall(createWorkgroupRequest.getMaxCapacity(), MAXCAPACITY_BINDING);
             protocolMarshaller.marshall(createWorkgroupRequest.getNamespaceName(), NAMESPACENAME_BINDING);
             protocolMarshaller.marshall(createWorkgroupRequest.getPort(), PORT_BINDING);

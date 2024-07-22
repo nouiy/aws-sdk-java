@@ -37,6 +37,8 @@ public class PutEnvironmentBlueprintConfigurationRequestMarshaller {
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("environmentBlueprintIdentifier").build();
     private static final MarshallingInfo<String> MANAGEACCESSROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("manageAccessRoleArn").build();
+    private static final MarshallingInfo<List> PROVISIONINGCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("provisioningConfigurations").build();
     private static final MarshallingInfo<String> PROVISIONINGROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("provisioningRoleArn").build();
     private static final MarshallingInfo<Map> REGIONALPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
@@ -63,6 +65,7 @@ public class PutEnvironmentBlueprintConfigurationRequestMarshaller {
             protocolMarshaller
                     .marshall(putEnvironmentBlueprintConfigurationRequest.getEnvironmentBlueprintIdentifier(), ENVIRONMENTBLUEPRINTIDENTIFIER_BINDING);
             protocolMarshaller.marshall(putEnvironmentBlueprintConfigurationRequest.getManageAccessRoleArn(), MANAGEACCESSROLEARN_BINDING);
+            protocolMarshaller.marshall(putEnvironmentBlueprintConfigurationRequest.getProvisioningConfigurations(), PROVISIONINGCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(putEnvironmentBlueprintConfigurationRequest.getProvisioningRoleArn(), PROVISIONINGROLEARN_BINDING);
             protocolMarshaller.marshall(putEnvironmentBlueprintConfigurationRequest.getRegionalParameters(), REGIONALPARAMETERS_BINDING);
         } catch (Exception e) {

@@ -92,6 +92,13 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     private Boolean enhancedVpcRouting;
     /**
      * <p>
+     * The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and <code>dualstack</code>
+     * .
+     * </p>
+     */
+    private String ipAddressType;
+    /**
+     * <p>
      * The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
      * specified in RPUs.
      * </p>
@@ -667,6 +674,52 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
 
     public Boolean isEnhancedVpcRouting() {
         return this.enhancedVpcRouting;
+    }
+
+    /**
+     * <p>
+     * The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and <code>dualstack</code>
+     * .
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and
+     *        <code>dualstack</code>.
+     */
+
+    public void setIpAddressType(String ipAddressType) {
+        this.ipAddressType = ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and <code>dualstack</code>
+     * .
+     * </p>
+     * 
+     * @return The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and
+     *         <code>dualstack</code>.
+     */
+
+    public String getIpAddressType() {
+        return this.ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and <code>dualstack</code>
+     * .
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address type that the workgroup supports. Possible values are <code>ipv4</code> and
+     *        <code>dualstack</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withIpAddressType(String ipAddressType) {
+        setIpAddressType(ipAddressType);
+        return this;
     }
 
     /**
@@ -1309,6 +1362,8 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             sb.append("Endpoint: ").append(getEndpoint()).append(",");
         if (getEnhancedVpcRouting() != null)
             sb.append("EnhancedVpcRouting: ").append(getEnhancedVpcRouting()).append(",");
+        if (getIpAddressType() != null)
+            sb.append("IpAddressType: ").append(getIpAddressType()).append(",");
         if (getMaxCapacity() != null)
             sb.append("MaxCapacity: ").append(getMaxCapacity()).append(",");
         if (getNamespaceName() != null)
@@ -1384,6 +1439,10 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEnhancedVpcRouting() != null && other.getEnhancedVpcRouting().equals(this.getEnhancedVpcRouting()) == false)
             return false;
+        if (other.getIpAddressType() == null ^ this.getIpAddressType() == null)
+            return false;
+        if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
+            return false;
         if (other.getMaxCapacity() == null ^ this.getMaxCapacity() == null)
             return false;
         if (other.getMaxCapacity() != null && other.getMaxCapacity().equals(this.getMaxCapacity()) == false)
@@ -1449,6 +1508,7 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCustomDomainName() == null) ? 0 : getCustomDomainName().hashCode());
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
         hashCode = prime * hashCode + ((getEnhancedVpcRouting() == null) ? 0 : getEnhancedVpcRouting().hashCode());
+        hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
         hashCode = prime * hashCode + ((getMaxCapacity() == null) ? 0 : getMaxCapacity().hashCode());
         hashCode = prime * hashCode + ((getNamespaceName() == null) ? 0 : getNamespaceName().hashCode());
         hashCode = prime * hashCode + ((getPatchVersion() == null) ? 0 : getPatchVersion().hashCode());

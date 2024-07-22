@@ -36,6 +36,22 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
     private String recordingMode;
     /**
      * <p>
+     * The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
+     * <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.
+     * </p>
+     * <p>
+     * <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for <code>targetIntervalSeconds</code>
+     * does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the
+     * <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less
+     * than the <code>targetIntervalSeconds</code> value. See <a
+     * href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
+     * Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder
+     * settings.
+     * </p>
+     */
+    private Long targetIntervalSeconds;
+    /**
+     * <p>
      * Indicates the desired resolution of recorded thumbnails. Thumbnails are recorded at the selected resolution if
      * the corresponding rendition is available during the stream; otherwise, they are recorded at source resolution.
      * For more information about resolution values and their corresponding height and width dimensions, see <a
@@ -54,22 +70,6 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
      * </p>
      */
     private java.util.List<String> storage;
-    /**
-     * <p>
-     * The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
-     * <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.
-     * </p>
-     * <p>
-     * <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for <code>targetIntervalSeconds</code>
-     * does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the
-     * <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less
-     * than the <code>targetIntervalSeconds</code> value. See <a
-     * href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
-     * Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder
-     * settings.
-     * </p>
-     */
-    private Long targetIntervalSeconds;
 
     /**
      * <p>
@@ -127,6 +127,106 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
 
     public ThumbnailConfiguration withRecordingMode(RecordingMode recordingMode) {
         this.recordingMode = recordingMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
+     * <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.
+     * </p>
+     * <p>
+     * <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for <code>targetIntervalSeconds</code>
+     * does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the
+     * <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less
+     * than the <code>targetIntervalSeconds</code> value. See <a
+     * href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
+     * Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder
+     * settings.
+     * </p>
+     * 
+     * @param targetIntervalSeconds
+     *        The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
+     *        <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.</p>
+     *        <p>
+     *        <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for
+     *        <code>targetIntervalSeconds</code> does not guarantee that thumbnails are generated at the specified
+     *        interval. For thumbnails to be generated at the <code>targetIntervalSeconds</code> interval, the
+     *        <code>IDR/Keyframe</code> value for the input video must be less than the
+     *        <code>targetIntervalSeconds</code> value. See <a
+     *        href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
+     *        Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in
+     *        video-encoder settings.
+     */
+
+    public void setTargetIntervalSeconds(Long targetIntervalSeconds) {
+        this.targetIntervalSeconds = targetIntervalSeconds;
+    }
+
+    /**
+     * <p>
+     * The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
+     * <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.
+     * </p>
+     * <p>
+     * <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for <code>targetIntervalSeconds</code>
+     * does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the
+     * <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less
+     * than the <code>targetIntervalSeconds</code> value. See <a
+     * href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
+     * Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder
+     * settings.
+     * </p>
+     * 
+     * @return The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
+     *         <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.</p>
+     *         <p>
+     *         <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for
+     *         <code>targetIntervalSeconds</code> does not guarantee that thumbnails are generated at the specified
+     *         interval. For thumbnails to be generated at the <code>targetIntervalSeconds</code> interval, the
+     *         <code>IDR/Keyframe</code> value for the input video must be less than the
+     *         <code>targetIntervalSeconds</code> value. See <a
+     *         href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
+     *         Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in
+     *         video-encoder settings.
+     */
+
+    public Long getTargetIntervalSeconds() {
+        return this.targetIntervalSeconds;
+    }
+
+    /**
+     * <p>
+     * The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
+     * <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.
+     * </p>
+     * <p>
+     * <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for <code>targetIntervalSeconds</code>
+     * does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the
+     * <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less
+     * than the <code>targetIntervalSeconds</code> value. See <a
+     * href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
+     * Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder
+     * settings.
+     * </p>
+     * 
+     * @param targetIntervalSeconds
+     *        The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
+     *        <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.</p>
+     *        <p>
+     *        <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for
+     *        <code>targetIntervalSeconds</code> does not guarantee that thumbnails are generated at the specified
+     *        interval. For thumbnails to be generated at the <code>targetIntervalSeconds</code> interval, the
+     *        <code>IDR/Keyframe</code> value for the input video must be less than the
+     *        <code>targetIntervalSeconds</code> value. See <a
+     *        href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
+     *        Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in
+     *        video-encoder settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ThumbnailConfiguration withTargetIntervalSeconds(Long targetIntervalSeconds) {
+        setTargetIntervalSeconds(targetIntervalSeconds);
         return this;
     }
 
@@ -360,106 +460,6 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p>
-     * The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
-     * <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.
-     * </p>
-     * <p>
-     * <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for <code>targetIntervalSeconds</code>
-     * does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the
-     * <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less
-     * than the <code>targetIntervalSeconds</code> value. See <a
-     * href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
-     * Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder
-     * settings.
-     * </p>
-     * 
-     * @param targetIntervalSeconds
-     *        The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
-     *        <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.</p>
-     *        <p>
-     *        <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for
-     *        <code>targetIntervalSeconds</code> does not guarantee that thumbnails are generated at the specified
-     *        interval. For thumbnails to be generated at the <code>targetIntervalSeconds</code> interval, the
-     *        <code>IDR/Keyframe</code> value for the input video must be less than the
-     *        <code>targetIntervalSeconds</code> value. See <a
-     *        href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
-     *        Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in
-     *        video-encoder settings.
-     */
-
-    public void setTargetIntervalSeconds(Long targetIntervalSeconds) {
-        this.targetIntervalSeconds = targetIntervalSeconds;
-    }
-
-    /**
-     * <p>
-     * The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
-     * <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.
-     * </p>
-     * <p>
-     * <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for <code>targetIntervalSeconds</code>
-     * does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the
-     * <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less
-     * than the <code>targetIntervalSeconds</code> value. See <a
-     * href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
-     * Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder
-     * settings.
-     * </p>
-     * 
-     * @return The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
-     *         <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.</p>
-     *         <p>
-     *         <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for
-     *         <code>targetIntervalSeconds</code> does not guarantee that thumbnails are generated at the specified
-     *         interval. For thumbnails to be generated at the <code>targetIntervalSeconds</code> interval, the
-     *         <code>IDR/Keyframe</code> value for the input video must be less than the
-     *         <code>targetIntervalSeconds</code> value. See <a
-     *         href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
-     *         Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in
-     *         video-encoder settings.
-     */
-
-    public Long getTargetIntervalSeconds() {
-        return this.targetIntervalSeconds;
-    }
-
-    /**
-     * <p>
-     * The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
-     * <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.
-     * </p>
-     * <p>
-     * <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for <code>targetIntervalSeconds</code>
-     * does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the
-     * <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less
-     * than the <code>targetIntervalSeconds</code> value. See <a
-     * href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
-     * Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder
-     * settings.
-     * </p>
-     * 
-     * @param targetIntervalSeconds
-     *        The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if
-     *        <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.</p>
-     *        <p>
-     *        <b>Important:</b> For the <code>BASIC</code> channel type, setting a value for
-     *        <code>targetIntervalSeconds</code> does not guarantee that thumbnails are generated at the specified
-     *        interval. For thumbnails to be generated at the <code>targetIntervalSeconds</code> interval, the
-     *        <code>IDR/Keyframe</code> value for the input video must be less than the
-     *        <code>targetIntervalSeconds</code> value. See <a
-     *        href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming
-     *        Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in
-     *        video-encoder settings.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ThumbnailConfiguration withTargetIntervalSeconds(Long targetIntervalSeconds) {
-        setTargetIntervalSeconds(targetIntervalSeconds);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -473,12 +473,12 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
         sb.append("{");
         if (getRecordingMode() != null)
             sb.append("RecordingMode: ").append(getRecordingMode()).append(",");
+        if (getTargetIntervalSeconds() != null)
+            sb.append("TargetIntervalSeconds: ").append(getTargetIntervalSeconds()).append(",");
         if (getResolution() != null)
             sb.append("Resolution: ").append(getResolution()).append(",");
         if (getStorage() != null)
-            sb.append("Storage: ").append(getStorage()).append(",");
-        if (getTargetIntervalSeconds() != null)
-            sb.append("TargetIntervalSeconds: ").append(getTargetIntervalSeconds());
+            sb.append("Storage: ").append(getStorage());
         sb.append("}");
         return sb.toString();
     }
@@ -497,6 +497,10 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
             return false;
         if (other.getRecordingMode() != null && other.getRecordingMode().equals(this.getRecordingMode()) == false)
             return false;
+        if (other.getTargetIntervalSeconds() == null ^ this.getTargetIntervalSeconds() == null)
+            return false;
+        if (other.getTargetIntervalSeconds() != null && other.getTargetIntervalSeconds().equals(this.getTargetIntervalSeconds()) == false)
+            return false;
         if (other.getResolution() == null ^ this.getResolution() == null)
             return false;
         if (other.getResolution() != null && other.getResolution().equals(this.getResolution()) == false)
@@ -504,10 +508,6 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
         if (other.getStorage() == null ^ this.getStorage() == null)
             return false;
         if (other.getStorage() != null && other.getStorage().equals(this.getStorage()) == false)
-            return false;
-        if (other.getTargetIntervalSeconds() == null ^ this.getTargetIntervalSeconds() == null)
-            return false;
-        if (other.getTargetIntervalSeconds() != null && other.getTargetIntervalSeconds().equals(this.getTargetIntervalSeconds()) == false)
             return false;
         return true;
     }
@@ -518,9 +518,9 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getRecordingMode() == null) ? 0 : getRecordingMode().hashCode());
+        hashCode = prime * hashCode + ((getTargetIntervalSeconds() == null) ? 0 : getTargetIntervalSeconds().hashCode());
         hashCode = prime * hashCode + ((getResolution() == null) ? 0 : getResolution().hashCode());
         hashCode = prime * hashCode + ((getStorage() == null) ? 0 : getStorage().hashCode());
-        hashCode = prime * hashCode + ((getTargetIntervalSeconds() == null) ? 0 : getTargetIntervalSeconds().hashCode());
         return hashCode;
     }
 

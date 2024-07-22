@@ -29,6 +29,8 @@ public class NetworkInterfaceMarshaller {
 
     private static final MarshallingInfo<String> AVAILABILITYZONE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("availabilityZone").build();
+    private static final MarshallingInfo<String> IPV6ADDRESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipv6Address").build();
     private static final MarshallingInfo<String> NETWORKINTERFACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("networkInterfaceId").build();
     private static final MarshallingInfo<String> PRIVATEIPADDRESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -53,6 +55,7 @@ public class NetworkInterfaceMarshaller {
 
         try {
             protocolMarshaller.marshall(networkInterface.getAvailabilityZone(), AVAILABILITYZONE_BINDING);
+            protocolMarshaller.marshall(networkInterface.getIpv6Address(), IPV6ADDRESS_BINDING);
             protocolMarshaller.marshall(networkInterface.getNetworkInterfaceId(), NETWORKINTERFACEID_BINDING);
             protocolMarshaller.marshall(networkInterface.getPrivateIpAddress(), PRIVATEIPADDRESS_BINDING);
             protocolMarshaller.marshall(networkInterface.getSubnetId(), SUBNETID_BINDING);

@@ -31,18 +31,18 @@ public class VideoConfiguration implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the
-     * encoder. For details, see the H.264 specification.
-     * </p>
-     */
-    private String avcLevel;
-    /**
-     * <p>
      * Indicates to the decoder the requirements for decoding the stream. For definitions of the valid values, see the
      * H.264 specification.
      * </p>
      */
     private String avcProfile;
+    /**
+     * <p>
+     * Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the
+     * encoder. For details, see the H.264 specification.
+     * </p>
+     */
+    private String avcLevel;
     /**
      * <p>
      * Codec used for the video encoding.
@@ -79,52 +79,6 @@ public class VideoConfiguration implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private Long videoWidth;
-
-    /**
-     * <p>
-     * Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the
-     * encoder. For details, see the H.264 specification.
-     * </p>
-     * 
-     * @param avcLevel
-     *        Indicates the degree of required decoder performance for a profile. Normally this is set automatically by
-     *        the encoder. For details, see the H.264 specification.
-     */
-
-    public void setAvcLevel(String avcLevel) {
-        this.avcLevel = avcLevel;
-    }
-
-    /**
-     * <p>
-     * Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the
-     * encoder. For details, see the H.264 specification.
-     * </p>
-     * 
-     * @return Indicates the degree of required decoder performance for a profile. Normally this is set automatically by
-     *         the encoder. For details, see the H.264 specification.
-     */
-
-    public String getAvcLevel() {
-        return this.avcLevel;
-    }
-
-    /**
-     * <p>
-     * Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the
-     * encoder. For details, see the H.264 specification.
-     * </p>
-     * 
-     * @param avcLevel
-     *        Indicates the degree of required decoder performance for a profile. Normally this is set automatically by
-     *        the encoder. For details, see the H.264 specification.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VideoConfiguration withAvcLevel(String avcLevel) {
-        setAvcLevel(avcLevel);
-        return this;
-    }
 
     /**
      * <p>
@@ -169,6 +123,52 @@ public class VideoConfiguration implements Serializable, Cloneable, StructuredPo
 
     public VideoConfiguration withAvcProfile(String avcProfile) {
         setAvcProfile(avcProfile);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the
+     * encoder. For details, see the H.264 specification.
+     * </p>
+     * 
+     * @param avcLevel
+     *        Indicates the degree of required decoder performance for a profile. Normally this is set automatically by
+     *        the encoder. For details, see the H.264 specification.
+     */
+
+    public void setAvcLevel(String avcLevel) {
+        this.avcLevel = avcLevel;
+    }
+
+    /**
+     * <p>
+     * Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the
+     * encoder. For details, see the H.264 specification.
+     * </p>
+     * 
+     * @return Indicates the degree of required decoder performance for a profile. Normally this is set automatically by
+     *         the encoder. For details, see the H.264 specification.
+     */
+
+    public String getAvcLevel() {
+        return this.avcLevel;
+    }
+
+    /**
+     * <p>
+     * Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the
+     * encoder. For details, see the H.264 specification.
+     * </p>
+     * 
+     * @param avcLevel
+     *        Indicates the degree of required decoder performance for a profile. Normally this is set automatically by
+     *        the encoder. For details, see the H.264 specification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VideoConfiguration withAvcLevel(String avcLevel) {
+        setAvcLevel(avcLevel);
         return this;
     }
 
@@ -424,10 +424,10 @@ public class VideoConfiguration implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAvcLevel() != null)
-            sb.append("AvcLevel: ").append(getAvcLevel()).append(",");
         if (getAvcProfile() != null)
             sb.append("AvcProfile: ").append(getAvcProfile()).append(",");
+        if (getAvcLevel() != null)
+            sb.append("AvcLevel: ").append(getAvcLevel()).append(",");
         if (getCodec() != null)
             sb.append("Codec: ").append(getCodec()).append(",");
         if (getEncoder() != null)
@@ -454,13 +454,13 @@ public class VideoConfiguration implements Serializable, Cloneable, StructuredPo
         if (obj instanceof VideoConfiguration == false)
             return false;
         VideoConfiguration other = (VideoConfiguration) obj;
-        if (other.getAvcLevel() == null ^ this.getAvcLevel() == null)
-            return false;
-        if (other.getAvcLevel() != null && other.getAvcLevel().equals(this.getAvcLevel()) == false)
-            return false;
         if (other.getAvcProfile() == null ^ this.getAvcProfile() == null)
             return false;
         if (other.getAvcProfile() != null && other.getAvcProfile().equals(this.getAvcProfile()) == false)
+            return false;
+        if (other.getAvcLevel() == null ^ this.getAvcLevel() == null)
+            return false;
+        if (other.getAvcLevel() != null && other.getAvcLevel().equals(this.getAvcLevel()) == false)
             return false;
         if (other.getCodec() == null ^ this.getCodec() == null)
             return false;
@@ -494,8 +494,8 @@ public class VideoConfiguration implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAvcLevel() == null) ? 0 : getAvcLevel().hashCode());
         hashCode = prime * hashCode + ((getAvcProfile() == null) ? 0 : getAvcProfile().hashCode());
+        hashCode = prime * hashCode + ((getAvcLevel() == null) ? 0 : getAvcLevel().hashCode());
         hashCode = prime * hashCode + ((getCodec() == null) ? 0 : getCodec().hashCode());
         hashCode = prime * hashCode + ((getEncoder() == null) ? 0 : getEncoder().hashCode());
         hashCode = prime * hashCode + ((getTargetBitrate() == null) ? 0 : getTargetBitrate().hashCode());

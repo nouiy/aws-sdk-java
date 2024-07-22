@@ -31,10 +31,10 @@ public class PlaybackKeyPairMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
-    private static final MarshallingInfo<String> FINGERPRINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fingerprint").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> FINGERPRINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fingerprint").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -55,8 +55,8 @@ public class PlaybackKeyPairMarshaller {
 
         try {
             protocolMarshaller.marshall(playbackKeyPair.getArn(), ARN_BINDING);
-            protocolMarshaller.marshall(playbackKeyPair.getFingerprint(), FINGERPRINT_BINDING);
             protocolMarshaller.marshall(playbackKeyPair.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(playbackKeyPair.getFingerprint(), FINGERPRINT_BINDING);
             protocolMarshaller.marshall(playbackKeyPair.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

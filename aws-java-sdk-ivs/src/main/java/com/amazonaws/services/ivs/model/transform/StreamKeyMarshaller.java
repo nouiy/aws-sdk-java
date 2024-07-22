@@ -31,12 +31,12 @@ public class StreamKeyMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
+    private static final MarshallingInfo<String> VALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("value").build();
     private static final MarshallingInfo<String> CHANNELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channelArn").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
-    private static final MarshallingInfo<String> VALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("value").build();
 
     private static final StreamKeyMarshaller instance = new StreamKeyMarshaller();
 
@@ -55,9 +55,9 @@ public class StreamKeyMarshaller {
 
         try {
             protocolMarshaller.marshall(streamKey.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(streamKey.getValue(), VALUE_BINDING);
             protocolMarshaller.marshall(streamKey.getChannelArn(), CHANNELARN_BINDING);
             protocolMarshaller.marshall(streamKey.getTags(), TAGS_BINDING);
-            protocolMarshaller.marshall(streamKey.getValue(), VALUE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

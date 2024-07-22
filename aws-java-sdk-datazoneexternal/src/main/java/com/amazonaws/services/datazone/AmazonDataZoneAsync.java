@@ -227,6 +227,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Creates a data asset filter.
+     * </p>
+     * 
+     * @param createAssetFilterRequest
+     * @return A Java Future containing the result of the CreateAssetFilter operation returned by the service.
+     * @sample AmazonDataZoneAsync.CreateAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/CreateAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAssetFilterResult> createAssetFilterAsync(CreateAssetFilterRequest createAssetFilterRequest);
+
+    /**
+     * <p>
+     * Creates a data asset filter.
+     * </p>
+     * 
+     * @param createAssetFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAssetFilter operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.CreateAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/CreateAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAssetFilterResult> createAssetFilterAsync(CreateAssetFilterRequest createAssetFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAssetFilterRequest, CreateAssetFilterResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a revision of the asset.
      * </p>
      * 
@@ -817,6 +848,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<DeleteAssetResult> deleteAssetAsync(DeleteAssetRequest deleteAssetRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteAssetRequest, DeleteAssetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an asset filter.
+     * </p>
+     * 
+     * @param deleteAssetFilterRequest
+     * @return A Java Future containing the result of the DeleteAssetFilter operation returned by the service.
+     * @sample AmazonDataZoneAsync.DeleteAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAssetFilterResult> deleteAssetFilterAsync(DeleteAssetFilterRequest deleteAssetFilterRequest);
+
+    /**
+     * <p>
+     * Deletes an asset filter.
+     * </p>
+     * 
+     * @param deleteAssetFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAssetFilter operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.DeleteAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAssetFilterResult> deleteAssetFilterAsync(DeleteAssetFilterRequest deleteAssetFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAssetFilterRequest, DeleteAssetFilterResult> asyncHandler);
 
     /**
      * <p>
@@ -1418,6 +1480,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<GetAssetResult> getAssetAsync(GetAssetRequest getAssetRequest,
             com.amazonaws.handlers.AsyncHandler<GetAssetRequest, GetAssetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets an asset filter.
+     * </p>
+     * 
+     * @param getAssetFilterRequest
+     * @return A Java Future containing the result of the GetAssetFilter operation returned by the service.
+     * @sample AmazonDataZoneAsync.GetAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAssetFilterResult> getAssetFilterAsync(GetAssetFilterRequest getAssetFilterRequest);
+
+    /**
+     * <p>
+     * Gets an asset filter.
+     * </p>
+     * 
+     * @param getAssetFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAssetFilter operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.GetAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAssetFilterResult> getAssetFilterAsync(GetAssetFilterRequest getAssetFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAssetFilterRequest, GetAssetFilterResult> asyncHandler);
 
     /**
      * <p>
@@ -2170,6 +2263,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<GetUserProfileResult> getUserProfileAsync(GetUserProfileRequest getUserProfileRequest,
             com.amazonaws.handlers.AsyncHandler<GetUserProfileRequest, GetUserProfileResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists asset filters.
+     * </p>
+     * 
+     * @param listAssetFiltersRequest
+     * @return A Java Future containing the result of the ListAssetFilters operation returned by the service.
+     * @sample AmazonDataZoneAsync.ListAssetFilters
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListAssetFilters" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetFiltersResult> listAssetFiltersAsync(ListAssetFiltersRequest listAssetFiltersRequest);
+
+    /**
+     * <p>
+     * Lists asset filters.
+     * </p>
+     * 
+     * @param listAssetFiltersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAssetFilters operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.ListAssetFilters
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListAssetFilters" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetFiltersResult> listAssetFiltersAsync(ListAssetFiltersRequest listAssetFiltersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAssetFiltersRequest, ListAssetFiltersResult> asyncHandler);
 
     /**
      * <p>
@@ -3304,6 +3428,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an asset filter.
+     * </p>
+     * 
+     * @param updateAssetFilterRequest
+     * @return A Java Future containing the result of the UpdateAssetFilter operation returned by the service.
+     * @sample AmazonDataZoneAsync.UpdateAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/UpdateAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAssetFilterResult> updateAssetFilterAsync(UpdateAssetFilterRequest updateAssetFilterRequest);
+
+    /**
+     * <p>
+     * Updates an asset filter.
+     * </p>
+     * 
+     * @param updateAssetFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAssetFilter operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.UpdateAssetFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/UpdateAssetFilter" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAssetFilterResult> updateAssetFilterAsync(UpdateAssetFilterRequest updateAssetFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAssetFilterRequest, UpdateAssetFilterResult> asyncHandler);
 
     /**
      * <p>

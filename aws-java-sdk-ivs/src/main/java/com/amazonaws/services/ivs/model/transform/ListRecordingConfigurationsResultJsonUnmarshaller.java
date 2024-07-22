@@ -48,16 +48,16 @@ public class ListRecordingConfigurationsResultJsonUnmarshaller implements Unmars
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("nextToken", targetDepth)) {
-                    context.nextToken();
-                    listRecordingConfigurationsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("recordingConfigurations", targetDepth)) {
                     context.nextToken();
                     listRecordingConfigurationsResult.setRecordingConfigurations(new ListUnmarshaller<RecordingConfigurationSummary>(
                             RecordingConfigurationSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    listRecordingConfigurationsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

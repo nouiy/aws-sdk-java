@@ -48,13 +48,13 @@ public class IngestConfigurationJsonUnmarshaller implements Unmarshaller<IngestC
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("audio", targetDepth)) {
-                    context.nextToken();
-                    ingestConfiguration.setAudio(AudioConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("video", targetDepth)) {
                     context.nextToken();
                     ingestConfiguration.setVideo(VideoConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("audio", targetDepth)) {
+                    context.nextToken();
+                    ingestConfiguration.setAudio(AudioConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

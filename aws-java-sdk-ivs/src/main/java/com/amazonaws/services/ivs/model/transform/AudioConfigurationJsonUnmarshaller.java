@@ -48,21 +48,21 @@ public class AudioConfigurationJsonUnmarshaller implements Unmarshaller<AudioCon
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("channels", targetDepth)) {
-                    context.nextToken();
-                    audioConfiguration.setChannels(context.getUnmarshaller(Long.class).unmarshall(context));
-                }
                 if (context.testExpression("codec", targetDepth)) {
                     context.nextToken();
                     audioConfiguration.setCodec(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("targetBitrate", targetDepth)) {
+                    context.nextToken();
+                    audioConfiguration.setTargetBitrate(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
                 if (context.testExpression("sampleRate", targetDepth)) {
                     context.nextToken();
                     audioConfiguration.setSampleRate(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
-                if (context.testExpression("targetBitrate", targetDepth)) {
+                if (context.testExpression("channels", targetDepth)) {
                     context.nextToken();
-                    audioConfiguration.setTargetBitrate(context.getUnmarshaller(Long.class).unmarshall(context));
+                    audioConfiguration.setChannels(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

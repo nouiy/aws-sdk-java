@@ -52,13 +52,13 @@ public class PlaybackKeyPairJsonUnmarshaller implements Unmarshaller<PlaybackKey
                     context.nextToken();
                     playbackKeyPair.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("fingerprint", targetDepth)) {
-                    context.nextToken();
-                    playbackKeyPair.setFingerprint(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     playbackKeyPair.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fingerprint", targetDepth)) {
+                    context.nextToken();
+                    playbackKeyPair.setFingerprint(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();

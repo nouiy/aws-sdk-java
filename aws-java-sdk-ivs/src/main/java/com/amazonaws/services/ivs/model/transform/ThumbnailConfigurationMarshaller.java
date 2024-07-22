@@ -30,12 +30,12 @@ public class ThumbnailConfigurationMarshaller {
 
     private static final MarshallingInfo<String> RECORDINGMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingMode").build();
+    private static final MarshallingInfo<Long> TARGETINTERVALSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("targetIntervalSeconds").build();
     private static final MarshallingInfo<String> RESOLUTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resolution").build();
     private static final MarshallingInfo<List> STORAGE_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("storage").build();
-    private static final MarshallingInfo<Long> TARGETINTERVALSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("targetIntervalSeconds").build();
 
     private static final ThumbnailConfigurationMarshaller instance = new ThumbnailConfigurationMarshaller();
 
@@ -54,9 +54,9 @@ public class ThumbnailConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(thumbnailConfiguration.getRecordingMode(), RECORDINGMODE_BINDING);
+            protocolMarshaller.marshall(thumbnailConfiguration.getTargetIntervalSeconds(), TARGETINTERVALSECONDS_BINDING);
             protocolMarshaller.marshall(thumbnailConfiguration.getResolution(), RESOLUTION_BINDING);
             protocolMarshaller.marshall(thumbnailConfiguration.getStorage(), STORAGE_BINDING);
-            protocolMarshaller.marshall(thumbnailConfiguration.getTargetIntervalSeconds(), TARGETINTERVALSECONDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

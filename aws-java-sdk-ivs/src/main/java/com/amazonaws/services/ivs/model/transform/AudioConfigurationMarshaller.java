@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AudioConfigurationMarshaller {
 
-    private static final MarshallingInfo<Long> CHANNELS_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("channels").build();
     private static final MarshallingInfo<String> CODEC_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("codec").build();
-    private static final MarshallingInfo<Long> SAMPLERATE_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("sampleRate").build();
     private static final MarshallingInfo<Long> TARGETBITRATE_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("targetBitrate").build();
+    private static final MarshallingInfo<Long> SAMPLERATE_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sampleRate").build();
+    private static final MarshallingInfo<Long> CHANNELS_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("channels").build();
 
     private static final AudioConfigurationMarshaller instance = new AudioConfigurationMarshaller();
 
@@ -52,10 +52,10 @@ public class AudioConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(audioConfiguration.getChannels(), CHANNELS_BINDING);
             protocolMarshaller.marshall(audioConfiguration.getCodec(), CODEC_BINDING);
-            protocolMarshaller.marshall(audioConfiguration.getSampleRate(), SAMPLERATE_BINDING);
             protocolMarshaller.marshall(audioConfiguration.getTargetBitrate(), TARGETBITRATE_BINDING);
+            protocolMarshaller.marshall(audioConfiguration.getSampleRate(), SAMPLERATE_BINDING);
+            protocolMarshaller.marshall(audioConfiguration.getChannels(), CHANNELS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

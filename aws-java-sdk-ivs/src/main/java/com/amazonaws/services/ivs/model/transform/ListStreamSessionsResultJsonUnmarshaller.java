@@ -48,15 +48,15 @@ public class ListStreamSessionsResultJsonUnmarshaller implements Unmarshaller<Li
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("nextToken", targetDepth)) {
-                    context.nextToken();
-                    listStreamSessionsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("streamSessions", targetDepth)) {
                     context.nextToken();
                     listStreamSessionsResult.setStreamSessions(new ListUnmarshaller<StreamSessionSummary>(StreamSessionSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    listStreamSessionsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -96,6 +96,9 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.redshiftserverless.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("Ipv6CidrBlockNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.redshiftserverless.model.transform.Ipv6CidrBlockNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.redshiftserverless.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -729,6 +732,9 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
      *         The input failed to satisfy the constraints specified by an AWS service.
      * @throws TooManyTagsException
      *         The request exceeded the number of tags allowed for a resource.
+     * @throws Ipv6CidrBlockNotFoundException
+     *         There are no subnets in your VPC with associated IPv6 CIDR blocks. To use dual-stack mode, associate an
+     *         IPv6 CIDR block with each subnet in your VPC.
      * @sample AWSRedshiftServerless.CreateWorkgroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateWorkgroup"
      *      target="_top">AWS API Documentation</a>
@@ -3675,6 +3681,9 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
      *         The submitted action has conflicts.
      * @throws ValidationException
      *         The input failed to satisfy the constraints specified by an AWS service.
+     * @throws Ipv6CidrBlockNotFoundException
+     *         There are no subnets in your VPC with associated IPv6 CIDR blocks. To use dual-stack mode, associate an
+     *         IPv6 CIDR block with each subnet in your VPC.
      * @sample AWSRedshiftServerless.UpdateWorkgroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateWorkgroup"
      *      target="_top">AWS API Documentation</a>

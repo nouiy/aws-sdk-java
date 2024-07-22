@@ -29,12 +29,12 @@ public class BatchStartViewerSessionRevocationErrorMarshaller {
 
     private static final MarshallingInfo<String> CHANNELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channelArn").build();
+    private static final MarshallingInfo<String> VIEWERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("viewerId").build();
     private static final MarshallingInfo<String> CODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("code").build();
     private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("message").build();
-    private static final MarshallingInfo<String> VIEWERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("viewerId").build();
 
     private static final BatchStartViewerSessionRevocationErrorMarshaller instance = new BatchStartViewerSessionRevocationErrorMarshaller();
 
@@ -53,9 +53,9 @@ public class BatchStartViewerSessionRevocationErrorMarshaller {
 
         try {
             protocolMarshaller.marshall(batchStartViewerSessionRevocationError.getChannelArn(), CHANNELARN_BINDING);
+            protocolMarshaller.marshall(batchStartViewerSessionRevocationError.getViewerId(), VIEWERID_BINDING);
             protocolMarshaller.marshall(batchStartViewerSessionRevocationError.getCode(), CODE_BINDING);
             protocolMarshaller.marshall(batchStartViewerSessionRevocationError.getMessage(), MESSAGE_BINDING);
-            protocolMarshaller.marshall(batchStartViewerSessionRevocationError.getViewerId(), VIEWERID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

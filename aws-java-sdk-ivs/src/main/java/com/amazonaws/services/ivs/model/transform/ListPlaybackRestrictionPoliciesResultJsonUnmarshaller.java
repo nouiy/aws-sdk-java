@@ -48,16 +48,16 @@ public class ListPlaybackRestrictionPoliciesResultJsonUnmarshaller implements Un
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("nextToken", targetDepth)) {
-                    context.nextToken();
-                    listPlaybackRestrictionPoliciesResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("playbackRestrictionPolicies", targetDepth)) {
                     context.nextToken();
                     listPlaybackRestrictionPoliciesResult.setPlaybackRestrictionPolicies(new ListUnmarshaller<PlaybackRestrictionPolicySummary>(
                             PlaybackRestrictionPolicySummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    listPlaybackRestrictionPoliciesResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

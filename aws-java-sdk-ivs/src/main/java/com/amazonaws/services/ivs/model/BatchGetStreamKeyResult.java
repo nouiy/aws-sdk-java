@@ -24,68 +24,9 @@ import javax.annotation.Generated;
 public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
     /** <p/> */
-    private java.util.List<BatchError> errors;
-    /** <p/> */
     private java.util.List<StreamKey> streamKeys;
-
-    /**
-     * <p/>
-     * 
-     * @return
-     */
-
-    public java.util.List<BatchError> getErrors() {
-        return errors;
-    }
-
-    /**
-     * <p/>
-     * 
-     * @param errors
-     */
-
-    public void setErrors(java.util.Collection<BatchError> errors) {
-        if (errors == null) {
-            this.errors = null;
-            return;
-        }
-
-        this.errors = new java.util.ArrayList<BatchError>(errors);
-    }
-
-    /**
-     * <p/>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setErrors(java.util.Collection)} or {@link #withErrors(java.util.Collection)} if you want to override the
-     * existing values.
-     * </p>
-     * 
-     * @param errors
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchGetStreamKeyResult withErrors(BatchError... errors) {
-        if (this.errors == null) {
-            setErrors(new java.util.ArrayList<BatchError>(errors.length));
-        }
-        for (BatchError ele : errors) {
-            this.errors.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p/>
-     * 
-     * @param errors
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchGetStreamKeyResult withErrors(java.util.Collection<BatchError> errors) {
-        setErrors(errors);
-        return this;
-    }
+    /** <p/> */
+    private java.util.List<BatchError> errors;
 
     /**
      * <p/>
@@ -147,6 +88,65 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p/>
+     * 
+     * @return
+     */
+
+    public java.util.List<BatchError> getErrors() {
+        return errors;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param errors
+     */
+
+    public void setErrors(java.util.Collection<BatchError> errors) {
+        if (errors == null) {
+            this.errors = null;
+            return;
+        }
+
+        this.errors = new java.util.ArrayList<BatchError>(errors);
+    }
+
+    /**
+     * <p/>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setErrors(java.util.Collection)} or {@link #withErrors(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param errors
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchGetStreamKeyResult withErrors(BatchError... errors) {
+        if (this.errors == null) {
+            setErrors(new java.util.ArrayList<BatchError>(errors.length));
+        }
+        for (BatchError ele : errors) {
+            this.errors.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param errors
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchGetStreamKeyResult withErrors(java.util.Collection<BatchError> errors) {
+        setErrors(errors);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -158,10 +158,10 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getErrors() != null)
-            sb.append("Errors: ").append(getErrors()).append(",");
         if (getStreamKeys() != null)
-            sb.append("StreamKeys: ").append(getStreamKeys());
+            sb.append("StreamKeys: ").append(getStreamKeys()).append(",");
+        if (getErrors() != null)
+            sb.append("Errors: ").append(getErrors());
         sb.append("}");
         return sb.toString();
     }
@@ -176,13 +176,13 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
         if (obj instanceof BatchGetStreamKeyResult == false)
             return false;
         BatchGetStreamKeyResult other = (BatchGetStreamKeyResult) obj;
-        if (other.getErrors() == null ^ this.getErrors() == null)
-            return false;
-        if (other.getErrors() != null && other.getErrors().equals(this.getErrors()) == false)
-            return false;
         if (other.getStreamKeys() == null ^ this.getStreamKeys() == null)
             return false;
         if (other.getStreamKeys() != null && other.getStreamKeys().equals(this.getStreamKeys()) == false)
+            return false;
+        if (other.getErrors() == null ^ this.getErrors() == null)
+            return false;
+        if (other.getErrors() != null && other.getErrors().equals(this.getErrors()) == false)
             return false;
         return true;
     }
@@ -192,8 +192,8 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getErrors() == null) ? 0 : getErrors().hashCode());
         hashCode = prime * hashCode + ((getStreamKeys() == null) ? 0 : getStreamKeys().hashCode());
+        hashCode = prime * hashCode + ((getErrors() == null) ? 0 : getErrors().hashCode());
         return hashCode;
     }
 

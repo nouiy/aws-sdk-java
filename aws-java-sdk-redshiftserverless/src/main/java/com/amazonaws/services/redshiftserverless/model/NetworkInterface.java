@@ -36,6 +36,12 @@ public class NetworkInterface implements Serializable, Cloneable, StructuredPojo
     private String availabilityZone;
     /**
      * <p>
+     * The IPv6 address of the network interface within the subnet.
+     * </p>
+     */
+    private String ipv6Address;
+    /**
+     * <p>
      * The unique identifier of the network interface.
      * </p>
      */
@@ -90,6 +96,46 @@ public class NetworkInterface implements Serializable, Cloneable, StructuredPojo
 
     public NetworkInterface withAvailabilityZone(String availabilityZone) {
         setAvailabilityZone(availabilityZone);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPv6 address of the network interface within the subnet.
+     * </p>
+     * 
+     * @param ipv6Address
+     *        The IPv6 address of the network interface within the subnet.
+     */
+
+    public void setIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+    }
+
+    /**
+     * <p>
+     * The IPv6 address of the network interface within the subnet.
+     * </p>
+     * 
+     * @return The IPv6 address of the network interface within the subnet.
+     */
+
+    public String getIpv6Address() {
+        return this.ipv6Address;
+    }
+
+    /**
+     * <p>
+     * The IPv6 address of the network interface within the subnet.
+     * </p>
+     * 
+     * @param ipv6Address
+     *        The IPv6 address of the network interface within the subnet.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkInterface withIpv6Address(String ipv6Address) {
+        setIpv6Address(ipv6Address);
         return this;
     }
 
@@ -227,6 +273,8 @@ public class NetworkInterface implements Serializable, Cloneable, StructuredPojo
         sb.append("{");
         if (getAvailabilityZone() != null)
             sb.append("AvailabilityZone: ").append(getAvailabilityZone()).append(",");
+        if (getIpv6Address() != null)
+            sb.append("Ipv6Address: ").append(getIpv6Address()).append(",");
         if (getNetworkInterfaceId() != null)
             sb.append("NetworkInterfaceId: ").append(getNetworkInterfaceId()).append(",");
         if (getPrivateIpAddress() != null)
@@ -251,6 +299,10 @@ public class NetworkInterface implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getAvailabilityZone() != null && other.getAvailabilityZone().equals(this.getAvailabilityZone()) == false)
             return false;
+        if (other.getIpv6Address() == null ^ this.getIpv6Address() == null)
+            return false;
+        if (other.getIpv6Address() != null && other.getIpv6Address().equals(this.getIpv6Address()) == false)
+            return false;
         if (other.getNetworkInterfaceId() == null ^ this.getNetworkInterfaceId() == null)
             return false;
         if (other.getNetworkInterfaceId() != null && other.getNetworkInterfaceId().equals(this.getNetworkInterfaceId()) == false)
@@ -272,6 +324,7 @@ public class NetworkInterface implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAvailabilityZone() == null) ? 0 : getAvailabilityZone().hashCode());
+        hashCode = prime * hashCode + ((getIpv6Address() == null) ? 0 : getIpv6Address().hashCode());
         hashCode = prime * hashCode + ((getNetworkInterfaceId() == null) ? 0 : getNetworkInterfaceId().hashCode());
         hashCode = prime * hashCode + ((getPrivateIpAddress() == null) ? 0 : getPrivateIpAddress().hashCode());
         hashCode = prime * hashCode + ((getSubnetId() == null) ? 0 : getSubnetId().hashCode());

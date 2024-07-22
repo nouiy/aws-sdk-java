@@ -42,6 +42,9 @@ public class TokenBucket {
 
     private double timeWindow;
 
+    // For testing only, writes and reads are *not* synchronized
+    private long lastWaitTimeMs;
+
     public interface Clock {
         double time();
     }
@@ -327,6 +330,7 @@ public class TokenBucket {
     // Package private for testing
     void sleep(double seconds) {
         long millisToSleep = (long) (seconds * 1000);
+        lastWaitTimeMs = millisToSleep;
         try {
             Thread.sleep(millisToSleep);
         } catch (InterruptedException ie) {
@@ -404,5 +408,10 @@ public class TokenBucket {
     @SdkTestInternalApi
     synchronized void setFillRate(double fillRate) {
         this.fillRate = fillRate;
+    }
+
+    @SdkTestInternalApi
+    long getLastWaitTimeMs() {
+        return lastWaitTimeMs;
     }
 }

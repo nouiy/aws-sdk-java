@@ -25,63 +25,17 @@ public class ListStreamKeysResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
+     * List of stream keys.
+     * </p>
+     */
+    private java.util.List<StreamKeySummary> streamKeys;
+    /**
+     * <p>
      * If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
      * next set.
      * </p>
      */
     private String nextToken;
-    /**
-     * <p>
-     * List of stream keys.
-     * </p>
-     */
-    private java.util.List<StreamKeySummary> streamKeys;
-
-    /**
-     * <p>
-     * If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     * next set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to
-     *        get the next set.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     * next set.
-     * </p>
-     * 
-     * @return If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to
-     *         get the next set.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     * next set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to
-     *        get the next set.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListStreamKeysResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
 
     /**
      * <p>
@@ -154,6 +108,52 @@ public class ListStreamKeysResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
+     * next set.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to
+     *        get the next set.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
+     * next set.
+     * </p>
+     * 
+     * @return If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to
+     *         get the next set.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
+     * next set.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more stream keys than <code>maxResults</code>, use <code>nextToken</code> in the request to
+     *        get the next set.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListStreamKeysResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -165,10 +165,10 @@ public class ListStreamKeysResult extends com.amazonaws.AmazonWebServiceResult<c
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getStreamKeys() != null)
-            sb.append("StreamKeys: ").append(getStreamKeys());
+            sb.append("StreamKeys: ").append(getStreamKeys()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -183,13 +183,13 @@ public class ListStreamKeysResult extends com.amazonaws.AmazonWebServiceResult<c
         if (obj instanceof ListStreamKeysResult == false)
             return false;
         ListStreamKeysResult other = (ListStreamKeysResult) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getStreamKeys() == null ^ this.getStreamKeys() == null)
             return false;
         if (other.getStreamKeys() != null && other.getStreamKeys().equals(this.getStreamKeys()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -199,8 +199,8 @@ public class ListStreamKeysResult extends com.amazonaws.AmazonWebServiceResult<c
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getStreamKeys() == null) ? 0 : getStreamKeys().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

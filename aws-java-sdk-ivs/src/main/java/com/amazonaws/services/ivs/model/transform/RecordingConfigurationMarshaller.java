@@ -31,20 +31,20 @@ public class RecordingConfigurationMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
-    private static final MarshallingInfo<StructuredPojo> DESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConfiguration").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<Integer> RECORDINGRECONNECTWINDOWSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingReconnectWindowSeconds").build();
-    private static final MarshallingInfo<StructuredPojo> RENDITIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("renditionConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> DESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConfiguration").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> THUMBNAILCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("thumbnailConfiguration").build();
+    private static final MarshallingInfo<Integer> RECORDINGRECONNECTWINDOWSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingReconnectWindowSeconds").build();
+    private static final MarshallingInfo<StructuredPojo> RENDITIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("renditionConfiguration").build();
 
     private static final RecordingConfigurationMarshaller instance = new RecordingConfigurationMarshaller();
 
@@ -63,13 +63,13 @@ public class RecordingConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(recordingConfiguration.getArn(), ARN_BINDING);
-            protocolMarshaller.marshall(recordingConfiguration.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(recordingConfiguration.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(recordingConfiguration.getRecordingReconnectWindowSeconds(), RECORDINGRECONNECTWINDOWSECONDS_BINDING);
-            protocolMarshaller.marshall(recordingConfiguration.getRenditionConfiguration(), RENDITIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(recordingConfiguration.getDestinationConfiguration(), DESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(recordingConfiguration.getState(), STATE_BINDING);
             protocolMarshaller.marshall(recordingConfiguration.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(recordingConfiguration.getThumbnailConfiguration(), THUMBNAILCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(recordingConfiguration.getRecordingReconnectWindowSeconds(), RECORDINGRECONNECTWINDOWSECONDS_BINDING);
+            protocolMarshaller.marshall(recordingConfiguration.getRenditionConfiguration(), RENDITIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

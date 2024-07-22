@@ -29,24 +29,24 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateChannelRequestMarshaller {
 
-    private static final MarshallingInfo<Boolean> AUTHORIZED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("authorized").build();
-    private static final MarshallingInfo<Boolean> INSECUREINGEST_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("insecureIngest").build();
-    private static final MarshallingInfo<String> LATENCYMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latencyMode").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> PLAYBACKRESTRICTIONPOLICYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("playbackRestrictionPolicyArn").build();
-    private static final MarshallingInfo<String> PRESET_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("preset").build();
+    private static final MarshallingInfo<String> LATENCYMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latencyMode").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("type").build();
+    private static final MarshallingInfo<Boolean> AUTHORIZED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("authorized").build();
     private static final MarshallingInfo<String> RECORDINGCONFIGURATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingConfigurationArn").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
-    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("type").build();
+    private static final MarshallingInfo<Boolean> INSECUREINGEST_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("insecureIngest").build();
+    private static final MarshallingInfo<String> PRESET_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("preset").build();
+    private static final MarshallingInfo<String> PLAYBACKRESTRICTIONPOLICYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("playbackRestrictionPolicyArn").build();
 
     private static final CreateChannelRequestMarshaller instance = new CreateChannelRequestMarshaller();
 
@@ -64,15 +64,15 @@ public class CreateChannelRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createChannelRequest.getAuthorized(), AUTHORIZED_BINDING);
-            protocolMarshaller.marshall(createChannelRequest.getInsecureIngest(), INSECUREINGEST_BINDING);
-            protocolMarshaller.marshall(createChannelRequest.getLatencyMode(), LATENCYMODE_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(createChannelRequest.getPlaybackRestrictionPolicyArn(), PLAYBACKRESTRICTIONPOLICYARN_BINDING);
-            protocolMarshaller.marshall(createChannelRequest.getPreset(), PRESET_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getLatencyMode(), LATENCYMODE_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getAuthorized(), AUTHORIZED_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getRecordingConfigurationArn(), RECORDINGCONFIGURATIONARN_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getTags(), TAGS_BINDING);
-            protocolMarshaller.marshall(createChannelRequest.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getInsecureIngest(), INSECUREINGEST_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getPreset(), PRESET_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getPlaybackRestrictionPolicyArn(), PLAYBACKRESTRICTIONPOLICYARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

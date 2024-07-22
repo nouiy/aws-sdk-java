@@ -34,6 +34,8 @@ public class UpdateWorkgroupRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configParameters").build();
     private static final MarshallingInfo<Boolean> ENHANCEDVPCROUTING_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enhancedVpcRouting").build();
+    private static final MarshallingInfo<String> IPADDRESSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipAddressType").build();
     private static final MarshallingInfo<Integer> MAXCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxCapacity").build();
     private static final MarshallingInfo<Integer> PORT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
@@ -66,6 +68,7 @@ public class UpdateWorkgroupRequestMarshaller {
             protocolMarshaller.marshall(updateWorkgroupRequest.getBaseCapacity(), BASECAPACITY_BINDING);
             protocolMarshaller.marshall(updateWorkgroupRequest.getConfigParameters(), CONFIGPARAMETERS_BINDING);
             protocolMarshaller.marshall(updateWorkgroupRequest.getEnhancedVpcRouting(), ENHANCEDVPCROUTING_BINDING);
+            protocolMarshaller.marshall(updateWorkgroupRequest.getIpAddressType(), IPADDRESSTYPE_BINDING);
             protocolMarshaller.marshall(updateWorkgroupRequest.getMaxCapacity(), MAXCAPACITY_BINDING);
             protocolMarshaller.marshall(updateWorkgroupRequest.getPort(), PORT_BINDING);
             protocolMarshaller.marshall(updateWorkgroupRequest.getPubliclyAccessible(), PUBLICLYACCESSIBLE_BINDING);

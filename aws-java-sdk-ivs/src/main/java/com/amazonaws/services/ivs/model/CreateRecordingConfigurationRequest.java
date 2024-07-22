@@ -27,29 +27,16 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * A complex type that contains a destination configuration for where recorded video will be stored.
-     * </p>
-     */
-    private DestinationConfiguration destinationConfiguration;
-    /**
-     * <p>
      * Recording-configuration name. The value does not need to be unique.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
-     * considered a single broadcast and merged together. Default: 0.
+     * A complex type that contains a destination configuration for where recorded video will be stored.
      * </p>
      */
-    private Integer recordingReconnectWindowSeconds;
-    /**
-     * <p>
-     * Object that describes which renditions should be recorded for a stream.
-     * </p>
-     */
-    private RenditionConfiguration renditionConfiguration;
+    private DestinationConfiguration destinationConfiguration;
     /**
      * <p>
      * Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See <a
@@ -66,46 +53,19 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
      * </p>
      */
     private ThumbnailConfiguration thumbnailConfiguration;
-
     /**
      * <p>
-     * A complex type that contains a destination configuration for where recorded video will be stored.
+     * If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
+     * considered a single broadcast and merged together. Default: 0.
      * </p>
-     * 
-     * @param destinationConfiguration
-     *        A complex type that contains a destination configuration for where recorded video will be stored.
      */
-
-    public void setDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
-        this.destinationConfiguration = destinationConfiguration;
-    }
-
+    private Integer recordingReconnectWindowSeconds;
     /**
      * <p>
-     * A complex type that contains a destination configuration for where recorded video will be stored.
+     * Object that describes which renditions should be recorded for a stream.
      * </p>
-     * 
-     * @return A complex type that contains a destination configuration for where recorded video will be stored.
      */
-
-    public DestinationConfiguration getDestinationConfiguration() {
-        return this.destinationConfiguration;
-    }
-
-    /**
-     * <p>
-     * A complex type that contains a destination configuration for where recorded video will be stored.
-     * </p>
-     * 
-     * @param destinationConfiguration
-     *        A complex type that contains a destination configuration for where recorded video will be stored.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateRecordingConfigurationRequest withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
-        setDestinationConfiguration(destinationConfiguration);
-        return this;
-    }
+    private RenditionConfiguration renditionConfiguration;
 
     /**
      * <p>
@@ -149,87 +109,41 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
-     * considered a single broadcast and merged together. Default: 0.
+     * A complex type that contains a destination configuration for where recorded video will be stored.
      * </p>
      * 
-     * @param recordingReconnectWindowSeconds
-     *        If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
-     *        considered a single broadcast and merged together. Default: 0.
+     * @param destinationConfiguration
+     *        A complex type that contains a destination configuration for where recorded video will be stored.
      */
 
-    public void setRecordingReconnectWindowSeconds(Integer recordingReconnectWindowSeconds) {
-        this.recordingReconnectWindowSeconds = recordingReconnectWindowSeconds;
+    public void setDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
+        this.destinationConfiguration = destinationConfiguration;
     }
 
     /**
      * <p>
-     * If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
-     * considered a single broadcast and merged together. Default: 0.
+     * A complex type that contains a destination configuration for where recorded video will be stored.
      * </p>
      * 
-     * @return If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will
-     *         be considered a single broadcast and merged together. Default: 0.
+     * @return A complex type that contains a destination configuration for where recorded video will be stored.
      */
 
-    public Integer getRecordingReconnectWindowSeconds() {
-        return this.recordingReconnectWindowSeconds;
+    public DestinationConfiguration getDestinationConfiguration() {
+        return this.destinationConfiguration;
     }
 
     /**
      * <p>
-     * If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
-     * considered a single broadcast and merged together. Default: 0.
+     * A complex type that contains a destination configuration for where recorded video will be stored.
      * </p>
      * 
-     * @param recordingReconnectWindowSeconds
-     *        If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
-     *        considered a single broadcast and merged together. Default: 0.
+     * @param destinationConfiguration
+     *        A complex type that contains a destination configuration for where recorded video will be stored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateRecordingConfigurationRequest withRecordingReconnectWindowSeconds(Integer recordingReconnectWindowSeconds) {
-        setRecordingReconnectWindowSeconds(recordingReconnectWindowSeconds);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Object that describes which renditions should be recorded for a stream.
-     * </p>
-     * 
-     * @param renditionConfiguration
-     *        Object that describes which renditions should be recorded for a stream.
-     */
-
-    public void setRenditionConfiguration(RenditionConfiguration renditionConfiguration) {
-        this.renditionConfiguration = renditionConfiguration;
-    }
-
-    /**
-     * <p>
-     * Object that describes which renditions should be recorded for a stream.
-     * </p>
-     * 
-     * @return Object that describes which renditions should be recorded for a stream.
-     */
-
-    public RenditionConfiguration getRenditionConfiguration() {
-        return this.renditionConfiguration;
-    }
-
-    /**
-     * <p>
-     * Object that describes which renditions should be recorded for a stream.
-     * </p>
-     * 
-     * @param renditionConfiguration
-     *        Object that describes which renditions should be recorded for a stream.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateRecordingConfigurationRequest withRenditionConfiguration(RenditionConfiguration renditionConfiguration) {
-        setRenditionConfiguration(renditionConfiguration);
+    public CreateRecordingConfigurationRequest withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
+        setDestinationConfiguration(destinationConfiguration);
         return this;
     }
 
@@ -369,6 +283,92 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
+     * considered a single broadcast and merged together. Default: 0.
+     * </p>
+     * 
+     * @param recordingReconnectWindowSeconds
+     *        If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
+     *        considered a single broadcast and merged together. Default: 0.
+     */
+
+    public void setRecordingReconnectWindowSeconds(Integer recordingReconnectWindowSeconds) {
+        this.recordingReconnectWindowSeconds = recordingReconnectWindowSeconds;
+    }
+
+    /**
+     * <p>
+     * If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
+     * considered a single broadcast and merged together. Default: 0.
+     * </p>
+     * 
+     * @return If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will
+     *         be considered a single broadcast and merged together. Default: 0.
+     */
+
+    public Integer getRecordingReconnectWindowSeconds() {
+        return this.recordingReconnectWindowSeconds;
+    }
+
+    /**
+     * <p>
+     * If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
+     * considered a single broadcast and merged together. Default: 0.
+     * </p>
+     * 
+     * @param recordingReconnectWindowSeconds
+     *        If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be
+     *        considered a single broadcast and merged together. Default: 0.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRecordingConfigurationRequest withRecordingReconnectWindowSeconds(Integer recordingReconnectWindowSeconds) {
+        setRecordingReconnectWindowSeconds(recordingReconnectWindowSeconds);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Object that describes which renditions should be recorded for a stream.
+     * </p>
+     * 
+     * @param renditionConfiguration
+     *        Object that describes which renditions should be recorded for a stream.
+     */
+
+    public void setRenditionConfiguration(RenditionConfiguration renditionConfiguration) {
+        this.renditionConfiguration = renditionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Object that describes which renditions should be recorded for a stream.
+     * </p>
+     * 
+     * @return Object that describes which renditions should be recorded for a stream.
+     */
+
+    public RenditionConfiguration getRenditionConfiguration() {
+        return this.renditionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Object that describes which renditions should be recorded for a stream.
+     * </p>
+     * 
+     * @param renditionConfiguration
+     *        Object that describes which renditions should be recorded for a stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRecordingConfigurationRequest withRenditionConfiguration(RenditionConfiguration renditionConfiguration) {
+        setRenditionConfiguration(renditionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -380,18 +380,18 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDestinationConfiguration() != null)
-            sb.append("DestinationConfiguration: ").append(getDestinationConfiguration()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getRecordingReconnectWindowSeconds() != null)
-            sb.append("RecordingReconnectWindowSeconds: ").append(getRecordingReconnectWindowSeconds()).append(",");
-        if (getRenditionConfiguration() != null)
-            sb.append("RenditionConfiguration: ").append(getRenditionConfiguration()).append(",");
+        if (getDestinationConfiguration() != null)
+            sb.append("DestinationConfiguration: ").append(getDestinationConfiguration()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getThumbnailConfiguration() != null)
-            sb.append("ThumbnailConfiguration: ").append(getThumbnailConfiguration());
+            sb.append("ThumbnailConfiguration: ").append(getThumbnailConfiguration()).append(",");
+        if (getRecordingReconnectWindowSeconds() != null)
+            sb.append("RecordingReconnectWindowSeconds: ").append(getRecordingReconnectWindowSeconds()).append(",");
+        if (getRenditionConfiguration() != null)
+            sb.append("RenditionConfiguration: ").append(getRenditionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -406,13 +406,21 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
         if (obj instanceof CreateRecordingConfigurationRequest == false)
             return false;
         CreateRecordingConfigurationRequest other = (CreateRecordingConfigurationRequest) obj;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
         if (other.getDestinationConfiguration() == null ^ this.getDestinationConfiguration() == null)
             return false;
         if (other.getDestinationConfiguration() != null && other.getDestinationConfiguration().equals(this.getDestinationConfiguration()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
+        if (other.getTags() == null ^ this.getTags() == null)
             return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getThumbnailConfiguration() == null ^ this.getThumbnailConfiguration() == null)
+            return false;
+        if (other.getThumbnailConfiguration() != null && other.getThumbnailConfiguration().equals(this.getThumbnailConfiguration()) == false)
             return false;
         if (other.getRecordingReconnectWindowSeconds() == null ^ this.getRecordingReconnectWindowSeconds() == null)
             return false;
@@ -423,14 +431,6 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
             return false;
         if (other.getRenditionConfiguration() != null && other.getRenditionConfiguration().equals(this.getRenditionConfiguration()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
-            return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
-            return false;
-        if (other.getThumbnailConfiguration() == null ^ this.getThumbnailConfiguration() == null)
-            return false;
-        if (other.getThumbnailConfiguration() != null && other.getThumbnailConfiguration().equals(this.getThumbnailConfiguration()) == false)
-            return false;
         return true;
     }
 
@@ -439,12 +439,12 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getRecordingReconnectWindowSeconds() == null) ? 0 : getRecordingReconnectWindowSeconds().hashCode());
-        hashCode = prime * hashCode + ((getRenditionConfiguration() == null) ? 0 : getRenditionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getThumbnailConfiguration() == null) ? 0 : getThumbnailConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getRecordingReconnectWindowSeconds() == null) ? 0 : getRecordingReconnectWindowSeconds().hashCode());
+        hashCode = prime * hashCode + ((getRenditionConfiguration() == null) ? 0 : getRenditionConfiguration().hashCode());
         return hashCode;
     }
 

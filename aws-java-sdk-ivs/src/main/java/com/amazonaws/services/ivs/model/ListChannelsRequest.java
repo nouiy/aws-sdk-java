@@ -33,28 +33,28 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String filterByName;
     /**
      * <p>
-     * Filters the channel list to match the specified policy.
-     * </p>
-     */
-    private String filterByPlaybackRestrictionPolicyArn;
-    /**
-     * <p>
      * Filters the channel list to match the specified recording-configuration ARN.
      * </p>
      */
     private String filterByRecordingConfigurationArn;
     /**
      * <p>
-     * Maximum number of channels to return. Default: 100.
+     * Filters the channel list to match the specified policy.
      * </p>
      */
-    private Integer maxResults;
+    private String filterByPlaybackRestrictionPolicyArn;
     /**
      * <p>
      * The first channel to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * Maximum number of channels to return. Default: 100.
+     * </p>
+     */
+    private Integer maxResults;
 
     /**
      * <p>
@@ -93,46 +93,6 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     public ListChannelsRequest withFilterByName(String filterByName) {
         setFilterByName(filterByName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Filters the channel list to match the specified policy.
-     * </p>
-     * 
-     * @param filterByPlaybackRestrictionPolicyArn
-     *        Filters the channel list to match the specified policy.
-     */
-
-    public void setFilterByPlaybackRestrictionPolicyArn(String filterByPlaybackRestrictionPolicyArn) {
-        this.filterByPlaybackRestrictionPolicyArn = filterByPlaybackRestrictionPolicyArn;
-    }
-
-    /**
-     * <p>
-     * Filters the channel list to match the specified policy.
-     * </p>
-     * 
-     * @return Filters the channel list to match the specified policy.
-     */
-
-    public String getFilterByPlaybackRestrictionPolicyArn() {
-        return this.filterByPlaybackRestrictionPolicyArn;
-    }
-
-    /**
-     * <p>
-     * Filters the channel list to match the specified policy.
-     * </p>
-     * 
-     * @param filterByPlaybackRestrictionPolicyArn
-     *        Filters the channel list to match the specified policy.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListChannelsRequest withFilterByPlaybackRestrictionPolicyArn(String filterByPlaybackRestrictionPolicyArn) {
-        setFilterByPlaybackRestrictionPolicyArn(filterByPlaybackRestrictionPolicyArn);
         return this;
     }
 
@@ -178,41 +138,41 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Maximum number of channels to return. Default: 100.
+     * Filters the channel list to match the specified policy.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum number of channels to return. Default: 100.
+     * @param filterByPlaybackRestrictionPolicyArn
+     *        Filters the channel list to match the specified policy.
      */
 
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public void setFilterByPlaybackRestrictionPolicyArn(String filterByPlaybackRestrictionPolicyArn) {
+        this.filterByPlaybackRestrictionPolicyArn = filterByPlaybackRestrictionPolicyArn;
     }
 
     /**
      * <p>
-     * Maximum number of channels to return. Default: 100.
+     * Filters the channel list to match the specified policy.
      * </p>
      * 
-     * @return Maximum number of channels to return. Default: 100.
+     * @return Filters the channel list to match the specified policy.
      */
 
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getFilterByPlaybackRestrictionPolicyArn() {
+        return this.filterByPlaybackRestrictionPolicyArn;
     }
 
     /**
      * <p>
-     * Maximum number of channels to return. Default: 100.
+     * Filters the channel list to match the specified policy.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum number of channels to return. Default: 100.
+     * @param filterByPlaybackRestrictionPolicyArn
+     *        Filters the channel list to match the specified policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListChannelsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
+    public ListChannelsRequest withFilterByPlaybackRestrictionPolicyArn(String filterByPlaybackRestrictionPolicyArn) {
+        setFilterByPlaybackRestrictionPolicyArn(filterByPlaybackRestrictionPolicyArn);
         return this;
     }
 
@@ -258,6 +218,46 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Maximum number of channels to return. Default: 100.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of channels to return. Default: 100.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of channels to return. Default: 100.
+     * </p>
+     * 
+     * @return Maximum number of channels to return. Default: 100.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of channels to return. Default: 100.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of channels to return. Default: 100.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListChannelsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -271,14 +271,14 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
         sb.append("{");
         if (getFilterByName() != null)
             sb.append("FilterByName: ").append(getFilterByName()).append(",");
-        if (getFilterByPlaybackRestrictionPolicyArn() != null)
-            sb.append("FilterByPlaybackRestrictionPolicyArn: ").append(getFilterByPlaybackRestrictionPolicyArn()).append(",");
         if (getFilterByRecordingConfigurationArn() != null)
             sb.append("FilterByRecordingConfigurationArn: ").append(getFilterByRecordingConfigurationArn()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getFilterByPlaybackRestrictionPolicyArn() != null)
+            sb.append("FilterByPlaybackRestrictionPolicyArn: ").append(getFilterByPlaybackRestrictionPolicyArn()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -297,23 +297,23 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getFilterByName() != null && other.getFilterByName().equals(this.getFilterByName()) == false)
             return false;
-        if (other.getFilterByPlaybackRestrictionPolicyArn() == null ^ this.getFilterByPlaybackRestrictionPolicyArn() == null)
-            return false;
-        if (other.getFilterByPlaybackRestrictionPolicyArn() != null
-                && other.getFilterByPlaybackRestrictionPolicyArn().equals(this.getFilterByPlaybackRestrictionPolicyArn()) == false)
-            return false;
         if (other.getFilterByRecordingConfigurationArn() == null ^ this.getFilterByRecordingConfigurationArn() == null)
             return false;
         if (other.getFilterByRecordingConfigurationArn() != null
                 && other.getFilterByRecordingConfigurationArn().equals(this.getFilterByRecordingConfigurationArn()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+        if (other.getFilterByPlaybackRestrictionPolicyArn() == null ^ this.getFilterByPlaybackRestrictionPolicyArn() == null)
             return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+        if (other.getFilterByPlaybackRestrictionPolicyArn() != null
+                && other.getFilterByPlaybackRestrictionPolicyArn().equals(this.getFilterByPlaybackRestrictionPolicyArn()) == false)
             return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -324,10 +324,10 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFilterByName() == null) ? 0 : getFilterByName().hashCode());
-        hashCode = prime * hashCode + ((getFilterByPlaybackRestrictionPolicyArn() == null) ? 0 : getFilterByPlaybackRestrictionPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getFilterByRecordingConfigurationArn() == null) ? 0 : getFilterByRecordingConfigurationArn().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getFilterByPlaybackRestrictionPolicyArn() == null) ? 0 : getFilterByPlaybackRestrictionPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

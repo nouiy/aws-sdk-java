@@ -52,6 +52,10 @@ public class NetworkInterfaceJsonUnmarshaller implements Unmarshaller<NetworkInt
                     context.nextToken();
                     networkInterface.setAvailabilityZone(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ipv6Address", targetDepth)) {
+                    context.nextToken();
+                    networkInterface.setIpv6Address(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("networkInterfaceId", targetDepth)) {
                     context.nextToken();
                     networkInterface.setNetworkInterfaceId(context.getUnmarshaller(String.class).unmarshall(context));

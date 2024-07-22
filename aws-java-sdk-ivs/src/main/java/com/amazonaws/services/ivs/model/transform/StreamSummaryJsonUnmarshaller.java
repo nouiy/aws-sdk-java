@@ -52,25 +52,25 @@ public class StreamSummaryJsonUnmarshaller implements Unmarshaller<StreamSummary
                     context.nextToken();
                     streamSummary.setChannelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("health", targetDepth)) {
+                if (context.testExpression("streamId", targetDepth)) {
                     context.nextToken();
-                    streamSummary.setHealth(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("startTime", targetDepth)) {
-                    context.nextToken();
-                    streamSummary.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    streamSummary.setStreamId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();
                     streamSummary.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("streamId", targetDepth)) {
+                if (context.testExpression("health", targetDepth)) {
                     context.nextToken();
-                    streamSummary.setStreamId(context.getUnmarshaller(String.class).unmarshall(context));
+                    streamSummary.setHealth(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("viewerCount", targetDepth)) {
                     context.nextToken();
                     streamSummary.setViewerCount(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("startTime", targetDepth)) {
+                    context.nextToken();
+                    streamSummary.setStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

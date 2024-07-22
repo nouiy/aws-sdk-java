@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StreamSessionSummaryMarshaller {
 
+    private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("streamId").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<Boolean> HASERROREVENT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hasErrorEvent").build();
-    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("streamId").build();
 
     private static final StreamSessionSummaryMarshaller instance = new StreamSessionSummaryMarshaller();
 
@@ -52,10 +52,10 @@ public class StreamSessionSummaryMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(streamSessionSummary.getStreamId(), STREAMID_BINDING);
+            protocolMarshaller.marshall(streamSessionSummary.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(streamSessionSummary.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(streamSessionSummary.getHasErrorEvent(), HASERROREVENT_BINDING);
-            protocolMarshaller.marshall(streamSessionSummary.getStartTime(), STARTTIME_BINDING);
-            protocolMarshaller.marshall(streamSessionSummary.getStreamId(), STREAMID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

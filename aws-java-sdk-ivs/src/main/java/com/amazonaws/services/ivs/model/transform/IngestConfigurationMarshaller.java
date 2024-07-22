@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class IngestConfigurationMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> AUDIO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audio").build();
     private static final MarshallingInfo<StructuredPojo> VIDEO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("video").build();
+    private static final MarshallingInfo<StructuredPojo> AUDIO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audio").build();
 
     private static final IngestConfigurationMarshaller instance = new IngestConfigurationMarshaller();
 
@@ -48,8 +48,8 @@ public class IngestConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(ingestConfiguration.getAudio(), AUDIO_BINDING);
             protocolMarshaller.marshall(ingestConfiguration.getVideo(), VIDEO_BINDING);
+            protocolMarshaller.marshall(ingestConfiguration.getAudio(), AUDIO_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

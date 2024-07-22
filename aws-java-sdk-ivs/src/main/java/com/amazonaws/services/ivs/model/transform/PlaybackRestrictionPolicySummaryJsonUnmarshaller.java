@@ -48,6 +48,10 @@ public class PlaybackRestrictionPolicySummaryJsonUnmarshaller implements Unmarsh
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("arn", targetDepth)) {
+                    context.nextToken();
+                    playbackRestrictionPolicySummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("allowedCountries", targetDepth)) {
                     context.nextToken();
                     playbackRestrictionPolicySummary.setAllowedCountries(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
@@ -59,10 +63,6 @@ public class PlaybackRestrictionPolicySummaryJsonUnmarshaller implements Unmarsh
                     playbackRestrictionPolicySummary.setAllowedOrigins(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("arn", targetDepth)) {
-                    context.nextToken();
-                    playbackRestrictionPolicySummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("enableStrictOriginEnforcement", targetDepth)) {
                     context.nextToken();

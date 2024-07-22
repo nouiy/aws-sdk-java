@@ -35,10 +35,10 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
     private String channelArn;
     /**
      * <p>
-     * The stream’s health.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      */
-    private String health;
+    private String streamId;
     /**
      * <p>
      * URL of the master playlist, required by the video player to play the HLS stream.
@@ -60,10 +60,10 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
     private String state;
     /**
      * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
+     * The stream’s health.
      * </p>
      */
-    private String streamId;
+    private String health;
     /**
      * <p>
      * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
@@ -115,60 +115,41 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The stream’s health.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @param health
-     *        The stream’s health.
-     * @see StreamHealth
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
      */
 
-    public void setHealth(String health) {
-        this.health = health;
+    public void setStreamId(String streamId) {
+        this.streamId = streamId;
     }
 
     /**
      * <p>
-     * The stream’s health.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @return The stream’s health.
-     * @see StreamHealth
+     * @return Unique identifier for a live or previously live stream in the specified channel.
      */
 
-    public String getHealth() {
-        return this.health;
+    public String getStreamId() {
+        return this.streamId;
     }
 
     /**
      * <p>
-     * The stream’s health.
+     * Unique identifier for a live or previously live stream in the specified channel.
      * </p>
      * 
-     * @param health
-     *        The stream’s health.
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see StreamHealth
      */
 
-    public Stream withHealth(String health) {
-        setHealth(health);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The stream’s health.
-     * </p>
-     * 
-     * @param health
-     *        The stream’s health.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see StreamHealth
-     */
-
-    public Stream withHealth(StreamHealth health) {
-        this.health = health.toString();
+    public Stream withStreamId(String streamId) {
+        setStreamId(streamId);
         return this;
     }
 
@@ -321,41 +302,60 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
+     * The stream’s health.
      * </p>
      * 
-     * @param streamId
-     *        Unique identifier for a live or previously live stream in the specified channel.
+     * @param health
+     *        The stream’s health.
+     * @see StreamHealth
      */
 
-    public void setStreamId(String streamId) {
-        this.streamId = streamId;
+    public void setHealth(String health) {
+        this.health = health;
     }
 
     /**
      * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
+     * The stream’s health.
      * </p>
      * 
-     * @return Unique identifier for a live or previously live stream in the specified channel.
+     * @return The stream’s health.
+     * @see StreamHealth
      */
 
-    public String getStreamId() {
-        return this.streamId;
+    public String getHealth() {
+        return this.health;
     }
 
     /**
      * <p>
-     * Unique identifier for a live or previously live stream in the specified channel.
+     * The stream’s health.
      * </p>
      * 
-     * @param streamId
-     *        Unique identifier for a live or previously live stream in the specified channel.
+     * @param health
+     *        The stream’s health.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StreamHealth
      */
 
-    public Stream withStreamId(String streamId) {
-        setStreamId(streamId);
+    public Stream withHealth(String health) {
+        setHealth(health);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The stream’s health.
+     * </p>
+     * 
+     * @param health
+     *        The stream’s health.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StreamHealth
+     */
+
+    public Stream withHealth(StreamHealth health) {
+        this.health = health.toString();
         return this;
     }
 
@@ -428,16 +428,16 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
-        if (getHealth() != null)
-            sb.append("Health: ").append(getHealth()).append(",");
+        if (getStreamId() != null)
+            sb.append("StreamId: ").append(getStreamId()).append(",");
         if (getPlaybackUrl() != null)
             sb.append("PlaybackUrl: ").append(getPlaybackUrl()).append(",");
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
-        if (getStreamId() != null)
-            sb.append("StreamId: ").append(getStreamId()).append(",");
+        if (getHealth() != null)
+            sb.append("Health: ").append(getHealth()).append(",");
         if (getViewerCount() != null)
             sb.append("ViewerCount: ").append(getViewerCount());
         sb.append("}");
@@ -458,9 +458,9 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getChannelArn() != null && other.getChannelArn().equals(this.getChannelArn()) == false)
             return false;
-        if (other.getHealth() == null ^ this.getHealth() == null)
+        if (other.getStreamId() == null ^ this.getStreamId() == null)
             return false;
-        if (other.getHealth() != null && other.getHealth().equals(this.getHealth()) == false)
+        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
             return false;
         if (other.getPlaybackUrl() == null ^ this.getPlaybackUrl() == null)
             return false;
@@ -474,9 +474,9 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
-        if (other.getStreamId() == null ^ this.getStreamId() == null)
+        if (other.getHealth() == null ^ this.getHealth() == null)
             return false;
-        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
+        if (other.getHealth() != null && other.getHealth().equals(this.getHealth()) == false)
             return false;
         if (other.getViewerCount() == null ^ this.getViewerCount() == null)
             return false;
@@ -491,11 +491,11 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
-        hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
+        hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
         hashCode = prime * hashCode + ((getPlaybackUrl() == null) ? 0 : getPlaybackUrl().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
-        hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
+        hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
         hashCode = prime * hashCode + ((getViewerCount() == null) ? 0 : getViewerCount().hashCode());
         return hashCode;
     }

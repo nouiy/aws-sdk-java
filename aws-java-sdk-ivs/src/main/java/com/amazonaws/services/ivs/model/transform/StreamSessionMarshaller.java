@@ -28,18 +28,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StreamSessionMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> CHANNEL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channel").build();
+    private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("streamId").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<StructuredPojo> CHANNEL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channel").build();
     private static final MarshallingInfo<StructuredPojo> INGESTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ingestConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> RECORDINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingConfiguration").build();
-    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("streamId").build();
     private static final MarshallingInfo<List> TRUNCATEDEVENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("truncatedEvents").build();
 
@@ -59,12 +59,12 @@ public class StreamSessionMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(streamSession.getChannel(), CHANNEL_BINDING);
+            protocolMarshaller.marshall(streamSession.getStreamId(), STREAMID_BINDING);
+            protocolMarshaller.marshall(streamSession.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(streamSession.getEndTime(), ENDTIME_BINDING);
+            protocolMarshaller.marshall(streamSession.getChannel(), CHANNEL_BINDING);
             protocolMarshaller.marshall(streamSession.getIngestConfiguration(), INGESTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(streamSession.getRecordingConfiguration(), RECORDINGCONFIGURATION_BINDING);
-            protocolMarshaller.marshall(streamSession.getStartTime(), STARTTIME_BINDING);
-            protocolMarshaller.marshall(streamSession.getStreamId(), STREAMID_BINDING);
             protocolMarshaller.marshall(streamSession.getTruncatedEvents(), TRUNCATEDEVENTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

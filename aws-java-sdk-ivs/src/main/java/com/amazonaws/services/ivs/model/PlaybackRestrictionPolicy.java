@@ -30,6 +30,12 @@ public class PlaybackRestrictionPolicy implements Serializable, Cloneable, Struc
 
     /**
      * <p>
+     * Playback-restriction-policy ARN
+     * </p>
+     */
+    private String arn;
+    /**
+     * <p>
      * A list of country codes that control geoblocking restriction. Allowed values are the officially assigned <a
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> codes. Default: All countries (an
      * empty array).
@@ -45,12 +51,6 @@ public class PlaybackRestrictionPolicy implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.List<String> allowedOrigins;
-    /**
-     * <p>
-     * Playback-restriction-policy ARN
-     * </p>
-     */
-    private String arn;
     /**
      * <p>
      * Whether channel playback is constrained by origin site. Default: <code>false</code>.
@@ -73,6 +73,46 @@ public class PlaybackRestrictionPolicy implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.Map<String, String> tags;
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN
+     * </p>
+     * 
+     * @param arn
+     *        Playback-restriction-policy ARN
+     */
+
+    public void setArn(String arn) {
+        this.arn = arn;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN
+     * </p>
+     * 
+     * @return Playback-restriction-policy ARN
+     */
+
+    public String getArn() {
+        return this.arn;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN
+     * </p>
+     * 
+     * @param arn
+     *        Playback-restriction-policy ARN
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PlaybackRestrictionPolicy withArn(String arn) {
+        setArn(arn);
+        return this;
+    }
 
     /**
      * <p>
@@ -251,46 +291,6 @@ public class PlaybackRestrictionPolicy implements Serializable, Cloneable, Struc
 
     public PlaybackRestrictionPolicy withAllowedOrigins(java.util.Collection<String> allowedOrigins) {
         setAllowedOrigins(allowedOrigins);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Playback-restriction-policy ARN
-     * </p>
-     * 
-     * @param arn
-     *        Playback-restriction-policy ARN
-     */
-
-    public void setArn(String arn) {
-        this.arn = arn;
-    }
-
-    /**
-     * <p>
-     * Playback-restriction-policy ARN
-     * </p>
-     * 
-     * @return Playback-restriction-policy ARN
-     */
-
-    public String getArn() {
-        return this.arn;
-    }
-
-    /**
-     * <p>
-     * Playback-restriction-policy ARN
-     * </p>
-     * 
-     * @param arn
-     *        Playback-restriction-policy ARN
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PlaybackRestrictionPolicy withArn(String arn) {
-        setArn(arn);
         return this;
     }
 
@@ -491,12 +491,12 @@ public class PlaybackRestrictionPolicy implements Serializable, Cloneable, Struc
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getArn() != null)
+            sb.append("Arn: ").append(getArn()).append(",");
         if (getAllowedCountries() != null)
             sb.append("AllowedCountries: ").append(getAllowedCountries()).append(",");
         if (getAllowedOrigins() != null)
             sb.append("AllowedOrigins: ").append(getAllowedOrigins()).append(",");
-        if (getArn() != null)
-            sb.append("Arn: ").append(getArn()).append(",");
         if (getEnableStrictOriginEnforcement() != null)
             sb.append("EnableStrictOriginEnforcement: ").append(getEnableStrictOriginEnforcement()).append(",");
         if (getName() != null)
@@ -517,6 +517,10 @@ public class PlaybackRestrictionPolicy implements Serializable, Cloneable, Struc
         if (obj instanceof PlaybackRestrictionPolicy == false)
             return false;
         PlaybackRestrictionPolicy other = (PlaybackRestrictionPolicy) obj;
+        if (other.getArn() == null ^ this.getArn() == null)
+            return false;
+        if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
         if (other.getAllowedCountries() == null ^ this.getAllowedCountries() == null)
             return false;
         if (other.getAllowedCountries() != null && other.getAllowedCountries().equals(this.getAllowedCountries()) == false)
@@ -524,10 +528,6 @@ public class PlaybackRestrictionPolicy implements Serializable, Cloneable, Struc
         if (other.getAllowedOrigins() == null ^ this.getAllowedOrigins() == null)
             return false;
         if (other.getAllowedOrigins() != null && other.getAllowedOrigins().equals(this.getAllowedOrigins()) == false)
-            return false;
-        if (other.getArn() == null ^ this.getArn() == null)
-            return false;
-        if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
         if (other.getEnableStrictOriginEnforcement() == null ^ this.getEnableStrictOriginEnforcement() == null)
             return false;
@@ -550,9 +550,9 @@ public class PlaybackRestrictionPolicy implements Serializable, Cloneable, Struc
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getAllowedCountries() == null) ? 0 : getAllowedCountries().hashCode());
         hashCode = prime * hashCode + ((getAllowedOrigins() == null) ? 0 : getAllowedOrigins().hashCode());
-        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getEnableStrictOriginEnforcement() == null) ? 0 : getEnableStrictOriginEnforcement().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

@@ -37,6 +37,12 @@ public class BatchStartViewerSessionRevocationError implements Serializable, Clo
     private String channelArn;
     /**
      * <p>
+     * The ID of the viewer session to revoke.
+     * </p>
+     */
+    private String viewerId;
+    /**
+     * <p>
      * Error code.
      * </p>
      */
@@ -47,12 +53,6 @@ public class BatchStartViewerSessionRevocationError implements Serializable, Clo
      * </p>
      */
     private String message;
-    /**
-     * <p>
-     * The ID of the viewer session to revoke.
-     * </p>
-     */
-    private String viewerId;
 
     /**
      * <p>
@@ -91,6 +91,46 @@ public class BatchStartViewerSessionRevocationError implements Serializable, Clo
 
     public BatchStartViewerSessionRevocationError withChannelArn(String channelArn) {
         setChannelArn(channelArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the viewer session to revoke.
+     * </p>
+     * 
+     * @param viewerId
+     *        The ID of the viewer session to revoke.
+     */
+
+    public void setViewerId(String viewerId) {
+        this.viewerId = viewerId;
+    }
+
+    /**
+     * <p>
+     * The ID of the viewer session to revoke.
+     * </p>
+     * 
+     * @return The ID of the viewer session to revoke.
+     */
+
+    public String getViewerId() {
+        return this.viewerId;
+    }
+
+    /**
+     * <p>
+     * The ID of the viewer session to revoke.
+     * </p>
+     * 
+     * @param viewerId
+     *        The ID of the viewer session to revoke.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchStartViewerSessionRevocationError withViewerId(String viewerId) {
+        setViewerId(viewerId);
         return this;
     }
 
@@ -175,46 +215,6 @@ public class BatchStartViewerSessionRevocationError implements Serializable, Clo
     }
 
     /**
-     * <p>
-     * The ID of the viewer session to revoke.
-     * </p>
-     * 
-     * @param viewerId
-     *        The ID of the viewer session to revoke.
-     */
-
-    public void setViewerId(String viewerId) {
-        this.viewerId = viewerId;
-    }
-
-    /**
-     * <p>
-     * The ID of the viewer session to revoke.
-     * </p>
-     * 
-     * @return The ID of the viewer session to revoke.
-     */
-
-    public String getViewerId() {
-        return this.viewerId;
-    }
-
-    /**
-     * <p>
-     * The ID of the viewer session to revoke.
-     * </p>
-     * 
-     * @param viewerId
-     *        The ID of the viewer session to revoke.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchStartViewerSessionRevocationError withViewerId(String viewerId) {
-        setViewerId(viewerId);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -228,12 +228,12 @@ public class BatchStartViewerSessionRevocationError implements Serializable, Clo
         sb.append("{");
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
+        if (getViewerId() != null)
+            sb.append("ViewerId: ").append(getViewerId()).append(",");
         if (getCode() != null)
             sb.append("Code: ").append(getCode()).append(",");
         if (getMessage() != null)
-            sb.append("Message: ").append(getMessage()).append(",");
-        if (getViewerId() != null)
-            sb.append("ViewerId: ").append(getViewerId());
+            sb.append("Message: ").append(getMessage());
         sb.append("}");
         return sb.toString();
     }
@@ -252,6 +252,10 @@ public class BatchStartViewerSessionRevocationError implements Serializable, Clo
             return false;
         if (other.getChannelArn() != null && other.getChannelArn().equals(this.getChannelArn()) == false)
             return false;
+        if (other.getViewerId() == null ^ this.getViewerId() == null)
+            return false;
+        if (other.getViewerId() != null && other.getViewerId().equals(this.getViewerId()) == false)
+            return false;
         if (other.getCode() == null ^ this.getCode() == null)
             return false;
         if (other.getCode() != null && other.getCode().equals(this.getCode()) == false)
@@ -259,10 +263,6 @@ public class BatchStartViewerSessionRevocationError implements Serializable, Clo
         if (other.getMessage() == null ^ this.getMessage() == null)
             return false;
         if (other.getMessage() != null && other.getMessage().equals(this.getMessage()) == false)
-            return false;
-        if (other.getViewerId() == null ^ this.getViewerId() == null)
-            return false;
-        if (other.getViewerId() != null && other.getViewerId().equals(this.getViewerId()) == false)
             return false;
         return true;
     }
@@ -273,9 +273,9 @@ public class BatchStartViewerSessionRevocationError implements Serializable, Clo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
+        hashCode = prime * hashCode + ((getViewerId() == null) ? 0 : getViewerId().hashCode());
         hashCode = prime * hashCode + ((getCode() == null) ? 0 : getCode().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
-        hashCode = prime * hashCode + ((getViewerId() == null) ? 0 : getViewerId().hashCode());
         return hashCode;
     }
 

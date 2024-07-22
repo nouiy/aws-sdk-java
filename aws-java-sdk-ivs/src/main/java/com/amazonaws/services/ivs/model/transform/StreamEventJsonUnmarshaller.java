@@ -48,10 +48,6 @@ public class StreamEventJsonUnmarshaller implements Unmarshaller<StreamEvent, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("eventTime", targetDepth)) {
-                    context.nextToken();
-                    streamEvent.setEventTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     streamEvent.setName(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class StreamEventJsonUnmarshaller implements Unmarshaller<StreamEvent, Js
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
                     streamEvent.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("eventTime", targetDepth)) {
+                    context.nextToken();
+                    streamEvent.setEventTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

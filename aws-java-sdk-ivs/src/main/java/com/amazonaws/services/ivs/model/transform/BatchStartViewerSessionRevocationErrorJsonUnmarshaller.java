@@ -52,6 +52,10 @@ public class BatchStartViewerSessionRevocationErrorJsonUnmarshaller implements U
                     context.nextToken();
                     batchStartViewerSessionRevocationError.setChannelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("viewerId", targetDepth)) {
+                    context.nextToken();
+                    batchStartViewerSessionRevocationError.setViewerId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("code", targetDepth)) {
                     context.nextToken();
                     batchStartViewerSessionRevocationError.setCode(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,10 +63,6 @@ public class BatchStartViewerSessionRevocationErrorJsonUnmarshaller implements U
                 if (context.testExpression("message", targetDepth)) {
                     context.nextToken();
                     batchStartViewerSessionRevocationError.setMessage(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("viewerId", targetDepth)) {
-                    context.nextToken();
-                    batchStartViewerSessionRevocationError.setViewerId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

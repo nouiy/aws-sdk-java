@@ -72,6 +72,13 @@ public class PutEnvironmentBlueprintConfigurationResultJsonUnmarshaller implemen
                     context.nextToken();
                     putEnvironmentBlueprintConfigurationResult.setManageAccessRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("provisioningConfigurations", targetDepth)) {
+                    context.nextToken();
+                    putEnvironmentBlueprintConfigurationResult.setProvisioningConfigurations(new ListUnmarshaller<ProvisioningConfiguration>(
+                            ProvisioningConfigurationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("provisioningRoleArn", targetDepth)) {
                     context.nextToken();
                     putEnvironmentBlueprintConfigurationResult.setProvisioningRoleArn(context.getUnmarshaller(String.class).unmarshall(context));

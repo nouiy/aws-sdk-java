@@ -29,10 +29,10 @@ public class ListStreamSessionsRequestMarshaller {
 
     private static final MarshallingInfo<String> CHANNELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channelArn").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
 
     private static final ListStreamSessionsRequestMarshaller instance = new ListStreamSessionsRequestMarshaller();
 
@@ -51,8 +51,8 @@ public class ListStreamSessionsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(listStreamSessionsRequest.getChannelArn(), CHANNELARN_BINDING);
-            protocolMarshaller.marshall(listStreamSessionsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listStreamSessionsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listStreamSessionsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

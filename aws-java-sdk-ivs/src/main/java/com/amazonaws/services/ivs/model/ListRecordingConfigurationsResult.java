@@ -25,63 +25,17 @@ public class ListRecordingConfigurationsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
+     * List of the matching recording configurations.
+     * </p>
+     */
+    private java.util.List<RecordingConfigurationSummary> recordingConfigurations;
+    /**
+     * <p>
      * If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
      * request to get the next set.
      * </p>
      */
     private String nextToken;
-    /**
-     * <p>
-     * List of the matching recording configurations.
-     * </p>
-     */
-    private java.util.List<RecordingConfigurationSummary> recordingConfigurations;
-
-    /**
-     * <p>
-     * If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
-     * request to get the next set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
-     *        request to get the next set.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
-     * request to get the next set.
-     * </p>
-     * 
-     * @return If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in
-     *         the request to get the next set.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
-     * request to get the next set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
-     *        request to get the next set.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRecordingConfigurationsResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
 
     /**
      * <p>
@@ -154,6 +108,52 @@ public class ListRecordingConfigurationsResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
+     * request to get the next set.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
+     *        request to get the next set.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
+     * request to get the next set.
+     * </p>
+     * 
+     * @return If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in
+     *         the request to get the next set.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
+     * request to get the next set.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more recording configurations than <code>maxResults</code>, use <code>nextToken</code> in the
+     *        request to get the next set.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRecordingConfigurationsResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -165,10 +165,10 @@ public class ListRecordingConfigurationsResult extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getRecordingConfigurations() != null)
-            sb.append("RecordingConfigurations: ").append(getRecordingConfigurations());
+            sb.append("RecordingConfigurations: ").append(getRecordingConfigurations()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -183,13 +183,13 @@ public class ListRecordingConfigurationsResult extends com.amazonaws.AmazonWebSe
         if (obj instanceof ListRecordingConfigurationsResult == false)
             return false;
         ListRecordingConfigurationsResult other = (ListRecordingConfigurationsResult) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getRecordingConfigurations() == null ^ this.getRecordingConfigurations() == null)
             return false;
         if (other.getRecordingConfigurations() != null && other.getRecordingConfigurations().equals(this.getRecordingConfigurations()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -199,8 +199,8 @@ public class ListRecordingConfigurationsResult extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getRecordingConfigurations() == null) ? 0 : getRecordingConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

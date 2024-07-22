@@ -36,16 +36,16 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
     private String arn;
     /**
      * <p>
-     * Key-pair identifier.
-     * </p>
-     */
-    private String fingerprint;
-    /**
-     * <p>
      * Playback-key-pair name. The value does not need to be unique.
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * Key-pair identifier.
+     * </p>
+     */
+    private String fingerprint;
     /**
      * <p>
      * Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See
@@ -99,46 +99,6 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Key-pair identifier.
-     * </p>
-     * 
-     * @param fingerprint
-     *        Key-pair identifier.
-     */
-
-    public void setFingerprint(String fingerprint) {
-        this.fingerprint = fingerprint;
-    }
-
-    /**
-     * <p>
-     * Key-pair identifier.
-     * </p>
-     * 
-     * @return Key-pair identifier.
-     */
-
-    public String getFingerprint() {
-        return this.fingerprint;
-    }
-
-    /**
-     * <p>
-     * Key-pair identifier.
-     * </p>
-     * 
-     * @param fingerprint
-     *        Key-pair identifier.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PlaybackKeyPair withFingerprint(String fingerprint) {
-        setFingerprint(fingerprint);
-        return this;
-    }
-
-    /**
-     * <p>
      * Playback-key-pair name. The value does not need to be unique.
      * </p>
      * 
@@ -174,6 +134,46 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
 
     public PlaybackKeyPair withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Key-pair identifier.
+     * </p>
+     * 
+     * @param fingerprint
+     *        Key-pair identifier.
+     */
+
+    public void setFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+    }
+
+    /**
+     * <p>
+     * Key-pair identifier.
+     * </p>
+     * 
+     * @return Key-pair identifier.
+     */
+
+    public String getFingerprint() {
+        return this.fingerprint;
+    }
+
+    /**
+     * <p>
+     * Key-pair identifier.
+     * </p>
+     * 
+     * @param fingerprint
+     *        Key-pair identifier.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PlaybackKeyPair withFingerprint(String fingerprint) {
+        setFingerprint(fingerprint);
         return this;
     }
 
@@ -284,10 +284,10 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getFingerprint() != null)
-            sb.append("Fingerprint: ").append(getFingerprint()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getFingerprint() != null)
+            sb.append("Fingerprint: ").append(getFingerprint()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -308,13 +308,13 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getFingerprint() == null ^ this.getFingerprint() == null)
-            return false;
-        if (other.getFingerprint() != null && other.getFingerprint().equals(this.getFingerprint()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getFingerprint() == null ^ this.getFingerprint() == null)
+            return false;
+        if (other.getFingerprint() != null && other.getFingerprint().equals(this.getFingerprint()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -329,8 +329,8 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getFingerprint() == null) ? 0 : getFingerprint().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getFingerprint() == null) ? 0 : getFingerprint().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
