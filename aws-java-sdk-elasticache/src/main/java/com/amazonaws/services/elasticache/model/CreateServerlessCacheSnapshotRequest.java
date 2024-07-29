@@ -27,39 +27,42 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name for the snapshot being created. Must be unique for the customer account. Available for Redis only. Must
-     * be between 1 and 255 characters.
+     * The name for the snapshot being created. Must be unique for the customer account. Available for Redis OSS and
+     * Serverless Memcached only. Must be between 1 and 255 characters.
      * </p>
      */
     private String serverlessCacheSnapshotName;
     /**
      * <p>
-     * The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis only.
+     * The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      */
     private String serverlessCacheName;
     /**
      * <p>
-     * The ID of the KMS key used to encrypt the snapshot. Available for Redis only. Default: NULL
+     * The ID of the KMS key used to encrypt the snapshot. Available for Redis OSS and Serverless Memcached only.
+     * Default: NULL
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
 
     /**
      * <p>
-     * The name for the snapshot being created. Must be unique for the customer account. Available for Redis only. Must
-     * be between 1 and 255 characters.
+     * The name for the snapshot being created. Must be unique for the customer account. Available for Redis OSS and
+     * Serverless Memcached only. Must be between 1 and 255 characters.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        The name for the snapshot being created. Must be unique for the customer account. Available for Redis
-     *        only. Must be between 1 and 255 characters.
+     *        The name for the snapshot being created. Must be unique for the customer account. Available for Redis OSS
+     *        and Serverless Memcached only. Must be between 1 and 255 characters.
      */
 
     public void setServerlessCacheSnapshotName(String serverlessCacheSnapshotName) {
@@ -68,12 +71,12 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name for the snapshot being created. Must be unique for the customer account. Available for Redis only. Must
-     * be between 1 and 255 characters.
+     * The name for the snapshot being created. Must be unique for the customer account. Available for Redis OSS and
+     * Serverless Memcached only. Must be between 1 and 255 characters.
      * </p>
      * 
-     * @return The name for the snapshot being created. Must be unique for the customer account. Available for Redis
-     *         only. Must be between 1 and 255 characters.
+     * @return The name for the snapshot being created. Must be unique for the customer account. Available for Redis OSS
+     *         and Serverless Memcached only. Must be between 1 and 255 characters.
      */
 
     public String getServerlessCacheSnapshotName() {
@@ -82,13 +85,13 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name for the snapshot being created. Must be unique for the customer account. Available for Redis only. Must
-     * be between 1 and 255 characters.
+     * The name for the snapshot being created. Must be unique for the customer account. Available for Redis OSS and
+     * Serverless Memcached only. Must be between 1 and 255 characters.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        The name for the snapshot being created. Must be unique for the customer account. Available for Redis
-     *        only. Must be between 1 and 255 characters.
+     *        The name for the snapshot being created. Must be unique for the customer account. Available for Redis OSS
+     *        and Serverless Memcached only. Must be between 1 and 255 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,12 +102,13 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis only.
+     * The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheName
-     *        The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis
-     *        only.
+     *        The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis OSS
+     *        and Serverless Memcached only.
      */
 
     public void setServerlessCacheName(String serverlessCacheName) {
@@ -113,11 +117,12 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis only.
+     * The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @return The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis
-     *         only.
+     *         OSS and Serverless Memcached only.
      */
 
     public String getServerlessCacheName() {
@@ -126,12 +131,13 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis only.
+     * The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheName
-     *        The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis
-     *        only.
+     *        The name of an existing serverless cache. The snapshot is created from this cache. Available for Redis OSS
+     *        and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,11 +148,13 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ID of the KMS key used to encrypt the snapshot. Available for Redis only. Default: NULL
+     * The ID of the KMS key used to encrypt the snapshot. Available for Redis OSS and Serverless Memcached only.
+     * Default: NULL
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of the KMS key used to encrypt the snapshot. Available for Redis only. Default: NULL
+     *        The ID of the KMS key used to encrypt the snapshot. Available for Redis OSS and Serverless Memcached only.
+     *        Default: NULL
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -155,10 +163,12 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ID of the KMS key used to encrypt the snapshot. Available for Redis only. Default: NULL
+     * The ID of the KMS key used to encrypt the snapshot. Available for Redis OSS and Serverless Memcached only.
+     * Default: NULL
      * </p>
      * 
-     * @return The ID of the KMS key used to encrypt the snapshot. Available for Redis only. Default: NULL
+     * @return The ID of the KMS key used to encrypt the snapshot. Available for Redis OSS and Serverless Memcached
+     *         only. Default: NULL
      */
 
     public String getKmsKeyId() {
@@ -167,11 +177,13 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ID of the KMS key used to encrypt the snapshot. Available for Redis only. Default: NULL
+     * The ID of the KMS key used to encrypt the snapshot. Available for Redis OSS and Serverless Memcached only.
+     * Default: NULL
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of the KMS key used to encrypt the snapshot. Available for Redis only. Default: NULL
+     *        The ID of the KMS key used to encrypt the snapshot. Available for Redis OSS and Serverless Memcached only.
+     *        Default: NULL
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -182,10 +194,12 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
-     * @return A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     * @return A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     *         and Serverless Memcached only.
      */
 
     public java.util.List<Tag> getTags() {
@@ -197,11 +211,13 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param tags
-     *        A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     *        A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     *        and Serverless Memcached only.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -215,7 +231,8 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -224,7 +241,8 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param tags
-     *        A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     *        A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     *        and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -240,11 +258,13 @@ public class CreateServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     * A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param tags
-     *        A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis only.
+     *        A list of tags to be added to the snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     *        and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

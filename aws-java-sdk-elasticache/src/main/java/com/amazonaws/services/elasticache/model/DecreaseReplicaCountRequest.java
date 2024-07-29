@@ -33,9 +33,10 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
     private String replicationGroupId;
     /**
      * <p>
-     * The number of read replica nodes you want at the completion of this operation. For Redis (cluster mode disabled)
-     * replication groups, this is the number of replica nodes in the replication group. For Redis (cluster mode
-     * enabled) replication groups, this is the number of replica nodes in each of the replication group's node groups.
+     * The number of read replica nodes you want at the completion of this operation. For Redis OSS (cluster mode
+     * disabled) replication groups, this is the number of replica nodes in the replication group. For Redis OSS
+     * (cluster mode enabled) replication groups, this is the number of replica nodes in each of the replication group's
+     * node groups.
      * </p>
      * <p>
      * The minimum number of replicas in a shard or replication group is:
@@ -43,7 +44,7 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode disabled)
+     * Redis OSS (cluster mode disabled)
      * </p>
      * <ul>
      * <li>
@@ -60,7 +61,8 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)
+     * Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
+     * fails)
      * </p>
      * </li>
      * </ul>
@@ -68,8 +70,8 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
     private Integer newReplicaCount;
     /**
      * <p>
-     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis (cluster mode
-     * enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
+     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS (cluster
+     * mode enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
      * <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      * </p>
      */
@@ -130,9 +132,10 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of read replica nodes you want at the completion of this operation. For Redis (cluster mode disabled)
-     * replication groups, this is the number of replica nodes in the replication group. For Redis (cluster mode
-     * enabled) replication groups, this is the number of replica nodes in each of the replication group's node groups.
+     * The number of read replica nodes you want at the completion of this operation. For Redis OSS (cluster mode
+     * disabled) replication groups, this is the number of replica nodes in the replication group. For Redis OSS
+     * (cluster mode enabled) replication groups, this is the number of replica nodes in each of the replication group's
+     * node groups.
      * </p>
      * <p>
      * The minimum number of replicas in a shard or replication group is:
@@ -140,7 +143,7 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode disabled)
+     * Redis OSS (cluster mode disabled)
      * </p>
      * <ul>
      * <li>
@@ -157,14 +160,15 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)
+     * Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
+     * fails)
      * </p>
      * </li>
      * </ul>
      * 
      * @param newReplicaCount
-     *        The number of read replica nodes you want at the completion of this operation. For Redis (cluster mode
-     *        disabled) replication groups, this is the number of replica nodes in the replication group. For Redis
+     *        The number of read replica nodes you want at the completion of this operation. For Redis OSS (cluster mode
+     *        disabled) replication groups, this is the number of replica nodes in the replication group. For Redis OSS
      *        (cluster mode enabled) replication groups, this is the number of replica nodes in each of the replication
      *        group's node groups.</p>
      *        <p>
@@ -173,7 +177,7 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        Redis (cluster mode disabled)
+     *        Redis OSS (cluster mode disabled)
      *        </p>
      *        <ul>
      *        <li>
@@ -190,8 +194,8 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
-     *        fails)
+     *        Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary
+     *        node fails)
      *        </p>
      *        </li>
      */
@@ -202,9 +206,10 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of read replica nodes you want at the completion of this operation. For Redis (cluster mode disabled)
-     * replication groups, this is the number of replica nodes in the replication group. For Redis (cluster mode
-     * enabled) replication groups, this is the number of replica nodes in each of the replication group's node groups.
+     * The number of read replica nodes you want at the completion of this operation. For Redis OSS (cluster mode
+     * disabled) replication groups, this is the number of replica nodes in the replication group. For Redis OSS
+     * (cluster mode enabled) replication groups, this is the number of replica nodes in each of the replication group's
+     * node groups.
      * </p>
      * <p>
      * The minimum number of replicas in a shard or replication group is:
@@ -212,7 +217,7 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode disabled)
+     * Redis OSS (cluster mode disabled)
      * </p>
      * <ul>
      * <li>
@@ -229,22 +234,23 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)
+     * Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
+     * fails)
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The number of read replica nodes you want at the completion of this operation. For Redis (cluster mode
-     *         disabled) replication groups, this is the number of replica nodes in the replication group. For Redis
-     *         (cluster mode enabled) replication groups, this is the number of replica nodes in each of the replication
-     *         group's node groups.</p>
+     * @return The number of read replica nodes you want at the completion of this operation. For Redis OSS (cluster
+     *         mode disabled) replication groups, this is the number of replica nodes in the replication group. For
+     *         Redis OSS (cluster mode enabled) replication groups, this is the number of replica nodes in each of the
+     *         replication group's node groups.</p>
      *         <p>
      *         The minimum number of replicas in a shard or replication group is:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Redis (cluster mode disabled)
+     *         Redis OSS (cluster mode disabled)
      *         </p>
      *         <ul>
      *         <li>
@@ -261,7 +267,7 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      *         </li>
      *         <li>
      *         <p>
-     *         Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary
+     *         Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary
      *         node fails)
      *         </p>
      *         </li>
@@ -273,9 +279,10 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of read replica nodes you want at the completion of this operation. For Redis (cluster mode disabled)
-     * replication groups, this is the number of replica nodes in the replication group. For Redis (cluster mode
-     * enabled) replication groups, this is the number of replica nodes in each of the replication group's node groups.
+     * The number of read replica nodes you want at the completion of this operation. For Redis OSS (cluster mode
+     * disabled) replication groups, this is the number of replica nodes in the replication group. For Redis OSS
+     * (cluster mode enabled) replication groups, this is the number of replica nodes in each of the replication group's
+     * node groups.
      * </p>
      * <p>
      * The minimum number of replicas in a shard or replication group is:
@@ -283,7 +290,7 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode disabled)
+     * Redis OSS (cluster mode disabled)
      * </p>
      * <ul>
      * <li>
@@ -300,14 +307,15 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)
+     * Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
+     * fails)
      * </p>
      * </li>
      * </ul>
      * 
      * @param newReplicaCount
-     *        The number of read replica nodes you want at the completion of this operation. For Redis (cluster mode
-     *        disabled) replication groups, this is the number of replica nodes in the replication group. For Redis
+     *        The number of read replica nodes you want at the completion of this operation. For Redis OSS (cluster mode
+     *        disabled) replication groups, this is the number of replica nodes in the replication group. For Redis OSS
      *        (cluster mode enabled) replication groups, this is the number of replica nodes in each of the replication
      *        group's node groups.</p>
      *        <p>
@@ -316,7 +324,7 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        Redis (cluster mode disabled)
+     *        Redis OSS (cluster mode disabled)
      *        </p>
      *        <ul>
      *        <li>
@@ -333,8 +341,8 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
-     *        fails)
+     *        Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary
+     *        node fails)
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -347,12 +355,12 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis (cluster mode
-     * enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
+     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS (cluster
+     * mode enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
      * <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      * </p>
      * 
-     * @return A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis
+     * @return A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS
      *         (cluster mode enabled) replication group. The <code>ConfigureShard</code> has three members:
      *         <code>NewReplicaCount</code>, <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      */
@@ -366,14 +374,14 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis (cluster mode
-     * enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
+     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS (cluster
+     * mode enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
      * <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      * </p>
      * 
      * @param replicaConfiguration
-     *        A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis (cluster
-     *        mode enabled) replication group. The <code>ConfigureShard</code> has three members:
+     *        A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS
+     *        (cluster mode enabled) replication group. The <code>ConfigureShard</code> has three members:
      *        <code>NewReplicaCount</code>, <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      */
 
@@ -388,8 +396,8 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis (cluster mode
-     * enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
+     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS (cluster
+     * mode enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
      * <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      * </p>
      * <p>
@@ -399,8 +407,8 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param replicaConfiguration
-     *        A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis (cluster
-     *        mode enabled) replication group. The <code>ConfigureShard</code> has three members:
+     *        A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS
+     *        (cluster mode enabled) replication group. The <code>ConfigureShard</code> has three members:
      *        <code>NewReplicaCount</code>, <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -417,14 +425,14 @@ public class DecreaseReplicaCountRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis (cluster mode
-     * enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
+     * A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS (cluster
+     * mode enabled) replication group. The <code>ConfigureShard</code> has three members: <code>NewReplicaCount</code>,
      * <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      * </p>
      * 
      * @param replicaConfiguration
-     *        A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis (cluster
-     *        mode enabled) replication group. The <code>ConfigureShard</code> has three members:
+     *        A list of <code>ConfigureShard</code> objects that can be used to configure each shard in a Redis OSS
+     *        (cluster mode enabled) replication group. The <code>ConfigureShard</code> has three members:
      *        <code>NewReplicaCount</code>, <code>NodeGroupId</code>, and <code>PreferredAvailabilityZones</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

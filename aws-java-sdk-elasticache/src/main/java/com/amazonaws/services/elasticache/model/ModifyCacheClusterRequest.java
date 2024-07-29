@@ -46,8 +46,8 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * of the specific cache nodes to remove.
      * </p>
      * <p>
-     * For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1
-     * and 40.
+     * For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be between
+     * 1 and 40.
      * </p>
      * <note>
      * <p>
@@ -395,7 +395,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     private String engineVersion;
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      */
@@ -476,7 +476,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      */
@@ -490,8 +490,8 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      */
     private String ipDiscovery;
@@ -566,8 +566,8 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * of the specific cache nodes to remove.
      * </p>
      * <p>
-     * For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1
-     * and 40.
+     * For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be between
+     * 1 and 40.
      * </p>
      * <note>
      * <p>
@@ -600,7 +600,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        the IDs of the specific cache nodes to remove.
      *        </p>
      *        <p>
-     *        For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be
+     *        For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be
      *        between 1 and 40.
      *        </p>
      *        <note>
@@ -640,8 +640,8 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * of the specific cache nodes to remove.
      * </p>
      * <p>
-     * For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1
-     * and 40.
+     * For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be between
+     * 1 and 40.
      * </p>
      * <note>
      * <p>
@@ -673,7 +673,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *         the IDs of the specific cache nodes to remove.
      *         </p>
      *         <p>
-     *         For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be
+     *         For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be
      *         between 1 and 40.
      *         </p>
      *         <note>
@@ -713,8 +713,8 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * of the specific cache nodes to remove.
      * </p>
      * <p>
-     * For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1
-     * and 40.
+     * For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be between
+     * 1 and 40.
      * </p>
      * <note>
      * <p>
@@ -747,7 +747,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        the IDs of the specific cache nodes to remove.
      *        </p>
      *        <p>
-     *        For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be
+     *        For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be
      *        between 1 and 40.
      *        </p>
      *        <note>
@@ -3347,13 +3347,13 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *         If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *        to the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -3362,12 +3362,13 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * @return  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to
+     *         opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous
+     *         versions. 
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -3376,13 +3377,13 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *         If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *        to the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3393,12 +3394,13 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * @return  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to
+     *         opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous
+     *         versions. 
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -3748,7 +3750,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -3775,7 +3777,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *        Redis AUTH</a>
+     *        Redis OSS AUTH</a>
      * @see AuthTokenUpdateStrategyType
      */
 
@@ -3807,7 +3809,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -3833,7 +3835,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *         <p>
      *         For more information, see <a
      *         href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *         Redis AUTH</a>
+     *         Redis OSS AUTH</a>
      * @see AuthTokenUpdateStrategyType
      */
 
@@ -3865,7 +3867,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -3892,7 +3894,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *        Redis AUTH</a>
+     *        Redis OSS AUTH</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthTokenUpdateStrategyType
      */
@@ -3926,7 +3928,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -3953,7 +3955,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *        Redis AUTH</a>
+     *        Redis OSS AUTH</a>
      * @see AuthTokenUpdateStrategyType
      */
 
@@ -3985,7 +3987,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -4012,7 +4014,7 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *        Redis AUTH</a>
+     *        Redis OSS AUTH</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthTokenUpdateStrategyType
      */
@@ -4098,14 +4100,14 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see IpDiscovery
      */
 
@@ -4116,13 +4118,13 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @return The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *         is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *         instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *         is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *         all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see IpDiscovery
      */
 
@@ -4133,14 +4135,14 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpDiscovery
      */
@@ -4153,14 +4155,14 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see IpDiscovery
      */
 
@@ -4171,14 +4173,14 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpDiscovery
      */

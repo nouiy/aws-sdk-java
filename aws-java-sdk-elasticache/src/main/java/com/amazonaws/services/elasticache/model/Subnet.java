@@ -48,7 +48,7 @@ public class Subnet implements Serializable, Cloneable {
     /**
      * <p>
      * Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads using
-     * Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      */
@@ -177,13 +177,13 @@ public class Subnet implements Serializable, Cloneable {
     /**
      * <p>
      * Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads using
-     * Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @return Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     *         using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
-     *         href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *         using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the
+     *         <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see NetworkType
      */
 
@@ -197,14 +197,14 @@ public class Subnet implements Serializable, Cloneable {
     /**
      * <p>
      * Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads using
-     * Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param supportedNetworkTypes
      *        Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     *        using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
-     *        href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the
+     *        <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see NetworkType
      */
 
@@ -220,7 +220,7 @@ public class Subnet implements Serializable, Cloneable {
     /**
      * <p>
      * Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads using
-     * Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * <p>
@@ -231,8 +231,8 @@ public class Subnet implements Serializable, Cloneable {
      * 
      * @param supportedNetworkTypes
      *        Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     *        using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
-     *        href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the
+     *        <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkType
      */
@@ -250,14 +250,14 @@ public class Subnet implements Serializable, Cloneable {
     /**
      * <p>
      * Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads using
-     * Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param supportedNetworkTypes
      *        Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     *        using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
-     *        href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the
+     *        <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkType
      */
@@ -270,14 +270,14 @@ public class Subnet implements Serializable, Cloneable {
     /**
      * <p>
      * Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads using
-     * Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param supportedNetworkTypes
      *        Either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     *        using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
-     *        href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the
+     *        <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkType
      */

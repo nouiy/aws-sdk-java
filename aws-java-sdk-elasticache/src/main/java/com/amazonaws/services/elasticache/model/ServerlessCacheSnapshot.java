@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The resource representing a serverless cache snapshot. Available for Redis only.
+ * The resource representing a serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ServerlessCacheSnapshot"
@@ -28,68 +28,70 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier of a serverless cache snapshot. Available for Redis only.
+     * The identifier of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String serverlessCacheSnapshotName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis only.
+     * The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached
+     * only.
      * </p>
      */
     private String aRN;
     /**
      * <p>
      * The ID of the Amazon Web Services Key Management Service (KMS) key of a serverless cache snapshot. Available for
-     * Redis only.
+     * Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * The type of snapshot of serverless cache. Available for Redis only.
+     * The type of snapshot of serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String snapshotType;
     /**
      * <p>
-     * The current status of the serverless cache. Available for Redis only.
+     * The current status of the serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String status;
     /**
      * <p>
      * The date and time that the source serverless cache's metadata and cache data set was obtained for the snapshot.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private java.util.Date createTime;
     /**
      * <p>
-     * The time that the serverless cache snapshot will expire. Available for Redis only.
+     * The time that the serverless cache snapshot will expire. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private java.util.Date expiryTime;
     /**
      * <p>
-     * The total size of a serverless cache snapshot, in bytes. Available for Redis only.
+     * The total size of a serverless cache snapshot, in bytes. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String bytesUsedForCache;
     /**
      * <p>
-     * The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis only.
+     * The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      */
     private ServerlessCacheConfiguration serverlessCacheConfiguration;
 
     /**
      * <p>
-     * The identifier of a serverless cache snapshot. Available for Redis only.
+     * The identifier of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        The identifier of a serverless cache snapshot. Available for Redis only.
+     *        The identifier of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setServerlessCacheSnapshotName(String serverlessCacheSnapshotName) {
@@ -98,10 +100,10 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier of a serverless cache snapshot. Available for Redis only.
+     * The identifier of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return The identifier of a serverless cache snapshot. Available for Redis only.
+     * @return The identifier of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getServerlessCacheSnapshotName() {
@@ -110,11 +112,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier of a serverless cache snapshot. Available for Redis only.
+     * The identifier of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        The identifier of a serverless cache snapshot. Available for Redis only.
+     *        The identifier of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,11 +127,13 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis only.
+     * The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached
+     * only.
      * </p>
      * 
      * @param aRN
-     *        The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis only.
+     *        The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis OSS and Serverless
+     *        Memcached only.
      */
 
     public void setARN(String aRN) {
@@ -138,10 +142,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis only.
+     * The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached
+     * only.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis only.
+     * @return The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis OSS and Serverless
+     *         Memcached only.
      */
 
     public String getARN() {
@@ -150,11 +156,13 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis only.
+     * The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis OSS and Serverless Memcached
+     * only.
      * </p>
      * 
      * @param aRN
-     *        The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis only.
+     *        The Amazon Resource Name (ARN) of a serverless cache snapshot. Available for Redis OSS and Serverless
+     *        Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,12 +174,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The ID of the Amazon Web Services Key Management Service (KMS) key of a serverless cache snapshot. Available for
-     * Redis only.
+     * Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param kmsKeyId
      *        The ID of the Amazon Web Services Key Management Service (KMS) key of a serverless cache snapshot.
-     *        Available for Redis only.
+     *        Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -181,11 +189,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The ID of the Amazon Web Services Key Management Service (KMS) key of a serverless cache snapshot. Available for
-     * Redis only.
+     * Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @return The ID of the Amazon Web Services Key Management Service (KMS) key of a serverless cache snapshot.
-     *         Available for Redis only.
+     *         Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getKmsKeyId() {
@@ -195,12 +203,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The ID of the Amazon Web Services Key Management Service (KMS) key of a serverless cache snapshot. Available for
-     * Redis only.
+     * Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param kmsKeyId
      *        The ID of the Amazon Web Services Key Management Service (KMS) key of a serverless cache snapshot.
-     *        Available for Redis only.
+     *        Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -211,11 +219,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of snapshot of serverless cache. Available for Redis only.
+     * The type of snapshot of serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param snapshotType
-     *        The type of snapshot of serverless cache. Available for Redis only.
+     *        The type of snapshot of serverless cache. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setSnapshotType(String snapshotType) {
@@ -224,10 +232,10 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of snapshot of serverless cache. Available for Redis only.
+     * The type of snapshot of serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return The type of snapshot of serverless cache. Available for Redis only.
+     * @return The type of snapshot of serverless cache. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getSnapshotType() {
@@ -236,11 +244,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of snapshot of serverless cache. Available for Redis only.
+     * The type of snapshot of serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param snapshotType
-     *        The type of snapshot of serverless cache. Available for Redis only.
+     *        The type of snapshot of serverless cache. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,11 +259,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current status of the serverless cache. Available for Redis only.
+     * The current status of the serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param status
-     *        The current status of the serverless cache. Available for Redis only.
+     *        The current status of the serverless cache. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setStatus(String status) {
@@ -264,10 +272,10 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current status of the serverless cache. Available for Redis only.
+     * The current status of the serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return The current status of the serverless cache. Available for Redis only.
+     * @return The current status of the serverless cache. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getStatus() {
@@ -276,11 +284,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current status of the serverless cache. Available for Redis only.
+     * The current status of the serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param status
-     *        The current status of the serverless cache. Available for Redis only.
+     *        The current status of the serverless cache. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -292,12 +300,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The date and time that the source serverless cache's metadata and cache data set was obtained for the snapshot.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param createTime
      *        The date and time that the source serverless cache's metadata and cache data set was obtained for the
-     *        snapshot. Available for Redis only.
+     *        snapshot. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setCreateTime(java.util.Date createTime) {
@@ -307,11 +315,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The date and time that the source serverless cache's metadata and cache data set was obtained for the snapshot.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @return The date and time that the source serverless cache's metadata and cache data set was obtained for the
-     *         snapshot. Available for Redis only.
+     *         snapshot. Available for Redis OSS and Serverless Memcached only.
      */
 
     public java.util.Date getCreateTime() {
@@ -321,12 +329,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The date and time that the source serverless cache's metadata and cache data set was obtained for the snapshot.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param createTime
      *        The date and time that the source serverless cache's metadata and cache data set was obtained for the
-     *        snapshot. Available for Redis only.
+     *        snapshot. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -337,11 +345,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The time that the serverless cache snapshot will expire. Available for Redis only.
+     * The time that the serverless cache snapshot will expire. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param expiryTime
-     *        The time that the serverless cache snapshot will expire. Available for Redis only.
+     *        The time that the serverless cache snapshot will expire. Available for Redis OSS and Serverless Memcached
+     *        only.
      */
 
     public void setExpiryTime(java.util.Date expiryTime) {
@@ -350,10 +359,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The time that the serverless cache snapshot will expire. Available for Redis only.
+     * The time that the serverless cache snapshot will expire. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return The time that the serverless cache snapshot will expire. Available for Redis only.
+     * @return The time that the serverless cache snapshot will expire. Available for Redis OSS and Serverless Memcached
+     *         only.
      */
 
     public java.util.Date getExpiryTime() {
@@ -362,11 +372,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The time that the serverless cache snapshot will expire. Available for Redis only.
+     * The time that the serverless cache snapshot will expire. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param expiryTime
-     *        The time that the serverless cache snapshot will expire. Available for Redis only.
+     *        The time that the serverless cache snapshot will expire. Available for Redis OSS and Serverless Memcached
+     *        only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -377,11 +388,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The total size of a serverless cache snapshot, in bytes. Available for Redis only.
+     * The total size of a serverless cache snapshot, in bytes. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param bytesUsedForCache
-     *        The total size of a serverless cache snapshot, in bytes. Available for Redis only.
+     *        The total size of a serverless cache snapshot, in bytes. Available for Redis OSS and Serverless Memcached
+     *        only.
      */
 
     public void setBytesUsedForCache(String bytesUsedForCache) {
@@ -390,10 +402,11 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The total size of a serverless cache snapshot, in bytes. Available for Redis only.
+     * The total size of a serverless cache snapshot, in bytes. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return The total size of a serverless cache snapshot, in bytes. Available for Redis only.
+     * @return The total size of a serverless cache snapshot, in bytes. Available for Redis OSS and Serverless Memcached
+     *         only.
      */
 
     public String getBytesUsedForCache() {
@@ -402,11 +415,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The total size of a serverless cache snapshot, in bytes. Available for Redis only.
+     * The total size of a serverless cache snapshot, in bytes. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param bytesUsedForCache
-     *        The total size of a serverless cache snapshot, in bytes. Available for Redis only.
+     *        The total size of a serverless cache snapshot, in bytes. Available for Redis OSS and Serverless Memcached
+     *        only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -417,11 +431,13 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis only.
+     * The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheConfiguration
-     *        The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis only.
+     *        The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis OSS and
+     *        Serverless Memcached only.
      */
 
     public void setServerlessCacheConfiguration(ServerlessCacheConfiguration serverlessCacheConfiguration) {
@@ -430,10 +446,12 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis only.
+     * The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
-     * @return The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis only.
+     * @return The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis OSS
+     *         and Serverless Memcached only.
      */
 
     public ServerlessCacheConfiguration getServerlessCacheConfiguration() {
@@ -442,11 +460,13 @@ public class ServerlessCacheSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis only.
+     * The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheConfiguration
-     *        The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis only.
+     *        The configuration of the serverless cache, at the time the snapshot was taken. Available for Redis OSS and
+     *        Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

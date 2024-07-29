@@ -41,7 +41,7 @@ public class NodeGroupMember implements Serializable, Cloneable {
     /**
      * <p>
      * The information required for client programs to connect to a node for read operations. The read endpoint is only
-     * applicable on Redis (cluster mode disabled) clusters.
+     * applicable on Redis OSS (cluster mode disabled) clusters.
      * </p>
      */
     private Endpoint readEndpoint;
@@ -60,7 +60,7 @@ public class NodeGroupMember implements Serializable, Cloneable {
     /**
      * <p>
      * The role that is currently assigned to the node - <code>primary</code> or <code>replica</code>. This member is
-     * only applicable for Redis (cluster mode disabled) replication groups.
+     * only applicable for Redis OSS (cluster mode disabled) replication groups.
      * </p>
      */
     private String currentRole;
@@ -148,12 +148,12 @@ public class NodeGroupMember implements Serializable, Cloneable {
     /**
      * <p>
      * The information required for client programs to connect to a node for read operations. The read endpoint is only
-     * applicable on Redis (cluster mode disabled) clusters.
+     * applicable on Redis OSS (cluster mode disabled) clusters.
      * </p>
      * 
      * @param readEndpoint
      *        The information required for client programs to connect to a node for read operations. The read endpoint
-     *        is only applicable on Redis (cluster mode disabled) clusters.
+     *        is only applicable on Redis OSS (cluster mode disabled) clusters.
      */
 
     public void setReadEndpoint(Endpoint readEndpoint) {
@@ -163,11 +163,11 @@ public class NodeGroupMember implements Serializable, Cloneable {
     /**
      * <p>
      * The information required for client programs to connect to a node for read operations. The read endpoint is only
-     * applicable on Redis (cluster mode disabled) clusters.
+     * applicable on Redis OSS (cluster mode disabled) clusters.
      * </p>
      * 
      * @return The information required for client programs to connect to a node for read operations. The read endpoint
-     *         is only applicable on Redis (cluster mode disabled) clusters.
+     *         is only applicable on Redis OSS (cluster mode disabled) clusters.
      */
 
     public Endpoint getReadEndpoint() {
@@ -177,12 +177,12 @@ public class NodeGroupMember implements Serializable, Cloneable {
     /**
      * <p>
      * The information required for client programs to connect to a node for read operations. The read endpoint is only
-     * applicable on Redis (cluster mode disabled) clusters.
+     * applicable on Redis OSS (cluster mode disabled) clusters.
      * </p>
      * 
      * @param readEndpoint
      *        The information required for client programs to connect to a node for read operations. The read endpoint
-     *        is only applicable on Redis (cluster mode disabled) clusters.
+     *        is only applicable on Redis OSS (cluster mode disabled) clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -274,12 +274,12 @@ public class NodeGroupMember implements Serializable, Cloneable {
     /**
      * <p>
      * The role that is currently assigned to the node - <code>primary</code> or <code>replica</code>. This member is
-     * only applicable for Redis (cluster mode disabled) replication groups.
+     * only applicable for Redis OSS (cluster mode disabled) replication groups.
      * </p>
      * 
      * @param currentRole
      *        The role that is currently assigned to the node - <code>primary</code> or <code>replica</code>. This
-     *        member is only applicable for Redis (cluster mode disabled) replication groups.
+     *        member is only applicable for Redis OSS (cluster mode disabled) replication groups.
      */
 
     public void setCurrentRole(String currentRole) {
@@ -289,11 +289,11 @@ public class NodeGroupMember implements Serializable, Cloneable {
     /**
      * <p>
      * The role that is currently assigned to the node - <code>primary</code> or <code>replica</code>. This member is
-     * only applicable for Redis (cluster mode disabled) replication groups.
+     * only applicable for Redis OSS (cluster mode disabled) replication groups.
      * </p>
      * 
      * @return The role that is currently assigned to the node - <code>primary</code> or <code>replica</code>. This
-     *         member is only applicable for Redis (cluster mode disabled) replication groups.
+     *         member is only applicable for Redis OSS (cluster mode disabled) replication groups.
      */
 
     public String getCurrentRole() {
@@ -303,12 +303,12 @@ public class NodeGroupMember implements Serializable, Cloneable {
     /**
      * <p>
      * The role that is currently assigned to the node - <code>primary</code> or <code>replica</code>. This member is
-     * only applicable for Redis (cluster mode disabled) replication groups.
+     * only applicable for Redis OSS (cluster mode disabled) replication groups.
      * </p>
      * 
      * @param currentRole
      *        The role that is currently assigned to the node - <code>primary</code> or <code>replica</code>. This
-     *        member is only applicable for Redis (cluster mode disabled) replication groups.
+     *        member is only applicable for Redis OSS (cluster mode disabled) replication groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

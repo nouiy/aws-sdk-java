@@ -27,25 +27,25 @@ public class ExportServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The identifier of the serverless cache snapshot to be exported to S3. Available for Redis only.
+     * The identifier of the serverless cache snapshot to be exported to S3. Available for Redis OSS only.
      * </p>
      */
     private String serverlessCacheSnapshotName;
     /**
      * <p>
      * Name of the Amazon S3 bucket to export the snapshot to. The Amazon S3 bucket must also be in same region as the
-     * snapshot. Available for Redis only.
+     * snapshot. Available for Redis OSS only.
      * </p>
      */
     private String s3BucketName;
 
     /**
      * <p>
-     * The identifier of the serverless cache snapshot to be exported to S3. Available for Redis only.
+     * The identifier of the serverless cache snapshot to be exported to S3. Available for Redis OSS only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        The identifier of the serverless cache snapshot to be exported to S3. Available for Redis only.
+     *        The identifier of the serverless cache snapshot to be exported to S3. Available for Redis OSS only.
      */
 
     public void setServerlessCacheSnapshotName(String serverlessCacheSnapshotName) {
@@ -54,10 +54,10 @@ public class ExportServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The identifier of the serverless cache snapshot to be exported to S3. Available for Redis only.
+     * The identifier of the serverless cache snapshot to be exported to S3. Available for Redis OSS only.
      * </p>
      * 
-     * @return The identifier of the serverless cache snapshot to be exported to S3. Available for Redis only.
+     * @return The identifier of the serverless cache snapshot to be exported to S3. Available for Redis OSS only.
      */
 
     public String getServerlessCacheSnapshotName() {
@@ -66,11 +66,11 @@ public class ExportServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The identifier of the serverless cache snapshot to be exported to S3. Available for Redis only.
+     * The identifier of the serverless cache snapshot to be exported to S3. Available for Redis OSS only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        The identifier of the serverless cache snapshot to be exported to S3. Available for Redis only.
+     *        The identifier of the serverless cache snapshot to be exported to S3. Available for Redis OSS only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,12 +82,12 @@ public class ExportServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * Name of the Amazon S3 bucket to export the snapshot to. The Amazon S3 bucket must also be in same region as the
-     * snapshot. Available for Redis only.
+     * snapshot. Available for Redis OSS only.
      * </p>
      * 
      * @param s3BucketName
      *        Name of the Amazon S3 bucket to export the snapshot to. The Amazon S3 bucket must also be in same region
-     *        as the snapshot. Available for Redis only.
+     *        as the snapshot. Available for Redis OSS only.
      */
 
     public void setS3BucketName(String s3BucketName) {
@@ -97,11 +97,11 @@ public class ExportServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * Name of the Amazon S3 bucket to export the snapshot to. The Amazon S3 bucket must also be in same region as the
-     * snapshot. Available for Redis only.
+     * snapshot. Available for Redis OSS only.
      * </p>
      * 
      * @return Name of the Amazon S3 bucket to export the snapshot to. The Amazon S3 bucket must also be in same region
-     *         as the snapshot. Available for Redis only.
+     *         as the snapshot. Available for Redis OSS only.
      */
 
     public String getS3BucketName() {
@@ -111,12 +111,12 @@ public class ExportServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * Name of the Amazon S3 bucket to export the snapshot to. The Amazon S3 bucket must also be in same region as the
-     * snapshot. Available for Redis only.
+     * snapshot. Available for Redis OSS only.
      * </p>
      * 
      * @param s3BucketName
      *        Name of the Amazon S3 bucket to export the snapshot to. The Amazon S3 bucket must also be in same region
-     *        as the snapshot. Available for Redis only.
+     *        as the snapshot. Available for Redis OSS only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

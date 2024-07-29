@@ -46,7 +46,7 @@ public class ProcessedUpdateAction implements Serializable, Cloneable {
     private String serviceUpdateName;
     /**
      * <p>
-     * The status of the update action on the Redis cluster
+     * The status of the update action on the Redis OSS cluster
      * </p>
      */
     private String updateActionStatus;
@@ -173,11 +173,11 @@ public class ProcessedUpdateAction implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the update action on the Redis cluster
+     * The status of the update action on the Redis OSS cluster
      * </p>
      * 
      * @param updateActionStatus
-     *        The status of the update action on the Redis cluster
+     *        The status of the update action on the Redis OSS cluster
      * @see UpdateActionStatus
      */
 
@@ -187,10 +187,10 @@ public class ProcessedUpdateAction implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the update action on the Redis cluster
+     * The status of the update action on the Redis OSS cluster
      * </p>
      * 
-     * @return The status of the update action on the Redis cluster
+     * @return The status of the update action on the Redis OSS cluster
      * @see UpdateActionStatus
      */
 
@@ -200,11 +200,11 @@ public class ProcessedUpdateAction implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the update action on the Redis cluster
+     * The status of the update action on the Redis OSS cluster
      * </p>
      * 
      * @param updateActionStatus
-     *        The status of the update action on the Redis cluster
+     *        The status of the update action on the Redis OSS cluster
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UpdateActionStatus
      */
@@ -216,11 +216,11 @@ public class ProcessedUpdateAction implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the update action on the Redis cluster
+     * The status of the update action on the Redis OSS cluster
      * </p>
      * 
      * @param updateActionStatus
-     *        The status of the update action on the Redis cluster
+     *        The status of the update action on the Redis OSS cluster
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UpdateActionStatus
      */

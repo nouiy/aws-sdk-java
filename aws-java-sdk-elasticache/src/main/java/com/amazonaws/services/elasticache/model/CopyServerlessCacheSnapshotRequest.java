@@ -27,37 +27,41 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis only.
+     * The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      */
     private String sourceServerlessCacheSnapshotName;
     /**
      * <p>
-     * The identifier for the snapshot to be created. Available for Redis only.
+     * The identifier for the snapshot to be created. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String targetServerlessCacheSnapshotName;
     /**
      * <p>
-     * The identifier of the KMS key used to encrypt the target snapshot. Available for Redis only.
+     * The identifier of the KMS key used to encrypt the target snapshot. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis only.
-     * Default: NULL
+     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     * and Serverless Memcached only. Default: NULL
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
 
     /**
      * <p>
-     * The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis only.
+     * The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @param sourceServerlessCacheSnapshotName
-     *        The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis only.
+     *        The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis OSS and
+     *        Serverless Memcached only.
      */
 
     public void setSourceServerlessCacheSnapshotName(String sourceServerlessCacheSnapshotName) {
@@ -66,10 +70,12 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis only.
+     * The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
-     * @return The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis only.
+     * @return The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis OSS and
+     *         Serverless Memcached only.
      */
 
     public String getSourceServerlessCacheSnapshotName() {
@@ -78,11 +84,13 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis only.
+     * The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @param sourceServerlessCacheSnapshotName
-     *        The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis only.
+     *        The identifier of the existing serverless cache’s snapshot to be copied. Available for Redis OSS and
+     *        Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +101,11 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier for the snapshot to be created. Available for Redis only.
+     * The identifier for the snapshot to be created. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param targetServerlessCacheSnapshotName
-     *        The identifier for the snapshot to be created. Available for Redis only.
+     *        The identifier for the snapshot to be created. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setTargetServerlessCacheSnapshotName(String targetServerlessCacheSnapshotName) {
@@ -106,10 +114,10 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier for the snapshot to be created. Available for Redis only.
+     * The identifier for the snapshot to be created. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return The identifier for the snapshot to be created. Available for Redis only.
+     * @return The identifier for the snapshot to be created. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getTargetServerlessCacheSnapshotName() {
@@ -118,11 +126,11 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier for the snapshot to be created. Available for Redis only.
+     * The identifier for the snapshot to be created. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param targetServerlessCacheSnapshotName
-     *        The identifier for the snapshot to be created. Available for Redis only.
+     *        The identifier for the snapshot to be created. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +141,13 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier of the KMS key used to encrypt the target snapshot. Available for Redis only.
+     * The identifier of the KMS key used to encrypt the target snapshot. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the KMS key used to encrypt the target snapshot. Available for Redis only.
+     *        The identifier of the KMS key used to encrypt the target snapshot. Available for Redis OSS and Serverless
+     *        Memcached only.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -146,10 +156,12 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier of the KMS key used to encrypt the target snapshot. Available for Redis only.
+     * The identifier of the KMS key used to encrypt the target snapshot. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
-     * @return The identifier of the KMS key used to encrypt the target snapshot. Available for Redis only.
+     * @return The identifier of the KMS key used to encrypt the target snapshot. Available for Redis OSS and Serverless
+     *         Memcached only.
      */
 
     public String getKmsKeyId() {
@@ -158,11 +170,13 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier of the KMS key used to encrypt the target snapshot. Available for Redis only.
+     * The identifier of the KMS key used to encrypt the target snapshot. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the KMS key used to encrypt the target snapshot. Available for Redis only.
+     *        The identifier of the KMS key used to encrypt the target snapshot. Available for Redis OSS and Serverless
+     *        Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,12 +187,12 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis only.
-     * Default: NULL
+     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     * and Serverless Memcached only. Default: NULL
      * </p>
      * 
      * @return A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for
-     *         Redis only. Default: NULL
+     *         Redis OSS and Serverless Memcached only. Default: NULL
      */
 
     public java.util.List<Tag> getTags() {
@@ -190,13 +204,13 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis only.
-     * Default: NULL
+     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     * and Serverless Memcached only. Default: NULL
      * </p>
      * 
      * @param tags
      *        A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis
-     *        only. Default: NULL
+     *        OSS and Serverless Memcached only. Default: NULL
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -210,8 +224,8 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis only.
-     * Default: NULL
+     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     * and Serverless Memcached only. Default: NULL
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -221,7 +235,7 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
      * 
      * @param tags
      *        A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis
-     *        only. Default: NULL
+     *        OSS and Serverless Memcached only. Default: NULL
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,13 +251,13 @@ public class CopyServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis only.
-     * Default: NULL
+     * A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis OSS
+     * and Serverless Memcached only. Default: NULL
      * </p>
      * 
      * @param tags
      *        A list of tags to be added to the target snapshot resource. A tag is a key-value pair. Available for Redis
-     *        only. Default: NULL
+     *        OSS and Serverless Memcached only. Default: NULL
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

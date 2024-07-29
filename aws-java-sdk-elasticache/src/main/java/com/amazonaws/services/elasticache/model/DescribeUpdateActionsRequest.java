@@ -45,7 +45,7 @@ public class DescribeUpdateActionsRequest extends com.amazonaws.AmazonWebService
     private com.amazonaws.internal.SdkInternalList<String> cacheClusterIds;
     /**
      * <p>
-     * The Elasticache engine to which the update applies. Either Redis or Memcached
+     * The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * </p>
      */
     private String engine;
@@ -276,11 +276,11 @@ public class DescribeUpdateActionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Elasticache engine to which the update applies. Either Redis or Memcached
+     * The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * </p>
      * 
      * @param engine
-     *        The Elasticache engine to which the update applies. Either Redis or Memcached
+     *        The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      */
 
     public void setEngine(String engine) {
@@ -289,10 +289,10 @@ public class DescribeUpdateActionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Elasticache engine to which the update applies. Either Redis or Memcached
+     * The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * </p>
      * 
-     * @return The Elasticache engine to which the update applies. Either Redis or Memcached
+     * @return The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      */
 
     public String getEngine() {
@@ -301,11 +301,11 @@ public class DescribeUpdateActionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Elasticache engine to which the update applies. Either Redis or Memcached
+     * The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * </p>
      * 
      * @param engine
-     *        The Elasticache engine to which the update applies. Either Redis or Memcached
+     *        The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

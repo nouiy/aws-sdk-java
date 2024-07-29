@@ -52,10 +52,11 @@ import com.amazonaws.services.memorydb.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * MemoryDB for Redis is a fully managed, Redis-compatible, in-memory database that delivers ultra-fast performance and
+ * MemoryDB is a fully managed, Redis OSS-compatible, in-memory database that delivers ultra-fast performance and
  * Multi-AZ durability for modern applications built using microservices architectures. MemoryDB stores the entire
- * database in-memory, enabling low latency and high throughput data access. It is compatible with Redis, a popular open
- * source data store, enabling you to leverage Redis’ flexible and friendly data structures, APIs, and commands.
+ * database in-memory, enabling low latency and high throughput data access. It is compatible with Redis OSS, a popular
+ * open source data store, enabling you to leverage Redis OSS’ flexible and friendly data structures, APIs, and
+ * commands.
  * </p>
  */
 @ThreadSafe
@@ -1281,7 +1282,7 @@ public class AmazonMemoryDBClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Returns a list of the available Redis engine versions.
+     * Returns a list of the available Redis OSS engine versions.
      * </p>
      * 
      * @param describeEngineVersionsRequest

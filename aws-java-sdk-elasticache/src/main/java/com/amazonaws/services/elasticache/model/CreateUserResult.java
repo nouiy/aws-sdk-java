@@ -49,7 +49,7 @@ public class CreateUserResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private String engine;
     /**
      * <p>
-     * The minimum engine version required, which is Redis 6.0
+     * The minimum engine version required, which is Redis OSS 6.0
      * </p>
      */
     private String minimumEngineVersion;
@@ -240,11 +240,11 @@ public class CreateUserResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The minimum engine version required, which is Redis 6.0
+     * The minimum engine version required, which is Redis OSS 6.0
      * </p>
      * 
      * @param minimumEngineVersion
-     *        The minimum engine version required, which is Redis 6.0
+     *        The minimum engine version required, which is Redis OSS 6.0
      */
 
     public void setMinimumEngineVersion(String minimumEngineVersion) {
@@ -253,10 +253,10 @@ public class CreateUserResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The minimum engine version required, which is Redis 6.0
+     * The minimum engine version required, which is Redis OSS 6.0
      * </p>
      * 
-     * @return The minimum engine version required, which is Redis 6.0
+     * @return The minimum engine version required, which is Redis OSS 6.0
      */
 
     public String getMinimumEngineVersion() {
@@ -265,11 +265,11 @@ public class CreateUserResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The minimum engine version required, which is Redis 6.0
+     * The minimum engine version required, which is Redis OSS 6.0
      * </p>
      * 
      * @param minimumEngineVersion
-     *        The minimum engine version required, which is Redis 6.0
+     *        The minimum engine version required, which is Redis OSS 6.0
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

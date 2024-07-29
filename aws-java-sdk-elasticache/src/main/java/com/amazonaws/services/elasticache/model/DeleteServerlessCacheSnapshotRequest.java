@@ -27,18 +27,18 @@ public class DeleteServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Idenfitier of the snapshot to be deleted. Available for Redis only.
+     * Idenfitier of the snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String serverlessCacheSnapshotName;
 
     /**
      * <p>
-     * Idenfitier of the snapshot to be deleted. Available for Redis only.
+     * Idenfitier of the snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        Idenfitier of the snapshot to be deleted. Available for Redis only.
+     *        Idenfitier of the snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setServerlessCacheSnapshotName(String serverlessCacheSnapshotName) {
@@ -47,10 +47,10 @@ public class DeleteServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Idenfitier of the snapshot to be deleted. Available for Redis only.
+     * Idenfitier of the snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return Idenfitier of the snapshot to be deleted. Available for Redis only.
+     * @return Idenfitier of the snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getServerlessCacheSnapshotName() {
@@ -59,11 +59,11 @@ public class DeleteServerlessCacheSnapshotRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Idenfitier of the snapshot to be deleted. Available for Redis only.
+     * Idenfitier of the snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        Idenfitier of the snapshot to be deleted. Available for Redis only.
+     *        Idenfitier of the snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

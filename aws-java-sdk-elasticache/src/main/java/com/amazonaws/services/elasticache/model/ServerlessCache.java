@@ -100,7 +100,8 @@ public class ServerlessCache implements Serializable, Cloneable {
     private String aRN;
     /**
      * <p>
-     * The identifier of the user group associated with the serverless cache. Available for Redis only. Default is NULL.
+     * The identifier of the user group associated with the serverless cache. Available for Redis OSS only. Default is
+     * NULL.
      * </p>
      */
     private String userGroupId;
@@ -114,15 +115,15 @@ public class ServerlessCache implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> subnetIds;
     /**
      * <p>
-     * The current setting for the number of serverless cache snapshots the system will retain. Available for Redis
-     * only.
+     * The current setting for the number of serverless cache snapshots the system will retain. Available for Redis OSS
+     * and Serverless Memcached only.
      * </p>
      */
     private Integer snapshotRetentionLimit;
     /**
      * <p>
      * The daily time that a cache snapshot will be created. Default is NULL, i.e. snapshots will not be created at a
-     * specific time on a daily basis. Available for Redis only.
+     * specific time on a daily basis. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String dailySnapshotTime;
@@ -666,12 +667,13 @@ public class ServerlessCache implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier of the user group associated with the serverless cache. Available for Redis only. Default is NULL.
+     * The identifier of the user group associated with the serverless cache. Available for Redis OSS only. Default is
+     * NULL.
      * </p>
      * 
      * @param userGroupId
-     *        The identifier of the user group associated with the serverless cache. Available for Redis only. Default
-     *        is NULL.
+     *        The identifier of the user group associated with the serverless cache. Available for Redis OSS only.
+     *        Default is NULL.
      */
 
     public void setUserGroupId(String userGroupId) {
@@ -680,11 +682,12 @@ public class ServerlessCache implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier of the user group associated with the serverless cache. Available for Redis only. Default is NULL.
+     * The identifier of the user group associated with the serverless cache. Available for Redis OSS only. Default is
+     * NULL.
      * </p>
      * 
-     * @return The identifier of the user group associated with the serverless cache. Available for Redis only. Default
-     *         is NULL.
+     * @return The identifier of the user group associated with the serverless cache. Available for Redis OSS only.
+     *         Default is NULL.
      */
 
     public String getUserGroupId() {
@@ -693,12 +696,13 @@ public class ServerlessCache implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identifier of the user group associated with the serverless cache. Available for Redis only. Default is NULL.
+     * The identifier of the user group associated with the serverless cache. Available for Redis OSS only. Default is
+     * NULL.
      * </p>
      * 
      * @param userGroupId
-     *        The identifier of the user group associated with the serverless cache. Available for Redis only. Default
-     *        is NULL.
+     *        The identifier of the user group associated with the serverless cache. Available for Redis OSS only.
+     *        Default is NULL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -798,13 +802,13 @@ public class ServerlessCache implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current setting for the number of serverless cache snapshots the system will retain. Available for Redis
-     * only.
+     * The current setting for the number of serverless cache snapshots the system will retain. Available for Redis OSS
+     * and Serverless Memcached only.
      * </p>
      * 
      * @param snapshotRetentionLimit
      *        The current setting for the number of serverless cache snapshots the system will retain. Available for
-     *        Redis only.
+     *        Redis OSS and Serverless Memcached only.
      */
 
     public void setSnapshotRetentionLimit(Integer snapshotRetentionLimit) {
@@ -813,12 +817,12 @@ public class ServerlessCache implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current setting for the number of serverless cache snapshots the system will retain. Available for Redis
-     * only.
+     * The current setting for the number of serverless cache snapshots the system will retain. Available for Redis OSS
+     * and Serverless Memcached only.
      * </p>
      * 
      * @return The current setting for the number of serverless cache snapshots the system will retain. Available for
-     *         Redis only.
+     *         Redis OSS and Serverless Memcached only.
      */
 
     public Integer getSnapshotRetentionLimit() {
@@ -827,13 +831,13 @@ public class ServerlessCache implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current setting for the number of serverless cache snapshots the system will retain. Available for Redis
-     * only.
+     * The current setting for the number of serverless cache snapshots the system will retain. Available for Redis OSS
+     * and Serverless Memcached only.
      * </p>
      * 
      * @param snapshotRetentionLimit
      *        The current setting for the number of serverless cache snapshots the system will retain. Available for
-     *        Redis only.
+     *        Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -845,12 +849,12 @@ public class ServerlessCache implements Serializable, Cloneable {
     /**
      * <p>
      * The daily time that a cache snapshot will be created. Default is NULL, i.e. snapshots will not be created at a
-     * specific time on a daily basis. Available for Redis only.
+     * specific time on a daily basis. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param dailySnapshotTime
      *        The daily time that a cache snapshot will be created. Default is NULL, i.e. snapshots will not be created
-     *        at a specific time on a daily basis. Available for Redis only.
+     *        at a specific time on a daily basis. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setDailySnapshotTime(String dailySnapshotTime) {
@@ -860,11 +864,11 @@ public class ServerlessCache implements Serializable, Cloneable {
     /**
      * <p>
      * The daily time that a cache snapshot will be created. Default is NULL, i.e. snapshots will not be created at a
-     * specific time on a daily basis. Available for Redis only.
+     * specific time on a daily basis. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @return The daily time that a cache snapshot will be created. Default is NULL, i.e. snapshots will not be created
-     *         at a specific time on a daily basis. Available for Redis only.
+     *         at a specific time on a daily basis. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getDailySnapshotTime() {
@@ -874,12 +878,12 @@ public class ServerlessCache implements Serializable, Cloneable {
     /**
      * <p>
      * The daily time that a cache snapshot will be created. Default is NULL, i.e. snapshots will not be created at a
-     * specific time on a daily basis. Available for Redis only.
+     * specific time on a daily basis. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param dailySnapshotTime
      *        The daily time that a cache snapshot will be created. Default is NULL, i.e. snapshots will not be created
-     *        at a specific time on a daily basis. Available for Redis only.
+     *        at a specific time on a daily basis. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

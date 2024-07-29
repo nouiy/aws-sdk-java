@@ -84,13 +84,13 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     private String nodeType;
     /**
      * <p>
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      * </p>
      */
     private String engineVersion;
     /**
      * <p>
-     * The Redis engine patch version used by the cluster
+     * The Redis OSS engine patch version used by the cluster
      * </p>
      */
     private String enginePatchVersion;
@@ -601,11 +601,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      * </p>
      * 
      * @param engineVersion
-     *        The Redis engine version used by the cluster
+     *        The Redis OSS engine version used by the cluster
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -614,10 +614,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      * </p>
      * 
-     * @return The Redis engine version used by the cluster
+     * @return The Redis OSS engine version used by the cluster
      */
 
     public String getEngineVersion() {
@@ -626,11 +626,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      * </p>
      * 
      * @param engineVersion
-     *        The Redis engine version used by the cluster
+     *        The Redis OSS engine version used by the cluster
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -641,11 +641,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Redis engine patch version used by the cluster
+     * The Redis OSS engine patch version used by the cluster
      * </p>
      * 
      * @param enginePatchVersion
-     *        The Redis engine patch version used by the cluster
+     *        The Redis OSS engine patch version used by the cluster
      */
 
     public void setEnginePatchVersion(String enginePatchVersion) {
@@ -654,10 +654,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Redis engine patch version used by the cluster
+     * The Redis OSS engine patch version used by the cluster
      * </p>
      * 
-     * @return The Redis engine patch version used by the cluster
+     * @return The Redis OSS engine patch version used by the cluster
      */
 
     public String getEnginePatchVersion() {
@@ -666,11 +666,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Redis engine patch version used by the cluster
+     * The Redis OSS engine patch version used by the cluster
      * </p>
      * 
      * @param enginePatchVersion
-     *        The Redis engine patch version used by the cluster
+     *        The Redis OSS engine patch version used by the cluster
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

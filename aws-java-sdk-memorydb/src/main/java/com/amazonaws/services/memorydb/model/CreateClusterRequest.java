@@ -198,7 +198,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String aCLName;
     /**
      * <p>
-     * The version number of the Redis engine to be used for the cluster.
+     * The version number of the Redis OSS engine to be used for the cluster.
      * </p>
      */
     private String engineVersion;
@@ -1431,11 +1431,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The version number of the Redis engine to be used for the cluster.
+     * The version number of the Redis OSS engine to be used for the cluster.
      * </p>
      * 
      * @param engineVersion
-     *        The version number of the Redis engine to be used for the cluster.
+     *        The version number of the Redis OSS engine to be used for the cluster.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -1444,10 +1444,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The version number of the Redis engine to be used for the cluster.
+     * The version number of the Redis OSS engine to be used for the cluster.
      * </p>
      * 
-     * @return The version number of the Redis engine to be used for the cluster.
+     * @return The version number of the Redis OSS engine to be used for the cluster.
      */
 
     public String getEngineVersion() {
@@ -1456,11 +1456,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The version number of the Redis engine to be used for the cluster.
+     * The version number of the Redis OSS engine to be used for the cluster.
      * </p>
      * 
      * @param engineVersion
-     *        The version number of the Redis engine to be used for the cluster.
+     *        The version number of the Redis OSS engine to be used for the cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,18 +25,21 @@ public class CopyServerlessCacheSnapshotResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The response for the attempt to copy the serverless cache snapshot. Available for Redis only.
+     * The response for the attempt to copy the serverless cache snapshot. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      */
     private ServerlessCacheSnapshot serverlessCacheSnapshot;
 
     /**
      * <p>
-     * The response for the attempt to copy the serverless cache snapshot. Available for Redis only.
+     * The response for the attempt to copy the serverless cache snapshot. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshot
-     *        The response for the attempt to copy the serverless cache snapshot. Available for Redis only.
+     *        The response for the attempt to copy the serverless cache snapshot. Available for Redis OSS and Serverless
+     *        Memcached only.
      */
 
     public void setServerlessCacheSnapshot(ServerlessCacheSnapshot serverlessCacheSnapshot) {
@@ -45,10 +48,12 @@ public class CopyServerlessCacheSnapshotResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The response for the attempt to copy the serverless cache snapshot. Available for Redis only.
+     * The response for the attempt to copy the serverless cache snapshot. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
-     * @return The response for the attempt to copy the serverless cache snapshot. Available for Redis only.
+     * @return The response for the attempt to copy the serverless cache snapshot. Available for Redis OSS and
+     *         Serverless Memcached only.
      */
 
     public ServerlessCacheSnapshot getServerlessCacheSnapshot() {
@@ -57,11 +62,13 @@ public class CopyServerlessCacheSnapshotResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The response for the attempt to copy the serverless cache snapshot. Available for Redis only.
+     * The response for the attempt to copy the serverless cache snapshot. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshot
-     *        The response for the attempt to copy the serverless cache snapshot. Available for Redis only.
+     *        The response for the attempt to copy the serverless cache snapshot. Available for Redis OSS and Serverless
+     *        Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

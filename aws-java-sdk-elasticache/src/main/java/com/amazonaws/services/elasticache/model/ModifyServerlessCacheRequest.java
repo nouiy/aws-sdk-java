@@ -46,15 +46,15 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
     private CacheUsageLimits cacheUsageLimits;
     /**
      * <p>
-     * The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available for
-     * Redis only. Default is NULL.
+     * The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache. Available for
+     * Redis OSS only. Default is NULL.
      * </p>
      */
     private Boolean removeUserGroup;
     /**
      * <p>
-     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only. Default is
-     * NULL - the existing UserGroup is not removed.
+     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only. Default
+     * is NULL - the existing UserGroup is not removed.
      * </p>
      */
     private String userGroupId;
@@ -69,15 +69,16 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The number of days for which Elasticache retains automatic snapshots before deleting them. Available for Redis
-     * only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed or modified. The maximum
-     * value allowed is 35 days.
+     * OSS and Serverless Memcached only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed
+     * or modified. The maximum value allowed is 35 days.
      * </p>
      */
     private Integer snapshotRetentionLimit;
     /**
      * <p>
      * The daily time during which Elasticache begins taking a daily snapshot of the serverless cache. Available for
-     * Redis only. The default is NULL, i.e. the existing snapshot time configured for the cluster is not removed.
+     * Redis OSS and Serverless Memcached only. The default is NULL, i.e. the existing snapshot time configured for the
+     * cluster is not removed.
      * </p>
      */
     private String dailySnapshotTime;
@@ -210,13 +211,13 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available for
-     * Redis only. Default is NULL.
+     * The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache. Available for
+     * Redis OSS only. Default is NULL.
      * </p>
      * 
      * @param removeUserGroup
-     *        The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available
-     *        for Redis only. Default is NULL.
+     *        The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache.
+     *        Available for Redis OSS only. Default is NULL.
      */
 
     public void setRemoveUserGroup(Boolean removeUserGroup) {
@@ -225,12 +226,12 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available for
-     * Redis only. Default is NULL.
+     * The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache. Available for
+     * Redis OSS only. Default is NULL.
      * </p>
      * 
-     * @return The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available
-     *         for Redis only. Default is NULL.
+     * @return The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache.
+     *         Available for Redis OSS only. Default is NULL.
      */
 
     public Boolean getRemoveUserGroup() {
@@ -239,13 +240,13 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available for
-     * Redis only. Default is NULL.
+     * The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache. Available for
+     * Redis OSS only. Default is NULL.
      * </p>
      * 
      * @param removeUserGroup
-     *        The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available
-     *        for Redis only. Default is NULL.
+     *        The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache.
+     *        Available for Redis OSS only. Default is NULL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -256,12 +257,12 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available for
-     * Redis only. Default is NULL.
+     * The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache. Available for
+     * Redis OSS only. Default is NULL.
      * </p>
      * 
-     * @return The identifier of the UserGroup to be removed from association with the Redis serverless cache. Available
-     *         for Redis only. Default is NULL.
+     * @return The identifier of the UserGroup to be removed from association with the Redis OSS serverless cache.
+     *         Available for Redis OSS only. Default is NULL.
      */
 
     public Boolean isRemoveUserGroup() {
@@ -270,12 +271,12 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only. Default is
-     * NULL - the existing UserGroup is not removed.
+     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only. Default
+     * is NULL - the existing UserGroup is not removed.
      * </p>
      * 
      * @param userGroupId
-     *        The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only.
+     *        The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only.
      *        Default is NULL - the existing UserGroup is not removed.
      */
 
@@ -285,11 +286,11 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only. Default is
-     * NULL - the existing UserGroup is not removed.
+     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only. Default
+     * is NULL - the existing UserGroup is not removed.
      * </p>
      * 
-     * @return The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only.
+     * @return The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only.
      *         Default is NULL - the existing UserGroup is not removed.
      */
 
@@ -299,12 +300,12 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only. Default is
-     * NULL - the existing UserGroup is not removed.
+     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only. Default
+     * is NULL - the existing UserGroup is not removed.
      * </p>
      * 
      * @param userGroupId
-     *        The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only.
+     *        The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only.
      *        Default is NULL - the existing UserGroup is not removed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -410,14 +411,14 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The number of days for which Elasticache retains automatic snapshots before deleting them. Available for Redis
-     * only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed or modified. The maximum
-     * value allowed is 35 days.
+     * OSS and Serverless Memcached only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed
+     * or modified. The maximum value allowed is 35 days.
      * </p>
      * 
      * @param snapshotRetentionLimit
      *        The number of days for which Elasticache retains automatic snapshots before deleting them. Available for
-     *        Redis only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed or modified.
-     *        The maximum value allowed is 35 days.
+     *        Redis OSS and Serverless Memcached only. Default = NULL, i.e. the existing snapshot-retention-limit will
+     *        not be removed or modified. The maximum value allowed is 35 days.
      */
 
     public void setSnapshotRetentionLimit(Integer snapshotRetentionLimit) {
@@ -427,13 +428,13 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The number of days for which Elasticache retains automatic snapshots before deleting them. Available for Redis
-     * only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed or modified. The maximum
-     * value allowed is 35 days.
+     * OSS and Serverless Memcached only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed
+     * or modified. The maximum value allowed is 35 days.
      * </p>
      * 
      * @return The number of days for which Elasticache retains automatic snapshots before deleting them. Available for
-     *         Redis only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed or modified.
-     *         The maximum value allowed is 35 days.
+     *         Redis OSS and Serverless Memcached only. Default = NULL, i.e. the existing snapshot-retention-limit will
+     *         not be removed or modified. The maximum value allowed is 35 days.
      */
 
     public Integer getSnapshotRetentionLimit() {
@@ -443,14 +444,14 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The number of days for which Elasticache retains automatic snapshots before deleting them. Available for Redis
-     * only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed or modified. The maximum
-     * value allowed is 35 days.
+     * OSS and Serverless Memcached only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed
+     * or modified. The maximum value allowed is 35 days.
      * </p>
      * 
      * @param snapshotRetentionLimit
      *        The number of days for which Elasticache retains automatic snapshots before deleting them. Available for
-     *        Redis only. Default = NULL, i.e. the existing snapshot-retention-limit will not be removed or modified.
-     *        The maximum value allowed is 35 days.
+     *        Redis OSS and Serverless Memcached only. Default = NULL, i.e. the existing snapshot-retention-limit will
+     *        not be removed or modified. The maximum value allowed is 35 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -462,13 +463,14 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The daily time during which Elasticache begins taking a daily snapshot of the serverless cache. Available for
-     * Redis only. The default is NULL, i.e. the existing snapshot time configured for the cluster is not removed.
+     * Redis OSS and Serverless Memcached only. The default is NULL, i.e. the existing snapshot time configured for the
+     * cluster is not removed.
      * </p>
      * 
      * @param dailySnapshotTime
      *        The daily time during which Elasticache begins taking a daily snapshot of the serverless cache. Available
-     *        for Redis only. The default is NULL, i.e. the existing snapshot time configured for the cluster is not
-     *        removed.
+     *        for Redis OSS and Serverless Memcached only. The default is NULL, i.e. the existing snapshot time
+     *        configured for the cluster is not removed.
      */
 
     public void setDailySnapshotTime(String dailySnapshotTime) {
@@ -478,12 +480,13 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The daily time during which Elasticache begins taking a daily snapshot of the serverless cache. Available for
-     * Redis only. The default is NULL, i.e. the existing snapshot time configured for the cluster is not removed.
+     * Redis OSS and Serverless Memcached only. The default is NULL, i.e. the existing snapshot time configured for the
+     * cluster is not removed.
      * </p>
      * 
      * @return The daily time during which Elasticache begins taking a daily snapshot of the serverless cache. Available
-     *         for Redis only. The default is NULL, i.e. the existing snapshot time configured for the cluster is not
-     *         removed.
+     *         for Redis OSS and Serverless Memcached only. The default is NULL, i.e. the existing snapshot time
+     *         configured for the cluster is not removed.
      */
 
     public String getDailySnapshotTime() {
@@ -493,13 +496,14 @@ public class ModifyServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The daily time during which Elasticache begins taking a daily snapshot of the serverless cache. Available for
-     * Redis only. The default is NULL, i.e. the existing snapshot time configured for the cluster is not removed.
+     * Redis OSS and Serverless Memcached only. The default is NULL, i.e. the existing snapshot time configured for the
+     * cluster is not removed.
      * </p>
      * 
      * @param dailySnapshotTime
      *        The daily time during which Elasticache begins taking a daily snapshot of the serverless cache. Available
-     *        for Redis only. The default is NULL, i.e. the existing snapshot time configured for the cluster is not
-     *        removed.
+     *        for Redis OSS and Serverless Memcached only. The default is NULL, i.e. the existing snapshot time
+     *        configured for the cluster is not removed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

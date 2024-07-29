@@ -37,7 +37,7 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
     private String status;
     /**
      * <p>
-     * The current supported value is Redis.
+     * The current supported value is Redis user.
      * </p>
      */
     private String engine;
@@ -49,7 +49,7 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
     private com.amazonaws.internal.SdkInternalList<String> userIds;
     /**
      * <p>
-     * The minimum engine version required, which is Redis 6.0
+     * The minimum engine version required, which is Redis OSS 6.0
      * </p>
      */
     private String minimumEngineVersion;
@@ -67,7 +67,8 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
     private com.amazonaws.internal.SdkInternalList<String> replicationGroups;
     /**
      * <p>
-     * Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     * Indicates which serverless caches the specified user group is associated with. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> serverlessCaches;
@@ -160,11 +161,11 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The current supported value is Redis.
+     * The current supported value is Redis user.
      * </p>
      * 
      * @param engine
-     *        The current supported value is Redis.
+     *        The current supported value is Redis user.
      */
 
     public void setEngine(String engine) {
@@ -173,10 +174,10 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The current supported value is Redis.
+     * The current supported value is Redis user.
      * </p>
      * 
-     * @return The current supported value is Redis.
+     * @return The current supported value is Redis user.
      */
 
     public String getEngine() {
@@ -185,11 +186,11 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The current supported value is Redis.
+     * The current supported value is Redis user.
      * </p>
      * 
      * @param engine
-     *        The current supported value is Redis.
+     *        The current supported value is Redis user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,11 +274,11 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The minimum engine version required, which is Redis 6.0
+     * The minimum engine version required, which is Redis OSS 6.0
      * </p>
      * 
      * @param minimumEngineVersion
-     *        The minimum engine version required, which is Redis 6.0
+     *        The minimum engine version required, which is Redis OSS 6.0
      */
 
     public void setMinimumEngineVersion(String minimumEngineVersion) {
@@ -286,10 +287,10 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The minimum engine version required, which is Redis 6.0
+     * The minimum engine version required, which is Redis OSS 6.0
      * </p>
      * 
-     * @return The minimum engine version required, which is Redis 6.0
+     * @return The minimum engine version required, which is Redis OSS 6.0
      */
 
     public String getMinimumEngineVersion() {
@@ -298,11 +299,11 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The minimum engine version required, which is Redis 6.0
+     * The minimum engine version required, which is Redis OSS 6.0
      * </p>
      * 
      * @param minimumEngineVersion
-     *        The minimum engine version required, which is Redis 6.0
+     *        The minimum engine version required, which is Redis OSS 6.0
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -426,10 +427,12 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     * Indicates which serverless caches the specified user group is associated with. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
-     * @return Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     * @return Indicates which serverless caches the specified user group is associated with. Available for Redis OSS
+     *         and Serverless Memcached only.
      */
 
     public java.util.List<String> getServerlessCaches() {
@@ -441,11 +444,13 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     * Indicates which serverless caches the specified user group is associated with. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCaches
-     *        Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     *        Indicates which serverless caches the specified user group is associated with. Available for Redis OSS and
+     *        Serverless Memcached only.
      */
 
     public void setServerlessCaches(java.util.Collection<String> serverlessCaches) {
@@ -459,7 +464,8 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     * Indicates which serverless caches the specified user group is associated with. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -468,7 +474,8 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      * 
      * @param serverlessCaches
-     *        Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     *        Indicates which serverless caches the specified user group is associated with. Available for Redis OSS and
+     *        Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -484,11 +491,13 @@ public class ModifyUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     * Indicates which serverless caches the specified user group is associated with. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCaches
-     *        Indicates which serverless caches the specified user group is associated with. Available for Redis only.
+     *        Indicates which serverless caches the specified user group is associated with. Available for Redis OSS and
+     *        Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

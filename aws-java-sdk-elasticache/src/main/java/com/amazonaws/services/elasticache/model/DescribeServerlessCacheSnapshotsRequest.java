@@ -28,20 +28,20 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The identifier of serverless cache. If this parameter is specified, only snapshots associated with that specific
-     * serverless cache are described. Available for Redis only.
+     * serverless cache are described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String serverlessCacheName;
     /**
      * <p>
      * The identifier of the serverless cache’s snapshot. If this parameter is specified, only this snapshot is
-     * described. Available for Redis only.
+     * described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String serverlessCacheSnapshotName;
     /**
      * <p>
-     * The type of snapshot that is being described. Available for Redis only.
+     * The type of snapshot that is being described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String snapshotType;
@@ -49,15 +49,15 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
      * <p>
      * An optional marker returned from a prior request to support pagination of results from this operation. If this
      * parameter is specified, the response includes only records beyond the marker, up to the value specified by
-     * max-results. Available for Redis only.
+     * max-results. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
      * The maximum number of records to include in the response. If more records exist than the specified max-results
-     * value, a market is included in the response so that remaining results can be retrieved. Available for Redis
-     * only.The default is 50. The Validation Constraints are a maximum of 50.
+     * value, a market is included in the response so that remaining results can be retrieved. Available for Redis OSS
+     * and Serverless Memcached only.The default is 50. The Validation Constraints are a maximum of 50.
      * </p>
      */
     private Integer maxResults;
@@ -65,12 +65,12 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The identifier of serverless cache. If this parameter is specified, only snapshots associated with that specific
-     * serverless cache are described. Available for Redis only.
+     * serverless cache are described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheName
      *        The identifier of serverless cache. If this parameter is specified, only snapshots associated with that
-     *        specific serverless cache are described. Available for Redis only.
+     *        specific serverless cache are described. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setServerlessCacheName(String serverlessCacheName) {
@@ -80,11 +80,11 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The identifier of serverless cache. If this parameter is specified, only snapshots associated with that specific
-     * serverless cache are described. Available for Redis only.
+     * serverless cache are described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @return The identifier of serverless cache. If this parameter is specified, only snapshots associated with that
-     *         specific serverless cache are described. Available for Redis only.
+     *         specific serverless cache are described. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getServerlessCacheName() {
@@ -94,12 +94,12 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The identifier of serverless cache. If this parameter is specified, only snapshots associated with that specific
-     * serverless cache are described. Available for Redis only.
+     * serverless cache are described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheName
      *        The identifier of serverless cache. If this parameter is specified, only snapshots associated with that
-     *        specific serverless cache are described. Available for Redis only.
+     *        specific serverless cache are described. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,12 +111,12 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The identifier of the serverless cache’s snapshot. If this parameter is specified, only this snapshot is
-     * described. Available for Redis only.
+     * described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
      *        The identifier of the serverless cache’s snapshot. If this parameter is specified, only this snapshot is
-     *        described. Available for Redis only.
+     *        described. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setServerlessCacheSnapshotName(String serverlessCacheSnapshotName) {
@@ -126,11 +126,11 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The identifier of the serverless cache’s snapshot. If this parameter is specified, only this snapshot is
-     * described. Available for Redis only.
+     * described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @return The identifier of the serverless cache’s snapshot. If this parameter is specified, only this snapshot is
-     *         described. Available for Redis only.
+     *         described. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getServerlessCacheSnapshotName() {
@@ -140,12 +140,12 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The identifier of the serverless cache’s snapshot. If this parameter is specified, only this snapshot is
-     * described. Available for Redis only.
+     * described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
      *        The identifier of the serverless cache’s snapshot. If this parameter is specified, only this snapshot is
-     *        described. Available for Redis only.
+     *        described. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,11 +156,11 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The type of snapshot that is being described. Available for Redis only.
+     * The type of snapshot that is being described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param snapshotType
-     *        The type of snapshot that is being described. Available for Redis only.
+     *        The type of snapshot that is being described. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setSnapshotType(String snapshotType) {
@@ -169,10 +169,10 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The type of snapshot that is being described. Available for Redis only.
+     * The type of snapshot that is being described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return The type of snapshot that is being described. Available for Redis only.
+     * @return The type of snapshot that is being described. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getSnapshotType() {
@@ -181,11 +181,11 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The type of snapshot that is being described. Available for Redis only.
+     * The type of snapshot that is being described. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param snapshotType
-     *        The type of snapshot that is being described. Available for Redis only.
+     *        The type of snapshot that is being described. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -198,13 +198,13 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
      * <p>
      * An optional marker returned from a prior request to support pagination of results from this operation. If this
      * parameter is specified, the response includes only records beyond the marker, up to the value specified by
-     * max-results. Available for Redis only.
+     * max-results. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param nextToken
      *        An optional marker returned from a prior request to support pagination of results from this operation. If
      *        this parameter is specified, the response includes only records beyond the marker, up to the value
-     *        specified by max-results. Available for Redis only.
+     *        specified by max-results. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setNextToken(String nextToken) {
@@ -215,12 +215,12 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
      * <p>
      * An optional marker returned from a prior request to support pagination of results from this operation. If this
      * parameter is specified, the response includes only records beyond the marker, up to the value specified by
-     * max-results. Available for Redis only.
+     * max-results. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @return An optional marker returned from a prior request to support pagination of results from this operation. If
      *         this parameter is specified, the response includes only records beyond the marker, up to the value
-     *         specified by max-results. Available for Redis only.
+     *         specified by max-results. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getNextToken() {
@@ -231,13 +231,13 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
      * <p>
      * An optional marker returned from a prior request to support pagination of results from this operation. If this
      * parameter is specified, the response includes only records beyond the marker, up to the value specified by
-     * max-results. Available for Redis only.
+     * max-results. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param nextToken
      *        An optional marker returned from a prior request to support pagination of results from this operation. If
      *        this parameter is specified, the response includes only records beyond the marker, up to the value
-     *        specified by max-results. Available for Redis only.
+     *        specified by max-results. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -249,14 +249,15 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The maximum number of records to include in the response. If more records exist than the specified max-results
-     * value, a market is included in the response so that remaining results can be retrieved. Available for Redis
-     * only.The default is 50. The Validation Constraints are a maximum of 50.
+     * value, a market is included in the response so that remaining results can be retrieved. Available for Redis OSS
+     * and Serverless Memcached only.The default is 50. The Validation Constraints are a maximum of 50.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        max-results value, a market is included in the response so that remaining results can be retrieved.
-     *        Available for Redis only.The default is 50. The Validation Constraints are a maximum of 50.
+     *        Available for Redis OSS and Serverless Memcached only.The default is 50. The Validation Constraints are a
+     *        maximum of 50.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -266,13 +267,14 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The maximum number of records to include in the response. If more records exist than the specified max-results
-     * value, a market is included in the response so that remaining results can be retrieved. Available for Redis
-     * only.The default is 50. The Validation Constraints are a maximum of 50.
+     * value, a market is included in the response so that remaining results can be retrieved. Available for Redis OSS
+     * and Serverless Memcached only.The default is 50. The Validation Constraints are a maximum of 50.
      * </p>
      * 
      * @return The maximum number of records to include in the response. If more records exist than the specified
      *         max-results value, a market is included in the response so that remaining results can be retrieved.
-     *         Available for Redis only.The default is 50. The Validation Constraints are a maximum of 50.
+     *         Available for Redis OSS and Serverless Memcached only.The default is 50. The Validation Constraints are a
+     *         maximum of 50.
      */
 
     public Integer getMaxResults() {
@@ -282,14 +284,15 @@ public class DescribeServerlessCacheSnapshotsRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * The maximum number of records to include in the response. If more records exist than the specified max-results
-     * value, a market is included in the response so that remaining results can be retrieved. Available for Redis
-     * only.The default is 50. The Validation Constraints are a maximum of 50.
+     * value, a market is included in the response so that remaining results can be retrieved. Available for Redis OSS
+     * and Serverless Memcached only.The default is 50. The Validation Constraints are a maximum of 50.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        max-results value, a market is included in the response so that remaining results can be retrieved.
-     *        Available for Redis only.The default is 50. The Validation Constraints are a maximum of 50.
+     *        Available for Redis OSS and Serverless Memcached only.The default is 50. The Validation Constraints are a
+     *        maximum of 50.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

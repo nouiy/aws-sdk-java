@@ -48,7 +48,7 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
     private String nodeType;
     /**
      * <p>
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      * </p>
      */
     private String engineVersion;
@@ -235,11 +235,11 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      * </p>
      * 
      * @param engineVersion
-     *        The Redis engine version used by the cluster
+     *        The Redis OSS engine version used by the cluster
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -248,10 +248,10 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      * </p>
      * 
-     * @return The Redis engine version used by the cluster
+     * @return The Redis OSS engine version used by the cluster
      */
 
     public String getEngineVersion() {
@@ -260,11 +260,11 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      * </p>
      * 
      * @param engineVersion
-     *        The Redis engine version used by the cluster
+     *        The Redis OSS engine version used by the cluster
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

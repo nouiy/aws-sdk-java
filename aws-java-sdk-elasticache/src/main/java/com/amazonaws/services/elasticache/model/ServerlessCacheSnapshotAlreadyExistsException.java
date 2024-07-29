@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A serverless cache snapshot with this name already exists. Available for Redis only.
+ * A serverless cache snapshot with this name already exists. Available for Redis OSS and Serverless Memcached only.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

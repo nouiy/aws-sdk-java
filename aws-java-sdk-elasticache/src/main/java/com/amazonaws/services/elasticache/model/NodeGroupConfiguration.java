@@ -28,8 +28,8 @@ public class NodeGroupConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these configuration
-     * values apply to.
+     * Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node group these
+     * configuration values apply to.
      * </p>
      */
     private String nodeGroupId;
@@ -77,12 +77,12 @@ public class NodeGroupConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these configuration
-     * values apply to.
+     * Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node group these
+     * configuration values apply to.
      * </p>
      * 
      * @param nodeGroupId
-     *        Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these
+     *        Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node group these
      *        configuration values apply to.
      */
 
@@ -92,11 +92,11 @@ public class NodeGroupConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these configuration
-     * values apply to.
+     * Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node group these
+     * configuration values apply to.
      * </p>
      * 
-     * @return Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these
+     * @return Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node group these
      *         configuration values apply to.
      */
 
@@ -106,12 +106,12 @@ public class NodeGroupConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these configuration
-     * values apply to.
+     * Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node group these
+     * configuration values apply to.
      * </p>
      * 
      * @param nodeGroupId
-     *        Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these
+     *        Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node group these
      *        configuration values apply to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

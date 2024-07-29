@@ -27,7 +27,7 @@ public class DescribeEngineVersionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Redis engine version
+     * The Redis OSS engine version
      * </p>
      */
     private String engineVersion;
@@ -62,11 +62,11 @@ public class DescribeEngineVersionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Redis engine version
+     * The Redis OSS engine version
      * </p>
      * 
      * @param engineVersion
-     *        The Redis engine version
+     *        The Redis OSS engine version
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -75,10 +75,10 @@ public class DescribeEngineVersionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Redis engine version
+     * The Redis OSS engine version
      * </p>
      * 
-     * @return The Redis engine version
+     * @return The Redis OSS engine version
      */
 
     public String getEngineVersion() {
@@ -87,11 +87,11 @@ public class DescribeEngineVersionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Redis engine version
+     * The Redis OSS engine version
      * </p>
      * 
      * @param engineVersion
-     *        The Redis engine version
+     *        The Redis OSS engine version
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,13 +28,14 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
      * <p>
      * An optional marker returned from a prior request to support pagination of results from this operation. If this
      * parameter is specified, the response includes only records beyond the marker, up to the value specified by
-     * max-results. Available for Redis only.
+     * max-results. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The serverless caches snapshots associated with a given description request. Available for Redis only.
+     * The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ServerlessCacheSnapshot> serverlessCacheSnapshots;
@@ -43,13 +44,13 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
      * <p>
      * An optional marker returned from a prior request to support pagination of results from this operation. If this
      * parameter is specified, the response includes only records beyond the marker, up to the value specified by
-     * max-results. Available for Redis only.
+     * max-results. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param nextToken
      *        An optional marker returned from a prior request to support pagination of results from this operation. If
      *        this parameter is specified, the response includes only records beyond the marker, up to the value
-     *        specified by max-results. Available for Redis only.
+     *        specified by max-results. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setNextToken(String nextToken) {
@@ -60,12 +61,12 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
      * <p>
      * An optional marker returned from a prior request to support pagination of results from this operation. If this
      * parameter is specified, the response includes only records beyond the marker, up to the value specified by
-     * max-results. Available for Redis only.
+     * max-results. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @return An optional marker returned from a prior request to support pagination of results from this operation. If
      *         this parameter is specified, the response includes only records beyond the marker, up to the value
-     *         specified by max-results. Available for Redis only.
+     *         specified by max-results. Available for Redis OSS and Serverless Memcached only.
      */
 
     public String getNextToken() {
@@ -76,13 +77,13 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
      * <p>
      * An optional marker returned from a prior request to support pagination of results from this operation. If this
      * parameter is specified, the response includes only records beyond the marker, up to the value specified by
-     * max-results. Available for Redis only.
+     * max-results. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param nextToken
      *        An optional marker returned from a prior request to support pagination of results from this operation. If
      *        this parameter is specified, the response includes only records beyond the marker, up to the value
-     *        specified by max-results. Available for Redis only.
+     *        specified by max-results. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,10 +94,12 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The serverless caches snapshots associated with a given description request. Available for Redis only.
+     * The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
-     * @return The serverless caches snapshots associated with a given description request. Available for Redis only.
+     * @return The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     *         Serverless Memcached only.
      */
 
     public java.util.List<ServerlessCacheSnapshot> getServerlessCacheSnapshots() {
@@ -108,11 +111,13 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The serverless caches snapshots associated with a given description request. Available for Redis only.
+     * The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshots
-     *        The serverless caches snapshots associated with a given description request. Available for Redis only.
+     *        The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     *        Serverless Memcached only.
      */
 
     public void setServerlessCacheSnapshots(java.util.Collection<ServerlessCacheSnapshot> serverlessCacheSnapshots) {
@@ -126,7 +131,8 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The serverless caches snapshots associated with a given description request. Available for Redis only.
+     * The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -135,7 +141,8 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
      * </p>
      * 
      * @param serverlessCacheSnapshots
-     *        The serverless caches snapshots associated with a given description request. Available for Redis only.
+     *        The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     *        Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -151,11 +158,13 @@ public class DescribeServerlessCacheSnapshotsResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The serverless caches snapshots associated with a given description request. Available for Redis only.
+     * The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshots
-     *        The serverless caches snapshots associated with a given description request. Available for Redis only.
+     *        The serverless caches snapshots associated with a given description request. Available for Redis OSS and
+     *        Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

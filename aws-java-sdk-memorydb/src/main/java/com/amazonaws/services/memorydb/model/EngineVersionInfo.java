@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides details of the Redis engine version
+ * Provides details of the Redis OSS engine version
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/memorydb-2021-01-01/EngineVersionInfo" target="_top">AWS API

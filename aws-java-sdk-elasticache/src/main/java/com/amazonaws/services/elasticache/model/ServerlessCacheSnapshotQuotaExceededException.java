@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The number of serverless cache snapshots exceeds the customer snapshot quota. Available for Redis only.
+ * The number of serverless cache snapshots exceeds the customer snapshot quota. Available for Redis OSS and Serverless
+ * Memcached only.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

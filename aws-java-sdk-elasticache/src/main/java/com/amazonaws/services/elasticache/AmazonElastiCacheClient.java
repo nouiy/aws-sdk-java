@@ -656,9 +656,11 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * @throws InvalidServerlessCacheStateException
      *         The account for these credentials is not currently active.
      * @throws ServerlessCacheSnapshotNotFoundException
-     *         This serverless cache snapshot could not be found or does not exist. Available for Redis only.
+     *         This serverless cache snapshot could not be found or does not exist. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws InvalidServerlessCacheSnapshotStateException
-     *         The state of the serverless cache snapshot was not received. Available for Redis only.
+     *         The state of the serverless cache snapshot was not received. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws TagQuotaPerResourceExceededException
      *         The request cannot be processed because it would cause the resource to have more than the allowed number
      *         of tags. The maximum number of tags permitted on a resource is 50.
@@ -974,19 +976,23 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Creates a copy of an existing serverless cache’s snapshot. Available for Redis only.
+     * Creates a copy of an existing serverless cache’s snapshot. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param copyServerlessCacheSnapshotRequest
      * @return Result of the CopyServerlessCacheSnapshot operation returned by the service.
      * @throws ServerlessCacheSnapshotAlreadyExistsException
-     *         A serverless cache snapshot with this name already exists. Available for Redis only.
+     *         A serverless cache snapshot with this name already exists. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws ServerlessCacheSnapshotNotFoundException
-     *         This serverless cache snapshot could not be found or does not exist. Available for Redis only.
+     *         This serverless cache snapshot could not be found or does not exist. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws ServerlessCacheSnapshotQuotaExceededException
-     *         The number of serverless cache snapshots exceeds the customer snapshot quota. Available for Redis only.
+     *         The number of serverless cache snapshots exceeds the customer snapshot quota. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws InvalidServerlessCacheSnapshotStateException
-     *         The state of the serverless cache snapshot was not received. Available for Redis only.
+     *         The state of the serverless cache snapshot was not received. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws ServiceLinkedRoleNotFoundException
      *         The specified service linked role (SLR) was not found.
      * @throws TagQuotaPerResourceExceededException
@@ -1051,7 +1057,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </p>
      * <note>
      * <p>
-     * This operation is valid for Redis only.
+     * This operation is valid for Redis OSS only.
      * </p>
      * </note> <important>
      * <p>
@@ -1223,10 +1229,10 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Creates a cluster. All nodes in the cluster run the same protocol-compliant cache engine software, either
-     * Memcached or Redis.
+     * Memcached or Redis OSS.
      * </p>
      * <p>
-     * This operation is not supported for Redis (cluster mode enabled) clusters.
+     * This operation is not supported for Redis OSS (cluster mode enabled) clusters.
      * </p>
      * 
      * @param createCacheClusterRequest
@@ -1554,9 +1560,9 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Global Datastore for Redis offers fully managed, fast, reliable and secure cross-region replication. Using Global
-     * Datastore for Redis, you can create cross-region read replica clusters for ElastiCache for Redis to enable
-     * low-latency reads and disaster recovery across regions. For more information, see <a
+     * Global Datastore for Redis OSS offers fully managed, fast, reliable and secure cross-region replication. Using
+     * Global Datastore for Redis OSS, you can create cross-region read replica clusters for ElastiCache (Redis OSS) to
+     * enable low-latency reads and disaster recovery across regions. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastore.html">Replication Across
      * Regions Using Global Datastore</a>.
      * </p>
@@ -1637,25 +1643,25 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Creates a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group.
+     * Creates a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication group.
      * </p>
      * <p>
      * This API can be used to create a standalone regional replication group or a secondary replication group
      * associated with a Global datastore.
      * </p>
      * <p>
-     * A Redis (cluster mode disabled) replication group is a collection of nodes, where one of the nodes is a
+     * A Redis OSS (cluster mode disabled) replication group is a collection of nodes, where one of the nodes is a
      * read/write primary and the others are read-only replicas. Writes to the primary are asynchronously propagated to
      * the replicas.
      * </p>
      * <p>
-     * A Redis cluster-mode enabled cluster is comprised of from 1 to 90 shards (API/CLI: node groups). Each shard has a
-     * primary node and up to 5 read-only replica nodes. The configuration can range from 90 shards and 0 replicas to 15
-     * shards and 5 replicas, which is the maximum number or replicas allowed.
+     * A Redis OSS cluster-mode enabled cluster is comprised of from 1 to 90 shards (API/CLI: node groups). Each shard
+     * has a primary node and up to 5 read-only replica nodes. The configuration can range from 90 shards and 0 replicas
+     * to 15 shards and 5 replicas, which is the maximum number or replicas allowed.
      * </p>
      * <p>
-     * The node or shard limit can be increased to a maximum of 500 per cluster if the Redis engine version is 5.0.6 or
-     * higher. For example, you can choose to configure a 500 node cluster that ranges between 83 shards (one primary
+     * The node or shard limit can be increased to a maximum of 500 per cluster if the Redis OSS engine version is 5.0.6
+     * or higher. For example, you can choose to configure a 500 node cluster that ranges between 83 shards (one primary
      * and 5 replicas per shard) and 500 shards (single primary and no replicas). Make sure there are enough available
      * IP addresses to accommodate the increase. Common pitfalls include the subnets in the subnet group have too small
      * a CIDR range or the subnets are shared and heavily used by other clusters. For more information, see <a
@@ -1668,15 +1674,15 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * the limit type <b>Nodes per cluster per instance type</b>.
      * </p>
      * <p>
-     * When a Redis (cluster mode disabled) replication group has been successfully created, you can add one or more
+     * When a Redis OSS (cluster mode disabled) replication group has been successfully created, you can add one or more
      * read replicas to it, up to a total of 5 read replicas. If you need to increase or decrease the number of node
-     * groups (console: shards), you can avail yourself of ElastiCache for Redis' scaling. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Scaling.html">Scaling ElastiCache for Redis
+     * groups (console: shards), you can use ElastiCache (Redis OSS) scaling. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Scaling.html">Scaling ElastiCache (Redis OSS)
      * Clusters</a> in the <i>ElastiCache User Guide</i>.
      * </p>
      * <note>
      * <p>
-     * This operation is valid for Redis only.
+     * This operation is valid for Redis OSS only.
      * </p>
      * </note>
      * 
@@ -1856,19 +1862,22 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * This API creates a copy of an entire ServerlessCache at a specific moment in time. Available for Redis only.
+     * This API creates a copy of an entire ServerlessCache at a specific moment in time. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param createServerlessCacheSnapshotRequest
      * @return Result of the CreateServerlessCacheSnapshot operation returned by the service.
      * @throws ServerlessCacheSnapshotAlreadyExistsException
-     *         A serverless cache snapshot with this name already exists. Available for Redis only.
+     *         A serverless cache snapshot with this name already exists. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws ServerlessCacheNotFoundException
      *         The serverless cache was not found or does not exist.
      * @throws InvalidServerlessCacheStateException
      *         The account for these credentials is not currently active.
      * @throws ServerlessCacheSnapshotQuotaExceededException
-     *         The number of serverless cache snapshots exceeds the customer snapshot quota. Available for Redis only.
+     *         The number of serverless cache snapshots exceeds the customer snapshot quota. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws ServiceLinkedRoleNotFoundException
      *         The specified service linked role (SLR) was not found.
      * @throws TagQuotaPerResourceExceededException
@@ -1933,7 +1942,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </p>
      * <note>
      * <p>
-     * This operation is valid for Redis only.
+     * This operation is valid for Redis OSS only.
      * </p>
      * </note>
      * 
@@ -1957,12 +1966,12 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      *         <ul>
      *         <li>
      *         <p>
-     *         Creating a snapshot of a Redis cluster running on a <code>cache.t1.micro</code> cache node.
+     *         Creating a snapshot of a Redis OSS cluster running on a <code>cache.t1.micro</code> cache node.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Creating a snapshot of a cluster that is running Memcached rather than Redis.
+     *         Creating a snapshot of a cluster that is running Memcached rather than Redis OSS.
      *         </p>
      *         </li>
      *         </ul>
@@ -2025,7 +2034,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * For Redis engine version 6.0 onwards: Creates a Redis user. For more information, see <a
+     * For Redis OSS engine version 6.0 onwards: Creates a Redis OSS user. For more information, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access
      * Control (RBAC)</a>.
      * </p>
@@ -2097,7 +2106,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * For Redis engine version 6.0 onwards: Creates a Redis user group. For more information, see <a
+     * For Redis OSS engine version 6.0 onwards: Creates a Redis OSS user group. For more information, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access
      * Control (RBAC)</a>
      * </p>
@@ -2239,9 +2248,9 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Dynamically decreases the number of replicas in a Redis (cluster mode disabled) replication group or the number
-     * of replica nodes in one or more node groups (shards) of a Redis (cluster mode enabled) replication group. This
-     * operation is performed with no cluster down time.
+     * Dynamically decreases the number of replicas in a Redis OSS (cluster mode disabled) replication group or the
+     * number of replica nodes in one or more node groups (shards) of a Redis OSS (cluster mode enabled) replication
+     * group. This operation is performed with no cluster down time.
      * </p>
      * 
      * @param decreaseReplicaCountRequest
@@ -2334,12 +2343,12 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode enabled) clusters
+     * Redis OSS (cluster mode enabled) clusters
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode disabled) clusters
+     * Redis OSS (cluster mode disabled) clusters
      * </p>
      * </li>
      * <li>
@@ -2359,7 +2368,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </li>
      * <li>
      * <p>
-     * A cluster from a Redis (cluster mode enabled) replication group
+     * A cluster from a Redis OSS (cluster mode enabled) replication group
      * </p>
      * </li>
      * <li>
@@ -2383,12 +2392,12 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      *         <ul>
      *         <li>
      *         <p>
-     *         Creating a snapshot of a Redis cluster running on a <code>cache.t1.micro</code> cache node.
+     *         Creating a snapshot of a Redis OSS cluster running on a <code>cache.t1.micro</code> cache node.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Creating a snapshot of a cluster that is running Memcached rather than Redis.
+     *         Creating a snapshot of a cluster that is running Memcached rather than Redis OSS.
      *         </p>
      *         </li>
      *         </ul>
@@ -2749,7 +2758,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </p>
      * <note>
      * <p>
-     * This operation is valid for Redis only.
+     * This operation is valid for Redis OSS only.
      * </p>
      * </note>
      * 
@@ -2767,12 +2776,12 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      *         <ul>
      *         <li>
      *         <p>
-     *         Creating a snapshot of a Redis cluster running on a <code>cache.t1.micro</code> cache node.
+     *         Creating a snapshot of a Redis OSS cluster running on a <code>cache.t1.micro</code> cache node.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Creating a snapshot of a cluster that is running Memcached rather than Redis.
+     *         Creating a snapshot of a cluster that is running Memcached rather than Redis OSS.
      *         </p>
      *         </li>
      *         </ul>
@@ -2844,7 +2853,8 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * @throws InvalidServerlessCacheStateException
      *         The account for these credentials is not currently active.
      * @throws ServerlessCacheSnapshotAlreadyExistsException
-     *         A serverless cache snapshot with this name already exists. Available for Redis only.
+     *         A serverless cache snapshot with this name already exists. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws InvalidParameterValueException
      *         The value for a parameter is invalid.
      * @throws InvalidParameterCombinationException
@@ -2904,7 +2914,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Deletes an existing serverless cache snapshot. Available for Redis only.
+     * Deletes an existing serverless cache snapshot. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param deleteServerlessCacheSnapshotRequest
@@ -2912,9 +2922,11 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * @throws ServiceLinkedRoleNotFoundException
      *         The specified service linked role (SLR) was not found.
      * @throws ServerlessCacheSnapshotNotFoundException
-     *         This serverless cache snapshot could not be found or does not exist. Available for Redis only.
+     *         This serverless cache snapshot could not be found or does not exist. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws InvalidServerlessCacheSnapshotStateException
-     *         The state of the serverless cache snapshot was not received. Available for Redis only.
+     *         The state of the serverless cache snapshot was not received. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws InvalidParameterValueException
      *         The value for a parameter is invalid.
      * @sample AmazonElastiCache.DeleteServerlessCacheSnapshot
@@ -2973,7 +2985,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </p>
      * <note>
      * <p>
-     * This operation is valid for Redis only.
+     * This operation is valid for Redis OSS only.
      * </p>
      * </note>
      * 
@@ -3038,8 +3050,8 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * For Redis engine version 6.0 onwards: Deletes a user. The user will be removed from all user groups and in turn
-     * removed from all replication groups. For more information, see <a
+     * For Redis OSS engine version 6.0 onwards: Deletes a user. The user will be removed from all user groups and in
+     * turn removed from all replication groups. For more information, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access
      * Control (RBAC)</a>.
      * </p>
@@ -3106,8 +3118,8 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * For Redis engine version 6.0 onwards: Deletes a user group. The user group must first be disassociated from the
-     * replication group before it can be deleted. For more information, see <a
+     * For Redis OSS engine version 6.0 onwards: Deletes a user group. The user group must first be disassociated from
+     * the replication group before it can be deleted. For more information, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access
      * Control (RBAC)</a>.
      * </p>
@@ -3793,7 +3805,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </p>
      * <note>
      * <p>
-     * This operation is valid for Redis only.
+     * This operation is valid for Redis OSS only.
      * </p>
      * </note>
      * 
@@ -4002,7 +4014,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * <p>
      * Returns information about serverless cache snapshots. By default, this API lists all of the customer’s serverless
      * cache snapshots. It can also describe a single serverless cache snapshot, or the snapshots associated with a
-     * particular serverless cache. Available for Redis only.
+     * particular serverless cache. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param describeServerlessCacheSnapshotsRequest
@@ -4010,7 +4022,8 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * @throws ServerlessCacheNotFoundException
      *         The serverless cache was not found or does not exist.
      * @throws ServerlessCacheSnapshotNotFoundException
-     *         This serverless cache snapshot could not be found or does not exist. Available for Redis only.
+     *         This serverless cache snapshot could not be found or does not exist. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws InvalidParameterValueException
      *         The value for a parameter is invalid.
      * @throws InvalidParameterCombinationException
@@ -4198,7 +4211,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </p>
      * <note>
      * <p>
-     * This operation is valid for Redis only.
+     * This operation is valid for Redis OSS only.
      * </p>
      * </note>
      * 
@@ -4519,15 +4532,18 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Provides the functionality to export the serverless cache snapshot data to Amazon S3. Available for Redis only.
+     * Provides the functionality to export the serverless cache snapshot data to Amazon S3. Available for Redis OSS
+     * only.
      * </p>
      * 
      * @param exportServerlessCacheSnapshotRequest
      * @return Result of the ExportServerlessCacheSnapshot operation returned by the service.
      * @throws ServerlessCacheSnapshotNotFoundException
-     *         This serverless cache snapshot could not be found or does not exist. Available for Redis only.
+     *         This serverless cache snapshot could not be found or does not exist. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws InvalidServerlessCacheSnapshotStateException
-     *         The state of the serverless cache snapshot was not received. Available for Redis only.
+     *         The state of the serverless cache snapshot was not received. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws ServiceLinkedRoleNotFoundException
      *         The specified service linked role (SLR) was not found.
      * @throws InvalidParameterValueException
@@ -4713,9 +4729,9 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Dynamically increases the number of replicas in a Redis (cluster mode disabled) replication group or the number
-     * of replica nodes in one or more node groups (shards) of a Redis (cluster mode enabled) replication group. This
-     * operation is performed with no cluster down time.
+     * Dynamically increases the number of replicas in a Redis OSS (cluster mode disabled) replication group or the
+     * number of replica nodes in one or more node groups (shards) of a Redis OSS (cluster mode enabled) replication
+     * group. This operation is performed with no cluster down time.
      * </p>
      * 
      * @param increaseReplicaCountRequest
@@ -4798,7 +4814,8 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Lists all available node types that you can scale your Redis cluster's or replication group's current node type.
+     * Lists all available node types that you can scale your Redis OSS cluster's or replication group's current node
+     * type.
      * </p>
      * <p>
      * When you use the <code>ModifyCacheCluster</code> or <code>ModifyReplicationGroup</code> operations to scale your
@@ -4916,9 +4933,11 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * @throws InvalidServerlessCacheStateException
      *         The account for these credentials is not currently active.
      * @throws ServerlessCacheSnapshotNotFoundException
-     *         This serverless cache snapshot could not be found or does not exist. Available for Redis only.
+     *         This serverless cache snapshot could not be found or does not exist. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws InvalidServerlessCacheSnapshotStateException
-     *         The state of the serverless cache snapshot was not received. Available for Redis only.
+     *         The state of the serverless cache snapshot was not received. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws InvalidARNException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
      * @sample AmazonElastiCache.ListTagsForResource
@@ -5254,13 +5273,13 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Modifies the settings for a replication group. This is limited to Redis 7 and newer.
+     * Modifies the settings for a replication group. This is limited to Redis OSS 7 and newer.
      * </p>
      * <ul>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/scaling-redis-cluster-mode-enabled.html">
-     * Scaling for Amazon ElastiCache for Redis (cluster mode enabled)</a> in the ElastiCache User Guide
+     * Scaling for Amazon ElastiCache (Redis OSS) (cluster mode enabled)</a> in the ElastiCache User Guide
      * </p>
      * </li>
      * <li>
@@ -5273,7 +5292,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </ul>
      * <note>
      * <p>
-     * This operation is valid for Redis only.
+     * This operation is valid for Redis OSS only.
      * </p>
      * </note>
      * 
@@ -5662,7 +5681,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * Allows you to purchase a reserved cache node offering. Reserved nodes are not eligible for cancellation and are
      * non-refundable. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/reserved-nodes.html">Managing Costs with
-     * Reserved Nodes</a> for Redis or <a
+     * Reserved Nodes</a> for Redis OSS or <a
      * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/reserved-nodes.html">Managing Costs with
      * Reserved Nodes</a> for Memcached.
      * </p>
@@ -5810,12 +5829,12 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * When the reboot is complete, a cluster event is created.
      * </p>
      * <p>
-     * Rebooting a cluster is currently supported on Memcached and Redis (cluster mode disabled) clusters. Rebooting is
-     * not supported on Redis (cluster mode enabled) clusters.
+     * Rebooting a cluster is currently supported on Memcached and Redis OSS (cluster mode disabled) clusters. Rebooting
+     * is not supported on Redis OSS (cluster mode enabled) clusters.
      * </p>
      * <p>
-     * If you make changes to parameters that require a Redis (cluster mode enabled) cluster reboot for the changes to
-     * be applied, see <a
+     * If you make changes to parameters that require a Redis OSS (cluster mode enabled) cluster reboot for the changes
+     * to be applied, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes.rebooting.html">Rebooting a Cluster</a>
      * for an alternate process.
      * </p>
@@ -5913,9 +5932,11 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * @throws InvalidServerlessCacheStateException
      *         The account for these credentials is not currently active.
      * @throws ServerlessCacheSnapshotNotFoundException
-     *         This serverless cache snapshot could not be found or does not exist. Available for Redis only.
+     *         This serverless cache snapshot could not be found or does not exist. Available for Redis OSS and
+     *         Serverless Memcached only.
      * @throws InvalidServerlessCacheSnapshotStateException
-     *         The state of the serverless cache snapshot was not received. Available for Redis only.
+     *         The state of the serverless cache snapshot was not received. Available for Redis OSS and Serverless
+     *         Memcached only.
      * @throws InvalidARNException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
      * @throws TagNotFoundException
@@ -6197,8 +6218,8 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * </p></li>
      * <li>
      * <p>
-     * If calling this operation multiple times on different shards in the same Redis (cluster mode enabled) replication
-     * group, the first node replacement must complete before a subsequent call can be made.
+     * If calling this operation multiple times on different shards in the same Redis OSS (cluster mode enabled)
+     * replication group, the first node replacement must complete before a subsequent call can be made.
      * </p>
      * </li>
      * <li>

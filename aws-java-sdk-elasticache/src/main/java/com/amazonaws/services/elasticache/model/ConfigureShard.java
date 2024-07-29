@@ -29,8 +29,8 @@ public class ConfigureShard implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The 4-digit id for the node group you are configuring. For Redis (cluster mode disabled) replication groups, the
-     * node group id is always 0001. To find a Redis (cluster mode enabled)'s node group's (shard's) id, see <a
+     * The 4-digit id for the node group you are configuring. For Redis OSS (cluster mode disabled) replication groups,
+     * the node group id is always 0001. To find a Redis OSS (cluster mode enabled)'s node group's (shard's) id, see <a
      * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a Shard's Id</a>.
      * </p>
      */
@@ -38,7 +38,7 @@ public class ConfigureShard implements Serializable, Cloneable {
     /**
      * <p>
      * The number of replicas you want in this node group at the end of this operation. The maximum value for
-     * <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis replication group you are
+     * <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis OSS replication group you are
      * working with.
      * </p>
      * <p>
@@ -47,7 +47,7 @@ public class ConfigureShard implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode disabled)
+     * Redis OSS (cluster mode disabled)
      * </p>
      * <ul>
      * <li>
@@ -64,7 +64,8 @@ public class ConfigureShard implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)
+     * Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
+     * fails)
      * </p>
      * </li>
      * </ul>
@@ -75,8 +76,8 @@ public class ConfigureShard implements Serializable, Cloneable {
      * A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the replication
      * group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must equal the value of
      * <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     * <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each of the
-     * replicas.
+     * <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for each of
+     * the replicas.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> preferredAvailabilityZones;
@@ -89,16 +90,17 @@ public class ConfigureShard implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The 4-digit id for the node group you are configuring. For Redis (cluster mode disabled) replication groups, the
-     * node group id is always 0001. To find a Redis (cluster mode enabled)'s node group's (shard's) id, see <a
+     * The 4-digit id for the node group you are configuring. For Redis OSS (cluster mode disabled) replication groups,
+     * the node group id is always 0001. To find a Redis OSS (cluster mode enabled)'s node group's (shard's) id, see <a
      * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a Shard's Id</a>.
      * </p>
      * 
      * @param nodeGroupId
-     *        The 4-digit id for the node group you are configuring. For Redis (cluster mode disabled) replication
-     *        groups, the node group id is always 0001. To find a Redis (cluster mode enabled)'s node group's (shard's)
-     *        id, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a
-     *        Shard's Id</a>.
+     *        The 4-digit id for the node group you are configuring. For Redis OSS (cluster mode disabled) replication
+     *        groups, the node group id is always 0001. To find a Redis OSS (cluster mode enabled)'s node group's
+     *        (shard's) id, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a Shard's
+     *        Id</a>.
      */
 
     public void setNodeGroupId(String nodeGroupId) {
@@ -107,15 +109,16 @@ public class ConfigureShard implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The 4-digit id for the node group you are configuring. For Redis (cluster mode disabled) replication groups, the
-     * node group id is always 0001. To find a Redis (cluster mode enabled)'s node group's (shard's) id, see <a
+     * The 4-digit id for the node group you are configuring. For Redis OSS (cluster mode disabled) replication groups,
+     * the node group id is always 0001. To find a Redis OSS (cluster mode enabled)'s node group's (shard's) id, see <a
      * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a Shard's Id</a>.
      * </p>
      * 
-     * @return The 4-digit id for the node group you are configuring. For Redis (cluster mode disabled) replication
-     *         groups, the node group id is always 0001. To find a Redis (cluster mode enabled)'s node group's (shard's)
-     *         id, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding
-     *         a Shard's Id</a>.
+     * @return The 4-digit id for the node group you are configuring. For Redis OSS (cluster mode disabled) replication
+     *         groups, the node group id is always 0001. To find a Redis OSS (cluster mode enabled)'s node group's
+     *         (shard's) id, see <a
+     *         href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a Shard's
+     *         Id</a>.
      */
 
     public String getNodeGroupId() {
@@ -124,16 +127,17 @@ public class ConfigureShard implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The 4-digit id for the node group you are configuring. For Redis (cluster mode disabled) replication groups, the
-     * node group id is always 0001. To find a Redis (cluster mode enabled)'s node group's (shard's) id, see <a
+     * The 4-digit id for the node group you are configuring. For Redis OSS (cluster mode disabled) replication groups,
+     * the node group id is always 0001. To find a Redis OSS (cluster mode enabled)'s node group's (shard's) id, see <a
      * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a Shard's Id</a>.
      * </p>
      * 
      * @param nodeGroupId
-     *        The 4-digit id for the node group you are configuring. For Redis (cluster mode disabled) replication
-     *        groups, the node group id is always 0001. To find a Redis (cluster mode enabled)'s node group's (shard's)
-     *        id, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a
-     *        Shard's Id</a>.
+     *        The 4-digit id for the node group you are configuring. For Redis OSS (cluster mode disabled) replication
+     *        groups, the node group id is always 0001. To find a Redis OSS (cluster mode enabled)'s node group's
+     *        (shard's) id, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a Shard's
+     *        Id</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,7 +149,7 @@ public class ConfigureShard implements Serializable, Cloneable {
     /**
      * <p>
      * The number of replicas you want in this node group at the end of this operation. The maximum value for
-     * <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis replication group you are
+     * <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis OSS replication group you are
      * working with.
      * </p>
      * <p>
@@ -154,7 +158,7 @@ public class ConfigureShard implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode disabled)
+     * Redis OSS (cluster mode disabled)
      * </p>
      * <ul>
      * <li>
@@ -171,22 +175,23 @@ public class ConfigureShard implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)
+     * Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
+     * fails)
      * </p>
      * </li>
      * </ul>
      * 
      * @param newReplicaCount
      *        The number of replicas you want in this node group at the end of this operation. The maximum value for
-     *        <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis replication group you
-     *        are working with.</p>
+     *        <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis OSS replication group
+     *        you are working with.</p>
      *        <p>
      *        The minimum number of replicas in a shard or replication group is:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Redis (cluster mode disabled)
+     *        Redis OSS (cluster mode disabled)
      *        </p>
      *        <ul>
      *        <li>
@@ -203,8 +208,8 @@ public class ConfigureShard implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
-     *        fails)
+     *        Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary
+     *        node fails)
      *        </p>
      *        </li>
      */
@@ -216,7 +221,7 @@ public class ConfigureShard implements Serializable, Cloneable {
     /**
      * <p>
      * The number of replicas you want in this node group at the end of this operation. The maximum value for
-     * <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis replication group you are
+     * <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis OSS replication group you are
      * working with.
      * </p>
      * <p>
@@ -225,7 +230,7 @@ public class ConfigureShard implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode disabled)
+     * Redis OSS (cluster mode disabled)
      * </p>
      * <ul>
      * <li>
@@ -242,21 +247,22 @@ public class ConfigureShard implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)
+     * Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
+     * fails)
      * </p>
      * </li>
      * </ul>
      * 
      * @return The number of replicas you want in this node group at the end of this operation. The maximum value for
-     *         <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis replication group you
-     *         are working with.</p>
+     *         <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis OSS replication group
+     *         you are working with.</p>
      *         <p>
      *         The minimum number of replicas in a shard or replication group is:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Redis (cluster mode disabled)
+     *         Redis OSS (cluster mode disabled)
      *         </p>
      *         <ul>
      *         <li>
@@ -273,7 +279,7 @@ public class ConfigureShard implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary
+     *         Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary
      *         node fails)
      *         </p>
      *         </li>
@@ -286,7 +292,7 @@ public class ConfigureShard implements Serializable, Cloneable {
     /**
      * <p>
      * The number of replicas you want in this node group at the end of this operation. The maximum value for
-     * <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis replication group you are
+     * <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis OSS replication group you are
      * working with.
      * </p>
      * <p>
@@ -295,7 +301,7 @@ public class ConfigureShard implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * Redis (cluster mode disabled)
+     * Redis OSS (cluster mode disabled)
      * </p>
      * <ul>
      * <li>
@@ -312,22 +318,23 @@ public class ConfigureShard implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)
+     * Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
+     * fails)
      * </p>
      * </li>
      * </ul>
      * 
      * @param newReplicaCount
      *        The number of replicas you want in this node group at the end of this operation. The maximum value for
-     *        <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis replication group you
-     *        are working with.</p>
+     *        <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis OSS replication group
+     *        you are working with.</p>
      *        <p>
      *        The minimum number of replicas in a shard or replication group is:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Redis (cluster mode disabled)
+     *        Redis OSS (cluster mode disabled)
      *        </p>
      *        <ul>
      *        <li>
@@ -344,8 +351,8 @@ public class ConfigureShard implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node
-     *        fails)
+     *        Redis OSS (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary
+     *        node fails)
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -361,14 +368,14 @@ public class ConfigureShard implements Serializable, Cloneable {
      * A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the replication
      * group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must equal the value of
      * <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     * <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each of the
-     * replicas.
+     * <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for each of
+     * the replicas.
      * </p>
      * 
      * @return A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the
      *         replication group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must
      *         equal the value of <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     *         <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for
+     *         <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for
      *         each of the replicas.
      */
 
@@ -384,16 +391,16 @@ public class ConfigureShard implements Serializable, Cloneable {
      * A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the replication
      * group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must equal the value of
      * <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     * <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each of the
-     * replicas.
+     * <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for each of
+     * the replicas.
      * </p>
      * 
      * @param preferredAvailabilityZones
      *        A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the
      *        replication group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must
      *        equal the value of <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     *        <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each
-     *        of the replicas.
+     *        <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for
+     *        each of the replicas.
      */
 
     public void setPreferredAvailabilityZones(java.util.Collection<String> preferredAvailabilityZones) {
@@ -410,8 +417,8 @@ public class ConfigureShard implements Serializable, Cloneable {
      * A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the replication
      * group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must equal the value of
      * <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     * <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each of the
-     * replicas.
+     * <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for each of
+     * the replicas.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -423,8 +430,8 @@ public class ConfigureShard implements Serializable, Cloneable {
      *        A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the
      *        replication group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must
      *        equal the value of <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     *        <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each
-     *        of the replicas.
+     *        <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for
+     *        each of the replicas.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -443,16 +450,16 @@ public class ConfigureShard implements Serializable, Cloneable {
      * A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the replication
      * group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must equal the value of
      * <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     * <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each of the
-     * replicas.
+     * <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for each of
+     * the replicas.
      * </p>
      * 
      * @param preferredAvailabilityZones
      *        A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the
      *        replication group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must
      *        equal the value of <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of
-     *        <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each
-     *        of the replicas.
+     *        <code>ReplicaConfiguration</code> is omitted, ElastiCache (Redis OSS) selects the availability zone for
+     *        each of the replicas.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

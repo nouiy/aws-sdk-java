@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This serverless cache snapshot could not be found or does not exist. Available for Redis only.
+ * This serverless cache snapshot could not be found or does not exist. Available for Redis OSS and Serverless Memcached
+ * only.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

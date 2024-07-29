@@ -27,7 +27,7 @@ public class DescribeUsersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Redis engine.
+     * The Redis OSS engine.
      * </p>
      */
     private String engine;
@@ -61,11 +61,11 @@ public class DescribeUsersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Redis engine.
+     * The Redis OSS engine.
      * </p>
      * 
      * @param engine
-     *        The Redis engine.
+     *        The Redis OSS engine.
      */
 
     public void setEngine(String engine) {
@@ -74,10 +74,10 @@ public class DescribeUsersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Redis engine.
+     * The Redis OSS engine.
      * </p>
      * 
-     * @return The Redis engine.
+     * @return The Redis OSS engine.
      */
 
     public String getEngine() {
@@ -86,11 +86,11 @@ public class DescribeUsersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Redis engine.
+     * The Redis OSS engine.
      * </p>
      * 
      * @param engine
-     *        The Redis engine.
+     *        The Redis OSS engine.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

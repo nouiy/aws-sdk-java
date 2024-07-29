@@ -73,7 +73,8 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     private com.amazonaws.internal.SdkInternalList<String> securityGroupIds;
     /**
      * <p>
-     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> snapshotArnsToRestore;
@@ -85,8 +86,8 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only. Default is
-     * NULL.
+     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only. Default
+     * is NULL.
      * </p>
      */
     private String userGroupId;
@@ -100,14 +101,16 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The number of snapshots that will be retained for the serverless cache that is being created. As new snapshots
-     * beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available for Redis only.
+     * beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      */
     private Integer snapshotRetentionLimit;
     /**
      * <p>
      * The daily time that snapshots will be created from the new serverless cache. By default this number is populated
-     * with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis only.
+     * with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      */
     private String dailySnapshotTime;
@@ -455,10 +458,12 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
-     * @return The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     * @return The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS
+     *         and Serverless Memcached only.
      */
 
     public java.util.List<String> getSnapshotArnsToRestore() {
@@ -470,11 +475,13 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param snapshotArnsToRestore
-     *        The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     *        The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS and
+     *        Serverless Memcached only.
      */
 
     public void setSnapshotArnsToRestore(java.util.Collection<String> snapshotArnsToRestore) {
@@ -488,7 +495,8 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -497,7 +505,8 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param snapshotArnsToRestore
-     *        The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     *        The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS and
+     *        Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -513,11 +522,13 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     * The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param snapshotArnsToRestore
-     *        The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis only.
+     *        The ARN(s) of the snapshot that the new serverless cache will be created from. Available for Redis OSS and
+     *        Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -601,12 +612,12 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only. Default is
-     * NULL.
+     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only. Default
+     * is NULL.
      * </p>
      * 
      * @param userGroupId
-     *        The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only.
+     *        The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only.
      *        Default is NULL.
      */
 
@@ -616,11 +627,11 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only. Default is
-     * NULL.
+     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only. Default
+     * is NULL.
      * </p>
      * 
-     * @return The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only.
+     * @return The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only.
      *         Default is NULL.
      */
 
@@ -630,12 +641,12 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only. Default is
-     * NULL.
+     * The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only. Default
+     * is NULL.
      * </p>
      * 
      * @param userGroupId
-     *        The identifier of the UserGroup to be associated with the serverless cache. Available for Redis only.
+     *        The identifier of the UserGroup to be associated with the serverless cache. Available for Redis OSS only.
      *        Default is NULL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -729,13 +740,14 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The number of snapshots that will be retained for the serverless cache that is being created. As new snapshots
-     * beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available for Redis only.
+     * beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param snapshotRetentionLimit
      *        The number of snapshots that will be retained for the serverless cache that is being created. As new
      *        snapshots beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available
-     *        for Redis only.
+     *        for Redis OSS and Serverless Memcached only.
      */
 
     public void setSnapshotRetentionLimit(Integer snapshotRetentionLimit) {
@@ -745,12 +757,13 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The number of snapshots that will be retained for the serverless cache that is being created. As new snapshots
-     * beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available for Redis only.
+     * beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @return The number of snapshots that will be retained for the serverless cache that is being created. As new
      *         snapshots beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available
-     *         for Redis only.
+     *         for Redis OSS and Serverless Memcached only.
      */
 
     public Integer getSnapshotRetentionLimit() {
@@ -760,13 +773,14 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The number of snapshots that will be retained for the serverless cache that is being created. As new snapshots
-     * beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available for Redis only.
+     * beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param snapshotRetentionLimit
      *        The number of snapshots that will be retained for the serverless cache that is being created. As new
      *        snapshots beyond this limit are added, the oldest snapshots will be deleted on a rolling basis. Available
-     *        for Redis only.
+     *        for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -778,12 +792,14 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The daily time that snapshots will be created from the new serverless cache. By default this number is populated
-     * with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis only.
+     * with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @param dailySnapshotTime
      *        The daily time that snapshots will be created from the new serverless cache. By default this number is
-     *        populated with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis only.
+     *        populated with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis OSS
+     *        and Serverless Memcached only.
      */
 
     public void setDailySnapshotTime(String dailySnapshotTime) {
@@ -793,12 +809,13 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The daily time that snapshots will be created from the new serverless cache. By default this number is populated
-     * with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis only.
+     * with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @return The daily time that snapshots will be created from the new serverless cache. By default this number is
-     *         populated with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis
-     *         only.
+     *         populated with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis OSS
+     *         and Serverless Memcached only.
      */
 
     public String getDailySnapshotTime() {
@@ -808,12 +825,14 @@ public class CreateServerlessCacheRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The daily time that snapshots will be created from the new serverless cache. By default this number is populated
-     * with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis only.
+     * with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis OSS and Serverless
+     * Memcached only.
      * </p>
      * 
      * @param dailySnapshotTime
      *        The daily time that snapshots will be created from the new serverless cache. By default this number is
-     *        populated with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis only.
+     *        populated with 0, i.e. no snapshots will be created on an automatic daily basis. Available for Redis OSS
+     *        and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -26,18 +26,21 @@ public class ExportServerlessCacheSnapshotResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis only.
+     * The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      */
     private ServerlessCacheSnapshot serverlessCacheSnapshot;
 
     /**
      * <p>
-     * The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis only.
+     * The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshot
-     *        The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis only.
+     *        The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis OSS
+     *        and Serverless Memcached only.
      */
 
     public void setServerlessCacheSnapshot(ServerlessCacheSnapshot serverlessCacheSnapshot) {
@@ -46,11 +49,12 @@ public class ExportServerlessCacheSnapshotResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis only.
+     * The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
-     * @return The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis
-     *         only.
+     * @return The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis OSS
+     *         and Serverless Memcached only.
      */
 
     public ServerlessCacheSnapshot getServerlessCacheSnapshot() {
@@ -59,11 +63,13 @@ public class ExportServerlessCacheSnapshotResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis only.
+     * The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis OSS and
+     * Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshot
-     *        The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis only.
+     *        The state of a serverless cache at a specific point in time, to the millisecond. Available for Redis OSS
+     *        and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

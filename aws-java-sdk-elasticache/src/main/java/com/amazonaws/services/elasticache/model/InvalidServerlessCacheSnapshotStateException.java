@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The state of the serverless cache snapshot was not received. Available for Redis only.
+ * The state of the serverless cache snapshot was not received. Available for Redis OSS and Serverless Memcached only.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

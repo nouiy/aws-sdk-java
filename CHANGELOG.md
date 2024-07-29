@@ -1,3 +1,12 @@
+# __1.12.766__ __2024-07-29__
+## __Amazon ElastiCache__
+  - ### Features
+    - Renaming full service name as it appears in developer documentation.
+
+## __Amazon MemoryDB__
+  - ### Features
+    - Renaming full service name as it appears in developer documentation.
+
 # __1.12.765__ __2024-07-25__
 ## __AWS CodeCommit__
   - ### Features

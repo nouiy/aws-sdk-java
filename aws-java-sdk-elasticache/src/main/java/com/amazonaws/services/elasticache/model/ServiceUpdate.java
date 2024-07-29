@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An update that you can apply to your Redis clusters.
+ * An update that you can apply to your Redis OSS clusters.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ServiceUpdate" target="_top">AWS API
@@ -79,13 +79,13 @@ public class ServiceUpdate implements Serializable, Cloneable {
     private String serviceUpdateType;
     /**
      * <p>
-     * The Elasticache engine to which the update applies. Either Redis or Memcached
+     * The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * </p>
      */
     private String engine;
     /**
      * <p>
-     * The Elasticache engine version to which the update applies. Either Redis or Memcached engine version
+     * The Elasticache engine version to which the update applies. Either Redis OSS or Memcached engine version.
      * </p>
      */
     private String engineVersion;
@@ -500,11 +500,11 @@ public class ServiceUpdate implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine to which the update applies. Either Redis or Memcached
+     * The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * </p>
      * 
      * @param engine
-     *        The Elasticache engine to which the update applies. Either Redis or Memcached
+     *        The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      */
 
     public void setEngine(String engine) {
@@ -513,10 +513,10 @@ public class ServiceUpdate implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine to which the update applies. Either Redis or Memcached
+     * The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * </p>
      * 
-     * @return The Elasticache engine to which the update applies. Either Redis or Memcached
+     * @return The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      */
 
     public String getEngine() {
@@ -525,11 +525,11 @@ public class ServiceUpdate implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine to which the update applies. Either Redis or Memcached
+     * The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * </p>
      * 
      * @param engine
-     *        The Elasticache engine to which the update applies. Either Redis or Memcached
+     *        The Elasticache engine to which the update applies. Either Redis OSS or Memcached.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -540,11 +540,11 @@ public class ServiceUpdate implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine version to which the update applies. Either Redis or Memcached engine version
+     * The Elasticache engine version to which the update applies. Either Redis OSS or Memcached engine version.
      * </p>
      * 
      * @param engineVersion
-     *        The Elasticache engine version to which the update applies. Either Redis or Memcached engine version
+     *        The Elasticache engine version to which the update applies. Either Redis OSS or Memcached engine version.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -553,10 +553,10 @@ public class ServiceUpdate implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine version to which the update applies. Either Redis or Memcached engine version
+     * The Elasticache engine version to which the update applies. Either Redis OSS or Memcached engine version.
      * </p>
      * 
-     * @return The Elasticache engine version to which the update applies. Either Redis or Memcached engine version
+     * @return The Elasticache engine version to which the update applies. Either Redis OSS or Memcached engine version.
      */
 
     public String getEngineVersion() {
@@ -565,11 +565,11 @@ public class ServiceUpdate implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine version to which the update applies. Either Redis or Memcached engine version
+     * The Elasticache engine version to which the update applies. Either Redis OSS or Memcached engine version.
      * </p>
      * 
      * @param engineVersion
-     *        The Elasticache engine version to which the update applies. Either Redis or Memcached engine version
+     *        The Elasticache engine version to which the update applies. Either Redis OSS or Memcached engine version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

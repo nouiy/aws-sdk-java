@@ -26,18 +26,18 @@ public class DeleteServerlessCacheSnapshotResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The snapshot to be deleted. Available for Redis only.
+     * The snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * </p>
      */
     private ServerlessCacheSnapshot serverlessCacheSnapshot;
 
     /**
      * <p>
-     * The snapshot to be deleted. Available for Redis only.
+     * The snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshot
-     *        The snapshot to be deleted. Available for Redis only.
+     *        The snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      */
 
     public void setServerlessCacheSnapshot(ServerlessCacheSnapshot serverlessCacheSnapshot) {
@@ -46,10 +46,10 @@ public class DeleteServerlessCacheSnapshotResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The snapshot to be deleted. Available for Redis only.
+     * The snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
-     * @return The snapshot to be deleted. Available for Redis only.
+     * @return The snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      */
 
     public ServerlessCacheSnapshot getServerlessCacheSnapshot() {
@@ -58,11 +58,11 @@ public class DeleteServerlessCacheSnapshotResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The snapshot to be deleted. Available for Redis only.
+     * The snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * </p>
      * 
      * @param serverlessCacheSnapshot
-     *        The snapshot to be deleted. Available for Redis only.
+     *        The snapshot to be deleted. Available for Redis OSS and Serverless Memcached only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

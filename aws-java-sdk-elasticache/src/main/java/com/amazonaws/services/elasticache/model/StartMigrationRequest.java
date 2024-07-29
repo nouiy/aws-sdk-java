@@ -33,8 +33,8 @@ public class StartMigrationRequest extends com.amazonaws.AmazonWebServiceRequest
     private String replicationGroupId;
     /**
      * <p>
-     * List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have only
-     * one element.
+     * List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should have
+     * only one element.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<CustomerNodeEndpoint> customerNodeEndpointList;
@@ -81,12 +81,12 @@ public class StartMigrationRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have only
-     * one element.
+     * List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should have
+     * only one element.
      * </p>
      * 
-     * @return List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have
-     *         only one element.
+     * @return List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should
+     *         have only one element.
      */
 
     public java.util.List<CustomerNodeEndpoint> getCustomerNodeEndpointList() {
@@ -98,13 +98,13 @@ public class StartMigrationRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have only
-     * one element.
+     * List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should have
+     * only one element.
      * </p>
      * 
      * @param customerNodeEndpointList
-     *        List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have
-     *        only one element.
+     *        List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should
+     *        have only one element.
      */
 
     public void setCustomerNodeEndpointList(java.util.Collection<CustomerNodeEndpoint> customerNodeEndpointList) {
@@ -118,8 +118,8 @@ public class StartMigrationRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have only
-     * one element.
+     * List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should have
+     * only one element.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -128,8 +128,8 @@ public class StartMigrationRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param customerNodeEndpointList
-     *        List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have
-     *        only one element.
+     *        List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should
+     *        have only one element.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,13 +145,13 @@ public class StartMigrationRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have only
-     * one element.
+     * List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should have
+     * only one element.
      * </p>
      * 
      * @param customerNodeEndpointList
-     *        List of endpoints from which data should be migrated. For Redis (cluster mode disabled), list should have
-     *        only one element.
+     *        List of endpoints from which data should be migrated. For Redis OSS (cluster mode disabled), list should
+     *        have only one element.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

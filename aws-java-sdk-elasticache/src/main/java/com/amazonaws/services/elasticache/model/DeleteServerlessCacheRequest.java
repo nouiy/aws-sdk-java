@@ -33,8 +33,8 @@ public class DeleteServerlessCacheRequest extends com.amazonaws.AmazonWebService
     private String serverlessCacheName;
     /**
      * <p>
-     * Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis only. Default:
-     * NULL, i.e. a final snapshot is not taken.
+     * Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis OSS and
+     * Serverless Memcached only. Default: NULL, i.e. a final snapshot is not taken.
      * </p>
      */
     private String finalSnapshotName;
@@ -81,13 +81,13 @@ public class DeleteServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis only. Default:
-     * NULL, i.e. a final snapshot is not taken.
+     * Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis OSS and
+     * Serverless Memcached only. Default: NULL, i.e. a final snapshot is not taken.
      * </p>
      * 
      * @param finalSnapshotName
-     *        Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis only.
-     *        Default: NULL, i.e. a final snapshot is not taken.
+     *        Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis OSS and
+     *        Serverless Memcached only. Default: NULL, i.e. a final snapshot is not taken.
      */
 
     public void setFinalSnapshotName(String finalSnapshotName) {
@@ -96,12 +96,12 @@ public class DeleteServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis only. Default:
-     * NULL, i.e. a final snapshot is not taken.
+     * Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis OSS and
+     * Serverless Memcached only. Default: NULL, i.e. a final snapshot is not taken.
      * </p>
      * 
-     * @return Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis only.
-     *         Default: NULL, i.e. a final snapshot is not taken.
+     * @return Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis OSS
+     *         and Serverless Memcached only. Default: NULL, i.e. a final snapshot is not taken.
      */
 
     public String getFinalSnapshotName() {
@@ -110,13 +110,13 @@ public class DeleteServerlessCacheRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis only. Default:
-     * NULL, i.e. a final snapshot is not taken.
+     * Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis OSS and
+     * Serverless Memcached only. Default: NULL, i.e. a final snapshot is not taken.
      * </p>
      * 
      * @param finalSnapshotName
-     *        Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis only.
-     *        Default: NULL, i.e. a final snapshot is not taken.
+     *        Name of the final snapshot to be taken before the serverless cache is deleted. Available for Redis OSS and
+     *        Serverless Memcached only. Default: NULL, i.e. a final snapshot is not taken.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,8 +31,8 @@ public class PendingModifiedValues implements Serializable, Cloneable {
      * The new number of cache nodes for the cluster.
      * </p>
      * <p>
-     * For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1
-     * and 40.
+     * For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be between
+     * 1 and 40.
      * </p>
      */
     private Integer numCacheNodes;
@@ -85,14 +85,14 @@ public class PendingModifiedValues implements Serializable, Cloneable {
      * The new number of cache nodes for the cluster.
      * </p>
      * <p>
-     * For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1
-     * and 40.
+     * For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be between
+     * 1 and 40.
      * </p>
      * 
      * @param numCacheNodes
      *        The new number of cache nodes for the cluster.</p>
      *        <p>
-     *        For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be
+     *        For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be
      *        between 1 and 40.
      */
 
@@ -105,13 +105,13 @@ public class PendingModifiedValues implements Serializable, Cloneable {
      * The new number of cache nodes for the cluster.
      * </p>
      * <p>
-     * For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1
-     * and 40.
+     * For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be between
+     * 1 and 40.
      * </p>
      * 
      * @return The new number of cache nodes for the cluster.</p>
      *         <p>
-     *         For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be
+     *         For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be
      *         between 1 and 40.
      */
 
@@ -124,14 +124,14 @@ public class PendingModifiedValues implements Serializable, Cloneable {
      * The new number of cache nodes for the cluster.
      * </p>
      * <p>
-     * For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1
-     * and 40.
+     * For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be between
+     * 1 and 40.
      * </p>
      * 
      * @param numCacheNodes
      *        The new number of cache nodes for the cluster.</p>
      *        <p>
-     *        For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be
+     *        For clusters running Redis OSS, this value must be 1. For clusters running Memcached, this value must be
      *        between 1 and 40.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

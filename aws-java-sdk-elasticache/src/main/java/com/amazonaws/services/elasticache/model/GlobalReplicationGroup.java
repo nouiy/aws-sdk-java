@@ -62,13 +62,13 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
     private String cacheNodeType;
     /**
      * <p>
-     * The Elasticache engine. For Redis only.
+     * The Elasticache engine. For Redis OSS only.
      * </p>
      */
     private String engine;
     /**
      * <p>
-     * The Elasticache Redis engine version.
+     * The Elasticache (Redis OSS) engine version.
      * </p>
      */
     private String engineVersion;
@@ -92,7 +92,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<GlobalNodeGroup> globalNodeGroups;
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
@@ -104,7 +104,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      */
@@ -119,7 +119,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      */
@@ -293,11 +293,11 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine. For Redis only.
+     * The Elasticache engine. For Redis OSS only.
      * </p>
      * 
      * @param engine
-     *        The Elasticache engine. For Redis only.
+     *        The Elasticache engine. For Redis OSS only.
      */
 
     public void setEngine(String engine) {
@@ -306,10 +306,10 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine. For Redis only.
+     * The Elasticache engine. For Redis OSS only.
      * </p>
      * 
-     * @return The Elasticache engine. For Redis only.
+     * @return The Elasticache engine. For Redis OSS only.
      */
 
     public String getEngine() {
@@ -318,11 +318,11 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache engine. For Redis only.
+     * The Elasticache engine. For Redis OSS only.
      * </p>
      * 
      * @param engine
-     *        The Elasticache engine. For Redis only.
+     *        The Elasticache engine. For Redis OSS only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -333,11 +333,11 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache Redis engine version.
+     * The Elasticache (Redis OSS) engine version.
      * </p>
      * 
      * @param engineVersion
-     *        The Elasticache Redis engine version.
+     *        The Elasticache (Redis OSS) engine version.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -346,10 +346,10 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache Redis engine version.
+     * The Elasticache (Redis OSS) engine version.
      * </p>
      * 
-     * @return The Elasticache Redis engine version.
+     * @return The Elasticache (Redis OSS) engine version.
      */
 
     public String getEngineVersion() {
@@ -358,11 +358,11 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Elasticache Redis engine version.
+     * The Elasticache (Redis OSS) engine version.
      * </p>
      * 
      * @param engineVersion
-     *        The Elasticache Redis engine version.
+     *        The Elasticache (Redis OSS) engine version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -571,14 +571,14 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
      * @param authTokenEnabled
-     *        A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
+     *        A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.</p>
      *        <p>
      *        Default: <code>false</code>
      */
@@ -589,13 +589,13 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
-     * @return A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
+     * @return A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.</p>
      *         <p>
      *         Default: <code>false</code>
      */
@@ -606,14 +606,14 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
      * @param authTokenEnabled
-     *        A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
+     *        A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.</p>
      *        <p>
      *        Default: <code>false</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -626,13 +626,13 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
-     * @return A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
+     * @return A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.</p>
      *         <p>
      *         Default: <code>false</code>
      */
@@ -646,14 +646,14 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * 
      * @param transitEncryptionEnabled
      *        A flag that enables in-transit encryption when set to true.</p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      */
 
@@ -666,14 +666,14 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * 
      * @return A flag that enables in-transit encryption when set to true.</p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      */
 
     public Boolean getTransitEncryptionEnabled() {
@@ -685,14 +685,14 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * 
      * @param transitEncryptionEnabled
      *        A flag that enables in-transit encryption when set to true.</p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -707,14 +707,14 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * 
      * @return A flag that enables in-transit encryption when set to true.</p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      */
 
     public Boolean isTransitEncryptionEnabled() {
@@ -731,7 +731,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * 
@@ -743,7 +743,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      *        <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group.
      *        </p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      */
 
@@ -761,7 +761,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * 
@@ -772,8 +772,8 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      *         <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group.
      *         </p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      */
 
     public Boolean getAtRestEncryptionEnabled() {
@@ -790,7 +790,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * 
@@ -802,7 +802,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      *        <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group.
      *        </p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -822,7 +822,7 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * 
@@ -833,8 +833,8 @@ public class GlobalReplicationGroup implements Serializable, Cloneable {
      *         <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group.
      *         </p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      */
 
     public Boolean isAtRestEncryptionEnabled() {

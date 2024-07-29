@@ -51,7 +51,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The cluster ID that is used as the daily snapshot source for the replication group. This parameter cannot be set
-     * for Redis (cluster mode enabled) replication groups.
+     * for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      */
     private String snapshottingClusterId;
@@ -214,7 +214,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     private String engineVersion;
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      */
@@ -300,7 +300,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      */
@@ -333,8 +333,8 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      */
     private String ipDiscovery;
@@ -352,8 +352,8 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can set the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -365,9 +365,9 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      */
     private String clusterMode;
@@ -507,12 +507,12 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The cluster ID that is used as the daily snapshot source for the replication group. This parameter cannot be set
-     * for Redis (cluster mode enabled) replication groups.
+     * for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      * 
      * @param snapshottingClusterId
      *        The cluster ID that is used as the daily snapshot source for the replication group. This parameter cannot
-     *        be set for Redis (cluster mode enabled) replication groups.
+     *        be set for Redis OSS (cluster mode enabled) replication groups.
      */
 
     public void setSnapshottingClusterId(String snapshottingClusterId) {
@@ -522,11 +522,11 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The cluster ID that is used as the daily snapshot source for the replication group. This parameter cannot be set
-     * for Redis (cluster mode enabled) replication groups.
+     * for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      * 
      * @return The cluster ID that is used as the daily snapshot source for the replication group. This parameter cannot
-     *         be set for Redis (cluster mode enabled) replication groups.
+     *         be set for Redis OSS (cluster mode enabled) replication groups.
      */
 
     public String getSnapshottingClusterId() {
@@ -536,12 +536,12 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The cluster ID that is used as the daily snapshot source for the replication group. This parameter cannot be set
-     * for Redis (cluster mode enabled) replication groups.
+     * for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      * 
      * @param snapshottingClusterId
      *        The cluster ID that is used as the daily snapshot source for the replication group. This parameter cannot
-     *        be set for Redis (cluster mode enabled) replication groups.
+     *        be set for Redis OSS (cluster mode enabled) replication groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1662,13 +1662,13 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *         If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *        to the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -1677,12 +1677,13 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * @return  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to
+     *         opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous
+     *         versions. 
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -1691,13 +1692,13 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *         If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *        to the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1708,12 +1709,13 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * @return  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to
+     *         opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous
+     *         versions. 
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -2093,7 +2095,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -2120,7 +2122,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *        Redis AUTH</a>
+     *        Redis OSS AUTH</a>
      * @see AuthTokenUpdateStrategyType
      */
 
@@ -2152,7 +2154,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -2178,7 +2180,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         <p>
      *         For more information, see <a
      *         href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *         Redis AUTH</a>
+     *         Redis OSS AUTH</a>
      * @see AuthTokenUpdateStrategyType
      */
 
@@ -2210,7 +2212,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -2237,7 +2239,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *        Redis AUTH</a>
+     *        Redis OSS AUTH</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthTokenUpdateStrategyType
      */
@@ -2271,7 +2273,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis
+     * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with Redis OSS
      * AUTH</a>
      * </p>
      * 
@@ -2298,7 +2300,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html">Authenticating Users with
-     *        Redis AUTH</a>
+     *        Redis OSS AUTH</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthTokenUpdateStrategyType
      */
@@ -2590,14 +2592,14 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see IpDiscovery
      */
 
@@ -2608,13 +2610,13 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @return The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *         is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *         instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *         is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *         all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see IpDiscovery
      */
 
@@ -2625,14 +2627,14 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpDiscovery
      */
@@ -2645,14 +2647,14 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpDiscovery
      */
@@ -2729,8 +2731,8 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can set the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -2743,7 +2745,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and
      *        set <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both
-     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis clients to use
+     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use
      *        encrypted connections you can set the value to <code>required</code> to allow encrypted connections only.
      *        </p>
      *        <p>
@@ -2764,8 +2766,8 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can set the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -2777,8 +2779,9 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         <p>
      *         You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and
      *         set <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both
-     *         encrypted and unencrypted connections at the same time. Once you migrate all your Redis clients to use
-     *         encrypted connections you can set the value to <code>required</code> to allow encrypted connections only.
+     *         encrypted and unencrypted connections at the same time. Once you migrate all your Redis OSS clients to
+     *         use encrypted connections you can set the value to <code>required</code> to allow encrypted connections
+     *         only.
      *         </p>
      *         <p>
      *         Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires
@@ -2798,8 +2801,8 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can set the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -2812,7 +2815,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and
      *        set <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both
-     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis clients to use
+     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use
      *        encrypted connections you can set the value to <code>required</code> to allow encrypted connections only.
      *        </p>
      *        <p>
@@ -2835,8 +2838,8 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can set the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -2849,7 +2852,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and
      *        set <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both
-     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis clients to use
+     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use
      *        encrypted connections you can set the value to <code>required</code> to allow encrypted connections only.
      *        </p>
      *        <p>
@@ -2868,16 +2871,16 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -2888,15 +2891,15 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @return Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *         to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *         cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *         complete cluster mode configuration and set the cluster mode to Enabled.
+     *         to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *         and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *         then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -2907,16 +2910,16 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterMode
      */
@@ -2929,16 +2932,16 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterMode
      */

@@ -17,7 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The settings to be applied to the Redis replication group, either immediately or during the next maintenance window.
+ * The settings to be applied to the Redis OSS replication group, either immediately or during the next maintenance
+ * window.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ReplicationGroupPendingModifiedValues"
@@ -35,7 +36,7 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
     private String primaryClusterId;
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      */
     private String automaticFailoverStatus;
@@ -78,9 +79,9 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      */
     private String clusterMode;
@@ -133,11 +134,11 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
      * @param automaticFailoverStatus
-     *        Indicates the status of automatic failover for this Redis replication group.
+     *        Indicates the status of automatic failover for this Redis OSS replication group.
      * @see PendingAutomaticFailoverStatus
      */
 
@@ -147,10 +148,10 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
-     * @return Indicates the status of automatic failover for this Redis replication group.
+     * @return Indicates the status of automatic failover for this Redis OSS replication group.
      * @see PendingAutomaticFailoverStatus
      */
 
@@ -160,11 +161,11 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
      * @param automaticFailoverStatus
-     *        Indicates the status of automatic failover for this Redis replication group.
+     *        Indicates the status of automatic failover for this Redis OSS replication group.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PendingAutomaticFailoverStatus
      */
@@ -176,11 +177,11 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
      * @param automaticFailoverStatus
-     *        Indicates the status of automatic failover for this Redis replication group.
+     *        Indicates the status of automatic failover for this Redis OSS replication group.
      * @see PendingAutomaticFailoverStatus
      */
 
@@ -190,11 +191,11 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
      * @param automaticFailoverStatus
-     *        Indicates the status of automatic failover for this Redis replication group.
+     *        Indicates the status of automatic failover for this Redis OSS replication group.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PendingAutomaticFailoverStatus
      */
@@ -558,16 +559,16 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -578,15 +579,15 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @return Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *         to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *         cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *         complete cluster mode configuration and set the cluster mode to Enabled.
+     *         to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *         and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *         then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -597,16 +598,16 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterMode
      */
@@ -619,16 +620,16 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -639,16 +640,16 @@ public class ReplicationGroupPendingModifiedValues implements Serializable, Clon
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterMode
      */

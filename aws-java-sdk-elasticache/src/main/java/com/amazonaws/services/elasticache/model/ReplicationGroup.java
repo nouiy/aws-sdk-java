@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Contains all of the attributes of a specific Redis replication group.
+ * Contains all of the attributes of a specific Redis OSS replication group.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ReplicationGroup" target="_top">AWS API
@@ -66,9 +66,9 @@ public class ReplicationGroup implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> memberClusters;
     /**
      * <p>
-     * A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups, this is a
-     * single-element list. For Redis (cluster mode enabled) replication groups, the list contains an entry for each
-     * node group (shard).
+     * A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication groups, this
+     * is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list contains an entry for
+     * each node group (shard).
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<NodeGroup> nodeGroups;
@@ -80,7 +80,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
     private String snapshottingClusterId;
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      */
     private String automaticFailover;
@@ -147,7 +147,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
     private String cacheNodeType;
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
@@ -165,7 +165,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to <code>true</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -183,7 +183,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -237,15 +237,15 @@ public class ReplicationGroup implements Serializable, Cloneable {
     private String dataTiering;
     /**
      * <p>
-     * If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next
-     * auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      * </p>
      */
     private Boolean autoMinorVersionUpgrade;
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      */
@@ -253,8 +253,8 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      */
     private String ipDiscovery;
@@ -267,9 +267,9 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      */
     private String clusterMode;
@@ -561,14 +561,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups, this is a
-     * single-element list. For Redis (cluster mode enabled) replication groups, the list contains an entry for each
-     * node group (shard).
+     * A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication groups, this
+     * is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list contains an entry for
+     * each node group (shard).
      * </p>
      * 
-     * @return A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups,
-     *         this is a single-element list. For Redis (cluster mode enabled) replication groups, the list contains an
-     *         entry for each node group (shard).
+     * @return A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication
+     *         groups, this is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list
+     *         contains an entry for each node group (shard).
      */
 
     public java.util.List<NodeGroup> getNodeGroups() {
@@ -580,15 +580,15 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups, this is a
-     * single-element list. For Redis (cluster mode enabled) replication groups, the list contains an entry for each
-     * node group (shard).
+     * A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication groups, this
+     * is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list contains an entry for
+     * each node group (shard).
      * </p>
      * 
      * @param nodeGroups
-     *        A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups,
-     *        this is a single-element list. For Redis (cluster mode enabled) replication groups, the list contains an
-     *        entry for each node group (shard).
+     *        A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication groups,
+     *        this is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list contains
+     *        an entry for each node group (shard).
      */
 
     public void setNodeGroups(java.util.Collection<NodeGroup> nodeGroups) {
@@ -602,9 +602,9 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups, this is a
-     * single-element list. For Redis (cluster mode enabled) replication groups, the list contains an entry for each
-     * node group (shard).
+     * A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication groups, this
+     * is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list contains an entry for
+     * each node group (shard).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -613,9 +613,9 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * </p>
      * 
      * @param nodeGroups
-     *        A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups,
-     *        this is a single-element list. For Redis (cluster mode enabled) replication groups, the list contains an
-     *        entry for each node group (shard).
+     *        A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication groups,
+     *        this is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list contains
+     *        an entry for each node group (shard).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -631,15 +631,15 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups, this is a
-     * single-element list. For Redis (cluster mode enabled) replication groups, the list contains an entry for each
-     * node group (shard).
+     * A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication groups, this
+     * is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list contains an entry for
+     * each node group (shard).
      * </p>
      * 
      * @param nodeGroups
-     *        A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups,
-     *        this is a single-element list. For Redis (cluster mode enabled) replication groups, the list contains an
-     *        entry for each node group (shard).
+     *        A list of node groups in this replication group. For Redis OSS (cluster mode disabled) replication groups,
+     *        this is a single-element list. For Redis OSS (cluster mode enabled) replication groups, the list contains
+     *        an entry for each node group (shard).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -690,11 +690,11 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
      * @param automaticFailover
-     *        Indicates the status of automatic failover for this Redis replication group.
+     *        Indicates the status of automatic failover for this Redis OSS replication group.
      * @see AutomaticFailoverStatus
      */
 
@@ -704,10 +704,10 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
-     * @return Indicates the status of automatic failover for this Redis replication group.
+     * @return Indicates the status of automatic failover for this Redis OSS replication group.
      * @see AutomaticFailoverStatus
      */
 
@@ -717,11 +717,11 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
      * @param automaticFailover
-     *        Indicates the status of automatic failover for this Redis replication group.
+     *        Indicates the status of automatic failover for this Redis OSS replication group.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutomaticFailoverStatus
      */
@@ -733,11 +733,11 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
      * @param automaticFailover
-     *        Indicates the status of automatic failover for this Redis replication group.
+     *        Indicates the status of automatic failover for this Redis OSS replication group.
      * @see AutomaticFailoverStatus
      */
 
@@ -747,11 +747,11 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the status of automatic failover for this Redis replication group.
+     * Indicates the status of automatic failover for this Redis OSS replication group.
      * </p>
      * 
      * @param automaticFailover
-     *        Indicates the status of automatic failover for this Redis replication group.
+     *        Indicates the status of automatic failover for this Redis OSS replication group.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutomaticFailoverStatus
      */
@@ -1204,14 +1204,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
      * @param authTokenEnabled
-     *        A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
+     *        A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.</p>
      *        <p>
      *        Default: <code>false</code>
      */
@@ -1222,13 +1222,13 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
-     * @return A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
+     * @return A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.</p>
      *         <p>
      *         Default: <code>false</code>
      */
@@ -1239,14 +1239,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
      * @param authTokenEnabled
-     *        A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
+     *        A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.</p>
      *        <p>
      *        Default: <code>false</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1259,13 +1259,13 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.
+     * A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
-     * @return A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
+     * @return A flag that enables using an <code>AuthToken</code> (password) when issuing Redis OSS commands.</p>
      *         <p>
      *         Default: <code>false</code>
      */
@@ -1319,7 +1319,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to <code>true</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -1329,7 +1329,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * @param transitEncryptionEnabled
      *        A flag that enables in-transit encryption when set to <code>true</code>.</p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      *        </p>
      *        <p>
@@ -1345,7 +1345,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to <code>true</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -1354,8 +1354,8 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * 
      * @return A flag that enables in-transit encryption when set to <code>true</code>.</p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      *         </p>
      *         <p>
      *         Default: <code>false</code>
@@ -1370,7 +1370,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to <code>true</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -1380,7 +1380,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * @param transitEncryptionEnabled
      *        A flag that enables in-transit encryption when set to <code>true</code>.</p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      *        </p>
      *        <p>
@@ -1398,7 +1398,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * A flag that enables in-transit encryption when set to <code>true</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -1407,8 +1407,8 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * 
      * @return A flag that enables in-transit encryption when set to <code>true</code>.</p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      *         </p>
      *         <p>
      *         Default: <code>false</code>
@@ -1428,7 +1428,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -1443,7 +1443,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      *        <code>true</code> when you create a cluster.
      *        </p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      *        </p>
      *        <p>
@@ -1464,7 +1464,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -1478,8 +1478,8 @@ public class ReplicationGroup implements Serializable, Cloneable {
      *         <code>true</code> when you create a cluster.
      *         </p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      *         </p>
      *         <p>
      *         Default: <code>false</code>
@@ -1499,7 +1499,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -1514,7 +1514,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      *        <code>true</code> when you create a cluster.
      *        </p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      *        </p>
      *        <p>
@@ -1537,7 +1537,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -1551,8 +1551,8 @@ public class ReplicationGroup implements Serializable, Cloneable {
      *         <code>true</code> when you create a cluster.
      *         </p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      *         </p>
      *         <p>
      *         Default: <code>false</code>
@@ -1996,13 +1996,13 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next
-     * auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     *        If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *        to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -2011,12 +2011,12 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next
-     * auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      * </p>
      * 
-     * @return If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     * @return If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *         to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -2025,13 +2025,13 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next
-     * auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     *        If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *        to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2042,12 +2042,12 @@ public class ReplicationGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next
-     * auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      * </p>
      * 
-     * @return If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions.
+     * @return If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *         to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -2057,14 +2057,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param networkType
      *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *        on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *        built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see NetworkType
      */
 
@@ -2075,13 +2075,13 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @return Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *         workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *         on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *         workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *         built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see NetworkType
      */
 
@@ -2092,14 +2092,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param networkType
      *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *        on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *        built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkType
      */
@@ -2112,14 +2112,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param networkType
      *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *        on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *        built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see NetworkType
      */
 
@@ -2130,14 +2130,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param networkType
      *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *        on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *        built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkType
      */
@@ -2150,14 +2150,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see IpDiscovery
      */
 
@@ -2168,13 +2168,13 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @return The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *         is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *         instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *         is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *         all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see IpDiscovery
      */
 
@@ -2185,14 +2185,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpDiscovery
      */
@@ -2205,14 +2205,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see IpDiscovery
      */
 
@@ -2223,14 +2223,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
-     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
-     * built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
-     *        instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on
+     *        all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpDiscovery
      */
@@ -2316,16 +2316,16 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -2336,15 +2336,15 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @return Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *         to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *         cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *         complete cluster mode configuration and set the cluster mode to Enabled.
+     *         to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *         and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *         then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -2355,16 +2355,16 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterMode
      */
@@ -2377,16 +2377,16 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -2397,16 +2397,16 @@ public class ReplicationGroup implements Serializable, Cloneable {
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterMode
      */

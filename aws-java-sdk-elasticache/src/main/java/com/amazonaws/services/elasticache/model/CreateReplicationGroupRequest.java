@@ -83,7 +83,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * fails.
      * </p>
      * <p>
-     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication groups.
+     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      * <p>
      * Default: false
@@ -142,8 +142,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     private com.amazonaws.internal.SdkInternalList<String> preferredCacheClusterAZs;
     /**
      * <p>
-     * An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode enabled)
-     * replication group. For Redis (cluster mode disabled) either omit this parameter or set it to 1.
+     * An optional parameter that specifies the number of node groups (shards) for this Redis OSS (cluster mode enabled)
+     * replication group. For Redis OSS (cluster mode disabled) either omit this parameter or set it to 1.
      * </p>
      * <p>
      * Default: 1
@@ -164,10 +164,10 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * and <code>Slots</code>.
      * </p>
      * <p>
-     * If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can
-     * use this parameter to individually configure each node group (shard), or you can omit this parameter. However, it
-     * is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file. You must configure each node
-     * group (shard) using this parameter because you must specify the slots for each node group.
+     * If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication group,
+     * you can use this parameter to individually configure each node group (shard), or you can omit this parameter.
+     * However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb file. You must
+     * configure each node group (shard) using this parameter because you must specify the slots for each node group.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<NodeGroupConfiguration> nodeGroupConfiguration;
@@ -203,7 +203,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * <p>
-     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * <b>M6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
      * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
      * <code>cache.m6g.16xlarge</code>
@@ -217,8 +217,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
-     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
-     * onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     * <b>T4g node types</b> (available only for Redis OSS engine version 5.0.6 onward and Memcached engine version
+     * 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      * </p>
      * <p>
      * <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code>
@@ -284,7 +284,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * <p>
-     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * <b>R6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
      * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
      * <code>cache.r6g.16xlarge</code>
@@ -325,18 +325,18 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * Redis append-only files (AOF) are not supported for T1 or T2 instances.
+     * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis Multi-AZ with automatic failover is not supported on T1 instances.
+     * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis
-     * version 2.8.22 and later.
+     * Redis OSS configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis
+     * OSS version 2.8.22 and later.
      * </p>
      * </li>
      * </ul>
@@ -369,19 +369,19 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * default cache parameter group for the specified engine is used.
      * </p>
      * <p>
-     * If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default parameter
-     * group, we recommend that you specify the parameter group by name.
+     * If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to use a default
+     * parameter group, we recommend that you specify the parameter group by name.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * To create a Redis (cluster mode disabled) replication group, use
+     * To create a Redis OSS (cluster mode disabled) replication group, use
      * <code>CacheParameterGroupName=default.redis3.2</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To create a Redis (cluster mode enabled) replication group, use
+     * To create a Redis OSS (cluster mode enabled) replication group, use
      * <code>CacheParameterGroupName=default.redis3.2.cluster.on</code>.
      * </p>
      * </li>
@@ -429,11 +429,11 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3.
-     * The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot
-     * contain any commas. The new replication group will have the number of node groups (console: shards) specified by
-     * the parameter <i>NumNodeGroups</i> or the number of node groups configured by <i>NodeGroupConfiguration</i>
-     * regardless of the number of ARNs specified here.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in Amazon
+     * S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN
+     * cannot contain any commas. The new replication group will have the number of node groups (console: shards)
+     * specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured by
+     * <i>NodeGroupConfiguration</i> regardless of the number of ARNs specified here.
      * </p>
      * <p>
      * Example of an Amazon S3 ARN: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code>
@@ -517,7 +517,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     private String notificationTopicArn;
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      */
@@ -599,7 +599,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -623,7 +623,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -660,7 +660,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      */
@@ -668,7 +668,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when creating a replication group, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     * is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
      * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      */
@@ -680,8 +680,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can modify the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can modify the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -696,15 +696,15 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      */
     private String clusterMode;
     /**
      * <p>
-     * The name of the snapshot used to create a replication group. Available for Redis only.
+     * The name of the snapshot used to create a replication group. Available for Redis OSS only.
      * </p>
      */
     private String serverlessCacheSnapshotName;
@@ -1019,7 +1019,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * fails.
      * </p>
      * <p>
-     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication groups.
+     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      * <p>
      * Default: false
@@ -1029,7 +1029,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        Specifies whether a read-only replica is automatically promoted to read/write primary if the existing
      *        primary fails.</p>
      *        <p>
-     *        <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication groups.
+     *        <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication
+     *        groups.
      *        </p>
      *        <p>
      *        Default: false
@@ -1045,7 +1046,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * fails.
      * </p>
      * <p>
-     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication groups.
+     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      * <p>
      * Default: false
@@ -1054,7 +1055,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * @return Specifies whether a read-only replica is automatically promoted to read/write primary if the existing
      *         primary fails.</p>
      *         <p>
-     *         <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication
+     *         <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication
      *         groups.
      *         </p>
      *         <p>
@@ -1071,7 +1072,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * fails.
      * </p>
      * <p>
-     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication groups.
+     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      * <p>
      * Default: false
@@ -1081,7 +1082,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        Specifies whether a read-only replica is automatically promoted to read/write primary if the existing
      *        primary fails.</p>
      *        <p>
-     *        <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication groups.
+     *        <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication
+     *        groups.
      *        </p>
      *        <p>
      *        Default: false
@@ -1099,7 +1101,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * fails.
      * </p>
      * <p>
-     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication groups.
+     * <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication groups.
      * </p>
      * <p>
      * Default: false
@@ -1108,7 +1110,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * @return Specifies whether a read-only replica is automatically promoted to read/write primary if the existing
      *         primary fails.</p>
      *         <p>
-     *         <code>AutomaticFailoverEnabled</code> must be enabled for Redis (cluster mode enabled) replication
+     *         <code>AutomaticFailoverEnabled</code> must be enabled for Redis OSS (cluster mode enabled) replication
      *         groups.
      *         </p>
      *         <p>
@@ -1511,16 +1513,16 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode enabled)
-     * replication group. For Redis (cluster mode disabled) either omit this parameter or set it to 1.
+     * An optional parameter that specifies the number of node groups (shards) for this Redis OSS (cluster mode enabled)
+     * replication group. For Redis OSS (cluster mode disabled) either omit this parameter or set it to 1.
      * </p>
      * <p>
      * Default: 1
      * </p>
      * 
      * @param numNodeGroups
-     *        An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode
-     *        enabled) replication group. For Redis (cluster mode disabled) either omit this parameter or set it to
+     *        An optional parameter that specifies the number of node groups (shards) for this Redis OSS (cluster mode
+     *        enabled) replication group. For Redis OSS (cluster mode disabled) either omit this parameter or set it to
      *        1.</p>
      *        <p>
      *        Default: 1
@@ -1532,15 +1534,15 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode enabled)
-     * replication group. For Redis (cluster mode disabled) either omit this parameter or set it to 1.
+     * An optional parameter that specifies the number of node groups (shards) for this Redis OSS (cluster mode enabled)
+     * replication group. For Redis OSS (cluster mode disabled) either omit this parameter or set it to 1.
      * </p>
      * <p>
      * Default: 1
      * </p>
      * 
-     * @return An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode
-     *         enabled) replication group. For Redis (cluster mode disabled) either omit this parameter or set it to
+     * @return An optional parameter that specifies the number of node groups (shards) for this Redis OSS (cluster mode
+     *         enabled) replication group. For Redis OSS (cluster mode disabled) either omit this parameter or set it to
      *         1.</p>
      *         <p>
      *         Default: 1
@@ -1552,16 +1554,16 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode enabled)
-     * replication group. For Redis (cluster mode disabled) either omit this parameter or set it to 1.
+     * An optional parameter that specifies the number of node groups (shards) for this Redis OSS (cluster mode enabled)
+     * replication group. For Redis OSS (cluster mode disabled) either omit this parameter or set it to 1.
      * </p>
      * <p>
      * Default: 1
      * </p>
      * 
      * @param numNodeGroups
-     *        An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode
-     *        enabled) replication group. For Redis (cluster mode disabled) either omit this parameter or set it to
+     *        An optional parameter that specifies the number of node groups (shards) for this Redis OSS (cluster mode
+     *        enabled) replication group. For Redis OSS (cluster mode disabled) either omit this parameter or set it to
      *        1.</p>
      *        <p>
      *        Default: 1
@@ -1626,19 +1628,19 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * and <code>Slots</code>.
      * </p>
      * <p>
-     * If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can
-     * use this parameter to individually configure each node group (shard), or you can omit this parameter. However, it
-     * is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file. You must configure each node
-     * group (shard) using this parameter because you must specify the slots for each node group.
+     * If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication group,
+     * you can use this parameter to individually configure each node group (shard), or you can omit this parameter.
+     * However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb file. You must
+     * configure each node group (shard) using this parameter because you must specify the slots for each node group.
      * </p>
      * 
      * @return A list of node group (shard) configuration options. Each node group (shard) configuration has the
      *         following members: <code>PrimaryAvailabilityZone</code>, <code>ReplicaAvailabilityZones</code>,
      *         <code>ReplicaCount</code>, and <code>Slots</code>.</p>
      *         <p>
-     *         If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group,
-     *         you can use this parameter to individually configure each node group (shard), or you can omit this
-     *         parameter. However, it is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb
+     *         If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication
+     *         group, you can use this parameter to individually configure each node group (shard), or you can omit this
+     *         parameter. However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb
      *         file. You must configure each node group (shard) using this parameter because you must specify the slots
      *         for each node group.
      */
@@ -1657,10 +1659,10 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * and <code>Slots</code>.
      * </p>
      * <p>
-     * If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can
-     * use this parameter to individually configure each node group (shard), or you can omit this parameter. However, it
-     * is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file. You must configure each node
-     * group (shard) using this parameter because you must specify the slots for each node group.
+     * If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication group,
+     * you can use this parameter to individually configure each node group (shard), or you can omit this parameter.
+     * However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb file. You must
+     * configure each node group (shard) using this parameter because you must specify the slots for each node group.
      * </p>
      * 
      * @param nodeGroupConfiguration
@@ -1668,11 +1670,11 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        following members: <code>PrimaryAvailabilityZone</code>, <code>ReplicaAvailabilityZones</code>,
      *        <code>ReplicaCount</code>, and <code>Slots</code>.</p>
      *        <p>
-     *        If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group,
-     *        you can use this parameter to individually configure each node group (shard), or you can omit this
-     *        parameter. However, it is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file.
-     *        You must configure each node group (shard) using this parameter because you must specify the slots for
-     *        each node group.
+     *        If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication
+     *        group, you can use this parameter to individually configure each node group (shard), or you can omit this
+     *        parameter. However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb
+     *        file. You must configure each node group (shard) using this parameter because you must specify the slots
+     *        for each node group.
      */
 
     public void setNodeGroupConfiguration(java.util.Collection<NodeGroupConfiguration> nodeGroupConfiguration) {
@@ -1691,10 +1693,10 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * and <code>Slots</code>.
      * </p>
      * <p>
-     * If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can
-     * use this parameter to individually configure each node group (shard), or you can omit this parameter. However, it
-     * is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file. You must configure each node
-     * group (shard) using this parameter because you must specify the slots for each node group.
+     * If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication group,
+     * you can use this parameter to individually configure each node group (shard), or you can omit this parameter.
+     * However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb file. You must
+     * configure each node group (shard) using this parameter because you must specify the slots for each node group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1707,11 +1709,11 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        following members: <code>PrimaryAvailabilityZone</code>, <code>ReplicaAvailabilityZones</code>,
      *        <code>ReplicaCount</code>, and <code>Slots</code>.</p>
      *        <p>
-     *        If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group,
-     *        you can use this parameter to individually configure each node group (shard), or you can omit this
-     *        parameter. However, it is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file.
-     *        You must configure each node group (shard) using this parameter because you must specify the slots for
-     *        each node group.
+     *        If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication
+     *        group, you can use this parameter to individually configure each node group (shard), or you can omit this
+     *        parameter. However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb
+     *        file. You must configure each node group (shard) using this parameter because you must specify the slots
+     *        for each node group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1732,10 +1734,10 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * and <code>Slots</code>.
      * </p>
      * <p>
-     * If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group, you can
-     * use this parameter to individually configure each node group (shard), or you can omit this parameter. However, it
-     * is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file. You must configure each node
-     * group (shard) using this parameter because you must specify the slots for each node group.
+     * If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication group,
+     * you can use this parameter to individually configure each node group (shard), or you can omit this parameter.
+     * However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb file. You must
+     * configure each node group (shard) using this parameter because you must specify the slots for each node group.
      * </p>
      * 
      * @param nodeGroupConfiguration
@@ -1743,11 +1745,11 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        following members: <code>PrimaryAvailabilityZone</code>, <code>ReplicaAvailabilityZones</code>,
      *        <code>ReplicaCount</code>, and <code>Slots</code>.</p>
      *        <p>
-     *        If you're creating a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication group,
-     *        you can use this parameter to individually configure each node group (shard), or you can omit this
-     *        parameter. However, it is required when seeding a Redis (cluster mode enabled) cluster from a S3 rdb file.
-     *        You must configure each node group (shard) using this parameter because you must specify the slots for
-     *        each node group.
+     *        If you're creating a Redis OSS (cluster mode disabled) or a Redis OSS (cluster mode enabled) replication
+     *        group, you can use this parameter to individually configure each node group (shard), or you can omit this
+     *        parameter. However, it is required when seeding a Redis OSS (cluster mode enabled) cluster from a S3 rdb
+     *        file. You must configure each node group (shard) using this parameter because you must specify the slots
+     *        for each node group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1788,7 +1790,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * <p>
-     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * <b>M6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
      * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
      * <code>cache.m6g.16xlarge</code>
@@ -1802,8 +1804,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
-     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
-     * onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     * <b>T4g node types</b> (available only for Redis OSS engine version 5.0.6 onward and Memcached engine version
+     * 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      * </p>
      * <p>
      * <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code>
@@ -1869,7 +1871,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * <p>
-     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * <b>R6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
      * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
      * <code>cache.r6g.16xlarge</code>
@@ -1910,18 +1912,18 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * Redis append-only files (AOF) are not supported for T1 or T2 instances.
+     * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis Multi-AZ with automatic failover is not supported on T1 instances.
+     * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis
-     * version 2.8.22 and later.
+     * Redis OSS configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis
+     * OSS version 2.8.22 and later.
      * </p>
      * </li>
      * </ul>
@@ -1956,7 +1958,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        </p>
      *        </note>
      *        <p>
-     *        <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *        <b>M6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine
      *        version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
      *        <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
      *        <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
@@ -1971,8 +1973,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *        </p>
      *        <p>
-     *        <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
-     *        1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     *        <b>T4g node types</b> (available only for Redis OSS engine version 5.0.6 onward and Memcached engine
+     *        version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>,
+     *        <code>cache.t4g.medium</code>
      *        </p>
      *        <p>
      *        <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>,
@@ -2040,7 +2043,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        </p>
      *        </note>
      *        <p>
-     *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *        <b>R6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine
      *        version 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>,
      *        <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>,
      *        <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code>
@@ -2084,18 +2087,18 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        <li>
      *        <p>
-     *        Redis append-only files (AOF) are not supported for T1 or T2 instances.
+     *        Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Redis Multi-AZ with automatic failover is not supported on T1 instances.
+     *        Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on
-     *        Redis version 2.8.22 and later.
+     *        Redis OSS configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported
+     *        on Redis OSS version 2.8.22 and later.
      *        </p>
      *        </li>
      */
@@ -2136,7 +2139,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * <p>
-     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * <b>M6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
      * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
      * <code>cache.m6g.16xlarge</code>
@@ -2150,8 +2153,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
-     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
-     * onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     * <b>T4g node types</b> (available only for Redis OSS engine version 5.0.6 onward and Memcached engine version
+     * 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      * </p>
      * <p>
      * <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code>
@@ -2217,7 +2220,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * <p>
-     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * <b>R6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
      * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
      * <code>cache.r6g.16xlarge</code>
@@ -2258,18 +2261,18 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * Redis append-only files (AOF) are not supported for T1 or T2 instances.
+     * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis Multi-AZ with automatic failover is not supported on T1 instances.
+     * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis
-     * version 2.8.22 and later.
+     * Redis OSS configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis
+     * OSS version 2.8.22 and later.
      * </p>
      * </li>
      * </ul>
@@ -2303,7 +2306,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         </p>
      *         </note>
      *         <p>
-     *         <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *         <b>M6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine
      *         version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
      *         <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
      *         <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
@@ -2318,8 +2321,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *         </p>
      *         <p>
-     *         <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
-     *         1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     *         <b>T4g node types</b> (available only for Redis OSS engine version 5.0.6 onward and Memcached engine
+     *         version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>,
+     *         <code>cache.t4g.medium</code>
      *         </p>
      *         <p>
      *         <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>,
@@ -2387,7 +2391,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         </p>
      *         </note>
      *         <p>
-     *         <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *         <b>R6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine
      *         version 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>,
      *         <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>,
      *         <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code>
@@ -2431,18 +2435,18 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         </li>
      *         <li>
      *         <p>
-     *         Redis append-only files (AOF) are not supported for T1 or T2 instances.
+     *         Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Redis Multi-AZ with automatic failover is not supported on T1 instances.
+     *         Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on
-     *         Redis version 2.8.22 and later.
+     *         Redis OSS configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported
+     *         on Redis OSS version 2.8.22 and later.
      *         </p>
      *         </li>
      */
@@ -2483,7 +2487,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * <p>
-     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * <b>M6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
      * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
      * <code>cache.m6g.16xlarge</code>
@@ -2497,8 +2501,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
-     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
-     * onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     * <b>T4g node types</b> (available only for Redis OSS engine version 5.0.6 onward and Memcached engine version
+     * 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      * </p>
      * <p>
      * <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code>
@@ -2564,7 +2568,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * <p>
-     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * <b>R6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
      * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
      * <code>cache.r6g.16xlarge</code>
@@ -2605,18 +2609,18 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * Redis append-only files (AOF) are not supported for T1 or T2 instances.
+     * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis Multi-AZ with automatic failover is not supported on T1 instances.
+     * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis
-     * version 2.8.22 and later.
+     * Redis OSS configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis
+     * OSS version 2.8.22 and later.
      * </p>
      * </li>
      * </ul>
@@ -2651,7 +2655,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        </p>
      *        </note>
      *        <p>
-     *        <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *        <b>M6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine
      *        version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
      *        <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
      *        <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
@@ -2666,8 +2670,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *        </p>
      *        <p>
-     *        <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
-     *        1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     *        <b>T4g node types</b> (available only for Redis OSS engine version 5.0.6 onward and Memcached engine
+     *        version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>,
+     *        <code>cache.t4g.medium</code>
      *        </p>
      *        <p>
      *        <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>,
@@ -2735,7 +2740,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        </p>
      *        </note>
      *        <p>
-     *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *        <b>R6g node types</b> (available only for Redis OSS engine version 5.0.6 onward and for Memcached engine
      *        version 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>,
      *        <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>,
      *        <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code>
@@ -2779,18 +2784,18 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        <li>
      *        <p>
-     *        Redis append-only files (AOF) are not supported for T1 or T2 instances.
+     *        Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Redis Multi-AZ with automatic failover is not supported on T1 instances.
+     *        Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on
-     *        Redis version 2.8.22 and later.
+     *        Redis OSS configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported
+     *        on Redis OSS version 2.8.22 and later.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2938,19 +2943,19 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * default cache parameter group for the specified engine is used.
      * </p>
      * <p>
-     * If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default parameter
-     * group, we recommend that you specify the parameter group by name.
+     * If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to use a default
+     * parameter group, we recommend that you specify the parameter group by name.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * To create a Redis (cluster mode disabled) replication group, use
+     * To create a Redis OSS (cluster mode disabled) replication group, use
      * <code>CacheParameterGroupName=default.redis3.2</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To create a Redis (cluster mode enabled) replication group, use
+     * To create a Redis OSS (cluster mode enabled) replication group, use
      * <code>CacheParameterGroupName=default.redis3.2.cluster.on</code>.
      * </p>
      * </li>
@@ -2960,19 +2965,19 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        The name of the parameter group to associate with this replication group. If this argument is omitted, the
      *        default cache parameter group for the specified engine is used.</p>
      *        <p>
-     *        If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default
-     *        parameter group, we recommend that you specify the parameter group by name.
+     *        If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to use a
+     *        default parameter group, we recommend that you specify the parameter group by name.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        To create a Redis (cluster mode disabled) replication group, use
+     *        To create a Redis OSS (cluster mode disabled) replication group, use
      *        <code>CacheParameterGroupName=default.redis3.2</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        To create a Redis (cluster mode enabled) replication group, use
+     *        To create a Redis OSS (cluster mode enabled) replication group, use
      *        <code>CacheParameterGroupName=default.redis3.2.cluster.on</code>.
      *        </p>
      *        </li>
@@ -2988,19 +2993,19 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * default cache parameter group for the specified engine is used.
      * </p>
      * <p>
-     * If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default parameter
-     * group, we recommend that you specify the parameter group by name.
+     * If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to use a default
+     * parameter group, we recommend that you specify the parameter group by name.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * To create a Redis (cluster mode disabled) replication group, use
+     * To create a Redis OSS (cluster mode disabled) replication group, use
      * <code>CacheParameterGroupName=default.redis3.2</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To create a Redis (cluster mode enabled) replication group, use
+     * To create a Redis OSS (cluster mode enabled) replication group, use
      * <code>CacheParameterGroupName=default.redis3.2.cluster.on</code>.
      * </p>
      * </li>
@@ -3009,19 +3014,19 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * @return The name of the parameter group to associate with this replication group. If this argument is omitted,
      *         the default cache parameter group for the specified engine is used.</p>
      *         <p>
-     *         If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default
-     *         parameter group, we recommend that you specify the parameter group by name.
+     *         If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to use a
+     *         default parameter group, we recommend that you specify the parameter group by name.
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         To create a Redis (cluster mode disabled) replication group, use
+     *         To create a Redis OSS (cluster mode disabled) replication group, use
      *         <code>CacheParameterGroupName=default.redis3.2</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         To create a Redis (cluster mode enabled) replication group, use
+     *         To create a Redis OSS (cluster mode enabled) replication group, use
      *         <code>CacheParameterGroupName=default.redis3.2.cluster.on</code>.
      *         </p>
      *         </li>
@@ -3037,19 +3042,19 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * default cache parameter group for the specified engine is used.
      * </p>
      * <p>
-     * If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default parameter
-     * group, we recommend that you specify the parameter group by name.
+     * If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to use a default
+     * parameter group, we recommend that you specify the parameter group by name.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * To create a Redis (cluster mode disabled) replication group, use
+     * To create a Redis OSS (cluster mode disabled) replication group, use
      * <code>CacheParameterGroupName=default.redis3.2</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To create a Redis (cluster mode enabled) replication group, use
+     * To create a Redis OSS (cluster mode enabled) replication group, use
      * <code>CacheParameterGroupName=default.redis3.2.cluster.on</code>.
      * </p>
      * </li>
@@ -3059,19 +3064,19 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        The name of the parameter group to associate with this replication group. If this argument is omitted, the
      *        default cache parameter group for the specified engine is used.</p>
      *        <p>
-     *        If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default
-     *        parameter group, we recommend that you specify the parameter group by name.
+     *        If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to use a
+     *        default parameter group, we recommend that you specify the parameter group by name.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        To create a Redis (cluster mode disabled) replication group, use
+     *        To create a Redis OSS (cluster mode disabled) replication group, use
      *        <code>CacheParameterGroupName=default.redis3.2</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        To create a Redis (cluster mode enabled) replication group, use
+     *        To create a Redis OSS (cluster mode enabled) replication group, use
      *        <code>CacheParameterGroupName=default.redis3.2.cluster.on</code>.
      *        </p>
      *        </li>
@@ -3438,17 +3443,17 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3.
-     * The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot
-     * contain any commas. The new replication group will have the number of node groups (console: shards) specified by
-     * the parameter <i>NumNodeGroups</i> or the number of node groups configured by <i>NodeGroupConfiguration</i>
-     * regardless of the number of ARNs specified here.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in Amazon
+     * S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN
+     * cannot contain any commas. The new replication group will have the number of node groups (console: shards)
+     * specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured by
+     * <i>NodeGroupConfiguration</i> regardless of the number of ARNs specified here.
      * </p>
      * <p>
      * Example of an Amazon S3 ARN: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code>
      * </p>
      * 
-     * @return A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in
+     * @return A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in
      *         Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name
      *         in the ARN cannot contain any commas. The new replication group will have the number of node groups
      *         (console: shards) specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured
@@ -3466,20 +3471,20 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3.
-     * The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot
-     * contain any commas. The new replication group will have the number of node groups (console: shards) specified by
-     * the parameter <i>NumNodeGroups</i> or the number of node groups configured by <i>NodeGroupConfiguration</i>
-     * regardless of the number of ARNs specified here.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in Amazon
+     * S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN
+     * cannot contain any commas. The new replication group will have the number of node groups (console: shards)
+     * specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured by
+     * <i>NodeGroupConfiguration</i> regardless of the number of ARNs specified here.
      * </p>
      * <p>
      * Example of an Amazon S3 ARN: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code>
      * </p>
      * 
      * @param snapshotArns
-     *        A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon
-     *        S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the
-     *        ARN cannot contain any commas. The new replication group will have the number of node groups (console:
+     *        A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in
+     *        Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in
+     *        the ARN cannot contain any commas. The new replication group will have the number of node groups (console:
      *        shards) specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured by
      *        <i>NodeGroupConfiguration</i> regardless of the number of ARNs specified here.</p>
      *        <p>
@@ -3497,11 +3502,11 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3.
-     * The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot
-     * contain any commas. The new replication group will have the number of node groups (console: shards) specified by
-     * the parameter <i>NumNodeGroups</i> or the number of node groups configured by <i>NodeGroupConfiguration</i>
-     * regardless of the number of ARNs specified here.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in Amazon
+     * S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN
+     * cannot contain any commas. The new replication group will have the number of node groups (console: shards)
+     * specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured by
+     * <i>NodeGroupConfiguration</i> regardless of the number of ARNs specified here.
      * </p>
      * <p>
      * Example of an Amazon S3 ARN: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code>
@@ -3513,9 +3518,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param snapshotArns
-     *        A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon
-     *        S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the
-     *        ARN cannot contain any commas. The new replication group will have the number of node groups (console:
+     *        A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in
+     *        Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in
+     *        the ARN cannot contain any commas. The new replication group will have the number of node groups (console:
      *        shards) specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured by
      *        <i>NodeGroupConfiguration</i> regardless of the number of ARNs specified here.</p>
      *        <p>
@@ -3535,20 +3540,20 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3.
-     * The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot
-     * contain any commas. The new replication group will have the number of node groups (console: shards) specified by
-     * the parameter <i>NumNodeGroups</i> or the number of node groups configured by <i>NodeGroupConfiguration</i>
-     * regardless of the number of ARNs specified here.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in Amazon
+     * S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN
+     * cannot contain any commas. The new replication group will have the number of node groups (console: shards)
+     * specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured by
+     * <i>NodeGroupConfiguration</i> regardless of the number of ARNs specified here.
      * </p>
      * <p>
      * Example of an Amazon S3 ARN: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code>
      * </p>
      * 
      * @param snapshotArns
-     *        A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon
-     *        S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the
-     *        ARN cannot contain any commas. The new replication group will have the number of node groups (console:
+     *        A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files stored in
+     *        Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in
+     *        the ARN cannot contain any commas. The new replication group will have the number of node groups (console:
      *        shards) specified by the parameter <i>NumNodeGroups</i> or the number of node groups configured by
      *        <i>NodeGroupConfiguration</i> regardless of the number of ARNs specified here.</p>
      *        <p>
@@ -4023,13 +4028,13 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *         If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *        to the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -4038,12 +4043,13 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * @return  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to
+     *         opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous
+     *         versions. 
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -4052,13 +4058,13 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *         If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in
+     *        to the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4069,12 +4075,13 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     *  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
      * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * @return  If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want to
+     *         opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous
+     *         versions. 
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -4484,7 +4491,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -4508,7 +4515,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      *        </p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      *        </p>
      *        <p>
@@ -4538,7 +4545,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -4561,8 +4568,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      *         </p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      *         </p>
      *         <p>
      *         Default: <code>false</code>
@@ -4591,7 +4598,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -4615,7 +4622,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      *        </p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      *        </p>
      *        <p>
@@ -4647,7 +4654,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -4670,8 +4677,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         If you enable in-transit encryption, you must also specify a value for <code>CacheSubnetGroup</code>.
      *         </p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      *         </p>
      *         <p>
      *         Default: <code>false</code>
@@ -4697,7 +4704,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -4712,7 +4719,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group.
      *        </p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      *        </p>
      *        <p>
@@ -4733,7 +4740,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -4747,8 +4754,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group.
      *         </p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      *         </p>
      *         <p>
      *         Default: <code>false</code>
@@ -4768,7 +4775,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -4783,7 +4790,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group.
      *        </p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     *        <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      *        <code>3.2.6</code>, <code>4.x</code> or later.
      *        </p>
      *        <p>
@@ -4806,7 +4813,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <code>true</code> when you create the replication group.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
+     * <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS version
      * <code>3.2.6</code>, <code>4.x</code> or later.
      * </p>
      * <p>
@@ -4820,8 +4827,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group.
      *         </p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version
-     *         <code>3.2.6</code>, <code>4.x</code> or later.
+     *         <b>Required:</b> Only available when creating a replication group in an Amazon VPC using Redis OSS
+     *         version <code>3.2.6</code>, <code>4.x</code> or later.
      *         </p>
      *         <p>
      *         Default: <code>false</code>
@@ -5088,14 +5095,14 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param networkType
      *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *        on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *        built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see NetworkType
      */
 
@@ -5106,13 +5113,13 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @return Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *         workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *         on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *         workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *         built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @see NetworkType
      */
 
@@ -5123,14 +5130,14 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param networkType
      *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *        on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *        built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkType
      */
@@ -5143,14 +5150,14 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
-     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
      * href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param networkType
      *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
-     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
-     *        on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     *        workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     *        built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkType
      */
@@ -5163,13 +5170,13 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when creating a replication group, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     * is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
      * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when creating a replication group, either <code>ipv4</code> |
-     *        <code>ipv6</code>. IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached
+     *        <code>ipv6</code>. IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached
      *        engine version 1.6.6 on all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro
      *        system</a>.
      * @see IpDiscovery
@@ -5182,12 +5189,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when creating a replication group, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     * is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
      * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @return The network type you choose when creating a replication group, either <code>ipv4</code> |
-     *         <code>ipv6</code>. IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached
+     *         <code>ipv6</code>. IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached
      *         engine version 1.6.6 on all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro
      *         system</a>.
      * @see IpDiscovery
@@ -5200,13 +5207,13 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when creating a replication group, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     * is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
      * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when creating a replication group, either <code>ipv4</code> |
-     *        <code>ipv6</code>. IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached
+     *        <code>ipv6</code>. IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached
      *        engine version 1.6.6 on all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro
      *        system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -5221,13 +5228,13 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The network type you choose when creating a replication group, either <code>ipv4</code> | <code>ipv6</code>. IPv6
-     * is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     * is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine version 1.6.6 on all
      * instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro system</a>.
      * </p>
      * 
      * @param ipDiscovery
      *        The network type you choose when creating a replication group, either <code>ipv4</code> |
-     *        <code>ipv6</code>. IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached
+     *        <code>ipv6</code>. IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached
      *        engine version 1.6.6 on all instances built on the <a href="http://aws.amazon.com/ec2/nitro/">Nitro
      *        system</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -5246,8 +5253,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can modify the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can modify the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -5263,7 +5270,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      *        <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted
-     *        and unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted
+     *        and unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
      *        connections you can modify the value to <code>required</code> to allow encrypted connections only.
      *        </p>
      *        <p>
@@ -5287,8 +5294,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can modify the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can modify the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -5303,8 +5310,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         <p>
      *         When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      *         <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted
-     *         and unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted
-     *         connections you can modify the value to <code>required</code> to allow encrypted connections only.
+     *         and unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use
+     *         encrypted connections you can modify the value to <code>required</code> to allow encrypted connections
+     *         only.
      *         </p>
      *         <p>
      *         Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires
@@ -5327,8 +5335,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can modify the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can modify the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -5344,7 +5352,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      *        <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted
-     *        and unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted
+     *        and unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
      *        connections you can modify the value to <code>required</code> to allow encrypted connections only.
      *        </p>
      *        <p>
@@ -5370,8 +5378,8 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted and
-     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
-     * you can modify the value to <code>required</code> to allow encrypted connections only.
+     * unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
+     * connections you can modify the value to <code>required</code> to allow encrypted connections only.
      * </p>
      * <p>
      * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
@@ -5387,7 +5395,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        When setting <code>TransitEncryptionEnabled</code> to <code>true</code>, you can set your
      *        <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request, to allow both encrypted
-     *        and unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted
+     *        and unencrypted connections at the same time. Once you migrate all your Redis OSS clients to use encrypted
      *        connections you can modify the value to <code>required</code> to allow encrypted connections only.
      *        </p>
      *        <p>
@@ -5409,16 +5417,16 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -5429,15 +5437,15 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @return Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *         to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *         cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *         complete cluster mode configuration and set the cluster mode to Enabled.
+     *         to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *         and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *         then complete cluster mode configuration and set the cluster mode to Enabled.
      * @see ClusterMode
      */
 
@@ -5448,16 +5456,16 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterMode
      */
@@ -5470,16 +5478,16 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode
-     * disabled. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode
-     * configuration and set the cluster mode to Enabled.
+     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled and cluster
+     * mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can then complete cluster
+     * mode configuration and set the cluster mode to Enabled.
      * </p>
      * 
      * @param clusterMode
      *        Enabled or Disabled. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode
-     *        to Compatible. Compatible mode allows your Redis clients to connect using both cluster mode enabled and
-     *        cluster mode disabled. After you migrate all Redis clients to use cluster mode enabled, you can then
-     *        complete cluster mode configuration and set the cluster mode to Enabled.
+     *        to Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode enabled
+     *        and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode enabled, you can
+     *        then complete cluster mode configuration and set the cluster mode to Enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterMode
      */
@@ -5491,11 +5499,11 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the snapshot used to create a replication group. Available for Redis only.
+     * The name of the snapshot used to create a replication group. Available for Redis OSS only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        The name of the snapshot used to create a replication group. Available for Redis only.
+     *        The name of the snapshot used to create a replication group. Available for Redis OSS only.
      */
 
     public void setServerlessCacheSnapshotName(String serverlessCacheSnapshotName) {
@@ -5504,10 +5512,10 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the snapshot used to create a replication group. Available for Redis only.
+     * The name of the snapshot used to create a replication group. Available for Redis OSS only.
      * </p>
      * 
-     * @return The name of the snapshot used to create a replication group. Available for Redis only.
+     * @return The name of the snapshot used to create a replication group. Available for Redis OSS only.
      */
 
     public String getServerlessCacheSnapshotName() {
@@ -5516,11 +5524,11 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the snapshot used to create a replication group. Available for Redis only.
+     * The name of the snapshot used to create a replication group. Available for Redis OSS only.
      * </p>
      * 
      * @param serverlessCacheSnapshotName
-     *        The name of the snapshot used to create a replication group. Available for Redis only.
+     *        The name of the snapshot used to create a replication group. Available for Redis OSS only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
