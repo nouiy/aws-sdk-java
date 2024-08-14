@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.amazonaws</groupId>
         <artifactId>aws-java-sdk-pom</artifactId>
-        <version>1.12.768-SNAPSHOT</version>
+        <version>1.12.768</version>
     </parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-bundle</artifactId>
@@ -24,7 +24,7 @@
         <artifactId>aws-java-sdk</artifactId>
         <groupId>com.amazonaws</groupId>
         <optional>false</optional>
-        <version>1.12.768-SNAPSHOT</version>
+        <version>1.12.768</version>
     </dependency>
 </dependencies>
 
@@ -73,6 +73,17 @@
                             <shadedPattern>com.amazonaws.thirdparty.io.netty</shadedPattern>
                         </relocation>
                     </relocations>
+                    <filters>
+                        <filter>
+                            <artifact>com.fasterxml.jackson.core:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/**/pom.xml</exclude>
+                                <exclude>META-INF/**/pom.properties</exclude>
+                                <!-- exclude multirelease classes -->
+                                <exclude>META-INF/versions/**/*.class</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
                     <shadedArtifactAttached>false</shadedArtifactAttached>
                     <createDependencyReducedPom>true</createDependencyReducedPom>
                     <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>

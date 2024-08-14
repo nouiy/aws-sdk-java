@@ -40,7 +40,7 @@ The AWS SDK for Java 1.x is in [maintenance mode][maintenance-mode-post], so we 
 
 #### Minimum requirements ####
 
-To run the AWS SDK for Java 1.x, you will need **Java 1.7+**. For more information about the requirements and optimum
+To run the AWS SDK for Java 1.x, you will need **Java 1.8+**. For more information about the requirements and optimum
 settings for the SDK, please see the [Installing a Java Development Environment][docs-java-env]
 section of the developer guide.
 
@@ -58,7 +58,7 @@ dependencies.
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-bom</artifactId>
-      <version>1.12.767</version>
+      <version>1.12.768</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
