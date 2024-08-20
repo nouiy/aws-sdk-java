@@ -330,4 +330,6 @@ public interface Headers {
     String FWD_SSE_BUCKET_KEY_ENABLED = "x-amz-fwd-header-x-amz-server-side-encryption-bucket-key-enabled";
 
     String OPTIONAL_OBJECT_ATTRIBUTE = "x-amz-optional-object-attributes";
+
+    String PUT_OBJECT_IF_NONE_MATCH = "If-None-Match";
 }

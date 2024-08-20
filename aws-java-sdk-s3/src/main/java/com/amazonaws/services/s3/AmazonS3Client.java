@@ -1850,6 +1850,8 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
         addHeaderIfNotNull(request, Headers.S3_TAGGING, urlEncodeTags(putObjectRequest.getTagging()));
 
+        addHeaderIfNotNull(request, Headers.PUT_OBJECT_IF_NONE_MATCH, putObjectRequest.getIfNoneMatch());
+
         populateRequesterPaysHeader(request, putObjectRequest.isRequesterPays());
 
         // Populate the SSE-C parameters to the request header
@@ -3694,6 +3696,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             byte[] xml = RequestXmlFactory.convertToXmlByteArray(completeMultipartUploadRequest.getPartETags());
             request.addHeader("Content-Type", "application/xml");
             request.addHeader("Content-Length", String.valueOf(xml.length));
+            addHeaderIfNotNull(request, Headers.PUT_OBJECT_IF_NONE_MATCH, completeMultipartUploadRequest.getIfNoneMatch());
 
             request.setContent(new ByteArrayInputStream(xml));
 

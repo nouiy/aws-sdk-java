@@ -1,3 +1,8 @@
+# __1.12.770__ __2024-08-20__
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Amazon Simple Storage Service / Features : Add support for conditional writes for PutObject and CompleteMultipartUpload APIs.
+
 # __1.12.769__ __2024-08-15__
 ## __Amazon Simple Storage Service__
   - ### Features

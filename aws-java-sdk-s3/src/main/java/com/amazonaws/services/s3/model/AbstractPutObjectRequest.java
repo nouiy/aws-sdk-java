@@ -128,6 +128,8 @@ public abstract class AbstractPutObjectRequest extends AmazonWebServiceRequest i
 
     private Boolean bucketKeyEnabled;
 
+    private String ifNoneMatch;
+
     /**
      * Constructs a new
      * {@link AbstractPutObjectRequest} object to upload a file to the
@@ -1209,6 +1211,66 @@ public abstract class AbstractPutObjectRequest extends AmazonWebServiceRequest i
      */
     public <T extends AbstractPutObjectRequest> T withBucketKeyEnabled(Boolean bucketKeyEnabled) {
         setBucketKeyEnabled(bucketKeyEnabled);
+        @SuppressWarnings("unchecked") T t = (T)this;
+        return t;
+    }
+
+    /**
+     *
+     * Returns the value for the header If-None-Match.
+     */
+    public String getIfNoneMatch() {
+        return this.ifNoneMatch;
+    }
+
+    /**
+     * <p>
+     *     Uploads the object only if the object key name does not already exist in the bucket specified. Otherwise,
+     *     S3 returns a {@code 412 Precondition Failed} error.
+     * </p>
+     * <p>
+     *     If a conflicting operation occurs during the upload S3 returns a {@code 409 ConditionalRequestConflict}
+     *     response. On a 409 failure you should re-initiate the multipart upload with <code>CreateMultipartUpload</code>
+     *     and re-upload each part.
+     * </p>
+     * <p>
+     *     Expects the '*' (asterisk) character.
+     * </p>
+     * <p>
+     *     For more information about conditional requests, see
+     *     <a href="https://tools.ietf.org/html/rfc7232">RFC 7232</a>, or
+     *     <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/conditional-requests.html">Conditional requests</a>
+     *     in the <em>Amazon S3 User Guide</em>.
+     * </p>
+     * @param eTag
+     */
+    public void setIfNoneMatch(String eTag) {
+        this.ifNoneMatch = eTag;
+    }
+
+    /**
+     * <p>
+     *     Uploads the object only if the object key name does not already exist in the bucket specified. Otherwise,
+     *     S3 returns a {@code 412 Precondition Failed} error.
+     * </p>
+     * <p>
+     *     If a conflicting operation occurs during the upload S3 returns a {@code 409 ConditionalRequestConflict}
+     *     response. On a 409 failure you should re-initiate the multipart upload with <code>CreateMultipartUpload</code>
+     *     and re-upload each part.
+     * </p>
+     * <p>
+     *     Expects the '*' (asterisk) character.
+     * </p>
+     * <p>
+     *     For more information about conditional requests, see
+     *     <a href="https://tools.ietf.org/html/rfc7232">RFC 7232</a>, or
+     *     <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/conditional-requests.html">Conditional requests</a>
+     *     in the <em>Amazon S3 User Guide</em>.
+     * </p>
+     * @param eTag
+     */
+    public <T extends AbstractPutObjectRequest> T ifNoneMatch(String eTag) {
+        setIfNoneMatch(eTag);
         @SuppressWarnings("unchecked") T t = (T)this;
         return t;
     }

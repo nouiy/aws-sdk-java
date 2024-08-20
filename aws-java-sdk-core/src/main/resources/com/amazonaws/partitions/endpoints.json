@@ -20450,6 +20450,7 @@
       },
       "vpc-lattice" : {
         "endpoints" : {
+          "af-south-1" : { },
           "ap-northeast-1" : { },
           "ap-northeast-2" : { },
           "ap-south-1" : { },
@@ -20458,6 +20459,7 @@
           "ca-central-1" : { },
           "eu-central-1" : { },
           "eu-north-1" : { },
+          "eu-south-1" : { },
           "eu-west-1" : { },
           "eu-west-2" : { },
           "eu-west-3" : { },
@@ -29368,6 +29370,16 @@
         },
         "endpoints" : {
           "us-isob-east-1" : { }
+        }
+      },
+      "budgets" : {
+        "endpoints" : {
+          "us-isob-east-1" : {
+            "credentialScope" : {
+              "region" : "us-isob-east-1"
+            },
+            "hostname" : "budgets.us-isob-east-1.sc2s.sgov.gov"
+          }
         }
       },
       "cloudcontrolapi" : {
