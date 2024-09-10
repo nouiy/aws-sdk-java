@@ -77,8 +77,8 @@ public class AccountEndpointOverrideRequestHandler extends RequestHandler2 {
 
     private void handleMissingAccountId(AccountIdEndpointMode endpointMode) {
         if (endpointMode == AccountIdEndpointMode.PREFERRED) { // falling back to regional endpoint
-            if (LOG.isWarnEnabled()) {
-                LOG.warn(unableToConstructEndpointMessage(
+            if (LOG.isDebugEnabled()) {
+                LOG.debug(unableToConstructEndpointMessage(
                         "AccountIdEndpointMode is PREFERRED but no account ID was provided or able to be loaded."));
             }
         } else if (endpointMode == AccountIdEndpointMode.REQUIRED) {
