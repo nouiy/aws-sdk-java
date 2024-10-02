@@ -44,6 +44,11 @@ public class BucketLifecycleConfiguration implements Serializable {
     private List<Rule> rules;
 
     /**
+     * Whether the lifecycle configuration allows objects smaller than 128 KB to be transitioned.
+     */
+    private TransitionDefaultMinimumObjectSize transitionDefaultMinimumObjectSize;
+
+    /**
      * Returns the list of rules that comprise this configuration.
      */
     public List<Rule> getRules() {
@@ -72,6 +77,52 @@ public class BucketLifecycleConfiguration implements Serializable {
      */
     public BucketLifecycleConfiguration withRules(Rule... rules) {
         setRules(Arrays.asList(rules));
+        return this;
+    }
+
+    /**
+     * Returns the transition default minimum object size of this configuration.
+     */
+    public TransitionDefaultMinimumObjectSize getTransitionDefaultMinimumObjectSize() {
+        return transitionDefaultMinimumObjectSize;
+    }
+
+    /**
+     * Returns the transition default minimum object size of this configuration.
+     */
+    public String getTransitionDefaultMinimumObjectSizeAsString() {
+        return transitionDefaultMinimumObjectSize.toString();
+    }
+
+    /**
+     * Sets the transition default minimum object size of this configuration.
+     */
+    public void setTransitionDefaultMinimumObjectSize(TransitionDefaultMinimumObjectSize transitionDefaultMinimumObjectSize) {
+        this.transitionDefaultMinimumObjectSize = transitionDefaultMinimumObjectSize;
+    }
+
+    /**
+     * Sets the transition default minimum object size of this configuration.
+     */
+    public void setTransitionDefaultMinimumObjectSize(String transitionDefaultMinimumObjectSize) {
+        this.transitionDefaultMinimumObjectSize = TransitionDefaultMinimumObjectSize.parseTransitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize);
+    }
+
+    /**
+     * Sets the transition default minimum object size of this configuration and returns a reference to this object
+     * for easy method chaining.
+     */
+    public BucketLifecycleConfiguration withTransitionDefaultMinimumObjectSize(TransitionDefaultMinimumObjectSize transitionDefaultMinimumObjectSize) {
+        setTransitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize);
+        return this;
+    }
+
+    /**
+     * Sets the transition default minimum object size of this configuration and returns a reference to this object
+     * for easy method chaining.
+     */
+    public BucketLifecycleConfiguration withTransitionDefaultMinimumObjectSize(String transitionDefaultMinimumObjectSize) {
+        setTransitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize);
         return this;
     }
 

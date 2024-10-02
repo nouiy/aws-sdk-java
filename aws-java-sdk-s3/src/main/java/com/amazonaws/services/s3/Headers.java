@@ -332,4 +332,6 @@ public interface Headers {
     String OPTIONAL_OBJECT_ATTRIBUTE = "x-amz-optional-object-attributes";
 
     String PUT_OBJECT_IF_NONE_MATCH = "If-None-Match";
+
+    String TRANSITION_DEFAULT_MINIMUM_OBJECT_SIZE = "x-amz-transition-default-minimum-object-size";
 }

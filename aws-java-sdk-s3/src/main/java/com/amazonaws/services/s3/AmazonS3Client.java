@@ -16,6 +16,7 @@ package com.amazonaws.services.s3;
 
 import static com.amazonaws.event.SDKProgressPublisher.publishProgress;
 import static com.amazonaws.internal.ResettableInputStream.newResettableInputStream;
+import static com.amazonaws.services.s3.Headers.TRANSITION_DEFAULT_MINIMUM_OBJECT_SIZE;
 import static com.amazonaws.services.s3.model.S3DataSource.Utils.cleanupDataSource;
 import static com.amazonaws.util.LengthCheckInputStream.EXCLUDE_SKIPPED_BYTES;
 import static com.amazonaws.util.LengthCheckInputStream.INCLUDE_SKIPPED_BYTES;
@@ -76,6 +77,7 @@ import com.amazonaws.regions.Regions;
 import com.amazonaws.retry.PredefinedRetryPolicies;
 import com.amazonaws.retry.RetryPolicy;
 import com.amazonaws.services.s3.internal.AWSS3V4Signer;
+import com.amazonaws.services.s3.internal.BucketLifecycleConfigurationHeaderHandler;
 import com.amazonaws.services.s3.internal.BucketNameUtils;
 import com.amazonaws.services.s3.internal.CompleteMultipartUploadRetryCondition;
 import com.amazonaws.services.s3.internal.Constants;
@@ -314,6 +316,7 @@ import com.amazonaws.services.s3.model.SetPublicAccessBlockResult;
 import com.amazonaws.services.s3.model.SetRequestPaymentConfigurationRequest;
 import com.amazonaws.services.s3.model.StorageClass;
 import com.amazonaws.services.s3.model.Tag;
+import com.amazonaws.services.s3.model.TransitionDefaultMinimumObjectSize;
 import com.amazonaws.services.s3.model.UploadObjectRequest;
 import com.amazonaws.services.s3.model.UploadPartRequest;
 import com.amazonaws.services.s3.model.UploadPartResult;
@@ -2565,7 +2568,12 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         request.addParameter("lifecycle", null);
 
         try {
-            return invoke(request, new Unmarshallers.BucketLifecycleConfigurationUnmarshaller(), bucketName, null);
+            ResponseHeaderHandlerChain<BucketLifecycleConfiguration> handlerChain = new ResponseHeaderHandlerChain<BucketLifecycleConfiguration>(
+                    new Unmarshallers.BucketLifecycleConfigurationUnmarshaller(),
+                    new BucketLifecycleConfigurationHeaderHandler()
+            );
+
+            return invoke(request, handlerChain, bucketName, null);
         } catch (AmazonServiceException ase) {
             switch (ase.getStatusCode()) {
             case 404:
@@ -2596,6 +2604,8 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         rejectNull(bucketLifecycleConfiguration,
                 "The lifecycle configuration parameter must be specified when setting bucket lifecycle configuration.");
 
+        TransitionDefaultMinimumObjectSize transitionDefaultMinimumObjectSize = bucketLifecycleConfiguration.getTransitionDefaultMinimumObjectSize();
+
         Request<SetBucketLifecycleConfigurationRequest> request = createRequest(bucketName, null, setBucketLifecycleConfigurationRequest, HttpMethodName.PUT);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutBucketLifecycleConfiguration");
         request.addParameter("lifecycle", null);
@@ -2603,6 +2613,9 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         byte[] content = new BucketConfigurationXmlFactory().convertToXmlByteArray(bucketLifecycleConfiguration);
         request.addHeader("Content-Length", String.valueOf(content.length));
         request.addHeader("Content-Type", "application/xml");
+        if (transitionDefaultMinimumObjectSize != null) {
+            request.addHeader(TRANSITION_DEFAULT_MINIMUM_OBJECT_SIZE, transitionDefaultMinimumObjectSize.toString());
+        }
         request.setContent(new ByteArrayInputStream(content));
         populateRequestHeaderWithMd5(request, content);
         invoke(request, voidResponseHandler, bucketName, null);
