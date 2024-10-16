@@ -38,37 +38,48 @@ public class AccountEndpointOverrideRequestHandler extends RequestHandler2 {
 
     @Override
     public void beforeRequest(Request<?> request) {
-        if (!isDdbRequest(request)) {
-            return;
-        }
+        AccountIdEndpointMode endpointMode = null;
+        try {
+            if (!isDdbRequest(request)) {
+                return;
+            }
 
-        AccountIdEndpointMode endpointMode = request.getHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE);
-        Boolean isEndpointOverridden = request.getHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN);
-        if (endpointMode == AccountIdEndpointMode.DISABLED || (isEndpointOverridden != null && isEndpointOverridden)) {
-            return;
-        }
+            endpointMode = request.getHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE);
+            Boolean isEndpointOverridden = request.getHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN);
+            if (endpointMode == AccountIdEndpointMode.DISABLED || (isEndpointOverridden != null && isEndpointOverridden)) {
+                return;
+            }
 
-        String regionName = request.getHandlerContext(HandlerContextKey.SIGNING_REGION);
-        Region regionObj = RegionUtils.getRegion(regionName);
-        if (StringUtils.isNullOrEmpty(regionName) || regionObj == null) {
-            handleMissingRegion();
-            return;
-        } else if (!isCommercialRegion(regionObj)) {
-            return;
-        }
+            String regionName = request.getHandlerContext(HandlerContextKey.SIGNING_REGION);
+            Region regionObj = RegionUtils.getRegion(regionName);
+            if (StringUtils.isNullOrEmpty(regionName) || regionObj == null) {
+                handleMissingRegion();
+                return;
+            } else if (!isCommercialRegion(regionObj)) {
+                return;
+            }
 
-        String resolvedAccountId = getAccountId(request, regionName);
-        if (StringUtils.isNullOrEmpty(resolvedAccountId)) {
-            handleMissingAccountId(endpointMode);
-            return;
-        }
+            String resolvedAccountId = getAccountId(request, regionName);
+            if (StringUtils.isNullOrEmpty(resolvedAccountId)) {
+                handleMissingAccountId(endpointMode);
+                return;
+            }
 
-        Protocol clientProtocol = request.getHandlerContext(HandlerContextKey.CLIENT_PROTOCOL);
-        String protocol = Protocol.HTTP == clientProtocol
-                ? clientProtocol.toString()
-                : DEFAULT_PROTOCOL;
-        String accountEndpoint = String.format(ENDPOINT_FORMAT, protocol, resolvedAccountId, regionName, regionObj.getDomain());
-        request.setEndpoint(URI.create(accountEndpoint));
+            Protocol clientProtocol = request.getHandlerContext(HandlerContextKey.CLIENT_PROTOCOL);
+            String protocol = Protocol.HTTP == clientProtocol
+                              ? clientProtocol.toString()
+                              : DEFAULT_PROTOCOL;
+            String accountEndpoint = String.format(ENDPOINT_FORMAT, protocol, resolvedAccountId, regionName, regionObj.getDomain());
+            request.setEndpoint(URI.create(accountEndpoint));
+        } catch (Exception e) {
+            if (endpointMode == AccountIdEndpointMode.REQUIRED) {
+                throw e;
+            }
+
+            if (LOG.isDebugEnabled()) {
+                LOG.debug("Exception encountered while setting endpoint based on accountId endpoint mode, skipping", e);
+            }
+        }
     }
 
     private boolean isDdbRequest(Request<?> request) {
@@ -83,8 +94,8 @@ public class AccountEndpointOverrideRequestHandler extends RequestHandler2 {
     }
 
     private void handleMissingRegion() {
-        if (LOG.isWarnEnabled()) {
-            LOG.warn(unableToConstructEndpointMessage("Region could not be found or derived from the metadata."));
+        if (LOG.isDebugEnabled()) {
+            LOG.debug(unableToConstructEndpointMessage("Region could not be found or derived from the metadata."));
         }
     }
 

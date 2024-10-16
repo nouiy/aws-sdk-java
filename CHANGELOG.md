@@ -1,3 +1,8 @@
+# __1.12.774__ __2024-10-16__
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Add support for the new optional bucket-region and prefix query parameters in the ListBuckets API. For ListBuckets requests that express pagination, Amazon S3 will now return both the bucket names and associated AWS regions in the response.
+
 # __1.12.771__ __2024-09-04__
 ## __AWS SDK for Java__
   - ### Features
