@@ -67,6 +67,9 @@ public class Bucket implements Serializable {
     /** The date this bucket was created */
     private Date creationDate = null;
 
+    /** The region where the bucket is located */
+    private String region = null;
+
     /**
      * Constructs a bucket without any name specified.
      * 
@@ -94,7 +97,8 @@ public class Bucket implements Serializable {
     public String toString() {
         return "S3Bucket [name=" + getName()
                 + ", creationDate=" + getCreationDate()
-                + ", owner=" + getOwner() + "]";
+                + ", owner=" + getOwner()
+                + ", region=" + getRegion() + "]";
     }
 
     /**
@@ -169,6 +173,27 @@ public class Bucket implements Serializable {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * Gets the region where the bucket is located.
+     * It will return <code>null</code> for bucket instances created by the
+     * {@link com.amazonaws.services.s3.AmazonS3#createBucket(CreateBucketRequest)} or
+     * {@link com.amazonaws.services.s3.AmazonS3#createBucket(String)} API.
+     *
+     * @return The region of this bucket.
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * Sets the region where the bucket is located.
+     *
+     * @param region The region for the bucket.
+     */
+    public void setRegion(String region) {
+        this.region = region;
     }
 
 }

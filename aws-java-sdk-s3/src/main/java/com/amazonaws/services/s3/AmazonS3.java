@@ -1416,6 +1416,10 @@ public interface AmazonS3 extends S3DirectSpi {
      * </p>
      * </note>
      * <p>
+     * The {@link Bucket#getRegion()} will always return <code>null</code> for the {@link Bucket} object returned by
+     * this method.
+     * </p>
+     * <p>
      * <b>Access control lists (ACLs)</b>
      * </p>
      * <p>
@@ -1636,6 +1640,10 @@ public interface AmazonS3 extends S3DirectSpi {
      * When creating a bucket using this operation, you can optionally specify the accounts or groups that should be
      * granted specific permissions on the bucket. There are two ways to grant the appropriate permissions using the
      * request headers.
+     * </p>
+     * <p>
+     * The {@link Bucket#getRegion()} will always return <code>null</code> for the {@link Bucket} object returned by
+     * this method.
      * </p>
      * <ul>
      * <li>

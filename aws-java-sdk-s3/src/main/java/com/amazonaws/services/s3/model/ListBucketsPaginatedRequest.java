@@ -25,6 +25,8 @@ public class ListBucketsPaginatedRequest extends AmazonWebServiceRequest impleme
 
     private Integer maxBuckets;
     private String continuationToken;
+    private String prefix;
+    private String bucketRegion;
 
     /**
      * Returns the maximum number of buckets configured. When the number is more than the count of buckets that
@@ -90,6 +92,68 @@ public class ListBucketsPaginatedRequest extends AmazonWebServiceRequest impleme
      */
     public void setContinuationToken(String continuationToken) {
         this.continuationToken = continuationToken;
+    }
+
+
+    /**
+     * Returns the prefix for filtering bucket names. Prefix is used to filter the list of buckets
+     * to only include buckets whose names start with the specified string.
+     */
+    public String getPrefix() {
+        return prefix;
+    }
+
+    /**
+     * Sets the prefix for filtering bucket names. Prefix is used to filter the list of buckets
+     * to only include buckets whose names start with the specified string.
+     *
+     * @param prefix The new prefix value.
+     * @return This object for method chaining.
+     */
+    public ListBucketsPaginatedRequest withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+
+    /**
+     * Sets the prefix for filtering bucket names. Prefix is used to filter the list of buckets
+     * to only include buckets whose names start with the specified string.
+     *
+     * @param prefix The new prefix value.
+     */
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
+    }
+
+    /**
+     * Limits the response to buckets that are located in the specified Amazon Web Services region.
+     *
+     * @return The region where the buckets are located.
+     */
+    public String getBucketRegion() {
+        return bucketRegion;
+    }
+
+    /**
+     * Sets the bucket region for filtering the list of buckets.
+     * Only buckets that are located in the specified region will be returned in the response.
+     *
+     * @param bucketRegion The region to filter buckets by.
+     * @return This object for method chaining.
+     */
+    public ListBucketsPaginatedRequest withBucketRegion(String bucketRegion) {
+        this.bucketRegion = bucketRegion;
+        return this;
+    }
+
+    /**
+     * Sets the bucket region for filtering the list of buckets.
+     * Only buckets that are located in the specified region will be returned in the response.
+     *
+     * @param bucketRegion The region to filter buckets by.
+     */
+    public void setBucketRegion(String bucketRegion) {
+        this.bucketRegion = bucketRegion;
     }
 
 }

@@ -23,6 +23,7 @@ public class ListBucketsPaginatedResult {
     private Owner owner;
     private List<Bucket> buckets;
     private String continuationToken;
+    private String prefix;
 
     /**
      * Returns the list of buckets owned by the requester.
@@ -105,6 +106,33 @@ public class ListBucketsPaginatedResult {
      */
     public ListBucketsPaginatedResult withContinuationToken(String continuationToken) {
         setContinuationToken(continuationToken);
+        return this;
+    }
+
+    /**
+     * Returns the prefix used to filter bucket names in the response.
+     */
+    public String getPrefix() {
+        return prefix;
+    }
+
+    /**
+     * Sets the prefix used to filter bucket names in the response.
+     *
+     * @param prefix The new prefix value.
+     */
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
+    }
+
+    /**
+     * Sets the prefix used to filter bucket names in the response.
+     *
+     * @param prefix The new prefix value.
+     * @return This object for method chaining.
+     */
+    public ListBucketsPaginatedResult withPrefix(String prefix) {
+        setPrefix(prefix);
         return this;
     }
 }

@@ -1071,6 +1071,8 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBuckets");
         addParameterIfNotNull(request, "continuation-token", listBucketsRequest.getContinuationToken());
         addParameterIfNotNull(request, "max-buckets", listBucketsRequest.getMaxBuckets());
+        addParameterIfNotNull(request, "prefix", listBucketsRequest.getPrefix());
+        addParameterIfNotNull(request, "bucket-region", listBucketsRequest.getBucketRegion());
         return invoke(request, new Unmarshallers.ListBucketsPaginatedUnmarshaller(), null, null);
     }
 

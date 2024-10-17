@@ -1012,6 +1012,7 @@ public class XmlResponsesSaxParser {
 
         private Bucket currentBucket = null;
         private String continuationToken;
+        private String prefix;
         private ListBucketsPaginatedResult result = new ListBucketsPaginatedResult();
 
         /**
@@ -1031,7 +1032,8 @@ public class XmlResponsesSaxParser {
         public ListBucketsPaginatedResult getResult() {
             return  new ListBucketsPaginatedResult().withBuckets(buckets)
                                                     .withOwner(bucketsOwner)
-                                                    .withContinuationToken(continuationToken);
+                                                    .withContinuationToken(continuationToken)
+                                                    .withPrefix(prefix);
         }
 
         @Override
@@ -1059,6 +1061,9 @@ public class XmlResponsesSaxParser {
                  if (name.equals("ContinuationToken")) {
                     continuationToken = getText();
                 }
+                else if (name.equals("Prefix")) {
+                    prefix = getText();
+                }
             } else if (in("ListAllMyBucketsResult", "Owner")) {
                 if (name.equals("ID")) {
                     bucketsOwner.setId(getText());
@@ -1082,6 +1087,9 @@ public class XmlResponsesSaxParser {
                 } else if (name.equals("CreationDate")) {
                     Date creationDate = DateUtils.parseISO8601Date(getText());
                     currentBucket.setCreationDate(creationDate);
+                }
+                else if (name.equals("Region")) {
+                    currentBucket.setRegion(getText());
                 }
             }
         }
