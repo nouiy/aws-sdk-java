@@ -15,6 +15,7 @@
 package com.amazonaws.util;
 
 import com.amazonaws.ClientConfiguration;
+import com.amazonaws.HandlerContextAware;
 import com.amazonaws.Protocol;
 import com.amazonaws.Request;
 import com.amazonaws.SdkClientException;
@@ -22,6 +23,8 @@ import com.amazonaws.annotation.SdkProtectedApi;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.ProviderNameAware;
+import com.amazonaws.endpoints.AccountIdEndpointMode;
+import com.amazonaws.handlers.HandlerContextKey;
 import com.amazonaws.retry.RetryMode;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
@@ -41,6 +44,7 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -53,6 +57,7 @@ public class RuntimeHttpUtils {
 
     private static final String RETRY_MODE_PREFIX = "cfg/retry-mode/";
     private static final String PROVIDER_NAME_PREFIX = "cfg/auth-source#";
+    public static final String BUSINESS_METADATA_PREFIX = "m/";
 
     private static final String TRACE_ID_ENVIRONMENT_VARIABLE = "_X_AMZN_TRACE_ID";
     private static final String TRACE_ID_SYSTEM_PROPERTY = "com.amazonaws.xray.traceHeader";
@@ -124,12 +129,17 @@ public class RuntimeHttpUtils {
 
     public static String getUserAgent(final ClientConfiguration config, final String userAgentMarker,
                                       AWSCredentials credentials) {
+        return getUserAgent(config, userAgentMarker, credentials, null);
+    }
 
+    public static String getUserAgent(final ClientConfiguration config, final String userAgentMarker,
+                                      AWSCredentials credentials, final HandlerContextAware request) {
         String userDefinedPrefix = "";
         String userDefinedSuffix = "";
         String retryModeName = "";
         String awsExecutionEnvironment = getEnvironmentVariable(AWS_EXECUTION_ENV_NAME);
         String providerName = getProviderName(credentials);
+        String businessMetrics = getBusinessMetrics(request);
 
         if (config != null) {
             userDefinedPrefix = config.getUserAgentPrefix();
@@ -150,6 +160,10 @@ public class RuntimeHttpUtils {
 
         if (StringUtils.hasValue(providerName)) {
             userAgent.append(SPACE).append(PROVIDER_NAME_PREFIX).append(providerName);
+        }
+
+        if (StringUtils.hasValue(businessMetrics)) {
+            userAgent.append(SPACE).append(BUSINESS_METADATA_PREFIX).append(businessMetrics);
         }
 
         if(StringUtils.hasValue(userDefinedSuffix)) {
@@ -173,6 +187,43 @@ public class RuntimeHttpUtils {
             return CredentialsProviderNameMapping.mapFrom(providerNameAwareCredentials.getProviderName());
         }
         return null;
+    }
+
+    private static String getBusinessMetrics(HandlerContextAware request) {
+        if (request == null) {
+            return null;
+        }
+
+        List<String> recordedMetric = new ArrayList<>();
+
+        Boolean isEndpointOverridden = request.getHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN);
+        if (Boolean.TRUE.equals(isEndpointOverridden)) {
+            recordedMetric.add("N");
+        }
+
+        AccountIdEndpointMode accountIdEndpointMode = request.getHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE);
+        if (accountIdEndpointMode != null) {
+            switch (accountIdEndpointMode) {
+                case PREFERRED:
+                    recordedMetric.add("P");
+                    break;
+                case REQUIRED:
+                    recordedMetric.add("R");
+                    break;
+                case DISABLED:
+                    recordedMetric.add("Q");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        String resolvedAccountId = request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS_ACCOUNT_ID);
+        if (resolvedAccountId != null) {
+            recordedMetric.add("T");
+        }
+
+        return String.join(",", recordedMetric);
     }
 
     private static String getEnvironmentVariable(String environmentVariableName) {

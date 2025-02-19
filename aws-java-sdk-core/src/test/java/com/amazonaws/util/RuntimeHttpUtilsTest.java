@@ -16,18 +16,23 @@ package com.amazonaws.util;
 
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.DefaultRequest;
+import com.amazonaws.HandlerContextAware;
 import com.amazonaws.Request;
 import com.amazonaws.SdkClientException;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.endpoints.AccountIdEndpointMode;
+import com.amazonaws.handlers.HandlerContextKey;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
 import java.net.URI;
 import java.net.URL;
 import java.util.Arrays;
+import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -40,45 +45,99 @@ import static org.junit.Assert.assertTrue;
 public class RuntimeHttpUtilsTest {
 
     /**
-     * Unit tests for {@link RuntimeHttpUtils#getUserAgent(ClientConfiguration, String, AWSCredentials)} .
+     * Unit tests for {@link RuntimeHttpUtils#getUserAgent(ClientConfiguration, String, AWSCredentials, HandlerContextAware)} .
      */
-    public static class GetUserAgentTest {
-
+    @RunWith(Parameterized.class)
+    public static class GetUserAgentParameterizedTests {
         private static final String PROVIDER = "ProfileCredentialsProvider";
 
-        @Test
-        public void when_credentialsContainsProvider_authSourceIsPresent() {
-            BasicAWSCredentials credentials = new BasicAWSCredentials("akid", "skid", null, PROVIDER);
-            String userAgent = RuntimeHttpUtils.getUserAgent(null, null, credentials);
-            assertTrue(userAgent.contains("cfg/auth-source#prof"));
+        private static class TestData {
+            private final String testDescription;
+            private final String expectedUserAgentSubstring;
+            private final BasicAWSCredentials credentials;
+            private final HandlerContextAware request;
+
+            TestData(String testDescription,
+                     String expectedUserAgentSubstring,
+                     BasicAWSCredentials credentials,
+                     AccountIdEndpointMode endpointMode,
+                     String accountId,
+                     Boolean isEndpointOverridden) {
+                this.testDescription = testDescription;
+                this.expectedUserAgentSubstring = expectedUserAgentSubstring;
+                this.credentials = credentials;
+                this.request = new DefaultRequest<>("dynamodb");
+                if (endpointMode != null) {
+                    request.addHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE, endpointMode);
+                }
+                if (accountId != null) {
+                    request.addHandlerContext(HandlerContextKey.AWS_CREDENTIALS_ACCOUNT_ID, accountId);
+                }
+                if (isEndpointOverridden != null) {
+                    request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden);
+                }
+            }
+
+            TestData(String testDescription, String expectedUserAgentSubstring, BasicAWSCredentials credentials) {
+                this(testDescription, expectedUserAgentSubstring, credentials, null, null, null);
+            }
+
+            TestData(String testDescription, String expectedUserAgentSubstring, AccountIdEndpointMode endpointMode, String accountId, Boolean isEndpointOverridden) {
+                this(testDescription, expectedUserAgentSubstring, null, endpointMode, accountId, isEndpointOverridden);
+            }
+
+            @Override
+            public String toString() {
+                return testDescription;
+            }
+        }
+
+        @Parameterized.Parameter
+        public TestData testData;
+
+        @Parameterized.Parameters(name = "{index}: {0}")
+        public static Collection<TestData> data() {
+            return Arrays.asList(
+                new TestData("auth-source is present with valid provider",
+                        "cfg/auth-source#prof",
+                        new BasicAWSCredentials("akid", "skid", null, PROVIDER)),
+                new TestData("Unknown auth-source when provider is empty",
+                        "cfg/auth-source#unknown",
+                        new BasicAWSCredentials("akid", "skid", null, "")),
+                new TestData("auth-source present with unknown provider name",
+                        "cfg/auth-source#MyHomebrewedCredentialsProvider",
+                        new BasicAWSCredentials("akid", "skid", null, "MyHomebrewedCredentialsProvider")),
+                new TestData("Endpoint override business metric",
+                        "m/N", null, null, true),
+                new TestData("Preferred account ID endpoint mode business metric",
+                        "m/P", AccountIdEndpointMode.PREFERRED, null, null),
+                new TestData("Disabled account ID endpoint mode business metric",
+                        "m/Q", AccountIdEndpointMode.DISABLED, null, null),
+                new TestData("Required account ID endpoint mode business metric",
+                        "m/R", AccountIdEndpointMode.REQUIRED, null, null),
+                new TestData("Resolved account ID business metric",
+                        "m/T",null, "123456789012", null),
+                new TestData("Endpoint override, disabled account ID endpoint mode business metric",
+                        "m/N,Q", AccountIdEndpointMode.DISABLED, null, true),
+                new TestData("Resolved account ID, required account ID endpoint mode business metric",
+                        "m/R,T", AccountIdEndpointMode.REQUIRED, "123456789012", false),
+                new TestData("Resolved account ID, preferred account ID endpoint mode business metric",
+                        "m/P,T", AccountIdEndpointMode.PREFERRED, "123456789012", false),
+                new TestData("auth-source is not present with illegal provider name",
+                        null,
+                        new BasicAWSCredentials("akid", "skid", null, "My@#$%$CredentialsProvider"))
+            );
         }
 
         @Test
-        public void when_credentialsDoesNotContainProvider_authSourceIsNotPresent() {
-            BasicAWSCredentials credentials = new BasicAWSCredentials("akid", "skid", null);
-            String userAgent = RuntimeHttpUtils.getUserAgent(null, null, credentials);
-            assertFalse(userAgent.contains("cfg/auth-source#prof"));
-        }
-
-        @Test
-        public void when_credentialsContainsProvider_andProviderIsEmpty_unknownValueIsReturned() {
-            BasicAWSCredentials credentials = new BasicAWSCredentials("akid", "skid", null, "");
-            String userAgent = RuntimeHttpUtils.getUserAgent(null, null, credentials);
-            assertTrue(userAgent.contains("cfg/auth-source#unknown"));
-        }
-
-        @Test
-        public void when_credentialsContainsProvider_andProviderIsUnknown_stringValueIsReturned() {
-            BasicAWSCredentials credentials = new BasicAWSCredentials("akid", "skid", null, "MyHomebrewedCredentialsProvider");
-            String userAgent = RuntimeHttpUtils.getUserAgent(null, null, credentials);
-            assertTrue(userAgent.contains("cfg/auth-source#MyHomebrewedCredentialsProvider"));
-        }
-
-        @Test
-        public void when_credentialsContainsIllegalProviderName_authSourceIsNotPresent() {
-            BasicAWSCredentials credentials = new BasicAWSCredentials("akid", "skid", "My@#$%$CredentialsProvider");
-            String userAgent = RuntimeHttpUtils.getUserAgent(null, null, credentials);
-            assertFalse(userAgent.contains("cfg/auth-source#prof"));
+        public void resolveDifferentCombinationOfConfigs() throws Exception {
+            String userAgent = RuntimeHttpUtils.getUserAgent(null, null, testData.credentials, testData.request);
+            if (StringUtils.isNullOrEmpty(testData.expectedUserAgentSubstring)) {
+                assertFalse(userAgent.contains("cfg/auth-source"));
+                assertFalse(userAgent.contains("m/"));
+            } else {
+                assertTrue(userAgent.contains(testData.expectedUserAgentSubstring));
+            }
         }
     }
 

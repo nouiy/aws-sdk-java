@@ -1,4 +1,9 @@
-# __1.12.781__ __2025-02-11__
+# __1.12.782__ __2025-02-17__
+## __AWS SDK for Java__
+  - ### Features
+    - Add account endpoint business metrics to user agent
+
+# __1.12.781__ __2025-02-12__
 ## __Amazon Kinesis Video Streams__
   - ### Features
     - Update Netty version to `4.1.118.Final`

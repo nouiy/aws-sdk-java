@@ -1616,9 +1616,9 @@ public class AmazonHttpClient {
             AWSCredentials credentials = request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS);
             if (opts != null) {
                 request.addHeader(HEADER_USER_AGENT, RuntimeHttpUtils
-                        .getUserAgent(config, opts.getClientMarker(Marker.USER_AGENT), credentials));
+                        .getUserAgent(config, opts.getClientMarker(Marker.USER_AGENT), credentials, request));
             } else {
-                request.addHeader(HEADER_USER_AGENT, RuntimeHttpUtils.getUserAgent(config, null, credentials));
+                request.addHeader(HEADER_USER_AGENT, RuntimeHttpUtils.getUserAgent(config, null, credentials, request));
             }
         }
 
