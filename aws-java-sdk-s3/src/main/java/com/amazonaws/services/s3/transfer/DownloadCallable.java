@@ -184,7 +184,16 @@ final class DownloadCallable extends AbstractDownloadCallable {
         return new Callable<S3Object>() {
             @Override
             public S3Object call() throws Exception {
-                return s3.getObject(request);
+                S3Object s3Object = s3.getObject(request);
+                if (s3Object == null ){
+                    if (request.getMatchingETagConstraints() != null
+                            && !request.getMatchingETagConstraints().isEmpty() ) {
+                        throw new SdkClientException("Download failed: S3 returned no data for some parts." +
+                                " This might indicate the object was modified during download, " +
+                                "causing an ETag mismatch between the original object and its current state.");
+                    }
+                }
+                return s3Object;
             }
         };
     }

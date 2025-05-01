@@ -1,4 +1,9 @@
-# __1.12.782__ __2025-02-17__
+# __1.12.783__ __2025-04-29__
+## __Amazon S3__
+  - ### Features
+    - Abort multipart download if object is modified during download.
+
+# __1.12.782__ __2025-02-19__
 ## __AWS SDK for Java__
   - ### Features
     - Add account endpoint business metrics to user agent

@@ -14,6 +14,7 @@
  */
 package com.amazonaws.services.s3.transfer;
 
+import static com.amazonaws.services.s3.Headers.GET_OBJECT_IF_MATCH;
 import static com.amazonaws.services.s3.internal.ServiceUtils.APPEND_MODE;
 import static com.amazonaws.services.s3.internal.ServiceUtils.OVERWRITE_MODE;
 
@@ -87,6 +88,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Stack;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -1014,7 +1016,7 @@ public class TransferManager {
                              final File file, final S3ProgressListener progressListener,
                              final long timeoutMillis, final boolean resumeOnRetry) {
         return doDownload(getObjectRequest, file, null, progressListener,
-                OVERWRITE_MODE, timeoutMillis, null, 0L, resumeOnRetry, 0L);
+                OVERWRITE_MODE, timeoutMillis, null, 0L, resumeOnRetry, 0L, null);
     }
 
     private Download doDownload(final GetObjectRequest getObjectRequest,
@@ -1028,16 +1030,19 @@ public class TransferManager {
         long lastModifiedTimeRecordedDuringPause = 0L;
         Integer lastFullyDownloadedPartNumber = null;
         Long lastFullyDownloadedFilePosition = null;
+        String lastEtagDuringPause = null;
 
         if (persistableDownload != null) {
             lastModifiedTimeRecordedDuringPause = persistableDownload.getlastModifiedTime();
             lastFullyDownloadedPartNumber = persistableDownload.getLastFullyDownloadedPartNumber();
             lastFullyDownloadedFilePosition = persistableDownload.getLastFullyDownloadedFilePosition();
+            lastEtagDuringPause = persistableDownload.getEtag();
         }
 
         return doDownload(getObjectRequest, file, stateListener, s3progressListener,
                           resumeExistingDownload, timeoutMillis, lastFullyDownloadedPartNumber,
-                          lastModifiedTimeRecordedDuringPause, false, lastFullyDownloadedFilePosition);
+                          lastModifiedTimeRecordedDuringPause, false, lastFullyDownloadedFilePosition,
+                lastEtagDuringPause);
     }
 
     /**
@@ -1054,7 +1059,8 @@ public class TransferManager {
             final Integer lastFullyDownloadedPart,
             final long lastModifiedTimeRecordedDuringPause,
             final boolean resumeOnRetry,
-            final Long lastFullyDownloadedPartPosition) {
+            final Long lastFullyDownloadedPartPosition,
+                                final String lastEtagDuringPause) {
 
         assertNotObjectLambdaArn(getObjectRequest.getBucketName(), "download");
 
@@ -1067,7 +1073,8 @@ public class TransferManager {
                                                            lastFullyDownloadedPart,
                                                            lastModifiedTimeRecordedDuringPause,
                                                            resumeOnRetry,
-                                                           lastFullyDownloadedPartPosition);
+                                                           lastFullyDownloadedPartPosition,
+                                                           lastEtagDuringPause);
         return submitDownload(prepared);
     }
 
@@ -1079,7 +1086,8 @@ public class TransferManager {
                                                     final Integer lastFullyDownloadedPart,
                                                     final long lastModifiedTimeRecordedDuringPause,
                                                     final boolean resumeOnRetry,
-                                                    final Long lastFullyDownloadedPartPosition) {
+                                                    final Long lastFullyDownloadedPartPosition,
+                                                    final String lastEtagDuringPause) {
         assertParameterNotNull(getObjectRequest,
                 "A valid GetObjectRequest must be provided to initiate download");
         assertParameterNotNull(file,
@@ -1106,6 +1114,20 @@ public class TransferManager {
 
         // Used to check if the object is modified between pause and resume
         long lastModifiedTime = objectMetadata.getLastModified().getTime();
+        final String etag = objectMetadata.getETag();
+        if (getObjectRequest.getMatchingETagConstraints() != null
+                && getObjectRequest.getMatchingETagConstraints().isEmpty()) {
+            if (etag != null) {
+                if (log.isDebugEnabled()) {
+                    log.debug("Setting matching ETag constraint: " + etag);
+                }
+                getObjectRequest.withMatchingETagConstraint(etag);
+            } else {
+                if (log.isDebugEnabled()) {
+                    log.debug("ETag constraint not set - value missing in metadata");
+                }
+            }
+        }
 
         long startingByte = 0;
         long lastByte;
@@ -1149,6 +1171,20 @@ public class TransferManager {
             if (isS3ObjectModifiedSincePause(lastModifiedTime, lastModifiedTimeRecordedDuringPause)) {
                 throw new AmazonClientException("The requested object in bucket " + getObjectRequest.getBucketName()
                         + " with key " + getObjectRequest.getKey() + " is modified on Amazon S3 since the last pause.");
+            }
+
+            if (etag != null && lastEtagDuringPause != null) {
+                //this check is done for backward compatible were etag is not stubbed in getObjectMetaData response
+                // lastEtagDuringPause can be null if downloads were paused when Etag was not persisted as a part of pause.
+                if (isS3ObjectEtagModifiedSincePause(etag, lastEtagDuringPause)) {
+                    throw new AmazonClientException(
+                            String.format("The requested object in bucket '%s' with key '%s' has been modified " +
+                                            "on Amazon S3 since the last pause. Expected ETag: %s, Found: %s",
+                                    getObjectRequest.getBucketName(), getObjectRequest.getKey(),
+                                    lastEtagDuringPause, etag)
+                    );
+
+                }
             }
             // There's still a chance the object is modified while the request
             // is in flight. Set this header so S3 fails the request if this happens.
@@ -1205,6 +1241,11 @@ public class TransferManager {
     private boolean isS3ObjectModifiedSincePause(final long lastModifiedTimeRecordedDuringResume,
             long lastModifiedTimeRecordedDuringPause) {
         return lastModifiedTimeRecordedDuringResume != lastModifiedTimeRecordedDuringPause;
+    }
+
+    private boolean isS3ObjectEtagModifiedSincePause(final String etagRecordedDuringResume,
+                                                     String etagRecordedDuringPause) {
+        return !etagRecordedDuringResume.equals(etagRecordedDuringPause);
     }
 
     /**
@@ -1272,16 +1313,24 @@ public class TransferManager {
         Long startByte = 0L;
         Long endByte = null;
 
+        final ObjectMetadata objectMetadata = getObjectMetadataUsingRange(request);
         long[] range = request.getRange();
         if (range != null && range.length == 2) {
             startByte = range[0];
             endByte = range[1];
         } else {
-            // Get content length by making a range GET call
-            final ObjectMetadata objectMetadata = getObjectMetadataUsingRange(request);
             if (objectMetadata != null) {
                 Long contentLength = TransferManagerUtils.getContentLengthFromContentRange(objectMetadata);
                 endByte = contentLength != null ? contentLength - 1 : null;
+            }
+        }
+
+        if (objectMetadata != null && objectMetadata.getETag() != null) {
+            // Add ETag header if not already present
+            if (request.getMatchingETagConstraints() != null
+                    && request.getMatchingETagConstraints().isEmpty()) {
+                request.withMatchingETagConstraint(objectMetadata.getETag());
+
             }
         }
 
@@ -1496,8 +1545,7 @@ public class TransferManager {
                                             listener);
 
 
-            PreparedDownloadContext ctx = prepareDownload(req, f, transferListener, null, false, 0,
-                                                          null, 0L, resumeOnRetry, null);
+            PreparedDownloadContext ctx = prepareDownload(req, f, transferListener, null, false, 0, null, 0L, resumeOnRetry, null, null);
             preparedDownloadContexts.add(ctx);
         }
 

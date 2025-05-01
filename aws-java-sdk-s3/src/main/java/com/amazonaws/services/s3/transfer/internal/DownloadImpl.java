@@ -210,7 +210,8 @@ public class DownloadImpl extends AbstractTransfer implements Download {
                     getObjectRequest.getResponseHeaders(), getObjectRequest.isRequesterPays(),
                     file.getAbsolutePath(), getLastFullyDownloadedPartNumber(),
                     getObjectMetadata().getLastModified().getTime(),
-                    getLastFullyDownloadedFilePosition());
+                    getLastFullyDownloadedFilePosition(),
+                    getObjectMetadata().getETag());
         }
         return null;
     }

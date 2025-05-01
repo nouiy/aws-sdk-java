@@ -336,6 +336,11 @@ public class ObjectMetadata implements ServerSideEncryptionResult, S3RequesterCh
      * Amazon S3.
      * </p>
      * <p>
+     * If a content length smaller than the actual size of the object is set,
+     * the client will truncate the stream to the specified content length, only sending
+     * exactly the number of bytes equal to the content length.
+     * </p>
+     * <p>
      * For more information on the Content-Length HTTP header, see <a
      * href="https://www.rfc-editor.org/rfc/rfc9110.html#name-content-length">
      * https://www.rfc-editor.org/rfc/rfc9110.html#name-content-length</a>

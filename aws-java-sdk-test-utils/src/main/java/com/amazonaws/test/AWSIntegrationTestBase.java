@@ -18,6 +18,8 @@ import com.amazonaws.test.retry.RetryRule;
 import java.io.InputStream;
 
 import java.util.concurrent.TimeUnit;
+
+import com.amazonaws.util.StringUtils;
 import org.junit.BeforeClass;
 
 import com.amazonaws.auth.AWSCredentials;
@@ -42,10 +44,14 @@ public abstract class AWSIntegrationTestBase {
 
     private static final String TEST_CREDENTIALS_PROFILE_NAME = "aws-java-sdk-test";
 
-    private static final AWSCredentialsProviderChain chain = new AWSCredentialsProviderChain(
-            new PropertiesFileCredentialsProvider(propertiesFilePath),
-            new ProfileCredentialsProvider(TEST_CREDENTIALS_PROFILE_NAME), new EnvironmentVariableCredentialsProvider(),
-            new SystemPropertiesCredentialsProvider());
+    /**
+     * ToD test can be configured to use Role ARN and will pull them from STS. These credentials are then available
+     * for use during the test run. The location of the credentials file is passed to the test run in the form of
+     * the environment variable TOD_CUSTOMER_CREDENTIAL_PATH.
+     */
+    private static final String TOD_CREDENTIAL_PATH = System.getenv("TOD_CUSTOMER_CREDENTIAL_PATH");
+
+    private static final AWSCredentialsProviderChain chain = createChain();
 
     @Rule
     public RetryRule retry = new RetryRule(3, 2, TimeUnit.SECONDS);
@@ -95,4 +101,19 @@ public abstract class AWSIntegrationTestBase {
         }
     }
 
+    private static AWSCredentialsProviderChain createChain() {
+        if (StringUtils.isNullOrEmpty(TOD_CREDENTIAL_PATH)) {
+            return new AWSCredentialsProviderChain(
+                    new PropertiesFileCredentialsProvider(propertiesFilePath),
+                    new ProfileCredentialsProvider(TEST_CREDENTIALS_PROFILE_NAME),
+                    new EnvironmentVariableCredentialsProvider(),
+                    new SystemPropertiesCredentialsProvider());
+        }
+        return new AWSCredentialsProviderChain(
+                new ProfileCredentialsProvider(TOD_CREDENTIAL_PATH, "default"),
+                new PropertiesFileCredentialsProvider(propertiesFilePath),
+                new ProfileCredentialsProvider(TEST_CREDENTIALS_PROFILE_NAME),
+                new EnvironmentVariableCredentialsProvider(),
+                new SystemPropertiesCredentialsProvider());
+    }
 }

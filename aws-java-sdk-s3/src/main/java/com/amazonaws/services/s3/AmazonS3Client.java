@@ -5388,6 +5388,9 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             request.addHeader(Headers.RANGE, "bytes=" + Long.toString(range[0]) + "-" + Long.toString(range[1]));
         }
 
+        addStringListHeader(request, Headers.GET_OBJECT_IF_MATCH,
+                presignedUrlDownloadRequest.getMatchingETagConstraints());
+
         try {
             publishProgress(listener, ProgressEventType.TRANSFER_STARTED_EVENT);
 
