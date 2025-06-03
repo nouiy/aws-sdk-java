@@ -79,6 +79,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 
@@ -374,7 +375,6 @@ public class ResourceNameUtils {
 	 * @return - account ID if it can be derived from the table ARN, otherwise null
 	 */
 	public static String getAccountIdFromTableArnInRequest(Request<?> request, String requestRegion, String requestPartition) {
-		Arn tableArn;
 		List<String> resourceNames = getResourceNames(request.getOriginalRequest());
 		if (resourceNames == null) {
 			// no table ARN found
@@ -387,16 +387,13 @@ public class ResourceNameUtils {
 				continue;
 			}
 
-			try {
-				tableArn = Arn.fromString(resourceName);
-			} catch (IllegalArgumentException e) {
-				// invalid ARN
-				continue;
-			}
-
-			if (tableArn.getRegion().equals(requestRegion) &&
-					tableArn.getPartition().equals(requestPartition)) {
-				return tableArn.getAccountId();
+			Optional<Arn> tableArn = Arn.tryFromString(resourceName);
+			if (tableArn.isPresent()) {
+				Arn arn = tableArn.get();
+				if (arn.getRegion().equals(requestRegion) &&
+						arn.getPartition().equals(requestPartition)) {
+					return arn.getAccountId();
+				}
 			}
 		}
 		return null;

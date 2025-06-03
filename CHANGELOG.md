@@ -1,4 +1,9 @@
-# __1.12.783__ __2025-04-29__
+# __1.12.784__ __2025-05-30__
+## __Amazon DynamoDB__
+  - ### Bugfixes
+    - Avoid silently throwing exception when retrieving account ID from resource name
+
+# __1.12.783__ __2025-04-30__
 ## __Amazon S3__
   - ### Features
     - Abort multipart download if object is modified during download.

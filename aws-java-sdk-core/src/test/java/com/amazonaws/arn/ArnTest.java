@@ -16,6 +16,8 @@ package com.amazonaws.arn;
 
 import org.junit.Test;
 
+import java.util.Optional;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
@@ -183,6 +185,26 @@ public class ArnTest {
         Arn arn2 = arn1.toBuilder().build();
 
         assertThat(arn1, is(arn2));
+    }
+
+    @Test
+    public void arnWithBasicResource_tryFromString_ParsesCorrectly() {
+        String arnString = "arn:aws:s3:us-east-1:12345678910:myresource";
+        Optional<Arn> parsedArn = Arn.tryFromString(arnString);
+        assertThat(parsedArn.isPresent(), is(true));
+        Arn arn = parsedArn.get();
+        assertThat(arn.getPartition(), equalTo("aws"));
+        assertThat(arn.getService(), equalTo("s3"));
+        assertThat(arn.getRegion(), equalTo("us-east-1"));
+        assertThat(arn.getAccountId(), equalTo("12345678910"));
+        assertThat(arn.getResourceAsString(), equalTo("myresource"));
+    }
+
+    @Test
+    public void invalidArn_tryFromString_returnsEmptyOptional() {
+        String arnString = "notAnArn";
+        Optional<Arn> parsedArn = Arn.tryFromString(arnString);
+        assertThat(parsedArn.isPresent(), is(false));
     }
 
     @Test(expected = IllegalArgumentException.class)

@@ -58,7 +58,7 @@ dependencies.
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-bom</artifactId>
-      <version>1.12.783</version>
+      <version>1.12.784</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
@@ -127,7 +127,7 @@ For more information see the [AWS SDK for Java 2.x Developer Guide][sdk-v2-dev-g
 
 ## Maintenance and Support for Java Versions
 
-The AWS SDK for Java 1.x supports Java versions from 7 to 17, but may not be updated to support future Java versions. To ensure long-term compatibility with the latest JDK versions, we recommend that you migrate to the
+The AWS SDK for Java 1.x supports Java versions from 8 to 17, but may not be updated to support future Java versions. To ensure long-term compatibility with the latest JDK versions, we recommend that you migrate to the
 [AWS SDK for Java 2.x][aws-sdk-for-java-2x]. 
 
 [aws-iam-credentials]: https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html

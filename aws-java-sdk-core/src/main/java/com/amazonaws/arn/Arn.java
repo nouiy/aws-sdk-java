@@ -16,6 +16,8 @@ package com.amazonaws.arn;
 
 import com.amazonaws.util.ValidationUtils;
 
+import java.util.Optional;
+
 /**
  * The ARNs generated and recognized by this code are the ARNs described here:
  *
@@ -163,6 +165,62 @@ public class Arn {
                   .withAccountId(accountId)
                   .withResource(resource)
                   .build();
+    }
+
+    /**
+     * Attempts to parse the given string into an {@link Arn}. If the input string is not a valid ARN,
+     * this method returns {@link Optional#empty()} instead of throwing an exception.
+     * <p>
+     * The resource is accessible entirely as a string through {@link #getResourceAsString()}. When correctly
+     * formatted, a parsed resource containing resource type, resource, and qualifier is available through
+     * {@link #getResource()}.
+     *
+     * @param arn A string containing an ARN.
+     * @return An {@link Optional} containing the modeled {@link Arn}, or {@link Optional#empty()} if the string is
+     * invalid.
+     */
+    public static Optional<Arn> tryFromString(String arn) {
+        int arnColonIndex = arn.indexOf(':');
+        if (arnColonIndex < 0 || !"arn".equals(arn.substring(0, arnColonIndex))) {
+            return Optional.empty();
+        }
+
+        int partitionColonIndex = arn.indexOf(':', arnColonIndex + 1);
+        if (partitionColonIndex < 0) {
+            return Optional.empty();
+        }
+        String partition = arn.substring(arnColonIndex + 1, partitionColonIndex);
+
+        int serviceColonIndex = arn.indexOf(':', partitionColonIndex + 1);
+        if (serviceColonIndex < 0) {
+            return Optional.empty();
+        }
+        String service = arn.substring(partitionColonIndex + 1, serviceColonIndex);
+
+        int regionColonIndex = arn.indexOf(':', serviceColonIndex + 1);
+        if (regionColonIndex < 0) {
+            return Optional.empty();
+        }
+        String region = arn.substring(serviceColonIndex + 1, regionColonIndex);
+
+        int accountColonIndex = arn.indexOf(':', regionColonIndex + 1);
+        if (accountColonIndex < 0) {
+            return Optional.empty();
+        }
+        String accountId = arn.substring(regionColonIndex + 1, accountColonIndex);
+
+        String resource = arn.substring(accountColonIndex + 1);
+        if (resource.isEmpty()) {
+            return Optional.empty();
+        }
+
+        return Optional.of(Arn.builder()
+                .withPartition(partition)
+                .withService(service)
+                .withRegion(region)
+                .withAccountId(accountId)
+                .withResource(resource)
+                .build());
     }
 
     @Override
