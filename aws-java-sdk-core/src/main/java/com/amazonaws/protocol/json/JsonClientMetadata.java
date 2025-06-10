@@ -40,6 +40,8 @@ public class JsonClientMetadata {
 
     private boolean supportsIon;
 
+    private boolean hasAwsQueryCompatible;
+
     /**
      * Base class is initialized to {@link AmazonServiceException} for backwards compatibility.
      */
@@ -96,6 +98,15 @@ public class JsonClientMetadata {
 
     public JsonClientMetadata withSupportsIon(boolean supportsIon) {
         this.supportsIon = supportsIon;
+        return this;
+    }
+
+    public boolean getAwsQueryCompatible() {
+        return hasAwsQueryCompatible;
+    }
+
+    public JsonClientMetadata withAwsQueryCompatible(boolean awsQueryCompatible) {
+        this.hasAwsQueryCompatible = awsQueryCompatible;
         return this;
     }
 

@@ -26,6 +26,7 @@ import com.amazonaws.codegen.model.service.ServiceMetadata;
 import com.amazonaws.codegen.model.service.ServiceModel;
 import com.amazonaws.codegen.model.service.Shape;
 import com.amazonaws.codegen.model.service.XmlNamespace;
+import com.amazonaws.codegen.utils.ProtocolUtils;
 import com.amazonaws.util.StringUtils;
 
 import java.io.Closeable;
@@ -344,7 +345,8 @@ public class Utils {
                 marshaller.setXmlNameSpaceUri(xmlNamespace.getUri());
             }
         }
-        if (!StringUtils.isNullOrEmpty(service.getTargetPrefix()) && Metadata.isNotRestProtocol(service.getProtocol())) {
+        if (!StringUtils.isNullOrEmpty(service.getTargetPrefix())
+                && Metadata.isNotRestProtocol(ProtocolUtils.resolveProtocol(service))) {
             marshaller.setTarget(service.getTargetPrefix() + "." + operation.getName());
         }
         return marshaller;

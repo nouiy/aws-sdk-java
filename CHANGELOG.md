@@ -1,3 +1,8 @@
+# __1.12.786__ __2025-06-09__
+## __AWS SDK for Java__
+  - ### Features
+    - Support for protocols service model field and x-amzn-query-mode header
+
 # __1.12.784__ __2025-06-02__
 ## __Amazon DynamoDB__
   - ### Bugfixes

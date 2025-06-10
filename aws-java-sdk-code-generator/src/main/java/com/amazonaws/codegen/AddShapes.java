@@ -46,6 +46,7 @@ import com.amazonaws.codegen.model.service.Member;
 import com.amazonaws.codegen.model.service.ServiceModel;
 import com.amazonaws.codegen.model.service.Shape;
 import com.amazonaws.codegen.naming.NamingStrategy;
+import com.amazonaws.codegen.utils.ProtocolUtils;
 import com.amazonaws.util.StringUtils;
 import com.amazonaws.util.TimestampFormat;
 import java.util.Date;
@@ -231,7 +232,7 @@ abstract class AddShapes {
         }
 
         return member.isSensitive() ||
-               isSensitiveShapeOrContainer(allC2jShapes.get(member.getShape()), allC2jShapes);
+                isSensitiveShapeOrContainer(allC2jShapes.get(member.getShape()), allC2jShapes);
     }
 
     private boolean isSensitiveShapeOrContainer(Shape c2jShape, Map<String, Shape> allC2jShapes) {
@@ -476,6 +477,6 @@ abstract class AddShapes {
     }
 
     protected String getProtocol() {
-        return getServiceModel().getMetadata().getProtocol();
+        return ProtocolUtils.resolveProtocol(getServiceModel().getMetadata());
     }
 }

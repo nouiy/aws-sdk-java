@@ -9,6 +9,9 @@
         <#elseif customConfig.contentTypeOverride??>
         .withContentTypeOverride("${customConfig.contentTypeOverride}")
         </#if>
+        <#if serviceModelRoot.metadata.awsQueryCompatible??>
+        .withAwsQueryCompatible(true)
+        </#if>
         <#list serviceModelRoot.shapes?values as shapeModel>
             <#if shapeModel.type == "Exception">
                 .addErrorMetadata(new JsonErrorShapeMetadata()

@@ -67,6 +67,7 @@ public class SdkJsonProtocolFactory implements SdkJsonMarshallerFactory {
                 .operationInfo(operationInfo)
                 .originalRequest(origRequest)
                 .emptyBodyMarshaller(createEmptyBodyMarshaller(operationInfo))
+                .withAwsQueryCompatible(metadata.getAwsQueryCompatible())
                 .build();
     }
 

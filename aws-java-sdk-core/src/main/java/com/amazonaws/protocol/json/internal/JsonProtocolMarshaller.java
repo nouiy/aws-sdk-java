@@ -46,13 +46,15 @@ public class JsonProtocolMarshaller<OrigRequest> implements ProtocolRequestMarsh
     private final boolean hasExplicitPayloadMember;
     private final JsonMarshallerContext marshallerContext;
     private final MarshallerRegistry marshallerRegistry;
+    private final boolean isAwsQueryCompatible;
 
     public JsonProtocolMarshaller(StructuredJsonGenerator jsonGenerator,
                                   String contentType,
                                   OperationInfo operationInfo,
                                   OrigRequest originalRequest,
                                   MarshallerRegistry.Builder marshallerRegistryOverrides,
-                                  EmptyBodyJsonMarshaller emptyBodyMarshaller) {
+                                  EmptyBodyJsonMarshaller emptyBodyMarshaller,
+                                  boolean isAwsQueryCompatible) {
         this.jsonGenerator = jsonGenerator;
         this.contentType = contentType;
         this.hasExplicitPayloadMember = operationInfo.hasExplicitPayloadMember();
@@ -65,6 +67,7 @@ public class JsonProtocolMarshaller<OrigRequest> implements ProtocolRequestMarsh
                                                       .request(request)
                                                       .emptyBodyJsonMarshaller(emptyBodyMarshaller)
                                                       .build();
+        this.isAwsQueryCompatible = isAwsQueryCompatible;
     }
 
     private Request<OrigRequest> fillBasicRequestParams(OperationInfo operationInfo, OrigRequest originalRequest) {
@@ -197,6 +200,9 @@ public class JsonProtocolMarshaller<OrigRequest> implements ProtocolRequestMarsh
         if (!request.getHeaders().containsKey("Content-Type") && contentType != null && request.getHeaders().containsKey(
             "Content-Length")) {
             request.addHeader("Content-Type", contentType);
+        }
+        if (isAwsQueryCompatible) {
+            request.addHeader("x-amzn-query-mode", "true");
         }
         return request;
     }

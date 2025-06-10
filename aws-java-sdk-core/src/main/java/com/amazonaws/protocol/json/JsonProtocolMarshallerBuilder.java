@@ -39,6 +39,7 @@ public class JsonProtocolMarshallerBuilder<T> {
     private T originalRequest;
     private MarshallerRegistry.Builder marshallerRegistry;
     private EmptyBodyJsonMarshaller emptyBodyMarshaller;
+    private boolean hasAwsQueryCompatible;
 
     public static <T> JsonProtocolMarshallerBuilder<T> standard() {
         return new JsonProtocolMarshallerBuilder<T>();
@@ -86,6 +87,11 @@ public class JsonProtocolMarshallerBuilder<T> {
         return this;
     }
 
+    public JsonProtocolMarshallerBuilder<T> withAwsQueryCompatible(boolean hasAwsQueryCompatible) {
+        this.hasAwsQueryCompatible = hasAwsQueryCompatible;
+        return this;
+    }
+
     /**
      * Registers an override for the marshaller registry.
      *
@@ -111,7 +117,8 @@ public class JsonProtocolMarshallerBuilder<T> {
                                              operationInfo,
                                              originalRequest,
                                              marshallerRegistry,
-                                             emptyBodyMarshaller);
+                                             emptyBodyMarshaller,
+                                             hasAwsQueryCompatible);
     }
 
 }

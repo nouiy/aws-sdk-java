@@ -162,6 +162,7 @@ public class AmazonSQSClient extends AmazonWebServiceClient implements AmazonSQS
                     .withProtocolVersion("1.0")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
+                    .withAwsQueryCompatible(true)
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("PurgeQueueInProgress").withExceptionUnmarshaller(
                                     com.amazonaws.services.sqs.model.transform.PurgeQueueInProgressExceptionUnmarshaller.getInstance()))
