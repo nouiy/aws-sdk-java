@@ -74,7 +74,14 @@ public class UnmarshallerGeneratorTasks extends BaseGeneratorTasks {
         switch (shapeType) {
             case Response:
             case Model: {
-                String unmarshallerNameSuffix = metadata.isJsonProtocol() ? "JsonUnmarshaller" : "StaxUnmarshaller";
+                String unmarshallerNameSuffix;
+                if (metadata.isJsonProtocol()) {
+                    unmarshallerNameSuffix = "JsonUnmarshaller";
+                } else if (metadata.isRpcV2CborProtocol()) {
+                    unmarshallerNameSuffix = "RpcV2CborUnmarshaller";
+                } else {
+                    unmarshallerNameSuffix = "StaxUnmarshaller";
+                }
                 return new FreemarkerGeneratorTask(transformClassDir,
                                          javaShapeName + unmarshallerNameSuffix,
                                                    template,

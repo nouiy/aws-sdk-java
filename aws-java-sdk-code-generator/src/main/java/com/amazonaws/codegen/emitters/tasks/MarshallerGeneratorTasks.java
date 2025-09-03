@@ -63,7 +63,8 @@ public class MarshallerGeneratorTasks extends BaseGeneratorTasks {
     }
 
     private boolean shouldGenerate(ShapeType shapeType) {
-        return ShapeType.Request == shapeType || (ShapeType.Model == shapeType && metadata.isJsonProtocol());
+        boolean protocolWithRequestShape = metadata.isJsonProtocol() || metadata.isRpcV2CborProtocol();
+        return ShapeType.Request == shapeType || (ShapeType.Model == shapeType && protocolWithRequestShape);
     }
 
     private Stream<GeneratorTask> createTask(String javaShapeName, ShapeModel shapeModel) throws Exception {
@@ -72,7 +73,8 @@ public class MarshallerGeneratorTasks extends BaseGeneratorTasks {
             shapeFqcn = shapeModel.getFullyQualifiedName();
         }
 
-        if (shapeModel.getShapeType() == ShapeType.Request && metadata.isJsonProtocol()) {
+        boolean protocolWithRequestShape = metadata.isJsonProtocol() || metadata.isRpcV2CborProtocol();
+        if (shapeModel.getShapeType() == ShapeType.Request && protocolWithRequestShape) {
             return Stream.of(
                     createMarshallerTask(javaShapeName, shapeFqcn,
                                          freemarker.getRequestMarshallerTemplate(),
@@ -113,6 +115,8 @@ public class MarshallerGeneratorTasks extends BaseGeneratorTasks {
             case CBOR:
             case AWS_JSON:
                 return Protocol.AWS_JSON.name();
+            case RPCV2_CBOR:
+                return Protocol.RPCV2_CBOR.name();
             default:
                 return metadata.getProtocol().name();
         }

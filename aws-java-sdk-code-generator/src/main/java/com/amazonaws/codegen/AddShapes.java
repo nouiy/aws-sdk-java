@@ -294,6 +294,7 @@ abstract class AddShapes {
                 return TimestampFormat.ISO_8601.getFormat();
             case REST_JSON:
             case AWS_JSON:
+            case RPCV2_CBOR:
                 return TimestampFormat.UNIX_TIMESTAMP.getFormat();
             case CBOR:
                 return TimestampFormat.UNIX_TIMESTAMP_IN_MILLIS.getFormat();

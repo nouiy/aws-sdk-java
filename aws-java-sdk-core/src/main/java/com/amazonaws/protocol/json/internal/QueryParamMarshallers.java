@@ -20,6 +20,8 @@ import com.amazonaws.protocol.MarshallLocation;
 import com.amazonaws.protocol.MarshallingInfo;
 import com.amazonaws.util.StringUtils;
 import com.amazonaws.util.TimestampFormat;
+import com.amazonaws.util.ValueToStringConverters;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Map;

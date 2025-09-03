@@ -35,6 +35,11 @@ public interface ProtocolMetadataProvider {
     boolean isCborProtocol();
 
     /**
+     * @return True if protocol uses Smithy RPC v2 CBOR as the wire format. False otherwise.
+     */
+    boolean isRpcV2CborProtocol();
+
+    /**
      * @return True if protocol uses Ion as the wire format. False otherwise.
      */
     boolean isIonProtocol();

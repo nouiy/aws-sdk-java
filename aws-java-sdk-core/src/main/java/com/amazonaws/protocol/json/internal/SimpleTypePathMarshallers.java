@@ -17,6 +17,7 @@ package com.amazonaws.protocol.json.internal;
 import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.protocol.MarshallingInfo;
 import com.amazonaws.transform.PathMarshallers;
+import com.amazonaws.util.ValueToStringConverters;
 
 @SdkInternalApi
 public class SimpleTypePathMarshallers {

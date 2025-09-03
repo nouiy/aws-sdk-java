@@ -499,7 +499,18 @@ public enum Region {
      * <code>s3.us-iso-west-1.c2s.ic.gov</code>.
      * </p>
      */
-    US_ISO_WEST_1("us-iso-west-1")
+    US_ISO_WEST_1("us-iso-west-1"),
+
+    /**
+     * The EU ISOE West Region.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.eu-isoe-west-1.cloud.adc-e.uk</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    EU_ISOE_WEST_1("eu-isoe-west-1")
     ;
 
    /**

@@ -47,6 +47,14 @@ public abstract class BaseProtocolMetadataProvider implements ProtocolMetadataPr
     }
 
     /**
+     * Default is false, subclasses can override to indicate they are Smithy RPC v2 CBOR protocols.
+     */
+    @Override
+    public boolean isRpcV2CborProtocol() {
+        return false;
+    }
+
+    /**
      * Default is false, subclasses can override to indicate they are Ion protocols.
      */
     @Override

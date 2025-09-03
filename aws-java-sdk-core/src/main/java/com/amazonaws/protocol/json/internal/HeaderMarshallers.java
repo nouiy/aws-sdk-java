@@ -18,6 +18,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.protocol.MarshallingInfo;
 import com.amazonaws.util.StringUtils;
 import com.amazonaws.util.TimestampFormat;
+import com.amazonaws.util.ValueToStringConverters;
+
 import java.util.Date;
 
 @SdkInternalApi

@@ -273,6 +273,13 @@ public class CustomizationConfig {
      */
     private boolean useUidAsFilePrefix;
 
+
+    /**
+     * Overrides empty list serialization behavior in json.  When true empty lists are NOT serialized to the
+     * body.  This matches behavior in query protocol when useAutoConstructList is true.
+     */
+    private boolean queryCompatibleAutoConstructListSerialization;
+
     /**
      * Arnable fields used in s3 control
      */
@@ -650,5 +657,13 @@ public class CustomizationConfig {
 
     public void setShapesToSkipPruning(Set<String> shapesToSkipPruning) {
         this.shapesToSkipPruning = shapesToSkipPruning;
+    }
+
+    public boolean isQueryCompatibleAutoConstructListSerialization() {
+        return queryCompatibleAutoConstructListSerialization;
+    }
+
+    public void setQueryCompatibleAutoConstructListSerialization(boolean queryCompatibleAutoConstructListSerialization) {
+        this.queryCompatibleAutoConstructListSerialization = queryCompatibleAutoConstructListSerialization;
     }
 }

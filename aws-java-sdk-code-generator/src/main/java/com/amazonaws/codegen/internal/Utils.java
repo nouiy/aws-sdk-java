@@ -347,7 +347,13 @@ public class Utils {
         }
         if (!StringUtils.isNullOrEmpty(service.getTargetPrefix())
                 && Metadata.isNotRestProtocol(ProtocolUtils.resolveProtocol(service))) {
-            marshaller.setTarget(service.getTargetPrefix() + "." + operation.getName());
+            if (service.getProtocol().equals("smithy-rpc-v2-cbor")) {
+                marshaller.setTarget(operation.getName());
+                // Modeled requestUri must be ignored: RPCv2 doesn't support HTTP bindings other than for the error code
+                marshaller.setRequestUri(String.format("service/%s/operation/%s", service.getTargetPrefix(), operation.getName()));
+            } else {
+                marshaller.setTarget(service.getTargetPrefix() + "." + operation.getName());
+            }
         }
         return marshaller;
 

@@ -12,11 +12,11 @@
  * express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
-package com.amazonaws.protocol.json.internal;
+package com.amazonaws.util;
 
 import com.amazonaws.annotation.SdkInternalApi;
-import com.amazonaws.util.Base64;
-import com.amazonaws.util.StringUtils;
+
+import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.util.Date;
 
@@ -49,6 +49,13 @@ public class ValueToStringConverters {
         @Override
         public String convert(Integer val) {
             return StringUtils.fromInteger(val);
+        }
+    };
+
+    public static final ValueToString<BigInteger> FROM_BIG_INTEGER = new ValueToString<BigInteger>() {
+        @Override
+        public String convert(BigInteger val) {
+            return StringUtils.fromBigInteger(val);
         }
     };
 

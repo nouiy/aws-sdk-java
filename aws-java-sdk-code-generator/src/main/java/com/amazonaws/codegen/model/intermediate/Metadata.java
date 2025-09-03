@@ -389,6 +389,10 @@ public class Metadata {
         return protocolMetadataProvider.isXmlProtocol();
     }
 
+    public boolean isRpcV2CborProtocol() {
+        return protocolMetadataProvider.isRpcV2CborProtocol();
+    }
+
     /**
      * @return True for RESTful protocols. False for all other protocols (RPC, Query, etc).
      */

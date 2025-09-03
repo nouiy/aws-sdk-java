@@ -28,7 +28,11 @@ import com.amazonaws.metrics.*;
 import com.amazonaws.regions.*;
 import com.amazonaws.transform.*;
 import com.amazonaws.util.*;
+<#if metadata.isRpcV2CborProtocol()>
+import com.amazonaws.protocol.rpcv2cbor.*;
+<#else>
 import com.amazonaws.protocol.json.*;
+</#if>
 import com.amazonaws.util.AWSRequestMetrics.Field;
 import com.amazonaws.annotation.ThreadSafe;
 import com.amazonaws.client.AwsSyncClientParams;

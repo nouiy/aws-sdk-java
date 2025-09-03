@@ -31,7 +31,7 @@ public class ProtocolUtils {
      *  Additionally, a specific check is done on "api-gateway" in the protocol field.
      */
     private static final List<String> SUPPORTED_PROTOCOLS =
-            Arrays.asList("json", "rest-json", "rest-xml", "query", "ec2");
+            Arrays.asList("smithy-rpc-v2-cbor", "json", "rest-json", "rest-xml", "query", "ec2");
 
     private ProtocolUtils() {
     }
@@ -45,16 +45,14 @@ public class ProtocolUtils {
         }
 
         if (protocols == null || protocols.isEmpty()) {
-            // TODO - remove and add to SUPPORTED_PROTOCOLS once implemented
-            if ("smithy-rpc-v2-cbor".equals(protocol)) {
-                throw new IllegalArgumentException("Java v1 SDK does not support smithy-rpc-v2-cbor protocol");
-            }
             return protocol;
         }
 
         // Kinesis uses customization.config customServiceMetadata to set cbor
-        if ("cbor".equals(protocols.get(0))) {
-            return "cbor";
+        // Also used by internal clients to set api-gateway
+        String customProtocol = protocols.get(0);
+        if ("cbor".equals(customProtocol) || "api-gateway".equals(customProtocol)) {
+            return customProtocol;
         }
 
         for (String supportedProtocol : SUPPORTED_PROTOCOLS) {

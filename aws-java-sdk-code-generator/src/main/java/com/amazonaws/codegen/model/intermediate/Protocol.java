@@ -23,6 +23,7 @@ import com.amazonaws.codegen.protocol.ProtocolMetadataProvider;
 import com.amazonaws.codegen.protocol.QueryProtocolMetadataProvider;
 import com.amazonaws.codegen.protocol.RestJsonProtocolMetdataProvider;
 import com.amazonaws.codegen.protocol.RestXmlProtocolMetadataProvider;
+import com.amazonaws.codegen.protocol.RpcV2CborProtocolMetadataProvider;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
@@ -33,7 +34,8 @@ public enum Protocol {
     CBOR("cbor", new AwsCborProtocolMetadataProvider()),
     QUERY("query", new QueryProtocolMetadataProvider()),
     REST_XML("rest-xml", new RestXmlProtocolMetadataProvider()),
-    API_GATEWAY("api-gateway", new ApiGatewayProtocolMetadataProvider());
+    API_GATEWAY("api-gateway", new ApiGatewayProtocolMetadataProvider()),
+    RPCV2_CBOR("smithy-rpc-v2-cbor", new RpcV2CborProtocolMetadataProvider());
 
     private String protocol;
     private ProtocolMetadataProvider metadataProvider;

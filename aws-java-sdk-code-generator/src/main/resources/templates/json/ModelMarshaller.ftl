@@ -68,9 +68,17 @@ public class ${className} {
             <#if shape.members??>
                 <#list shape.members as member>
                 <#assign getter = shape.variable.variableName + "." + member.getterMethodName + "()" />
+                <#if member.isList() && customConfig.isQueryCompatibleAutoConstructListSerialization()>
+                 if (${getter} != null && !${getter}.isEmpty()) {
+                     protocolMarshaller.marshall(
+                     ${getter},
+                     ${member.marshallerBindingFieldName});
+                 }
+                <#else>
                 protocolMarshaller.marshall(
                 ${getter},
                 ${member.marshallerBindingFieldName});
+                </#if>
                 </#list>
             </#if>
         } catch (Exception e) {

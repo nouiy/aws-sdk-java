@@ -34,5 +34,10 @@ public enum Protocol {
     /**
      * A variation of REST_JSON for externally generated, API Gateway clients.
      */
-    API_GATEWAY
+    API_GATEWAY,
+
+    /**
+     * Smithy RPC V2 CBOR protocol
+     */
+    RPCV2_CBOR
 }

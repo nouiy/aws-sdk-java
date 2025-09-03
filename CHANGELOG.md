@@ -1,4 +1,13 @@
-# __1.12.788__ __2025-07-11__
+# __1.12.789__ __2025-08-30__
+## __AWS Kinesis Video__
+  - ### Features
+    - Update Netty to `4.1.124.Final`.
+
+## __AWS SDK for Java__
+  - ### Features
+    - Add `eu-isoe-west-1` region.
+
+# __1.12.788__ __2025-07-15__
 ## __AWS SDK for Java__
   - ### Features
     - Add account endpoint caching

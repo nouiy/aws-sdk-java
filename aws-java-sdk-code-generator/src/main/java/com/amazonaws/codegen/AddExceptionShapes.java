@@ -94,6 +94,6 @@ final class AddExceptionShapes extends AddShapes implements IntermediateModelSha
     }
 
     private boolean protocolSupportsErrorCodeOverride() {
-        return !getProtocol().equals("json");
+        return !getProtocol().equals("json") && !getProtocol().equals("smithy-rpc-v2-cbor");
     }
 }

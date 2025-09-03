@@ -92,6 +92,7 @@
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
     "presignersFqcn" : null,
+    "queryCompatibleAutoConstructListSerialization" : false,
     "renameShapes" : {
       "AccessPointNotFoundException" : "LoadBalancerNotFoundException",
       "DuplicateAccessPointNameException" : "DuplicateLoadBalancerNameException",
@@ -160,6 +161,7 @@
     "requestBaseFqcn" : "com.amazonaws.AmazonWebServiceRequest",
     "requiresApiKey" : false,
     "requiresIamSigners" : false,
+    "rpcV2CborProtocol" : false,
     "serviceAbbreviation" : null,
     "serviceFullName" : "Elastic Load Balancing",
     "serviceId" : "Elastic Load Balancing",
