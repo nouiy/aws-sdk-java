@@ -1,4 +1,4 @@
-# __1.12.789__ __2025-08-30__
+# __1.12.789__ __2025-09-03__
 ## __AWS Kinesis Video__
   - ### Features
     - Update Netty to `4.1.124.Final`.
