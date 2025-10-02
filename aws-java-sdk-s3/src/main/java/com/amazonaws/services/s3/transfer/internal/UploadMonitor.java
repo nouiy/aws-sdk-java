@@ -124,7 +124,8 @@ public class UploadMonitor implements Callable<Void>, TransferMonitor {
                                                 multipartUploadCallable.getFutures(),
                                                 multipartUploadCallable.getETags(),
                                                 listener,
-                                                this);
+                                                this,
+                                                multipartUploadCallable.getExpectedPartCount());
 
                 resultFuture.setDelegate(threadPool.submit(completeTask));
             } else {

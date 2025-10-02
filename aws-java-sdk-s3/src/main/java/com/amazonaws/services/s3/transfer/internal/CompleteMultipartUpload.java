@@ -63,12 +63,15 @@ public class CompleteMultipartUpload implements Callable<UploadResult> {
     /** The listener where progress of the upload needs to be published. */
     private final ProgressListenerChain listener;
 
+    private final int expectedPartCount;
+
     public CompleteMultipartUpload(String uploadId, AmazonS3 s3,
                                    PutObjectRequest putObjectRequest,
                                    Future<List<PartETag>> partFutures,
                                    List<PartETag> eTagsBeforeResume,
                                    ProgressListenerChain progressListenerChain,
-                                   UploadMonitor monitor) {
+                                   UploadMonitor monitor,
+                                   int expectedPartCount) {
         this.uploadId = uploadId;
         this.s3 = s3;
         this.origReq = putObjectRequest;
@@ -76,6 +79,7 @@ public class CompleteMultipartUpload implements Callable<UploadResult> {
         this.eTagsBeforeResume = eTagsBeforeResume;
         this.listener = progressListenerChain;
         this.monitor = monitor;
+        this.expectedPartCount = expectedPartCount;
     }
 
     @Override
@@ -124,6 +128,10 @@ public class CompleteMultipartUpload implements Callable<UploadResult> {
         } catch (Exception e) {
             throw new SdkClientException("Unable to complete multi-part upload. Individual part upload failed: "
                                          + e.getCause().getMessage(), e.getCause());
+        }
+        if (partETags.size() != expectedPartCount) {
+            throw new SdkClientException(String.format("The number of actual parts (%d) does not match " +
+                    "the expected parts (%d)", partETags.size(), expectedPartCount));
         }
         return partETags;
     }

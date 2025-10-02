@@ -16,6 +16,7 @@ package com.amazonaws.services.s3.transfer.internal;
 
 import static com.amazonaws.event.SDKProgressPublisher.publishProgress;
 
+import com.amazonaws.SdkClientException;
 import com.amazonaws.event.ProgressEventType;
 import com.amazonaws.event.ProgressListenerChain;
 import com.amazonaws.services.s3.AmazonS3;
@@ -73,6 +74,7 @@ public class UploadCallable implements Callable<UploadResult> {
     private final DelegatingFuture<List<PartETag>> partsFuture = new DelegatingFuture<List<PartETag>>();
     private final ProgressListenerChain listener;
     private final TransferProgress transferProgress;
+    private int expectedPartCount;
 
     /**
      * ETags retrieved from Amazon S3 for a multi-part upload id. These parts
@@ -129,6 +131,13 @@ public class UploadCallable implements Callable<UploadResult> {
 
     String getMultipartUploadId() {
         return multipartUploadId.getOrThrowUnchecked("Failed to retrieve multipart upload ID.");
+    }
+
+    /**
+     * Returns the PartCount that is calculated by using the total length of request divided by the optimalPartSize.
+     */
+    int getExpectedPartCount() {
+        return expectedPartCount;
     }
 
     /**
@@ -217,6 +226,7 @@ public class UploadCallable implements Callable<UploadResult> {
                                                          : initiateMultipartUpload(origReq, isUsingEncryption);
 
             UploadPartRequestFactory requestFactory = new UploadPartRequestFactory(origReq, uploadId, optimalPartSize);
+            this.expectedPartCount = requestFactory.getTotalNumberOfParts();
 
             if (TransferManagerUtils.isUploadParallelizable(origReq, isUsingEncryption)) {
                 captureUploadStateIfPossible(uploadId);
@@ -307,6 +317,7 @@ public class UploadCallable implements Callable<UploadResult> {
     private UploadResult uploadPartsInSeries(UploadPartRequestFactory requestFactory, String multipartUploadId) {
 
         final List<PartETag> partETags = new ArrayList<PartETag>();
+        int actualPartCount = 0;
 
         while (requestFactory.hasMoreRequests()) {
             if (threadPool.isShutdown()) throw new CancellationException("TransferManager has been shutdown");
@@ -320,7 +331,15 @@ public class UploadCallable implements Callable<UploadResult> {
                     inputStream.mark((int)uploadPartRequest.getPartSize());
                 }
             }
+            validatePartSize(uploadPartRequest, requestFactory.getOptimalPartSize());
             partETags.add(s3.uploadPart(uploadPartRequest).getPartETag());
+            actualPartCount++;
+        }
+
+        // validation for PartCount
+        if (actualPartCount!= expectedPartCount) {
+            throw new SdkClientException(String.format("The number of actual parts (%d) does not match " +
+                    "the expected parts (%d)", actualPartCount, expectedPartCount));
         }
 
         CompleteMultipartUploadRequest req =
@@ -362,6 +381,7 @@ public class UploadCallable implements Callable<UploadResult> {
                     transferProgress.updateProgress(summary.getSize());
                     continue;
                 }
+                validatePartSize(request, requestFactory.getOptimalPartSize());
                 futures.add(threadPool.submit(new UploadPartCallable(s3, request, shouldCalculatePartMd5())));
             }
         } finally {
@@ -395,6 +415,50 @@ public class UploadCallable implements Callable<UploadResult> {
             partNumber = parts.getNextPartNumberMarker();
         }
     }
+
+    private void validatePartSize(UploadPartRequest request, long optimalPartSize) {
+        long requestPartSize = request.getPartSize();
+        boolean isLastPart = request.isLastPart();
+
+        long totalSize = TransferManagerUtils.getContentLength(origReq);
+
+        long expectedPartSize;
+        if (isLastPart) {
+            long processedBytes = (request.getPartNumber() - 1) * optimalPartSize;
+            expectedPartSize = totalSize - processedBytes;
+        } else {
+            expectedPartSize = optimalPartSize;
+        }
+
+        if (requestPartSize != expectedPartSize) {
+            throw new SdkClientException(
+                    String.format("Part %d size validation failed. " +
+                                    "Expected: %d bytes, Actual: %d bytes ",
+                            request.getPartNumber(), expectedPartSize, requestPartSize)
+            );
+        }
+
+        if (request.getFile() != null) {
+            validateFileOffset(request, optimalPartSize);
+        }
+    }
+
+    private void validateFileOffset(UploadPartRequest request, long optimalPartSize) {
+        int partNumber = request.getPartNumber();
+
+        long actualFileOffset = request.getFileOffset();
+        long expectedFileOffset = (partNumber - 1) * optimalPartSize;
+
+        if (actualFileOffset != expectedFileOffset) {
+            throw new SdkClientException(
+                    String.format("Part number %d offset validation failed" +
+                                    "Expected offset: %d, Actual offset: %d",
+                            partNumber,
+                            expectedFileOffset, actualFileOffset)
+            );
+        }
+    }
+
 
     /**
      * Initiates a multipart upload and returns the upload id

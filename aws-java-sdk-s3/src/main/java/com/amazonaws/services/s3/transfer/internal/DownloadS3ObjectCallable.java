@@ -17,7 +17,9 @@ package com.amazonaws.services.s3.transfer.internal;
 
 import static com.amazonaws.services.s3.internal.Constants.MB;
 
+import com.amazonaws.SdkClientException;
 import com.amazonaws.annotation.SdkInternalApi;
+import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
 import com.amazonaws.util.IOUtils;
@@ -62,6 +64,8 @@ public class DownloadS3ObjectCallable implements Callable<Long> {
 
             S3Object object = serviceCall.call();
 
+            validateContentRange(object);
+
             objectContent = object.getObjectContent();
 
             final byte[] buffer = new byte[BUFFER_SIZE];
@@ -84,5 +88,25 @@ public class DownloadS3ObjectCallable implements Callable<Long> {
             IOUtils.closeQuietly(channel, LOG);
         }
         return filePosition;
+    }
+
+    /**
+     * Validates that the S3 response content range matches the expected file position.
+     */
+    private void validateContentRange(S3Object s3Object) throws SdkClientException {
+        ObjectMetadata metadata = s3Object.getObjectMetadata();
+
+        Long[] contentRange =  metadata.getContentRange();
+
+        if (contentRange == null) {
+            return;
+        }
+
+        long startByte = contentRange[0];
+
+        if (startByte != position) {
+            String errorMessage = "Content range validation failed for object start from " + startByte;
+            throw new SdkClientException(errorMessage);
+        }
     }
 }

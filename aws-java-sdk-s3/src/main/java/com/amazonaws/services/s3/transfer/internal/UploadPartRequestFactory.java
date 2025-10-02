@@ -142,4 +142,8 @@ public class UploadPartRequestFactory {
         return totalNumberOfParts;
     }
 
+    public long getOptimalPartSize() {
+        return optimalPartSize;
+    }
+
 }

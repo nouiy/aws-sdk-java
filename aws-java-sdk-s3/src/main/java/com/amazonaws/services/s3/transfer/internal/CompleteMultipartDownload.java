@@ -28,16 +28,20 @@ import java.util.concurrent.Future;
  */
 @SdkInternalApi
 public class CompleteMultipartDownload implements Callable<File> {
+    
     private final List<Future<Long>> partFiles;
     private final File destinationFile;
     private final DownloadImpl download;
     private Integer currentPartNumber;
+    private final int expectedPartCount;
 
-    public CompleteMultipartDownload(List<Future<Long>> files, File destinationFile, DownloadImpl download, Integer currentPartNumber) {
+    public CompleteMultipartDownload(List<Future<Long>> files, File destinationFile, DownloadImpl download,
+                                   Integer currentPartNumber, int expectedPartCount) {
         this.partFiles = files;
         this.destinationFile = destinationFile;
         this.download = download;
         this.currentPartNumber = currentPartNumber;
+        this.expectedPartCount = expectedPartCount;
     }
 
     @Override
@@ -47,6 +51,8 @@ public class CompleteMultipartDownload implements Callable<File> {
                 long filePosition = file.get();
                 download.updatePersistableTransfer(currentPartNumber++, filePosition);
             }
+
+            validatePartCount();
 
             download.setState(Transfer.TransferState.Completed);
         } catch (Exception exception) {
@@ -65,4 +71,21 @@ public class CompleteMultipartDownload implements Callable<File> {
         }
         download.setState(Transfer.TransferState.Failed);
     }
+
+    /**
+     * Validates that the number of part GET requests sent matches the expected part count.
+     * This validation ensures data integrity and completeness of multipart downloads.
+     */
+    private void validatePartCount() throws SdkClientException {
+
+        int actualPartCount = partFiles.size();
+
+        if (actualPartCount != expectedPartCount) {
+            String errorMessage = String.format("The number of actual downloaded parts (%d) does not match " +
+                    "the expected parts (%d)", actualPartCount, expectedPartCount);
+            throw new SdkClientException(errorMessage);
+        }
+    }
+
+
 }

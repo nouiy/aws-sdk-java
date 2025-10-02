@@ -28,36 +28,52 @@ import com.amazonaws.util.SdkUri;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import java.net.URI;
+
 public class AccountEndpointOverrideRequestHandler extends RequestHandler2 {
     private static final String COMMERCIAL_PARTITION = "aws";
+    private static final String DYNAMODB = "dynamodb";
     private static final String ENDPOINT_FORMAT = "%s://%s.ddb.%s.%s";
     private static final Log LOG = LogFactory.getLog(AccountEndpointOverrideRequestHandler.class);
     private static final String DEFAULT_PROTOCOL = "https";
     static final String DYNAMODB_SERVICE_NAME = "AmazonDynamoDBv2";
+    static final String DUALSTACK_OVERRIDE_ERROR = "Dual-stack endpoints are not supported for this version of the SDK." +
+            " For more details, see: https://docs.aws.amazon.com/sdkref/latest/guide/feature-endpoints.html";
 
     @Override
     public void beforeRequest(Request<?> request) {
         AccountIdEndpointMode endpointMode = null;
+        if (!isDdbRequest(request)) {
+            return;
+        }
+
+        endpointMode = request.getHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE);
+        if (endpointMode == AccountIdEndpointMode.DISABLED) {
+            return;
+        }
+
+        String regionName = request.getHandlerContext(HandlerContextKey.SIGNING_REGION);
+        Region regionObj = RegionUtils.getRegion(regionName);
+        if (StringUtils.isNullOrEmpty(regionName) || regionObj == null) {
+            handleMissingRegion();
+            return;
+        }
+
+        Boolean isEndpointOverridden = request.getHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN);
+        if (isEndpointOverridden != null && isEndpointOverridden) {
+            URI endpoint = request.getEndpoint();
+            String dualstackRegionalEndpointPrefix = String.format("%s.%s.api.", DYNAMODB, regionName);
+            if (endpoint.getHost().startsWith(dualstackRegionalEndpointPrefix)) {
+                throw new SdkClientException(DUALSTACK_OVERRIDE_ERROR);
+            }
+            return;
+        }
+
+        if (!isCommercialRegion(regionObj)) {
+            return;
+        }
+
         try {
-            if (!isDdbRequest(request)) {
-                return;
-            }
-
-            endpointMode = request.getHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE);
-            Boolean isEndpointOverridden = request.getHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN);
-            if (endpointMode == AccountIdEndpointMode.DISABLED || (isEndpointOverridden != null && isEndpointOverridden)) {
-                return;
-            }
-
-            String regionName = request.getHandlerContext(HandlerContextKey.SIGNING_REGION);
-            Region regionObj = RegionUtils.getRegion(regionName);
-            if (StringUtils.isNullOrEmpty(regionName) || regionObj == null) {
-                handleMissingRegion();
-                return;
-            } else if (!isCommercialRegion(regionObj)) {
-                return;
-            }
-
             String resolvedAccountId = getAccountId(request, regionName);
             if (StringUtils.isNullOrEmpty(resolvedAccountId)) {
                 handleMissingAccountId(endpointMode);

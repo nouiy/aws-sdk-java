@@ -131,6 +131,8 @@ final class DownloadCallable extends AbstractDownloadCallable {
             lastFullyMergedPartPosition = 0L;
         }
 
+        int expectedPartCount = partCount - lastFullyMergedPartNumber;
+
         long previousPartLength = 0L;
         long filePositionToWrite = lastFullyMergedPartPosition;
 
@@ -168,7 +170,8 @@ final class DownloadCallable extends AbstractDownloadCallable {
             }
 
             Future<File> future = executor.submit(new CompleteMultipartDownload(futures, dstfile, download,
-                                                                                ++lastFullyMergedPartNumber));
+                                                                                ++lastFullyMergedPartNumber,
+                                                                                expectedPartCount));
             ((DownloadMonitor) download.getMonitor()).setFuture(future);
 
         } catch (Exception exception){

@@ -1,3 +1,13 @@
+# __1.12.792__ __2025-10-01__
+## __Amazon DynamoDB__
+  - ### Bugfixes
+    - Prevent overriding client endpoint with dual-stack regional endpoint
+
+## __Amazon S3__
+  - ### Bugfixes
+    - Add additional validations for multipart download operations of S3 client
+    - Add additional validations for multipart upload operations of S3 client.
+
 # __1.12.791__ __2025-09-05__
 ## __AWS Kinesis Video__
   - ### Features
