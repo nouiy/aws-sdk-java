@@ -437,6 +437,17 @@ public enum Region {
     AP_Malaysia("ap-southeast-5"),
 
     /**
+     * The Asia Pacific (New Zealand) Region. This region uses Amazon S3 servers located in New Zealand.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.ap-southeast-6.amazonaws.com</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    AP_NewZealand("ap-southeast-6"),
+
+    /**
      * The Asia Pacific (Thailand) Region. This region uses Amazon S3 servers located in Thailand.
      * <p>
      * When using buckets in this region, set the client endpoint to

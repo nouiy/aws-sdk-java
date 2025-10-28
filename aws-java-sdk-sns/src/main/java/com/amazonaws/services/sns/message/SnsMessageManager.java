@@ -145,6 +145,7 @@ public class SnsMessageManager {
             case AP_EAST_2:
             case AP_SOUTH_2:
             case AP_SOUTHEAST_5:
+            case AP_SOUTHEAST_6:
             case AP_SOUTHEAST_7:
             case ME_SOUTH_1:
             case ME_CENTRAL_1:

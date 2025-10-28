@@ -3790,10 +3790,11 @@ public interface AmazonS3 extends S3DirectSpi {
      * source object and write access to the destination bucket.
      * </p>
      * <p>
-     * If constraints are specified in the <code>CopyObjectRequest</code> (e.g.
+     * If source constraints are specified in the <code>CopyObjectRequest</code> (e.g.
      * {@link CopyObjectRequest#setMatchingETagConstraints(List)}) and are not
      * satisfied when Amazon S3 receives the request, this method returns
-     * <code>null</code>. This method returns a non-null result under all other
+     * <code>null</code>. If destination conditions are not satisfied, this method
+     * throws an SdkClientException. This method returns a non-null result under all other
      * circumstances.
      * </p>
      * <p>

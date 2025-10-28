@@ -1,4 +1,9 @@
-# __1.12.792__ __2025-10-01__
+# __1.12.793__ __2025-10-24__
+## __AWS SDK for Java__
+  - ### Features
+    - Add `ap-southeast-6` region
+
+# __1.12.792__ __2025-10-02__
 ## __Amazon DynamoDB__
   - ### Bugfixes
     - Prevent overriding client endpoint with dual-stack regional endpoint

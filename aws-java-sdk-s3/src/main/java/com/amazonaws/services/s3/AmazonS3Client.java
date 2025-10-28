@@ -383,17 +383,20 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.client.methods.HttpRequestBase;
@@ -441,6 +444,9 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
     /** Shared logger for client events */
     private static Log log = LogFactory.getLog(AmazonS3Client.class);
+
+    private static final Set<String> DESTINATION_CONDITION_HEADERS =
+            Collections.unmodifiableSet(new HashSet<>(Arrays.asList("if-match", "if-none-match")));
 
     static {
         // Enable S3 specific predefined request metrics.
@@ -2133,13 +2139,19 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             copyObjectResultHandler = invoke(request, handler, destinationBucketName, destinationKey);
         } catch (AmazonS3Exception ase) {
             /*
-             * If the request failed because one of the specified constraints
+             * If the request failed because one of the specified *source* constraints
              * was not met (ex: matching ETag, modified since date, etc.), then
              * return null, so that users don't have to wrap their code in
              * try/catch blocks and check for this status code if they want to
              * use constraints.
+             *
+             * If a *destination* constraint was set and we get a precondition failure, raise it.
+             * Destination constraint support was added in Sept 2025 and to avoid breaking existing source condition
+             * usage that expects null to be returned, we raise exceptions *only* when the new destination condtion
+             * headers are set.
              */
-            if (ase.getStatusCode() == Constants.FAILED_PRECONDITION_STATUS_CODE) {
+            if (ase.getStatusCode() == Constants.FAILED_PRECONDITION_STATUS_CODE
+                    && !isDestinationConditionalFailure(request, ase)) {
                return null;
             }
 
@@ -2191,6 +2203,30 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         copyObjectResult.setRequesterCharged(copyObjectResultHandler.isRequesterCharged());
 
         return copyObjectResult;
+    }
+
+    /**
+     * Check if a CopyObjectRequest has destination conditional headers set AND the exception
+     * has a destination condition failure (the <condition> contains a destination condition header)
+     *
+     * @param request the CopyObjectRequest to check.
+     * @return true if the failure is caused by a destination condition failure.
+     */
+    private boolean isDestinationConditionalFailure(Request<CopyObjectRequest> request, AmazonS3Exception ase) {
+        boolean requestHasDestinationConditions = request.getHeaders().keySet()
+                .stream()
+                .anyMatch(h -> DESTINATION_CONDITION_HEADERS.contains(h.toLowerCase()));
+
+        if (requestHasDestinationConditions && !StringUtils.isNullOrEmpty(ase.getErrorResponseXml())) {
+            //check errorResponse for destination condition failure.
+            String validHeaderChars = "[A-Za-z0-9!#$%&'*+\\-.^_`|~]";
+            Pattern pattern = Pattern.compile("<Condition>(" + validHeaderChars + "+)</Condition>");
+            Matcher m = pattern.matcher(ase.getErrorResponseXml());
+            if (m.find()) {
+                return DESTINATION_CONDITION_HEADERS.contains(m.group(1).toLowerCase());
+            }
+        }
+        return false;
     }
 
     /**
