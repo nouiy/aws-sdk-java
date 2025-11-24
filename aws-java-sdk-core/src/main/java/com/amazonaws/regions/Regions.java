@@ -78,7 +78,11 @@ public enum Regions {
     US_ISOF_SOUTH_1("us-isof-south-1", "US ISOF South1 (Alpine)"),
     IL_CENTRAL_1("il-central-1", "Israel (Tel Aviv)"),
     MX_CENTRAL_1("mx-central-1", "Mexico (Central)"),
-    EU_ISOE_WEST_1("eu-isoe-west-1", "EU ISOE West");
+    EU_ISOE_WEST_1("eu-isoe-west-1", "EU ISOE West"),
+
+    EUSC_DE_EAST_1("eusc-de-east-1", "EU (Germany)");
+
+
     /**
      * The default region that new customers in the US are encouraged to use
      * when using AWS services for the first time.

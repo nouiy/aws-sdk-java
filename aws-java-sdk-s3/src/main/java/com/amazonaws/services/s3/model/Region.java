@@ -521,7 +521,18 @@ public enum Region {
      * bucket in this region.
      * </p>
      */
-    EU_ISOE_WEST_1("eu-isoe-west-1")
+    EU_ISOE_WEST_1("eu-isoe-west-1"),
+
+    /**
+     * The EU (Germany) region.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.eusc-de-east-1.amazonaws.eu</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    EUSC_DE_EAST_1("eusc-de-east-1")
     ;
 
    /**

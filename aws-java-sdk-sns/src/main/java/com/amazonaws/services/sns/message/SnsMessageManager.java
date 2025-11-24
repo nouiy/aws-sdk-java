@@ -141,6 +141,8 @@ public class SnsMessageManager {
                 return "sns-signing." + regionStr + ".csp.hci.ic.gov";
             case EU_ISOE_WEST_1:
                 return "sns-signing.eu-isoe-west-1.cloud.adc-e.uk";
+            case EUSC_DE_EAST_1:
+                return "sns-signing.eusc-de-east-1.amazonaws.eu";
             case AP_EAST_1:
             case AP_EAST_2:
             case AP_SOUTH_2:

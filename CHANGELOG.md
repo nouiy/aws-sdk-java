@@ -1,4 +1,9 @@
-# __1.12.793__ __2025-10-24__
+# __1.12.794__ __2025-11-20__
+## __AWS SDK for Java__
+  - ### Features
+    - Update region metadata.
+
+# __1.12.793__ __2025-10-28__
 ## __AWS SDK for Java__
   - ### Features
     - Add `ap-southeast-6` region
