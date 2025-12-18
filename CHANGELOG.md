@@ -1,4 +1,9 @@
-# __1.12.795__ __2025-12-09__
+# __1.12.796__ __2025-12-18__
+## __AWS Kinesis Video__
+  - ### Features
+    - Upgrade Netty to `4.1.130-Final`
+
+# __1.12.795__ __2025-12-10__
 ## __Amazon CloudWatch__
   - ### Features
     - This release introduces two additional protocols AWS JSON 1.1 and Smithy RPC v2 CBOR, replacing the currently utilized one, AWSQuery. AWS SDKs will prioritize the protocol that is the most performant for each language.
